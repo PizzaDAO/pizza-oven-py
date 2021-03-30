@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>23</NodesCount>
+		<NodesCount>24</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>0000</Plugin_label>
 			<Plugin_script_name>p0000</Plugin_script_name>
@@ -424,173 +424,6 @@
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Transform1</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Transform2</Plugin_label>
-			<Plugin_script_name>Transform2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>6</KnobsCount>
-			<item>
-				<Name>translate</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>6.43097717314958572e+02</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,2000)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.20459113270044327e+03</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,2000)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>rotate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.15757589116692543e+02</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,360)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>scale</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.00000000000000000e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.00000000000000000e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>uniform</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>center</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>p4000</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>129</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Transform2</CacheID>
 		</item>
 		<item>
 			<Plugin_label>1000</Plugin_label>
@@ -1887,7 +1720,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
+			<KnobsCount>2</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -1910,24 +1743,6 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>B_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
 				<Name>A_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
@@ -1946,15 +1761,11 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>2</count>
+				<count>1</count>
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
 					<second>p2000</second>
-				</item>
-				<item>
-					<first>B</first>
-					<second>Merge1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -2805,7 +2616,7 @@
 					<second>Constant1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>45</KnobsAge>
+			<KnobsAge>73</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -3333,340 +3144,6 @@
 			<CacheID>Premult1</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Transform1</Plugin_label>
-			<Plugin_script_name>Transform2_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>6</KnobsCount>
-			<item>
-				<Name>translate</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>9.83850863762199879e+02</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,2000)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.17163857584819198e+03</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,2000)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>rotate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.77093155477195978e+02</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,360)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>scale</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.00000000000000000e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.00000000000000000e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>uniform</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>center</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>p4000</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>151</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Transform2_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Transform3</Plugin_label>
-			<Plugin_script_name>Transform3</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>6</KnobsCount>
-			<item>
-				<Name>translate</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.05656204512342811e+03</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,2000)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.41226346977055073e+01</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,2000)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>rotate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.90181168122217059e+02</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0,360)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>scale</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.00000000000000000e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.00000000000000000e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>uniform</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>center</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>p4000</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>150</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Transform2_2_2</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Multiply2</Plugin_label>
 			<Plugin_script_name>Multiply2</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.MergeMultiply</Plugin_id>
@@ -3674,7 +3151,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>6</KnobsCount>
+			<KnobsCount>4</KnobsCount>
 			<item>
 				<Name>operation</Name>
 				<Type>Choice</Type>
@@ -3750,56 +3227,12 @@
 				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
-			<item>
-				<Name>A2_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A3_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
 			<Inputs_map>
-				<count>4</count>
+				<count>2</count>
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
-					<second>Transform2_2</second>
-				</item>
-				<item>
-					<first>A2</first>
 					<second>Transform3</second>
-				</item>
-				<item>
-					<first>A3</first>
-					<second>Transform2</second>
 				</item>
 				<item>
 					<first>B</first>
@@ -3831,7 +3264,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>7</KnobsCount>
+			<KnobsCount>8</KnobsCount>
 			<item>
 				<Name>NatronOfxParamProcessA</Name>
 				<Type>Bool</Type>
@@ -3983,6 +3416,23 @@
 				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>disableNode</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3991,7 +3441,7 @@
 					<second>Multiply2</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>308</KnobsAge>
+			<KnobsAge>309</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -4198,6 +3648,438 @@
 			</UserComponents>
 			<CacheID>Constant1_2</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Viewer1</Plugin_label>
+			<Plugin_script_name>Viewer1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>1</first>
+					<second>Merge3</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Viewer1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>NoOp1</Plugin_label>
+			<Plugin_script_name>NoOp1</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.NoOpPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>2</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>8</KnobsCount>
+			<item>
+				<Name>outputPremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>PreMultiplied</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>extent</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>format</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronParamFormatChoice</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>21</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>bottomLeft</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0.00000000000000000e+00</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0.00000000000000000e+00</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>size</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3.07200000000000000e+03</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3.07200000000000000e+03</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputPixelAspectRatio</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputFrameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>NoOp1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>s</Plugin_label>
+			<Plugin_script_name>Transform3</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>4</KnobsCount>
+			<item>
+				<Name>uniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>transformCenterChanged</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>p4000</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Transform3</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Merge3</Plugin_label>
+			<Plugin_script_name>Merge3</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Merge2_2_2</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Merge1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Merge3</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>4</ProjectKnobsCount>
 	<item>
@@ -4270,7 +4152,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sun Mar 28 08:29:06 2021</Value>
+			<Value>Tue Mar 30 08:01:05 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -4306,17 +4188,17 @@
 			<Name></Name>
 		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>123</Timeline_current_time>
+	<Timeline_current_time>122</Timeline_current_time>
 	<CreationDate>1616769883777</CreationDate>
 </Project>
 <ProjectGui class_id="12" tracking_level="0" version="11">
 	<NodesGui class_id="13" tracking_level="0" version="0">
-		<count>23</count>
+		<count>24</count>
 		<item_version>6</item_version>
 		<item class_id="14" tracking_level="0" version="6">
 			<Name>p0000</Name>
-			<X_position>4.09601475627188961e+02</X_position>
-			<Y_position>-1.02607267859093312e+02</Y_position>
+			<X_position>1.74943485087140402e+02</X_position>
+			<Y_position>-9.70334517103922138e+01</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -4342,23 +4224,9 @@
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Transform2</Name>
-			<X_position>1.25645798494033261e+03</X_position>
-			<Y_position>1.18166650453655416e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>3.000076413e-01</g>
-			<b>1.000076309e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>p1000</Name>
-			<X_position>7.63432316747181858e+02</X_position>
-			<Y_position>1.00132842321109479e+02</Y_position>
+			<X_position>5.27474099785512180e+02</X_position>
+			<Y_position>1.05706658469810577e+02</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -4399,8 +4267,8 @@
 		</item>
 		<item>
 			<Name>p4000</Name>
-			<X_position>1.38232604164738041e+03</X_position>
-			<Y_position>1.03510527670058036e+03</Y_position>
+			<X_position>1.37260259628805397e+03</X_position>
+			<Y_position>1.02767352183564572e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -4413,8 +4281,8 @@
 		</item>
 		<item>
 			<Name>Merge1</Name>
-			<X_position>4.22901702048809739e+02</X_position>
-			<Y_position>1.13835090169829186e+02</Y_position>
+			<X_position>1.86943485087140061e+02</X_position>
+			<Y_position>1.19408906318530285e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -4566,37 +4434,9 @@
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Transform2_2</Name>
-			<X_position>1.38460259628805397e+03</X_position>
-			<Y_position>1.18170806069240393e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>3.000076413e-01</g>
-			<b>1.000076309e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Transform3</Name>
-			<X_position>1.51147360516537356e+03</X_position>
-			<Y_position>1.18314788778619663e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>3.000076413e-01</g>
-			<b>1.000076309e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Multiply2</Name>
-			<X_position>1.38604242338184849e+03</X_position>
-			<Y_position>1.28193066036145501e+03</Y_position>
+			<X_position>1.38460259628805397e+03</X_position>
+			<Y_position>1.28549307945688997e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -4635,38 +4475,96 @@
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Viewer1</Name>
+			<X_position>1.86943485087139834e+02</X_position>
+			<Y_position>1.71990837022845062e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>3.00000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>NoOp1</Name>
+			<X_position>1.23126276718123336e+03</X_position>
+			<Y_position>1.15026174168610396e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Transform3</Name>
+			<X_position>1.38460259628805397e+03</X_position>
+			<Y_position>1.15796878643044920e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Merge3</Name>
+			<X_position>1.86943485087139834e+02</X_position>
+			<Y_position>1.54191696040230272e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>4.30000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="15" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
 		<Window class_id="16" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="17" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1641 883</Sizes>
+				<Sizes>839 850</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>504 503</Sizes>
+					<Sizes>500 499</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="18" tracking_level="1" version="5" object_id="_2">
 						<Tabs class_id="19" tracking_level="0" version="0">
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>Viewer1</item>
 						</Tabs>
-						<Index>-1</Index>
+						<Index>0</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>3</count>
+							<count>4</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
+							<item>scriptEditor</item>
 						</Tabs>
-						<Index>0</Index>
+						<Index>3</Index>
 						<Name>pane3</Name>
 						<IsAnchor>0</IsAnchor>
 					</Child>
@@ -4684,519 +4582,73 @@
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2559</x>
-			<y>-55</y>
-			<w>2560</w>
-			<h>1010</h>
+			<x>-1725</x>
+			<y>23</y>
+			<w>1725</w>
+			<h>1002</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="20" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item class_id="21" tracking_level="0" version="0">
+			<first>Viewer1</first>
+			<second class_id="22" tracking_level="0" version="14">
+				<zoomLeft>-2.40591811764705926e+03</zoomLeft>
+				<zoomBottom>-6.14400000000000546e+01</zoomBottom>
+				<zoomFactor>1.06420272435897426e-01</zoomFactor>
+				<UserRoIEnabled>0</UserRoIEnabled>
+				<UserRoI class_id="23" tracking_level="0" version="0">
+					<Left>7.68000000000000000e+02</Left>
+					<Bottom>7.68000000000000000e+02</Bottom>
+					<Right>2.30400000000000000e+03</Right>
+					<Top>2.30400000000000000e+03</Top>
+				</UserRoI>
+				<ClippedToProject>1</ClippedToProject>
+				<AutoContrast>0</AutoContrast>
+				<Gain>1.00000000000000000e+00</Gain>
+				<Gain>1.00000000000000000e+00</Gain>
+				<ColorSpace>sRGB</ColorSpace>
+				<Layer>Color.RGBA</Layer>
+				<AlphaLayer>Color.A</AlphaLayer>
+				<Channels>RGB</Channels>
+				<RenderScaleActivated>0</RenderScaleActivated>
+				<MipMapLevel>0</MipMapLevel>
+				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
+				<CompositingOP>0</CompositingOP>
+				<LeftBound>0</LeftBound>
+				<RightBound>250</RightBound>
+				<LeftToolbarVisible>1</LeftToolbarVisible>
+				<RightToolbarVisible>1</RightToolbarVisible>
+				<TopToolbarVisible>1</TopToolbarVisible>
+				<PlayerVisible>1</PlayerVisible>
+				<TimelineVisible>1</TimelineVisible>
+				<InfobarVisible>1</InfobarVisible>
+				<isInputAPaused>0</isInputAPaused>
+				<isInputBPaused>0</isInputBPaused>
+				<CheckerboardEnabled>0</CheckerboardEnabled>
+				<Fps>2.40000000000000000e+01</Fps>
+				<FpsLocked>1</FpsLocked>
+				<aInput>0</aInput>
+				<bInput>0</bInput>
+				<fullFrame>0</fullFrame>
+			</second>
+		</item>
 	</ViewersData>
 	<Histograms>
 		<count>0</count>
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>7</count>
+		<count>5</count>
 		<item_version>0</item_version>
-		<item>Constant1_2</item>
-		<item>Multiply2</item>
-		<item>Multiply3</item>
+		<item>Merge3</item>
 		<item>p0000</item>
-		<item>p1000</item>
-		<item>p2000</item>
-		<item>p3000</item>
+		<item>Transform3</item>
+		<item>NoOp1</item>
+		<item>p4000</item>
 	</OpenedPanels>
-	<ScriptEditorInput># -*- coding: utf-8 -*-
-# DO NOT EDIT THIS FILE
-# Natron PyPlug
-# This file was automatically generated by Natron PyPlug exporter version 10.
-
-# Hand-written code should be added in a separate file named testExt.py
-# See http://natron.readthedocs.org/en/master/devel/groups.html#adding-hand-written-code-callbacks-etc
-# Note that Viewers are never exported
-
-import NatronEngine
-import sys
-
-# Try to import the extensions file where callbacks and hand-written code should be located.
-try:
-    from testExt import *
-except ImportError:
-    pass
-
-def getPluginID():
-    return &quot;test&quot;
-
-def getLabel():
-    return &quot;test&quot;
-
-def getVersion():
-    return 1
-
-def getGrouping():
-    return &quot;test&quot;
-
-def getPluginDescription():
-    return &quot;test plugin&quot;
-
-def createInstance(app,group):
-    # Create all nodes in the group
-
-    # Create the parameters of the group node the same way we did for all internal nodes
-    lastNode = group
-    lastNode.setColor(0.7, 0.7, 0.7)
-    del lastNode
-
-    # Start of node &quot;p4950&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Read&quot;, 1, group)
-    lastNode.setScriptName(&quot;p4950&quot;)
-    lastNode.setLabel(&quot;4950&quot;)
-    lastNode.setPosition(994, 194)
-    lastNode.setSize(128, 78)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupp4950 = lastNode
-
-    param = lastNode.getParam(&quot;decodingPluginID&quot;)
-    if param is not None:
-        param.setValue(&quot;fr.inria.openfx.ReadPNG&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/topping/4950-topping-meat-turkeysausage.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filePremult&quot;)
-    if param is not None:
-        param.set(&quot;unpremult&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;p4950&quot;
-
-    # Start of node &quot;p0000&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Read&quot;, 1, group)
-    lastNode.setScriptName(&quot;p0000&quot;)
-    lastNode.setLabel(&quot;0000&quot;)
-    lastNode.setPosition(355, 186)
-    lastNode.setSize(128, 78)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupp0000 = lastNode
-
-    param = lastNode.getParam(&quot;decodingPluginID&quot;)
-    if param is not None:
-        param.setValue(&quot;fr.inria.openfx.ReadPNG&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/base/0000-base-box-cardboard.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filePremult&quot;)
-    if param is not None:
-        param.set(&quot;unpremult&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;p0000&quot;
-
-    # Start of node &quot;p1000&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Read&quot;, 1, group)
-    lastNode.setScriptName(&quot;p1000&quot;)
-    lastNode.setLabel(&quot;1000&quot;)
-    lastNode.setPosition(511, 194)
-    lastNode.setSize(128, 78)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupp1000 = lastNode
-
-    param = lastNode.getParam(&quot;decodingPluginID&quot;)
-    if param is not None:
-        param.setValue(&quot;fr.inria.openfx.ReadPNG&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/base/1000-base-crust-thin.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filePremult&quot;)
-    if param is not None:
-        param.set(&quot;unpremult&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;p1000&quot;
-
-    # Start of node &quot;p3000&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Read&quot;, 1, group)
-    lastNode.setScriptName(&quot;p3000&quot;)
-    lastNode.setLabel(&quot;3000&quot;)
-    lastNode.setPosition(829, 194)
-    lastNode.setSize(128, 78)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupp3000 = lastNode
-
-    param = lastNode.getParam(&quot;decodingPluginID&quot;)
-    if param is not None:
-        param.setValue(&quot;fr.inria.openfx.ReadPNG&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/base/3000-base-cheese-mozzarella.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filePremult&quot;)
-    if param is not None:
-        param.set(&quot;unpremult&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;p3000&quot;
-
-    # Start of node &quot;p2000&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Read&quot;, 1, group)
-    lastNode.setScriptName(&quot;p2000&quot;)
-    lastNode.setLabel(&quot;2000&quot;)
-    lastNode.setPosition(671, 186)
-    lastNode.setSize(128, 78)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupp2000 = lastNode
-
-    param = lastNode.getParam(&quot;decodingPluginID&quot;)
-    if param is not None:
-        param.setValue(&quot;fr.inria.openfx.ReadPNG&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/base/2000-base-sauce-tomato.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filePremult&quot;)
-    if param is not None:
-        param.set(&quot;unpremult&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;p2000&quot;
-
-    # Start of node &quot;Merge1&quot;
-    lastNode = app.createNode(&quot;net.sf.openfx.MergePlugin&quot;, 1, group)
-    lastNode.setScriptName(&quot;Merge1&quot;)
-    lastNode.setLabel(&quot;Merge1&quot;)
-    lastNode.setPosition(587, 359)
-    lastNode.setSize(104, 43)
-    lastNode.setColor(0.3, 0.37, 0.776)
-    groupMerge1 = lastNode
-
-    del lastNode
-    # End of node &quot;Merge1&quot;
-
-    # Start of node &quot;Transform1&quot;
-    lastNode = app.createNode(&quot;net.sf.openfx.TransformPlugin&quot;, 1, group)
-    lastNode.setScriptName(&quot;Transform1&quot;)
-    lastNode.setLabel(&quot;Transform1&quot;)
-    lastNode.setPosition(841, 302)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.7, 0.3, 0.1)
-    groupTransform1 = lastNode
-
-    param = lastNode.getParam(&quot;scale&quot;)
-    if param is not None:
-        param.setValue(0.9, 0)
-        param.setValue(0.9, 1)
-        del param
-
-    param = lastNode.getParam(&quot;transformCenterChanged&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;Transform1&quot;
-
-    # Start of node &quot;Transform2&quot;
-    lastNode = app.createNode(&quot;net.sf.openfx.TransformPlugin&quot;, 1, group)
-    lastNode.setScriptName(&quot;Transform2&quot;)
-    lastNode.setLabel(&quot;Transform2&quot;)
-    lastNode.setPosition(1006, 302)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.7, 0.3, 0.1)
-    groupTransform2 = lastNode
-
-    param = lastNode.getParam(&quot;translate&quot;)
-    if param is not None:
-        param.setValue(1488, 0)
-        param.setValue(956, 1)
-        del param
-
-    param = lastNode.getParam(&quot;center&quot;)
-    if param is not None:
-        param.setValue(392, 0)
-        param.setValue(325.5, 1)
-        del param
-
-    param = lastNode.getParam(&quot;transformCenterChanged&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;Transform2&quot;
-
-    # Start of node &quot;Write1&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Write&quot;, 1, group)
-    lastNode.setScriptName(&quot;Write1&quot;)
-    lastNode.setLabel(&quot;Write1&quot;)
-    lastNode.setPosition(587, 483)
-    lastNode.setSize(104, 43)
-    lastNode.setColor(0.75, 0.75, 0)
-    groupWrite1 = lastNode
-
-    param = lastNode.getParam(&quot;encodingPluginID&quot;)
-    if param is not None:
-        param.setValue(&quot;fr.inria.openfx.WritePNG&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/out/pizza.%.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;formatType&quot;)
-    if param is not None:
-        param.set(&quot;input&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;NatronParamFormatChoice&quot;)
-    if param is not None:
-        param.set(&quot;HD&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;Write1&quot;
-
-    groupgroup = groupWrite1
-    # Create all nodes in the group
-
-    # Create the parameters of the group node the same way we did for all internal nodes
-    lastNode = groupgroup
-    lastNode.setColor(0.75, 0.75, 0)
-    param = lastNode.getParam(&quot;encodingPluginID&quot;)
-    if param is not None:
-        param.setValue(&quot;fr.inria.openfx.WritePNG&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/out/pizza.%.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;formatType&quot;)
-    if param is not None:
-        param.set(&quot;input&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;NatronParamFormatChoice&quot;)
-    if param is not None:
-        param.set(&quot;HD&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-
-    # Start of node &quot;Output1&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Output&quot;, 1, groupgroup)
-    lastNode.setLabel(&quot;Output1&quot;)
-    lastNode.setPosition(0, 0)
-    lastNode.setSize(0, 0)
-    lastNode.setColor(0, 0, 0)
-    groupgroupOutput1 = lastNode
-
-    del lastNode
-    # End of node &quot;Output1&quot;
-
-    # Start of node &quot;Source&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Input&quot;, 1, groupgroup)
-    lastNode.setScriptName(&quot;Source&quot;)
-    lastNode.setLabel(&quot;Source&quot;)
-    lastNode.setPosition(0, 0)
-    lastNode.setSize(0, 0)
-    lastNode.setColor(0, 0, 0)
-    groupgroupSource = lastNode
-
-    del lastNode
-    # End of node &quot;Source&quot;
-
-    # Start of node &quot;internalEncoderNode&quot;
-    lastNode = app.createNode(&quot;fr.inria.openfx.WritePNG&quot;, 1, groupgroup)
-    lastNode.setScriptName(&quot;internalEncoderNode&quot;)
-    lastNode.setLabel(&quot;internalEncoderNode&quot;)
-    lastNode.setPosition(0, 0)
-    lastNode.setSize(0, 0)
-    lastNode.setColor(0, 0, 0)
-    groupgroupinternalEncoderNode = lastNode
-
-    param = lastNode.getParam(&quot;filename&quot;)
-    if param is not None:
-        param.setValue(&quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/out/pizza.%.png&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;formatType&quot;)
-    if param is not None:
-        param.set(&quot;input&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;NatronParamFormatChoice&quot;)
-    if param is not None:
-        param.set(&quot;HD&quot;)
-        del param
-
-    param = lastNode.getParam(&quot;ParamExistingInstance&quot;)
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node &quot;internalEncoderNode&quot;
-
-    # Now that all nodes are created we can connect them together, restore expressions
-    groupgroupOutput1.connectInput(0, groupgroupinternalEncoderNode)
-    groupgroupinternalEncoderNode.connectInput(0, groupgroupSource)
-
-
-    # Start of node &quot;Input1&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Input&quot;, 1, group)
-    lastNode.setScriptName(&quot;Input1&quot;)
-    lastNode.setLabel(&quot;0000_Sync&quot;)
-    lastNode.setPosition(828, 430)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
-    groupInput1 = lastNode
-
-    del lastNode
-    # End of node &quot;Input1&quot;
-
-    # Start of node &quot;Input2&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Input&quot;, 1, group)
-    lastNode.setScriptName(&quot;Input2&quot;)
-    lastNode.setLabel(&quot;1000_Sync&quot;)
-    lastNode.setPosition(1019, 413)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
-    groupInput2 = lastNode
-
-    del lastNode
-    # End of node &quot;Input2&quot;
-
-    # Start of node &quot;Input3&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Input&quot;, 1, group)
-    lastNode.setScriptName(&quot;Input3&quot;)
-    lastNode.setLabel(&quot;2000_Sync&quot;)
-    lastNode.setPosition(1305, 404)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
-    groupInput3 = lastNode
-
-    del lastNode
-    # End of node &quot;Input3&quot;
-
-    # Start of node &quot;Input4&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Input&quot;, 1, group)
-    lastNode.setScriptName(&quot;Input4&quot;)
-    lastNode.setLabel(&quot;3000_Sync&quot;)
-    lastNode.setPosition(1658, 388)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
-    groupInput4 = lastNode
-
-    del lastNode
-    # End of node &quot;Input4&quot;
-
-    # Start of node &quot;Input5&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Input&quot;, 1, group)
-    lastNode.setScriptName(&quot;Input5&quot;)
-    lastNode.setLabel(&quot;4950_Sync&quot;)
-    lastNode.setPosition(1987, 387)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
-    groupInput5 = lastNode
-
-    del lastNode
-    # End of node &quot;Input5&quot;
-
-    # Start of node &quot;Output1&quot;
-    lastNode = app.createNode(&quot;fr.inria.built-in.Output&quot;, 1, group)
-    lastNode.setLabel(&quot;Output1&quot;)
-    lastNode.setPosition(587, 569)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupOutput1 = lastNode
-
-    del lastNode
-    # End of node &quot;Output1&quot;
-
-    # Now that all nodes are created we can connect them together, restore expressions
-    groupp4950.connectInput(0, groupInput5)
-    groupp0000.connectInput(0, groupInput1)
-    groupp1000.connectInput(0, groupInput2)
-    groupp3000.connectInput(0, groupInput4)
-    groupp2000.connectInput(0, groupInput3)
-    groupMerge1.connectInput(0, groupp0000)
-    groupMerge1.connectInput(1, groupp1000)
-    groupMerge1.connectInput(3, groupp2000)
-    groupMerge1.connectInput(4, groupTransform1)
-    groupMerge1.connectInput(5, groupTransform2)
-    groupTransform1.connectInput(0, groupp3000)
-    groupTransform2.connectInput(0, groupp4950)
-    groupWrite1.connectInput(0, groupMerge1)
-    groupOutput1.connectInput(0, groupWrite1)
-
-    try:
-        extModule = sys.modules[&quot;testExt&quot;]
-    except KeyError:
-        extModule = None
-    if extModule is not None and hasattr(extModule ,&quot;createInstanceExt&quot;) and hasattr(extModule.createInstanceExt,&quot;__call__&quot;):
-        extModule.createInstanceExt(app,group)
+	<ScriptEditorInput>
 </ScriptEditorInput>
 	<NumPyPanels>0</NumPyPanels>
 </ProjectGui>
