@@ -1,0 +1,13 @@
+# just a simple production deployment
+version: "3.8"
+services:
+  pizza-oven:
+    build:
+      context: .
+      target: prod
+    ports:
+      - 8080:8000
+    environment:
+      API_MODE: "production"
+      PROJECT_NAME: "Rare Pizzas Kitchen"
+      PORT: 8000

@@ -17,7 +17,23 @@ This repository makes pizzas.  More specifically, it accepts json input, transfo
 
 ## 🐳 Running with Docker
 
-// TODO
+### Developing locally with Docker
+
+If you run Docker and want to run the code locally without Python dependencies, we provide a Dockerfile and docker-compose.yml.
+
+Run the production deployment
+
+```bash
+make docker-run
+```
+
+Run the dev deployment with hot reloading enabled
+
+```bash
+make docker-dev
+```
+
+After either command, you will find the API running at http://127.0.0.1:8000
 
 ## 🐍 Running with Python
 
