@@ -1,0 +1,18 @@
+# this will run all the containers locally
+# It mounts the codebase within the container and runs the APIs
+# with hot reload enabled.
+
+version: "3.8"
+services:
+  pizza-oven:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - "./app:/app/app"
+    ports:
+      - 8000:8000
+    environment:
+      API_MODE: "development"
+      PROJECT_NAME: "Rare Pizzas Kitchen"
+      PORT: 8000
