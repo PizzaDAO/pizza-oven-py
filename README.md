@@ -14,6 +14,7 @@ This repository makes pizzas.  More specifically, it accepts json input, transfo
 
 - 🐳🐍 [GNU Make](https://www.gnu.org/software/make/manual/make.html) is used to simplify the commands and GitHub Actions. This approach is recommended to simplify the command line experience. This is built in for MacOS and Linux. We arent supporting windoze right meow
 - 🐍 [Python 3.8](https://www.python.org/downloads/) is <ins>**required**</ins> to develop this API. If you uses multiple versions of python, dont.  But if you insist, [pyenv](https://github.com/pyenv/pyenv) will make your life easier.
+- https://www.postman.com/downloads/
 
 ## 🐳 Running with Docker
 
