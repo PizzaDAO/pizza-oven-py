@@ -3,7 +3,7 @@
 
 # files
 filein = "0000-box-cardboard.png"
-fileout = "rarepizza-#####-box.png"
+fileout = "rp-#####-box.png"
 
 # paths
 oven = "../oven/"
