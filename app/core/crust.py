@@ -17,8 +17,6 @@ rotate = 180
 class Crust(NatronBase):
     """base class override"""
 
-    pass
-
 
 crust = Crust(app)
 crust.setIngredient(in_file)

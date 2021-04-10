@@ -26,8 +26,6 @@ out_file = "rp-#####-%s.png" % layer
 class Sauce(NatronBase):
     """base class override"""
 
-    pass
-
 
 DONT_TRANSLATE = None
 DONT_SCALE = None

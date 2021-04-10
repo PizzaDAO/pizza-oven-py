@@ -20,8 +20,6 @@ param.setValue(index)
 class Paper(NatronBase):
     """base class override"""
 
-    pass
-
 
 paper = Paper(app)
 paper.setIngredient(in_file)
