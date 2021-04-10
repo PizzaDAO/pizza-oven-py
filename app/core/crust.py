@@ -1,51 +1,27 @@
-# This is the content of a natron rarepizzas script
-# Anthony Shafer aka "Shrimp" @anthonyshafer
-# Python2.7 because of Naton
-
-# This is the content of a natron rarepizzas script
-# Anthony Shafer aka "Shrimp" @anthonyshafer
-
-import render_config as config
+from natron_base import NatronBase
 
 # kitchen order attrs
 unique_id = "1010"
 category = "crust"
 index = 2
 variation = 1
-filename = "1010-crust-thick"
-fileout = "rp-#####-crust"
+
+in_file = "1010-crust-thick.png"
+out_file = "rp-#####-crust.png"
+
 translate = [1000, 1000]
 scale = 0.5
 rotate = 180
 
 
-# get ingredient from kitchen
-lastNode = app.getNode("i%s" % index)
-param = lastNode.getParam("filename")
-if param is not None:
-    param.setValue(config.paths["database"] + filename + ".png")
-del param
+class Crust(NatronBase):
+    """base class override"""
+
+    pass
 
 
-# switch index
-switchNode = app.getNode("Switch%s" % unique_id)
-whichP = switchNode.getParam("which")
-whichP.setValue(variation)
-
-# change params
-trsNode = app.getNode("TRS_%s" % unique_id)
-translateP = trsNode.getParam("translate")
-rotateP = trsNode.getParam("rotate")
-scaleP = trsNode.getParam("scale")
-translateP.setValue(translate[0], 0)
-translateP.setValue(translate[1], 1)
-rotateP.setValue(rotate)
-scaleP.setValue(scale, 0)
-scaleP.setValue(scale, 1)
-
-# bake to oven
-lastNode = app.getNode("w1")
-param = lastNode.getParam("filename")
-if param is not None:
-    param.setValue(config.paths["output"] + fileout + ".png")
-del param
+crust = Crust(app)
+crust.setIngredient(in_file)
+crust.setSwitchProperty(unique_id, index)
+crust.setPosition(unique_id, translate, scale, rotate)
+crust.render(out_file)

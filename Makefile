@@ -75,5 +75,3 @@ test:
 test-natron:
 	@echo ☢️ Test Natron
 	poetry run python app/core/renderer.py -f 9
-	
-##cd $(NATRON_PROJECT_PATH) && ./bake-test.sh

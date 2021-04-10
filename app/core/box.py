@@ -1,24 +1,16 @@
-# This is the content of a natron rarepizzas script
-# Anthony Shafer aka "Shrimp" @anthonyshafer
+#!/usr/bin/env python
 
-import render_config as config
+from natron_base import NatronBase
 
 # files
-filename = "0000-box-cardboard.png"
-fileout = "rp-#####-box.png"
+in_file = "0000-box-cardboard.png"
+out_file = "rp-#####-box.png"
 
 
-# get ingredient from kitchen
-lastNode = app.getNode("i1")
-param = lastNode.getParam("filename")
-if param is not None:
-    param.setValue(config.paths["database"] + filename)
-del param
+class Box(NatronBase):
+    """base class override"""
 
 
-# bake to oven
-lastNode = app.getNode("w1")
-param = lastNode.getParam("filename")
-if param is not None:
-    param.setValue(config.paths["output"] + fileout)
-del param
+box = Box(app)
+box.setIngredient(in_file)
+box.render(out_file)

@@ -6,26 +6,17 @@ import subprocess
 DEFAULT_FRAME = 9
 DEFAULT_EXECUTABLE_PATH = os.environ["NATRON_PATH"]
 DEFAULT_PROJECT_PATH = os.environ["NATRON_PROJECT_PATH"]
-# output = "../../output/"
-# datastore = "../../ingredients-db/"
-
 
 current = os.path.dirname(os.path.realpath(__file__))
 
-# os.environ["NATRON_INPUT"] = os.getcwd()
-
 
 class BoxRenderer:
+    """Render Boxes"""
+
     def __init__(self):
         pass
 
     def render(self, executable_path, project_path, frame):
-        # filename = "0000-box-cardboard.png"
-        # fileout = "rp-#####-box.png"
-
-        print(executable_path)
-        print(project_path)
-
         subprocess.check_call(
             [
                 f"{executable_path}/NatronRenderer",
@@ -37,7 +28,62 @@ class BoxRenderer:
         )
 
 
+class PaperRenderer:
+    """Render Paper"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, frame):
+        subprocess.check_call(
+            [
+                f"{executable_path}/NatronRenderer",
+                "-l",
+                f"{current}/paper.py",
+                f"{project_path}/waxpaper.ntp",
+                f"{frame}",
+            ]
+        )
+
+
+class CrustRenderer:
+    """Render Crust"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, frame):
+        subprocess.check_call(
+            [
+                f"{executable_path}/NatronRenderer",
+                "-l",
+                f"{current}/crust.py",
+                f"{project_path}/crust.ntp",
+                f"{frame}",
+            ]
+        )
+
+
+class SauceRenderer:
+    """Render sauces"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, frame):
+        subprocess.check_call(
+            [
+                f"{executable_path}/NatronRenderer",
+                "-l",
+                f"{current}/sauce.py",
+                f"{project_path}/sauce.ntp",
+                f"{frame}",
+            ]
+        )
+
+
 if __name__ == "__main__":
+    """invoke the rendering steps via the command line"""
     import argparse
 
     parser = argparse.ArgumentParser(
@@ -71,6 +117,18 @@ if __name__ == "__main__":
         help="The folder where project files exist",
     )
 
+    parser.add_argument(
+        "-r",
+        "--recipe-path",
+        metavar="<project>",
+        default=DEFAULT_PROJECT_PATH,
+        type=str,
+        help="The folder where project files exist",
+    )
+
     args = parser.parse_args()
 
     BoxRenderer().render(args.natron_path, args.project_path, args.frame)
+    PaperRenderer().render(args.natron_path, args.project_path, args.frame)
+    CrustRenderer().render(args.natron_path, args.project_path, args.frame)
+    SauceRenderer().render(args.natron_path, args.project_path, args.frame)
