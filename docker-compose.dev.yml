@@ -5,6 +5,8 @@
 version: "3.8"
 services:
   pizza-oven:
+    depends_on:
+      - chainlink
     build:
       context: .
       target: dev
@@ -12,7 +14,66 @@ services:
       - "./app:/app/app"
     ports:
       - 8000:8000
+    networks:
+      - rare-pizzas
     environment:
       API_MODE: "development"
       PROJECT_NAME: "Rare Pizzas Kitchen"
       PORT: 8000
+
+  # Add a chainlink node
+  chainlink:
+    depends_on:
+      chainlink-db:
+        condition: service_healthy
+    build:
+      context: ./chainlink
+      target: dev
+    entrypoint: /bin/sh -c "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
+    volumes: # mount the working directory
+      - "./chainlink:/chainlink"
+    ports:
+      - 6688:6688
+    networks:
+      - rare-pizzas
+    environment:
+      PORT: 6688
+      DATABASE_URL: postgresql://postgres:$CHAINLINK_PGPASSWORD@chainlink-db:5432/ChainlinkDB?sslmode=disable
+    env_file:
+      - "./chainlink/.env"
+    secrets:
+      - password
+      - api
+
+  # Add a chainlink database
+  chainlink-db:
+    container_name: chainlink-db
+    image: postgres:11.6
+    volumes:
+      - chainlink-db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ChainlinkDB
+      POSTGRES_PASSWORD: $CHAINLINK_PGPASSWORD
+    ports:
+      - 5432:5432
+    networks:
+      - rare-pizzas
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "ChainlinkDB", "-U", "postgres"]
+      timeout: 5s
+      interval: 10s
+      retries: 10
+
+networks:
+  rare-pizzas:
+    driver: bridge
+
+# configure some dev secrets (insecure, don't use in prod)
+secrets:
+  password:
+    file: "./chainlink/.password"
+  api:
+    file: "./chainlink/.api"
+
+volumes:
+  chainlink-db-data:

@@ -10,7 +10,7 @@ from ..tags import ORDER
 router = APIRouter()
 
 
-@router.get("/order/recipe/{recipe_id}", response_model=RecipeResponse, tags=[ORDER])
+@router.get("/{recipe_id}", response_model=RecipeResponse, tags=[ORDER])
 def recipe(recipe_id: int) -> Any:
     """
     Order a recipe from the kitchen (by id)
