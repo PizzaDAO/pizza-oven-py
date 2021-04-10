@@ -1549,8 +1549,8 @@
 			<CacheID>Group1</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Read 1000</Plugin_label>
-			<Plugin_script_name>Read_1000</Plugin_script_name>
+			<Plugin_label>i1</Plugin_label>
+			<Plugin_script_name>i1</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -1864,8 +1864,8 @@
 			<CacheID>Read2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Read 1010</Plugin_label>
-			<Plugin_script_name>Read_1010</Plugin_script_name>
+			<Plugin_label>i2</Plugin_label>
+			<Plugin_script_name>i2</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -1940,7 +1940,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>../ingredients-db//1010-crust-thick.png</Value>
+					<Value>../ingredients-db/1010-crust-thick.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -2161,7 +2161,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>86</KnobsAge>
+			<KnobsAge>88</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -2593,7 +2593,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>Switch2_2</second>
+					<second>Switch1010</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>7</KnobsAge>
@@ -2624,7 +2624,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>Switch2_2_2</second>
+					<second>Switch1020</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>7</KnobsAge>
@@ -2642,8 +2642,8 @@ Crust
 			<CacheID>Dot30</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Read 1020</Plugin_label>
-			<Plugin_script_name>Read_1020</Plugin_script_name>
+			<Plugin_label>i3</Plugin_label>
+			<Plugin_script_name>i3</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -3190,7 +3190,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>switch_1000</second>
+					<second>Switch1000</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>7</KnobsAge>
@@ -3976,7 +3976,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Read_1000</second>
+					<second>i1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>205</KnobsAge>
@@ -4117,7 +4117,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Read_1010</second>
+					<second>i2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>426</KnobsAge>
@@ -4206,7 +4206,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Read_1020</second>
+					<second>i3</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>324</KnobsAge>
@@ -4225,242 +4225,6 @@ Crust
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>TRS_1010_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>switch_1000</Plugin_label>
-			<Plugin_script_name>switch_1000</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>which</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>p1_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>1</first>
-					<second>Crop1_4</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>17</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Switch2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>switch_1010</Plugin_label>
-			<Plugin_script_name>Switch2_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>p1_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>1</first>
-					<second>Crop1_2</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>29</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Switch2_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>switch_1020</Plugin_label>
-			<Plugin_script_name>Switch2_2_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>p1_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>1</first>
-					<second>Crop1</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>24</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Switch2_2_2</CacheID>
 		</item>
 		<item>
 			<Plugin_label>Merge2</Plugin_label>
@@ -6316,7 +6080,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge2</second>
+					<second>Merge3</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -6523,6 +6287,242 @@ Crust
 			</UserComponents>
 			<CacheID>Merge3</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Switch1000</Plugin_label>
+			<Plugin_script_name>Switch1000</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>2</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>p1_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>1</first>
+					<second>Crop1_4</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Switch1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Switch1010</Plugin_label>
+			<Plugin_script_name>Switch1010</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>which</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>p1_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>1</first>
+					<second>Crop1_2</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>2</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Switch21</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Switch1020</Plugin_label>
+			<Plugin_script_name>Switch1020</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>2</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>p1_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>1</first>
+					<second>Crop1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Switch3</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>8</ProjectKnobsCount>
 	<item>
@@ -6646,7 +6646,7 @@ Crust
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Fri Apr 9 23:30:44 2021</Value>
+			<Value>Sat Apr 10 09:45:04 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -6786,8 +6786,8 @@ Crust
 		</item>
 		<item>
 			<Name>DropShadowCore</Name>
-			<X_position>6.49458217074807180e+01</X_position>
-			<Y_position>-3.32396793324195460e+03</Y_position>
+			<X_position>8.16474198842543046e+01</X_position>
+			<Y_position>-3.43072867032585100e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -6925,7 +6925,7 @@ Crust
 			</item>
 		</item>
 		<item>
-			<Name>Read_1000</Name>
+			<Name>i1</Name>
 			<X_position>1.41761067305848110e+03</X_position>
 			<Y_position>-3.59428278863096330e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
@@ -6939,9 +6939,9 @@ Crust
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Read_1010</Name>
-			<X_position>1.88140147050285395e+03</X_position>
-			<Y_position>-3.61947195715863518e+03</Y_position>
+			<Name>i2</Name>
+			<X_position>1.88140147050285486e+03</X_position>
+			<Y_position>-3.60424711707166216e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -7023,9 +7023,9 @@ Crust
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Read_1020</Name>
+			<Name>i3</Name>
 			<X_position>2.20353669255061550e+03</X_position>
-			<Y_position>-3.62515449133005313e+03</Y_position>
+			<Y_position>-3.60854557487153761e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -7163,48 +7163,6 @@ Crust
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>switch_1000</Name>
-			<X_position>1.43209606357992789e+03</X_position>
-			<Y_position>-2.89428576789326280e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Switch2_2</Name>
-			<X_position>1.89340147050285168e+03</X_position>
-			<Y_position>-2.86816561367295344e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Switch2_2_2</Name>
-			<X_position>2.21553669255061186e+03</X_position>
-			<Y_position>-2.81717985592704918e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Merge2</Name>
 			<X_position>-1.79943125286672512e+02</X_position>
 			<Y_position>-3.18354548368930500e+03</Y_position>
@@ -7234,8 +7192,8 @@ Crust
 		</item>
 		<item>
 			<Name>DropShadowSoft</Name>
-			<X_position>1.93510880966309742e+02</X_position>
-			<Y_position>-3.26978994104497087e+03</Y_position>
+			<X_position>2.33367494158880618e+02</X_position>
+			<Y_position>-3.29370390896051367e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -7374,8 +7332,8 @@ Crust
 		</item>
 		<item>
 			<Name>Erode1</Name>
-			<X_position>3.64487185000702993e+02</X_position>
-			<Y_position>-3.31596793324195460e+03</Y_position>
+			<X_position>3.60887401139947542e+02</X_position>
+			<Y_position>-3.42272867032585100e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -7388,8 +7346,8 @@ Crust
 		</item>
 		<item>
 			<Name>Viewer2</Name>
-			<X_position>-1.79943125286672512e+02</X_position>
-			<Y_position>-3.04038111773590390e+03</Y_position>
+			<X_position>-1.06083377044868030e+02</X_position>
+			<Y_position>-2.61856541643287665e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -7428,46 +7386,103 @@ Crust
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Switch1000</Name>
+			<X_position>1.42961067305848064e+03</X_position>
+			<Y_position>-2.89428576789326280e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Switch1010</Name>
+			<X_position>1.89340147050285395e+03</X_position>
+			<Y_position>-2.86816561367295390e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Switch1020</Name>
+			<X_position>2.21553669255061595e+03</X_position>
+			<Y_position>-2.81717985592704963e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="17" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
 		<Window class_id="18" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="19" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1069 575</Sizes>
+				<Sizes>1028 554</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>489 488</Sizes>
+					<Sizes>469 468</Sizes>
 					<Orientation>2</Orientation>
-					<ChildIsSplitter>0</ChildIsSplitter>
-					<Child class_id="20" tracking_level="1" version="5" object_id="_2">
-						<Tabs class_id="21" tracking_level="0" version="0">
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>Viewer2</item>
-						</Tabs>
-						<Index>0</Index>
-						<Name>pane1</Name>
-						<IsAnchor>1</IsAnchor>
+					<ChildIsSplitter>1</ChildIsSplitter>
+					<Child object_id="_2">
+						<Sizes>461 564</Sizes>
+						<Orientation>1</Orientation>
+						<ChildIsSplitter>0</ChildIsSplitter>
+						<Child class_id="20" tracking_level="1" version="5" object_id="_3">
+							<Tabs class_id="21" tracking_level="0" version="0">
+								<count>1</count>
+								<item_version>0</item_version>
+								<item>Viewer2</item>
+							</Tabs>
+							<Index>0</Index>
+							<Name>pane1</Name>
+							<IsAnchor>1</IsAnchor>
+						</Child>
+						<ChildIsSplitter>0</ChildIsSplitter>
+						<Child object_id="_4">
+							<Tabs>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item>scriptEditor</item>
+							</Tabs>
+							<Index>0</Index>
+							<Name>pane4</Name>
+							<IsAnchor>0</IsAnchor>
+						</Child>
 					</Child>
 					<ChildIsSplitter>0</ChildIsSplitter>
-					<Child object_id="_3">
+					<Child object_id="_5">
 						<Tabs>
-							<count>4</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
-							<item>progress</item>
 						</Tabs>
-						<Index>3</Index>
+						<Index>0</Index>
 						<Name>pane3</Name>
 						<IsAnchor>0</IsAnchor>
 					</Child>
 				</Child>
 				<ChildIsSplitter>0</ChildIsSplitter>
-				<Child object_id="_4">
+				<Child object_id="_6">
 					<Tabs>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -7479,10 +7494,10 @@ Crust
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>0</x>
+			<x>-1682</x>
 			<y>23</y>
-			<w>1680</w>
-			<h>980</h>
+			<w>1618</w>
+			<h>940</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="22" tracking_level="0" version="0">
@@ -7491,9 +7506,9 @@ Crust
 		<item class_id="23" tracking_level="0" version="0">
 			<first>Viewer2</first>
 			<second class_id="24" tracking_level="0" version="14">
-				<zoomLeft>-2.71852801712454175e+03</zoomLeft>
-				<zoomBottom>5.83519603232616646e+01</zoomBottom>
-				<zoomFactor>1.23565297203480265e-01</zoomFactor>
+				<zoomLeft>-3.45148820675669549e+03</zoomLeft>
+				<zoomBottom>-2.73900793228367547e+01</zoomBottom>
+				<zoomFactor>1.02977263621794948e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="25" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -7537,79 +7552,46 @@ Crust
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>9</count>
+		<count>8</count>
 		<item_version>0</item_version>
+		<item>Switch1020</item>
+		<item>Switch1010</item>
+		<item>Switch1000</item>
+		<item>i3</item>
+		<item>i2</item>
+		<item>i1</item>
+		<item>TRS_1000</item>
 		<item>w1</item>
-		<item>DropShadowCore</item>
-		<item>Merge3</item>
-		<item>Merge1</item>
-		<item>DropShadowSoft</item>
-		<item>Erode1</item>
-		<item>Read1</item>
-		<item>Merge2</item>
-		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
-	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
-y = [ 2040]
-for i in range (len(y)):
-	code = y[i]
-	print code
-	grp = &quot;Cheese_&quot;
-	grp = &quot;Sauce&quot;
-	sN = &quot;switch_%s&quot; % code
-	sC = &quot;switch_%swhich&quot; % code
-	sL =  &quot;%s Which&quot; % code
-	tN = &quot;TRS_%s&quot; % code
-	rC = &quot;rotate_%s&quot; % code
-	rL =  &quot;%s Rotate&quot; % code
+	<ScriptEditorInput>unique_id = &quot;1010&quot;
+category = &quot;crust&quot;
+index = 2
+filename = &quot;1010-crust-thick&quot;
+fileout = &quot;rp-#####-crust&quot;
+translate = [0,0]
+scale = 1
+rotate = 0
 
-	control = app.getNode(&quot;Control&quot;)
-	switch = app.getNode(sN)
-	trs = app.getNode(tN)
-	groupParam = control.getParam(grp)
-	#switchParam = switch.getParam(&quot;which&quot;)
+# paths
+oven = &quot;../oven/&quot;
+idb = &quot;../ingredients-db/&quot;
 
-	intParam = control.createIntParam(sC,sL)	
-	intParam.setDisplayMaximum(1)
-	intParam.setDisplayMinimum(0)
-	intParam.setAddNewLine(False)
-	doubleParam = control.createDoubleParam(tN+&quot;rotate&quot;,rL)
-	doubleParam.setDisplayMaximum(360)
-	doubleParam.setDisplayMinimum(-360)
-	groupParam.addParam(intParam)
-	groupParam.addParam(doubleParam)
+# get ingredient from kitchen
+lastNode = app.getNode(&quot;i%s&quot; % index)
+param = lastNode.getParam(&quot;filename&quot;)
+param.setValue(idb+filename+&quot;.png&quot;)
+del param
 
-control.refreshUserParamsGUI()
+# switch index
+switchNode = app.getNode(&quot;switch_%s&quot; % unique_id)
+whichP = switchNode.getParam(&quot;which&quot;)
+whichP.setValue(index)
 
-y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
-y=[2040]
-for i in range (len(y)):
-	x1 = control.getParam(&quot;switch_%swhich&quot;%y[i])
-	x2 = control.getParam(&quot;TRS_%srotate&quot;%y[i])
-	control.removeParam(x1)
-	control.removeParam(x2)
-
-trs = app.getNode(&quot;TRS_3020&quot;)
-trs.getParam(&quot;rotate&quot;)
-param.setExpression(&quot;thisGroup.Enable_Color.get()&quot;, False, 0)
-    del param
-print dir (trs)
-trs.setAnimationEnabled(1)
-trs.getExpression()
-
-getExpression
-
-import os
-import json
-ko = &quot;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/kitchen_order.json&quot;
-myfile = file(ko)
-data = myfile.read()
-print dir(data)
-# parse file
-obj = json.loads(data)
-
-# show values
-print obj[&quot;order&quot;].keys()</ScriptEditorInput>
+# switch index
+switchNode = app.getNode(&quot;Switch%s&quot; % unique_id)
+whichP = switchNode.getParam(&quot;which&quot;)
+whichP.setValue(index)
+</ScriptEditorInput>
 	<NumPyPanels>0</NumPyPanels>
 </ProjectGui>
 </boost_serialization>

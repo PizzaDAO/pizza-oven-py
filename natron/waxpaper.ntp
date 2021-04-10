@@ -661,7 +661,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>switch_0500_2</second>
+					<second>Merge2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -2017,24 +2017,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>which</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
+			<KnobsCount>2</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -2082,7 +2065,7 @@
 					<second>TRS_0500</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>3</KnobsAge>
+			<KnobsAge>4</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -3229,7 +3212,7 @@
 				</item>
 				<item>
 					<first>B</first>
-					<second>switch_0500_2</second>
+					<second>switch_0510</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -3250,8 +3233,8 @@
 			<CacheID>Merge2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>switch_0500_2</Plugin_label>
-			<Plugin_script_name>switch_0500_2</Plugin_script_name>
+			<Plugin_label>switch_0510</Plugin_label>
+			<Plugin_script_name>switch_0510</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -3445,7 +3428,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Apr 10 08:33:16 2021</Value>
+			<Value>Sat Apr 10 08:50:59 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -3613,8 +3596,8 @@
 		</item>
 		<item>
 			<Name>Viewer1</Name>
-			<X_position>-9.50842775233759312e+01</X_position>
-			<Y_position>-3.13827679615200395e+03</Y_position>
+			<X_position>-9.81474427815937815e+01</X_position>
+			<Y_position>-3.09692406516606297e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -3767,8 +3750,8 @@
 		</item>
 		<item>
 			<Name>switch_0500</Name>
-			<X_position>2.18357436304434486e+02</X_position>
-			<Y_position>-3.26401669221977772e+03</Y_position>
+			<X_position>2.19484074647859416e+02</X_position>
+			<Y_position>-3.26219294571043520e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -3878,7 +3861,7 @@
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>switch_0500_2</Name>
+			<Name>switch_0510</Name>
 			<X_position>4.75209976594745967e+02</X_position>
 			<Y_position>-3.25636339240962752e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -3954,9 +3937,9 @@
 		<item class_id="23" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="24" tracking_level="0" version="14">
-				<zoomLeft>-7.32803842574255668e+02</zoomLeft>
-				<zoomBottom>8.93484785357154465e+02</zoomBottom>
-				<zoomFactor>1.92513398008578335e-01</zoomFactor>
+				<zoomLeft>-2.11050817083421452e+03</zoomLeft>
+				<zoomBottom>2.29425898496532000e+02</zoomBottom>
+				<zoomFactor>1.11428285256410520e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="25" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -4002,7 +3985,7 @@
 	<OpenedPanels>
 		<count>8</count>
 		<item_version>0</item_version>
-		<item>switch_0500_2</item>
+		<item>switch_0510</item>
 		<item>switch_0500</item>
 		<item>TRS_0510</item>
 		<item>TRS_0500</item>

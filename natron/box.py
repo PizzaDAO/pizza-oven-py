@@ -2,7 +2,7 @@
 # Anthony Shafer aka "Shrimp" @anthonyshafer
 
 # files
-filein = "0000-box-cardboard.png"
+filename = "0000-box-cardboard.png"
 fileout = "rp-#####-box.png"
 
 # paths
@@ -13,10 +13,9 @@ idb = "../ingredients-db/"
 lastNode = app.getNode("i1")
 param = lastNode.getParam("filename")
 if param is not None:
-	param.setValue(idb+filein)
+	param.setValue(idb+filename)
 del param
 
-# do some otherstuff...
 
 # bake to oven
 lastNode= app.getNode("w1")
