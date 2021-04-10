@@ -1,9 +1,15 @@
 # This is the content of a natron rarepizzas script
 # Anthony Shafer aka "Shrimp" @anthonyshafer
 
-# files
-filein = "0500-waxpaper-redchecker.png"
+# kitchen order attrs
+unique_id = "0500"
+category = "waxpaper"
+index = 1
+filename = "0500-waxpaper-redchecker"
 fileout = "rp-#####-waxpaper.png"
+translate = [0,0]
+scale = .975
+rotate = 0
 
 # paths
 oven = "../oven/"
@@ -11,12 +17,25 @@ idb = "../ingredients-db/"
 
 # get ingredient from kitchen
 lastNode = app.getNode("i1")
-param = lastNode.getParam("filename")
+param = lastNode.getParam("filename"+".png")
 if param is not None:
-	param.setValue(idb+filein)
+	param.setValue(idb+filename)
 del param
 
-# do some otherstuff...
+# switch index
+switchNode = app.getNode("switch_%s" % unique_id)
+whichP = switchNode.getParam("which")
+whichP.setValue(index)
+
+# change params
+trsNode = app.getNode("TRS_%s" % unique_id)
+translateP = trsNode.getParam("translate")
+rotateP = trsNode.getParam("rotate")
+scaleP = trsNode.getParam("scale")
+translateP.setValue(translate[0],0)
+translateP.setValue(translate[1],1)
+rotateP.setValue(rotate)
+scaleP.setValue(scale)
 
 # bake to oven
 lastNode= app.getNode("w1")

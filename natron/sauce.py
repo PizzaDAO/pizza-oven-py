@@ -2,10 +2,13 @@
 # Anthony Shafer aka "Shrimp" @anthonyshafer
 # Python2.7 because of Naton
 
-import random
 
 #setup
-layer = "crust"
+layer = "sauce"
+
+#params
+import random
+rotate = random.randint(-360,360)
 
 # files
 filein = "1000-%s-thin.png" % layer
@@ -22,13 +25,11 @@ if param is not None:
 	param.setValue(idb+filein)
 del param
 
-# do some otherstuff...
-
 # random rotate
 lastNode = app.getNode("TRS_%s" % layer)
 param = lastNode.getParam("rotate")
 if param is not None:
-	param.setValue(random.randint(-360,360))
+	param.setValue(rotate)
 del param
 
 # bake to oven
