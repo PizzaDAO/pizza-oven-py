@@ -1,4 +1,15 @@
-.PHONY: all environment lint install-poetry start
+.PHONY: all environment lint install-poetry start test test-natron
+
+.EXPORT_ALL_VARIABLES:
+OS ?= $(shell python -c 'import platform; print(platform.system())')
+ifeq ($(OS), Linux)
+# TODO: find it
+NATRON_PATH=/Applications/Natron.app/Contents/MacOS
+endif
+ifeq ($(OS), Darwin)
+NATRON_PATH=/Applications/Natron.app/Contents/MacOS
+endif
+NATRON_PROJECT_PATH=$(realpath .)/natron
 
 IMAGE_NAME = pizza-oven
 # Supports either "development" or "production" modes
@@ -60,3 +71,9 @@ auto-lint:
 test:
 	@echo ✅ Testing
 	poetry run pytest . -x
+
+test-natron:
+	@echo ☢️ Test Natron
+	poetry run python app/core/renderer.py -f 9
+	
+##cd $(NATRON_PROJECT_PATH) && ./bake-test.sh
