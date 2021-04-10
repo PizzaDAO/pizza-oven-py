@@ -4,24 +4,78 @@
     "random_seed": "0xAb4",
     "recipe_id": 1,
     "base_ingredients": {
-        "SOME_KEY": [
+        "box": [
             {
-                "unique_id": 1,
-                "name": "gluten-free",
+                "unique_id": "0000",
+                "index" : 1,
+                "category": "box",
+                "type": "cardboard",
+                "filename": "0000-box-cardboard",
                 "rarity_level": 1,
-                "classification": 3,
-                "category": "crust",
+                "nicename": "Cardboard Pizza Box",
+                "scatter" : 1,
+                "transform" : {
+                    "translate" : [0, 0],
+                    "rotate" : 0,
+                    "scale" : 0.975
+                },               
+                "nutritional" :{},
                 "attributes": {},
                 "image_uris": {}
-            },
-            {
-                "emission_count": 26.0,
-                "emission_density": 0.12,
-                "particle_scale": 0.12,
-                "rotation": 1.234
             }
         ]
     },
+        "waxpaper": [
+            {
+                "unique_id": "0500",
+                "index" : 1,
+                "category": "waxpaper",
+                "type": "redchecker",
+                "filename": "0500-waxpaper-redchecker",
+                "rarity_level": 1,
+                "nicename": "Classic Red Checker",
+                "scatter" : 1,
+                "transform" : {
+                    "translate" : [0, 0],
+                    "rotate" : 0,
+                    "scale" : 0.975
+                },               
+                "nutritional" :{}, 
+                "attributes": {},
+                "image_uris": {}
+            },
+        ],
+        "crust" : [
+            {
+                "unique_id": "1000",
+                "index" : 1,
+                "category": "crust",
+                "type": "thin",
+                "filename": "1000-crust-thin",
+                "rarity_level": 1,
+                "nicename": "On a thin crust",
+                "scatter" : 1,
+                "transform" : {
+                    "translate" : [0, 0],
+                    "rotate" : 0,
+                    "scale" : 1
+                },               
+                "nutritional" : {
+                    "servings" : 8,
+                    "calories" : 8,
+                    "cholesterol" : 0,
+                    "fat" : 4.5,
+                    "sodium" : 170,
+                    "carbs"  : 27,
+                    "protien" : 5,
+                    "vitamins" : 0
+                },
+                "attributes": {},
+                "image_uris": {}
+            }        
+        ]
+    },
+
     "toppings": {
         "SOME_KEY": [
             {
