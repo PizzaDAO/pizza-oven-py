@@ -71,4 +71,53 @@ A Postman collection is also available to test the API located in the `.postman`
 
 ## 🧪 Testing
 
-// TODO:
+### Testing the chainlink oracle
+
+Spin everything up:
+
+```
+make docker-dev
+```
+
+navigate to `http://localhost:6688` and log into the chainlink interface (using the info in `./chainlink/,api`).
+Select Bridges from the top menu bar and create a new bridge:
+
+```
+Name	delivery1
+URL	http://pizza-oven:8000/api/v1/diningroom/order
+Confirmations	0
+Minimum Contract Payment	0
+```
+
+Select the Jobs tab from the top menu bar and create a new job:
+
+```
+{
+  "name": "delivery1 test",
+  "initiators": [
+    {
+      "type": "web"
+    }
+  ],
+  "tasks": [
+    {
+      "type": "delivery1",
+      "params": {
+        "address": "abc123"
+      }
+    }
+  ]
+}
+```
+
+run the job, and then inspect the json response of the job and verify thatr it includes result data that looks like this:
+
+```
+"result": {
+    "data": {
+      "address": "abc123",
+      "artwork": "QmZ4q72eVU3bX95GXwMXLrguybKLKavmStLWEWVJZ1jeyz"
+    },
+    "error": null
+  },
+```
