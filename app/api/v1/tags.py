@@ -1,0 +1,5 @@
+BAKE = "Bake Pizza"
+ORDER = "Order Recipe"
+PREP = "Prepare Order"
+DELIVER = "Deliver Order"
+UTILITY = "Utility"

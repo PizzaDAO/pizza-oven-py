@@ -1,3 +1,6 @@
+.DS_Store
+ingredients-db/.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -6,6 +9,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+.Python
 bin/
 build/
 develop-eggs/
@@ -48,13 +52,17 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
-ingredients-db/.DS_Store
-.DS_Store
-natron/cheese.ntp.lock
+
 *.autosave
 *.lock
-.DS_Store
-.DS_Store
+
+# Natron
+natron/cheese.ntp.lock
+natron/oven_v001.ntp.autosave
+natron/oven_v001.ntp.lock
 natron/plugins/natron-plugins/
 natron/plugins/natron-python-scripting/
 ingredients-db/.DS_Store
+
+# Chainlink
+chainlink/log.jsonl
