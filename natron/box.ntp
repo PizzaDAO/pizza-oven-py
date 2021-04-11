@@ -1907,7 +1907,7 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p0_channels</Name>
+				<Name>p1_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -1928,7 +1928,7 @@
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>0</first>
+					<first>1</first>
 					<second>DropShadow2</second>
 				</item>
 			</Inputs_map>
@@ -2072,7 +2072,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Apr 10 16:06:27 2021</Value>
+			<Value>Sat Apr 10 21:04:55 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -2381,7 +2381,7 @@
 		<item>
 			<Name>Switch_0000</Name>
 			<X_position>6.57605483625451598e+02</X_position>
-			<Y_position>-3.31030559956056231e+03</Y_position>
+			<Y_position>-3.27930559956056231e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -2503,10 +2503,10 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item>Switch_0000</item>
+		<item>i1</item>
 		<item>DropShadow2</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>w1</item>
-		<item>i1</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
