@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>4</NodesCount>
+		<NodesCount>5</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>i1</Plugin_label>
 			<Plugin_script_name>i1</Plugin_script_name>
@@ -494,7 +494,7 @@
 				<item_version>0</item_version>
 				<item class_id="8" tracking_level="0" version="0">
 					<first>Source</first>
-					<second>DropShadow2</second>
+					<second>Switch_0000</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>42</KnobsAge>
@@ -528,7 +528,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>DropShadow2</second>
+					<second>Switch_0000</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -1876,6 +1876,79 @@
 			</UserComponents>
 			<CacheID>Group11</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Switch_0000</Plugin_label>
+			<Plugin_script_name>Switch_0000</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>2</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>p0_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>0</first>
+					<second>DropShadow2</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Switch1</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>8</ProjectKnobsCount>
 	<item>
@@ -1999,7 +2072,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Fri Apr 9 16:09:49 2021</Value>
+			<Value>Sat Apr 10 16:06:27 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -2121,7 +2194,7 @@
 </Project>
 <ProjectGui class_id="14" tracking_level="0" version="11">
 	<NodesGui class_id="15" tracking_level="0" version="0">
-		<count>4</count>
+		<count>5</count>
 		<item_version>6</item_version>
 		<item class_id="16" tracking_level="0" version="6">
 			<Name>i1</Name>
@@ -2188,7 +2261,7 @@
 				<b>3.900053501e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2197,12 +2270,12 @@
 				<X_position>7.59000000000000000e+02</X_position>
 				<Y_position>1.67000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
+				<r>6.999923587e-01</r>
 				<g>3.000076413e-01</g>
 				<b>1.000076309e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2216,7 +2289,7 @@
 				<b>7.759975791e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2230,7 +2303,7 @@
 				<b>1.000000000e+00</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2239,12 +2312,12 @@
 				<X_position>5.84000000000000000e+02</X_position>
 				<Y_position>8.70000000000000000e+01</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.000076413e-01</r>
-				<g>5.000076294e-01</g>
+				<r>3.098039329e-01</r>
+				<g>5.215686560e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>8.00000000000000000e+01</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2253,12 +2326,12 @@
 				<X_position>7.59000000000000000e+02</X_position>
 				<Y_position>-1.12000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.000076413e-01</r>
-				<g>5.000076294e-01</g>
+				<r>3.098039329e-01</r>
+				<g>5.215686560e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2267,12 +2340,12 @@
 				<X_position>1.00000000000000000e+03</X_position>
 				<Y_position>4.97000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2286,7 +2359,7 @@
 				<b>3.000076413e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -2300,10 +2373,24 @@
 				<b>7.759975791e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>5.60000000000000000e+01</Height>
+				<Height>4.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
+		</item>
+		<item>
+			<Name>Switch_0000</Name>
+			<X_position>6.57605483625451598e+02</X_position>
+			<Y_position>-3.31030559956056231e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
 		</item>
 	</NodesGui>
 	<Gui_Layout class_id="17" tracking_level="0" version="2">
@@ -2311,11 +2398,11 @@
 		<Window class_id="18" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="19" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1069 575</Sizes>
+				<Sizes>1473 793</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>489 488</Sizes>
+					<Sizes>469 468</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="20" tracking_level="1" version="5" object_id="_2">
@@ -2355,10 +2442,10 @@
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>0</x>
-			<y>1</y>
-			<w>1680</w>
-			<h>980</h>
+			<x>-2302</x>
+			<y>23</y>
+			<w>2302</w>
+			<h>940</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="22" tracking_level="0" version="0">
@@ -2413,8 +2500,9 @@
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>4</count>
+		<count>5</count>
 		<item_version>0</item_version>
+		<item>Switch_0000</item>
 		<item>DropShadow2</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>w1</item>
