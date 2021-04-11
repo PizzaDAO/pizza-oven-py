@@ -12,10 +12,6 @@ translate = [0, 0]
 scale = 0.975
 rotate = 0
 
-node = app.getNode("switch_%s" % unique_id)
-param = node.getParam("which")
-param.setValue(index)
-
 
 class Paper(NatronBase):
     """base class override"""
@@ -23,6 +19,6 @@ class Paper(NatronBase):
 
 paper = Paper(app)
 paper.setIngredient(in_file)
-# TODO: paper.setSwitchProperty(unique_id, index)
+paper.setSwitchProperty(unique_id, index)
 paper.setPosition(unique_id, translate, scale, rotate)
 paper.render(out_file)

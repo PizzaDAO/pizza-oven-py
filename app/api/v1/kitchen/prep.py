@@ -7,6 +7,7 @@ from ..dining_room.recipe import RecipeRequest
 from ....models.base import Base
 from ....models.prep import *
 from ....models.recipe import *
+from ....core.prep_line import reduce
 
 from ..tags import PREP
 
@@ -33,13 +34,14 @@ def sample(recipe: Recipe) -> KitchenOrder:
         random_seed="0xAb4",
         recipe_id=recipe.unique_id,
         base_ingredients={
-            "SOME_KEY": MadeIngredient(
+            "Box": MadeIngredient(
                 ingredient=Ingredient(
-                    unique_id=1,
+                    unique_id="0000",
+                    index=1,
                     name="gluten-free",
                     rarity_level=1,
-                    classification=Classification.crust,
-                    category="crust",
+                    classification=Classification.box,
+                    category=Classification.box.name,
                     attributes={},
                     image_uris={},
                 ),
@@ -85,9 +87,6 @@ def prepare_pizza(request: RecipeRequest = Body(...)) -> Any:
     prepares a recipe for baking by reducing instruction ranges to scalars
     """
 
-    # TODO: things like get random numbers then deterministically generate
-    # a kitchen order based on the recipe
-
-    data = sample(request.recipe)
+    data = reduce(request.recipe)
     json = jsonable_encoder(data)
     return JSONResponse(content=json)

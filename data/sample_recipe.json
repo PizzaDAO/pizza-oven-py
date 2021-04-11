@@ -1,85 +1,336 @@
 {
     "unique_id": 1,
-    "name": "super rare pizza",
-    "rarity_level": 4,
+    "name": "My Cool First Super Rare Pizza Test",
+    "rarity_level": 4.0,
     "base_ingredients": {
-        "SOME_KEY": [
-            {
-                "unique_id": 1,
-                "name": "gluten-free",
+        "box": {
+            "ingredient": {
+                "unique_id": "0000",
+                "index": 0,
+                "name": "Cardboard Pizza Box",
                 "rarity_level": 1,
-                "classification": 3,
-                "category": "crust",
-                "attributes": {},
-                "image_uris": {}
+                "classification": 1,
+                "category": "cardboard",
+                "attributes": {
+                    "state": "open",
+                    "material": "cardboard"
+                },
+                "nutrition": {
+                    "servings": 1.0,
+                    "calories": 150.0
+                },
+                "image_uris": {
+                    "filename": "0000-box-cardboard.png",
+                    "output_mask": "rarepizza-#####-box.png"
+                }
             },
-            {
+            "scope": {
                 "emission_count": [
-                    25.0,
-                    50.0
+                    1.0,
+                    1.0
                 ],
                 "emission_density": [
-                    0.1,
-                    0.15
+                    1.0,
+                    1.0
                 ],
                 "particle_scale": [
-                    0.05,
-                    0.15
+                    0.975,
+                    0.975
                 ],
                 "rotation": [
-                    -3.14159,
-                    3.14159
+                    0.0,
+                    0.0
                 ]
             }
-        ]
+        },
+        "paper": {
+            "ingredient": {
+                "unique_id": "0500",
+                "index": 1,
+                "name": "Classic Red checker Wax Paper",
+                "rarity_level": 1,
+                "classification": 2,
+                "category": "red-checker",
+                "attributes": {
+                    "state": "greasy",
+                    "material": "wax"
+                },
+                "nutrition": {
+                    "servings": 1.0,
+                    "calories": 150.0
+                },
+                "image_uris": {
+                    "filename": "0500-waxpaper-redchecker.png",
+                    "output_mask": "rarepizza-#####-paper.png"
+                }
+            },
+            "scope": {
+                "emission_count": [
+                    1.0,
+                    1.0
+                ],
+                "emission_density": [
+                    1.0,
+                    1.0
+                ],
+                "particle_scale": [
+                    0.975,
+                    0.975
+                ],
+                "rotation": [
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "crust": {
+            "ingredient": {
+                "unique_id": "1000",
+                "index": 2,
+                "name": "New York Style Thin Crust",
+                "rarity_level": 1,
+                "classification": 3,
+                "category": "thin",
+                "attributes": {
+                    "state": "overcooked",
+                    "material": "traditional"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 250.0,
+                    "cholesterol": 0.0,
+                    "fat": 4.5,
+                    "sodium": 170.0,
+                    "carbs": 27.0,
+                    "protien": 5.0,
+                    "vitamins": 0.0
+                },
+                "image_uris": {
+                    "filename": "1000-crust-thin.png",
+                    "output_mask": "rarepizza-#####-crust.png"
+                }
+            },
+            "scope": {
+                "emission_count": [
+                    1.0,
+                    1.0
+                ],
+                "emission_density": [
+                    1.0,
+                    1.0
+                ],
+                "particle_scale": [
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    0.0
+                ]
+            }
+        }
     },
     "toppings": {
-        "SOME_KEY": [
-            {
-                "unique_id": 1,
+        "sauce": {
+            "ingredient": {
+                "unique_id": "2000",
+                "index": 0,
+                "name": "Traditional Tomato Sauce",
+                "rarity_level": 1,
+                "classification": 4,
+                "category": "traditional",
+                "attributes": {
+                    "state": "thick",
+                    "material": "tomato"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 250.0,
+                    "cholesterol": 0.0,
+                    "fat": 4.5,
+                    "sodium": 170.0,
+                    "carbs": 27.0,
+                    "protien": 5.0,
+                    "vitamins": 0.0
+                },
+                "image_uris": {
+                    "filename": "2000-sauce-tomato.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "scope": {
+                "emission_count": [
+                    1.0,
+                    1.0
+                ],
+                "emission_density": [
+                    1.0,
+                    1.0
+                ],
+                "particle_scale": [
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "cheese": {
+            "ingredient": {
+                "unique_id": "3000",
+                "index": 1,
+                "name": "Traditional Mozzarella",
+                "rarity_level": 1,
+                "classification": 5,
+                "category": "traditional",
+                "attributes": {
+                    "state": "aged",
+                    "vintage": "2007"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 250.0,
+                    "cholesterol": 0.0,
+                    "fat": 4.5,
+                    "sodium": 170.0,
+                    "carbs": 27.0,
+                    "protien": 5.0,
+                    "vitamins": 0.0
+                },
+                "image_uris": {
+                    "filename": "3000-cheese-mozzarella.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "scope": {
+                "emission_count": [
+                    1.0,
+                    1.0
+                ],
+                "emission_density": [
+                    1.0,
+                    1.0
+                ],
+                "particle_scale": [
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "topping-1": {
+            "ingredient": {
+                "unique_id": "4000",
+                "index": 2,
                 "name": "Pepperoni",
                 "rarity_level": 1,
                 "classification": 6,
                 "category": "meat",
-                "attributes": {},
-                "image_uris": {}
+                "attributes": {
+                    "state": "cured",
+                    "method": "corned"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 250.0,
+                    "cholesterol": 0.0,
+                    "fat": 4.5,
+                    "sodium": 170.0,
+                    "carbs": 27.0,
+                    "protien": 5.0,
+                    "vitamins": 0.0
+                },
+                "image_uris": {
+                    "filename": "4000-topping-meat-pepperoni.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
             },
-            {
+            "scope": {
                 "emission_count": [
-                    25.0,
-                    50.0
+                    1.0,
+                    20.0
                 ],
                 "emission_density": [
                     0.1,
-                    0.15
+                    0.8
                 ],
                 "particle_scale": [
-                    0.05,
-                    0.15
+                    0.1,
+                    0.22
                 ],
                 "rotation": [
-                    -3.14159,
-                    3.14159
+                    -180.0,
+                    180.0
                 ]
             }
-        ]
+        },
+        "topping-2": {
+            "ingredient": {
+                "unique_id": "5000",
+                "index": 3,
+                "name": "Tomato",
+                "rarity_level": 1,
+                "classification": 6,
+                "category": "fruit",
+                "attributes": {
+                    "state": "fresh"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 250.0,
+                    "cholesterol": 0.0,
+                    "fat": 4.5,
+                    "sodium": 170.0,
+                    "carbs": 27.0,
+                    "protien": 5.0,
+                    "vitamins": 0.0
+                },
+                "image_uris": {
+                    "filename": "5000-topping-fruit-tomato.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "scope": {
+                "emission_count": [
+                    1.0,
+                    20.0
+                ],
+                "emission_density": [
+                    0.1,
+                    0.8
+                ],
+                "particle_scale": [
+                    0.1,
+                    0.22
+                ],
+                "rotation": [
+                    -180.0,
+                    180.0
+                ]
+            }
+        }
     },
     "instructions": {
         "sauce_count": [
-            1,
-            1
+            1.0,
+            1.0
         ],
         "cheese_count": [
-            1,
-            2
+            1.0,
+            2.0
         ],
         "topping_count": [
-            2,
-            10
+            2.0,
+            10.0
         ],
         "special_count": [
-            1,
-            3
+            1.0,
+            3.0
         ]
     }
 }

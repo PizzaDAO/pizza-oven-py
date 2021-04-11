@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import render_config as config
+import natron_config as config
 
 # import render_config as config
 
@@ -18,7 +18,7 @@ class NatronBase:
         del param
 
     def setSwitchProperty(self, unique_id, value):
-        node = self.natron.getNode("Switch%s" % unique_id)
+        node = self.natron.getNode("Switch_%s" % unique_id)
         param = node.getParam("which")
         param.setValue(value)
 

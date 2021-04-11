@@ -74,4 +74,4 @@ test:
 
 test-natron:
 	@echo ☢️ Test Natron
-	poetry run python app/core/renderer.py -f 9
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 9
