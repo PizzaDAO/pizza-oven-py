@@ -28,6 +28,8 @@ class RecipeInstructions(Base):
     topping_count: Tuple[MIN, MAX]  # - 3
     special_count: Tuple[MIN, MAX]  # - 1
     # can add rules like "vegetarian", "meat lovers" etc.
+    baking_temp_in_celsius: int
+    baking_time_in_minutes: int
 
 
 class IncredientScope(Base):

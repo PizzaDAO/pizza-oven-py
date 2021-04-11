@@ -17,7 +17,13 @@
                 },
                 "nutrition": {
                     "servings": 1.0,
-                    "calories": 150.0
+                    "calories": 150.0,
+                    "fat": 0.0,
+                    "cholesterol": 0.0,
+                    "sodium": 0.7,
+                    "potassium": 0.7,
+                    "carbohydrates": 30.1,
+                    "protien": 0.2
                 },
                 "image_uris": {
                     "filename": "0000-box-cardboard.png",
@@ -57,7 +63,13 @@
                 },
                 "nutrition": {
                     "servings": 1.0,
-                    "calories": 150.0
+                    "calories": 150.0,
+                    "fat": 0.0,
+                    "cholesterol": 0.0,
+                    "sodium": 0.7,
+                    "potassium": 0.7,
+                    "carbohydrates": 30.1,
+                    "protien": 0.2
                 },
                 "image_uris": {
                     "filename": "0500-paper-redchecker.png",
@@ -97,13 +109,13 @@
                 },
                 "nutrition": {
                     "servings": 8.0,
-                    "calories": 250.0,
-                    "cholesterol": 0.0,
-                    "fat": 4.5,
-                    "sodium": 170.0,
-                    "carbs": 27.0,
-                    "protien": 5.0,
-                    "vitamins": 0.0
+                    "calories": 260.2,
+                    "fat": 10.5,
+                    "cholesterol": 23.0,
+                    "sodium": 657.6,
+                    "potassium": 166.14,
+                    "carbohydrates": 30.1,
+                    "protien": 11.5
                 },
                 "image_uris": {
                     "filename": "1000-crust-thin.png",
@@ -145,13 +157,13 @@
                 },
                 "nutrition": {
                     "servings": 8.0,
-                    "calories": 250.0,
+                    "calories": 80.5,
+                    "fat": 0.7,
                     "cholesterol": 0.0,
-                    "fat": 4.5,
-                    "sodium": 170.0,
-                    "carbs": 27.0,
-                    "protien": 5.0,
-                    "vitamins": 0.0
+                    "sodium": 1151.7,
+                    "potassium": 900.4,
+                    "carbohydrates": 17.7,
+                    "protien": 3.5
                 },
                 "image_uris": {
                     "filename": "2000-sauce-tomato.png",
@@ -191,13 +203,13 @@
                 },
                 "nutrition": {
                     "servings": 8.0,
-                    "calories": 250.0,
-                    "cholesterol": 0.0,
-                    "fat": 4.5,
-                    "sodium": 170.0,
-                    "carbs": 27.0,
-                    "protien": 5.0,
-                    "vitamins": 0.0
+                    "calories": 85.1,
+                    "fat": 6.3,
+                    "cholesterol": 22.4,
+                    "sodium": 117.8,
+                    "potassium": 21.5,
+                    "carbohydrates": 0.6,
+                    "protien": 6.3
                 },
                 "image_uris": {
                     "filename": "3000-cheese-mozzarella.png",
@@ -237,13 +249,13 @@
                 },
                 "nutrition": {
                     "servings": 8.0,
-                    "calories": 250.0,
-                    "cholesterol": 0.0,
-                    "fat": 4.5,
-                    "sodium": 170.0,
-                    "carbs": 27.0,
-                    "protien": 5.0,
-                    "vitamins": 0.0
+                    "calories": 138.3,
+                    "fat": 12.2,
+                    "cholesterol": 29.4,
+                    "sodium": 493.1,
+                    "potassium": 78.1,
+                    "carbohydrates": 0.0,
+                    "protien": 6.4
                 },
                 "image_uris": {
                     "filename": "4000-topping-meat-pepperoni.png",
@@ -282,13 +294,13 @@
                 },
                 "nutrition": {
                     "servings": 8.0,
-                    "calories": 250.0,
+                    "calories": 22.1,
+                    "fat": 0.2,
                     "cholesterol": 0.0,
-                    "fat": 4.5,
-                    "sodium": 170.0,
-                    "carbs": 27.0,
-                    "protien": 5.0,
-                    "vitamins": 0.0
+                    "sodium": 6.2,
+                    "potassium": 291.5,
+                    "carbohydrates": 4.8,
+                    "protien": 1.1
                 },
                 "image_uris": {
                     "filename": "5000-topping-fruit-tomato.png",
@@ -331,6 +343,8 @@
         "special_count": [
             1.0,
             3.0
-        ]
+        ],
+        "baking_temp_in_celsius": 190,
+        "baking_time_in_minutes": 20
     }
 }
