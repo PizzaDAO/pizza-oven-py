@@ -7,9 +7,9 @@ index = 2
 variation = 1
 
 
-translate = [1000, 1000]
-scale = 0.5
-rotate = 180
+translate = [0,0]
+scale = 1
+rotate = 0
 
 
 class Crust(NatronBase):
