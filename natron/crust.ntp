@@ -2593,7 +2593,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>Switch1010</second>
+					<second>Switch_1010</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>7</KnobsAge>
@@ -2624,7 +2624,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>Switch1020</second>
+					<second>Switch_1020</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>7</KnobsAge>
@@ -3190,7 +3190,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>Switch1000</second>
+					<second>Switch_1000</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>7</KnobsAge>
@@ -6288,8 +6288,8 @@ Crust
 			<CacheID>Merge3</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Switch1000</Plugin_label>
-			<Plugin_script_name>Switch1000</Plugin_script_name>
+			<Plugin_label>Switch_1000</Plugin_label>
+			<Plugin_script_name>Switch_1000</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -6361,8 +6361,8 @@ Crust
 			<CacheID>Switch1</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Switch1010</Plugin_label>
-			<Plugin_script_name>Switch1010</Plugin_script_name>
+			<Plugin_label>Switch_1010</Plugin_label>
+			<Plugin_script_name>Switch_1010</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -6451,8 +6451,8 @@ Crust
 			<CacheID>Switch21</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Switch1020</Plugin_label>
-			<Plugin_script_name>Switch1020</Plugin_script_name>
+			<Plugin_label>Switch_1020</Plugin_label>
+			<Plugin_script_name>Switch_1020</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -6646,7 +6646,7 @@ Crust
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Apr 10 09:45:04 2021</Value>
+			<Value>Sat Apr 10 17:25:59 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -7387,7 +7387,7 @@ Crust
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Switch1000</Name>
+			<Name>Switch_1000</Name>
 			<X_position>1.42961067305848064e+03</X_position>
 			<Y_position>-2.89428576789326280e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -7401,7 +7401,7 @@ Crust
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Switch1010</Name>
+			<Name>Switch_1010</Name>
 			<X_position>1.89340147050285395e+03</X_position>
 			<Y_position>-2.86816561367295390e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -7415,7 +7415,7 @@ Crust
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Switch1020</Name>
+			<Name>Switch_1020</Name>
 			<X_position>2.21553669255061595e+03</X_position>
 			<Y_position>-2.81717985592704963e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -7434,41 +7434,25 @@ Crust
 		<Window class_id="18" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="19" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1028 554</Sizes>
+				<Sizes>1473 793</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
 					<Sizes>469 468</Sizes>
 					<Orientation>2</Orientation>
-					<ChildIsSplitter>1</ChildIsSplitter>
-					<Child object_id="_2">
-						<Sizes>461 564</Sizes>
-						<Orientation>1</Orientation>
-						<ChildIsSplitter>0</ChildIsSplitter>
-						<Child class_id="20" tracking_level="1" version="5" object_id="_3">
-							<Tabs class_id="21" tracking_level="0" version="0">
-								<count>1</count>
-								<item_version>0</item_version>
-								<item>Viewer2</item>
-							</Tabs>
-							<Index>0</Index>
-							<Name>pane1</Name>
-							<IsAnchor>1</IsAnchor>
-						</Child>
-						<ChildIsSplitter>0</ChildIsSplitter>
-						<Child object_id="_4">
-							<Tabs>
-								<count>1</count>
-								<item_version>0</item_version>
-								<item>scriptEditor</item>
-							</Tabs>
-							<Index>0</Index>
-							<Name>pane4</Name>
-							<IsAnchor>0</IsAnchor>
-						</Child>
+					<ChildIsSplitter>0</ChildIsSplitter>
+					<Child class_id="20" tracking_level="1" version="5" object_id="_2">
+						<Tabs class_id="21" tracking_level="0" version="0">
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>Viewer2</item>
+						</Tabs>
+						<Index>0</Index>
+						<Name>pane1</Name>
+						<IsAnchor>1</IsAnchor>
 					</Child>
 					<ChildIsSplitter>0</ChildIsSplitter>
-					<Child object_id="_5">
+					<Child object_id="_3">
 						<Tabs>
 							<count>3</count>
 							<item_version>0</item_version>
@@ -7482,7 +7466,7 @@ Crust
 					</Child>
 				</Child>
 				<ChildIsSplitter>0</ChildIsSplitter>
-				<Child object_id="_6">
+				<Child object_id="_4">
 					<Tabs>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -7494,9 +7478,9 @@ Crust
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-1682</x>
+			<x>-2302</x>
 			<y>23</y>
-			<w>1618</w>
+			<w>2302</w>
 			<h>940</h>
 		</Window>
 	</Gui_Layout>
@@ -7552,16 +7536,17 @@ Crust
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>8</count>
+		<count>9</count>
 		<item_version>0</item_version>
-		<item>Switch1020</item>
-		<item>Switch1010</item>
-		<item>Switch1000</item>
+		<item>Switch_1020</item>
+		<item>Switch_1010</item>
+		<item>Switch_1000</item>
 		<item>i3</item>
 		<item>i2</item>
 		<item>i1</item>
 		<item>TRS_1000</item>
 		<item>w1</item>
+		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>unique_id = &quot;1010&quot;
 category = &quot;crust&quot;
