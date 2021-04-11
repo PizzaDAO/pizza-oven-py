@@ -2010,8 +2010,8 @@
 			<CacheID>DropShadow1_3</CacheID>
 		</item>
 		<item>
-			<Plugin_label>switch_0500</Plugin_label>
-			<Plugin_script_name>switch_0500</Plugin_script_name>
+			<Plugin_label>Switch_0500</Plugin_label>
+			<Plugin_script_name>Switch_0500</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -3208,11 +3208,11 @@
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
-					<second>switch_0500</second>
+					<second>Switch_0500</second>
 				</item>
 				<item>
 					<first>B</first>
-					<second>switch_0510</second>
+					<second>Switch_0510</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -3233,8 +3233,8 @@
 			<CacheID>Merge2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>switch_0510</Plugin_label>
-			<Plugin_script_name>switch_0510</Plugin_script_name>
+			<Plugin_label>Switch_0510</Plugin_label>
+			<Plugin_script_name>Switch_0510</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -3428,7 +3428,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Apr 10 08:50:59 2021</Value>
+			<Value>Sat Apr 10 17:18:07 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -3749,7 +3749,7 @@
 			</item>
 		</item>
 		<item>
-			<Name>switch_0500</Name>
+			<Name>Switch_0500</Name>
 			<X_position>2.19484074647859416e+02</X_position>
 			<Y_position>-3.26219294571043520e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -3861,7 +3861,7 @@
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>switch_0510</Name>
+			<Name>Switch_0510</Name>
 			<X_position>4.75209976594745967e+02</X_position>
 			<Y_position>-3.25636339240962752e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -3880,7 +3880,7 @@
 		<Window class_id="18" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="19" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1028 554</Sizes>
+				<Sizes>1473 793</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
@@ -3900,12 +3900,11 @@
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>4</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
-							<item>progress</item>
 						</Tabs>
 						<Index>0</Index>
 						<Name>pane3</Name>
@@ -3925,9 +3924,9 @@
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>62</x>
-			<y>62</y>
-			<w>1618</w>
+			<x>-2302</x>
+			<y>23</y>
+			<w>2302</w>
 			<h>940</h>
 		</Window>
 	</Gui_Layout>
@@ -3983,16 +3982,17 @@
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>8</count>
+		<count>9</count>
 		<item_version>0</item_version>
-		<item>switch_0510</item>
-		<item>switch_0500</item>
+		<item>Switch_0510</item>
+		<item>Switch_0500</item>
 		<item>TRS_0510</item>
 		<item>TRS_0500</item>
 		<item>i2</item>
 		<item>Grade1_2</item>
 		<item>Merge2</item>
 		<item>DropShadow1_3</item>
+		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
