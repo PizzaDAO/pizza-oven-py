@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+import os
+import json
+
 import natron_config as config
 
 # import render_config as config
@@ -7,10 +10,14 @@ import natron_config as config
 class NatronBase:
     """Base class for toggling natron nodes"""
 
+    # in_file = ""
+    # out_file = ""
+
     def __init__(self, app):
         self.natron = app
 
     def setIngredient(self, filename):
+        print("loading: " + config.paths["database"] + filename)
         node = self.natron.getNode("i1")
         param = node.getParam("filename")
         if param is not None:
@@ -38,7 +45,7 @@ class NatronBase:
             scaleP.setValue(scale, 1)
 
     def render(self, filename):
-        print("rendering: " + filename)
+        print("rendering: " + config.paths["output"] + filename)
         node = self.natron.getNode("w1")
         param = node.getParam("filename")
         if param is not None:
