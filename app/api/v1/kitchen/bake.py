@@ -7,6 +7,7 @@ from ....models.base import Base
 from .prep import KitchenOrderRequest
 from ....models.prep import *
 from ....models.pizza import *
+from ....core.renderer import Renderer
 from ..tags import BAKE
 
 router = APIRouter()
@@ -18,23 +19,15 @@ class HotPizzaResponse(Base):
     pizza: HotPizza
 
 
-def sample(order: KitchenOrder) -> HotPizza:
-    """just a sample"""
-    return HotPizza(
-        unique_id=12345, order_id=order.unique_id, recipe_id=order.recipe_id, assets={}
-    )
-
-
 @router.post("/bake", response_model=HotPizzaResponse, tags=[BAKE])
 def bake_pizza(request: KitchenOrderRequest = Body(...)) -> Any:
     """
     Bake the pizza!
     """
 
-    # TODO: all the things like call natron, save out the assets
-    # transform whatver data, etc.
+    pizza = Renderer().render_pizza(request.order)
 
-    data = sample(request.order)
+    # TODO: all the things save out the assets, populate IPFS, etc.
 
-    json = jsonable_encoder(data)
+    json = jsonable_encoder(pizza)
     return JSONResponse(content=json)

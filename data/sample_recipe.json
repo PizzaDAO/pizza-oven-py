@@ -21,7 +21,7 @@
                 },
                 "image_uris": {
                     "filename": "0000-box-cardboard.png",
-                    "output_mask": "rarepizza-#####-box.png"
+                    "output_mask": "rarepizza-#####-box-%s.png"
                 }
             },
             "scope": {
@@ -60,8 +60,8 @@
                     "calories": 150.0
                 },
                 "image_uris": {
-                    "filename": "0500-waxpaper-redchecker.png",
-                    "output_mask": "rarepizza-#####-paper.png"
+                    "filename": "0500-paper-redchecker.png",
+                    "output_mask": "rarepizza-#####-paper-%s.png"
                 }
             },
             "scope": {
@@ -107,7 +107,7 @@
                 },
                 "image_uris": {
                     "filename": "1000-crust-thin.png",
-                    "output_mask": "rarepizza-#####-crust.png"
+                    "output_mask": "rarepizza-#####-crust-%s.png"
                 }
             },
             "scope": {

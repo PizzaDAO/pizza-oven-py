@@ -5,6 +5,9 @@ from fastapi.responses import JSONResponse
 
 from ....models.base import Base
 from ....models.order import PizzaOrder, PizzaOrderData
+from .recipe import Recipe, sample
+from ....core.prep_line import reduce
+from ....core.renderer import Renderer
 from ..tags import DELIVER
 
 router = APIRouter()
@@ -25,18 +28,6 @@ class OrderPizzaResponse(Base):
     statusCode: int = 200
 
 
-def sample(request: OrderPizzaRequest) -> OrderPizzaResponse:
-    """just a sample"""
-
-    return OrderPizzaResponse(
-        jobRunID=request.id,
-        data=PizzaOrder(
-            address=request.data.address,
-            artwork="QmZ4q72eVU3bX95GXwMXLrguybKLKavmStLWEWVJZ1jeyz",
-        ),
-    )
-
-
 @router.post("/order", response_model=OrderPizzaResponse, tags=[DELIVER])
 def orderPizza(request: OrderPizzaRequest = Body(...)) -> Any:
     """
@@ -45,9 +36,20 @@ def orderPizza(request: OrderPizzaRequest = Body(...)) -> Any:
 
     print(f"{request}")
 
-    # TODO: all the things like call into the renderpielijne or whatever
+    recipe = sample(1)
+    order = reduce(recipe)
 
-    data = sample(request)
+    pizza = Renderer().render_pizza(order)
 
-    json = jsonable_encoder(data)
+    # TODO: all the things like save to IPFS, etc.
+
+    response = OrderPizzaResponse(
+        jobRunID=request.id,
+        data=PizzaOrder(
+            address=request.data.address,
+            artwork=pizza.assets["IPFS_ID"],
+        ),
+    )
+
+    json = jsonable_encoder(response)
     return JSONResponse(content=json)

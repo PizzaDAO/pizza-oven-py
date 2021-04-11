@@ -1,7 +1,7 @@
 {
-    "unique_id": 2079227063,
+    "unique_id": 803858324,
     "name": "My Cool First Super Rare Pizza Test",
-    "random_seed": "68422577347232926314900412588263190986294775277637269290733047623890506086550",
+    "random_seed": "31572988402137626429909104188561274485961418710005079596187021310165638963911",
     "recipe_id": 1,
     "base_ingredients": {
         "box": {
@@ -22,7 +22,7 @@
                 },
                 "image_uris": {
                     "filename": "0000-box-cardboard.png",
-                    "output_mask": "rarepizza-#####-box.png"
+                    "output_mask": "rarepizza-#####-box-%s.png"
                 }
             },
             "prep": {
@@ -49,8 +49,8 @@
                     "calories": 150.0
                 },
                 "image_uris": {
-                    "filename": "0500-waxpaper-redchecker.png",
-                    "output_mask": "rarepizza-#####-paper.png"
+                    "filename": "0500-paper-redchecker.png",
+                    "output_mask": "rarepizza-#####-paper-%s.png"
                 }
             },
             "prep": {
@@ -84,7 +84,7 @@
                 },
                 "image_uris": {
                     "filename": "1000-crust-thin.png",
-                    "output_mask": "rarepizza-#####-crust.png"
+                    "output_mask": "rarepizza-#####-crust-%s.png"
                 }
             },
             "prep": {
@@ -193,9 +193,9 @@
             },
             "prep": {
                 "emission_count": 4.0,
-                "emission_density": 0.5916231791644364,
-                "particle_scale": 0.17874132027262196,
-                "rotation": 144.0
+                "emission_density": 0.1,
+                "particle_scale": 0.1,
+                "rotation": 124.0
             }
         },
         "topping-2": {
@@ -226,9 +226,9 @@
             },
             "prep": {
                 "emission_count": 4.0,
-                "emission_density": 0.5916231791644364,
-                "particle_scale": 0.17874132027262196,
-                "rotation": 144.0
+                "emission_density": 0.1,
+                "particle_scale": 0.1,
+                "rotation": 124.0
             }
         }
     },

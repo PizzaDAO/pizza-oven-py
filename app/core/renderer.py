@@ -99,9 +99,9 @@ class SauceRenderer:
 class Renderer:
     """render the kitchen order"""
 
-    natron_path: str
-    project_path: str
-    frame: str
+    natron_path: str = field(default=DEFAULT_EXECUTABLE_PATH)
+    project_path: str = field(default=DEFAULT_PROJECT_PATH)
+    frame: str = field(default=0)
 
     rendered_files: Dict[str, str] = field(default_factory=lambda: {})
 
@@ -122,7 +122,7 @@ class Renderer:
 
         return file_path
 
-    def render_pizza(self, order: KitchenOrder) -> None:
+    def render_pizza(self, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
 
         for (key, ingredient) in order.base_ingredients.items():
@@ -131,8 +131,25 @@ class Renderer:
                 print(f"error rendering {ingredient.ingredient.name}")
                 break
 
-        # TODO: more things like render the toppings, hook up the return values
+        for (key, ingredient) in order.toppings.items():
+            result = self.render_ingredient(ingredient)
+            if not result:
+                print(f"error rendering {ingredient.ingredient.name}")
+                break
+
+        # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
+        # note the IPFS id probably isnt populated in this function but instead by the caller
+        return HotPizza(
+            unique_id=12345,
+            order_id=order.unique_id,
+            recipe_id=order.recipe_id,
+            assets={
+                "BLOB": "the binary representation of the pizza",
+                "IMAGE_PATH": "../some/path/to/natron/output.png",
+                "IPFS_ID": "QmZ4q72eVU3bX95GXwMXLrguybKLKavmStLWEWVJZ1jeyz",
+            },
+        )
 
     def render_ingredient(self, ingredient: MadeIngredient) -> bool:
         """render the ingredient"""

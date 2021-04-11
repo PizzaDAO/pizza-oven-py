@@ -72,14 +72,14 @@ class NatronBase:
             del param
 
     def setOutput(self):
-        print("setOutput: " + config.paths["output"] + self.out_file)
+        print("setOutput: " + config.paths["output"] + self.out_file % self.index)
         node = self.natron.getNode("w1")
         if node is None:
             print("render: could not find node")
             return
         param = node.getParam("filename")
         if param is not None:
-            param.setValue(config.paths["output"] + self.out_file)
+            param.setValue(config.paths["output"] + self.out_file % self.index)
         del param
 
     def burn(self):
@@ -96,10 +96,14 @@ class NatronBase:
         with open(file_path) as json_file:
             self.element = json.load(json_file)
         print(self.element)
+
+        # ingredients
+        self.index = self.element["ingredient"]["index"]
         self.unique_id = self.element["ingredient"]["unique_id"]
         self.in_file = self.element["ingredient"]["image_uris"]["filename"]
         self.out_file = self.element["ingredient"]["image_uris"]["output_mask"]
 
+        # node transforms
         # TODO: translate
         self.translate = [0, 0]
         self.rotate = self.element["prep"]["rotation"]

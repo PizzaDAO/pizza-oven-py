@@ -68,10 +68,7 @@ def select_value(seed: int, counter: int, bounds: Tuple[float, float]) -> float:
 
 def clamp(entropy: int, start: float, end: float) -> float:
     """naive implementation of a range bound"""
-    print("numbers:::")
-    print(entropy)
-    print(start)
-    print(end)
+
     if end == 0.0:
         return 0.0
     modulo = float(entropy) % end

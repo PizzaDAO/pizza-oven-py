@@ -44,7 +44,7 @@ def sample(recipe_id: int) -> Recipe:
                     },
                     image_uris={
                         "filename": "0000-box-cardboard.png",
-                        "output_mask": "rarepizza-#####-box.png",
+                        "output_mask": "rarepizza-#####-box-%s.png",
                     },
                 ),
                 scope=IncredientScope(
@@ -68,8 +68,8 @@ def sample(recipe_id: int) -> Recipe:
                         "calories": 150,
                     },
                     image_uris={
-                        "filename": "0500-waxpaper-redchecker.png",
-                        "output_mask": "rarepizza-#####-paper.png",
+                        "filename": "0500-paper-redchecker.png",
+                        "output_mask": "rarepizza-#####-paper-%s.png",
                     },
                 ),
                 scope=IncredientScope(
@@ -100,7 +100,7 @@ def sample(recipe_id: int) -> Recipe:
                     },
                     image_uris={
                         "filename": "1000-crust-thin.png",
-                        "output_mask": "rarepizza-#####-crust.png",
+                        "output_mask": "rarepizza-#####-crust-%s.png",
                     },
                 ),
                 scope=IncredientScope(
