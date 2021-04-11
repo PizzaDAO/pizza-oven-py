@@ -10,11 +10,20 @@ import natron_config as config
 class NatronBase:
     """Base class for toggling natron nodes"""
 
-    # in_file = ""
-    # out_file = ""
+    ON = 1
+    OFF = 0
 
     def __init__(self, app):
         self.natron = app
+
+    def load(self, env_var):
+        file_path = os.environ[env_var]
+        with open(file_path) as json_file:
+            element = json.load(json_file)
+        print(element)
+        self.unique_id = element["ingredient"]["unique_id"]
+        self.in_file = element["ingredient"]["image_uris"]["filename"]
+        self.out_file = element["ingredient"]["image_uris"]["output_mask"]
 
     def setIngredient(self, filename):
         print("loading: " + config.paths["database"] + filename)

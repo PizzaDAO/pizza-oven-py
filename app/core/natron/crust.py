@@ -6,8 +6,6 @@ category = "crust"
 index = 2
 variation = 1
 
-in_file = "1010-crust-thick.png"
-out_file = "rp-#####-crust.png"
 
 translate = [1000, 1000]
 scale = 0.5
@@ -18,8 +16,9 @@ class Crust(NatronBase):
     """base class override"""
 
 
-crust = Crust(app)
-crust.setIngredient(in_file)
-crust.setSwitchProperty(unique_id, index)
-crust.setPosition(unique_id, translate, scale, rotate)
-crust.render(out_file)
+instance = Crust(app)
+instance.load("CRUST_DATA_PATH")
+instance.setIngredient(instance.in_file)
+instance.setSwitchProperty(instance.unique_id, instance.ON)
+instance.setPosition(instance.unique_id, translate, scale, rotate)
+instance.render(instance.out_file)
