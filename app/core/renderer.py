@@ -108,9 +108,15 @@ class Renderer:
     order: Optional[KitchenOrder] = field(default=None)
 
     def cache_ingredient(self, ingredient: MadeIngredient) -> str:
-        file_path = os.path.join(
-            self.project_path, ".cache/", f"{ingredient.ingredient.unique_id}.json"
+        cache_dir = os.path.join(
+            self.project_path,
+            ".cache/",
         )
+        if not os.path.exists(cache_dir):
+            os.makedirs(cache_dir)
+
+        file_path = os.path.join(cache_dir, f"{ingredient.ingredient.unique_id}.json")
+
         with open(file_path, "w") as json_file:
             json_file.write(ingredient.json())
 
