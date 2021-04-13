@@ -21,24 +21,24 @@ class NatronBase:
 
     def render(self):
         """override the render function in your derived class to customize behavior"""
-        self.show()
+        self.enable()
         self.setTransform(self.translate, self.scale, self.rotate)
         self.setOutput()
 
-    def show(self):
+    def enable(self):
         node = self.natron.getNode("Switch_%s" % self.unique_id)
         if node is None:
-            print("show: could not find node")
+            print("enable: could not find node")
             return
         param = node.getParam("which")
         if param is not None:
             param.setValue(self.ON)
         del param
 
-    def hide(self):
+    def disable(self):
         node = self.natron.getNode("Switch_%s" % self.unique_id)
         if node is None:
-            print("hide: could not find node")
+            print("disable: could not find node")
             return
         param = node.getParam("which")
         if param is not None:
