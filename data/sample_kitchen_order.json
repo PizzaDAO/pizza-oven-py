@@ -41,7 +41,7 @@
         "paper": {
             "ingredient": {
                 "unique_id": "0500",
-                "index": 1,
+                "index": 0,
                 "name": "Classic Red checker Wax Paper",
                 "rarity_level": 1,
                 "classification": 2,
@@ -72,14 +72,48 @@
                 "rotation": 0.0
             }
         },
+        "paper-1": {
+            "ingredient": {
+                "unique_id": "0510",
+                "index": 1,
+                "name": "Classic Green checker Wax Paper",
+                "rarity_level": 1,
+                "classification": 2,
+                "category": "red-checker",
+                "attributes": {
+                    "state": "greasy",
+                    "material": "wax"
+                },
+                "nutrition": {
+                    "servings": 1.0,
+                    "calories": 150.0,
+                    "fat": 0.0,
+                    "cholesterol": 0.0,
+                    "sodium": 0.7,
+                    "potassium": 0.7,
+                    "carbohydrates": 30.1,
+                    "protien": 0.2
+                },
+                "image_uris": {
+                    "filename": "0510-paper-greenchecker.png",
+                    "output_mask": "rarepizza-#####-paper-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 0.975,
+                "rotation": 0.0
+            }
+        },
         "crust": {
             "ingredient": {
                 "unique_id": "1000",
-                "index": 2,
-                "name": "New York Style Thin Crust",
+                "index": 0,
+                "name": "Traditional Thin Crust",
                 "rarity_level": 1,
                 "classification": 3,
-                "category": "thin",
+                "category": "thick",
                 "attributes": {
                     "state": "overcooked",
                     "material": "traditional"
@@ -95,7 +129,75 @@
                     "protien": 11.5
                 },
                 "image_uris": {
-                    "filename": "1000-crust-thin.png",
+                    "filename": "1010-crust-thin.png",
+                    "output_mask": "rarepizza-#####-crust-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        },
+        "crust-1": {
+            "ingredient": {
+                "unique_id": "1010",
+                "index": 1,
+                "name": "Chicato Deep Crust",
+                "rarity_level": 1,
+                "classification": 3,
+                "category": "thick",
+                "attributes": {
+                    "state": "overcooked",
+                    "material": "traditional"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 260.2,
+                    "fat": 10.5,
+                    "cholesterol": 23.0,
+                    "sodium": 657.6,
+                    "potassium": 166.14,
+                    "carbohydrates": 30.1,
+                    "protien": 11.5
+                },
+                "image_uris": {
+                    "filename": "1010-crust-thick.png",
+                    "output_mask": "rarepizza-#####-crust-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        },
+        "crust-2": {
+            "ingredient": {
+                "unique_id": "1020",
+                "index": 2,
+                "name": "Deep Space Dish Moon Crust",
+                "rarity_level": 1,
+                "classification": 3,
+                "category": "thick",
+                "attributes": {
+                    "state": "overcooked",
+                    "material": "traditional"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 260.2,
+                    "fat": 10.5,
+                    "cholesterol": 23.0,
+                    "sodium": 657.6,
+                    "potassium": 166.14,
+                    "carbohydrates": 30.1,
+                    "protien": 11.5
+                },
+                "image_uris": {
+                    "filename": "1020-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust-%s.png"
                 }
             },
@@ -106,18 +208,18 @@
                 "rotation": 0.0
             }
         }
-    },
+        },
     "toppings": {
         "sauce": {
             "ingredient": {
                 "unique_id": "2000",
                 "index": 0,
-                "name": "Traditional Tomato Sauce",
+                "name": "Traditional Pomodoro Tomato Sauce",
                 "rarity_level": 1,
                 "classification": 4,
                 "category": "traditional",
                 "attributes": {
-                    "state": "thick",
+                    "state": "thin",
                     "material": "tomato"
                 },
                 "nutrition": {
@@ -131,8 +233,144 @@
                     "protien": 3.5
                 },
                 "image_uris": {
-                    "filename": "2000-sauce-tomato.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
+                    "filename": "2010-sauce-tomato.png",
+                    "output_mask": "rarepizza-#####-sauce-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        },
+        "sauce-1": {
+            "ingredient": {
+                "unique_id": "2010",
+                "index": 1,
+                "name": "Traditional Pesto Sauce",
+                "rarity_level": 1,
+                "classification": 4,
+                "category": "traditional",
+                "attributes": {
+                    "state": "thick",
+                    "material": "pesto"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 80.5,
+                    "fat": 0.7,
+                    "cholesterol": 0.0,
+                    "sodium": 1151.7,
+                    "potassium": 900.4,
+                    "carbohydrates": 17.7,
+                    "protien": 3.5
+                },
+                "image_uris": {
+                    "filename": "2010-sauce-pesto.png",
+                    "output_mask": "rarepizza-#####-sauce-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        },
+        "sauce-2": {
+            "ingredient": {
+                "unique_id": "2020",
+                "index": 2,
+                "name": "Saucy Mudpie Sauce",
+                "rarity_level": 1,
+                "classification": 4,
+                "category": "traditional",
+                "attributes": {
+                    "state": "thick",
+                    "material": "dirt"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 80.5,
+                    "fat": 0.7,
+                    "cholesterol": 0.0,
+                    "sodium": 1151.7,
+                    "potassium": 900.4,
+                    "carbohydrates": 17.7,
+                    "protien": 3.5
+                },
+                "image_uris": {
+                    "filename": "2020-sauce-mud.png",
+                    "output_mask": "rarepizza-#####-sauce-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        },
+        "sauce-3": {
+            "ingredient": {
+                "unique_id": "2030",
+                "index": 3,
+                "name": "Spicy Sweet BBQ Sauce",
+                "rarity_level": 1,
+                "classification": 4,
+                "category": "traditional",
+                "attributes": {
+                    "state": "thick",
+                    "material": "sweet baby back ribs"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 80.5,
+                    "fat": 0.7,
+                    "cholesterol": 0.0,
+                    "sodium": 1151.7,
+                    "potassium": 900.4,
+                    "carbohydrates": 17.7,
+                    "protien": 3.5
+                },
+                "image_uris": {
+                    "filename": "2030-sauce-bbq.png",
+                    "output_mask": "rarepizza-#####-sauce-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        },
+        "sauce-4": {
+            "ingredient": {
+                "unique_id": "2040",
+                "index": 4,
+                "name": "Savory Nutella",
+                "rarity_level": 1,
+                "classification": 4,
+                "category": "traditional",
+                "attributes": {
+                    "state": "thick",
+                    "material": "does this really belong on pizza?"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 80.5,
+                    "fat": 0.7,
+                    "cholesterol": 0.0,
+                    "sodium": 1151.7,
+                    "potassium": 900.4,
+                    "carbohydrates": 17.7,
+                    "protien": 3.5
+                },
+                "image_uris": {
+                    "filename": "2030-sauce-nutella.png",
+                    "output_mask": "rarepizza-#####-sauce-%s.png"
                 }
             },
             "prep": {
@@ -145,7 +383,7 @@
         "cheese": {
             "ingredient": {
                 "unique_id": "3000",
-                "index": 1,
+                "index": 0,
                 "name": "Traditional Mozzarella",
                 "rarity_level": 1,
                 "classification": 5,
@@ -166,6 +404,40 @@
                 },
                 "image_uris": {
                     "filename": "3000-cheese-mozzarella.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        },
+        "cheese-1": {
+            "ingredient": {
+                "unique_id": "3010",
+                "index": 1,
+                "name": "Digital Vegan",
+                "rarity_level": 1,
+                "classification": 5,
+                "category": "traditional",
+                "attributes": {
+                    "state": "aged",
+                    "vintage": "2007"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 85.1,
+                    "fat": 6.3,
+                    "cholesterol": 22.4,
+                    "sodium": 117.8,
+                    "potassium": 21.5,
+                    "carbohydrates": 0.6,
+                    "protien": 6.3
+                },
+                "image_uris": {
+                    "filename": "3010-cheese-digitalvegan.png",
                     "output_mask": "rarepizza-#####-topping-%s.png"
                 }
             },
