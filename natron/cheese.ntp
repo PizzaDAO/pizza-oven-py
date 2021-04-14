@@ -35157,7 +35157,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>6</KnobsCount>
+			<KnobsCount>9</KnobsCount>
 			<item>
 				<Name>extent</Name>
 				<Type>Choice</Type>
@@ -35167,31 +35167,57 @@ ret=time.time()</Expression>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
+					<Value>0</Value>
 					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
-				<ChoiceLabel>project</ChoiceLabel>
+				<ChoiceLabel>format</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
-				<Secret>1</Secret>
+				<Secret>0</Secret>
 				<MasterIsAlias>0</MasterIsAlias>
 				<item>
-					<Enabled>0</Enabled>
+					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
+					<Value>20</Value>
 					<Default>20</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
-				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<ChoiceLabel>3072x3072</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronParamFormatSize</Name>
+				<Type>Int</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3072</Value>
+					<Default>640</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3072</Value>
+					<Default>480</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -35264,6 +35290,23 @@ ret=time.time()</Expression>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
+				<Name>blackOutside</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
 				<Dimension>1</Dimension>
@@ -35284,6 +35327,23 @@ ret=time.time()</Expression>
 				</StringsAnimation>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>disableNode</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -35292,7 +35352,7 @@ ret=time.time()</Expression>
 					<second>TRS_3040</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>9</KnobsAge>
+			<KnobsAge>21</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -56507,7 +56567,7 @@ ret = v[0] * (1 - d) + v[1] * d</Expression>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p0_channels</Name>
+				<Name>p1_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -56528,7 +56588,7 @@ ret = v[0] * (1 - d) + v[1] * d</Expression>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>0</first>
+					<first>1</first>
 					<second>Crop12</second>
 				</item>
 			</Inputs_map>
@@ -66686,7 +66746,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Crop8_3_3_2_2</second>
+					<second>Write3</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -67030,7 +67090,7 @@ ret=time.time()</Expression>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Tue Apr 13 17:00:58 2021</Value>
+			<Value>Wed Apr 14 08:33:55 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -70716,7 +70776,7 @@ ret=time.time()</Expression>
 		<item>
 			<Name>Crop8_3_3</Name>
 			<X_position>5.06617592299931312e+03</X_position>
-			<Y_position>4.07642879323877514e+03</Y_position>
+			<Y_position>4.07792865089384668e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -74054,8 +74114,8 @@ ret=time.time()</Expression>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2092</x>
-			<y>31</y>
+			<x>-2560</x>
+			<y>23</y>
 			<w>2560</w>
 			<h>1035</h>
 		</Window>
@@ -74112,8 +74172,11 @@ ret=time.time()</Expression>
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>3</count>
+		<count>6</count>
 		<item_version>0</item_version>
+		<item>Crop8_3_3</item>
+		<item>i0</item>
+		<item>Switch_3000</item>
 		<item>i6</item>
 		<item>TRS_3080</item>
 		<item>Melt</item>
