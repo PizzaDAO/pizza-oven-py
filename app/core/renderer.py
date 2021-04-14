@@ -94,6 +94,23 @@ class SauceRenderer:
             ]
         )
 
+class CheeseRenderer:
+    """Render cheeses"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, data_path, frame):
+        os.environ["CHEESE_DATA_PATH"] = data_path
+        subprocess.check_call(
+            [
+                f"{executable_path}/NatronRenderer",
+                "-l",
+                f"{current}/natron/cheese.py",
+                f"{project_path}/cheese.ntp",
+                f"{frame}",
+            ]
+        )
 
 @dataclass
 class Renderer:
