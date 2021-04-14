@@ -5,6 +5,7 @@ services:
     build:
       context: .
       target: prod
+      network: host
     ports:
       - 8080:8000
     environment:

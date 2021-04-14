@@ -110,7 +110,7 @@ class Renderer:
     def cache_ingredient(self, ingredient: MadeIngredient) -> str:
         cache_dir = os.path.join(
             self.project_path,
-            ".cache/",
+            "../../.cache/",
         )
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)

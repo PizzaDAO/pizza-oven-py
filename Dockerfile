@@ -14,21 +14,37 @@ ENV PORT=8000 \
     POETRY_NO_INTERACTION=1 \
     POETRY_VIRTUALENVS_CREATE=false \
     POETRY_CACHE_DIR='/var/cache/pypoetry' \
-    PATH="$PATH:/root/.poetry/bin"
+    PATH="$PATH:/root/.poetry/bin" \
+    # Natron
+    NATRON_PATH="/natron" \
+    PATH="$PATH:/natron" \
+    NATRON_PROJECT_PATH="/app/natron"
+
+WORKDIR /
 
 # Add dependencies
 RUN apt-get update && apt-get upgrade -y \
-    && apt-get install --no-install-recommends -y 
+    && apt-get install --no-install-recommends -y \
+    ca-certificates \
+    python3-pip \
+    wget \
+    xz-utils
 
 # do the python things
-RUN pip install 'poetry==1.1.5'
-RUN pip install --no-cache-dir "uvicorn[standard]" gunicorn
+RUN pip3 install 'poetry==1.1.5'
+RUN pip3 install --no-cache-dir "uvicorn[standard]" gunicorn
+
+# do the natron things
+RUN wget https://github.com/NatronGitHub/Natron/releases/download/v2.3.15/Natron-2.3.15-Linux-64-no-installer.tar.xz --no-check-certificate \
+    && tar -xvf Natron-2.3.15-Linux-64-no-installer.tar.xz \
+    && mv /Natron-2.3.15-Linux-64-no-installer /natron \
+    && rm Natron-2.3.15-Linux-64-no-installer.tar.xz
 
 # do the app things
 COPY ./pyproject.toml /tmp/
 COPY ./poetry.lock /tmp/
 RUN cd /tmp && poetry export -f requirements.txt > requirements.txt
-RUN pip install -r /tmp/requirements.txt
+RUN pip3 install -r /tmp/requirements.txt
 
 # Cleaning cache:
 RUN apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
@@ -41,11 +57,13 @@ COPY ./gunicorn/start-reload.sh /start-reload.sh
 RUN chmod +x /start.sh
 RUN chmod +x /start-reload.sh
 
-# Create an app directory
+# Create directories
 RUN mkdir -p /app/logs
+RUN mkdir -p /app/data
+RUN mkdir -p /app/natron
+RUN mkdir -p /app/ingredients-db
+RUN mkdir -p /app/output
 
-# copy everything into the container image
-COPY . .
 WORKDIR /app
 ENV PYTHONPATH=/app
 
@@ -55,9 +73,16 @@ EXPOSE $PORT
 # mount the volume locally in DEV mode
 FROM base AS dev
 VOLUME [ "/app/app" ]
+VOLUME [ "/app/data" ]
+VOLUME [ "/app/natron" ]
+VOLUME [ "/app/ingredients-db" ]
+VOLUME [ "/app/output" ]
 CMD /start-reload.sh
 
 # just start the app normally
 FROM base AS prod
 COPY ./app /app/app
+COPY ./data /app/data
+COPY ./natron /app/natron
+COPY ./ingredients-db /app/ingredients-db
 CMD ["/start.sh"]

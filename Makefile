@@ -25,7 +25,7 @@ all: environment start
 
 environment:
 	@echo 🔧 Setting Up Environment
-	pip install 'poetry==1.1.5'
+	pip3 install 'poetry==1.1.5'
 	poetry install
 
 # Dev Server
