@@ -75,7 +75,7 @@ class NatronBase:
         print("setOutput: " + config.paths["output"] + self.out_file % self.index)
         node = self.natron.getNode("w1")
         if node is None:
-            print("render: could not find node")
+            print("setOutput: could not find node")
             return
         param = node.getParam("filename")
         if param is not None:

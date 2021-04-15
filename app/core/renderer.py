@@ -127,7 +127,7 @@ class Renderer:
     def cache_ingredient(self, ingredient: MadeIngredient) -> str:
         cache_dir = os.path.join(
             self.project_path,
-            "../../.cache/",
+            "../.cache/",
         )
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
@@ -192,7 +192,9 @@ class Renderer:
             )
 
         if ingredient.ingredient.classification == Classification.cheese:
-            pass
+            CheeseRenderer().render(
+                self.natron_path, self.project_path, data_path, self.frame
+            )
         if ingredient.ingredient.classification == Classification.topping:
             pass
         if ingredient.ingredient.classification == Classification.special:
