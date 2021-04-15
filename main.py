@@ -67,11 +67,11 @@ def mk_description(recipe):
 
 def allocate_to_bucket(ingredient, buckets):
   for bucket in buckets:
-      if int(ingredient['unique'][1]) in types_to_layers[bucket]:
+      if int(ingredient['index'][1]) in types_to_layers[bucket]:
         buckets[bucket].append(ingredient)
 
 def fill_buckets(ingredients, buckets):
-  """buckets each ingredient item according to middle digit of the 'unique' field"""
+  """buckets each ingredient item according to middle digit of the 'index' field"""
   for ingredient in ingredients:
     allocate_to_bucket(ingredient, buckets)
 
