@@ -94,6 +94,7 @@ class SauceRenderer:
             ]
         )
 
+
 class CheeseRenderer:
     """Render cheeses"""
 
@@ -111,6 +112,7 @@ class CheeseRenderer:
                 f"{frame}",
             ]
         )
+
 
 @dataclass
 class Renderer:
@@ -257,6 +259,15 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
+
+    # TODO:
+    # if args.recipe_path is not None:
+    #     with open(args.recipe_path) as json_file:
+    #         recipe = Recipe(**json.load(json_file))
+    #         kitchen_order = prep_line.reduce(recipe)
+    #         Renderer(args.natron_path, args.project_path, args.frame).render_pizza(
+    #             kitchen_order
+    #         )
 
     if args.kitchen_order_path is not None:
         with open(args.kitchen_order_path) as json_file:

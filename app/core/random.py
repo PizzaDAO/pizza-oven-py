@@ -2,6 +2,16 @@ from typing import Optional, TypeVar
 from secrets import randbits
 from hashlib import sha256
 
+__all__ = [
+    "get_random_remote",
+    "get_random",
+    "get_random_deterministic",
+    "get_optional",
+    "clamp",
+    "to_hex",
+    "from_hex",
+]
+
 _T = TypeVar("_T")
 
 
@@ -63,6 +73,7 @@ def clamp(entropy: int, start: float, end: float) -> float:
 
 
 def to_hex(base_10: int) -> str:
+    """convert the int to hex format"""
     in_hex = format(base_10, "02X")
     if len(in_hex) % 2:
         in_hex = "0" + in_hex
@@ -70,5 +81,6 @@ def to_hex(base_10: int) -> str:
 
 
 def from_hex(in_hex: str) -> int:
+    """convert the hext to int format"""
     base_10 = int(in_hex, 16)
     return base_10

@@ -1,7 +1,7 @@
-from typing import Any, Dict, List, Optional, Union
+from typing import Dict, List, Union
 
-from .base import Base
-from .recipe import NutritionMetadata
+from app.models.base import Base
+from app.models.recipe import NutritionMetadata
 
 
 __all__ = ["HotPizza", "RarePizzaMetadata"]

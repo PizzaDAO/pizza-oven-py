@@ -1,7 +1,7 @@
 from enum import Enum
-from typing import Any, Dict, List, Tuple
+from typing import Dict, Tuple
 
-from .base import Base
+from app.models.base import Base
 
 __all__ = [
     "RecipeInstructions",

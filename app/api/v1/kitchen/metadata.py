@@ -1,15 +1,14 @@
-from app.models.recipe import Recipe
 from typing import Any
 from fastapi import APIRouter, Body
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-from ....models.base import Base
-from .prep import KitchenOrderRequest
-from ....models.prep import *
-from ....models.pizza import *
-from ....core.metadata import to_blockchain_metadata
-from ..tags import BAKE
+from app.models.base import Base
+from app.models.recipe import Recipe
+from app.models.prep import KitchenOrder
+from app.models.pizza import HotPizza, RarePizzaMetadata
+from app.core.metadata import to_blockchain_metadata
+from ..tags import METADATA
 
 router = APIRouter()
 
@@ -22,7 +21,7 @@ class RarePizzaMetadataRequest(Base):
     pizza: HotPizza
 
 
-@router.post("/{job_id}", response_model=RarePizzaMetadata, tags=[BAKE])
+@router.post("/{job_id}", response_model=RarePizzaMetadata, tags=[METADATA])
 def get_metadata(job_id: str, request: RarePizzaMetadataRequest = Body(...)) -> Any:
     """
     get the metadata of a specific pizza

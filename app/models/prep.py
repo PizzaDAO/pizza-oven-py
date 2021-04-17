@@ -1,8 +1,8 @@
 from typing import Dict, List
 
-from .base import Base
+from app.models.base import Base
 
-from .recipe import Ingredient, INGREDIENT_KEY
+from app.models.recipe import Ingredient, INGREDIENT_KEY
 
 __all__ = [
     "MadeInstructions",
