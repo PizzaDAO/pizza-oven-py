@@ -10,8 +10,12 @@ services:
     build:
       context: .
       target: dev
+      network: host
     volumes:
       - "./app:/app/app"
+      - "./data:/app/data"
+      - "./natron:/app/natron"
+      - "./ingredients-db:/app/ingredients-db"
     ports:
       - 8000:8000
     networks:

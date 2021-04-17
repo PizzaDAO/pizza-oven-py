@@ -3,11 +3,20 @@ from fastapi import APIRouter, Body
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-from ..models.prep import KitchenOrderRequest
-from ..models.pizza import sample, HotPizzaResponse
+from app.models.base import Base
+from app.models.pizza import HotPizza
+from app.core.renderer import Renderer
+
+from .prep import KitchenOrderRequest
 from ..tags import BAKE
 
 router = APIRouter()
+
+
+class HotPizzaResponse(Base):
+    """a made pizza response"""
+
+    pizza: HotPizza
 
 
 @router.post("/bake", response_model=HotPizzaResponse, tags=[BAKE])
@@ -16,10 +25,9 @@ def bake_pizza(request: KitchenOrderRequest = Body(...)) -> Any:
     Bake the pizza!
     """
 
-    # TODO: all the things like call natron, save out the assets
-    # transform whatver data, etc.
+    pizza = Renderer().render_pizza(request.order)
 
-    data = sample(request.order)
+    # TODO: all the things save out the assets, populate IPFS, etc.
 
-    json = jsonable_encoder(data)
+    json = jsonable_encoder(pizza)
     return JSONResponse(content=json)

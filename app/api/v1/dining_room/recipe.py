@@ -3,20 +3,33 @@ from fastapi import APIRouter
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
+from app.models.base import Base
+from app.models.recipe import Recipe
+from app.core.repository import get_recipe
 
-from ..models.recipe import RecipeResponse, sample
 from ..tags import ORDER
 
 router = APIRouter()
 
 
+class RecipeRequest(Base):
+    """an inbound recipe request"""
+
+    recipe: Recipe
+
+
+class RecipeResponse(Base):
+    """an outbound recipe response"""
+
+    recipe: Recipe
+
+
 @router.get("/{recipe_id}", response_model=RecipeResponse, tags=[ORDER])
 def recipe(recipe_id: int) -> Any:
     """
-    Order a recipe from the kitchen (by id)
+    Get a specific recipe from the kitchen (by id)
     """
-    # TODO: things like database lookups, etc.
 
-    data = sample(recipe_id)
+    data = get_recipe(recipe_id)
     json = jsonable_encoder(data)
     return JSONResponse(content=json)

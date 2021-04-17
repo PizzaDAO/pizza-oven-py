@@ -9,40 +9,6 @@
 			"name": "dining_room",
 			"item": [
 				{
-					"name": "order",
-					"item": [
-						{
-							"name": "orderPizza",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"id\": \"c3669e3d-54f5-4c35-be2f-e8291dc6c4c4\",\n    \"data\": {\n        \"address\": \"ffkjfkf\"\n    }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{pizza-kitchen-url}}/api/{{version}}/diningroom/order",
-									"host": [
-										"{{pizza-kitchen-url}}"
-									],
-									"path": [
-										"api",
-										"{{version}}",
-										"diningroom",
-										"order"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "recipe",
 					"event": [
 						{
@@ -73,58 +39,41 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "orderPizza",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"c3669e3d-54f5-4c35-be2f-e8291dc6c4c4\",\n    \"data\": {\n        \"address\": \"ffkjfkf\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/diningroom/order",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"diningroom",
+								"order"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
 			"name": "kitchen",
 			"item": [
-				{
-					"name": "oven",
-					"item": [
-						{
-							"name": "bake",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"var jsonData = pm.response.json();",
-											"pm.environment.set(\"pizza\", JSON.stringify(jsonData));"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"order\": {{order}}\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{pizza-kitchen-url}}/api/{{version}}/oven/bake",
-									"host": [
-										"{{pizza-kitchen-url}}"
-									],
-									"path": [
-										"api",
-										"{{version}}",
-										"oven",
-										"bake"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
 				{
 					"name": "Prepare Pizza",
 					"event": [
@@ -161,6 +110,76 @@
 								"{{version}}",
 								"kitchen",
 								"preparePizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "metadata",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipe\": {{recipe}},\n    \"order\": {{order}},\n    \"pizza\": {{pizza}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/metadata/1",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"metadata",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bake",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"pizza\", JSON.stringify(jsonData));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\": {{order}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/oven/bake",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"oven",
+								"bake"
 							]
 						}
 					},
