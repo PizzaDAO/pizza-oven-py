@@ -1,6 +1,7 @@
 {
     "unique_id": 1,
     "name": "My Cool First Super Rare Pizza Test",
+    "random_seed": "52198947997422404454920108833917741998911196589945595445581078565118427695940",
     "rarity_level": 4.0,
     "base_ingredients": {
         "box": {
@@ -23,7 +24,7 @@
                     "sodium": 0.7,
                     "potassium": 0.7,
                     "carbohydrates": 30.1,
-                    "protien": 0.2
+                    "protein": 0.2
                 },
                 "image_uris": {
                     "filename": "0000-box-cardboard.png",
@@ -69,7 +70,7 @@
                     "sodium": 0.7,
                     "potassium": 0.7,
                     "carbohydrates": 30.1,
-                    "protien": 0.2
+                    "protein": 0.2
                 },
                 "image_uris": {
                     "filename": "0500-paper-redchecker.png",
@@ -115,7 +116,7 @@
                     "sodium": 657.6,
                     "potassium": 166.14,
                     "carbohydrates": 30.1,
-                    "protien": 11.5
+                    "protein": 11.5
                 },
                 "image_uris": {
                     "filename": "1000-crust-thin.png",
@@ -163,7 +164,7 @@
                     "sodium": 1151.7,
                     "potassium": 900.4,
                     "carbohydrates": 17.7,
-                    "protien": 3.5
+                    "protein": 3.5
                 },
                 "image_uris": {
                     "filename": "2000-sauce-tomato.png",
@@ -209,7 +210,7 @@
                     "sodium": 117.8,
                     "potassium": 21.5,
                     "carbohydrates": 0.6,
-                    "protien": 6.3
+                    "protein": 6.3
                 },
                 "image_uris": {
                     "filename": "3000-cheese-mozzarella.png",
@@ -255,7 +256,7 @@
                     "sodium": 493.1,
                     "potassium": 78.1,
                     "carbohydrates": 0.0,
-                    "protien": 6.4
+                    "protein": 6.4
                 },
                 "image_uris": {
                     "filename": "4000-topping-meat-pepperoni.png",
@@ -300,7 +301,7 @@
                     "sodium": 6.2,
                     "potassium": 291.5,
                     "carbohydrates": 4.8,
-                    "protien": 1.1
+                    "protein": 1.1
                 },
                 "image_uris": {
                     "filename": "5000-topping-fruit-tomato.png",
@@ -344,7 +345,13 @@
             1.0,
             3.0
         ],
-        "baking_temp_in_celsius": 190,
-        "baking_time_in_minutes": 20
+        "baking_temp_in_celsius": [
+            185.0,
+            210.0
+        ],
+        "baking_time_in_minutes": [
+            15.0,
+            30.0
+        ]
     }
 }

@@ -1,8 +1,8 @@
 from typing import Dict, List
 
-from .base import Base
+from app.models.base import Base
 
-from .recipe import Ingredient, INGREDIENT_KEY
+from app.models.recipe import Ingredient, INGREDIENT_KEY
 
 __all__ = [
     "MadeInstructions",
@@ -21,6 +21,8 @@ class MadeInstructions(Base):
     cheese_count: SCALAR
     topping_count: SCALAR
     special_count: SCALAR
+    baking_temp_in_celsius: SCALAR
+    baking_time_in_minutes: SCALAR
 
 
 class MadeIngredientPrep(Base):

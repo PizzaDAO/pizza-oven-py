@@ -3,11 +3,11 @@ from fastapi import APIRouter, Body
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-from ....models.base import Base
+from app.models.base import Base
+from app.models.pizza import HotPizza
+from app.core.renderer import Renderer
+
 from .prep import KitchenOrderRequest
-from ....models.prep import *
-from ....models.pizza import *
-from ....core.renderer import Renderer
 from ..tags import BAKE
 
 router = APIRouter()

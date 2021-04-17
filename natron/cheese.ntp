@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>134</NodesCount>
+		<NodesCount>133</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Merge2_2</Plugin_label>
 			<Plugin_script_name>Merge2_2</Plugin_script_name>
@@ -1372,7 +1372,7 @@ digitalvegan&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534622</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -5421,7 +5421,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -9306,7 +9306,7 @@ czech&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -13278,7 +13278,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -17849,7 +17849,7 @@ fetaballs
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358108</Value>
+						<Value>1618534646</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -24608,7 +24608,7 @@ smokedmozzarello&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -31350,7 +31350,7 @@ goat&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -35157,7 +35157,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>6</KnobsCount>
+			<KnobsCount>9</KnobsCount>
 			<item>
 				<Name>extent</Name>
 				<Type>Choice</Type>
@@ -35167,31 +35167,57 @@ ret=time.time()</Expression>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
+					<Value>0</Value>
 					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
-				<ChoiceLabel>project</ChoiceLabel>
+				<ChoiceLabel>format</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
-				<Secret>1</Secret>
+				<Secret>0</Secret>
 				<MasterIsAlias>0</MasterIsAlias>
 				<item>
-					<Enabled>0</Enabled>
+					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
+					<Value>20</Value>
 					<Default>20</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
-				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<ChoiceLabel>3072x3072</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronParamFormatSize</Name>
+				<Type>Int</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3072</Value>
+					<Default>640</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3072</Value>
+					<Default>480</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -35264,6 +35290,23 @@ ret=time.time()</Expression>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
+				<Name>blackOutside</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
 				<Dimension>1</Dimension>
@@ -35284,6 +35327,23 @@ ret=time.time()</Expression>
 				</StringsAnimation>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>disableNode</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -35292,7 +35352,7 @@ ret=time.time()</Expression>
 					<second>TRS_3040</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>9</KnobsAge>
+			<KnobsAge>21</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -38506,7 +38566,7 @@ provolone&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -45732,7 +45792,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -56507,7 +56567,7 @@ ret = v[0] * (1 - d) + v[1] * d</Expression>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p0_channels</Name>
+				<Name>p1_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -56528,7 +56588,7 @@ ret = v[0] * (1 - d) + v[1] * d</Expression>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>0</first>
+					<first>1</first>
 					<second>Crop12</second>
 				</item>
 			</Inputs_map>
@@ -57523,7 +57583,7 @@ cake&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -62320,7 +62380,7 @@ fetbits&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618358052</Value>
+						<Value>1618534623</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -66673,39 +66733,8 @@ ret=time.time()</Expression>
 			<CacheID>Switch_3080_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Viewer1</Plugin_label>
-			<Plugin_script_name>Viewer1</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>0</KnobsCount>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>1</first>
-					<second>Crop8_3_3_2_2</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>0</PagesCount>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Viewer1</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Write3</Plugin_label>
-			<Plugin_script_name>Write3</Plugin_script_name>
+			<Plugin_label>w1</Plugin_label>
+			<Plugin_script_name>w1</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Write</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -67030,7 +67059,7 @@ ret=time.time()</Expression>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Tue Apr 13 17:00:58 2021</Value>
+			<Value>Thu Apr 15 23:28:21 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -67141,7 +67170,7 @@ ret=time.time()</Expression>
 </Project>
 <ProjectGui class_id="25" tracking_level="0" version="11">
 	<NodesGui class_id="26" tracking_level="0" version="0">
-		<count>134</count>
+		<count>133</count>
 		<item_version>6</item_version>
 		<item class_id="27" tracking_level="0" version="6">
 			<Name>Merge2_2</Name>
@@ -70716,7 +70745,7 @@ ret=time.time()</Expression>
 		<item>
 			<Name>Crop8_3_3</Name>
 			<X_position>5.06617592299931312e+03</X_position>
-			<Y_position>4.07642879323877514e+03</Y_position>
+			<Y_position>4.07792865089384668e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -73976,21 +74005,7 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Viewer1</Name>
-			<X_position>1.64092380265444808e+03</X_position>
-			<Y_position>4.00598832340324770e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>3.00000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Write3</Name>
+			<Name>w1</Name>
 			<X_position>9.84449867139461276e+02</X_position>
 			<Y_position>4.50418136344025879e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -74009,21 +74024,20 @@ ret=time.time()</Expression>
 		<Window class_id="29" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="30" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1641 883</Sizes>
+				<Sizes>1279 689</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>516 516</Sizes>
+					<Sizes>499 499</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="31" tracking_level="1" version="5" object_id="_2">
 						<Tabs>
-							<count>2</count>
+							<count>1</count>
 							<item_version>0</item_version>
 							<item>Melt_Viewer1</item>
-							<item>Viewer1</item>
 						</Tabs>
-						<Index>1</Index>
+						<Index>0</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
@@ -74054,10 +74068,10 @@ ret=time.time()</Expression>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2092</x>
-			<y>31</y>
-			<w>2560</w>
-			<h>1035</h>
+			<x>-2283</x>
+			<y>32</y>
+			<w>2004</w>
+			<h>1001</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="32" tracking_level="0" version="0">
@@ -74066,9 +74080,9 @@ ret=time.time()</Expression>
 		<item class_id="33" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="34" tracking_level="0" version="14">
-				<zoomLeft>0.00000000000000000e+00</zoomLeft>
-				<zoomBottom>-3.56000000000000000e+02</zoomBottom>
-				<zoomFactor>1.00000000000000000e+00</zoomFactor>
+				<zoomLeft>-4.49091964601769905e+03</zoomLeft>
+				<zoomBottom>-6.14400000000000546e+01</zoomBottom>
+				<zoomFactor>1.06107271634615377e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="35" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -74112,11 +74126,16 @@ ret=time.time()</Expression>
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>3</count>
+		<count>8</count>
 		<item_version>0</item_version>
+		<item>w1</item>
+		<item>Crop8_3_3</item>
+		<item>i0</item>
+		<item>Switch_3000</item>
 		<item>i6</item>
 		<item>TRS_3080</item>
 		<item>Melt</item>
+		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]

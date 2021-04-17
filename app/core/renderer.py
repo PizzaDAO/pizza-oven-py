@@ -95,6 +95,25 @@ class SauceRenderer:
         )
 
 
+class CheeseRenderer:
+    """Render cheeses"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, data_path, frame):
+        os.environ["CHEESE_DATA_PATH"] = data_path
+        subprocess.check_call(
+            [
+                f"{executable_path}/NatronRenderer",
+                "-l",
+                f"{current}/natron/cheese.py",
+                f"{project_path}/cheese.ntp",
+                f"{frame}",
+            ]
+        )
+
+
 @dataclass
 class Renderer:
     """render the kitchen order"""
@@ -110,7 +129,7 @@ class Renderer:
     def cache_ingredient(self, ingredient: MadeIngredient) -> str:
         cache_dir = os.path.join(
             self.project_path,
-            "../../.cache/",
+            "../.cache/",
         )
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
@@ -175,7 +194,9 @@ class Renderer:
             )
 
         if ingredient.ingredient.classification == Classification.cheese:
-            pass
+            CheeseRenderer().render(
+                self.natron_path, self.project_path, data_path, self.frame
+            )
         if ingredient.ingredient.classification == Classification.topping:
             pass
         if ingredient.ingredient.classification == Classification.special:
@@ -238,6 +259,15 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
+
+    # TODO:
+    # if args.recipe_path is not None:
+    #     with open(args.recipe_path) as json_file:
+    #         recipe = Recipe(**json.load(json_file))
+    #         kitchen_order = prep_line.reduce(recipe)
+    #         Renderer(args.natron_path, args.project_path, args.frame).render_pizza(
+    #             kitchen_order
+    #         )
 
     if args.kitchen_order_path is not None:
         with open(args.kitchen_order_path) as json_file:

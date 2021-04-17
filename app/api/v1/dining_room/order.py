@@ -3,11 +3,13 @@ from fastapi import APIRouter, Body
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-from ....models.base import Base
-from ....models.order import PizzaOrder, PizzaOrderData
-from .recipe import Recipe, sample
-from ....core.prep_line import reduce
-from ....core.renderer import Renderer
+from app.models.base import Base
+from app.models.order import PizzaOrder, PizzaOrderData
+from app.core.recipe_box import make_recipe
+from app.core.prep_line import reduce
+from app.core.metadata import to_blockchain_metadata
+from app.core.repository import *
+from app.core.renderer import Renderer
 from ..tags import DELIVER
 
 router = APIRouter()
@@ -36,12 +38,23 @@ def orderPizza(request: OrderPizzaRequest = Body(...)) -> Any:
 
     print(f"{request}")
 
-    recipe = sample(1)
+    # TODO: probably move this logic somewhere else
+
+    # transform the data
+    recipe = make_recipe()
     order = reduce(recipe)
 
+    # render
     pizza = Renderer().render_pizza(order)
 
-    # TODO: all the things like save to IPFS, etc.
+    # cache the objects in the respecitve repositories
+    metadata = to_blockchain_metadata(request.id, recipe, order, pizza)
+    ipfs_hash = set_metadata(metadata)
+    pizza.assets["IPFS_ID"] = ipfs_hash
+
+    set_recipe(recipe)
+    set_kitchen_order(order)
+    set_pizza(pizza)
 
     response = OrderPizzaResponse(
         jobRunID=request.id,

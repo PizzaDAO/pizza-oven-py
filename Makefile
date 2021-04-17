@@ -74,4 +74,12 @@ test:
 
 test-natron:
 	@echo ☢️ Test Natron
+	poetry run python app/core/renderer.py -r $(realpath .)/data/sample_recipe.json -f 9
+
+test-natron-order:
+	@echo ☢️ Test Natron
 	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 9
+
+natron-cheese:
+	@echo ☢️ Run Cheese Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_order_cheese.json -f 9
