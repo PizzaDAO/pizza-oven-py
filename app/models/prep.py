@@ -21,6 +21,8 @@ class MadeInstructions(Base):
     cheese_count: SCALAR
     topping_count: SCALAR
     special_count: SCALAR
+    baking_temp_in_celsius: SCALAR
+    baking_time_in_minutes: SCALAR
 
 
 class MadeIngredientPrep(Base):

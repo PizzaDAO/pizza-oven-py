@@ -7,7 +7,7 @@ from ..models.prep import (
     MadeInstructions,
 )
 
-from .random import get_random, get_random_deterministic
+from .random import get_random, get_random_deterministic, clamp, to_hex, from_hex
 
 
 def reduce(recipe: Recipe) -> KitchenOrder:
@@ -16,23 +16,30 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     reduced_toppings: Dict[INGREDIENT_KEY, MadeIngredient] = {}
 
     # get a random seed
-    seed = get_random()
-    counter = 0
+    # since the recipe already received verifiable randomness
+    # we use some entropy from the operating system
+    random_seed = get_random(32)
+    counter = random_seed
+    deterministic_seed = get_random_deterministic(from_hex(recipe.random_seed), counter)
+
+    # TODO: select ingredient count first and then only add the ingredients that are selected
 
     for (key, value) in recipe.base_ingredients.items():
-        reduced_base[key] = select_prep(seed, counter, value)
+        reduced_base[key] = select_prep(deterministic_seed, counter, value)
 
     for (key, value) in recipe.toppings.items():
-        reduced_toppings[key] = select_prep(seed, counter, value)
+        reduced_toppings[key] = select_prep(deterministic_seed, counter, value)
 
     return KitchenOrder(
-        unique_id=get_random(32),
+        unique_id=0,  # TODO: database primary key?
         name=recipe.name,
-        random_seed=seed,
+        random_seed=to_hex(random_seed),
         recipe_id=recipe.unique_id,
         base_ingredients=reduced_base,
         toppings=reduced_toppings,
-        instructions=select_ingredient_count(seed, counter, recipe.instructions),
+        instructions=select_ingredient_count(
+            deterministic_seed, counter, recipe.instructions
+        ),
     )
 
 
@@ -58,27 +65,15 @@ def select_ingredient_count(
         cheese_count=select_value(seed, counter, scope.cheese_count),
         topping_count=select_value(seed, counter, scope.topping_count),
         special_count=select_value(seed, counter, scope.special_count),
+        baking_temp_in_celsius=select_value(
+            seed, counter, scope.baking_temp_in_celsius
+        ),
+        baking_time_in_minutes=select_value(
+            seed, counter, scope.baking_time_in_minutes
+        ),
     )
 
 
 def select_value(seed: int, counter: int, bounds: Tuple[float, float]) -> float:
     counter += 1
     return clamp(get_random_deterministic(seed, counter), bounds[0], bounds[1])
-
-
-def clamp(entropy: int, start: float, end: float) -> float:
-    """naive implementation of a range bound"""
-
-    if end == 0.0:
-        return 0.0
-    modulo = float(entropy) % end
-    if modulo < start:
-        return start
-    return modulo
-
-
-def to_hex(base_10: int) -> str:
-    in_hex = format(base_10, "02X")
-    if len(in_hex) % 2:
-        in_hex = "0" + in_hex
-    return in_hex

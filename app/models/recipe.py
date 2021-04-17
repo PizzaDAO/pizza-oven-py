@@ -7,6 +7,7 @@ __all__ = [
     "RecipeInstructions",
     "IncredientScope",
     "Classification",
+    "NutritionMetadata",
     "Ingredient",
     "ScopedIngredient",
     "Recipe",
@@ -23,13 +24,12 @@ MAX = float
 class RecipeInstructions(Base):
     """pizza level instructions for seeding the RNG"""
 
-    sauce_count: Tuple[MIN, MAX]  # - 1
-    cheese_count: Tuple[MIN, MAX]  # - 2
-    topping_count: Tuple[MIN, MAX]  # - 3
-    special_count: Tuple[MIN, MAX]  # - 1
-    # can add rules like "vegetarian", "meat lovers" etc.
-    baking_temp_in_celsius: int
-    baking_time_in_minutes: int
+    sauce_count: Tuple[MIN, MAX]
+    cheese_count: Tuple[MIN, MAX]
+    topping_count: Tuple[MIN, MAX]
+    special_count: Tuple[MIN, MAX]
+    baking_temp_in_celsius: Tuple[MIN, MAX]
+    baking_time_in_minutes: Tuple[MIN, MAX]
 
 
 class IncredientScope(Base):
@@ -53,8 +53,21 @@ class Classification(Enum):
     special = 7
 
 
+class NutritionMetadata(Base):
+    servings: float
+    calories: float
+    fat: float
+    cholesterol: float
+    sodium: float
+    potassium: float
+    carbohydrates: float
+    protein: float
+
+
 class Ingredient(Base):
     """metadata for the ingredient"""
+
+    # TODO: add artist attribution fields
 
     unique_id: str  # - 0001
     index: int  # 1
@@ -64,8 +77,10 @@ class Ingredient(Base):
     category: str  # - "meat"
     # {scent: "smells funny", sodium: "high"}
     attributes: Dict[ATTRIBUTE_KEY, str]
-    nutrition: Dict[ATTRIBUTE_KEY, float]
-    image_uris: Dict[IMAGEURI_KEY, str]  # {large: "path/to/it.png"}
+    """attributes that should show up in the token metadata"""
+    nutrition: NutritionMetadata
+    image_uris: Dict[IMAGEURI_KEY, str]
+    """collection of paths to image uri's"""
 
 
 class ScopedIngredient(Base):
@@ -81,6 +96,8 @@ class Recipe(Base):
 
     unique_id: int  # - 1
     name: str  # - "super rare"
+    random_seed: str
+    """The random seed that was used to generate the order"""
     rarity_level: float  # - 4
     base_ingredients: Dict[INGREDIENT_KEY, ScopedIngredient]
     """collection of base ingredients that coule be used"""
