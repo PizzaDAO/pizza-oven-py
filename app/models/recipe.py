@@ -74,8 +74,14 @@ class Ingredient(Base):
     name: str  # - "Pepperoni"
     rarity_level: int  # - 1
     classification: Classification  # - topping
-    category: str  # - "meat"
-    # {scent: "smells funny", sodium: "high"}
+    category: str
+    """
+    categories can be used to group elements together 
+    so that only one of each category will show up on a pizza
+    for isntance, multiple things may be in the pepperoni category
+    but only one pepperoni will show up on a pizza
+    """
+    # things like: {scent: "smells funny", sodium: "high"}
     attributes: Dict[ATTRIBUTE_KEY, str]
     """attributes that should show up in the token metadata"""
     nutrition: NutritionMetadata
@@ -95,12 +101,15 @@ class Recipe(Base):
     to generate a kitchen order"""
 
     unique_id: int  # - 1
-    name: str  # - "super rare"
+    name: str
+    """
+    Name of the pizza.  This can be randomly generated & will show up in metadata
+    """
     random_seed: str
     """The random seed that was used to generate the order"""
     rarity_level: float  # - 4
     base_ingredients: Dict[INGREDIENT_KEY, ScopedIngredient]
-    """collection of base ingredients that coule be used"""
+    """collection of base ingredients that coule be used as part of a kitchen order"""
     toppings: Dict[INGREDIENT_KEY, ScopedIngredient]
     """collection of toppings ingredients that coule be used"""
     instructions: RecipeInstructions

@@ -37,6 +37,11 @@ class ERC721OpenSeaExtensions(Base):
 
 
 class IngredientMetadata(Base):
+    """ingreident metadata"""
+
+    # TODO: conform to the ERC721 standard so that ingredentis could also be their own tokens"""
+
+    # TODO: add artist attribution & copyright info
     name: str
     rarity: int
     classification: str
