@@ -9,7 +9,7 @@ from app.core.recipe_box import make_recipe
 from app.core.prep_line import reduce
 from app.core.metadata import to_blockchain_metadata
 from app.core.repository import *
-from ....core.renderer import Renderer
+from app.core.renderer import Renderer
 from ..tags import DELIVER
 
 router = APIRouter()
