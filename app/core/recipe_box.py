@@ -242,7 +242,7 @@ def sample(recipe_id: int) -> Recipe:
             sauce_count=(1, 1),
             cheese_count=(1, 2),
             topping_count=(2, 10),
-            special_count=(1, 3),
+            extras_count=(1, 3),
             baking_temp_in_celsius=(185, 210),
             baking_time_in_minutes=(15, 30),
         ),

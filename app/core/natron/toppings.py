@@ -12,5 +12,5 @@ class Topping(NatronBase):
         self.enable("%s_2" % self.unique_id)
 
 
-instance = Topping(app, "TOPPING_DATA_PATH")
+instance = Topping(app, "TOPPINGS_DATA_PATH")
 instance.render()

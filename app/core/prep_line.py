@@ -76,7 +76,7 @@ def select_ingredient_count(
         sauce_count=select_value(seed, counter, scope.sauce_count),
         cheese_count=select_value(seed, counter, scope.cheese_count),
         topping_count=select_value(seed, counter, scope.topping_count),
-        special_count=select_value(seed, counter, scope.special_count),
+        extras_count=select_value(seed, counter, scope.extras_count),
         baking_temp_in_celsius=select_value(
             seed, counter, scope.baking_temp_in_celsius
         ),

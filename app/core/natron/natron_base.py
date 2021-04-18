@@ -118,6 +118,9 @@ class NatronBase(object):
     def _load_image(self, filename):
         print("loading: " + config.paths["database"] + filename)
         node = self.natron.getNode("i1")
+        if node is None:
+            print("_load_image: could not find node: i1")
+            return
         param = node.getParam("filename")
         if param is not None:
             param.setValue(config.paths["database"] + filename)
