@@ -111,6 +111,7 @@ class CheeseRenderer:
             ]
         )
 
+
 class ExtraRenderer:
     """Render cheeses"""
 
@@ -128,6 +129,7 @@ class ExtraRenderer:
                 f"{frame}",
             ]
         )
+
 
 class ToppingsRenderer:
     """Render toppings"""
@@ -208,12 +210,12 @@ class Renderer:
             if not result:
                 print(f"error rendering toppings {ingredient.ingredient.name}")
                 break
- 
- #       for (key, ingredient) in order.special.items():
- #           result = self.render_ingredient(ingredient)
- #           if not result:
- #               print(f"error rendering special {ingredient.ingredient.name}")
- #               break
+
+        #       for (key, ingredient) in order.special.items():
+        #           result = self.render_ingredient(ingredient)
+        #           if not result:
+        #               print(f"error rendering special {ingredient.ingredient.name}")
+        #               break
 
         # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
@@ -257,18 +259,11 @@ class Renderer:
                 self.natron_path, self.project_path, data_path, self.frame
             )
         if ingredient.ingredient.classification == Classification.topping:
-<<<<<<< HEAD
-            pass
-
-        if ingredient.ingredient.classification == Classification.special:
-            ExtraRenderer().render(
-=======
             ToppingsRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
         if ingredient.ingredient.classification == Classification.extras:
             ExtrasRenderer().render(
->>>>>>> toppings
                 self.natron_path, self.project_path, data_path, self.frame
             )
 
