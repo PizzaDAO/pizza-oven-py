@@ -54,6 +54,6 @@ class KitchenOrder(Base):
 
     base_ingredients: Dict[INGREDIENT_KEY, MadeIngredient]
     """collection of base ingredients that coule be used"""
-    toppings: Dict[INGREDIENT_KEY, MadeIngredient]
-    """collection of toppings ingredients that will ber used"""
+    layers: Dict[INGREDIENT_KEY, MadeIngredient]
+    """collection of layers ingredients that will ber used"""
     instructions: MadeInstructions

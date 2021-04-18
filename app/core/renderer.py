@@ -148,7 +148,7 @@ class Renderer:
                 print(f"error rendering {ingredient.ingredient.name}")
                 break
 
-        for (key, ingredient) in order.toppings.items():
+        for (key, ingredient) in order.layers.items():
             result = self.render_ingredient(ingredient)
             if not result:
                 print(f"error rendering {ingredient.ingredient.name}")

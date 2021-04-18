@@ -112,7 +112,7 @@ def sample(recipe_id: int) -> Recipe:
                 ),
             ),
         },
-        toppings={
+        layers={
             "sauce": ScopedIngredient(
                 ingredient=Ingredient(
                     unique_id="2000",

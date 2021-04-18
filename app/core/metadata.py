@@ -31,7 +31,7 @@ def to_blockchain_metadata(
             )
         )
 
-    for (key, value) in order.toppings.items():
+    for (key, value) in order.layers.items():
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
