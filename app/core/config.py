@@ -13,6 +13,8 @@ class ApiMode(str, Enum):
 
 # pylint:disable=too-few-public-methods
 class Settings(BaseSettings):
+    """Settings for the app"""
+
     API_MODE: ApiMode = ApiMode.development
     API_V1_STR: str = "/api/v1"
     DEFAULT_NATRON_EXECUTABLE_PATH = os.environ["NATRON_PATH"]
