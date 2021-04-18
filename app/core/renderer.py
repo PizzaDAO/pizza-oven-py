@@ -112,6 +112,25 @@ class CheeseRenderer:
         )
 
 
+class ToppingRenderer:
+    """Render toppings"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, data_path, frame):
+        os.environ["TOPPING_DATA_PATH"] = data_path
+        subprocess.check_call(
+            [
+                f"{executable_path}/NatronRenderer",
+                "-l",
+                f"{current}/natron/topping.py",
+                f"{project_path}/toppings.ntp",
+                f"{frame}",
+            ]
+        )
+
+
 @dataclass
 class Renderer:
     """render the kitchen order"""
@@ -196,7 +215,9 @@ class Renderer:
                 self.natron_path, self.project_path, data_path, self.frame
             )
         if ingredient.ingredient.classification == Classification.topping:
-            pass
+            ToppingRenderer().render(
+                self.natron_path, self.project_path, data_path, self.frame
+            )
         if ingredient.ingredient.classification == Classification.special:
             pass
 
