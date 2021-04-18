@@ -50,7 +50,7 @@ def orderPizza(request: OrderPizzaRequest = Body(...)) -> Any:
     # cache the objects in the respecitve repositories
     metadata = to_blockchain_metadata(request.id, recipe, order, pizza)
     ipfs_hash = set_metadata(metadata)
-    pizza.assets["IPFS_ID"] = ipfs_hash
+    pizza.assets["IPFS_HASH"] = ipfs_hash
 
     set_recipe(recipe)
     set_kitchen_order(order)
@@ -60,7 +60,7 @@ def orderPizza(request: OrderPizzaRequest = Body(...)) -> Any:
         jobRunID=request.id,
         data=PizzaOrder(
             address=request.data.address,
-            artwork=pizza.assets["IPFS_ID"],
+            artwork=pizza.assets["IPFS_HASH"],
         ),
     )
 

@@ -7,6 +7,7 @@ services:
   pizza-oven:
     depends_on:
       - chainlink
+      - ipfs0
     build:
       context: .
       target: dev
@@ -67,6 +68,21 @@ services:
       timeout: 5s
       interval: 10s
       retries: 10
+
+  # Add IPFS node
+  ipfs0:
+    container_name: ipfs0
+    image: ipfs/go-ipfs:v0.7.0
+    volumes:
+      - ./ipfs/data:/data/ipfs # mount the ipfs data store locally
+    ports:
+      - 4001:4001 # ipfs swarm - (do not expose externally)
+      - 5001:5001 # ipfs api - (do not expose externally)
+      - 8080:8080 # ipfs gateway - expose if needed/wanted
+    networks:
+      - rare-pizzas
+    environment:
+      - IPFS_PROFILE=server
 
 networks:
   rare-pizzas:
