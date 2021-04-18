@@ -27,7 +27,7 @@ class RecipeInstructions(Base):
     sauce_count: Tuple[MIN, MAX]
     cheese_count: Tuple[MIN, MAX]
     topping_count: Tuple[MIN, MAX]
-    special_count: Tuple[MIN, MAX]
+    extras_count: Tuple[MIN, MAX]
     baking_temp_in_celsius: Tuple[MIN, MAX]
     baking_time_in_minutes: Tuple[MIN, MAX]
 
@@ -50,7 +50,7 @@ class Classification(Enum):
     sauce = 4
     cheese = 5
     topping = 6
-    special = 7
+    extras = 7
 
 
 class NutritionMetadata(Base):
@@ -110,6 +110,6 @@ class Recipe(Base):
     rarity_level: float  # - 4
     base_ingredients: Dict[INGREDIENT_KEY, ScopedIngredient]
     """collection of base ingredients that coule be used as part of a kitchen order"""
-    toppings: Dict[INGREDIENT_KEY, ScopedIngredient]
-    """collection of toppings ingredients that coule be used"""
+    layers: Dict[INGREDIENT_KEY, ScopedIngredient]
+    """collection of layers ingredients that coule be used"""
     instructions: RecipeInstructions

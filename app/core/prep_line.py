@@ -15,10 +15,9 @@ from app.models.prep import (
 from app.core.random import (
     get_random,
     get_random_deterministic,
-    clamp,
-    to_hex,
-    from_hex,
 )
+
+from app.core.utils import clamp, to_hex, from_hex
 
 __all__ = ["reduce"]
 
@@ -26,7 +25,7 @@ __all__ = ["reduce"]
 def reduce(recipe: Recipe) -> KitchenOrder:
     """reduce the range values of a recipe to scalar values"""
     reduced_base: Dict[INGREDIENT_KEY, MadeIngredient] = {}
-    reduced_toppings: Dict[INGREDIENT_KEY, MadeIngredient] = {}
+    reduced_layers: Dict[INGREDIENT_KEY, MadeIngredient] = {}
 
     # get a random seed
     # since the recipe already received verifiable randomness
@@ -40,8 +39,8 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     for (key, value) in recipe.base_ingredients.items():
         reduced_base[key] = select_prep(deterministic_seed, counter, value)
 
-    for (key, value) in recipe.toppings.items():
-        reduced_toppings[key] = select_prep(deterministic_seed, counter, value)
+    for (key, value) in recipe.layers.items():
+        reduced_layers[key] = select_prep(deterministic_seed, counter, value)
 
     return KitchenOrder(
         unique_id=0,  # TODO: database primary key?
@@ -49,7 +48,7 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         random_seed=to_hex(random_seed),
         recipe_id=recipe.unique_id,
         base_ingredients=reduced_base,
-        toppings=reduced_toppings,
+        layers=reduced_layers,
         instructions=select_ingredient_count(
             deterministic_seed, counter, recipe.instructions
         ),
@@ -77,7 +76,7 @@ def select_ingredient_count(
         sauce_count=select_value(seed, counter, scope.sauce_count),
         cheese_count=select_value(seed, counter, scope.cheese_count),
         topping_count=select_value(seed, counter, scope.topping_count),
-        special_count=select_value(seed, counter, scope.special_count),
+        extras_count=select_value(seed, counter, scope.extras_count),
         baking_temp_in_celsius=select_value(
             seed, counter, scope.baking_temp_in_celsius
         ),

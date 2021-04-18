@@ -31,7 +31,7 @@ def to_blockchain_metadata(
             )
         )
 
-    for (key, value) in order.toppings.items():
+    for (key, value) in order.layers.items():
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
@@ -51,7 +51,7 @@ def to_blockchain_metadata(
         description="some description",
         rarity_level=recipe.rarity_level,
         random_seed=recipe.random_seed,
-        image=pizza.assets["IPFS_ID"],
+        image=pizza.assets["IPFS_HASH"],
         extension_uri="https://some/external/path/to/supplemantary/things",
         external_url="https://www.rarepizzas.com/pizzas/some_token_id",
         background_color="ffffff",

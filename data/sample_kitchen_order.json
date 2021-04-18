@@ -209,7 +209,7 @@
             }
         }
     },
-    "toppings": {
+    "layers": {
         "sauce": {
             "ingredient": {
                 "unique_id": "2000",
@@ -723,7 +723,7 @@
         "topping-1": {
             "ingredient": {
                 "unique_id": "4000",
-                "index": 2,
+                "index": 10,
                 "name": "Pepperoni",
                 "rarity_level": 1,
                 "classification": 6,
@@ -757,7 +757,7 @@
         "topping-2": {
             "ingredient": {
                 "unique_id": "5000",
-                "index": 3,
+                "index": 11,
                 "name": "Tomato",
                 "rarity_level": 1,
                 "classification": 6,
@@ -786,13 +786,46 @@
                 "particle_scale": 0.1,
                 "rotation": 68.0
             }
+        },
+        "extras-1": {
+            "ingredient": {
+                "unique_id": "7100",
+                "index": 12,
+                "name": "Maggots",
+                "rarity_level": 1,
+                "classification": 7,
+                "category": "bugs",
+                "attributes": {
+                    "state": "fresh"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 22.1,
+                    "fat": 0.2,
+                    "cholesterol": 0.0,
+                    "sodium": 6.2,
+                    "potassium": 291.5,
+                    "carbohydrates": 4.8,
+                    "protein": 1.1
+                },
+                "image_uris": {
+                    "filename": "7100-extra-bugs-maggots.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 8.0,
+                "emission_density": 0.4608548165772064,
+                "particle_scale": 0.1,
+                "rotation": 68.0
+            }
         }
     },
     "instructions": {
         "sauce_count": 1.0,
         "cheese_count": 1.0,
         "topping_count": 8.0,
-        "special_count": 2.0,
+        "extras_count": 2.0,
         "baking_temp_in_celsius": 190,
         "baking_time_in_minutes": 20
     }

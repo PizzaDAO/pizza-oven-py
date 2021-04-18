@@ -5,7 +5,7 @@ import json
 import natron_config as config
 
 
-class NatronBase:
+class NatronBase(object):
     """Base class for toggling natron nodes"""
 
     ON = 1
@@ -25,20 +25,26 @@ class NatronBase:
         self.setTransform(self.translate, self.scale, self.rotate)
         self.setOutput()
 
-    def enable(self):
-        node = self.natron.getNode("Switch_%s" % self.unique_id)
+    def enable(self, switch_id=None):
+        if switch_id is None:
+            switch_id = self.unique_id
+
+        node = self.natron.getNode("Switch_%s" % switch_id)
         if node is None:
-            print("enable: could not find node")
+            print("enable: could not find node: Switch_%s" % switch_id)
             return
         param = node.getParam("which")
         if param is not None:
             param.setValue(self.ON)
         del param
 
-    def disable(self):
-        node = self.natron.getNode("Switch_%s" % self.unique_id)
+    def disable(self, switch_id=None):
+        if switch_id is None:
+            switch_id = self.unique_id
+
+        node = self.natron.getNode("Switch_%s" % switch_id)
         if node is None:
-            print("disable: could not find node")
+            print("disable: could not find node: Switch_%s" % switch_id)
             return
         param = node.getParam("which")
         if param is not None:
@@ -50,7 +56,7 @@ class NatronBase:
     ):
         node = self.natron.getNode("TRS_%s" % self.unique_id)
         if node is None:
-            print("setTransform: could not find node")
+            print("setTransform: could not find node: TRS_%s" % self.unique_id)
             return
 
         if translate is not None:
@@ -75,7 +81,7 @@ class NatronBase:
         print("setOutput: " + config.paths["output"] + self.out_file % self.index)
         node = self.natron.getNode("w1")
         if node is None:
-            print("setOutput: could not find node")
+            print("setOutput: could not find node: w1")
             return
         param = node.getParam("filename")
         if param is not None:
@@ -112,6 +118,9 @@ class NatronBase:
     def _load_image(self, filename):
         print("loading: " + config.paths["database"] + filename)
         node = self.natron.getNode("i1")
+        if node is None:
+            print("_load_image: could not find node: i1")
+            return
         param = node.getParam("filename")
         if param is not None:
             param.setValue(config.paths["database"] + filename)

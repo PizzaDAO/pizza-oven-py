@@ -8,23 +8,46 @@ from app.models.recipe import Recipe
 from app.models.prep import KitchenOrder
 from app.models.pizza import HotPizza, RarePizzaMetadata
 from app.core.metadata import to_blockchain_metadata
+from app.core.repository import get_metadata, set_metadata
 from ..tags import METADATA
 
 router = APIRouter()
 
 
 class RarePizzaMetadataRequest(Base):
-    """a made pizza response"""
+    """a request for blockchain metadata made from constituent parts"""
 
     recipe: Recipe
     order: KitchenOrder
     pizza: HotPizza
 
 
-@router.post("/{job_id}", response_model=RarePizzaMetadata, tags=[METADATA])
-def get_metadata(job_id: str, request: RarePizzaMetadataRequest = Body(...)) -> Any:
+class RarePizzaMetadataResponse(Base):
+    """metadata response for the blockchain"""
+
+    ipfs_hash: str
+    metadata: RarePizzaMetadata
+
+
+@router.get("/{ipfs_hash}", response_model=RarePizzaMetadataResponse, tags=[METADATA])
+def get_blockchain_metadata(ipfs_hash: str) -> Any:
     """
-    get the metadata of a specific pizza
+    get the metadata for the specific pizza
+    """
+
+    metadata = get_metadata(ipfs_hash)
+    data = RarePizzaMetadataResponse(ipfs_hash=ipfs_hash, metadata=metadata)
+
+    json = jsonable_encoder(data)
+    return JSONResponse(content=json)
+
+
+@router.post("/{job_id}", response_model=RarePizzaMetadataResponse, tags=[METADATA])
+def set_blockchain_metadata(
+    job_id: str, request: RarePizzaMetadataRequest = Body(...)
+) -> Any:
+    """
+    set the metadata for the specific pizza
     """
 
     # TODO: get data from ipfs or the database or something
@@ -33,5 +56,9 @@ def get_metadata(job_id: str, request: RarePizzaMetadataRequest = Body(...)) -> 
         job_id, request.recipe, request.order, request.pizza
     )
 
-    json = jsonable_encoder(metadata)
+    ipfs_hash = set_metadata(metadata)
+
+    data = RarePizzaMetadataResponse(ipfs_hash=ipfs_hash, metadata=metadata)
+
+    json = jsonable_encoder(data)
     return JSONResponse(content=json)
