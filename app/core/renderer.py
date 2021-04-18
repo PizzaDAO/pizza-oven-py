@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import Dict, Optional
 import os
 import subprocess
@@ -10,12 +9,11 @@ import json
 from app.models.recipe import Classification
 from app.models.prep import KitchenOrder, MadeIngredient
 from app.models.pizza import HotPizza
+from app.core.config import Settings
 
-DEFAULT_FRAME = 9
-DEFAULT_EXECUTABLE_PATH = os.environ["NATRON_PATH"]
-DEFAULT_PROJECT_PATH = os.environ["NATRON_PROJECT_PATH"]
 
 current = os.path.dirname(os.path.realpath(__file__))
+settings = Settings()
 
 
 class BoxRenderer:
@@ -118,8 +116,8 @@ class CheeseRenderer:
 class Renderer:
     """render the kitchen order"""
 
-    natron_path: str = field(default=DEFAULT_EXECUTABLE_PATH)
-    project_path: str = field(default=DEFAULT_PROJECT_PATH)
+    natron_path: str = field(default=settings.DEFAULT_NATRON_EXECUTABLE_PATH)
+    project_path: str = field(default=settings.DEFAULT_NATRON_PROJECT_PATH)
     frame: str = field(default=0)
 
     rendered_files: Dict[str, str] = field(default_factory=lambda: {})
@@ -136,8 +134,8 @@ class Renderer:
 
         file_path = os.path.join(cache_dir, f"{ingredient.ingredient.unique_id}.json")
 
-        with open(file_path, "w") as json_file:
-            json_file.write(ingredient.json())
+        with open(file_path, "w") as ingredient_file:
+            ingredient_file.write(ingredient.json())
 
         return file_path
 
@@ -166,7 +164,7 @@ class Renderer:
             assets={
                 "BLOB": "the binary representation of the pizza",
                 "IMAGE_PATH": "../some/path/to/natron/output.png",
-                "IPFS_ID": "QmZ4q72eVU3bX95GXwMXLrguybKLKavmStLWEWVJZ1jeyz",
+                "IPFS_HASH": "filled_in_by_calling_set_metadata",
             },
         )
 
@@ -217,7 +215,7 @@ if __name__ == "__main__":
         "-f",
         "--frame",
         metavar="<fame>",
-        default=DEFAULT_FRAME,
+        default=settings.DEFAULT_NATRON_FRAME,
         type=int,
         help="The frame to render",
     )
@@ -226,7 +224,7 @@ if __name__ == "__main__":
         "-n",
         "--natron-path",
         metavar="<natron>",
-        default=DEFAULT_EXECUTABLE_PATH,
+        default=settings.DEFAULT_NATRON_EXECUTABLE_PATH,
         type=str,
         help="The folder where NatronRenderer exists",
     )
@@ -235,7 +233,7 @@ if __name__ == "__main__":
         "-p",
         "--project-path",
         metavar="<project>",
-        default=DEFAULT_PROJECT_PATH,
+        default=settings.DEFAULT_NATRON_PROJECT_PATH,
         type=str,
         help="The folder where project files exist",
     )
@@ -244,7 +242,6 @@ if __name__ == "__main__":
         "-r",
         "--recipe-path",
         metavar="<project>",
-        default=DEFAULT_PROJECT_PATH,
         type=str,
         help="The absolute path to a recipe file. ignored if kitchen order is specified",
     )
@@ -253,7 +250,6 @@ if __name__ == "__main__":
         "-k",
         "--kitchen-order-path",
         metavar="<project>",
-        default=DEFAULT_PROJECT_PATH,
         type=str,
         help="The absolute path to a kitchen order",
     )
