@@ -156,8 +156,8 @@ Extras&lt;/font&gt;</Value>
 			<CacheID>Toppings_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>i1</Plugin_label>
-			<Plugin_script_name>i1</Plugin_script_name>
+			<Plugin_label>input_default</Plugin_label>
+			<Plugin_script_name>input_default</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -471,7 +471,7 @@ Extras&lt;/font&gt;</Value>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>57</KnobsAge>
+			<KnobsAge>65</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -637,7 +637,7 @@ Extras&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618722461</Value>
+						<Value>1618778353</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -4944,10 +4944,10 @@ ret=time.time()</Expression>
 						<Name>outputComponents</Name>
 						<Type>Choice</Type>
 						<Dimension>1</Dimension>
-						<Secret>0</Secret>
+						<Secret>1</Secret>
 						<MasterIsAlias>0</MasterIsAlias>
 						<item>
-							<Enabled>1</Enabled>
+							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
 							<Value>2</Value>
 							<Default>0</Default>
@@ -6126,7 +6126,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>Switch_1</second>
+					<second>Switch_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -6157,7 +6157,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first></first>
-					<second>Switch_2</second>
+					<second>Switch_7100</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -6575,7 +6575,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Transform1</second>
+					<second>TRS_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>2</KnobsAge>
@@ -6668,8 +6668,8 @@ ret=time.time()</Expression>
 			<CacheID>Premult6_2_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Switch_1</Plugin_label>
-			<Plugin_script_name>Switch_1</Plugin_script_name>
+			<Plugin_label>Switch_default</Plugin_label>
+			<Plugin_script_name>Switch_default</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -7249,7 +7249,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>i1</second>
+					<second>input_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>247</KnobsAge>
@@ -8670,8 +8670,8 @@ ret=time.time()</Expression>
 			<CacheID>Merge4</CacheID>
 		</item>
 		<item>
-			<Plugin_label>TRS_1</Plugin_label>
-			<Plugin_script_name>Transform1</Plugin_script_name>
+			<Plugin_label>TRS_default</Plugin_label>
+			<Plugin_script_name>TRS_default</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -8755,7 +8755,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge1</second>
+					<second>input_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -8844,8 +8844,8 @@ ret=time.time()</Expression>
 			<CacheID>Toppings_2_3</CacheID>
 		</item>
 		<item>
-			<Plugin_label>i2</Plugin_label>
-			<Plugin_script_name>i2</Plugin_script_name>
+			<Plugin_label>input _7100</Plugin_label>
+			<Plugin_script_name>input__7100</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -8882,7 +8882,7 @@ ret=time.time()</Expression>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(7000-topping-candy-snaprocks.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(7100-extra-bugs-maggots.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -8920,7 +8920,7 @@ ret=time.time()</Expression>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/ingredients-db/7000-topping-candy-snaprocks.png</Value>
+					<Value>/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/ingredients-db/7100-extra-bugs-maggots.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -9159,7 +9159,7 @@ ret=time.time()</Expression>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>60</KnobsAge>
+			<KnobsAge>62</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -9325,7 +9325,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618722604</Value>
+						<Value>1618778359</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -14329,7 +14329,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>GMIC_Textured_Glass1_2_3_2</second>
+					<second>Melt_7100</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>12</KnobsAge>
@@ -14604,7 +14604,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>TRS_2</second>
+					<second>TRS_7100</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>3</KnobsAge>
@@ -14697,8 +14697,8 @@ ret=time.time()</Expression>
 			<CacheID>Premult6_2_2_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Switch_2</Plugin_label>
-			<Plugin_script_name>Switch_2</Plugin_script_name>
+			<Plugin_label>Switch_7100</Plugin_label>
+			<Plugin_script_name>Switch_7100</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -14842,8 +14842,8 @@ ret=time.time()</Expression>
 			<CacheID>Unpremult1_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Melt_2</Plugin_label>
-			<Plugin_script_name>GMIC_Textured_Glass1_2_3_2</Plugin_script_name>
+			<Plugin_label>Melt_7100</Plugin_label>
+			<Plugin_script_name>Melt_7100</Plugin_script_name>
 			<Plugin_id>eu.gmic.TexturedGlass</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -15074,7 +15074,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>i2</second>
+					<second>input__7100</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>248</KnobsAge>
@@ -15095,8 +15095,8 @@ ret=time.time()</Expression>
 			<CacheID>GMIC_Textured_Glass1_2_3_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>TRS_2</Plugin_label>
-			<Plugin_script_name>TRS_2</Plugin_script_name>
+			<Plugin_label>TRS_7100</Plugin_label>
+			<Plugin_script_name>TRS_7100</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -15289,7 +15289,7 @@ ret=time.time()</Expression>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Apr 17 23:27:41 2021</Value>
+			<Value>Sun Apr 18 13:41:38 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -15421,9 +15421,9 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>i1</Name>
-			<X_position>2.11820580991994439e+03</X_position>
-			<Y_position>5.12164088228522087e+03</Y_position>
+			<Name>input_default</Name>
+			<X_position>2.11820580991994393e+03</X_position>
+			<Y_position>5.11485213911878600e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -16149,7 +16149,7 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Switch_1</Name>
+			<Name>Switch_default</Name>
 			<X_position>2.13205655577517246e+03</X_position>
 			<Y_position>7.03511018797917768e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -16303,7 +16303,7 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Transform1</Name>
+			<Name>TRS_default</Name>
 			<X_position>2.13253318758574505e+03</X_position>
 			<Y_position>6.64741173163156782e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -16345,7 +16345,7 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>i2</Name>
+			<Name>input__7100</Name>
 			<X_position>3.03839943040030994e+03</X_position>
 			<Y_position>5.12268240897986561e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
@@ -16478,7 +16478,7 @@ ret=time.time()</Expression>
 					<b>3.900053501e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16487,12 +16487,12 @@ ret=time.time()</Expression>
 					<X_position>7.59000000000000000e+02</X_position>
 					<Y_position>1.67000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
+					<r>6.999923587e-01</r>
 					<g>3.000076413e-01</g>
 					<b>1.000076309e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16506,7 +16506,7 @@ ret=time.time()</Expression>
 					<b>7.759975791e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16520,7 +16520,7 @@ ret=time.time()</Expression>
 					<b>1.000000000e+00</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16529,12 +16529,12 @@ ret=time.time()</Expression>
 					<X_position>5.84000000000000000e+02</X_position>
 					<Y_position>8.70000000000000000e+01</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.000076413e-01</r>
-					<g>5.000076294e-01</g>
+					<r>3.098039329e-01</r>
+					<g>5.215686560e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>8.00000000000000000e+01</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16543,12 +16543,12 @@ ret=time.time()</Expression>
 					<X_position>7.59000000000000000e+02</X_position>
 					<Y_position>-1.12000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.000076413e-01</r>
-					<g>5.000076294e-01</g>
+					<r>3.098039329e-01</r>
+					<g>5.215686560e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16557,12 +16557,12 @@ ret=time.time()</Expression>
 					<X_position>1.00000000000000000e+03</X_position>
 					<Y_position>4.97000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16576,7 +16576,7 @@ ret=time.time()</Expression>
 					<b>3.000076413e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16590,7 +16590,7 @@ ret=time.time()</Expression>
 					<b>7.759975791e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>5.60000000000000000e+01</Height>
+					<Height>4.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16771,8 +16771,8 @@ ret=time.time()</Expression>
 					<g>5.000076294e-01</g>
 					<b>3.000076413e-01</b>
 					<Selected>0</Selected>
-					<Width>8.00000000000000000e+01</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Width>1.04000000000000000e+02</Width>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16786,7 +16786,7 @@ ret=time.time()</Expression>
 					<b>1.000000000e+00</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16800,7 +16800,7 @@ ret=time.time()</Expression>
 					<b>3.000076413e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16814,7 +16814,7 @@ ret=time.time()</Expression>
 					<b>3.900053501e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16823,9 +16823,9 @@ ret=time.time()</Expression>
 					<X_position>7.21000000000000000e+02</X_position>
 					<Y_position>1.14000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.50000000000000000e+01</Width>
 					<Height>1.50000000000000000e+01</Height>
@@ -16837,12 +16837,12 @@ ret=time.time()</Expression>
 					<X_position>6.76000000000000000e+02</X_position>
 					<Y_position>5.00000000000000000e+01</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.000076413e-01</r>
-					<g>5.000076294e-01</g>
+					<r>3.098039329e-01</r>
+					<g>5.215686560e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16851,12 +16851,12 @@ ret=time.time()</Expression>
 					<X_position>6.76000000000000000e+02</X_position>
 					<Y_position>4.30000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16865,12 +16865,12 @@ ret=time.time()</Expression>
 					<X_position>1.08400000000000000e+03</X_position>
 					<Y_position>3.49000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.000076413e-01</r>
-					<g>5.000076294e-01</g>
+					<r>3.098039329e-01</r>
+					<g>5.215686560e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16898,7 +16898,7 @@ ret=time.time()</Expression>
 					<b>7.759975791e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16907,12 +16907,12 @@ ret=time.time()</Expression>
 					<X_position>8.96000000000000000e+02</X_position>
 					<Y_position>5.10000000000000000e+01</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.000076413e-01</r>
-					<g>5.000076294e-01</g>
+					<r>3.098039329e-01</r>
+					<g>5.215686560e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>3.40000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -16975,7 +16975,7 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Switch_2</Name>
+			<Name>Switch_7100</Name>
 			<X_position>3.05515706441205066e+03</X_position>
 			<Y_position>7.07087939221962370e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -17003,7 +17003,7 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>GMIC_Textured_Glass1_2_3_2</Name>
+			<Name>Melt_7100</Name>
 			<X_position>3.06239943040030948e+03</X_position>
 			<Y_position>5.64254843833761697e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -17017,7 +17017,7 @@ ret=time.time()</Expression>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>TRS_2</Name>
+			<Name>TRS_7100</Name>
 			<X_position>3.05272680806611243e+03</X_position>
 			<Y_position>6.64845325832621256e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -17036,11 +17036,11 @@ ret=time.time()</Expression>
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1711 404</Sizes>
+				<Sizes>1069 575</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>485 484</Sizes>
+					<Sizes>486 485</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -17080,10 +17080,10 @@ ret=time.time()</Expression>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2515</x>
-			<y>62</y>
-			<w>2151</w>
-			<h>972</h>
+			<x>-4479</x>
+			<y>158</y>
+			<w>1680</w>
+			<h>974</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -17092,9 +17092,9 @@ ret=time.time()</Expression>
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-4.99142501832136440e+03</zoomLeft>
-				<zoomBottom>2.49780877173781164e+01</zoomBottom>
-				<zoomFactor>1.46466786071229232e-01</zoomFactor>
+				<zoomLeft>-4.53281243940359946e+03</zoomLeft>
+				<zoomBottom>-3.78783233285301549e+02</zoomBottom>
+				<zoomFactor>1.01725260416666713e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -17140,16 +17140,16 @@ ret=time.time()</Expression>
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
-		<item>i2</item>
-		<item>i1</item>
-		<item>GMIC_Textured_Glass1_2_3_2</item>
+		<item>input_default</item>
+		<item>TRS_default</item>
+		<item>TRS_7100</item>
+		<item>Melt_7100</item>
+		<item>Switch_7100</item>
+		<item>input__7100</item>
+		<item>Switch_default</item>
 		<item>GMIC_Textured_Glass1_2_3</item>
 		<item>Melt_1</item>
 		<item>Melt_2</item>
-		<item>Crop_2</item>
-		<item>Crop__1</item>
-		<item>TRS_2</item>
-		<item>Switch_2</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
