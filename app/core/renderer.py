@@ -113,6 +113,23 @@ class CheeseRenderer:
             ]
         )
 
+class ExtraRenderer:
+    """Render cheeses"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, data_path, frame):
+        os.environ["EXTRA_DATA_PATH"] = data_path
+        subprocess.check_call(
+            [
+                f"{executable_path}/NatronRenderer",
+                "-l",
+                f"{current}/natron/extra.py",
+                f"{project_path}/extra.ntp",
+                f"{frame}",
+            ]
+        )
 
 @dataclass
 class Renderer:
@@ -147,14 +164,20 @@ class Renderer:
         for (key, ingredient) in order.base_ingredients.items():
             result = self.render_ingredient(ingredient)
             if not result:
-                print(f"error rendering {ingredient.ingredient.name}")
+                print(f"error rendering base {ingredient.ingredient.name}")
                 break
 
         for (key, ingredient) in order.toppings.items():
             result = self.render_ingredient(ingredient)
             if not result:
-                print(f"error rendering {ingredient.ingredient.name}")
+                print(f"error rendering toppings {ingredient.ingredient.name}")
                 break
+ 
+ #       for (key, ingredient) in order.special.items():
+ #           result = self.render_ingredient(ingredient)
+ #           if not result:
+ #               print(f"error rendering special {ingredient.ingredient.name}")
+ #               break
 
         # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
@@ -199,8 +222,11 @@ class Renderer:
             )
         if ingredient.ingredient.classification == Classification.topping:
             pass
+
         if ingredient.ingredient.classification == Classification.special:
-            pass
+            ExtraRenderer().render(
+                self.natron_path, self.project_path, data_path, self.frame
+            )
 
         return True
 

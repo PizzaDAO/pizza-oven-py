@@ -81,7 +81,7 @@ class NatronBase:
         if param is not None:
             param.setValue(config.paths["output"] + self.out_file % self.index)
         del param
-
+ 
     def burn(self):
         pass
 
