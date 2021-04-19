@@ -138,13 +138,13 @@ class ToppingsRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
-        os.environ["TOPPINGS_DATA_PATH"] = data_path
+        os.environ["TOPPING_DATA_PATH"] = data_path
         subprocess.check_call(
             [
                 f"{executable_path}/NatronRenderer",
                 "-l",
-                f"{current}/natron/toppings.py",
-                f"{project_path}/toppings.ntp",
+                f"{current}/natron/topping.py",
+                f"{project_path}/topping.ntp",
                 f"{frame}",
             ]
         )
@@ -157,13 +157,13 @@ class ExtrasRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
-        os.environ["EXTRAS_DATA_PATH"] = data_path
+        os.environ["EXTRA_DATA_PATH"] = data_path
         subprocess.check_call(
             [
                 f"{executable_path}/NatronRenderer",
                 "-l",
-                f"{current}/natron/extras.py",
-                f"{project_path}/extras.ntp",
+                f"{current}/natron/extra.py",
+                f"{project_path}/extra.ntp",
                 f"{frame}",
             ]
         )
