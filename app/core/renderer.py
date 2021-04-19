@@ -131,7 +131,7 @@ class ExtraRenderer:
         )
 
 
-class ToppingsRenderer:
+class ToppingRenderer:
     """Render toppings"""
 
     def __init__(self):
@@ -150,7 +150,7 @@ class ToppingsRenderer:
         )
 
 
-class ExtrasRenderer:
+class ExtraRenderer:
     """Render extras"""
 
     def __init__(self):
@@ -259,11 +259,11 @@ class Renderer:
                 self.natron_path, self.project_path, data_path, self.frame
             )
         if ingredient.ingredient.classification == Classification.topping:
-            ToppingsRenderer().render(
+            ToppingRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
         if ingredient.ingredient.classification == Classification.extras:
-            ExtrasRenderer().render(
+            ExtraRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
 
