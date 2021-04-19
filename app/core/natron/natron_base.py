@@ -31,6 +31,8 @@ class NatronBase(object):
 
         node = self.natron.getNode("Switch_%s" % switch_id)
         if node is None:
+            node = self.natron.getNode("Switch_default")
+        if node is None:
             print("enable: could not find node: Switch_%s" % switch_id)
             return
         param = node.getParam("which")
@@ -44,6 +46,8 @@ class NatronBase(object):
 
         node = self.natron.getNode("Switch_%s" % switch_id)
         if node is None:
+            node = self.natron.getNode("Switch_default")
+        if node is None:
             print("disable: could not find node: Switch_%s" % switch_id)
             return
         param = node.getParam("which")
@@ -55,6 +59,8 @@ class NatronBase(object):
         self, translate=DONT_TRANSLATE, scale=DONT_SCALE, rotate=DONT_ROTATE
     ):
         node = self.natron.getNode("TRS_%s" % self.unique_id)
+        if node is None:
+            node = self.natron.getNode("TRS_default")
         if node is None:
             print("setTransform: could not find node: TRS_%s" % self.unique_id)
             return
@@ -79,6 +85,7 @@ class NatronBase(object):
 
     def setOutput(self):
         print("setOutput: " + config.paths["output"] + self.out_file % self.index)
+
         node = self.natron.getNode("w1")
         if node is None:
             print("setOutput: could not find node: w1")
@@ -87,7 +94,7 @@ class NatronBase(object):
         if param is not None:
             param.setValue(config.paths["output"] + self.out_file % self.index)
         del param
- 
+
     def burn(self):
         pass
 
@@ -117,7 +124,11 @@ class NatronBase(object):
 
     def _load_image(self, filename):
         print("loading: " + config.paths["database"] + filename)
-        node = self.natron.getNode("i1")
+        node = self.natron.getNode("input_%s" % self.unique_id)
+        if node is None:
+            node = self.natron.getNode("input_default")
+        if node is None:
+            node = self.natron.getNode("i1")
         if node is None:
             print("_load_image: could not find node: i1")
             return
