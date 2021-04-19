@@ -5,15 +5,15 @@
     "recipe_id": 1,
     "base_ingredients": {
     },
-    "toppings": {
-        "special": {
+    "layers": {
+        "extras-1": {
             "ingredient": {
-                "unique_id": "7000",
+                "unique_id": "7100",
                 "index": 1,
-                "name": "Snap Rocks",
+                "name": "Maggots",
                 "rarity_level": 1,
                 "classification": 7,
-                "category": "special",
+                "category": "bugs",
                 "attributes": {
                     "state": "fresh"
                 },
@@ -28,41 +28,8 @@
                     "protein": 1.1
                 },
                 "image_uris": {
-                    "filename": "7000-topping-candy-snaprocks",
-                    "output_mask": "rarepizza-#####-extra-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 8.0,
-                "emission_density": 0.4608548165772064,
-                "particle_scale": 0.1,
-                "rotation": 68.0
-            }
-        },
-        "special-1": {
-            "ingredient": {
-                "unique_id": "7001",
-                "index": 1,
-                "name": "Snap Rocks",
-                "rarity_level": 1,
-                "classification": 7,
-                "category": "special",
-                "attributes": {
-                    "state": "fresh"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 22.1,
-                    "fat": 0.2,
-                    "cholesterol": 0.0,
-                    "sodium": 6.2,
-                    "potassium": 291.5,
-                    "carbohydrates": 4.8,
-                    "protein": 1.1
-                },
-                "image_uris": {
-                    "filename": "7001-topping-candy-snaprocks",
-                    "output_mask": "rarepizza-#####-extra-%s.png"
+                    "filename": "7100-extra-bugs-maggots.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
                 }
             },
             "prep": {
@@ -72,13 +39,12 @@
                 "rotation": 68.0
             }
         }
-
     },
     "instructions": {
         "sauce_count": 1.0,
         "cheese_count": 1.0,
         "topping_count": 8.0,
-        "special_count": 2.0,
+        "extras_count": 2.0,
         "baking_temp_in_celsius": 190,
         "baking_time_in_minutes": 20
     }
