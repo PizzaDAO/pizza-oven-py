@@ -8,7 +8,7 @@
     "layers": {
         "extras-1": {
             "ingredient": {
-                "unique_id": "7100",
+                "unique_id": "6900",
                 "index": 1,
                 "name": "Maggots",
                 "rarity_level": 1,
@@ -28,7 +28,40 @@
                     "protein": 1.1
                 },
                 "image_uris": {
-                    "filename": "7100-extra-bugs-maggots.png",
+                    "filename": "6900-topping-crypto-swoledoge.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1,
+                "emission_density": 1,
+                "particle_scale": 1,
+                "rotation": 68.0
+            }
+        },
+        "extras-2": {
+            "ingredient": {
+                "unique_id": "7100",
+                "index": 2,
+                "name": "Doge",
+                "rarity_level": 1,
+                "classification": 7,
+                "category": "meat",
+                "attributes": {
+                    "state": "fresh"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 22.1,
+                    "fat": 0.2,
+                    "cholesterol": 0.0,
+                    "sodium": 6.2,
+                    "potassium": 291.5,
+                    "carbohydrates": 4.8,
+                    "protein": 1.1
+                },
+                "image_uris": {
+                    "filename": "7100-extra-bugs-maggots",
                     "output_mask": "rarepizza-#####-topping-%s.png"
                 }
             },
@@ -39,7 +72,7 @@
                 "rotation": 68.0
             }
         }
-    },
+   },
     "instructions": {
         "sauce_count": 1.0,
         "cheese_count": 1.0,
