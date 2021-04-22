@@ -4,14 +4,14 @@
 <Background_project>0</Background_project>
 <Project class_id="0" tracking_level="0" version="6">
 	<VersionMajor>2</VersionMajor>
-	<VersionMinor>3</VersionMinor>
-	<VersionRev>15</VersionRev>
-	<GitBranch>tags/v2.3.15</GitBranch>
-	<GitCommit>513a2491008c152417ae913f8d1ab83e432aa7e3</GitCommit>
+	<VersionMinor>4</VersionMinor>
+	<VersionRev>0</VersionRev>
+	<GitBranch>tags/v2.4.0</GitBranch>
+	<GitCommit>d3cfd7dcf2cf66cf38b7a9a8709c316adc4de9f0</GitCommit>
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>42</NodesCount>
+		<NodesCount>41</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Topping_0_2</Plugin_label>
 			<Plugin_script_name>Topping_0_2</Plugin_script_name>
@@ -639,7 +639,7 @@
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618778353</Value>
+						<Value>1618995577</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -1786,9 +1786,10 @@ ret=time.time()</Expression>
 							<Value>1</Value>
 							<Default>0</Default>
 							<HasMaster>1</HasMaster>
-							<Master class_id="10" tracking_level="0" version="2">
+							<Master class_id="10" tracking_level="0" version="3">
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowCFS</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2072,6 +2073,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2087,6 +2089,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2102,6 +2105,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2117,6 +2121,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>3</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2330,6 +2335,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2345,6 +2351,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2360,6 +2367,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2511,6 +2519,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2526,6 +2535,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2692,6 +2702,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOnly</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4422,6 +4433,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>filter</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4464,6 +4476,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>size</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4703,6 +4716,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessR</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4726,6 +4740,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessG</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4749,6 +4764,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessB</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4772,6 +4788,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessA</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4838,6 +4855,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>cropToFormat</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4861,6 +4879,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1mix</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -5276,6 +5295,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Merge1maskInvert</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -6049,7 +6069,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
@@ -6066,6 +6086,23 @@ ret=time.time()</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hidpi</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -6527,7 +6564,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
@@ -6544,6 +6581,23 @@ ret=time.time()</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hidpi</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -6672,7 +6726,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
+			<KnobsCount>2</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -6695,24 +6749,6 @@ ret=time.time()</Expression>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p0_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
 				<Name>p1_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
@@ -6731,12 +6767,8 @@ ret=time.time()</Expression>
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>2</count>
+				<count>1</count>
 				<item_version>0</item_version>
-				<item>
-					<first>0</first>
-					<second>Text1</second>
-				</item>
 				<item>
 					<first>1</first>
 					<second>Premult6_2_2</second>
@@ -7043,7 +7075,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>12</KnobsCount>
+			<KnobsCount>11</KnobsCount>
 			<item>
 				<Name>XAmplitude</Name>
 				<Type>Double</Type>
@@ -7053,7 +7085,7 @@ ret=time.time()</Expression>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.30000000000000000e+01</Value>
+					<Value>1.52000000000000000e+02</Value>
 					<Default>4.00000000000000000e+01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -7070,7 +7102,7 @@ ret=time.time()</Expression>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>8.20000000000000000e+01</Value>
+					<Value>1.47000000000000000e+02</Value>
 					<Default>4.00000000000000000e+01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -7246,23 +7278,6 @@ ret=time.time()</Expression>
 				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
-			<item>
-				<Name>disableNode</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
 			<Inputs_map>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7271,7 +7286,7 @@ ret=time.time()</Expression>
 					<second>input_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>247</KnobsAge>
+			<KnobsAge>260</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -8052,33 +8067,6 @@ ret=time.time()</Expression>
 			<CacheID>Transform1</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Viewer1</Plugin_label>
-			<Plugin_script_name>Viewer1</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>0</KnobsCount>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>0</PagesCount>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Viewer1</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Toppings_2</Plugin_label>
 			<Plugin_script_name>Toppings_2_3</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.BackDrop</Plugin_id>
@@ -8631,7 +8619,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618840456</Value>
+						<Value>1618995577</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -9781,6 +9769,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowCFS</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10064,6 +10053,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10079,6 +10069,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10094,6 +10085,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10109,6 +10101,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>3</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10322,6 +10315,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10337,6 +10331,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10352,6 +10347,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10486,6 +10482,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10501,6 +10498,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10667,6 +10665,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOnly</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12397,6 +12396,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>filter</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12439,6 +12439,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>size</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12678,6 +12679,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessR</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12701,6 +12703,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessG</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12724,6 +12727,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessB</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12747,6 +12751,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessA</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12764,12 +12769,13 @@ ret=time.time()</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>8.00000000000000000e+00</Value>
+							<Value>2.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeDetect1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeDetect1</MasterNodeNameFull>
 								<MasterKnobName>blurSize</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12781,13 +12787,7 @@ ret=time.time()</Expression>
 							<HasAnimation>0</HasAnimation>
 							<Value>8.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
-							<HasMaster>1</HasMaster>
-							<Master>
-								<MasterDimension>0</MasterDimension>
-								<MasterNodeName>EdgeDetect1</MasterNodeName>
-								<MasterKnobName>blurSize</MasterKnobName>
-								<MasterTrackName></MasterTrackName>
-							</Master>
+							<HasMaster>0</HasMaster>
 							<Expression></Expression>
 							<ExprHasRet>0</ExprHasRet>
 						</item>
@@ -12825,6 +12825,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>cropToFormat</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12848,6 +12849,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1mix</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -13209,6 +13211,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Merge1maskInvert</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -13865,7 +13868,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
@@ -13882,6 +13885,23 @@ ret=time.time()</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hidpi</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -14010,24 +14030,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>which</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
+			<KnobsCount>2</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -14075,7 +14078,7 @@ ret=time.time()</Expression>
 					<second>Premult6_2_2_2</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>2</KnobsAge>
+			<KnobsAge>3</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -15379,7 +15382,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Text1</second>
+					<second>Switch_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -15397,8 +15400,8 @@ ret=time.time()</Expression>
 			<CacheID>Viewer3</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Text1</Plugin_label>
-			<Plugin_script_name>Text1</Plugin_script_name>
+			<Plugin_label>Text_test</Plugin_label>
+			<Plugin_script_name>Text_test</Plugin_script_name>
 			<Plugin_id>net.fxarena.openfx.Text</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -15865,7 +15868,7 @@ Switch_default = 0</Value>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Apr 19 06:54:32 2021</Value>
+			<Value>Wed Apr 21 02:05:59 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -15964,9 +15967,9 @@ Switch_default = 0</Value>
 	<Timeline_current_time>2</Timeline_current_time>
 	<CreationDate>1613936932294</CreationDate>
 </Project>
-<ProjectGui class_id="20" tracking_level="0" version="11">
+<ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
-		<count>42</count>
+		<count>41</count>
 		<item_version>6</item_version>
 		<item class_id="22" tracking_level="0" version="6">
 			<Name>Topping_0_2</Name>
@@ -16684,8 +16687,8 @@ Switch_default = 0</Value>
 		</item>
 		<item>
 			<Name>Oil_4000</Name>
-			<X_position>9.55196913414781193e+02</X_position>
-			<Y_position>6.27282984502545332e+03</Y_position>
+			<X_position>2.53073248179287566e+03</X_position>
+			<Y_position>7.21871075525423112e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -16837,20 +16840,6 @@ Switch_default = 0</Value>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Viewer1</Name>
-			<X_position>2.24607832756938024e+03</X_position>
-			<Y_position>7.21376323868073450e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>3.00000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Toppings_2_3</Name>
 			<X_position>2.73410472888381810e+03</X_position>
 			<Y_position>4.84974746435472571e+03</Y_position>
@@ -16867,7 +16856,7 @@ Switch_default = 0</Value>
 		<item>
 			<Name>input__7100</Name>
 			<X_position>3.03839943040030994e+03</X_position>
-			<Y_position>5.12268240897986561e+03</Y_position>
+			<Y_position>5.11838465682858532e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -17608,8 +17597,8 @@ Switch_default = 0</Value>
 		</item>
 		<item>
 			<Name>Viewer3</Name>
-			<X_position>1.33793919966719568e+03</X_position>
-			<Y_position>6.91562484444163238e+03</Y_position>
+			<X_position>1.62590461842611967e+03</X_position>
+			<Y_position>6.91994432572301594e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -17621,9 +17610,9 @@ Switch_default = 0</Value>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Text1</Name>
-			<X_position>2.35464083980762189e+03</X_position>
-			<Y_position>7.01725261080065775e+03</Y_position>
+			<Name>Text_test</Name>
+			<X_position>2.34168239596347121e+03</X_position>
+			<Y_position>6.91502488714124138e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.098039329e-01</r>
 			<g>5.215686560e-01</g>
@@ -17636,8 +17625,8 @@ Switch_default = 0</Value>
 		</item>
 		<item>
 			<Name>Constant1</Name>
-			<X_position>2.35464083980762189e+03</X_position>
-			<Y_position>6.91646471423503590e+03</Y_position>
+			<X_position>2.34168239596347121e+03</X_position>
+			<Y_position>6.81423699057561953e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.098039329e-01</r>
 			<g>5.215686560e-01</g>
@@ -17654,21 +17643,20 @@ Switch_default = 0</Value>
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1069 575</Sizes>
+				<Sizes>1288 693</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>486 485</Sizes>
+					<Sizes>504 502</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
 						<Tabs class_id="27" tracking_level="0" version="0">
-							<count>2</count>
+							<count>1</count>
 							<item_version>0</item_version>
-							<item>Viewer1</item>
 							<item>Viewer3</item>
 						</Tabs>
-						<Index>1</Index>
+						<Index>0</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
@@ -17699,66 +17687,23 @@ Switch_default = 0</Value>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-1812</x>
+			<x>-2369</x>
 			<y>23</y>
-			<w>1680</w>
-			<h>974</h>
+			<w>2017</w>
+			<h>1009</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
-		<count>2</count>
+		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="29" tracking_level="0" version="0">
-			<first>Viewer1</first>
+			<first>Viewer3</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-1.79206390747061369e+03</zoomLeft>
-				<zoomBottom>4.24598290398871200e+02</zoomBottom>
+				<zoomLeft>-2.01044976737427442e+03</zoomLeft>
+				<zoomBottom>7.52311617568813062e+02</zoomBottom>
 				<zoomFactor>1.46466786071229343e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
-					<Left>7.68000000000000000e+02</Left>
-					<Bottom>7.68000000000000000e+02</Bottom>
-					<Right>2.30400000000000000e+03</Right>
-					<Top>2.30400000000000000e+03</Top>
-				</UserRoI>
-				<ClippedToProject>1</ClippedToProject>
-				<AutoContrast>0</AutoContrast>
-				<Gain>1.00000000000000000e+00</Gain>
-				<Gain>1.00000000000000000e+00</Gain>
-				<ColorSpace>sRGB</ColorSpace>
-				<Layer>-</Layer>
-				<AlphaLayer>-</AlphaLayer>
-				<Channels>RGB</Channels>
-				<RenderScaleActivated>0</RenderScaleActivated>
-				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
-				<CompositingOP>0</CompositingOP>
-				<LeftBound>1</LeftBound>
-				<RightBound>10000</RightBound>
-				<LeftToolbarVisible>1</LeftToolbarVisible>
-				<RightToolbarVisible>1</RightToolbarVisible>
-				<TopToolbarVisible>1</TopToolbarVisible>
-				<PlayerVisible>1</PlayerVisible>
-				<TimelineVisible>1</TimelineVisible>
-				<InfobarVisible>1</InfobarVisible>
-				<isInputAPaused>0</isInputAPaused>
-				<isInputBPaused>0</isInputBPaused>
-				<CheckerboardEnabled>0</CheckerboardEnabled>
-				<Fps>1.00000000000000000e+00</Fps>
-				<FpsLocked>1</FpsLocked>
-				<aInput>-1</aInput>
-				<bInput>0</bInput>
-				<fullFrame>0</fullFrame>
-			</second>
-		</item>
-		<item>
-			<first>Viewer3</first>
-			<second>
-				<zoomLeft>-4.00163220738389191e+03</zoomLeft>
-				<zoomBottom>-3.62279023328591165e+02</zoomBottom>
-				<zoomFactor>8.47761401947066118e-02</zoomFactor>
-				<UserRoIEnabled>0</UserRoIEnabled>
-				<UserRoI>
 					<Left>7.68000000000000000e+02</Left>
 					<Bottom>7.68000000000000000e+02</Bottom>
 					<Right>2.30400000000000000e+03</Right>
@@ -17800,14 +17745,16 @@ Switch_default = 0</Value>
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>6</count>
+		<count>8</count>
 		<item_version>0</item_version>
-		<item>Text1</item>
-		<item>Constant1</item>
+		<item>Natron_Project_Settings_Panel</item>
+		<item>Switch_7100</item>
 		<item>Switch_default</item>
+		<item>Oil_4000</item>
+		<item>Text_test</item>
+		<item>Constant1</item>
 		<item>Topping_0_2</item>
 		<item>Transform1</item>
-		<item>Switch_7100</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
@@ -17933,6 +17880,14 @@ merge.disconnectInput(2)
 #group.connectInput(0, scatter_head)
 </ScriptEditorInput>
 	<NumPyPanels>0</NumPyPanels>
+	<OpenedPanelsMinimized>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsMinimized>
+	<OpenedPanelsHideUnmodified>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsHideUnmodified>
 </ProjectGui>
 </boost_serialization>
 
