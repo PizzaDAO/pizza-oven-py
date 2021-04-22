@@ -95,6 +95,16 @@ class NatronBase(object):
             param.setValue(config.paths["output"] + self.out_file % self.index)
         del param
 
+    def watermark(self):
+        node = self.natron.getNode("watermark")
+        if node is None:
+            print("setTransform: could not find node: TRS_%s" % self.unique_id)
+            return
+        else:
+            param = node.getParm("text")
+            param.setValue("layer %s" % self.index)
+            return
+
     def burn(self):
         pass
 
