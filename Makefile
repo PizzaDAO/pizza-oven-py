@@ -74,16 +74,20 @@ test:
 
 test-natron:
 	@echo ☢️ Test Natron
-	poetry run python app/core/renderer.py -r $(realpath .)/data/sample_recipe.json -f 9
+	poetry run python app/core/renderer.py -r $(realpath .)/data/sample_recipe.json -f 1
 
-test-natron-order:
+test-natron-all:
 	@echo ☢️ Test Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 9
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 111
 
 test-natron-extra:
 	@echo ☢️ Test Natron Extra
-	poetry run python app/core/renderer.py -k $(realpath .)/data/extra_kitchen_order.json -f 10
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_extra.json -f 111
 
 test-natron-cheese:
 	@echo ☢️ Run Cheese Natron
 	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_cheese.json -f 111
+
+test-natron-mvp:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 99999
