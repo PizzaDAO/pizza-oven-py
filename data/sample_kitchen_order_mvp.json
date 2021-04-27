@@ -1,6 +1,6 @@
 {
     "unique_id": 2356753620,
-    "name": "Simple Cheese Doge Pizza",
+    "name": "Simple MVP Cheese Doge Pizza",
     "random_seed": "52198947997422404454920108833917741998911196589945595445581078565118427695940",
     "recipe_id": 1,
     "base_ingredients": {
@@ -103,7 +103,7 @@
                 "emission_count": 1.0,
                 "emission_density": 1.0,
                 "particle_scale": 1.0,
-                "rotation": 180.0
+                "rotation": 0.0
             }
         }
     },
@@ -144,28 +144,28 @@
         },
         "cheese-3000": {
             "ingredient": {
-                "unique_id": "3000",
+                "unique_id": "3090",
                 "index": 0,
-                "name": "Traditional Mozzarella",
+                "name": "Aged Doge Cheez",
                 "rarity_level": 1,
                 "classification": 5,
                 "category": "traditional",
                 "attributes": {
                     "state": "aged",
-                    "vintage": "2007"
+                    "vintage": "2011"
                 },
                 "nutrition": {
                     "servings": 8.0,
                     "calories": 85.1,
-                    "fat": 6.3,
-                    "cholesterol": 22.4,
+                    "fat": 2006.3,
+                    "cholesterol": 20002.4,
                     "sodium": 117.8,
                     "potassium": 21.5,
                     "carbohydrates": 0.6,
                     "protein": 6.3
                 },
                 "image_uris": {
-                    "filename": "3000-cheese-mozzarella.png",
+                    "filename": "3090-cheese-mozzarella.png",
                     "output_mask": "rarepizza-#####-topping-%s.png"
                 }
             },
@@ -173,41 +173,7 @@
                 "emission_count": 1.0,
                 "emission_density": 1.0,
                 "particle_scale": 1.0,
-                "rotation": 0.0
-            }
-        },
-        "topping-4000": {
-            "ingredient": {
-                "unique_id": "4000",
-                "index": 10,
-                "name": "Pepperoni",
-                "rarity_level": 1,
-                "classification": 6,
-                "category": "meat",
-                "attributes": {
-                    "state": "cured",
-                    "method": "corned"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 138.3,
-                    "fat": 12.2,
-                    "cholesterol": 29.4,
-                    "sodium": 493.1,
-                    "potassium": 78.1,
-                    "carbohydrates": 0.0,
-                    "protein": 6.4
-                },
-                "image_uris": {
-                    "filename": "4000-topping-meat-pepperoni.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 8.0,
-                "emission_density": 0.4608548165772064,
-                "particle_scale": 0.1,
-                "rotation": 68.0
+                "rotation": 180.0
             }
         }
     },

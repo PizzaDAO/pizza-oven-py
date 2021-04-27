@@ -86,7 +86,11 @@ test-natron-extra:
 
 test-natron-cheese:
 	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_cheese.json -f 111
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_cheese.json -f 99999
+
+test-natron-sauce:
+	@echo ☢️ Run Cheese Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_sauce.json -f 99999
 
 test-natron-mvp:
 	@echo ☢️ Run MVP Natron
