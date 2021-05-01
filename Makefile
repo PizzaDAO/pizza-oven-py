@@ -27,6 +27,7 @@ environment:
 	@echo 🔧 Setting Up Environment
 	pip3 install 'poetry==1.1.5'
 	poetry install
+	$(NATRON_PATH)/natron-python -m pip install numpy
 
 # Dev Server
 start:
