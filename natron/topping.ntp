@@ -4,10 +4,10 @@
 <Background_project>0</Background_project>
 <Project class_id="0" tracking_level="0" version="6">
 	<VersionMajor>2</VersionMajor>
-	<VersionMinor>3</VersionMinor>
-	<VersionRev>15</VersionRev>
-	<GitBranch>tags/v2.3.15</GitBranch>
-	<GitCommit>513a2491008c152417ae913f8d1ab83e432aa7e3</GitCommit>
+	<VersionMinor>4</VersionMinor>
+	<VersionRev>0</VersionRev>
+	<GitBranch>tags/v2.4.0</GitBranch>
+	<GitCommit>d3cfd7dcf2cf66cf38b7a9a8709c316adc4de9f0</GitCommit>
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
@@ -638,7 +638,7 @@ Toppings
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618671877</Value>
+						<Value>1619893291</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -1785,9 +1785,10 @@ ret=time.time()</Expression>
 							<Value>1</Value>
 							<Default>0</Default>
 							<HasMaster>1</HasMaster>
-							<Master class_id="10" tracking_level="0" version="2">
+							<Master class_id="10" tracking_level="0" version="3">
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowCFS</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2071,6 +2072,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2086,6 +2088,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2101,6 +2104,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2116,6 +2120,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>3</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2329,6 +2334,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2344,6 +2350,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2359,6 +2366,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2510,6 +2518,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2525,6 +2534,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -2691,6 +2701,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOnly</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4421,6 +4432,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>filter</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4463,6 +4475,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>size</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4702,6 +4715,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessR</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4725,6 +4739,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessG</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4748,6 +4763,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessB</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4771,6 +4787,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1NatronOfxParamProcessA</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4837,6 +4854,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>cropToFormat</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -4860,6 +4878,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Blur1mix</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -5275,6 +5294,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>EdgeBlur1</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.EdgeBlur1</MasterNodeNameFull>
 								<MasterKnobName>Merge1maskInvert</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -6555,7 +6575,7 @@ Index 2 (tweaks)&lt;/font&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618635401</Value>
+						<Value>1619893278</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -7705,6 +7725,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowCFS</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -7988,6 +8009,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8003,6 +8025,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8018,6 +8041,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8033,6 +8057,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>3</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8246,6 +8271,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8261,6 +8287,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8276,6 +8303,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8427,6 +8455,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8442,6 +8471,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -8608,6 +8638,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOnly</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -10544,7 +10575,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618635395</Value>
+						<Value>1619893278</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -11694,6 +11725,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowCFS</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -11977,6 +12009,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -11992,6 +12025,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12007,6 +12041,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12022,6 +12057,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>3</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12235,6 +12271,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12250,6 +12287,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12265,6 +12303,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12416,6 +12455,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12431,6 +12471,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -12597,6 +12638,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOnly</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -14112,7 +14154,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
@@ -14129,6 +14171,23 @@ ret=time.time()</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hidpi</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -14642,6 +14701,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>filter</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -14684,6 +14744,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>size</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -14923,6 +14984,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>Blur1NatronOfxParamProcessR</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -14946,6 +15008,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>Blur1NatronOfxParamProcessG</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -14969,6 +15032,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>Blur1NatronOfxParamProcessB</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -14992,6 +15056,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>Blur1NatronOfxParamProcessA</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -15058,6 +15123,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>cropToFormat</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -15081,6 +15147,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>Blur1mix</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -15496,6 +15563,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>EdgeBlur2_2</MasterNodeName>
+							<MasterNodeNameFull>EdgeBlur2_2</MasterNodeNameFull>
 							<MasterKnobName>Merge1maskInvert</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -16151,7 +16219,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
@@ -16168,6 +16236,23 @@ ret=time.time()</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hidpi</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -16770,7 +16855,7 @@ ret=time.time()</Expression>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
@@ -16787,6 +16872,23 @@ ret=time.time()</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hidpi</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -17563,7 +17665,7 @@ ret=time.time()</Expression>
 					<second>input_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>991</KnobsAge>
+			<KnobsAge>1004</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -17586,7 +17688,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+03</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
@@ -17595,23 +17697,23 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+03</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
 					<UserKnob>1</UserKnob>
-					<Label>p0_translate</Label>
+					<Label>0_translate</Label>
 					<Help></Help>
 					<NewLine>1</NewLine>
 					<Evaluate>1</Evaluate>
 					<Animates>1</Animates>
 					<Persistent>1</Persistent>
-					<Min>-1.79769313486231571e+308</Min>
-					<Max>1.79769313486231571e+308</Max>
-					<DMin>-1.79769313486231571e+308</DMin>
-					<DMax>1.79769313486231571e+308</DMax>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
 					<HasOverlayHandle>0</HasOverlayHandle>
 				</item>
 				<Type>Regular</Type>
@@ -17631,16 +17733,16 @@ ret=time.time()</Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
 					<UserKnob>1</UserKnob>
-					<Label>p0_rotate</Label>
+					<Label>0_rotate</Label>
 					<Help></Help>
 					<NewLine>1</NewLine>
 					<Evaluate>1</Evaluate>
 					<Animates>1</Animates>
 					<Persistent>1</Persistent>
-					<Min>-1.79769313486231571e+308</Min>
-					<Max>1.79769313486231571e+308</Max>
-					<DMin>-1.79769313486231571e+308</DMin>
-					<DMax>1.79769313486231571e+308</DMax>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
 				</item>
 				<Type>Regular</Type>
 				<item>
@@ -17652,7 +17754,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>5.00000000000000000e-01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
@@ -17661,23 +17763,23 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>5.00000000000000000e-01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
 					<UserKnob>1</UserKnob>
-					<Label>p0_scale</Label>
+					<Label>0_scale</Label>
 					<Help></Help>
 					<NewLine>1</NewLine>
 					<Evaluate>1</Evaluate>
 					<Animates>1</Animates>
 					<Persistent>1</Persistent>
-					<Min>-1.79769313486231571e+308</Min>
-					<Max>1.79769313486231571e+308</Max>
-					<DMin>-1.79769313486231571e+308</DMin>
-					<DMax>1.79769313486231571e+308</DMax>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
 					<HasOverlayHandle>0</HasOverlayHandle>
 				</item>
 				<Type>Regular</Type>
@@ -19688,7 +19790,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>-1.90000000000000000e+01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
@@ -20475,12 +20577,13 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+03</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p0_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20490,12 +20593,13 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+03</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p0_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20519,6 +20623,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p0_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20536,12 +20641,13 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>5.00000000000000000e-01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p0_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20551,12 +20657,13 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>5.00000000000000000e-01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p0_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20654,7 +20761,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>49</KnobsAge>
+				<KnobsAge>55</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -20695,6 +20802,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p1_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20710,6 +20818,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p1_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20733,6 +20842,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p1_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20756,6 +20866,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p1_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20771,6 +20882,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p1_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20847,7 +20959,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>49</KnobsAge>
+				<KnobsAge>51</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -20888,6 +21000,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p2_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20903,6 +21016,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p2_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20926,6 +21040,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p2_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20949,6 +21064,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p2_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -20964,6 +21080,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p2_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21061,7 +21178,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>37</KnobsAge>
+				<KnobsAge>39</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -21102,6 +21219,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p3_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21117,6 +21235,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p3_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21140,6 +21259,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p3_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21163,6 +21283,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p3_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21178,6 +21299,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p3_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21254,7 +21376,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>40</KnobsAge>
+				<KnobsAge>42</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -21295,6 +21417,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p4_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21310,6 +21433,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p4_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21333,6 +21457,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p4_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21356,6 +21481,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p4_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21371,6 +21497,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p4_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21447,7 +21574,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>114</KnobsAge>
+				<KnobsAge>116</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -21488,6 +21615,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p5_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21503,6 +21631,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p5_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21526,6 +21655,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p5_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21549,6 +21679,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p5_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21564,6 +21695,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p5_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21640,7 +21772,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>48</KnobsAge>
+				<KnobsAge>50</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -21681,6 +21813,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p6_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21696,6 +21829,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p6_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21719,6 +21853,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p6_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21742,6 +21877,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p6_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21757,6 +21893,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p6_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21833,7 +21970,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>30</KnobsAge>
+				<KnobsAge>32</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -21874,6 +22011,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p7_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21889,6 +22027,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p7_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21912,6 +22051,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p7_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21935,6 +22075,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p7_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -21950,6 +22091,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p7_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22047,7 +22189,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>158</KnobsAge>
+				<KnobsAge>160</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -22088,6 +22230,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p8_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22103,6 +22246,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p8_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22126,6 +22270,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p8_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22149,6 +22294,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p8_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22164,6 +22310,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p8_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22261,7 +22408,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>73</KnobsAge>
+				<KnobsAge>75</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -22302,6 +22449,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p9_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22317,6 +22465,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p9_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22340,6 +22489,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p9_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22363,6 +22513,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p9_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22378,6 +22529,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p9_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22475,7 +22627,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>37</KnobsAge>
+				<KnobsAge>39</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -22516,6 +22668,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p10_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22531,6 +22684,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p10_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22554,6 +22708,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p10_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22577,6 +22732,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p10_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22592,6 +22748,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p10_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22689,7 +22846,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>32</KnobsAge>
+				<KnobsAge>34</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -22730,6 +22887,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p11_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22745,6 +22903,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p11_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22768,6 +22927,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p11_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22791,6 +22951,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p11_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -22806,221 +22967,8 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p11_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>uniform</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>center</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>transformCenterChanged</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>userTextArea</Name>
-					<Type>String</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-						<Default></Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<StringsAnimation>
-						<count>0</count>
-						<item_version>0</item_version>
-					</StringsAnimation>
-					<UserKnob>0</UserKnob>
-				</item>
-				<Inputs_map>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>
-						<first>Source</first>
-						<second>Input1</second>
-					</item>
-				</Inputs_map>
-				<KnobsAge>36</KnobsAge>
-				<MasterNode></MasterNode>
-				<HasRotoContext>0</HasRotoContext>
-				<HasTrackerContext>0</HasTrackerContext>
-				<MultiInstanceParent></MultiInstanceParent>
-				<UserPagesCount>0</UserPagesCount>
-				<PagesCount>3</PagesCount>
-				<name>Controls</name>
-				<name>Node</name>
-				<name>Info</name>
-				<Children>0</Children>
-				<UserComponents>
-					<count>0</count>
-					<item_version>2</item_version>
-				</UserComponents>
-				<CacheID>Group4.Transform12</CacheID>
-			</item>
-			<item>
-				<Plugin_label>Transform13</Plugin_label>
-				<Plugin_script_name>Transform13</Plugin_script_name>
-				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-				<PythonModule></PythonModule>
-				<PythonModuleVersion>0</PythonModuleVersion>
-				<Plugin_major_version>1</Plugin_major_version>
-				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>7</KnobsCount>
-				<item>
-					<Name>translate</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p12_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p12_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>rotate</Name>
-					<Type>Double</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p12_rotate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>scale</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p12_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p12_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
 						<Expression></Expression>
@@ -23132,11 +23080,11 @@ ret=time.time()</Expression>
 					<count>0</count>
 					<item_version>2</item_version>
 				</UserComponents>
-				<CacheID>Group4.Transform13</CacheID>
+				<CacheID>Group4.Transform12</CacheID>
 			</item>
 			<item>
-				<Plugin_label>Transform14</Plugin_label>
-				<Plugin_script_name>Transform14</Plugin_script_name>
+				<Plugin_label>Transform13</Plugin_label>
+				<Plugin_script_name>Transform13</Plugin_script_name>
 				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
 				<PythonModule></PythonModule>
 				<PythonModuleVersion>0</PythonModuleVersion>
@@ -23158,7 +23106,8 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p13_translate</MasterKnobName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p12_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
 						<Expression></Expression>
@@ -23173,7 +23122,8 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p13_translate</MasterKnobName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p12_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
 						<Expression></Expression>
@@ -23196,7 +23146,8 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p13_rotate</MasterKnobName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p12_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
 						<Expression></Expression>
@@ -23219,7 +23170,8 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p13_scale</MasterKnobName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p12_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
 						<Expression></Expression>
@@ -23234,649 +23186,8 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p13_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>uniform</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>center</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>transformCenterChanged</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>userTextArea</Name>
-					<Type>String</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-						<Default></Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<StringsAnimation>
-						<count>0</count>
-						<item_version>0</item_version>
-					</StringsAnimation>
-					<UserKnob>0</UserKnob>
-				</item>
-				<Inputs_map>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>
-						<first>Source</first>
-						<second>Input1</second>
-					</item>
-				</Inputs_map>
-				<KnobsAge>31</KnobsAge>
-				<MasterNode></MasterNode>
-				<HasRotoContext>0</HasRotoContext>
-				<HasTrackerContext>0</HasTrackerContext>
-				<MultiInstanceParent></MultiInstanceParent>
-				<UserPagesCount>0</UserPagesCount>
-				<PagesCount>3</PagesCount>
-				<name>Controls</name>
-				<name>Node</name>
-				<name>Info</name>
-				<Children>0</Children>
-				<UserComponents>
-					<count>0</count>
-					<item_version>2</item_version>
-				</UserComponents>
-				<CacheID>Group4.Transform14</CacheID>
-			</item>
-			<item>
-				<Plugin_label>Transform15</Plugin_label>
-				<Plugin_script_name>Transform15</Plugin_script_name>
-				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-				<PythonModule></PythonModule>
-				<PythonModuleVersion>0</PythonModuleVersion>
-				<Plugin_major_version>1</Plugin_major_version>
-				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>7</KnobsCount>
-				<item>
-					<Name>translate</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p14_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p14_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>rotate</Name>
-					<Type>Double</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p14_rotate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>scale</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p14_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p14_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>uniform</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>center</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>transformCenterChanged</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>userTextArea</Name>
-					<Type>String</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-						<Default></Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<StringsAnimation>
-						<count>0</count>
-						<item_version>0</item_version>
-					</StringsAnimation>
-					<UserKnob>0</UserKnob>
-				</item>
-				<Inputs_map>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>
-						<first>Source</first>
-						<second>Input1</second>
-					</item>
-				</Inputs_map>
-				<KnobsAge>49</KnobsAge>
-				<MasterNode></MasterNode>
-				<HasRotoContext>0</HasRotoContext>
-				<HasTrackerContext>0</HasTrackerContext>
-				<MultiInstanceParent></MultiInstanceParent>
-				<UserPagesCount>0</UserPagesCount>
-				<PagesCount>3</PagesCount>
-				<name>Controls</name>
-				<name>Node</name>
-				<name>Info</name>
-				<Children>0</Children>
-				<UserComponents>
-					<count>0</count>
-					<item_version>2</item_version>
-				</UserComponents>
-				<CacheID>Group4.Transform15</CacheID>
-			</item>
-			<item>
-				<Plugin_label>Transform16</Plugin_label>
-				<Plugin_script_name>Transform16</Plugin_script_name>
-				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-				<PythonModule></PythonModule>
-				<PythonModuleVersion>0</PythonModuleVersion>
-				<Plugin_major_version>1</Plugin_major_version>
-				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>7</KnobsCount>
-				<item>
-					<Name>translate</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p15_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p15_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>rotate</Name>
-					<Type>Double</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p15_rotate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>scale</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p15_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p15_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>uniform</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>center</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>transformCenterChanged</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>userTextArea</Name>
-					<Type>String</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-						<Default></Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<StringsAnimation>
-						<count>0</count>
-						<item_version>0</item_version>
-					</StringsAnimation>
-					<UserKnob>0</UserKnob>
-				</item>
-				<Inputs_map>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>
-						<first>Source</first>
-						<second>Input1</second>
-					</item>
-				</Inputs_map>
-				<KnobsAge>99</KnobsAge>
-				<MasterNode></MasterNode>
-				<HasRotoContext>0</HasRotoContext>
-				<HasTrackerContext>0</HasTrackerContext>
-				<MultiInstanceParent></MultiInstanceParent>
-				<UserPagesCount>0</UserPagesCount>
-				<PagesCount>3</PagesCount>
-				<name>Controls</name>
-				<name>Node</name>
-				<name>Info</name>
-				<Children>0</Children>
-				<UserComponents>
-					<count>0</count>
-					<item_version>2</item_version>
-				</UserComponents>
-				<CacheID>Group4.Transform16</CacheID>
-			</item>
-			<item>
-				<Plugin_label>Transform17</Plugin_label>
-				<Plugin_script_name>Transform17</Plugin_script_name>
-				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-				<PythonModule></PythonModule>
-				<PythonModuleVersion>0</PythonModuleVersion>
-				<Plugin_major_version>1</Plugin_major_version>
-				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>7</KnobsCount>
-				<item>
-					<Name>translate</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p16_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p16_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>rotate</Name>
-					<Type>Double</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p16_rotate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>scale</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p16_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p16_scale</MasterKnobName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p12_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
 						<Expression></Expression>
@@ -23988,6 +23299,882 @@ ret=time.time()</Expression>
 					<count>0</count>
 					<item_version>2</item_version>
 				</UserComponents>
+				<CacheID>Group4.Transform13</CacheID>
+			</item>
+			<item>
+				<Plugin_label>Transform14</Plugin_label>
+				<Plugin_script_name>Transform14</Plugin_script_name>
+				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>7</KnobsCount>
+				<item>
+					<Name>translate</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p13_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p13_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>rotate</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p13_rotate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>scale</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p13_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p13_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>uniform</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>center</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>transformCenterChanged</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>userTextArea</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>0</UserKnob>
+				</item>
+				<Inputs_map>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>
+						<first>Source</first>
+						<second>Input1</second>
+					</item>
+				</Inputs_map>
+				<KnobsAge>33</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>3</PagesCount>
+				<name>Controls</name>
+				<name>Node</name>
+				<name>Info</name>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
+				<CacheID>Group4.Transform14</CacheID>
+			</item>
+			<item>
+				<Plugin_label>Transform15</Plugin_label>
+				<Plugin_script_name>Transform15</Plugin_script_name>
+				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>7</KnobsCount>
+				<item>
+					<Name>translate</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p14_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p14_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>rotate</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p14_rotate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>scale</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p14_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p14_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>uniform</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>center</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>transformCenterChanged</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>userTextArea</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>0</UserKnob>
+				</item>
+				<Inputs_map>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>
+						<first>Source</first>
+						<second>Input1</second>
+					</item>
+				</Inputs_map>
+				<KnobsAge>51</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>3</PagesCount>
+				<name>Controls</name>
+				<name>Node</name>
+				<name>Info</name>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
+				<CacheID>Group4.Transform15</CacheID>
+			</item>
+			<item>
+				<Plugin_label>Transform16</Plugin_label>
+				<Plugin_script_name>Transform16</Plugin_script_name>
+				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>7</KnobsCount>
+				<item>
+					<Name>translate</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p15_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p15_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>rotate</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p15_rotate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>scale</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p15_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p15_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>uniform</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>center</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>transformCenterChanged</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>userTextArea</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>0</UserKnob>
+				</item>
+				<Inputs_map>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>
+						<first>Source</first>
+						<second>Input1</second>
+					</item>
+				</Inputs_map>
+				<KnobsAge>101</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>3</PagesCount>
+				<name>Controls</name>
+				<name>Node</name>
+				<name>Info</name>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
+				<CacheID>Group4.Transform16</CacheID>
+			</item>
+			<item>
+				<Plugin_label>Transform17</Plugin_label>
+				<Plugin_script_name>Transform17</Plugin_script_name>
+				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>7</KnobsCount>
+				<item>
+					<Name>translate</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p16_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p16_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>rotate</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p16_rotate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>scale</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p16_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p16_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>uniform</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>center</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>transformCenterChanged</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>userTextArea</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>0</UserKnob>
+				</item>
+				<Inputs_map>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>
+						<first>Source</first>
+						<second>Input1</second>
+					</item>
+				</Inputs_map>
+				<KnobsAge>42</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>3</PagesCount>
+				<name>Controls</name>
+				<name>Node</name>
+				<name>Info</name>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
 				<CacheID>Group4.Transform17</CacheID>
 			</item>
 			<item>
@@ -24014,6 +24201,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p17_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24029,6 +24217,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p17_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24052,6 +24241,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p17_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24075,6 +24265,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p17_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24090,6 +24281,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p17_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24187,7 +24379,7 @@ ret=time.time()</Expression>
 						<second>Input1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>31</KnobsAge>
+				<KnobsAge>33</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -24228,6 +24420,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p18_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24243,6 +24436,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p18_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24266,6 +24460,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p18_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24289,6 +24484,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p18_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24304,7 +24500,227 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>p18_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>uniform</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>center</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>5.12000000000000000e+02</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>transformCenterChanged</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>1</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>userTextArea</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>0</UserKnob>
+				</item>
+				<Inputs_map>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>
+						<first>Source</first>
+						<second>Input1</second>
+					</item>
+				</Inputs_map>
+				<KnobsAge>33</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>3</PagesCount>
+				<name>Controls</name>
+				<name>Node</name>
+				<name>Info</name>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
+				<CacheID>Group4.Transform19</CacheID>
+			</item>
+			<item>
+				<Plugin_label>Transform20</Plugin_label>
+				<Plugin_script_name>Transform20</Plugin_script_name>
+				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>7</KnobsCount>
+				<item>
+					<Name>translate</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p19_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p19_translate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>rotate</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p19_rotate</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
+					<Name>scale</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>1</MasterIsAlias>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>0</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p19_scale</MasterKnobName>
+							<MasterTrackName></MasterTrackName>
+						</Master>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>0</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>1</HasMaster>
+						<Master>
+							<MasterDimension>1</MasterDimension>
+							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
+							<MasterKnobName>p19_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
 						<Expression></Expression>
@@ -24416,220 +24832,6 @@ ret=time.time()</Expression>
 					<count>0</count>
 					<item_version>2</item_version>
 				</UserComponents>
-				<CacheID>Group4.Transform19</CacheID>
-			</item>
-			<item>
-				<Plugin_label>Transform20</Plugin_label>
-				<Plugin_script_name>Transform20</Plugin_script_name>
-				<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-				<PythonModule></PythonModule>
-				<PythonModuleVersion>0</PythonModuleVersion>
-				<Plugin_major_version>1</Plugin_major_version>
-				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>7</KnobsCount>
-				<item>
-					<Name>translate</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p19_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p19_translate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>rotate</Name>
-					<Type>Double</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>0.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p19_rotate</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>scale</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>1</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>0</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p19_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
-						<Default>1.00000000000000000e+00</Default>
-						<HasMaster>1</HasMaster>
-						<Master>
-							<MasterDimension>1</MasterDimension>
-							<MasterNodeName>Scatter_default</MasterNodeName>
-							<MasterKnobName>p19_scale</MasterKnobName>
-							<MasterTrackName></MasterTrackName>
-						</Master>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>uniform</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>center</Name>
-					<Type>Double</Type>
-					<Dimension>2</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>5.12000000000000000e+02</Value>
-						<Default>5.00000000000000000e-01</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>transformCenterChanged</Name>
-					<Type>Bool</Type>
-					<Dimension>1</Dimension>
-					<Secret>1</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>0</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
-						<Default>0</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<UserKnob>0</UserKnob>
-				</item>
-				<item>
-					<Name>userTextArea</Name>
-					<Type>String</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-						<Default></Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<StringsAnimation>
-						<count>0</count>
-						<item_version>0</item_version>
-					</StringsAnimation>
-					<UserKnob>0</UserKnob>
-				</item>
-				<Inputs_map>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>
-						<first>Source</first>
-						<second>Input1</second>
-					</item>
-				</Inputs_map>
-				<KnobsAge>29</KnobsAge>
-				<MasterNode></MasterNode>
-				<HasRotoContext>0</HasRotoContext>
-				<HasTrackerContext>0</HasTrackerContext>
-				<MultiInstanceParent></MultiInstanceParent>
-				<UserPagesCount>0</UserPagesCount>
-				<PagesCount>3</PagesCount>
-				<name>Controls</name>
-				<name>Node</name>
-				<name>Info</name>
-				<Children>0</Children>
-				<UserComponents>
-					<count>0</count>
-					<item_version>2</item_version>
-				</UserComponents>
 				<CacheID>Group4.Transform20</CacheID>
 			</item>
 			<item>
@@ -24650,12 +24852,13 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>-1.90000000000000000e+01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_default</MasterNodeName>
+							<MasterNodeNameFull>Scatter_default</MasterNodeNameFull>
 							<MasterKnobName>TransformScatterrotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -24710,7 +24913,7 @@ ret=time.time()</Expression>
 						<second>Merge2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>243</KnobsAge>
+				<KnobsAge>252</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -28841,6 +29044,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p0_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -28856,6 +29060,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p0_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -28879,6 +29084,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p0_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -28902,6 +29108,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p0_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -28917,6 +29124,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p0_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29055,6 +29263,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p1_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29070,6 +29279,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p1_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29093,6 +29303,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p1_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29116,6 +29327,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p1_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29131,6 +29343,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p1_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29248,6 +29461,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p2_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29263,6 +29477,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p2_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29286,6 +29501,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p2_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29309,6 +29525,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p2_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29324,6 +29541,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p2_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29462,6 +29680,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p3_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29477,6 +29696,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p3_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29500,6 +29720,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p3_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29523,6 +29744,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p3_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29538,6 +29760,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p3_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29655,6 +29878,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p4_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29670,6 +29894,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p4_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29693,6 +29918,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p4_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29716,6 +29942,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p4_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29731,6 +29958,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p4_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29848,6 +30076,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p5_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29863,6 +30092,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p5_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29886,6 +30116,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p5_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29909,6 +30140,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p5_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -29924,6 +30156,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p5_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30041,6 +30274,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p6_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30056,6 +30290,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p6_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30079,6 +30314,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p6_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30102,6 +30338,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p6_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30117,6 +30354,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p6_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30234,6 +30472,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p7_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30249,6 +30488,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p7_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30272,6 +30512,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p7_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30295,6 +30536,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p7_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30310,6 +30552,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p7_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30448,6 +30691,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p8_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30463,6 +30707,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p8_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30486,6 +30731,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p8_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30509,6 +30755,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p8_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30524,6 +30771,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p8_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30662,6 +30910,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p9_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30677,6 +30926,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p9_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30700,6 +30950,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p9_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30723,6 +30974,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p9_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30738,6 +30990,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p9_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30876,6 +31129,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p10_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30891,6 +31145,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p10_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30914,6 +31169,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p10_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30937,6 +31193,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p10_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -30952,6 +31209,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p10_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31090,6 +31348,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p11_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31105,6 +31364,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p11_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31128,6 +31388,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p11_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31151,6 +31412,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p11_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31166,6 +31428,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p11_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31304,6 +31567,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p12_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31319,6 +31583,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p12_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31342,6 +31607,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p12_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31365,6 +31631,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p12_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31380,6 +31647,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p12_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31518,6 +31786,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p13_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31533,6 +31802,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p13_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31556,6 +31826,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p13_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31579,6 +31850,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p13_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31594,6 +31866,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p13_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31732,6 +32005,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p14_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31747,6 +32021,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p14_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31770,6 +32045,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p14_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31793,6 +32069,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p14_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31808,6 +32085,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p14_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31946,6 +32224,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p15_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31961,6 +32240,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p15_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -31984,6 +32264,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p15_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32007,6 +32288,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p15_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32022,6 +32304,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p15_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32160,6 +32443,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p16_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32175,6 +32459,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p16_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32198,6 +32483,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p16_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32221,6 +32507,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p16_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32236,6 +32523,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p16_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32374,6 +32662,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p17_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32389,6 +32678,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p17_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32412,6 +32702,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p17_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32435,6 +32726,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p17_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32450,6 +32742,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p17_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32588,6 +32881,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p18_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32603,6 +32897,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p18_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32626,6 +32921,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p18_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32649,6 +32945,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p18_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32664,6 +32961,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p18_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32802,6 +33100,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p19_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32817,6 +33116,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p19_translate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32840,6 +33140,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p19_rotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32863,6 +33164,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p19_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -32878,6 +33180,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>p19_scale</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -33016,6 +33319,7 @@ ret=time.time()</Expression>
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>Scatter_4000_2</MasterNodeName>
+							<MasterNodeNameFull>Scatter_4000_2</MasterNodeNameFull>
 							<MasterKnobName>TransformScatterrotate</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -33221,7 +33525,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1618635461</Value>
+						<Value>1619893278</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -34371,6 +34675,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowCFS</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -34654,6 +34959,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -34669,6 +34975,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -34684,6 +34991,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -34699,6 +35007,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>3</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOpacity</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -34912,6 +35221,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -34927,6 +35237,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -34942,6 +35253,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>2</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowColor</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -35076,6 +35388,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -35091,6 +35404,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>1</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowBlur</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -35257,6 +35571,7 @@ ret=time.time()</Expression>
 							<Master>
 								<MasterDimension>0</MasterDimension>
 								<MasterNodeName>DropShadow2</MasterNodeName>
+								<MasterNodeNameFull>Melt_1.DropShadow2</MasterNodeNameFull>
 								<MasterKnobName>shadowOnly</MasterKnobName>
 								<MasterTrackName></MasterTrackName>
 							</Master>
@@ -36768,7 +37083,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>input_default</second>
+					<second>Scatter_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -37391,7 +37706,7 @@ ret=time.time()</Expression>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sun Apr 18 13:41:35 2021</Value>
+			<Value>Sat May 1 11:21:31 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -37490,7 +37805,7 @@ ret=time.time()</Expression>
 	<Timeline_current_time>2</Timeline_current_time>
 	<CreationDate>1613936932294</CreationDate>
 </Project>
-<ProjectGui class_id="20" tracking_level="0" version="11">
+<ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
 		<count>45</count>
 		<item_version>6</item_version>
@@ -40703,8 +41018,8 @@ ret=time.time()</Expression>
 						<Tabs class_id="27" tracking_level="0" version="0">
 							<count>2</count>
 							<item_version>0</item_version>
+							<item>Scatter_default_Viewer1</item>
 							<item>Viewer3</item>
-							<item>Scatter_1_Viewer1</item>
 						</Tabs>
 						<Index>1</Index>
 						<Name>pane1</Name>
@@ -40713,12 +41028,11 @@ ret=time.time()</Expression>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>4</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
-							<item>Scatter_default</item>
 						</Tabs>
 						<Index>0</Index>
 						<Name>pane3</Name>
@@ -40738,8 +41052,8 @@ ret=time.time()</Expression>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-4328</x>
-			<y>142</y>
+			<x>0</x>
+			<y>24</y>
 			<w>1680</w>
 			<h>980</h>
 		</Window>
@@ -40750,9 +41064,9 @@ ret=time.time()</Expression>
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-3.67029073170731772e+03</zoomLeft>
-				<zoomBottom>-6.14400000000000546e+01</zoomBottom>
-				<zoomFactor>1.02664262820512817e-01</zoomFactor>
+				<zoomLeft>0.00000000000000000e+00</zoomLeft>
+				<zoomBottom>-3.27000000000000000e+02</zoomBottom>
+				<zoomFactor>1.00000000000000000e+00</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -40839,15 +41153,11 @@ ret=time.time()</Expression>
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>7</count>
+		<count>3</count>
 		<item_version>0</item_version>
-		<item>Switch_4010</item>
-		<item>i1</item>
 		<item>Scatter_default</item>
-		<item>Switch_default</item>
-		<item>input_default</item>
-		<item>Toppings_2</item>
-		<item>Toppings_2_2</item>
+		<item>Scatter_4000_2</item>
+		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
@@ -40973,6 +41283,14 @@ merge.disconnectInput(2)
 #group.connectInput(0, scatter_head)
 </ScriptEditorInput>
 	<NumPyPanels>0</NumPyPanels>
+	<OpenedPanelsMinimized>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsMinimized>
+	<OpenedPanelsHideUnmodified>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsHideUnmodified>
 </ProjectGui>
 </boost_serialization>
 
