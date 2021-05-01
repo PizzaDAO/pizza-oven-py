@@ -3,17 +3,16 @@
     "name": "My Cool First Super Rare Pizza Test With Everything!",
     "random_seed": "52198947997422404454920108833917741998911196589945595445581078565118427695940",
     "recipe_id": 1,
-    "base_ingredients": {
-    },
+    "base_ingredients": {},
     "layers": {
-        "extras-1": {
+        "extras-0": {
             "ingredient": {
-                "unique_id": "6900",
-                "index": 1,
-                "name": "Maggots",
+                "unique_id": "8000",
+                "index": 0,
+                "name": "Red Pepper Flakes",
                 "rarity_level": 1,
                 "classification": 7,
-                "category": "bugs",
+                "category": "seasoning",
                 "attributes": {
                     "state": "fresh"
                 },
@@ -28,7 +27,7 @@
                     "protein": 1.1
                 },
                 "image_uris": {
-                    "filename": "6900-topping-crypto-swoledoge.png",
+                    "filename": "8000-seasoning-redpepperflakes.png",
                     "output_mask": "rarepizza-#####-topping-%s.png"
                 }
             },
@@ -43,10 +42,10 @@
             "ingredient": {
                 "unique_id": "7100",
                 "index": 2,
-                "name": "Doge",
+                "name": "Maggots",
                 "rarity_level": 1,
                 "classification": 7,
-                "category": "meat",
+                "category": "bugs",
                 "attributes": {
                     "state": "fresh"
                 },
@@ -72,7 +71,7 @@
                 "rotation": 68.0
             }
         }
-   },
+    },
     "instructions": {
         "sauce_count": 1.0,
         "cheese_count": 1.0,
