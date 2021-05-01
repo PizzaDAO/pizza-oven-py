@@ -22,6 +22,8 @@ This repository makes pizzas.  More specifically, it accepts json input, transfo
 
 If you run Docker and want to run the code locally without Python dependencies, we provide a Dockerfile and docker-compose.yml.
 
+create a .env file according to the .env.example file.  You must fill in the Ethereum socket server.
+
 Run the production deployment
 
 ```bash

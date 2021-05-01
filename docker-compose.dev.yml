@@ -5,8 +5,9 @@
 version: "3.8"
 services:
   pizza-oven:
+    image: rarepizzaskitchen.azurecr.io/pizza-kitchen-python:0.0.1
     depends_on:
-      - chainlink
+      - chainlink-rinkeby
       - ipfs0
     build:
       context: .
@@ -26,49 +27,6 @@ services:
       PROJECT_NAME: "Rare Pizzas Kitchen"
       PORT: 8000
 
-  # Add a chainlink node
-  chainlink:
-    depends_on:
-      chainlink-db:
-        condition: service_healthy
-    build:
-      context: ./chainlink
-      target: dev
-    entrypoint: /bin/sh -c "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
-    volumes: # mount the working directory
-      - "./chainlink:/chainlink"
-    ports:
-      - 6688:6688
-    networks:
-      - rare-pizzas
-    environment:
-      PORT: 6688
-      DATABASE_URL: postgresql://postgres:$CHAINLINK_PGPASSWORD@chainlink-db:5432/ChainlinkDB?sslmode=disable
-    env_file:
-      - "./chainlink/.env"
-    secrets:
-      - password
-      - api
-
-  # Add a chainlink database
-  chainlink-db:
-    container_name: chainlink-db
-    image: postgres:11.6
-    volumes:
-      - chainlink-db-data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_DB: ChainlinkDB
-      POSTGRES_PASSWORD: $CHAINLINK_PGPASSWORD
-    ports:
-      - 5432:5432
-    networks:
-      - rare-pizzas
-    healthcheck:
-      test: ["CMD", "pg_isready", "-q", "-d", "ChainlinkDB", "-U", "postgres"]
-      timeout: 5s
-      interval: 10s
-      retries: 10
-
   # Add IPFS node
   ipfs0:
     container_name: ipfs0
@@ -84,6 +42,54 @@ services:
     environment:
       - IPFS_PROFILE=server
 
+  # Add a postgres database
+  postgres-database:
+    container_name: pizza-database
+    build:
+      context: ./database
+    volumes:
+      - ./database/db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: $CHAINLINK_RINKEBY_DB_NAME
+      POSTGRES_PASSWORD: $CHAINLINK_RINKEBY_DB_PASSWORD
+    ports:
+      - 5432:5432
+    networks:
+      - rare-pizzas
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "$CHAINLINK_RINKEBY_DB_NAME", "-U", "postgres"]
+      timeout: 5s
+      interval: 10s
+      retries: 10
+
+  # Add a rinkeby chainlink node
+  chainlink-rinkeby:
+    image: rarepizzaskitchen.azurecr.io/chainlink-rinkeby:0.10.3
+    depends_on:
+      postgres-database:
+        condition: service_healthy
+    build:
+      context: ./chainlink
+      target: dev
+    entrypoint: /bin/sh -c "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
+    volumes: # mount the working directory
+      - "./chainlink/rinkeby:/chainlink"
+    ports:
+      - 6688:6688
+    networks:
+      - rare-pizzas
+    environment:
+      PORT: 6688
+      LINK_CONTRACT_ADDRESS: $CHAINLINK_RINKEBY_TOKEN
+      ETH_URL: $ETHEREUM_RINKEBY_SOCKET_SERVER
+      #ETH_SECONDARY_URL: TODO
+      DATABASE_URL: postgresql://$CHAINLINK_RINKEBY_DB_USERNAME:$CHAINLINK_RINKEBY_DB_PASSWORD@$CHAINLINK_RINKEBY_DATABASE_SERVER:5432/$CHAINLINK_RINKEBY_DB_NAME?sslmode=disable
+    env_file:
+      - "./chainlink/.env.rinkeby"
+    secrets:
+      - password
+      - api
+
 networks:
   rare-pizzas:
     driver: bridge
@@ -93,7 +99,7 @@ secrets:
   password:
     file: "./chainlink/.password"
   api:
-    file: "./chainlink/.api"
+    file: "./chainlink/.api.credentials.rinkeby"
 
 volumes:
   chainlink-db-data:

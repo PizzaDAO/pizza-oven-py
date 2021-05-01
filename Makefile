@@ -67,6 +67,8 @@ auto-lint:
 	poetry run black app tests
 	make lint
 
+# Deploy
+
 # Tests
 test:
 	@echo ✅ Testing
