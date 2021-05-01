@@ -28,7 +28,7 @@
                 },
                 "image_uris": {
                     "filename": "0000-box-cardboard.png",
-                    "output_mask": "rarepizza-#####-box-%s.png"
+                    "output_mask": "rarepizza-#####-base-%s.png"
                 }
             },
             "prep": {
@@ -41,7 +41,7 @@
         "paper": {
             "ingredient": {
                 "unique_id": "0500",
-                "index": 0,
+                "index": 1,
                 "name": "Classic Red checker Wax Paper",
                 "rarity_level": 1,
                 "classification": 2,
@@ -62,7 +62,7 @@
                 },
                 "image_uris": {
                     "filename": "0500-paper-redchecker.png",
-                    "output_mask": "rarepizza-#####-paper-%s.png"
+                    "output_mask": "rarepizza-#####-base-%s.png"
                 }
             },
             "prep": {
@@ -75,7 +75,7 @@
         "crust": {
             "ingredient": {
                 "unique_id": "1000",
-                "index": 0,
+                "index": 2,
                 "name": "Traditional Thin Crust",
                 "rarity_level": 1,
                 "classification": 3,
@@ -96,7 +96,7 @@
                 },
                 "image_uris": {
                     "filename": "1010-crust-thin.png",
-                    "output_mask": "rarepizza-#####-crust-%s.png"
+                    "output_mask": "rarepizza-#####-base-%s.png"
                 }
             },
             "prep": {
@@ -108,7 +108,7 @@
         }
     },
     "layers": {
-        "sauce-2000": {
+        "sauce": {
             "ingredient": {
                 "unique_id": "2000",
                 "index": 0,
@@ -132,7 +132,7 @@
                 },
                 "image_uris": {
                     "filename": "2010-sauce-tomato.png",
-                    "output_mask": "rarepizza-#####-sauce-%s.png"
+                    "output_mask": "rarepizza-#####-topping-%s.png"
                 }
             },
             "prep": {
@@ -142,10 +142,10 @@
                 "rotation": 0.0
             }
         },
-        "cheese-3000": {
+        "cheese": {
             "ingredient": {
                 "unique_id": "3090",
-                "index": 0,
+                "index": 1,
                 "name": "Aged Doge Cheez",
                 "rarity_level": 1,
                 "classification": 5,
@@ -166,6 +166,142 @@
                 },
                 "image_uris": {
                     "filename": "3090-cheese-mozzarella.png",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 180.0
+            }
+        },
+        "pepperoni": {
+            "ingredient": {
+                "unique_id": "4000",
+                "index": 2,
+                "name": "Pepperoni",
+                "rarity_level": 1,
+                "classification": 6,
+                "category": "traditional",
+                "attributes": {
+                    "state": "aged",
+                    "vintage": "2011"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 85.1,
+                    "fat": 2006.3,
+                    "cholesterol": 20002.4,
+                    "sodium": 117.8,
+                    "potassium": 21.5,
+                    "carbohydrates": 0.6,
+                    "protein": 6.3
+                },
+                "image_uris": {
+                    "filename": "4000-topping-meat-pepperoni",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 180.0
+            }
+        },
+        "shrimp": {
+            "ingredient": {
+                "unique_id": "6000",
+                "index": 3,
+                "name": "Shrimp",
+                "rarity_level": 1,
+                "classification": 6,
+                "category": "traditional",
+                "attributes": {
+                    "state": "aged",
+                    "vintage": "2011"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 85.1,
+                    "fat": 2006.3,
+                    "cholesterol": 20002.4,
+                    "sodium": 117.8,
+                    "potassium": 21.5,
+                    "carbohydrates": 0.6,
+                    "protein": 6.3
+                },
+                "image_uris": {
+                    "filename": "6000-topping-seafood-shrimp",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 180.0
+            }
+        },
+        "swoledoge": {
+            "ingredient": {
+                "unique_id": "7000",
+                "index": 4,
+                "name": "Swole Doge",
+                "rarity_level": 1,
+                "classification": 7,
+                "category": "extras",
+                "attributes": {
+                    "state": "aged",
+                    "vintage": "2011"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 85.1,
+                    "fat": 2006.3,
+                    "cholesterol": 20002.4,
+                    "sodium": 117.8,
+                    "potassium": 21.5,
+                    "carbohydrates": 0.6,
+                    "protein": 6.3
+                },
+                "image_uris": {
+                    "filename": "7000-extra-crypto-swoledoge",
+                    "output_mask": "rarepizza-#####-topping-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 180.0
+            }
+        },
+        "redpepperflakes": {
+            "ingredient": {
+                "unique_id": "8000",
+                "index": 7,
+                "name": "Red Pepper Flakes",
+                "rarity_level": 1,
+                "classification": 5,
+                "category": "seasoning",
+                "attributes": {
+                    "state": "aged",
+                    "vintage": "2011"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 85.1,
+                    "fat": 2006.3,
+                    "cholesterol": 20002.4,
+                    "sodium": 117.8,
+                    "potassium": 21.5,
+                    "carbohydrates": 0.6,
+                    "protein": 6.3
+                },
+                "image_uris": {
+                    "filename": "8000-seasoning-redpepperflakes",
                     "output_mask": "rarepizza-#####-topping-%s.png"
                 }
             },
