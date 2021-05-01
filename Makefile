@@ -74,24 +74,28 @@ test:
 
 test-natron:
 	@echo ☢️ Test Natron
-	poetry run python app/core/renderer.py -r $(realpath .)/data/sample_recipe.json -f 1
+	poetry run python app/core/renderer.py -r $(realpath .)/data/sample_recipe.json -f 111
 
 test-natron-all:
 	@echo ☢️ Test Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 111
-
-test-natron-extra:
-	@echo ☢️ Test Natron Extra
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_extra.json -f 111
-
-test-natron-cheese:
-	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_cheese.json -f 99999
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 1111
 
 test-natron-sauce:
 	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_sauce.json -f 99999
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_sauce.json -f 4
+
+test-natron-cheese:
+	@echo ☢️ Run Cheese Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_cheese.json -f 5
+
+test-natron-topping:
+	@echo ☢️ Run Cheese Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_topping.json -f 6
+
+test-natron-extra:
+	@echo ☢️ Test Natron Extra
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_extra.json -f 7
 
 test-natron-mvp:
 	@echo ☢️ Run MVP Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 99999
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 9999
