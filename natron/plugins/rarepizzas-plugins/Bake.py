@@ -26,7 +26,7 @@ def getVersion():
     return 1
 
 def getGrouping():
-    return ""
+    return "Bake"
 
 def getPluginDescription():
     return "\t"
@@ -74,7 +74,6 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(True)
     lastNode.do_lumpiness = param
     del param
 
@@ -87,7 +86,6 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(True)
     lastNode.do_burn = param
     del param
 
@@ -100,7 +98,6 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(True)
     lastNode.do_melt = param
     del param
 
@@ -236,7 +233,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(5.2, 0)
+    param.setValue(8.699999999999999, 0)
     lastNode.clotting = param
     del param
 
@@ -253,7 +250,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(4.4, 0)
+    param.setValue(6.3, 0)
     lastNode.thinning = param
     del param
 
@@ -287,7 +284,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(50.4, 0)
+    param.setValue(50, 0)
     lastNode.absorption = param
     del param
 
@@ -316,7 +313,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(100, 0)
+    param.setValue(19.4, 0)
     lastNode.lumpy_mix = param
     del param
 
@@ -333,7 +330,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(13, 0)
+    param.setValue(82.59999999999999, 0)
     lastNode.lumpy_size = param
     del param
 
@@ -350,7 +347,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(48.4, 0)
+    param.setValue(52.4, 0)
     lastNode.lumpy_height = param
     del param
 
@@ -412,7 +409,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(25.2, 0)
+    param.setValue(70, 0)
     lastNode.burn_amt = param
     del param
 
@@ -429,6 +426,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
+    param.setValue(47.8, 0)
     lastNode.burn_edges = param
     del param
 
@@ -457,7 +455,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(8, 0)
+    param.setValue(1, 0)
     lastNode.melt_freq = param
     del param
 
@@ -474,7 +472,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(20, 0)
+    param.setValue(1.7, 0)
     lastNode.melt_amp = param
     del param
 
@@ -653,10 +651,10 @@ def createInstance(app,group):
 
     param = lastNode.getParam("offset")
     if param is not None:
-        param.setValue(-0.008000000000000007, 0)
-        param.setValue(-0.008000000000000007, 1)
-        param.setValue(-0.008000000000000007, 2)
-        param.setValue(-0.008000000000000007, 3)
+        param.setValue(0, 0)
+        param.setValue(0, 1)
+        param.setValue(0, 2)
+        param.setValue(0, 3)
         del param
 
     param = lastNode.getParam("premultChanged")
@@ -924,7 +922,7 @@ def createInstance(app,group):
     lastNode.setLabel("In")
     lastNode.setPosition(1837, 50)
     lastNode.setSize(104, 26)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupIn = lastNode
 
     del lastNode
@@ -947,7 +945,7 @@ def createInstance(app,group):
     lastNode.setLabel("Constant1")
     lastNode.setPosition(2083, 279)
     lastNode.setSize(104, 26)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupConstant1 = lastNode
 
     param = lastNode.getParam("extent")
@@ -1095,7 +1093,7 @@ def createInstance(app,group):
     lastNode.setLabel("Plasma2")
     lastNode.setPosition(2083, 361)
     lastNode.setSize(104, 26)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupPlasma2 = lastNode
 
     param = lastNode.getParam("NatronOfxParamProcessA")
@@ -1105,12 +1103,12 @@ def createInstance(app,group):
 
     param = lastNode.getParam("alpha")
     if param is not None:
-        param.setValue(0.00104, 0)
+        param.setValue(0.00174, 0)
         del param
 
     param = lastNode.getParam("beta")
     if param is not None:
-        param.setValue(0.022, 0)
+        param.setValue(0.0315, 0)
         del param
 
     param = lastNode.getParam("scale")
@@ -1259,7 +1257,7 @@ def createInstance(app,group):
     lastNode.setLabel("Plasma1")
     lastNode.setPosition(4308, 1838)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupPlasma1 = lastNode
 
     param = lastNode.getParam("NatronOfxParamProcessA")
@@ -1292,11 +1290,6 @@ def createInstance(app,group):
     param = lastNode.getParam("disableNode")
     if param is not None:
         param.setValue(True)
-        del param
-
-    param = lastNode.getParam("filename")
-    if param is not None:
-        param.setValue("")
         del param
 
     param = lastNode.getParam("ParamExistingInstance")
@@ -1498,7 +1491,7 @@ def createInstance(app,group):
 
     param = lastNode.getParam("grainSizeAll")
     if param is not None:
-        param.setValue(8.25, 0)
+        param.setValue(25.65, 0)
         del param
 
     param = lastNode.getParam("grainSizeRed")
@@ -1830,7 +1823,7 @@ def createInstance(app,group):
 
     param = lastNode.getParam("grainSizeAll")
     if param is not None:
-        param.setValue(8.25, 0)
+        param.setValue(25.65, 0)
         del param
 
     param = lastNode.getParam("grainSizeRed")
@@ -2086,7 +2079,7 @@ def createInstance(app,group):
 
     param = lastNode.getParam("mix")
     if param is not None:
-        param.setValue(0, 0)
+        param.setValue(0.806, 0)
         del param
 
     del lastNode
@@ -2648,7 +2641,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -3222,7 +3215,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -3521,7 +3514,7 @@ def createInstance(app,group):
 
     param = lastNode.getParam("which")
     if param is not None:
-        param.setValue(1, 0)
+        param.setValue(0, 0)
         del param
 
     del lastNode
@@ -3737,7 +3730,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(4.4, 0)
+    param.setValue(6.3, 0)
     lastNode.f_input = param
     del param
 
@@ -3810,7 +3803,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0.022, 0)
+    param.setValue(0.0315, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -3991,7 +3984,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(4.4, 0)
+    param.setValue(6.3, 0)
     lastNode.f_input = param
     del param
 
@@ -4064,7 +4057,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0.022, 0)
+    param.setValue(0.0315, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -4079,7 +4072,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -4284,7 +4277,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(5.2, 0)
+    param.setValue(8.699999999999999, 0)
     lastNode.f_input = param
     del param
 
@@ -4356,7 +4349,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0.00104, 0)
+    param.setValue(0.00174, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -4535,7 +4528,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(5.2, 0)
+    param.setValue(8.699999999999999, 0)
     lastNode.f_input = param
     del param
 
@@ -4607,7 +4600,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0.00104, 0)
+    param.setValue(0.00174, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -4622,7 +4615,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -4716,10 +4709,10 @@ def createInstance(app,group):
 
     param = lastNode.getParam("MasterGamma")
     if param is not None:
-        param.setValue(0.7984, 0)
-        param.setValue(0.7984, 1)
-        param.setValue(0.7984, 2)
-        param.setValue(0.7984, 3)
+        param.setValue(0.4399999999999999, 0)
+        param.setValue(0.4399999999999999, 1)
+        param.setValue(0.4399999999999999, 2)
+        param.setValue(0.4399999999999999, 3)
         del param
 
     param = lastNode.getParam("toneRanges")
@@ -4960,7 +4953,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(13, 0)
+    param.setValue(82.59999999999999, 0)
     lastNode.f_input = param
     del param
 
@@ -5034,7 +5027,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(8.25, 0)
+    param.setValue(25.65, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -5206,7 +5199,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(13, 0)
+    param.setValue(82.59999999999999, 0)
     lastNode.f_input = param
     del param
 
@@ -5280,7 +5273,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(8.25, 0)
+    param.setValue(25.65, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -5295,7 +5288,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -5336,7 +5329,7 @@ def createInstance(app,group):
 
     param = lastNode.getParam("which")
     if param is not None:
-        param.setValue(1, 0)
+        param.setValue(0, 0)
         del param
 
     del lastNode
@@ -5531,7 +5524,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(100, 0)
+    param.setValue(19.4, 0)
     lastNode.f_input = param
     del param
 
@@ -5604,7 +5597,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0, 0)
+    param.setValue(0.806, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -5776,7 +5769,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(100, 0)
+    param.setValue(19.4, 0)
     lastNode.f_input = param
     del param
 
@@ -5849,7 +5842,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0, 0)
+    param.setValue(0.806, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -5864,7 +5857,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -6144,7 +6137,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(25.2, 0)
+    param.setValue(70, 0)
     lastNode.f_input = param
     del param
 
@@ -6218,7 +6211,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0.7984, 0)
+    param.setValue(0.4399999999999999, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -6390,7 +6383,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(25.2, 0)
+    param.setValue(70, 0)
     lastNode.f_input = param
     del param
 
@@ -6464,7 +6457,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0.7984, 0)
+    param.setValue(0.4399999999999999, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -6479,7 +6472,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -6679,7 +6672,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(50.4, 0)
+    param.setValue(50, 0)
     lastNode.f_input = param
     del param
 
@@ -6753,7 +6746,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(-0.008000000000000007, 0)
+    param.setValue(0, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -6930,7 +6923,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(50.4, 0)
+    param.setValue(50, 0)
     lastNode.f_input = param
     del param
 
@@ -7004,7 +6997,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(-0.008000000000000007, 0)
+    param.setValue(0, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -7019,7 +7012,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -7060,12 +7053,12 @@ def createInstance(app,group):
 
     param = lastNode.getParam("Amplitude")
     if param is not None:
-        param.setValue(6, 0)
+        param.setValue(0.51, 0)
         del param
 
     param = lastNode.getParam("Frequency_")
     if param is not None:
-        param.setValue(2.4, 0)
+        param.setValue(0.3, 0)
         del param
 
     del lastNode
@@ -7082,7 +7075,7 @@ def createInstance(app,group):
 
     param = lastNode.getParam("which")
     if param is not None:
-        param.setValue(1, 0)
+        param.setValue(0, 0)
         del param
 
     del lastNode
@@ -7257,7 +7250,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(8, 0)
+    param.setValue(1, 0)
     lastNode.f_input = param
     del param
 
@@ -7329,7 +7322,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(2.4, 0)
+    param.setValue(0.3, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -7505,7 +7498,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(8, 0)
+    param.setValue(1, 0)
     lastNode.f_input = param
     del param
 
@@ -7577,7 +7570,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(2.4, 0)
+    param.setValue(0.3, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -7592,7 +7585,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -7791,7 +7784,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(20, 0)
+    param.setValue(1.7, 0)
     lastNode.f_input = param
     del param
 
@@ -7863,7 +7856,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(6, 0)
+    param.setValue(0.51, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -8039,7 +8032,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(20, 0)
+    param.setValue(1.7, 0)
     lastNode.f_input = param
     del param
 
@@ -8111,7 +8104,7 @@ def createInstance(app,group):
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(6, 0)
+    param.setValue(0.51, 0)
     lastNode.f_lerp_result = param
     del param
 
@@ -8126,7 +8119,7 @@ def createInstance(app,group):
     lastNode.setLabel("Input1")
     lastNode.setPosition(642, 175)
     lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupgroupInput1 = lastNode
 
     del lastNode
@@ -8179,7 +8172,7 @@ def createInstance(app,group):
     lastNode.setLabel("Mask")
     lastNode.setPosition(393, 1941)
     lastNode.setSize(104, 26)
-    lastNode.setColor(0.3, 0.5, 0.2)
+    lastNode.setColor(0.3098, 0.5216, 0.2)
     groupMask = lastNode
 
     del lastNode
