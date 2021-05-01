@@ -28,30 +28,104 @@ def getVersion():
 def getGrouping():
     return ""
 
+def getPluginDescription():
+    return "\t"
+
 def createInstance(app,group):
     # Create all nodes in the group
 
     # Create the parameters of the group node the same way we did for all internal nodes
     lastNode = group
-    lastNode.setColor(0.7, 0.7, 0.7)
+    lastNode.setColor(0.6667, 0, 0)
 
     # Create the user parameters
     lastNode.Bake = lastNode.createPageParam("Bake", "Bake")
-    param = lastNode.createDoubleParam("mass", "mass")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
+    param = lastNode.createBooleanParam("do_physical", "doPhysical")
 
     # Add the param to the page
     lastNode.Bake.addParam(param)
 
     # Set param properties
-    param.setHelp("grams")
+    param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(50, 0)
-    lastNode.mass = param
+    lastNode.do_physical = param
+    del param
+
+    param = lastNode.createBooleanParam("do_separation", "doSeparation")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(False)
+    param.setValue(True)
+    lastNode.do_separation = param
+    del param
+
+    param = lastNode.createBooleanParam("do_lumpiness", "doLumpiness")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(True)
+    lastNode.do_lumpiness = param
+    del param
+
+    param = lastNode.createBooleanParam("do_burn", "doBurn")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(True)
+    lastNode.do_burn = param
+    del param
+
+    param = lastNode.createBooleanParam("do_melt", "doMelt")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(True)
+    lastNode.do_melt = param
+    del param
+
+    param = lastNode.createBooleanParam("doMask", "doMask")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.doMask = param
+    del param
+
+    param = lastNode.createGroupParam("physical", "physical")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.physical = param
     del param
 
     param = lastNode.createChoiceParam("unit", "unit")
@@ -60,30 +134,31 @@ def createInstance(app,group):
     param.setOptions(entries)
     del entries
 
-    # Add the param to the page
-    lastNode.Bake.addParam(param)
+    # Add the param to the group, no need to add it to the page
+    lastNode.physical.addParam(param)
 
     # Set param properties
     param.setHelp("grams\nkilograms")
     param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
+    param.setAnimationEnabled(False)
     lastNode.unit = param
     del param
 
-    param = lastNode.createDoubleParam("density", "density")
+    param = lastNode.createDoubleParam("mass", "mass")
     param.setMinimum(-2147483648, 0)
     param.setMaximum(2147483647, 0)
     param.setDisplayMinimum(0, 0)
     param.setDisplayMaximum(100, 0)
 
-    # Add the param to the page
-    lastNode.Bake.addParam(param)
+    # Add the param to the group, no need to add it to the page
+    lastNode.physical.addParam(param)
 
     # Set param properties
-    param.setHelp("The kilogram per cubic metre (symbol: kg·m−3, or kg/m3) is an SI derived unit of density, defined by mass in kilograms divided by volume in cubic metres.")
-    param.setAddNewLine(True)
+    param.setHelp("grams")
+    param.setAddNewLine(False)
     param.setAnimationEnabled(True)
-    lastNode.density = param
+    param.setValue(37.7, 0)
+    lastNode.mass = param
     del param
 
     param = lastNode.createIntParam("height", "height")
@@ -92,15 +167,31 @@ def createInstance(app,group):
     param.setDefaultValue(0, 0)
     param.restoreDefaultValue(0)
 
-    # Add the param to the page
-    lastNode.Bake.addParam(param)
+    # Add the param to the group, no need to add it to the page
+    lastNode.physical.addParam(param)
 
     # Set param properties
     param.setHelp("in pixels")
     param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
+    param.setAnimationEnabled(False)
     param.setValue(100, 0)
     lastNode.height = param
+    del param
+
+    param = lastNode.createDoubleParam("density", "density")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.physical.addParam(param)
+
+    # Set param properties
+    param.setHelp("The kilogram per cubic metre (symbol: kg·m−3, or kg/m3) is an SI derived unit of density, defined by mass in kilograms divided by volume in cubic metres.")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.density = param
     del param
 
     param = lastNode.createIntParam("area", "area")
@@ -109,8 +200,8 @@ def createInstance(app,group):
     param.setDefaultValue(0, 0)
     param.restoreDefaultValue(0)
 
-    # Add the param to the page
-    lastNode.Bake.addParam(param)
+    # Add the param to the group, no need to add it to the page
+    lastNode.physical.addParam(param)
 
     # Set param properties
     param.setHelp("pixels in cm2\n\nmax areas\n9in crust = 413 cm2\n8in cheese = 325 cm2\n3.5 in (12.25 in2) = 79 cm2")
@@ -120,7 +211,7 @@ def createInstance(app,group):
     lastNode.area = param
     del param
 
-    param = lastNode.createSeparatorParam("meta_________________", "meta")
+    param = lastNode.createGroupParam("separation", "separation")
 
     # Add the param to the page
     lastNode.Bake.addParam(param)
@@ -128,60 +219,263 @@ def createInstance(app,group):
     # Set param properties
     param.setHelp("")
     param.setAddNewLine(True)
-    param.setPersistent(False)
     param.setEvaluateOnChange(False)
-    lastNode.meta_________________ = param
+    lastNode.separation = param
     del param
 
-    param = lastNode.createDoubleParam("chunkiness", "chunkiness")
+    param = lastNode.createDoubleParam("clotting", "clotting")
     param.setMinimum(-2147483648, 0)
     param.setMaximum(2147483647, 0)
     param.setDisplayMinimum(0, 0)
     param.setDisplayMaximum(100, 0)
 
-    # Add the param to the page
-    lastNode.Bake.addParam(param)
+    # Add the param to the group, no need to add it to the page
+    lastNode.separation.addParam(param)
 
     # Set param properties
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(27.2, 0)
-    lastNode.chunkiness = param
+    param.setValue(5.2, 0)
+    lastNode.clotting = param
     del param
 
-    param = lastNode.createDoubleParam("spread", "spread")
+    param = lastNode.createDoubleParam("thinning", "thinning")
     param.setMinimum(-2147483648, 0)
     param.setMaximum(2147483647, 0)
     param.setDisplayMinimum(0, 0)
     param.setDisplayMaximum(100, 0)
 
-    # Add the param to the page
-    lastNode.Bake.addParam(param)
+    # Add the param to the group, no need to add it to the page
+    lastNode.separation.addParam(param)
 
     # Set param properties
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(16.6, 0)
-    lastNode.spread = param
+    param.setValue(4.4, 0)
+    lastNode.thinning = param
     del param
 
-    param = lastNode.createIntParam("thickness", "thickness")
+    param = lastNode.createIntParam("coagulation", "coagulation")
     param.setDisplayMinimum(0, 0)
     param.setDisplayMaximum(100, 0)
     param.setDefaultValue(0, 0)
     param.restoreDefaultValue(0)
 
-    # Add the param to the page
-    lastNode.Bake.addParam(param)
+    # Add the param to the group, no need to add it to the page
+    lastNode.separation.addParam(param)
 
     # Set param properties
     param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
     param.setValue(100, 0)
-    lastNode.thickness = param
+    lastNode.coagulation = param
+    del param
+
+    param = lastNode.createDoubleParam("absorption", "absorption")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.separation.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(50.4, 0)
+    lastNode.absorption = param
+    del param
+
+    param = lastNode.createGroupParam("lumpiness", "lumpiness")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.lumpiness = param
+    del param
+
+    param = lastNode.createDoubleParam("lumpy_mix", "lumpy_mix")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.lumpiness.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.lumpy_mix = param
+    del param
+
+    param = lastNode.createDoubleParam("lumpy_size", "lumpy_size")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.lumpiness.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(13, 0)
+    lastNode.lumpy_size = param
+    del param
+
+    param = lastNode.createDoubleParam("lumpy_height", "lumpy_height")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.lumpiness.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(48.4, 0)
+    lastNode.lumpy_height = param
+    del param
+
+    param = lastNode.createDoubleParam("lumpy_wet", "lumpy_wet")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.lumpiness.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.lumpy_wet = param
+    del param
+
+    param = lastNode.createDoubleParam("lumpy_rough", "lumpy_rough")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.lumpiness.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.lumpy_rough = param
+    del param
+
+    param = lastNode.createGroupParam("burn", "burn")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.burn = param
+    del param
+
+    param = lastNode.createDoubleParam("burn_amt", "burn_amt")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.burn.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(25.2, 0)
+    lastNode.burn_amt = param
+    del param
+
+    param = lastNode.createDoubleParam("burn_edges", "burn_edges")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.burn.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.burn_edges = param
+    del param
+
+    param = lastNode.createGroupParam("melt_", "melt")
+
+    # Add the param to the page
+    lastNode.Bake.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.melt_ = param
+    del param
+
+    param = lastNode.createIntParam("melt_freq", "melt_freq")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.melt_.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8, 0)
+    lastNode.melt_freq = param
+    del param
+
+    param = lastNode.createDoubleParam("melt_amp", "melt_amp")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.melt_.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(20, 0)
+    lastNode.melt_amp = param
     del param
 
     param = lastNode.createGroupParam("mask", "mask")
@@ -196,16 +490,41 @@ def createInstance(app,group):
     lastNode.mask = param
     del param
 
-    param = lastNode.createFileParam("Read3filename", "File")
+    param = lastNode.createBooleanParam("invertMask", "invert Mask")
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.mask.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(True)
+    lastNode.invertMask = param
+    del param
+
+    param = lastNode.createBooleanParam("maskFile", "Mask File Input")
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.mask.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.maskFile = param
+    del param
+
+    param = lastNode.createFileParam("Read3filename", "Mask File")
     param.setSequenceEnabled(True)
 
     # Add the param to the group, no need to add it to the page
     lastNode.mask.addParam(param)
 
     # Set param properties
-    param.setAddNewLine(True)
+    param.setHelp("")
+    param.setAddNewLine(False)
     param.setAnimationEnabled(False)
-    param.setValue("[Project]/../ingredients-db/masks/topping-mask.png")
     lastNode.Read3filename = param
     del param
 
@@ -223,6 +542,7 @@ def createInstance(app,group):
     lastNode.mask.addParam(param)
 
     # Set param properties
+    param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
     lastNode.Transform4translate = param
@@ -236,6 +556,7 @@ def createInstance(app,group):
     lastNode.mask.addParam(param)
 
     # Set param properties
+    param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
     lastNode.Transform4rotate = param
@@ -259,10 +580,11 @@ def createInstance(app,group):
     lastNode.mask.addParam(param)
 
     # Set param properties
+    param.setHelp("")
     param.setAddNewLine(True)
     param.setAnimationEnabled(True)
-    param.setValue(0.9, 0)
-    param.setValue(0.9, 1)
+    param.setValue(0.95, 0)
+    param.setValue(0.95, 1)
     lastNode.Transform4scale = param
     del param
 
@@ -275,7 +597,7 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.SaturationPlugin", 2, group)
     lastNode.setScriptName("Saturation1")
     lastNode.setLabel("Saturation1")
-    lastNode.setPosition(2093, 734)
+    lastNode.setPosition(2083, 437)
     lastNode.setSize(104, 26)
     lastNode.setColor(0.48, 0.66, 1)
     groupSaturation1 = lastNode
@@ -302,31 +624,39 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.MergeIn", 1, group)
     lastNode.setScriptName("In1")
     lastNode.setLabel("In1")
-    lastNode.setPosition(1847, 837)
+    lastNode.setPosition(1837, 543)
     lastNode.setSize(104, 43)
     lastNode.setColor(0.3, 0.37, 0.776)
     groupIn1 = lastNode
 
-    param = lastNode.getParam("mix")
+    param = lastNode.getParam("operation")
     if param is not None:
-        param.setValue(1, 0)
+        param.set("mask")
         del param
 
     del lastNode
     # End of node "In1"
 
-    # Start of node "Grade6"
+    # Start of node "Grade_absorption"
     lastNode = app.createNode("net.sf.openfx.GradePlugin", 2, group)
-    lastNode.setScriptName("Grade6")
-    lastNode.setLabel("Grade6")
-    lastNode.setPosition(2093, 787)
-    lastNode.setSize(104, 26)
+    lastNode.setScriptName("Grade_absorption")
+    lastNode.setLabel("Grade_absorption")
+    lastNode.setPosition(2083, 490)
+    lastNode.setSize(104, 43)
     lastNode.setColor(0.48, 0.66, 1)
-    groupGrade6 = lastNode
+    groupGrade_absorption = lastNode
 
     param = lastNode.getParam("NatronOfxParamProcessA")
     if param is not None:
         param.setValue(True)
+        del param
+
+    param = lastNode.getParam("offset")
+    if param is not None:
+        param.setValue(-0.008000000000000007, 0)
+        param.setValue(-0.008000000000000007, 1)
+        param.setValue(-0.008000000000000007, 2)
+        param.setValue(-0.008000000000000007, 3)
         del param
 
     param = lastNode.getParam("premultChanged")
@@ -335,14 +665,14 @@ def createInstance(app,group):
         del param
 
     del lastNode
-    # End of node "Grade6"
+    # End of node "Grade_absorption"
 
     # Start of node "Clamp1"
     lastNode = app.createNode("net.sf.openfx.Clamp", 2, group)
     lastNode.setScriptName("Clamp1")
     lastNode.setLabel("Clamp1")
-    lastNode.setPosition(2093, 845)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(2083, 549)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.48, 0.66, 1)
     groupClamp1 = lastNode
 
@@ -358,8 +688,8 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.Clamp", 2, group)
     lastNode.setScriptName("Clamp2")
     lastNode.setLabel("Clamp2")
-    lastNode.setPosition(1847, 724)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(1837, 427)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.48, 0.66, 1)
     groupClamp2 = lastNode
 
@@ -371,605 +701,11 @@ def createInstance(app,group):
     del lastNode
     # End of node "Clamp2"
 
-    # Start of node "DropShadow2"
-    lastNode = app.createNode("fr.inria.DropShadow", 1, group)
-    lastNode.setScriptName("DropShadow2")
-    lastNode.setLabel("DropShadow2")
-    lastNode.setPosition(1670, 1123)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.8, 0.5, 0.3)
-    groupDropShadow2 = lastNode
-
-
-    # Create the user parameters
-    lastNode.controls = lastNode.createPageParam("controls", "Controls")
-    param = lastNode.createDoubleParam("shadowAngle", "Angle")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(-360, 0)
-    param.setDisplayMaximum(360, 0)
-    param.setDefaultValue(-45, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(206, 0)
-    lastNode.shadowAngle = param
-    del param
-
-    param = lastNode.createDoubleParam("shadowDist", "Distance")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(2000, 0)
-    param.setDefaultValue(20, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 0)
-    lastNode.shadowDist = param
-    del param
-
-    param = lastNode.createDouble2DParam("shadowBlur", "Bluriness")
-    param.setMinimum(0, 0)
-    param.setMaximum(1000, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(0, 1)
-    param.setMaximum(1000, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    lastNode.shadowBlur = param
-    del param
-
-    param = lastNode.createColorParam("shadowOpacity", "Opacity", True)
-    param.setMinimum(-1.79769e+308, 0)
-    param.setMaximum(1.79769e+308, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(1, 0)
-    param.setDefaultValue(0.5, 0)
-    param.restoreDefaultValue(0)
-    param.setMinimum(-1.79769e+308, 1)
-    param.setMaximum(1.79769e+308, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(1, 1)
-    param.setDefaultValue(0.5, 1)
-    param.restoreDefaultValue(1)
-    param.setMinimum(-1.79769e+308, 2)
-    param.setMaximum(1.79769e+308, 2)
-    param.setDisplayMinimum(0, 2)
-    param.setDisplayMaximum(1, 2)
-    param.setDefaultValue(0.5, 2)
-    param.restoreDefaultValue(2)
-    param.setMinimum(-1.79769e+308, 3)
-    param.setMaximum(1.79769e+308, 3)
-    param.setDisplayMinimum(0, 3)
-    param.setDisplayMaximum(1, 3)
-    param.setDefaultValue(0.5, 3)
-    param.restoreDefaultValue(3)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.502, 0)
-    param.setValue(0.502, 1)
-    param.setValue(0.502, 2)
-    param.setValue(0.502, 3)
-    lastNode.shadowOpacity = param
-    del param
-
-    param = lastNode.createColorParam("shadowColor", "Color", False)
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(1, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(1, 1)
-    param.setMinimum(-2147483648, 2)
-    param.setMaximum(2147483647, 2)
-    param.setDisplayMinimum(0, 2)
-    param.setDisplayMaximum(1, 2)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    lastNode.shadowColor = param
-    del param
-
-    param = lastNode.createBooleanParam("shadowCFS", "Color from source")
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(False)
-    lastNode.shadowCFS = param
-    del param
-
-    param = lastNode.createBooleanParam("shadowOnly", "Shadow only")
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(False)
-    param.setValue(True)
-    lastNode.shadowOnly = param
-    del param
-
-    lastNode.userNatron = lastNode.createPageParam("userNatron", "User")
-    # Refresh the GUI with the newly created parameters
-    lastNode.setPagesOrder(['controls', 'Node', 'Settings', 'userNatron'])
-    lastNode.refreshUserParamsGUI()
-    del lastNode
-    # End of node "DropShadow2"
-
-    groupgroup = groupDropShadow2
-    # Create all nodes in the group
-
-    # Create the parameters of the group node the same way we did for all internal nodes
-    lastNode = groupgroup
-    lastNode.setColor(0.8, 0.5, 0.3)
-
-    # Create the user parameters
-    lastNode.controls = lastNode.createPageParam("controls", "Controls")
-    param = lastNode.createDoubleParam("shadowAngle", "Angle")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(-360, 0)
-    param.setDisplayMaximum(360, 0)
-    param.setDefaultValue(-45, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(206, 0)
-    lastNode.shadowAngle = param
-    del param
-
-    param = lastNode.createDoubleParam("shadowDist", "Distance")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(2000, 0)
-    param.setDefaultValue(20, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 0)
-    lastNode.shadowDist = param
-    del param
-
-    param = lastNode.createDouble2DParam("shadowBlur", "Bluriness")
-    param.setMinimum(0, 0)
-    param.setMaximum(1000, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(0, 1)
-    param.setMaximum(1000, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    lastNode.shadowBlur = param
-    del param
-
-    param = lastNode.createColorParam("shadowOpacity", "Opacity", True)
-    param.setMinimum(-1.79769e+308, 0)
-    param.setMaximum(1.79769e+308, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(1, 0)
-    param.setDefaultValue(0.5, 0)
-    param.restoreDefaultValue(0)
-    param.setMinimum(-1.79769e+308, 1)
-    param.setMaximum(1.79769e+308, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(1, 1)
-    param.setDefaultValue(0.5, 1)
-    param.restoreDefaultValue(1)
-    param.setMinimum(-1.79769e+308, 2)
-    param.setMaximum(1.79769e+308, 2)
-    param.setDisplayMinimum(0, 2)
-    param.setDisplayMaximum(1, 2)
-    param.setDefaultValue(0.5, 2)
-    param.restoreDefaultValue(2)
-    param.setMinimum(-1.79769e+308, 3)
-    param.setMaximum(1.79769e+308, 3)
-    param.setDisplayMinimum(0, 3)
-    param.setDisplayMaximum(1, 3)
-    param.setDefaultValue(0.5, 3)
-    param.restoreDefaultValue(3)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.502, 0)
-    param.setValue(0.502, 1)
-    param.setValue(0.502, 2)
-    param.setValue(0.502, 3)
-    lastNode.shadowOpacity = param
-    del param
-
-    param = lastNode.createColorParam("shadowColor", "Color", False)
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(1, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(1, 1)
-    param.setMinimum(-2147483648, 2)
-    param.setMaximum(2147483647, 2)
-    param.setDisplayMinimum(0, 2)
-    param.setDisplayMaximum(1, 2)
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    lastNode.shadowColor = param
-    del param
-
-    param = lastNode.createBooleanParam("shadowCFS", "Color from source")
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(False)
-    lastNode.shadowCFS = param
-    del param
-
-    param = lastNode.createBooleanParam("shadowOnly", "Shadow only")
-
-    # Add the param to the page
-    lastNode.controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(False)
-    param.setValue(True)
-    lastNode.shadowOnly = param
-    del param
-
-    lastNode.userNatron = lastNode.createPageParam("userNatron", "User")
-    # Refresh the GUI with the newly created parameters
-    lastNode.setPagesOrder(['controls', 'Node', 'Settings', 'userNatron'])
-    lastNode.refreshUserParamsGUI()
-    del lastNode
-
-    # Start of node "Shuffle1"
-    lastNode = app.createNode("net.sf.openfx.ShufflePlugin", 2, groupgroup)
-    lastNode.setScriptName("Shuffle1")
-    lastNode.setLabel("Shuffle1")
-    lastNode.setPosition(759, 87)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.6, 0.24, 0.39)
-    groupgroupShuffle1 = lastNode
-
-    param = lastNode.getParam("outputR")
-    if param is not None:
-        param.set("B.uk.co.thefoundry.OfxImagePlaneColour.R")
-        del param
-
-    param = lastNode.getParam("outputG")
-    if param is not None:
-        param.set("B.uk.co.thefoundry.OfxImagePlaneColour.G")
-        del param
-
-    param = lastNode.getParam("outputB")
-    if param is not None:
-        param.set("B.uk.co.thefoundry.OfxImagePlaneColour.B")
-        del param
-
-    del lastNode
-    # End of node "Shuffle1"
-
-    # Start of node "Transform2"
-    lastNode = app.createNode("net.sf.openfx.TransformPlugin", 1, groupgroup)
-    lastNode.setScriptName("Transform2")
-    lastNode.setLabel("Transform2")
-    lastNode.setPosition(759, 167)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.7, 0.3, 0.1)
-    groupgroupTransform2 = lastNode
-
-    param = lastNode.getParam("translate")
-    if param is not None:
-        param.setValue(-89.87940462991669, 0)
-        param.setValue(-43.83711467890775, 1)
-        del param
-
-    param = lastNode.getParam("center")
-    if param is not None:
-        param.setValue(480, 0)
-        param.setValue(270, 1)
-        del param
-
-    param = lastNode.getParam("transformCenterChanged")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node "Transform2"
-
-    # Start of node "Premult1"
-    lastNode = app.createNode("net.sf.openfx.Premult", 2, groupgroup)
-    lastNode.setScriptName("Premult1")
-    lastNode.setLabel("Premult1")
-    lastNode.setPosition(759, 341)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3, 0.37, 0.776)
-    groupgroupPremult1 = lastNode
-
-    del lastNode
-    # End of node "Premult1"
-
-    # Start of node "Multiply1"
-    lastNode = app.createNode("net.sf.openfx.MultiplyPlugin", 2, groupgroup)
-    lastNode.setScriptName("Multiply1")
-    lastNode.setLabel("Multiply1")
-    lastNode.setPosition(759, -23)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.48, 0.66, 1)
-    groupgroupMultiply1 = lastNode
-
-    param = lastNode.getParam("NatronOfxParamProcessR")
-    if param is not None:
-        param.setValue(False)
-        del param
-
-    param = lastNode.getParam("NatronOfxParamProcessG")
-    if param is not None:
-        param.setValue(False)
-        del param
-
-    param = lastNode.getParam("NatronOfxParamProcessB")
-    if param is not None:
-        param.setValue(False)
-        del param
-
-    param = lastNode.getParam("NatronOfxParamProcessA")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    param = lastNode.getParam("value")
-    if param is not None:
-        param.setValue(0.502, 0)
-        param.setValue(0.502, 1)
-        param.setValue(0.502, 2)
-        param.setValue(0.502, 3)
-        del param
-
-    param = lastNode.getParam("premult")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    param = lastNode.getParam("premultChanged")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node "Multiply1"
-
-    # Start of node "Solid1"
-    lastNode = app.createNode("net.sf.openfx.Solid", 1, groupgroup)
-    lastNode.setScriptName("Solid1")
-    lastNode.setLabel("Solid1")
-    lastNode.setPosition(584, 87)
-    lastNode.setSize(80, 30)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
-    groupgroupSolid1 = lastNode
-
-    param = lastNode.getParam("NatronParamFormatChoice")
-    if param is not None:
-        param.set("PC_Video")
-        del param
-
-    param = lastNode.getParam("size")
-    if param is not None:
-        param.setValue(960, 0)
-        param.setValue(540, 1)
-        del param
-
-    del lastNode
-    # End of node "Solid1"
-
-    # Start of node "InputSource"
-    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
-    lastNode.setScriptName("InputSource")
-    lastNode.setLabel("InputSource")
-    lastNode.setPosition(759, -112)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
-    groupgroupInputSource = lastNode
-
-    del lastNode
-    # End of node "InputSource"
-
-    # Start of node "Output1"
-    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
-    lastNode.setLabel("Output1")
-    lastNode.setPosition(1000, 497)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupgroupOutput1 = lastNode
-
-    del lastNode
-    # End of node "Output1"
-
-    # Start of node "Blur1"
-    lastNode = app.createNode("net.sf.cimg.CImgBlur", 3, groupgroup)
-    lastNode.setScriptName("Blur1")
-    lastNode.setLabel("Blur1")
-    lastNode.setPosition(759, 260)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.8, 0.5, 0.3)
-    groupgroupBlur1 = lastNode
-
-    param = lastNode.getParam("NatronOfxParamProcessA")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node "Blur1"
-
-    # Start of node "Merge1"
-    lastNode = app.createNode("net.sf.openfx.MergePlugin", 1, groupgroup)
-    lastNode.setScriptName("Merge1")
-    lastNode.setLabel("Merge1")
-    lastNode.setPosition(1000, 329)
-    lastNode.setSize(104, 40)
-    lastNode.setColor(0.3, 0.37, 0.776)
-    groupgroupMerge1 = lastNode
-
-    param = lastNode.getParam("maskInvert")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    param = lastNode.getParam("userTextArea")
-    if param is not None:
-        param.setValue("<Natron>(over)</Natron>")
-        del param
-
-    param = lastNode.getParam("disableNode")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node "Merge1"
-
-    # Now that all nodes are created we can connect them together, restore expressions
-    groupgroupShuffle1.connectInput(0, groupgroupSolid1)
-    groupgroupShuffle1.connectInput(1, groupgroupMultiply1)
-    groupgroupTransform2.connectInput(0, groupgroupShuffle1)
-    groupgroupPremult1.connectInput(0, groupgroupBlur1)
-    groupgroupMultiply1.connectInput(0, groupgroupInputSource)
-    groupgroupOutput1.connectInput(0, groupgroupMerge1)
-    groupgroupBlur1.connectInput(0, groupgroupTransform2)
-    groupgroupMerge1.connectInput(0, groupgroupPremult1)
-    groupgroupMerge1.connectInput(1, groupgroupInputSource)
-
-    param = groupgroupShuffle1.getParam("disableNode")
-    groupgroup.getParam("shadowCFS").setAsAlias(param)
-    del param
-    param = groupgroupTransform2.getParam("translate")
-    param.setExpression("cos(radians(thisGroup.shadowAngle.get()))*thisGroup.shadowDist.get()", False, 0)
-    param.setExpression("sin(radians(thisGroup.shadowAngle.get()))*thisGroup.shadowDist.get()", False, 1)
-    del param
-    param = groupgroupMultiply1.getParam("value")
-    groupgroup.getParam("shadowOpacity").setAsAlias(param)
-    del param
-    param = groupgroupSolid1.getParam("color")
-    groupgroup.getParam("shadowColor").setAsAlias(param)
-    del param
-    param = groupgroupBlur1.getParam("size")
-    groupgroup.getParam("shadowBlur").setAsAlias(param)
-    del param
-    param = groupgroupMerge1.getParam("disableNode")
-    groupgroup.getParam("shadowOnly").setAsAlias(param)
-    del param
-
-    param = groupgroup.getParam("shadowDist")
-    param.setExpression("thisGroup.height.get()", False, 0)
-    del param
-
-    # Start of node "t_sauce_1"
-    lastNode = app.createNode("net.sf.openfx.TransformPlugin", 1, group)
-    lastNode.setScriptName("t_sauce_1")
-    lastNode.setLabel("t_sauce_1")
-    lastNode.setPosition(1847, 957)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.7, 0.3, 0.1)
-    groupt_sauce_1 = lastNode
-
-    param = lastNode.getParam("center")
-    if param is not None:
-        param.setValue(1486, 0)
-        param.setValue(1522, 1)
-        del param
-
-    param = lastNode.getParam("transformCenterChanged")
-    if param is not None:
-        param.setValue(True)
-        del param
-
-    del lastNode
-    # End of node "t_sauce_1"
-
     # Start of node "Merge3"
     lastNode = app.createNode("net.sf.openfx.MergePlugin", 1, group)
     lastNode.setScriptName("Merge3")
     lastNode.setLabel("Merge3")
-    lastNode.setPosition(1775, 1349)
+    lastNode.setPosition(3464, 1712)
     lastNode.setSize(104, 43)
     lastNode.setColor(0.3, 0.37, 0.776)
     groupMerge3 = lastNode
@@ -979,11 +715,6 @@ def createInstance(app,group):
         param.set("color-dodge")
         del param
 
-    param = lastNode.getParam("mix")
-    if param is not None:
-        param.setValue(0, 0)
-        del param
-
     del lastNode
     # End of node "Merge3"
 
@@ -991,8 +722,8 @@ def createInstance(app,group):
     lastNode = app.createNode("eu.cimg.EdgeDetect", 4, group)
     lastNode.setScriptName("EdgeDetect1")
     lastNode.setLabel("EdgeDetect1")
-    lastNode.setPosition(2238, 980)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(3772, 1212)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.8, 0.5, 0.3)
     groupEdgeDetect1 = lastNode
 
@@ -1018,8 +749,8 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.GradePlugin", 2, group)
     lastNode.setScriptName("Grade9")
     lastNode.setLabel("Grade9")
-    lastNode.setPosition(2238, 1091)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(3772, 1341)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.48, 0.66, 1)
     groupGrade9 = lastNode
 
@@ -1063,8 +794,8 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.ColorCorrectPlugin", 2, group)
     lastNode.setScriptName("ColorCorrect5")
     lastNode.setLabel("ColorCorrect5")
-    lastNode.setPosition(2245, 1287)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(4291, 1531)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.48, 0.66, 1)
     groupColorCorrect5 = lastNode
 
@@ -1121,10 +852,15 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.MergeOut", 1, group)
     lastNode.setScriptName("Out5")
     lastNode.setLabel("Out5")
-    lastNode.setPosition(2330, 1165)
-    lastNode.setSize(104, 43)
+    lastNode.setPosition(4008, 1427)
+    lastNode.setSize(104, 40)
     lastNode.setColor(0.3, 0.37, 0.776)
     groupOut5 = lastNode
+
+    param = lastNode.getParam("userTextArea")
+    if param is not None:
+        param.setValue("<Natron>(out)</Natron>")
+        del param
 
     del lastNode
     # End of node "Out5"
@@ -1133,7 +869,7 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.Clamp", 2, group)
     lastNode.setScriptName("Clamp3")
     lastNode.setLabel("Clamp3")
-    lastNode.setPosition(1847, 1011)
+    lastNode.setPosition(1837, 735)
     lastNode.setSize(104, 26)
     lastNode.setColor(0.48, 0.66, 1)
     groupClamp3 = lastNode
@@ -1150,8 +886,8 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.cimg.CImgBlur", 4, group)
     lastNode.setScriptName("Blur1")
     lastNode.setLabel("Blur1")
-    lastNode.setPosition(2238, 1036)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(3772, 1278)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.8, 0.5, 0.3)
     groupBlur1 = lastNode
 
@@ -1168,7 +904,7 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.TransformPlugin", 1, group)
     lastNode.setScriptName("Transform6")
     lastNode.setLabel("Transform6")
-    lastNode.setPosition(2069, 1073)
+    lastNode.setPosition(4002, 1226)
     lastNode.setSize(104, 26)
     lastNode.setColor(0.7, 0.3, 0.1)
     groupTransform6 = lastNode
@@ -1182,22 +918,22 @@ def createInstance(app,group):
     del lastNode
     # End of node "Transform6"
 
-    # Start of node "Input1"
+    # Start of node "In"
     lastNode = app.createNode("fr.inria.built-in.Input", 1, group)
-    lastNode.setScriptName("Input1")
-    lastNode.setLabel("Clamp2_Source")
-    lastNode.setPosition(1847, 576)
+    lastNode.setScriptName("In")
+    lastNode.setLabel("In")
+    lastNode.setPosition(1837, 50)
     lastNode.setSize(104, 26)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
-    groupInput1 = lastNode
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupIn = lastNode
 
     del lastNode
-    # End of node "Input1"
+    # End of node "In"
 
     # Start of node "Output1"
     lastNode = app.createNode("fr.inria.built-in.Output", 1, group)
     lastNode.setLabel("Output1")
-    lastNode.setPosition(1468, 2505)
+    lastNode.setPosition(1465, 6233)
     lastNode.setSize(104, 30)
     lastNode.setColor(0.7, 0.7, 0.7)
     groupOutput1 = lastNode
@@ -1209,14 +945,24 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.ConstantPlugin", 1, group)
     lastNode.setScriptName("Constant1")
     lastNode.setLabel("Constant1")
-    lastNode.setPosition(2093, 576)
+    lastNode.setPosition(2083, 279)
     lastNode.setSize(104, 26)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
+    lastNode.setColor(0.3, 0.5, 0.2)
     groupConstant1 = lastNode
 
     param = lastNode.getParam("extent")
     if param is not None:
-        param.set("format")
+        param.set("size")
+        del param
+
+    param = lastNode.getParam("reformat")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("NatronParamFormatChoice")
+    if param is not None:
+        param.set("PC_Video")
         del param
 
     param = lastNode.getParam("NatronParamFormatSize")
@@ -1240,8 +986,8 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.Clamp", 2, group)
     lastNode.setScriptName("Clamp4")
     lastNode.setLabel("Clamp4")
-    lastNode.setPosition(1468, 1981)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(3464, 2094)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.48, 0.66, 1)
     groupClamp4 = lastNode
 
@@ -1257,15 +1003,15 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.TransformPlugin", 1, group)
     lastNode.setScriptName("Transform6_2")
     lastNode.setLabel("Transform6_2")
-    lastNode.setPosition(1847, 1185)
+    lastNode.setPosition(3464, 1219)
     lastNode.setSize(104, 26)
     lastNode.setColor(0.7, 0.3, 0.1)
     groupTransform6_2 = lastNode
 
     param = lastNode.getParam("translate")
     if param is not None:
-        param.setValue(-100, 0)
-        param.setValue(-100, 1)
+        param.setValue(100, 0)
+        param.setValue(100, 1)
         del param
 
     del lastNode
@@ -1275,10 +1021,15 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.MergeOut", 1, group)
     lastNode.setScriptName("Out5_2")
     lastNode.setLabel("Out5_2")
-    lastNode.setPosition(1975, 1272)
-    lastNode.setSize(104, 43)
+    lastNode.setPosition(3573, 1399)
+    lastNode.setSize(104, 40)
     lastNode.setColor(0.3, 0.37, 0.776)
     groupOut5_2 = lastNode
+
+    param = lastNode.getParam("userTextArea")
+    if param is not None:
+        param.setValue("<Natron>(out)</Natron>")
+        del param
 
     del lastNode
     # End of node "Out5_2"
@@ -1287,33 +1038,25 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.ColorCorrectPlugin", 2, group)
     lastNode.setScriptName("ColorCorrect5_2")
     lastNode.setLabel("ColorCorrect5_2")
-    lastNode.setPosition(2186, 1372)
+    lastNode.setPosition(3685, 1504)
     lastNode.setSize(104, 43)
     lastNode.setColor(0.48, 0.66, 1)
     groupColorCorrect5_2 = lastNode
 
-    param = lastNode.getParam("MasterSaturation")
-    if param is not None:
-        param.setValue(1.03, 0)
-        param.setValue(1.03, 1)
-        param.setValue(1.03, 2)
-        param.setValue(1.03, 3)
-        del param
-
     param = lastNode.getParam("MasterGamma")
     if param is not None:
-        param.setValue(1.08, 0)
-        param.setValue(1.08, 1)
-        param.setValue(1.08, 2)
-        param.setValue(1.08, 3)
+        param.setValue(0.88, 0)
+        param.setValue(0.88, 1)
+        param.setValue(0.88, 2)
+        param.setValue(0.88, 3)
         del param
 
     param = lastNode.getParam("MasterGain")
     if param is not None:
-        param.setValue(0.7, 0)
-        param.setValue(0.7, 1)
-        param.setValue(0.7, 2)
-        param.setValue(0.7, 3)
+        param.setValue(0.71, 0)
+        param.setValue(0.71, 1)
+        param.setValue(0.71, 2)
+        param.setValue(0.71, 3)
         del param
 
     param = lastNode.getParam("toneRanges")
@@ -1333,6 +1076,11 @@ def createInstance(app,group):
         param.setValue(True)
         del param
 
+    param = lastNode.getParam("premultChanged")
+    if param is not None:
+        param.setValue(True)
+        del param
+
     param = lastNode.getParam("enableMask_Mask")
     if param is not None:
         param.setValue(True)
@@ -1341,454 +1089,13 @@ def createInstance(app,group):
     del lastNode
     # End of node "ColorCorrect5_2"
 
-    # Start of node "Merge1"
-    lastNode = app.createNode("net.sf.openfx.MergePlugin", 1, group)
-    lastNode.setScriptName("Merge1")
-    lastNode.setLabel("Merge1")
-    lastNode.setPosition(1847, 1471)
-    lastNode.setSize(104, 43)
-    lastNode.setColor(0.3, 0.37, 0.776)
-    groupMerge1 = lastNode
-
-    param = lastNode.getParam("operation")
-    if param is not None:
-        param.set("under")
-        del param
-
-    del lastNode
-    # End of node "Merge1"
-
-    # Start of node "Lerp1_Alpha"
-    lastNode = app.createNode("fr.inria.built-in.Group", 1, group)
-    lastNode.setScriptName("Lerp1_Alpha")
-    lastNode.setLabel("Lerp1 Alpha")
-    lastNode.setPosition(2305, 653)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupLerp1_Alpha = lastNode
-
-
-    # Create the user parameters
-    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
-    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.integer_________ = param
-    del param
-
-    param = lastNode.createIntParam("i_input", "i_input")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    lastNode.i_input = param
-    del param
-
-    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.i_input_range = param
-    del param
-
-    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(1, 0)
-    param.setValue(7, 1)
-    lastNode.i_lerp_range = param
-    del param
-
-    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(0, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(1, 0)
-    lastNode.i_lerp_result = param
-    del param
-
-    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.float________ = param
-    del param
-
-    param = lastNode.createDoubleParam("f_input", "f_input")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(27.2, 0)
-    lastNode.f_input = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.f_input_range = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.02, 1)
-    lastNode.f_lerp_range = param
-    del param
-
-    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.00544, 0)
-    lastNode.f_lerp_result = param
-    del param
-
-    # Refresh the GUI with the newly created parameters
-    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
-    lastNode.refreshUserParamsGUI()
-    del lastNode
-    # End of node "Lerp1_Alpha"
-
-    groupgroup = groupLerp1_Alpha
-    # Create all nodes in the group
-
-    # Create the parameters of the group node the same way we did for all internal nodes
-    lastNode = groupgroup
-    lastNode.setColor(0.7, 0.7, 0.7)
-
-    # Create the user parameters
-    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
-    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.integer_________ = param
-    del param
-
-    param = lastNode.createIntParam("i_input", "i_input")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    lastNode.i_input = param
-    del param
-
-    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.i_input_range = param
-    del param
-
-    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(1, 0)
-    param.setValue(7, 1)
-    lastNode.i_lerp_range = param
-    del param
-
-    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(0, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(1, 0)
-    lastNode.i_lerp_result = param
-    del param
-
-    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.float________ = param
-    del param
-
-    param = lastNode.createDoubleParam("f_input", "f_input")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(27.2, 0)
-    lastNode.f_input = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.f_input_range = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.02, 1)
-    lastNode.f_lerp_range = param
-    del param
-
-    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.00544, 0)
-    lastNode.f_lerp_result = param
-    del param
-
-    # Refresh the GUI with the newly created parameters
-    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
-    lastNode.refreshUserParamsGUI()
-    del lastNode
-
-    # Start of node "Input1"
-    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
-    lastNode.setScriptName("Input1")
-    lastNode.setLabel("Input1")
-    lastNode.setPosition(642, 175)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
-    groupgroupInput1 = lastNode
-
-    del lastNode
-    # End of node "Input1"
-
-    # Start of node "Output1"
-    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
-    lastNode.setLabel("Output1")
-    lastNode.setPosition(642, 247)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupgroupOutput1 = lastNode
-
-    del lastNode
-    # End of node "Output1"
-
-    # Now that all nodes are created we can connect them together, restore expressions
-    groupgroupOutput1.connectInput(0, groupgroupInput1)
-
-    param = groupgroup.getParam("i_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
-    del param
-    param = groupgroup.getParam("f_input")
-    param.setExpression("thisGroup.chunkiness.get()", False, 0)
-    del param
-    param = groupgroup.getParam("f_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
-    del param
-
     # Start of node "Plasma2"
     lastNode = app.createNode("net.sf.cimg.CImgPlasma", 2, group)
     lastNode.setScriptName("Plasma2")
     lastNode.setLabel("Plasma2")
-    lastNode.setPosition(2093, 658)
+    lastNode.setPosition(2083, 361)
     lastNode.setSize(104, 26)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
+    lastNode.setColor(0.3, 0.5, 0.2)
     groupPlasma2 = lastNode
 
     param = lastNode.getParam("NatronOfxParamProcessA")
@@ -1798,17 +1105,17 @@ def createInstance(app,group):
 
     param = lastNode.getParam("alpha")
     if param is not None:
-        param.setValue(0.00544, 0)
+        param.setValue(0.00104, 0)
         del param
 
     param = lastNode.getParam("beta")
     if param is not None:
-        param.setValue(0.083, 0)
+        param.setValue(0.022, 0)
         del param
 
     param = lastNode.getParam("scale")
     if param is not None:
-        param.setValue(7, 0)
+        param.setValue(8, 0)
         del param
 
     param = lastNode.getParam("premult")
@@ -1819,458 +1126,12 @@ def createInstance(app,group):
     del lastNode
     # End of node "Plasma2"
 
-    # Start of node "Lerp2_Beta"
-    lastNode = app.createNode("fr.inria.built-in.Group", 1, group)
-    lastNode.setScriptName("Lerp2_Beta")
-    lastNode.setLabel("Lerp2 Beta")
-    lastNode.setPosition(2309, 751)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupLerp2_Beta = lastNode
-
-
-    # Create the user parameters
-    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
-    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.integer_________ = param
-    del param
-
-    param = lastNode.createIntParam("i_input", "i_input")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 0)
-    lastNode.i_input = param
-    del param
-
-    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.i_input_range = param
-    del param
-
-    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(1, 0)
-    param.setValue(7, 1)
-    lastNode.i_lerp_range = param
-    del param
-
-    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(0, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(7, 0)
-    lastNode.i_lerp_result = param
-    del param
-
-    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.float________ = param
-    del param
-
-    param = lastNode.createDoubleParam("f_input", "f_input")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(16.6, 0)
-    lastNode.f_input = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.f_input_range = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.5, 1)
-    lastNode.f_lerp_range = param
-    del param
-
-    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.083, 0)
-    lastNode.f_lerp_result = param
-    del param
-
-    # Refresh the GUI with the newly created parameters
-    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
-    lastNode.refreshUserParamsGUI()
-    del lastNode
-    # End of node "Lerp2_Beta"
-
-    groupgroup = groupLerp2_Beta
-    # Create all nodes in the group
-
-    # Create the parameters of the group node the same way we did for all internal nodes
-    lastNode = groupgroup
-    lastNode.setColor(0.7, 0.7, 0.7)
-
-    # Create the user parameters
-    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
-    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.integer_________ = param
-    del param
-
-    param = lastNode.createIntParam("i_input", "i_input")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 0)
-    lastNode.i_input = param
-    del param
-
-    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.i_input_range = param
-    del param
-
-    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-    param.setDefaultValue(0, 1)
-    param.restoreDefaultValue(1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(1, 0)
-    param.setValue(7, 1)
-    lastNode.i_lerp_range = param
-    del param
-
-    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(0, 0)
-    param.setDefaultValue(0, 0)
-    param.restoreDefaultValue(0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(7, 0)
-    lastNode.i_lerp_result = param
-    del param
-
-    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setPersistent(False)
-    param.setEvaluateOnChange(False)
-    lastNode.float________ = param
-    del param
-
-    param = lastNode.createDoubleParam("f_input", "f_input")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(16.6, 0)
-    lastNode.f_input = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(100, 1)
-    lastNode.f_input_range = param
-    del param
-
-    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-    param.setMinimum(-2147483648, 1)
-    param.setMaximum(2147483647, 1)
-    param.setDisplayMinimum(0, 1)
-    param.setDisplayMaximum(100, 1)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.5, 1)
-    lastNode.f_lerp_range = param
-    del param
-
-    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
-    param.setMinimum(-2147483648, 0)
-    param.setMaximum(2147483647, 0)
-    param.setDisplayMinimum(0, 0)
-    param.setDisplayMaximum(100, 0)
-
-    # Add the param to the page
-    lastNode.Controls.addParam(param)
-
-    # Set param properties
-    param.setHelp("")
-    param.setAddNewLine(True)
-    param.setAnimationEnabled(True)
-    param.setValue(0.083, 0)
-    lastNode.f_lerp_result = param
-    del param
-
-    # Refresh the GUI with the newly created parameters
-    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
-    lastNode.refreshUserParamsGUI()
-    del lastNode
-
-    # Start of node "Input1"
-    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
-    lastNode.setScriptName("Input1")
-    lastNode.setLabel("Input1")
-    lastNode.setPosition(642, 175)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
-    groupgroupInput1 = lastNode
-
-    del lastNode
-    # End of node "Input1"
-
-    # Start of node "Output1"
-    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
-    lastNode.setLabel("Output1")
-    lastNode.setPosition(642, 247)
-    lastNode.setSize(104, 30)
-    lastNode.setColor(0.7, 0.7, 0.7)
-    groupgroupOutput1 = lastNode
-
-    del lastNode
-    # End of node "Output1"
-
-    # Now that all nodes are created we can connect them together, restore expressions
-    groupgroupOutput1.connectInput(0, groupgroupInput1)
-
-    param = groupgroup.getParam("i_input")
-    param.setExpression("thisGroup.thickness.get()", False, 0)
-    del param
-    param = groupgroup.getParam("i_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
-    del param
-    param = groupgroup.getParam("f_input")
-    param.setExpression("thisGroup.spread.get()", False, 0)
-    del param
-    param = groupgroup.getParam("f_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
-    del param
-
-    # Start of node "Plasma3"
-    lastNode = app.createNode("net.sf.cimg.CImgPlasma", 2, group)
-    lastNode.setScriptName("Plasma3")
-    lastNode.setLabel("Plasma3")
-    lastNode.setPosition(2689, 660)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
-    groupPlasma3 = lastNode
-
-    param = lastNode.getParam("alpha")
-    if param is not None:
-        param.setValue(0.02, 0)
-        del param
-
-    del lastNode
-    # End of node "Plasma3"
-
     # Start of node "EdgeExtend1"
     lastNode = app.createNode("eu.cimg.EdgeExtend", 4, group)
     lastNode.setScriptName("EdgeExtend1")
     lastNode.setLabel("EdgeExtend1")
-    lastNode.setPosition(2826, 1566)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(4454, 1718)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.8, 0.5, 0.3)
     groupEdgeExtend1 = lastNode
 
@@ -2291,10 +1152,15 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.MergeOut", 1, group)
     lastNode.setScriptName("Out1")
     lastNode.setLabel("Out1")
-    lastNode.setPosition(2646, 1736)
-    lastNode.setSize(104, 43)
+    lastNode.setPosition(4579, 1864)
+    lastNode.setSize(104, 40)
     lastNode.setColor(0.3, 0.37, 0.776)
     groupOut1 = lastNode
+
+    param = lastNode.getParam("userTextArea")
+    if param is not None:
+        param.setValue("<Natron>(out)</Natron>")
+        del param
 
     del lastNode
     # End of node "Out1"
@@ -2303,7 +1169,7 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.MultiplyPlugin", 2, group)
     lastNode.setScriptName("Multiply1")
     lastNode.setLabel("Multiply1")
-    lastNode.setPosition(2470, 1883)
+    lastNode.setPosition(4254, 1996)
     lastNode.setSize(104, 26)
     lastNode.setColor(0.48, 0.66, 1)
     groupMultiply1 = lastNode
@@ -2326,11 +1192,6 @@ def createInstance(app,group):
         param.setValue(True)
         del param
 
-    param = lastNode.getParam("enableMask_Mask")
-    if param is not None:
-        param.setValue(True)
-        del param
-
     del lastNode
     # End of node "Multiply1"
 
@@ -2338,8 +1199,8 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.cimg.CImgErode", 2, group)
     lastNode.setScriptName("Erode1")
     lastNode.setLabel("Erode1")
-    lastNode.setPosition(2502, 1595)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(4674, 1718)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.8, 0.5, 0.3)
     groupErode1 = lastNode
 
@@ -2357,24 +1218,12 @@ def createInstance(app,group):
     del lastNode
     # End of node "Erode1"
 
-    # Start of node "Multiply2"
-    lastNode = app.createNode("net.sf.openfx.MergeMultiply", 1, group)
-    lastNode.setScriptName("Multiply2")
-    lastNode.setLabel("Multiply2")
-    lastNode.setPosition(1847, 1823)
-    lastNode.setSize(104, 43)
-    lastNode.setColor(0.3, 0.37, 0.776)
-    groupMultiply2 = lastNode
-
-    del lastNode
-    # End of node "Multiply2"
-
     # Start of node "Multiply3"
     lastNode = app.createNode("net.sf.openfx.MultiplyPlugin", 2, group)
     lastNode.setScriptName("Multiply3")
     lastNode.setLabel("Multiply3")
-    lastNode.setPosition(2186, 1789)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(3685, 2084)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.48, 0.66, 1)
     groupMultiply3 = lastNode
 
@@ -2408,9 +1257,9 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.cimg.CImgPlasma", 2, group)
     lastNode.setScriptName("Plasma1")
     lastNode.setLabel("Plasma1")
-    lastNode.setPosition(2373, 1710)
-    lastNode.setSize(104, 26)
-    lastNode.setColor(0.3098, 0.5216, 0.2)
+    lastNode.setPosition(4308, 1838)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
     groupPlasma1 = lastNode
 
     param = lastNode.getParam("NatronOfxParamProcessA")
@@ -2435,44 +1284,19 @@ def createInstance(app,group):
     lastNode = app.createNode("fr.inria.built-in.Read", 1, group)
     lastNode.setScriptName("ReadMask")
     lastNode.setLabel("ReadMask")
-    lastNode.setPosition(1069, 2044)
+    lastNode.setPosition(576, 1754)
     lastNode.setSize(128, 78)
     lastNode.setColor(0.7, 0.7, 0.7)
     groupReadMask = lastNode
 
-    param = lastNode.getParam("decodingPluginID")
-    if param is not None:
-        param.setValue("fr.inria.openfx.ReadPNG")
-        del param
-
-    param = lastNode.getParam("filename")
-    if param is not None:
-        param.setValue("[Project]/../ingredients-db/masks/topping-mask.png")
-        del param
-
-    param = lastNode.getParam("lastFrame")
-    if param is not None:
-        param.setValue(10000, 0)
-        del param
-
-    param = lastNode.getParam("timeDomainUserEdited")
+    param = lastNode.getParam("disableNode")
     if param is not None:
         param.setValue(True)
         del param
 
-    param = lastNode.getParam("filePremult")
+    param = lastNode.getParam("filename")
     if param is not None:
-        param.set("opaque")
-        del param
-
-    param = lastNode.getParam("outputPremult")
-    if param is not None:
-        param.set("opaque")
-        del param
-
-    param = lastNode.getParam("outputComponents")
-    if param is not None:
-        param.set("RGB")
+        param.setValue("")
         del param
 
     param = lastNode.getParam("ParamExistingInstance")
@@ -2487,15 +1311,15 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.TransformPlugin", 1, group)
     lastNode.setScriptName("TransformMask")
     lastNode.setLabel("TransformMask")
-    lastNode.setPosition(1081, 2257)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(588, 1952)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.7, 0.3, 0.1)
     groupTransformMask = lastNode
 
     param = lastNode.getParam("scale")
     if param is not None:
-        param.setValue(0.9, 0)
-        param.setValue(0.9, 1)
+        param.setValue(0.95, 0)
+        param.setValue(0.95, 1)
         del param
 
     del lastNode
@@ -2505,8 +1329,8 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.ShufflePlugin", 3, group)
     lastNode.setScriptName("ShuffleMask")
     lastNode.setLabel("ShuffleMask")
-    lastNode.setPosition(1081, 2194)
-    lastNode.setSize(104, 26)
+    lastNode.setPosition(588, 1889)
+    lastNode.setSize(104, 30)
     lastNode.setColor(0.6, 0.24, 0.39)
     groupShuffleMask = lastNode
 
@@ -2527,7 +1351,7 @@ def createInstance(app,group):
     lastNode = app.createNode("net.sf.openfx.MultiplyPlugin", 2, group)
     lastNode.setScriptName("MultiplyMask")
     lastNode.setLabel("MultiplyMask")
-    lastNode.setPosition(1468, 2266)
+    lastNode.setPosition(1536, 2080)
     lastNode.setSize(104, 26)
     lastNode.setColor(0.48, 0.66, 1)
     groupMultiplyMask = lastNode
@@ -2560,98 +1384,6958 @@ def createInstance(app,group):
         param.setValue(True)
         del param
 
+    param = lastNode.getParam("disableNode")
+    if param is not None:
+        param.setValue(True)
+        del param
+
     del lastNode
     # End of node "MultiplyMask"
 
+    # Start of node "Dot1"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot1")
+    lastNode.setLabel("Dot1")
+    lastNode.setPosition(3509, 1074)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot1 = lastNode
+
+    del lastNode
+    # End of node "Dot1"
+
+    # Start of node "Dot2"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot2")
+    lastNode.setLabel("Dot2")
+    lastNode.setPosition(4336, 1074)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot2 = lastNode
+
+    del lastNode
+    # End of node "Dot2"
+
+    # Start of node "Premult1"
+    lastNode = app.createNode("net.sf.openfx.Premult", 2, group)
+    lastNode.setScriptName("Premult1")
+    lastNode.setLabel("Premult1")
+    lastNode.setPosition(1466, 4288)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupPremult1 = lastNode
+
+    del lastNode
+    # End of node "Premult1"
+
+    # Start of node "LumpySpec"
+    lastNode = app.createNode("eu.gmic.ReliefLight", 1, group)
+    lastNode.setScriptName("LumpySpec")
+    lastNode.setLabel("LumpySpec")
+    lastNode.setPosition(1544, 2840)
+    lastNode.setSize(80, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    lastNode.addUserPlane("wet", ["R","G","B","A"])
+    groupLumpySpec = lastNode
+
+    param = lastNode.getParam("Ambient_Lightness")
+    if param is not None:
+        param.setValue(2, 0)
+        del param
+
+    param = lastNode.getParam("Specular_Lightness")
+    if param is not None:
+        param.setValue(0.05, 0)
+        del param
+
+    param = lastNode.getParam("Specular_Size")
+    if param is not None:
+        param.setValue(0.11, 0)
+        del param
+
+    param = lastNode.getParam("Darkness")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("Light_Smoothness")
+    if param is not None:
+        param.setValue(0.05, 0)
+        del param
+
+    param = lastNode.getParam("XYLight")
+    if param is not None:
+        param.setValue(4100, 0)
+        param.setValue(2600, 1)
+        del param
+
+    param = lastNode.getParam("ZLight")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("ZScale")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessA")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    del lastNode
+    # End of node "LumpySpec"
+
+    # Start of node "Lumpiness"
+    lastNode = app.createNode("net.sf.openfx.SeGrain", 1, group)
+    lastNode.setScriptName("Lumpiness")
+    lastNode.setLabel("Lumpiness")
+    lastNode.setPosition(1544, 2450)
+    lastNode.setSize(80, 43)
+    lastNode.setColor(0.75, 0.75, 0.75)
+    groupLumpiness = lastNode
+
+    param = lastNode.getParam("grainSizeAll")
+    if param is not None:
+        param.setValue(8.25, 0)
+        del param
+
+    param = lastNode.getParam("grainSizeRed")
+    if param is not None:
+        param.setValue(10, 0)
+        del param
+
+    param = lastNode.getParam("grainSizeGreen")
+    if param is not None:
+        param.setValue(10, 0)
+        del param
+
+    param = lastNode.getParam("grainSizeBlue")
+    if param is not None:
+        param.setValue(10, 0)
+        del param
+
+    param = lastNode.getParam("grainIrregularityRed")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("grainIrregularityGreen")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("grainIrregularityBlue")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("grainIntensityRed")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("grainIntensityGreen")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("grainIntensityBlue")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("colorCorr")
+    if param is not None:
+        param.setValue(0.495, 0)
+        del param
+
+    param = lastNode.getParam("enableMask_Mask")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Lumpiness"
+
+    # Start of node "LumpySpecMix"
+    lastNode = app.createNode("net.sf.openfx.MergePlugin", 1, group)
+    lastNode.setScriptName("LumpySpecMix")
+    lastNode.setLabel("LumpySpecMix")
+    lastNode.setPosition(2050, 3725)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupLumpySpecMix = lastNode
+
+    param = lastNode.getParam("operation")
+    if param is not None:
+        param.set("atop")
+        del param
+
+    param = lastNode.getParam("mix")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    del lastNode
+    # End of node "LumpySpecMix"
+
+    # Start of node "Premult2"
+    lastNode = app.createNode("net.sf.openfx.Premult", 2, group)
+    lastNode.setScriptName("Premult2")
+    lastNode.setLabel("Premult2")
+    lastNode.setPosition(1856, 3348)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupPremult2 = lastNode
+
+    param = lastNode.getParam("disableNode")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Premult2"
+
+    # Start of node "LumpyRoughness"
+    lastNode = app.createNode("net.sf.cimg.CImgBlur", 4, group)
+    lastNode.setScriptName("LumpyRoughness")
+    lastNode.setLabel("LumpyRoughness")
+    lastNode.setPosition(1856, 3416)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.8, 0.5, 0.3)
+    groupLumpyRoughness = lastNode
+
+    param = lastNode.getParam("NatronOfxParamProcessA")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("size")
+    if param is not None:
+        param.setValue(0, 0)
+        param.setValue(0, 1)
+        del param
+
+    del lastNode
+    # End of node "LumpyRoughness"
+
+    # Start of node "LumpyDelta"
+    lastNode = app.createNode("net.sf.openfx.ColorCorrectPlugin", 2, group)
+    lastNode.setScriptName("LumpyDelta")
+    lastNode.setLabel("LumpyDelta")
+    lastNode.setPosition(1532, 2717)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupLumpyDelta = lastNode
+
+    param = lastNode.getParam("NatronOfxParamProcessA")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("MasterGamma")
+    if param is not None:
+        param.setValue(0.42, 0)
+        param.setValue(0.42, 1)
+        param.setValue(0.42, 2)
+        param.setValue(0.42, 3)
+        del param
+
+    param = lastNode.getParam("MasterGain")
+    if param is not None:
+        param.setValue(0.34, 0)
+        param.setValue(0.34, 1)
+        param.setValue(0.34, 2)
+        param.setValue(0.34, 3)
+        del param
+
+    param = lastNode.getParam("MidtonesGain")
+    if param is not None:
+        param.setValue(1.59, 0)
+        param.setValue(1.59, 1)
+        param.setValue(1.59, 2)
+        param.setValue(1.59, 3)
+        del param
+
+    param = lastNode.getParam("HighlightsGain")
+    if param is not None:
+        param.setValue(1.42, 0)
+        param.setValue(1.42, 1)
+        param.setValue(1.42, 2)
+        param.setValue(1.42, 3)
+        del param
+
+    param = lastNode.getParam("toneRanges")
+    if param is not None:
+        param.setCurveColor(0, 0.6, 0.4, 0.6)
+        param.deleteAllControlPoints(0)
+        param.addControlPoint(0, 0, 1, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.addControlPoint(0, 0.09, 0, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.setCurveColor(1, 0.8, 0.7, 0.6)
+        param.deleteAllControlPoints(1)
+        param.addControlPoint(1, 0.5, 0, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.addControlPoint(1, 1, 1, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        del param
+
+    param = lastNode.getParam("maskInvert")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("premultChanged")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("enableMask_Mask")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "LumpyDelta"
+
+    # Start of node "LumpyHeight"
+    lastNode = app.createNode("net.sf.openfx.GradePlugin", 2, group)
+    lastNode.setScriptName("LumpyHeight")
+    lastNode.setLabel("LumpyHeight")
+    lastNode.setPosition(1304, 2712)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupLumpyHeight = lastNode
+
+    param = lastNode.getParam("NatronOfxParamProcessR")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessG")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessB")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessA")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("blackPoint")
+    if param is not None:
+        param.setValue(-0.464, 0)
+        param.setValue(-0.464, 1)
+        param.setValue(-0.464, 2)
+        param.setValue(-0.464, 3)
+        del param
+
+    param = lastNode.getParam("whitePoint")
+    if param is not None:
+        param.setValue(0.98, 0)
+        param.setValue(0.98, 1)
+        param.setValue(0.98, 2)
+        param.setValue(0.98, 3)
+        del param
+
+    param = lastNode.getParam("black")
+    if param is not None:
+        param.setValue(-0.09, 0)
+        param.setValue(-0.09, 1)
+        param.setValue(-0.09, 2)
+        param.setValue(-0.09, 3)
+        del param
+
+    param = lastNode.getParam("white")
+    if param is not None:
+        param.setValue(1.05, 0)
+        param.setValue(1.05, 1)
+        param.setValue(1.05, 2)
+        param.setValue(1.05, 3)
+        del param
+
+    param = lastNode.getParam("multiply")
+    if param is not None:
+        param.setValue(1.02, 0)
+        param.setValue(1.02, 1)
+        param.setValue(1.02, 2)
+        param.setValue(1.02, 3)
+        del param
+
+    param = lastNode.getParam("gamma")
+    if param is not None:
+        param.setValue(0.2, 0)
+        param.setValue(0.2, 1)
+        param.setValue(0.2, 2)
+        param.setValue(0.2, 3)
+        del param
+
+    param = lastNode.getParam("mix")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("premultChanged")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "LumpyHeight"
+
+    # Start of node "LumpyKey"
+    lastNode = app.createNode("net.sf.openfx.KeyerPlugin", 1, group)
+    lastNode.setScriptName("LumpyKey")
+    lastNode.setLabel("LumpyKey")
+    lastNode.setPosition(1369, 2540)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0, 1, 0)
+    groupLumpyKey = lastNode
+
+    param = lastNode.getParam("luminanceMath")
+    if param is not None:
+        param.set("max")
+        del param
+
+    param = lastNode.getParam("softnessLower")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("center")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("softnessUpper")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    del lastNode
+    # End of node "LumpyKey"
+
+    # Start of node "LumpSpecGrain"
+    lastNode = app.createNode("net.sf.openfx.SeGrain", 1, group)
+    lastNode.setScriptName("LumpSpecGrain")
+    lastNode.setLabel("LumpSpecGrain")
+    lastNode.setPosition(1654, 2911)
+    lastNode.setSize(80, 43)
+    lastNode.setColor(0.75, 0.75, 0.75)
+    groupLumpSpecGrain = lastNode
+
+    param = lastNode.getParam("grainSizeAll")
+    if param is not None:
+        param.setValue(8.25, 0)
+        del param
+
+    param = lastNode.getParam("grainSizeRed")
+    if param is not None:
+        param.setValue(10, 0)
+        del param
+
+    param = lastNode.getParam("grainSizeGreen")
+    if param is not None:
+        param.setValue(10, 0)
+        del param
+
+    param = lastNode.getParam("grainSizeBlue")
+    if param is not None:
+        param.setValue(10, 0)
+        del param
+
+    param = lastNode.getParam("grainIrregularityRed")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("grainIrregularityGreen")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("grainIrregularityBlue")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("grainIntensityRed")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("grainIntensityGreen")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("grainIntensityBlue")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("colorCorr")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    param = lastNode.getParam("enableMask_Mask")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "LumpSpecGrain"
+
+    # Start of node "Dot4"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot4")
+    lastNode.setLabel("Dot4")
+    lastNode.setPosition(1242, 2395)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot4 = lastNode
+
+    del lastNode
+    # End of node "Dot4"
+
+    # Start of node "Dot5"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot5")
+    lastNode.setLabel("Dot5")
+    lastNode.setPosition(1242, 2925)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot5 = lastNode
+
+    del lastNode
+    # End of node "Dot5"
+
+    # Start of node "LumpyWet"
+    lastNode = app.createNode("net.sf.openfx.MergePlus", 1, group)
+    lastNode.setScriptName("LumpyWet")
+    lastNode.setLabel("LumpyWet")
+    lastNode.setPosition(1856, 3150)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupLumpyWet = lastNode
+
+    param = lastNode.getParam("operation")
+    if param is not None:
+        param.set("average")
+        del param
+
+    del lastNode
+    # End of node "LumpyWet"
+
+    # Start of node "Clamp1_2"
+    lastNode = app.createNode("net.sf.openfx.Clamp", 2, group)
+    lastNode.setScriptName("Clamp1_2")
+    lastNode.setLabel("Clamp1_2")
+    lastNode.setPosition(1856, 3526)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupClamp1_2 = lastNode
+
+    param = lastNode.getParam("premult")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Clamp1_2"
+
+    # Start of node "Dot3"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot3")
+    lastNode.setLabel("Dot3")
+    lastNode.setPosition(1577, 2395)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot3 = lastNode
+
+    del lastNode
+    # End of node "Dot3"
+
+    # Start of node "Grade7_3"
+    lastNode = app.createNode("net.sf.openfx.GradePlugin", 2, group)
+    lastNode.setScriptName("Grade7_3")
+    lastNode.setLabel("Grade7_3")
+    lastNode.setPosition(445, 2604)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupGrade7_3 = lastNode
+
+    param = lastNode.getParam("NatronOfxParamProcessR")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessG")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessB")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessA")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("whitePoint")
+    if param is not None:
+        param.setValue(0.71, 0)
+        param.setValue(0.71, 1)
+        param.setValue(0.71, 2)
+        param.setValue(0.71, 3)
+        del param
+
+    del lastNode
+    # End of node "Grade7_3"
+
+    # Start of node "ColorCorrect5_3"
+    lastNode = app.createNode("net.sf.openfx.ColorCorrectPlugin", 2, group)
+    lastNode.setScriptName("ColorCorrect5_3")
+    lastNode.setLabel("ColorCorrect5_3")
+    lastNode.setPosition(445, 2655)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupColorCorrect5_3 = lastNode
+
+    param = lastNode.getParam("MasterGamma")
+    if param is not None:
+        param.setValue(0.61, 0)
+        param.setValue(0.61, 1)
+        param.setValue(0.61, 2)
+        param.setValue(0.61, 3)
+        del param
+
+    param = lastNode.getParam("MasterGain")
+    if param is not None:
+        param.setValue(0.479, 0)
+        param.setValue(0.479, 1)
+        param.setValue(0.479, 2)
+        param.setValue(0.479, 3)
+        del param
+
+    param = lastNode.getParam("toneRanges")
+    if param is not None:
+        param.setCurveColor(0, 0.6, 0.4, 0.6)
+        param.deleteAllControlPoints(0)
+        param.addControlPoint(0, 0, 1, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.addControlPoint(0, 0.09, 0, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.setCurveColor(1, 0.8, 0.7, 0.6)
+        param.deleteAllControlPoints(1)
+        param.addControlPoint(1, 0.5, 0, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.addControlPoint(1, 1, 1, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        del param
+
+    param = lastNode.getParam("premultChanged")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "ColorCorrect5_3"
+
+    # Start of node "Dot6"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot6")
+    lastNode.setLabel("Dot6")
+    lastNode.setPosition(1741, 2395)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot6 = lastNode
+
+    del lastNode
+    # End of node "Dot6"
+
+    # Start of node "Dot7"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot7")
+    lastNode.setLabel("Dot7")
+    lastNode.setPosition(1901, 2395)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot7 = lastNode
+
+    del lastNode
+    # End of node "Dot7"
+
+    # Start of node "LumpyMix"
+    lastNode = app.createNode("net.sf.openfx.MergePlugin", 1, group)
+    lastNode.setScriptName("LumpyMix")
+    lastNode.setLabel("LumpyMix")
+    lastNode.setPosition(1466, 4156)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupLumpyMix = lastNode
+
+    param = lastNode.getParam("operation")
+    if param is not None:
+        param.set("overlay")
+        del param
+
+    param = lastNode.getParam("mix")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    del lastNode
+    # End of node "LumpyMix"
+
+    # Start of node "Dot8"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot8")
+    lastNode.setLabel("Dot8")
+    lastNode.setPosition(2095, 2783)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot8 = lastNode
+
+    del lastNode
+    # End of node "Dot8"
+
+    # Start of node "Lerp_LspecMix"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lerp_LspecMix")
+    lastNode.setLabel("Lerp_LspecMix")
+    lastNode.setPosition(2239, 3737)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLerp_LspecMix = lastNode
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.integer_________ = param
+    del param
+
+    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.float________ = param
+    del param
+
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(0, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lerp_LspecMix"
+
+    groupgroup = groupLerp_LspecMix
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.integer_________ = param
+    del param
+
+    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.float________ = param
+    del param
+
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(0, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_wet.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Lerp_Lrough"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lerp_Lrough")
+    lastNode.setLabel("Lerp_Lrough")
+    lastNode.setPosition(2239, 3421)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLerp_Lrough = lastNode
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.integer_________ = param
+    del param
+
+    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.float________ = param
+    del param
+
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(0, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(15, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lerp_Lrough"
+
+    groupgroup = groupLerp_Lrough
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createSeparatorParam("integer_________", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.integer_________ = param
+    del param
+
+    param = lastNode.createSeparatorParam("float________", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setPersistent(False)
+    param.setEvaluateOnChange(False)
+    lastNode.float________ = param
+    del param
+
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(0, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(15, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_rough.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "SpecColorMix"
+    lastNode = app.createNode("net.sf.openfx.GradePlugin", 2, group)
+    lastNode.setScriptName("SpecColorMix")
+    lastNode.setLabel("SpecColorMix")
+    lastNode.setPosition(1306, 3155)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupSpecColorMix = lastNode
+
+    param = lastNode.getParam("NatronOfxParamProcessA")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("premultChanged")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "SpecColorMix"
+
+    # Start of node "Out2"
+    lastNode = app.createNode("net.sf.openfx.MergeOut", 1, group)
+    lastNode.setScriptName("Out2")
+    lastNode.setLabel("Out2")
+    lastNode.setPosition(1642, 3150)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupOut2 = lastNode
+
+    param = lastNode.getParam("operation")
+    if param is not None:
+        param.set("multiply")
+        del param
+
+    del lastNode
+    # End of node "Out2"
+
+    # Start of node "Blur2"
+    lastNode = app.createNode("net.sf.cimg.CImgBlur", 4, group)
+    lastNode.setScriptName("Blur2")
+    lastNode.setLabel("Blur2")
+    lastNode.setPosition(1304, 2974)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.8, 0.5, 0.3)
+    groupBlur2 = lastNode
+
+    param = lastNode.getParam("size")
+    if param is not None:
+        param.setValue(19.2, 0)
+        param.setValue(19.2, 1)
+        del param
+
+    param = lastNode.getParam("disableNode")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Blur2"
+
+    # Start of node "Keyer1"
+    lastNode = app.createNode("net.sf.openfx.KeyerPlugin", 1, group)
+    lastNode.setScriptName("Keyer1")
+    lastNode.setLabel("Keyer1")
+    lastNode.setPosition(1642, 3020)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0, 1, 0)
+    groupKeyer1 = lastNode
+
+    param = lastNode.getParam("softnessLower")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("center")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    param = lastNode.getParam("softnessUpper")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    del lastNode
+    # End of node "Keyer1"
+
+    # Start of node "Shuffle1"
+    lastNode = app.createNode("net.sf.openfx.ShufflePlugin", 3, group)
+    lastNode.setScriptName("Shuffle1")
+    lastNode.setLabel("Shuffle1")
+    lastNode.setPosition(1304, 2808)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.6, 0.24, 0.39)
+    groupShuffle1 = lastNode
+
+    param = lastNode.getParam("outputR")
+    if param is not None:
+        param.set("A.uk.co.thefoundry.OfxImagePlaneColour.A")
+        del param
+
+    param = lastNode.getParam("outputG")
+    if param is not None:
+        param.set("A.uk.co.thefoundry.OfxImagePlaneColour.A")
+        del param
+
+    param = lastNode.getParam("outputB")
+    if param is not None:
+        param.set("A.uk.co.thefoundry.OfxImagePlaneColour.A")
+        del param
+
+    param = lastNode.getParam("outputA")
+    if param is not None:
+        param.set("A.uk.co.thefoundry.OfxImagePlaneColour.A")
+        del param
+
+    del lastNode
+    # End of node "Shuffle1"
+
+    # Start of node "Multiply4"
+    lastNode = app.createNode("net.sf.openfx.MultiplyPlugin", 2, group)
+    lastNode.setScriptName("Multiply4")
+    lastNode.setLabel("Multiply4")
+    lastNode.setPosition(2057, 4047)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupMultiply4 = lastNode
+
+    param = lastNode.getParam("NatronOfxParamProcessG")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessB")
+    if param is not None:
+        param.setValue(False)
+        del param
+
+    param = lastNode.getParam("NatronOfxParamProcessA")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("value")
+    if param is not None:
+        param.setValue(0, 0)
+        param.setValue(0, 1)
+        param.setValue(0, 2)
+        param.setValue(0, 3)
+        del param
+
+    param = lastNode.getParam("maskInvert")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("mix")
+    if param is not None:
+        param.setValue(0.039, 0)
+        del param
+
+    param = lastNode.getParam("enableMask_Mask")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Multiply4"
+
+    # Start of node "Unpremult1"
+    lastNode = app.createNode("net.sf.openfx.Unpremult", 2, group)
+    lastNode.setScriptName("Unpremult1")
+    lastNode.setLabel("Unpremult1")
+    lastNode.setPosition(2057, 3850)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupUnpremult1 = lastNode
+
+    param = lastNode.getParam("disableNode")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Unpremult1"
+
+    # Start of node "Premult3"
+    lastNode = app.createNode("net.sf.openfx.Premult", 2, group)
+    lastNode.setScriptName("Premult3")
+    lastNode.setLabel("Premult3")
+    lastNode.setPosition(1793, 4047)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupPremult3 = lastNode
+
+    param = lastNode.getParam("disableNode")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Premult3"
+
+    # Start of node "Dot9"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot9")
+    lastNode.setLabel("Dot9")
+    lastNode.setPosition(1242, 3995)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot9 = lastNode
+
+    del lastNode
+    # End of node "Dot9"
+
+    # Start of node "Backdrop1"
+    lastNode = app.createNode("fr.inria.built-in.BackDrop", 1, group)
+    lastNode.setScriptName("Backdrop1")
+    lastNode.setLabel("Backdrop1")
+    lastNode.setPosition(1758, 199)
+    lastNode.setSize(734, 619)
+    lastNode.setColor(0.45, 0.45, 0.45)
+    groupBackdrop1 = lastNode
+
+    param = lastNode.getParam("Label")
+    if param is not None:
+        param.setValue("<font size=\"26\" color=\"#000000\" face=\"Droid Sans\">Separation</font>")
+        del param
+
+    del lastNode
+    # End of node "Backdrop1"
+
+    # Start of node "Dot10"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot10")
+    lastNode.setLabel("Dot10")
+    lastNode.setPosition(3817, 1074)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot10 = lastNode
+
+    del lastNode
+    # End of node "Dot10"
+
+    # Start of node "Dot11"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot11")
+    lastNode.setLabel("Dot11")
+    lastNode.setPosition(1882, 115)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot11 = lastNode
+
+    del lastNode
+    # End of node "Dot11"
+
+    # Start of node "Switch2"
+    lastNode = app.createNode("net.sf.openfx.switchPlugin", 1, group)
+    lastNode.setScriptName("Switch2")
+    lastNode.setLabel("Switch2")
+    lastNode.setPosition(1465, 5768)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupSwitch2 = lastNode
+
+    param = lastNode.getParam("which")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    del lastNode
+    # End of node "Switch2"
+
+    # Start of node "Dot12"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot12")
+    lastNode.setLabel("Dot12")
+    lastNode.setPosition(2784, 115)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot12 = lastNode
+
+    del lastNode
+    # End of node "Dot12"
+
+    # Start of node "Dot13"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot13")
+    lastNode.setLabel("Dot13")
+    lastNode.setPosition(3730, 1074)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot13 = lastNode
+
+    del lastNode
+    # End of node "Dot13"
+
+    # Start of node "Dot14"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot14")
+    lastNode.setLabel("Dot14")
+    lastNode.setPosition(4047, 1074)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot14 = lastNode
+
+    del lastNode
+    # End of node "Dot14"
+
+    # Start of node "Lcoagu_Lthin"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lcoagu_Lthin")
+    lastNode.setLabel("Lcoagu_Lthin")
+    lastNode.setPosition(2288, 398)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLcoagu_Lthin = lastNode
+
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("coagulation")
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Scale")
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8, 1)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thinning")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(4.4, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Beta")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.5, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.022, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lcoagu_Lthin"
+
+    groupgroup = groupLcoagu_Lthin
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("coagulation")
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Scale")
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8, 1)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thinning")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(4.4, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Beta")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.5, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.022, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_input")
+    param.setExpression("thisGroup.coagulation.get()", False, 0)
+    del param
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.thinning.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Lclotting"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lclotting")
+    lastNode.setLabel("Lclotting")
+    lastNode.setPosition(2288, 313)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLclotting = lastNode
+
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thisGroup.thickness.get()")
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Alpha")
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("clotting")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(5.2, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.02, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.00104, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lclotting"
+
+    groupgroup = groupLclotting
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thisGroup.thickness.get()")
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Alpha")
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("clotting")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(5.2, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.02, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.00104, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.clotting.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "doSeparation"
+    lastNode = app.createNode("net.sf.openfx.switchPlugin", 1, group)
+    lastNode.setScriptName("doSeparation")
+    lastNode.setLabel("doSeparation")
+    lastNode.setPosition(1837, 841)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupdoSeparation = lastNode
+
+    param = lastNode.getParam("which")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    del lastNode
+    # End of node "doSeparation"
+
+    # Start of node "Dot15"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot15")
+    lastNode.setLabel("Dot15")
+    lastNode.setPosition(1882, 350)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot15 = lastNode
+
+    del lastNode
+    # End of node "Dot15"
+
+    # Start of node "Dot16"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot16")
+    lastNode.setLabel("Dot16")
+    lastNode.setPosition(1673, 350)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot16 = lastNode
+
+    del lastNode
+    # End of node "Dot16"
+
+    # Start of node "Dot17"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot17")
+    lastNode.setLabel("Dot17")
+    lastNode.setPosition(1673, 847)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot17 = lastNode
+
+    del lastNode
+    # End of node "Dot17"
+
+    # Start of node "ColorCorrect1"
+    lastNode = app.createNode("net.sf.openfx.ColorCorrectPlugin", 2, group)
+    lastNode.setScriptName("ColorCorrect1")
+    lastNode.setLabel("ColorCorrect1")
+    lastNode.setPosition(1465, 5658)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupColorCorrect1 = lastNode
+
+    param = lastNode.getParam("MasterGamma")
+    if param is not None:
+        param.setValue(0.7984, 0)
+        param.setValue(0.7984, 1)
+        param.setValue(0.7984, 2)
+        param.setValue(0.7984, 3)
+        del param
+
+    param = lastNode.getParam("toneRanges")
+    if param is not None:
+        param.setCurveColor(0, 0.6, 0.4, 0.6)
+        param.deleteAllControlPoints(0)
+        param.addControlPoint(0, 0, 1, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.addControlPoint(0, 0.09, 0, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.setCurveColor(1, 0.8, 0.7, 0.6)
+        param.deleteAllControlPoints(1)
+        param.addControlPoint(1, 0.5, 0, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        param.addControlPoint(1, 1, 1, 0, 0, NatronEngine.Natron.KeyframeTypeEnum.eKeyframeTypeHorizontal)
+        del param
+
+    param = lastNode.getParam("premult")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    param = lastNode.getParam("premultChanged")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "ColorCorrect1"
+
+    # Start of node "Dot18"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot18")
+    lastNode.setLabel("Dot18")
+    lastNode.setPosition(1395, 5585)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot18 = lastNode
+
+    del lastNode
+    # End of node "Dot18"
+
+    # Start of node "Dot19"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot19")
+    lastNode.setLabel("Dot19")
+    lastNode.setPosition(1510, 5585)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot19 = lastNode
+
+    del lastNode
+    # End of node "Dot19"
+
+    # Start of node "Dot20"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot20")
+    lastNode.setLabel("Dot20")
+    lastNode.setPosition(1395, 5774)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot20 = lastNode
+
+    del lastNode
+    # End of node "Dot20"
+
+    # Start of node "Backdrop2"
+    lastNode = app.createNode("fr.inria.built-in.BackDrop", 1, group)
+    lastNode.setScriptName("Backdrop2")
+    lastNode.setLabel("Backdrop2")
+    lastNode.setPosition(3302, 977)
+    lastNode.setSize(1622, 1465)
+    lastNode.setColor(0.45, 0.45, 0.45)
+    groupBackdrop2 = lastNode
+
+    del lastNode
+    # End of node "Backdrop2"
+
+    # Start of node "Lerp_lumpiness"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lerp_lumpiness")
+    lastNode.setLabel("Lerp_lumpiness")
+    lastNode.setPosition(1693, 2529)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLerp_lumpiness = lastNode
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("lumpy_size")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(13, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Lumpiness.all")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(5, 0)
+    param.setValue(30, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8.25, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lerp_lumpiness"
+
+    groupgroup = groupLerp_lumpiness
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("lumpy_size")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(13, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Lumpiness.all")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(5, 0)
+    param.setValue(30, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8.25, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_size.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Switch1"
+    lastNode = app.createNode("net.sf.openfx.switchPlugin", 1, group)
+    lastNode.setScriptName("Switch1")
+    lastNode.setLabel("Switch1")
+    lastNode.setPosition(1466, 4526)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupSwitch1 = lastNode
+
+    param = lastNode.getParam("which")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    del lastNode
+    # End of node "Switch1"
+
+    # Start of node "Dot21"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot21")
+    lastNode.setLabel("Dot21")
+    lastNode.setPosition(1155, 4292)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot21 = lastNode
+
+    del lastNode
+    # End of node "Dot21"
+
+    # Start of node "Dot22"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot22")
+    lastNode.setLabel("Dot22")
+    lastNode.setPosition(1155, 2395)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot22 = lastNode
+
+    del lastNode
+    # End of node "Dot22"
+
+    # Start of node "Lerp_lumpy_mix"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lerp_lumpy_mix")
+    lastNode.setLabel("Lerp_lumpy_mix")
+    lastNode.setPosition(1711, 4216)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLerp_lumpy_mix = lastNode
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thisGroup.lumpy_mix.get()")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("LumpyMix/mix")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lerp_lumpy_mix"
+
+    groupgroup = groupLerp_lumpy_mix
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thisGroup.lumpy_mix.get()")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("LumpyMix/mix")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_mix.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Dot23"
+    lastNode = app.createNode("fr.inria.built-in.Dot", 1, group)
+    lastNode.setScriptName("Dot23")
+    lastNode.setLabel("Dot23")
+    lastNode.setPosition(1577, 2783)
+    lastNode.setSize(15, 15)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupDot23 = lastNode
+
+    del lastNode
+    # End of node "Dot23"
+
+    # Start of node "Grade2"
+    lastNode = app.createNode("net.sf.openfx.GradePlugin", 2, group)
+    lastNode.setScriptName("Grade2")
+    lastNode.setLabel("Grade2")
+    lastNode.setPosition(1433, 2636)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.48, 0.66, 1)
+    groupGrade2 = lastNode
+
+    param = lastNode.getParam("premultChanged")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Grade2"
+
+    # Start of node "Read1"
+    lastNode = app.createNode("fr.inria.built-in.Read", 1, group)
+    lastNode.setScriptName("Read1")
+    lastNode.setLabel("Read1")
+    lastNode.setPosition(2393, 4289)
+    lastNode.setSize(128, 78)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupRead1 = lastNode
+
+    param = lastNode.getParam("decodingPluginID")
+    if param is not None:
+        param.setValue("fr.inria.openfx.ReadPNG")
+        del param
+
+    param = lastNode.getParam("filename")
+    if param is not None:
+        param.setValue("[Project]/../ingredients-db/1000-crust-thin.png")
+        del param
+
+    param = lastNode.getParam("filePremult")
+    if param is not None:
+        param.set("unpremult")
+        del param
+
+    param = lastNode.getParam("ParamExistingInstance")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+    del lastNode
+    # End of node "Read1"
+
+    # Start of node "Merge1"
+    lastNode = app.createNode("net.sf.openfx.MergePlugin", 1, group)
+    lastNode.setScriptName("Merge1")
+    lastNode.setLabel("Merge1")
+    lastNode.setPosition(1927, 5969)
+    lastNode.setSize(104, 43)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupMerge1 = lastNode
+
+    del lastNode
+    # End of node "Merge1"
+
+    # Start of node "Backdrop3"
+    lastNode = app.createNode("fr.inria.built-in.BackDrop", 1, group)
+    lastNode.setScriptName("Backdrop3")
+    lastNode.setLabel("Backdrop3")
+    lastNode.setPosition(1375, 5523)
+    lastNode.setSize(263, 295)
+    lastNode.setColor(0.45, 0.45, 0.45)
+    groupBackdrop3 = lastNode
+
+    del lastNode
+    # End of node "Backdrop3"
+
+    # Start of node "Lerp_burn"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lerp_burn")
+    lastNode.setLabel("Lerp_burn")
+    lastNode.setPosition(1660, 5664)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLerp_burn = lastNode
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thisGroup.burn_amt.get()")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(25.2, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Lerp_burn.f_lerp_result.get()")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    param.setValue(0.2, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.7984, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lerp_burn"
+
+    groupgroup = groupLerp_burn
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("thisGroup.burn_amt.get()")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(25.2, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("Lerp_burn.f_lerp_result.get()")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    param.setValue(0.2, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(0.7984, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.burn_amt.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Labsorption"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Labsorption")
+    lastNode.setLabel("Labsorption")
+    lastNode.setPosition(2288, 496)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLabsorption = lastNode
+
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("absorption")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(50.4, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("offset")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    param.setValue(-1, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(-0.008000000000000007, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Labsorption"
+
+    groupgroup = groupLabsorption
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("absorption")
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(50.4, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue("offset")
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(1, 0)
+    param.setValue(-1, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(-0.008000000000000007, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.absorption.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Melt"
+    lastNode = app.createNode("eu.gmic.Crease", 1, group)
+    lastNode.setScriptName("Melt")
+    lastNode.setLabel("Melt")
+    lastNode.setPosition(1571, 4816)
+    lastNode.setSize(80, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupMelt = lastNode
+
+    param = lastNode.getParam("Amplitude")
+    if param is not None:
+        param.setValue(6, 0)
+        del param
+
+    param = lastNode.getParam("Frequency_")
+    if param is not None:
+        param.setValue(2.4, 0)
+        del param
+
+    del lastNode
+    # End of node "Melt"
+
+    # Start of node "SwitchMelt"
+    lastNode = app.createNode("net.sf.openfx.switchPlugin", 1, group)
+    lastNode.setScriptName("SwitchMelt")
+    lastNode.setLabel("SwitchMelt")
+    lastNode.setPosition(1466, 4992)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupSwitchMelt = lastNode
+
+    param = lastNode.getParam("which")
+    if param is not None:
+        param.setValue(1, 0)
+        del param
+
+    del lastNode
+    # End of node "SwitchMelt"
+
+    # Start of node "Lmelt_freq"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lmelt_freq")
+    lastNode.setLabel("Lmelt_freq")
+    lastNode.setPosition(1744, 4776)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLmelt_freq = lastNode
+
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(30, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(2.4, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lmelt_freq"
+
+    groupgroup = groupLmelt_freq
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(8, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(30, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(2.4, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.melt_freq.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Lmelt_amp"
+    lastNode = app.createNode("Lerp", 1, group)
+    lastNode.setScriptName("Lmelt_amp")
+    lastNode.setLabel("Lmelt_amp")
+    lastNode.setPosition(1748, 4862)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupLmelt_amp = lastNode
+
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(20, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(30, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(6, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+    # End of node "Lmelt_amp"
+
+    groupgroup = groupLmelt_amp
+    # Create all nodes in the group
+
+    # Create the parameters of the group node the same way we did for all internal nodes
+    lastNode = groupgroup
+    lastNode.setColor(0.7, 0.7, 0.7)
+    param = lastNode.getParam("hideInputs")
+    if param is not None:
+        param.setValue(True)
+        del param
+
+
+    # Create the user parameters
+    lastNode.Controls = lastNode.createPageParam("Controls", "Controls")
+    param = lastNode.createGroupParam("int1", "integer linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    lastNode.int1 = param
+    del param
+
+    param = lastNode.createStringParam("i_input_desc", "i_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input_desc = param
+    del param
+
+    param = lastNode.createIntParam("i_input", "i_input")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_input = param
+    del param
+
+    param = lastNode.createInt2DParam("i_input_range", "i_input_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.i_input_range = param
+    del param
+
+    param = lastNode.createStringParam("i_result_desc", "i_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.i_result_desc = param
+    del param
+
+    param = lastNode.createInt2DParam("i_lerp_range", "i_lerp_range")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+    param.setDefaultValue(0, 1)
+    param.restoreDefaultValue(1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_range = param
+    del param
+
+    param = lastNode.createIntParam("i_lerp_result", "i_lerp_result")
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setDefaultValue(0, 0)
+    param.restoreDefaultValue(0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.int1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(7, 0)
+    lastNode.i_lerp_result = param
+    del param
+
+    param = lastNode.createGroupParam("float1", "float linear interpolation")
+
+    # Add the param to the page
+    lastNode.Controls.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setEvaluateOnChange(False)
+    param.setOpened(True)
+    lastNode.float1 = param
+    del param
+
+    param = lastNode.createStringParam("f_input_desc", "f_input_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_input_desc = param
+    del param
+
+    param = lastNode.createDoubleParam("f_input", "f_input")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(20, 0)
+    lastNode.f_input = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_input_range", "f_input_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(100, 1)
+    lastNode.f_input_range = param
+    del param
+
+    param = lastNode.createStringParam("f_result_desc", "f_result_desc")
+    param.setType(NatronEngine.StringParam.TypeEnum.eStringTypeDefault)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    lastNode.f_result_desc = param
+    del param
+
+    param = lastNode.createDouble2DParam("f_lerp_range", "f_lerp_range")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+    param.setMinimum(-2147483648, 1)
+    param.setMaximum(2147483647, 1)
+    param.setDisplayMinimum(0, 1)
+    param.setDisplayMaximum(100, 1)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(30, 1)
+    lastNode.f_lerp_range = param
+    del param
+
+    param = lastNode.createDoubleParam("f_lerp_result", "f_lerp_result")
+    param.setMinimum(-2147483648, 0)
+    param.setMaximum(2147483647, 0)
+    param.setDisplayMinimum(0, 0)
+    param.setDisplayMaximum(100, 0)
+
+    # Add the param to the group, no need to add it to the page
+    lastNode.float1.addParam(param)
+
+    # Set param properties
+    param.setHelp("")
+    param.setAddNewLine(True)
+    param.setAnimationEnabled(True)
+    param.setValue(6, 0)
+    lastNode.f_lerp_result = param
+    del param
+
+    # Refresh the GUI with the newly created parameters
+    lastNode.setPagesOrder(['Controls', 'Node', 'Settings'])
+    lastNode.refreshUserParamsGUI()
+    del lastNode
+
+    # Start of node "Input1"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, groupgroup)
+    lastNode.setScriptName("Input1")
+    lastNode.setLabel("Input1")
+    lastNode.setPosition(642, 175)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupgroupInput1 = lastNode
+
+    del lastNode
+    # End of node "Input1"
+
+    # Start of node "Output1"
+    lastNode = app.createNode("fr.inria.built-in.Output", 1, groupgroup)
+    lastNode.setLabel("Output1")
+    lastNode.setPosition(642, 247)
+    lastNode.setSize(104, 30)
+    lastNode.setColor(0.7, 0.7, 0.7)
+    groupgroupOutput1 = lastNode
+
+    del lastNode
+    # End of node "Output1"
+
+    # Now that all nodes are created we can connect them together, restore expressions
+    groupgroupOutput1.connectInput(0, groupgroupInput1)
+
+    param = groupgroup.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupgroup.getParam("f_input")
+    param.setExpression("thisGroup.melt_amp.get()", False, 0)
+    del param
+    param = groupgroup.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+
+    # Start of node "Switch3"
+    lastNode = app.createNode("net.sf.openfx.switchPlugin", 1, group)
+    lastNode.setScriptName("Switch3")
+    lastNode.setLabel("Switch3")
+    lastNode.setPosition(536, 2079)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.37, 0.776)
+    groupSwitch3 = lastNode
+
+    param = lastNode.getParam("which")
+    if param is not None:
+        param.setValue(0, 0)
+        del param
+
+    del lastNode
+    # End of node "Switch3"
+
+    # Start of node "Mask"
+    lastNode = app.createNode("fr.inria.built-in.Input", 1, group)
+    lastNode.setScriptName("Mask")
+    lastNode.setLabel("Mask")
+    lastNode.setPosition(393, 1941)
+    lastNode.setSize(104, 26)
+    lastNode.setColor(0.3, 0.5, 0.2)
+    groupMask = lastNode
+
+    del lastNode
+    # End of node "Mask"
+
+    # Start of node "Backdrop4"
+    lastNode = app.createNode("fr.inria.built-in.BackDrop", 1, group)
+    lastNode.setScriptName("Backdrop4")
+    lastNode.setLabel("Backdrop4")
+    lastNode.setPosition(134, 1429)
+    lastNode.setSize(1678, 808)
+    lastNode.setColor(0.45, 0.45, 0.45)
+    groupBackdrop4 = lastNode
+
+    param = lastNode.getParam("Label")
+    if param is not None:
+        param.setValue("<font size=\"27\" color=\"#000000\" face=\"Droid Sans\">Masks</font>")
+        del param
+
+    del lastNode
+    # End of node "Backdrop4"
+
     # Now that all nodes are created we can connect them together, restore expressions
     groupSaturation1.connectInput(0, groupPlasma2)
-    groupIn1.connectInput(0, groupClamp1)
-    groupIn1.connectInput(1, groupClamp2)
-    groupGrade6.connectInput(0, groupSaturation1)
-    groupClamp1.connectInput(0, groupGrade6)
-    groupClamp2.connectInput(0, groupInput1)
-    groupDropShadow2.connectInput(0, groupClamp3)
-    groupt_sauce_1.connectInput(0, groupIn1)
+    groupIn1.connectInput(0, groupClamp2)
+    groupIn1.connectInput(1, groupClamp1)
+    groupGrade_absorption.connectInput(0, groupSaturation1)
+    groupClamp1.connectInput(0, groupGrade_absorption)
+    groupClamp2.connectInput(0, groupDot15)
     groupMerge3.connectInput(0, groupColorCorrect5)
     groupMerge3.connectInput(1, groupTransform6_2)
-    groupEdgeDetect1.connectInput(0, groupClamp3)
+    groupEdgeDetect1.connectInput(0, groupDot10)
     groupGrade9.connectInput(0, groupBlur1)
-    groupColorCorrect5.connectInput(0, groupClamp3)
+    groupColorCorrect5.connectInput(0, groupDot2)
     groupColorCorrect5.connectInput(1, groupOut5)
     groupOut5.connectInput(0, groupTransform6)
     groupOut5.connectInput(1, groupGrade9)
-    groupClamp3.connectInput(0, groupt_sauce_1)
+    groupClamp3.connectInput(0, groupIn1)
     groupBlur1.connectInput(0, groupEdgeDetect1)
-    groupTransform6.connectInput(0, groupClamp3)
-    groupOutput1.connectInput(0, groupMultiplyMask)
-    groupConstant1.connectInput(0, groupInput1)
-    groupClamp4.connectInput(0, groupMerge1)
-    groupTransform6_2.connectInput(0, groupClamp3)
+    groupTransform6.connectInput(0, groupDot14)
+    groupOutput1.connectInput(0, groupSwitch2)
+    groupClamp4.connectInput(0, groupMerge3)
+    groupTransform6_2.connectInput(0, groupDot1)
     groupOut5_2.connectInput(0, groupTransform6_2)
     groupOut5_2.connectInput(1, groupGrade9)
-    groupColorCorrect5_2.connectInput(0, groupClamp3)
+    groupColorCorrect5_2.connectInput(0, groupDot13)
     groupColorCorrect5_2.connectInput(1, groupOut5_2)
-    groupMerge1.connectInput(0, groupMerge3)
-    groupMerge1.connectInput(1, groupColorCorrect5_2)
     groupPlasma2.connectInput(0, groupConstant1)
-    groupEdgeExtend1.connectInput(0, groupMerge1)
+    groupEdgeExtend1.connectInput(0, groupMerge3)
     groupOut1.connectInput(0, groupErode1)
     groupOut1.connectInput(1, groupEdgeExtend1)
     groupMultiply1.connectInput(0, groupOut1)
-    groupMultiply1.connectInput(1, groupPlasma1)
-    groupErode1.connectInput(0, groupInput1)
-    groupMultiply2.connectInput(0, groupMultiply1)
-    groupMultiply2.connectInput(1, groupMerge1)
-    groupMultiply3.connectInput(0, groupMerge1)
+    groupErode1.connectInput(0, groupDot12)
+    groupMultiply3.connectInput(0, groupMerge3)
     groupMultiply3.connectInput(1, groupMultiply1)
     groupTransformMask.connectInput(0, groupShuffleMask)
-    groupShuffleMask.connectInput(0, groupReadMask)
-    groupMultiplyMask.connectInput(0, groupClamp4)
-    groupMultiplyMask.connectInput(1, groupTransformMask)
+    groupShuffleMask.connectInput(1, groupReadMask)
+    groupMultiplyMask.connectInput(0, groupdoSeparation)
+    groupMultiplyMask.connectInput(1, groupSwitch3)
+    groupDot1.connectInput(0, groupDot13)
+    groupDot2.connectInput(0, groupDot14)
+    groupPremult1.connectInput(0, groupLumpyMix)
+    groupLumpySpec.connectInput(0, groupDot23)
+    groupLumpiness.connectInput(0, groupDot3)
+    groupLumpiness.connectInput(1, groupDot4)
+    groupLumpySpecMix.connectInput(0, groupDot8)
+    groupLumpySpecMix.connectInput(1, groupClamp1_2)
+    groupPremult2.connectInput(0, groupLumpyWet)
+    groupLumpyRoughness.connectInput(0, groupPremult2)
+    groupLumpyDelta.connectInput(0, groupLumpiness)
+    groupLumpyDelta.connectInput(1, groupGrade2)
+    groupLumpyHeight.connectInput(0, groupLumpyKey)
+    groupLumpyKey.connectInput(0, groupLumpiness)
+    groupLumpSpecGrain.connectInput(0, groupLumpySpec)
+    groupLumpSpecGrain.connectInput(1, groupDot5)
+    groupDot4.connectInput(0, groupDot3)
+    groupDot5.connectInput(0, groupDot4)
+    groupLumpyWet.connectInput(0, groupLumpiness)
+    groupLumpyWet.connectInput(1, groupOut2)
+    groupClamp1_2.connectInput(0, groupLumpyRoughness)
+    groupDot3.connectInput(0, groupMultiplyMask)
+    groupColorCorrect5_3.connectInput(0, groupGrade7_3)
+    groupDot6.connectInput(0, groupDot3)
+    groupDot7.connectInput(0, groupDot6)
+    groupLumpyMix.connectInput(0, groupPremult3)
+    groupLumpyMix.connectInput(1, groupDot9)
+    groupDot8.connectInput(0, groupDot23)
+    groupLerp_LspecMix.connectInput(0, groupLerp_Lrough)
+    groupSpecColorMix.connectInput(0, groupBlur2)
+    groupOut2.connectInput(0, groupKeyer1)
+    groupOut2.connectInput(1, groupSpecColorMix)
+    groupBlur2.connectInput(0, groupShuffle1)
+    groupKeyer1.connectInput(0, groupLumpSpecGrain)
+    groupShuffle1.connectInput(1, groupLumpyHeight)
+    groupMultiply4.connectInput(0, groupUnpremult1)
+    groupMultiply4.connectInput(1, groupSpecColorMix)
+    groupUnpremult1.connectInput(0, groupLumpySpecMix)
+    groupPremult3.connectInput(0, groupMultiply4)
+    groupDot9.connectInput(0, groupDot5)
+    groupDot10.connectInput(0, groupdoSeparation)
+    groupDot11.connectInput(0, groupIn)
+    groupSwitch2.connectInput(0, groupDot20)
+    groupSwitch2.connectInput(1, groupColorCorrect1)
+    groupDot12.connectInput(0, groupDot11)
+    groupDot13.connectInput(0, groupDot10)
+    groupDot14.connectInput(0, groupDot10)
+    groupLcoagu_Lthin.connectInput(0, groupLclotting)
+    groupdoSeparation.connectInput(0, groupDot17)
+    groupdoSeparation.connectInput(1, groupClamp3)
+    groupDot15.connectInput(0, groupDot11)
+    groupDot16.connectInput(0, groupDot15)
+    groupDot17.connectInput(0, groupDot16)
+    groupColorCorrect1.connectInput(0, groupDot19)
+    groupDot18.connectInput(0, groupDot19)
+    groupDot19.connectInput(0, groupSwitchMelt)
+    groupDot20.connectInput(0, groupDot18)
+    groupSwitch1.connectInput(0, groupDot21)
+    groupSwitch1.connectInput(1, groupPremult1)
+    groupDot21.connectInput(0, groupDot22)
+    groupDot22.connectInput(0, groupDot4)
+    groupDot23.connectInput(0, groupLumpyDelta)
+    groupGrade2.connectInput(0, groupLumpyKey)
+    groupMerge1.connectInput(0, groupRead1)
+    groupMerge1.connectInput(1, groupSwitch2)
+    groupLabsorption.connectInput(0, groupLcoagu_Lthin)
+    groupMelt.connectInput(0, groupSwitch1)
+    groupSwitchMelt.connectInput(0, groupSwitch1)
+    groupSwitchMelt.connectInput(1, groupMelt)
+    groupSwitch3.connectInput(0, groupTransformMask)
+    groupSwitch3.connectInput(1, groupMask)
 
-    param = groupIn1.getParam("mix")
-    param.setExpression("thisGroup.int3.get()", False, 0)
-    del param
-    param = groupDropShadow2.getParam("shadowDist")
-    param.setExpression("thisGroup.height.get()", False, 0)
+    param = groupGrade_absorption.getParam("offset")
+    param.setExpression("Labsorption.f_lerp_result.get()", False, 0)
+    param.setExpression("Labsorption.f_lerp_result.get()", False, 1)
+    param.setExpression("Labsorption.f_lerp_result.get()", False, 2)
+    param.setExpression("Labsorption.f_lerp_result.get()", False, 3)
     del param
     param = groupTransform6.getParam("translate")
-    param.setExpression("thisGroup.height.get()*-1", False, 0)
-    param.setExpression("thisGroup.height.get()*-1", False, 1)
+    param.setExpression("thisGroup.coagulation.get()*-1", False, 0)
+    param.setExpression("thisGroup.coagulation.get()*-1", False, 1)
     del param
     param = groupTransform6_2.getParam("translate")
-    param.setExpression("thisGroup.height.get()*-1", False, 0)
-    param.setExpression("thisGroup.height.get()*-1", False, 1)
-    del param
-    param = groupLerp1_Alpha.getParam("i_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
-    del param
-    param = groupLerp1_Alpha.getParam("f_input")
-    param.setExpression("thisGroup.chunkiness.get()", False, 0)
-    del param
-    param = groupLerp1_Alpha.getParam("f_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    param.setExpression("thisGroup.coagulation.get()", False, 0)
+    param.setExpression("thisGroup.coagulation.get()", False, 1)
     del param
     param = groupPlasma2.getParam("alpha")
-    param.setExpression("thisGroup.Lerp1_Alpha.f_lerp_result.get()", False, 0)
+    param.setExpression("thisGroup.Lclotting.f_lerp_result.get()", False, 0)
     del param
     param = groupPlasma2.getParam("beta")
-    param.setExpression("thisGroup.Lerp2_Beta.f_lerp_result.get()", False, 0)
+    param.setExpression("thisGroup.Lcoagu_Lthin.f_lerp_result.get()", False, 0)
     del param
     param = groupPlasma2.getParam("scale")
-    param.setExpression("thisGroup.Lerp2_Beta.i_lerp_result.get()", False, 0)
+    param.setExpression("thisGroup.Lcoagu_Lthin.i_lerp_result.get()", False, 0)
     del param
-    param = groupLerp2_Beta.getParam("i_input")
-    param.setExpression("thisGroup.thickness.get()", False, 0)
-    del param
-    param = groupLerp2_Beta.getParam("i_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
-    del param
-    param = groupLerp2_Beta.getParam("f_input")
-    param.setExpression("thisGroup.spread.get()", False, 0)
-    del param
-    param = groupLerp2_Beta.getParam("f_lerp_result")
-    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    param = groupReadMask.getParam("disableNode")
+    param.setExpression("1-thisGroup.maskFile.get()", False, 0)
     del param
     param = groupReadMask.getParam("filename")
     group.getParam("Read3filename").setAsAlias(param)
@@ -2664,6 +8348,148 @@ def createInstance(app,group):
     del param
     param = groupTransformMask.getParam("scale")
     group.getParam("Transform4scale").setAsAlias(param)
+    del param
+    param = groupMultiplyMask.getParam("maskInvert")
+    param.setExpression("thisGroup.invertMask.get()", False, 0)
+    del param
+    param = groupMultiplyMask.getParam("disableNode")
+    param.setExpression("1-thisGroup.doMask.get()", False, 0)
+    del param
+    param = groupLumpiness.getParam("grainSizeAll")
+    param.setExpression("Lerp_lumpiness.f_lerp_result.get()", False, 0)
+    del param
+    param = groupLumpySpecMix.getParam("mix")
+    param.setExpression("Lerp_LspecMix.f_lerp_result.get()", False, 0)
+    del param
+    param = groupLumpyRoughness.getParam("size")
+    param.setExpression("Lerp_Lrough.f_lerp_result.get()", False, 0)
+    param.setExpression("Lerp_Lrough.f_lerp_result.get()", False, 1)
+    del param
+    param = groupLumpSpecGrain.getParam("grainSizeAll")
+    param.setExpression("Lerp_lumpiness.f_lerp_result.get()", False, 0)
+    del param
+    param = groupLumpyMix.getParam("mix")
+    param.setExpression("Lerp_lumpy_mix.f_lerp_result.get()", False, 0)
+    del param
+    param = groupLerp_LspecMix.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLerp_LspecMix.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_wet.get()", False, 0)
+    del param
+    param = groupLerp_LspecMix.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLerp_Lrough.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLerp_Lrough.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_rough.get()", False, 0)
+    del param
+    param = groupLerp_Lrough.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupSwitch2.getParam("which")
+    param.setExpression("thisGroup.do_burn.get()", False, 0)
+    del param
+    param = groupLcoagu_Lthin.getParam("i_input")
+    param.setExpression("thisGroup.coagulation.get()", False, 0)
+    del param
+    param = groupLcoagu_Lthin.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLcoagu_Lthin.getParam("f_input")
+    param.setExpression("thisGroup.thinning.get()", False, 0)
+    del param
+    param = groupLcoagu_Lthin.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLclotting.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLclotting.getParam("f_input")
+    param.setExpression("thisGroup.clotting.get()", False, 0)
+    del param
+    param = groupLclotting.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupdoSeparation.getParam("which")
+    param.setExpression("thisGroup.do_separation.get()", False, 0)
+    del param
+    param = groupColorCorrect1.getParam("MasterGamma")
+    param.setExpression("Lerp_burn.f_lerp_result.get()", False, 0)
+    param.setExpression("Lerp_burn.f_lerp_result.get()", False, 1)
+    param.setExpression("Lerp_burn.f_lerp_result.get()", False, 2)
+    param.setExpression("Lerp_burn.f_lerp_result.get()", False, 3)
+    del param
+    param = groupLerp_lumpiness.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLerp_lumpiness.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_size.get()", False, 0)
+    del param
+    param = groupLerp_lumpiness.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupSwitch1.getParam("which")
+    param.setExpression("thisGroup.do_lumpiness.get()", False, 0)
+    del param
+    param = groupLerp_lumpy_mix.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLerp_lumpy_mix.getParam("f_input")
+    param.setExpression("thisGroup.lumpy_mix.get()", False, 0)
+    del param
+    param = groupLerp_lumpy_mix.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLerp_burn.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLerp_burn.getParam("f_input")
+    param.setExpression("thisGroup.burn_amt.get()", False, 0)
+    del param
+    param = groupLerp_burn.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLabsorption.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLabsorption.getParam("f_input")
+    param.setExpression("thisGroup.absorption.get()", False, 0)
+    del param
+    param = groupLabsorption.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupMelt.getParam("Amplitude")
+    param.setExpression("Lmelt_amp.f_lerp_result.get()", False, 0)
+    del param
+    param = groupMelt.getParam("Frequency_")
+    param.setExpression("Lmelt_freq.f_lerp_result.get()", False, 0)
+    del param
+    param = groupSwitchMelt.getParam("which")
+    param.setExpression("thisGroup.do_melt.get()", False, 0)
+    del param
+    param = groupLmelt_freq.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLmelt_freq.getParam("f_input")
+    param.setExpression("thisGroup.melt_freq.get()", False, 0)
+    del param
+    param = groupLmelt_freq.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLmelt_amp.getParam("i_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.i_input.get()\n\ni0 = thisNode.i_input_range.get()[0]\ni1 = thisNode.i_input_range.get()[1]\n\nr0 = thisNode.i_lerp_range.get()[0]\nr1 = thisNode.i_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupLmelt_amp.getParam("f_input")
+    param.setExpression("thisGroup.melt_amp.get()", False, 0)
+    del param
+    param = groupLmelt_amp.getParam("f_lerp_result")
+    param.setExpression("import numpy as np\n\ni = thisNode.f_input.get()\n\ni0 = thisNode.f_input_range.get()[0]\ni1 = thisNode.f_input_range.get()[1]\n\nr0 = thisNode.f_lerp_range.get()[0]\nr1 = thisNode.f_lerp_range.get()[1]\n\nir = [i0, i1]\nlr = [r0, r1]\n\ny_new = np.interp(i, ir, lr)\nret = y_new\n\n\n", True, 0)
+    del param
+    param = groupSwitch3.getParam("which")
+    param.setExpression("thisGroup.maskFile.get()", False, 0)
     del param
 
     try:
