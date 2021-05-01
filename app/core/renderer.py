@@ -112,25 +112,6 @@ class CheeseRenderer:
         )
 
 
-# class ExtraRenderer:
-#     """Render cheeses"""
-
-#     def __init__(self):
-#         pass
-
-#     def render(self, executable_path, project_path, data_path, frame):
-#         os.environ["EXTRA_DATA_PATH"] = data_path
-#         subprocess.check_call(
-#             [
-#                 f"{executable_path}/NatronRenderer",
-#                 "-l",
-#                 f"{current}/natron/extra.py",
-#                 f"{project_path}/extra.ntp",
-#                 f"{frame}",
-#             ]
-#         )
-
-
 class ToppingRenderer:
     """Render toppings"""
 
