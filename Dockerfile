@@ -16,7 +16,7 @@ ENV PORT=8000 \
     POETRY_CACHE_DIR='/var/cache/pypoetry' \
     PATH="$PATH:/root/.poetry/bin" \
     # Natron
-    NATRON_PATH="/natron" \
+    NATRON_PATH="/natron/bin" \
     PATH="$PATH:/natron" \
     NATRON_PROJECT_PATH="/app/natron"
 
@@ -30,15 +30,16 @@ RUN apt-get update && apt-get upgrade -y \
     wget \
     xz-utils
 
+# do the natron things
+RUN wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.0/Natron-2.4.0-Linux-64-no-installer.tar.xz --no-check-certificate \
+    && tar -xvf Natron-2.4.0-Linux-64-no-installer.tar.xz \
+    && mv /Natron-2.4.0-Linux-64-no-installer /natron \
+    && rm Natron-2.4.0-Linux-64-no-installer.tar.xz
+
 # do the python things
 RUN pip3 install 'poetry==1.1.5'
 RUN pip3 install --no-cache-dir "uvicorn[standard]" gunicorn
-
-# do the natron things
-RUN wget https://github.com/NatronGitHub/Natron/releases/download/v2.3.15/Natron-2.3.15-Linux-64-no-installer.tar.xz --no-check-certificate \
-    && tar -xvf Natron-2.3.15-Linux-64-no-installer.tar.xz \
-    && mv /Natron-2.3.15-Linux-64-no-installer /natron \
-    && rm Natron-2.3.15-Linux-64-no-installer.tar.xz
+RUN $NATRON_PATH/natron-python -m pip install numpy
 
 # do the app things
 COPY ./pyproject.toml /tmp/
