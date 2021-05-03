@@ -4,14 +4,14 @@
 <Background_project>0</Background_project>
 <Project class_id="0" tracking_level="0" version="6">
 	<VersionMajor>2</VersionMajor>
-	<VersionMinor>3</VersionMinor>
-	<VersionRev>15</VersionRev>
-	<GitBranch>tags/v2.3.15</GitBranch>
-	<GitCommit>513a2491008c152417ae913f8d1ab83e432aa7e3</GitCommit>
+	<VersionMinor>4</VersionMinor>
+	<VersionRev>0</VersionRev>
+	<GitBranch>tags/v2.4.0</GitBranch>
+	<GitCommit>d3cfd7dcf2cf66cf38b7a9a8709c316adc4de9f0</GitCommit>
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>14</NodesCount>
+		<NodesCount>17</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>i0</Plugin_label>
 			<Plugin_script_name>i0</Plugin_script_name>
@@ -529,7 +529,7 @@
 				<item_version>0</item_version>
 				<item class_id="8" tracking_level="0" version="0">
 					<first>Source</first>
-					<second>Crop1</second>
+					<second>Merge3</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>46</KnobsAge>
@@ -661,7 +661,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>TRS_0510</second>
+					<second>Merge2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -1077,9 +1077,10 @@
 						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>1</HasMaster>
-						<Master class_id="10" tracking_level="0" version="2">
+						<Master class_id="10" tracking_level="0" version="3">
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowCFS</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1363,6 +1364,7 @@
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowOpacity</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1378,6 +1380,7 @@
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowOpacity</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1393,6 +1396,7 @@
 						<Master>
 							<MasterDimension>2</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowOpacity</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1408,6 +1412,7 @@
 						<Master>
 							<MasterDimension>3</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowOpacity</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1621,6 +1626,7 @@
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowColor</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1636,6 +1642,7 @@
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowColor</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1651,6 +1658,7 @@
 						<Master>
 							<MasterDimension>2</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowColor</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1785,6 +1793,7 @@
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowBlur</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1800,6 +1809,7 @@
 						<Master>
 							<MasterDimension>1</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowBlur</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -1966,6 +1976,7 @@
 						<Master>
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>DropShadow1_3</MasterNodeName>
+							<MasterNodeNameFull>DropShadow1_3</MasterNodeNameFull>
 							<MasterKnobName>shadowOnly</MasterKnobName>
 							<MasterTrackName></MasterTrackName>
 						</Master>
@@ -2065,7 +2076,7 @@
 					<second>TRS_0500</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>4</KnobsAge>
+			<KnobsAge>8</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -2514,399 +2525,6 @@
 			<CacheID>TRS_redchecker_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Read2</Plugin_label>
-			<Plugin_script_name>Read2</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
-			<item>
-				<Name>decodingPluginID</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>fr.inria.openfx.ReadPNG</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0000-box-cardboard.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filename</Name>
-				<Type>InputFile</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/ingredients-db/0000-box-cardboard.png</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>firstFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>lastFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>startingTime</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>timeOffset</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>proxyThreshold</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>customProxyScale</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filePremult</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>unpremult</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>frameRate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2.40000000000000000e+01</Value>
-					<Default>2.40000000000000000e+01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ParamExistingInstance</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioInputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>sRGB</Value>
-					<Default>sRGB</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioOutputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>scene_linear</Value>
-					<Default>scene_linear</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>1</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Read2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Merge1</Plugin_label>
-			<Plugin_script_name>Merge1</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>B_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>
-					<first>A</first>
-					<second>DropShadow1_3</second>
-				</item>
-				<item>
-					<first>B</first>
-					<second>Read2</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Merge1</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Crop1</Plugin_label>
 			<Plugin_script_name>Crop1</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.CropPlugin</Plugin_id>
@@ -2914,7 +2532,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>NatronParamFormatChoice</Name>
 				<Type>Choice</Type>
@@ -2931,6 +2549,23 @@
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<ChoiceLabel>PC_Video</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hidpi</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -3145,7 +2780,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
+			<KnobsCount>4</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -3203,16 +2838,38 @@
 				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>A2_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
-				<count>2</count>
+				<count>3</count>
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
 					<second>Switch_0500</second>
 				</item>
 				<item>
-					<first>B</first>
+					<first>A2</first>
 					<second>Switch_0510</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Switch_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -3304,6 +2961,1042 @@
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>switch_0500_2</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Read1</Plugin_label>
+			<Plugin_script_name>Read1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>15</KnobsCount>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadPNG</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(rarepizza-00001-base-0.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>[Project]/../output/rarepizza-#####-base-0.png</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>9999</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeDomainUserEdited</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>unpremult</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>sRGB</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>5</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Read11</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Merge3</Plugin_label>
+			<Plugin_script_name>Merge3</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>2</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Crop1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Merge3</CacheID>
+		</item>
+		<item>
+			<Plugin_label>i1_2</Plugin_label>
+			<Plugin_script_name>i1_2</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>21</KnobsCount>
+			<item>
+				<Name>decodingPluginChoice</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>Default</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadOIIO</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0520-paper-doodle.jpeg)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>hideInputs</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>[Project]/../ingredients-db/0520-paper-doodle.jpeg</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>opaque</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputPremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>opaque</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputComponents</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>RGB</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputLayerChoice</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>Color.RGB</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>edgePixels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>auto</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>offsetNegativeDispWindow</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>178</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>i1_21</CacheID>
+		</item>
+		<item>
+			<Plugin_label>TRS_default</Plugin_label>
+			<Plugin_script_name>TRS_default</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>5</KnobsCount>
+			<item>
+				<Name>translate</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.80800000000000409e+01</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.20800000000000409e+01</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>scale</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>9.69999999999999973e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>9.69999999999999973e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>uniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>6.00000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>8.00000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>i1_2</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>12</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>TRS_0510_2</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Switch_default</Plugin_label>
+			<Plugin_script_name>Switch_default</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>2</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>p1_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>1</first>
+					<second>TRS_default</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>5</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Switch_0510_2</CacheID>
 		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>8</ProjectKnobsCount>
@@ -3411,7 +4104,7 @@
 		<item>
 			<Enabled>1</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>&lt;Name&gt;Color&lt;/Name&gt;&lt;Channels&gt;R G B A&lt;/Channels&gt;&lt;Name&gt;DisparityLeft&lt;/Name&gt;&lt;Channels&gt;X Y&lt;/Channels&gt;&lt;Name&gt;DisparityRight&lt;/Name&gt;&lt;Channels&gt;X Y&lt;/Channels&gt;&lt;Name&gt;Backward&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Forward&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;</Value>
+			<Value>&lt;Name&gt;Color&lt;/Name&gt;&lt;Channels&gt;R G B A&lt;/Channels&gt;&lt;Name&gt;DisparityLeft&lt;/Name&gt;&lt;Channels&gt;X Y&lt;/Channels&gt;&lt;Name&gt;DisparityRight&lt;/Name&gt;&lt;Channels&gt;X Y&lt;/Channels&gt;&lt;Name&gt;Backward&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Forward&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Deep&lt;/Name&gt;&lt;Channels&gt;F B&lt;/Channels&gt;&lt;Name&gt;Depth&lt;/Name&gt;&lt;Channels&gt;Z&lt;/Channels&gt;&lt;Name&gt;Mask&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;&lt;Name&gt;Motion&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;Name&gt;Crust&lt;/Name&gt;&lt;Channels&gt;A&lt;/Channels&gt;</Value>
 			<Default>&lt;Name&gt;Color&lt;/Name&gt;&lt;Channels&gt;R G B A&lt;/Channels&gt;&lt;&gt;RGBA&lt;/&gt;&lt;Name&gt;DisparityLeft&lt;/Name&gt;&lt;Channels&gt;X Y&lt;/Channels&gt;&lt;&gt;Disparity&lt;/&gt;&lt;Name&gt;DisparityRight&lt;/Name&gt;&lt;Channels&gt;X Y&lt;/Channels&gt;&lt;&gt;Disparity&lt;/&gt;&lt;Name&gt;Backward&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;&gt;Motion&lt;/&gt;&lt;Name&gt;Forward&lt;/Name&gt;&lt;Channels&gt;U V&lt;/Channels&gt;&lt;&gt;Motion&lt;/&gt;</Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -3428,7 +4121,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Apr 12 23:10:48 2021</Value>
+			<Value>Mon May 3 06:05:31 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -3462,7 +4155,7 @@
 		<UserKnob>0</UserKnob>
 	</item>
 	<AdditionalFormats class_id="11" tracking_level="0" version="0">
-		<count>8</count>
+		<count>9</count>
 		<item_version>3</item_version>
 		<item class_id="12" tracking_level="0" version="3">
 			<RectI class_id="13" tracking_level="0" version="0">
@@ -3544,18 +4237,28 @@
 			<Pixel_aspect_ratio>1.00000000000000000e+00</Pixel_aspect_ratio>
 			<Name></Name>
 		</item>
+		<item>
+			<RectI>
+				<Left>0</Left>
+				<Bottom>0</Bottom>
+				<Right>1200</Right>
+				<Top>1600</Top>
+			</RectI>
+			<Pixel_aspect_ratio>1.00000000000000000e+00</Pixel_aspect_ratio>
+			<Name></Name>
+		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>4939</Timeline_current_time>
+	<Timeline_current_time>9999</Timeline_current_time>
 	<CreationDate>1613936932294</CreationDate>
 </Project>
-<ProjectGui class_id="14" tracking_level="0" version="11">
+<ProjectGui class_id="14" tracking_level="0" version="12">
 	<NodesGui class_id="15" tracking_level="0" version="0">
-		<count>14</count>
+		<count>17</count>
 		<item_version>6</item_version>
 		<item class_id="16" tracking_level="0" version="6">
 			<Name>i0</Name>
-			<X_position>2.06357436304434486e+02</X_position>
-			<Y_position>-3.60848253967488017e+03</Y_position>
+			<X_position>3.28700323727812020e+02</X_position>
+			<Y_position>-3.60459863848683653e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -3568,8 +4271,8 @@
 		</item>
 		<item>
 			<Name>w1</Name>
-			<X_position>3.46335797424986595e+02</X_position>
-			<Y_position>-2.78179056861791514e+03</Y_position>
+			<X_position>3.46400308246446912e+02</X_position>
+			<Y_position>-2.60591097384989371e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>7.499961853e-01</r>
 			<g>7.499961853e-01</g>
@@ -3582,8 +4285,8 @@
 		</item>
 		<item>
 			<Name>TRS_0500</Name>
-			<X_position>2.19484074647859529e+02</X_position>
-			<Y_position>-3.33952897945932909e+03</Y_position>
+			<X_position>3.41826962071237062e+02</X_position>
+			<Y_position>-3.33564507827128546e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -3596,8 +4299,8 @@
 		</item>
 		<item>
 			<Name>Viewer1</Name>
-			<X_position>-9.81474427815937815e+01</X_position>
-			<Y_position>-3.09692406516606297e+03</Y_position>
+			<X_position>-3.56413577151098252e+02</X_position>
+			<Y_position>-2.67734382251873467e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -3610,7 +4313,7 @@
 		</item>
 		<item>
 			<Name>DropShadow1_3</Name>
-			<X_position>3.46335797424986595e+02</X_position>
+			<X_position>3.46573299550212141e+02</X_position>
 			<Y_position>-2.92356844324684653e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
@@ -3750,8 +4453,8 @@
 		</item>
 		<item>
 			<Name>Switch_0500</Name>
-			<X_position>2.19484074647859416e+02</X_position>
-			<Y_position>-3.26219294571043520e+03</Y_position>
+			<X_position>3.41826962071236949e+02</X_position>
+			<Y_position>-3.25830904452239156e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -3764,8 +4467,8 @@
 		</item>
 		<item>
 			<Name>i1</Name>
-			<X_position>4.63209976594745967e+02</X_position>
-			<Y_position>-3.60582344466193172e+03</Y_position>
+			<X_position>5.85552864018123501e+02</X_position>
+			<Y_position>-3.60193954347388808e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -3778,8 +4481,8 @@
 		</item>
 		<item>
 			<Name>TRS_0510</Name>
-			<X_position>4.75209976594746081e+02</X_position>
-			<Y_position>-3.33692835731282685e+03</Y_position>
+			<X_position>5.97552864018123614e+02</X_position>
+			<Y_position>-3.33304445612478321e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -3791,37 +4494,9 @@
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Read2</Name>
-			<X_position>1.16582410258807704e+03</X_position>
-			<Y_position>-3.08862209164153683e+03</Y_position>
-			<Preview_enabled>1</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.28000000000000000e+02</Width>
-			<Height>7.80000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Merge1</Name>
-			<X_position>1.17782410258807704e+03</X_position>
-			<Y_position>-2.92356844324684653e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>4.30000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Crop1</Name>
-			<X_position>3.46400308246446912e+02</X_position>
-			<Y_position>-2.84568098331977899e+03</Y_position>
+			<X_position>3.46335797424986595e+02</X_position>
+			<Y_position>-2.84703149265864977e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -3834,8 +4509,8 @@
 		</item>
 		<item>
 			<Name>Grade1_2</Name>
-			<X_position>2.18357436304434486e+02</X_position>
-			<Y_position>-3.46106210534499314e+03</Y_position>
+			<X_position>3.40700323727812020e+02</X_position>
+			<Y_position>-3.45717820415694950e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -3848,7 +4523,7 @@
 		</item>
 		<item>
 			<Name>Merge2</Name>
-			<X_position>3.46573299550212141e+02</X_position>
+			<X_position>3.41826962071237176e+02</X_position>
 			<Y_position>-3.10386012625183321e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
@@ -3862,8 +4537,78 @@
 		</item>
 		<item>
 			<Name>Switch_0510</Name>
-			<X_position>4.75209976594745967e+02</X_position>
-			<Y_position>-3.25636339240962752e+03</Y_position>
+			<X_position>5.97552864018123501e+02</X_position>
+			<Y_position>-3.25247949122158388e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Read1</Name>
+			<X_position>-1.74939601167944602e+02</X_position>
+			<Y_position>-2.91331816202281243e+03</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Merge3</Name>
+			<X_position>3.46335797424986595e+02</X_position>
+			<Y_position>-2.73458376411888003e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>4.30000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>i1_2</Name>
+			<X_position>1.05394680996815396e+02</X_position>
+			<Y_position>-3.60053860088121610e+03</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>TRS_default</Name>
+			<X_position>1.17394680996815509e+02</X_position>
+			<Y_position>-3.33164351353211123e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Switch_default</Name>
+			<X_position>1.17394680996815396e+02</X_position>
+			<Y_position>-3.25107854862891190e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -3880,11 +4625,11 @@
 		<Window class_id="18" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="19" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1641 883</Sizes>
+				<Sizes>1069 575</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>516 516</Sizes>
+					<Sizes>489 488</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="20" tracking_level="1" version="5" object_id="_2">
@@ -3924,10 +4669,10 @@
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2560</x>
+			<x>0</x>
 			<y>23</y>
-			<w>2560</w>
-			<h>1035</h>
+			<w>1680</w>
+			<h>980</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="22" tracking_level="0" version="0">
@@ -3936,9 +4681,9 @@
 		<item class_id="23" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="24" tracking_level="0" version="14">
-				<zoomLeft>-3.86397610004982107e+03</zoomLeft>
-				<zoomBottom>-1.11142618138509397e+03</zoomBottom>
-				<zoomFactor>7.73900461636302384e-02</zoomFactor>
+				<zoomLeft>-1.90489123486723656e+03</zoomLeft>
+				<zoomBottom>-8.93049239665529058e+01</zoomBottom>
+				<zoomFactor>1.60437464127255291e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="25" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -3982,13 +4727,12 @@
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>5</count>
+		<count>4</count>
 		<item_version>0</item_version>
-		<item>i1</item>
+		<item>i1_2</item>
+		<item>TRS_default</item>
+		<item>Switch_default</item>
 		<item>i0</item>
-		<item>w1</item>
-		<item>Switch_0510</item>
-		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
@@ -4052,6 +4796,14 @@ obj = json.loads(data)
 # show values
 print obj[&quot;order&quot;].keys()</ScriptEditorInput>
 	<NumPyPanels>0</NumPyPanels>
+	<OpenedPanelsMinimized>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsMinimized>
+	<OpenedPanelsHideUnmodified>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsHideUnmodified>
 </ProjectGui>
 </boost_serialization>
 
