@@ -1,0 +1,6383 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="17">
+<Background_project>0</Background_project>
+<Project class_id="0" tracking_level="0" version="6">
+	<VersionMajor>2</VersionMajor>
+	<VersionMinor>4</VersionMinor>
+	<VersionRev>0</VersionRev>
+	<GitBranch>tags/v2.4.0</GitBranch>
+	<GitCommit>d3cfd7dcf2cf66cf38b7a9a8709c316adc4de9f0</GitCommit>
+	<OS>MacOSX</OS>
+	<Bits>64</Bits>
+	<NodesCollection class_id="1" tracking_level="0" version="1">
+		<NodesCount>14</NodesCount>
+		<item class_id="2" tracking_level="0" version="15">
+			<Plugin_label>Viewer1</Plugin_label>
+			<Plugin_script_name>Viewer1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map class_id="3" tracking_level="0" version="0">
+				<count>1</count>
+				<item_version>0</item_version>
+				<item class_id="4" tracking_level="0" version="0">
+					<first>1</first>
+					<second>Merge4</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>1</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents class_id="5" tracking_level="0" version="0">
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Viewer1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>idb1</Plugin_label>
+			<Plugin_script_name>idb1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Group</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item class_id="6" tracking_level="0" version="14">
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item class_id="7" tracking_level="0" version="7">
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation class_id="8" tracking_level="0" version="0">
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>onParamChanged</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>idbChanged</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>convertToGroup</Name>
+				<Type>Button</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>45470</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>4</UserPagesCount>
+			<item class_id="9" tracking_level="0" version="0">
+				<Name>csv</Name>
+				<Label>ingredient-db.csv</Label>
+				<Secret>0</Secret>
+				<IsTab>0</IsTab>
+				<IsOpened>0</IsOpened>
+				<NbChildren>11</NbChildren>
+				<Type>Regular</Type>
+				<item>
+					<Name>ingredientdbr</Name>
+					<Type>InputFile</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>[Project]/ingredients-db.csv</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label>ingredient-db CSV</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Sequences>0</Sequences>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>unique_id</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Ingredient Code</Label>
+					<Help></Help>
+					<NewLine>0</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>filename_png</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0000-box-cardboard.png</Value>
+						<Default>Not Loaded</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label>Filename</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<IsLabel>1</IsLabel>
+					<IsMultiLine>0</IsMultiLine>
+					<UseRichText>0</UseRichText>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>all_read_csv</Name>
+					<Type>Button</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Load Ingredient Data</Label>
+					<Help>Read All Data</Help>
+					<NewLine>0</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>check_missing</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>1</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Check Missing Files</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+				</item>
+				<Type>Group</Type>
+				<item>
+					<Name>i_params</Name>
+					<Label>Ingredient Params</Label>
+					<Secret>0</Secret>
+					<IsTab>1</IsTab>
+					<IsOpened>0</IsOpened>
+					<NbChildren>13</NbChildren>
+					<Type>Regular</Type>
+					<item>
+						<Name>nice_name</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Cardboard Pizza Box</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>nice_name</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>category</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>box</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>category</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>type</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>cardboard</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>type</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>description</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>description</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>description</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>artist</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Mike Sparber</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>artist</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>mafia_name</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Box and Crust</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>mafia_name</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>discord</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>discord</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>discord</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>twitter</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>twitter</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>twitter</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>instagram</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>instagram.com/m.sparber.art</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>instagram</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>email</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>email</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>email</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>filename_paste</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Y</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>filename_paste</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>tags</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>brown clean</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>tags</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>public_wallet</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>wallet</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>public_wallet</Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+				</item>
+				<Type>Group</Type>
+				<item>
+					<Name>i_db</Name>
+					<Label>Ingredient Row</Label>
+					<Secret>0</Secret>
+					<IsTab>1</IsTab>
+					<IsOpened>1</IsOpened>
+					<NbChildren>1</NbChildren>
+					<Type>Regular</Type>
+					<item>
+						<Name>ingredient_row</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>{&apos;category&apos;: &apos;box&apos;, &apos;&apos;: &apos;&apos;, &apos;description&apos;: &apos;description&apos;, &apos;artist&apos;: &apos;Mike Sparber&apos;, &apos;public_wallet&apos;: &apos;wallet&apos;, &apos;on_disk&apos;: &apos;Y&apos;, &apos;discord&apos;: &apos;discord&apos;, &apos;filename_paste&apos;: &apos;0000-box-cardboard&apos;, &apos;mafia_name&apos;: &apos;Box and Crust&apos;, &apos;email&apos;: &apos;email&apos;, &apos;nice_name&apos;: &apos;Cardboard Pizza Box&apos;, &apos;tags&apos;: &apos;brown clean&apos;, &apos;type&apos;: &apos;cardboard&apos;, &apos;twitter&apos;: &apos;twitter&apos;, &apos;unique_id&apos;: &apos;0&apos;, &apos;instagram&apos;: &apos;instagram.com/m.sparber.art&apos;}</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label></Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>1</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+				</item>
+				<Type>Group</Type>
+				<item>
+					<Name>i_code</Name>
+					<Label>Ingredient Codes</Label>
+					<Secret>0</Secret>
+					<IsTab>1</IsTab>
+					<IsOpened>1</IsOpened>
+					<NbChildren>2</NbChildren>
+					<Type>Regular</Type>
+					<item>
+						<Name>ingredient_db</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Row	OnDisk			Ingredient Code
+1		Y			0000-box-cardboard
+2		Y			0010-box-white
+3		Y			0020-box-greasy
+4		Y			0500-paper-redchecker
+5		Y			0510-paper-greenchecker
+6		Y			0520-paper-doodle
+7		Y			1000-crust-thin
+8		Y			1010-crust-thick
+9		Y			1020-crust-moon
+10		Y			1040-crust-castle
+11		Y			1050-crust-whitebread
+12		Y			1070-crust-glutenfree
+13		Y			2000-sauce-tomato
+14		Y			2010-sauce-pesto
+15		Y			2011-sauce-pesto
+16		Y			2020-sauce-mud
+17		Y			2030-sauce-bbq
+18		Y			2040-sauce-nutella
+19		Y			2060-sauce-deepspace
+20		Y			2070-sauce-prismicfluid
+21		Y			2071-sauce-prismicfluid
+22		Y			2072-sauce-prismicfluid
+23		Y			2073-sauce-prismicfluid
+24		Y			3000-cheese-mozzarella
+25		Y			3010-cheese-digitalvegan
+26		Y			3020-cheese-fetaballs
+27		Y			3030-cheese-smokedmozzarella
+28		Y			3031-cheese-smokedmozzarella
+29		Y			3032-cheese-smokedmozzarella
+30		Y			3033-cheese-smokedmozzarella
+31		Y			3040-cheese-goat
+32		Y			3050-cheese-czech
+33		Y			3051-cheese-czech
+34		Y			3070-cheese-provolone
+35		Y			3071-cheese-provolone
+36		Y			3080-cheese-fetabits
+37		Y			3090-cheese-chezdoge
+38		Y			3120-cheese-korbacik
+39		Y			3170-cheese-cheesecake
+40		Y			3171-cheese-cheesecake
+41		Y			3190-cheese-gruyere
+42		Y			3191-cheese-gruyere
+43		Y			3192-cheese-gruyere
+44		Y			3193-cheese-gruyere
+45		Y			3194-cheese-gruyere
+46		Y			3200-cheese-gouda
+47		Y			3201-cheese-gouda
+48		Y			3202-cheese-gouda
+49		Y			3203-cheese-gouda
+50		Y			3204-cheese-gouda
+51		Y			3205-cheese-gouda
+52		Y			4000-topping-meat-pepperoni
+53		Y			4001-topping-meat-pepperoni
+54		Y			4002-topping-meat-pepperoni
+55		Y			4003-topping-meat-pepperoni
+56		Y			4004-topping-meat-pepperoni
+57		Y			4005-topping-meat-pepperoni
+58		Y			4006-topping-meat-pepperoni
+59		Y			4010-topping-meat-salami
+60		Y			4011-topping-meat-salami
+61		Y			4012-topping-meat-salami
+62		Y			4020-topping-meat-turkeysausage
+63		Y			4021-topping-meat-turkeysausage
+64		Y			4030-topping-meat-spam
+65		Y			4031-topping-meat-spam
+66		Y			4032-topping-meat-spam
+67		Y			4033-topping-meat-spam
+68		Y			4034-topping-meat-spam
+69		Y			4035-topping-meat-spam
+70		Y			4036-topping-meat-spam
+71		Y			4037-topping-meat-spam
+72		Y			4038-topping-meat-spam
+73		Y			4090-topping-meat-beef
+74		Y			4091-topping-meat-beef
+75		Y			4092-topping-meat-beef
+76		Y			4093-topping-meat-beef
+77		Y			4094-topping-meat-beef
+78		Y			4095-topping-meat-beef
+79		Y			4110-topping-meat-chorizo
+80		Y			4120-topping-meat-bbqchicken
+81		Y			4220-topping-meat-eyeball
+82		Y			4230-topping-meat-finger
+83		Y			4231-topping-meat-finger
+84		Y			4232-topping-meat-finger
+85		Y			4233-topping-meat-finger
+86		Y			4234-topping-meat-finger
+87		Y			4235-topping-meat-finger
+88		Y			4240-topping-meat-rainbowpepperoni
+89		Y			4250-topping-meat-kali
+90		Y			4260-topping-meat-seitan
+91		Y			4261-topping-meat-seitan
+92		Y			4270-topping-meat-escargot
+93		Y			4271-topping-meat-escargot
+94		Y			4272-topping-meat-escargot
+95		Y			4273-topping-meat-escargot
+96		Y			4274-topping-meat-escargot
+97		Y			4275-topping-meat-escargot
+98		Y			4280-topping-meat-roastbeef
+99		Y			4281-topping-meat-roastbeef
+100		Y			4282-topping-meat-roastbeef
+101		Y			4283-topping-meat-roastbeef
+102		Y			4284-topping-meat-roastbeef
+103		Y			4285-topping-meat-roastbeef
+104		Y			4290-topping-meat-owl
+105		Y			4291-topping-meat-owl
+106		Y			4292-topping-meat-owl
+107		Y			4293-topping-meat-owl
+108		Y			4310-topping-meat-froglegs
+109		Y			4311-topping-meat-froglegs
+110		Y			4312-topping-meat-froglegs
+111		Y			4313-topping-meat-froglegs
+112		Y			4314-topping-meat-froglegs
+113		Y			4315-topping-meat-froglegs
+114		Y			4316-topping-meat-froglegs
+115		Y			4317-topping-meat-froglegs
+116		Y			4340-topping-meat-smokedturkey
+117		Y			4341-topping-meat-smokedturkey
+118		N			4360-topping-meat-zombie
+119		Y			4370-topping-meat-oxtail
+120		Y			4371-topping-meat-oxtail
+121		Y			4372-topping-meat-oxtail
+122		Y			4390-topping-meat-hotdog
+123		Y			4391-topping-meat-hotdog
+124		Y			4392-topping-meat-hotdog
+125		Y			4393-topping-meat-hotdog
+126		Y			4400-topping-meat-unicorn
+127		Y			4401-topping-meat-unicorn
+128		Y			4402-topping-meat-unicorn
+129		Y			4410-topping-meat-butts
+130		Y			5000-topping-fruit-tomato
+131		Y			5001-topping-fruit-tomato
+132		Y			5002-topping-fruit-tomato
+133		Y			5003-topping-fruit-tomato
+134		Y			5004-topping-fruit-tomato
+135		Y			5040-topping-fruit-banana
+136		Y			5041-topping-fruit-banana
+137		Y			5050-topping-fruit-watermelon
+138		Y			5051-topping-fruit-watermelon
+139		Y			5052-topping-fruit-watermelon
+140		Y			5053-topping-fruit-watermelon
+141		Y			5054-topping-fruit-watermelon
+142		Y			5060-topping-fruit-kiwi
+143		Y			5070-topping-fruit-grape
+144		Y			5071-topping-fruit-grape
+145		Y			5072-topping-fruit-grape
+146		Y			5073-topping-fruit-grape
+147		Y			5074-topping-fruit-grape
+148		Y			5075-topping-fruit-grape
+149		Y			5080-topping-fruit-peach
+150		Y			5081-topping-fruit-peach
+151		Y			5082-topping-fruit-peach
+152		Y			5083-topping-fruit-peach
+153		Y			5090-topping-fruit-strawberry
+154		Y			5091-topping-fruit-strawberry
+155		Y			5100-topping-fruit-apple
+156		Y			5101-topping-fruit-apple
+157		Y			5102-topping-fruit-apple
+158		Y			5103-topping-fruit-apple
+159		Y			5104-topping-fruit-apple
+160		Y			5105-topping-fruit-apple
+161		Y			5106-topping-fruit-apple
+162		Y			5110-topping-fruit-cherry
+163		Y			5111-topping-fruit-cherry
+164		Y			5112-topping-fruit-cherry
+165		Y			5113-topping-fruit-cherry
+166		Y			5114-topping-fruit-cherry
+167		Y			5115-topping-fruit-cherry
+168		Y			5120-topping-fruit-blackberry
+169		Y			5121-topping-fruit-blackberry
+170		Y			5122-topping-fruit-blackberry
+171		Y			5123-topping-fruit-blackberry
+172		Y			5124-topping-fruit-blackberry
+173		Y			5125-topping-fruit-blackberry
+174		Y			5130-topping-fruit-orangeslices
+175		Y			5131-topping-fruit-orangeslices
+176		Y			5132-topping-fruit-orangeslices
+177		Y			5140-topping-fruit-cantalope
+178		Y			5141-topping-fruit-cantalope
+179		Y			5142-topping-fruit-cantalope
+180		Y			5143-topping-fruit-cantalope
+181		Y			5144-topping-fruit-cantalope
+182		Y			5150-topping-fruit-passionfruite
+183		Y			5151-topping-fruit-passionfruite
+184		Y			5152-topping-fruit-passionfruite
+185		Y			5153-topping-fruit-passionfruite
+186		Y			5154-topping-fruit-passionfruite
+187		Y			5155-topping-fruit-passionfruite
+188		Y			5155-topping-fruit-passionfruite
+189		Y			5160-topping-fruit-orangepeel
+190		Y			5161-topping-fruit-orangepeel
+191		Y			5162-topping-fruit-orangepeel
+192		Y			5163-topping-fruit-orangepeel
+193		Y			5164-topping-fruit-orangepeel
+194		Y			5170-topping-fruit-blackolives
+195		Y			5171-topping-fruit-blackolives
+196		Y			5172-topping-fruit-blackolives
+197		Y			5180-topping-fruit-dates
+198		Y			5181-topping-fruit-dates
+199		Y			5190-topping-fruit-eggplant
+200		Y			5191-topping-fruit-eggplant
+201		Y			5200-topping-pepper-chili
+202		Y			5201-topping-pepper-chili
+203		Y			5203-topping-pepper-chili
+204		Y			5204-topping-pepper-chili
+205		Y			5205-topping-pepper-chili
+206		Y			5206-topping-pepper-chili
+207		Y			5207-topping-pepper-chili
+208		Y			5210-topping-pepper-jalapeno
+209		Y			5211-topping-pepper-jalapeno
+210		Y			5212-topping-pepper-jalapeno
+211		Y			5213-topping-pepper-jalapeno
+212		Y			5214-topping-pepper-jalapeno
+213		Y			5215-topping-pepper-jalapeno
+214		Y			5220-topping-pepper-shishito
+215		Y			5230-topping-pepper-banana
+216		Y			5233-topping-pepper-banana
+217		Y			5250-topping-pepper-ghost
+218		Y			5251-topping-pepper-ghost
+219		Y			5252-topping-pepper-ghost
+220		Y			5253-topping-pepper-ghost
+221		Y			5260-topping-pepper-yellow
+222		Y			5261-topping-pepper-yellow
+223		Y			5270-topping-pepper-pepperoncini
+224		Y			5271-topping-pepper-pepperoncini
+225		Y			5272-topping-pepper-pepperoncini
+226		Y			5273-topping-pepper-pepperoncini
+227		Y			5280-topping-pepper-habanero
+228		Y			5400-topping-fungi-mushrooms
+229		Y			5410-topping-fungi-truffles
+230		Y			5411-topping-fungi-truffles
+231		Y			5420-topping-fungi-magicmushroom
+232		Y			5421-topping-fungi-magicmushroom
+233		Y			5422-topping-fungi-magicmushroom
+234		Y			5430-topping-fungi-spaceshroom
+235		Y			5431-topping-fungi-spaceshroom
+236		Y			5440-topping-fungi-porcini
+237		Y			5441-topping-fungi-porcini
+238		Y			5450-topping-fungi-trufflepig
+239		Y			5451-topping-fungi-trufflepig
+240		Y			5500-topping-nut-pistachios
+241		Y			5501-topping-nut-pistachios
+242		Y			5510-topping-nut-pinenuts
+243		Y			5520-topping-nut-peanuts
+244		Y			5521-topping-nut-peanuts
+245		Y			5522-topping-nut-peanuts
+246		Y			5600-topping-vegetable-leek
+247		Y			5610-topping-vegetable-vegansausage
+248		Y			5611-topping-vegetable-vegansausage
+249		Y			5612-topping-vegetable-vegansausage
+250		Y			5613-topping-vegetable-vegansausage
+251		Y			5614-topping-vegetable-vegansausage
+252		Y			5620-topping-vegetable-cactus
+253		Y			5621-topping-vegetable-cactus
+254		Y			5622-topping-vegetable-cactus
+255		Y			5623-topping-vegetable-cactus
+256		Y			5624-topping-vegetable-cactus
+257		Y			5640-topping-vegetable-edamame
+258		Y			5641-topping-vegetable-edamame
+259		Y			5650-topping-vegetable-tofu
+260		Y			5651-topping-vegetable-tofu
+261		Y			5652-topping-vegetable-tofu
+262		Y			5660-topping-vegetable-spinach
+263		Y			5670-topping-vegetable-pickles
+264		Y			5671-topping-vegetable-pickles
+265		Y			5672-topping-vegetable-pickles
+266		Y			5673-topping-vegetable-pickles
+267		Y			5680-topping-vegetable-bamboo
+268		Y			5681-topping-vegetable-bamboo
+269		Y			5682-topping-vegetable-bamboo
+270		Y			5683-topping-vegetable-bamboo
+271		Y			5684-topping-vegetable-bamboo
+272		Y			5690-topping-vegetable-rosemary
+273		Y			5691-topping-vegetable-rosemary
+274		Y			5692-topping-vegetable-rosemary
+275		Y			5693-topping-vegetable-rosemary
+276		Y			5694-topping-vegetable-rosemary
+277		Y			5695-topping-vegetable-rosemary
+278		Y			5710-topping-vegetable-redonion
+279		Y			5715-topping-vegetable-redonion
+280		Y			5720-topping-vegetable-arugula
+281		Y			5722-topping-vegetable-arugula
+282		Y			5730-topping-vegetable-broccolini
+283		Y			5731-topping-vegetable-broccolini
+284		Y			5732-topping-vegetable-broccolini
+285		Y			5733-topping-vegetable-broccolini
+286		Y			5734-topping-vegetable-broccolini
+287		Y			5735-topping-vegetable-broccolini
+288		Y			5740-topping-vegetable-corn
+289		Y			5741-topping-vegetable-corn
+290		Y			5760-topping-vegetable-asparagus
+291		Y			5761-topping-vegetable-asparagus
+292		Y			5770-topping-vegetable-pickledbeets
+293		Y			5771-topping-vegetable-pickledbeets
+294		Y			5772-topping-vegetable-pickledbeets
+295		Y			5773-topping-vegetable-pickledbeets
+296		Y			5774-topping-vegetable-pickledbeets
+297		Y			5780-topping-vegetable-peas
+298		Y			5781-topping-vegetable-peas
+299		Y			5800-topping-vegetable-choppedolive
+300		Y			5801-topping-vegetable-choppedolive
+301		Y			5802-topping-vegetable-choppedolive
+302		Y			5810-topping-vegetable-sauerkraut
+303		Y			6000-topping-seafood-shrimp
+304		Y			6001-topping-seafood-shrimp
+305		Y			6010-topping-seafood-anchovies
+306		Y			6011-topping-seafood-anchovies
+307		Y			6020-topping-seafood-lobster
+308		Y			6021-topping-seafood-lobster
+309		Y			6030-topping-seafood-scallop
+310		Y			6031-topping-seafood-scallop
+311		Y			6040-topping-seafood-salmon
+312		Y			6041-topping-seafood-salmon
+313		Y			6042-topping-seafood-salmon
+314		Y			6050-topping-seafood-sardine
+315		Y			6051-topping-seafood-sardine
+316		Y			6052-topping-seafood-sardine
+317		Y			6060-topping-seafood-mermaids
+318		Y			6061-topping-seafood-mermaids
+319		Y			6062-topping-seafood-mermaids
+320		Y			6063-topping-seafood-mermaids
+321		Y			6064-topping-seafood-mermaids
+322		Y			6070-topping-seafood-takoyaki
+323		Y			6080-topping-seafood-cthulhu
+324		Y			6090-topping-seafood-poke
+325		Y			6091-topping-seafood-poke
+326		Y			6092-topping-seafood-poke
+327		Y			6094-topping-seafood-poke
+328		Y			6095-topping-seafood-poke
+329		Y			6100-topping-seafood-octopus
+330		Y			6110-topping-seafood-oysters
+331		Y			6111-topping-seafood-oysters
+332		Y			6120-topping-seafood-endangered
+333		Y			6120-topping-seafood-endangered
+334		Y			6121-topping-seafood-endangered
+335		Y			6130-topping-seafood-seaurchin
+336		Y			6131-topping-seafood-seaurchin
+337		Y			6132-topping-seafood-seaurchin
+338		Y			6150-topping-seafood-tropicalfish
+339		Y			6151-topping-seafood-tropicalfish
+340		Y			6152-topping-seafood-tropicalfish
+341		Y			6153-topping-seafood-tropicalfish
+342		Y			6154-topping-seafood-tropicalfish
+343		Y			6155-topping-seafood-tropicalfish
+344		Y			6200-topping-bugs-crickets
+345		Y			6201-topping-bugs-crickets
+346		Y			6210-topping-bugs-worms
+347		Y			6211-topping-bugs-worms
+348		Y			6220-topping-bugs-wasp
+349		Y			6230-topping-bugs-cicada
+350		Y			6240-topping-bugs-maggots
+351		Y			6241-topping-bugs-maggots
+352		Y			6242-topping-bugs-maggots
+353		Y			6250-topping-bugs-spiders
+354		Y			6251-topping-bugs-spiders
+355		Y			6252-topping-bugs-spiders
+356		Y			6253-topping-bugs-spiders
+357		Y			6254-topping-bugs-spiders
+358		Y			6255-topping-bugs-spiders
+359		Y			6260-topping-bugs-flies
+360		Y			6261-topping-bugs-flies
+361		Y			6262-topping-bugs-flies
+362		Y			6263-topping-bugs-flies
+363		Y			6264-topping-bugs-flies
+364		Y			6265-topping-bugs-flies
+365		Y			6300-topping-herb-hibiscus
+366		Y			6301-topping-herb-hibiscus
+367		Y			6310-topping-herb-cannabis
+368		Y			6311-topping-herb-cannabis
+369		Y			6312-topping-herb-cannabis
+370		Y			6313-topping-herb-cannabis
+371		Y			6314-topping-herb-cannabis
+372		Y			6315-topping-herb-cannabis
+373		Y			6320-topping-herb-basil
+374		Y			6321-topping-herb-basil
+375		Y			6322-topping-herb-basil
+376		Y			6330-topping-herb-hemp
+377		Y			6331-topping-herb-hemp
+378		Y			6400-topping-eggs-dino
+379		Y			6420-topping-eggs-goose
+380		Y			6421-topping-eggs-goose
+381		Y			6430-topping-eggs-ostrich
+382		Y			6431-topping-eggs-ostrich
+383		Y			6432-topping-eggs-ostrich
+384		Y			6500-topping-space-astronaut
+385		Y			6520-topping-space-sputnik
+386		Y			6521-topping-space-sputnik
+387		Y			6540-topping-space-robot
+388		Y			6541-topping-space-robot
+389		Y			6542-topping-space-robot
+390		Y			6543-topping-space-robot
+391		Y			6560-topping-space-tesla
+392		Y			6570-topping-space-meateorite
+393		Y			6571-topping-space-meateorite
+394		Y			6572-topping-space-meateorite
+395		Y			6573-topping-space-meateorite
+396		Y			6574-topping-space-meateorite
+397		Y			6580-topping-space-madamealien
+398		Y			6581-topping-space-madamealien
+399		Y			6582-topping-space-madamealien
+400		Y			6583-topping-space-madamealien
+401		Y			6584-topping-space-madamealien
+402		Y			6590-topping-space-laika
+403		Y			6600-topping-snax-snaprocks
+404		Y			6601-topping-snax-snaprocks
+405		Y			6602-topping-snax-snaprocks
+406		Y			6603-topping-snax-snaprocks
+407		Y			6620-topping-snax-starcandies
+408		Y			6621-topping-snax-starcandies
+409		Y			6622-topping-snax-starcandies
+410		Y			6623-topping-snax-starcandies
+411		Y			6624-topping-snax-starcandies
+412		Y			6625-topping-snax-starcandies
+413		Y			6630-topping-snax-icecream
+414		Y			6631-topping-snax-icecream
+415		Y			6632-topping-snax-icecream
+416		Y			6640-topping-snax-popcorn
+417		Y			6641-topping-snax-popcorn
+418		Y			6642-topping-snax-popcorn
+419		Y			6643-topping-snax-popcorn
+420		Y			6644-topping-snax-popcorn
+421		Y			6650-topping-snax-peanutbutter
+422		Y			6651-topping-snax-peanutbutter
+423		Y			6652-topping-snax-peanutbutter
+424		Y			6653-topping-snax-peanutbutter
+425		Y			6654-topping-snax-peanutbutter
+426		Y			6655-topping-snax-peanutbutter
+427		Y			6656-topping-snax-peanutbutter
+428		Y			6657-topping-snax-peanutbutter
+429		Y			6658-topping-snax-peanutbutter
+430		Y			6660-topping-snax-dotoru
+431		Y			6661-topping-snax-dotoru
+432		Y			6662-topping-snax-dotoru
+433		Y			6663-topping-snax-dotoru
+434		Y			6664-topping-snax-dotoru
+435		Y			6664-topping-snax-dotoru
+436		Y			6670-topping-snax-cauliflower
+437		Y			6671-topping-snax-cauliflower
+438		Y			6672-topping-snax-cauliflower
+439		Y			6673-topping-snax-cauliflower
+440		Y			6674-topping-snax-cauliflower
+441		Y			6675-topping-snax-cauliflower
+442		Y			6680-topping-snax-sweettooth
+443		Y			6681-topping-snax-sweettooth
+444		Y			6682-topping-snax-sweettooth
+445		Y			6683-topping-snax-sweettooth
+446		Y			6684-topping-snax-sweettooth
+447		Y			6685-topping-snax-sweettooth
+448		Y			6810-topping-edibleflower-dandelions
+449		Y			6811-topping-edibleflower-dandelions
+450		Y			6812-topping-edibleflower-dandelions
+451		Y			6820-topping-edibleflower-squashblossom
+452		Y			6821-topping-edibleflower-squashblossom
+453		Y			6822-topping-edibleflower-squashblossom
+454		Y			6830-topping-edibleflower-wilddaga
+455		Y			6831-topping-edibleflower-wilddaga
+456		Y			6832-topping-edibleflower-wilddaga
+457		Y			6840-topping-edibleflower-roses
+458		Y			6841-topping-edibleflower-roses
+459		Y			6842-topping-edibleflower-roses
+460		Y			6843-topping-edibleflower-roses
+461		Y			6844-topping-edibleflower-roses
+462		Y			6845-topping-edibleflower-roses
+463		Y			6850-topping-edibleflower-tulip
+464		Y			6851-topping-edibleflower-tulip
+465		Y			6852-topping-edibleflower-tulip
+466		Y			6853-topping-edibleflower-tulip
+467		Y			6854-topping-edibleflower-tulip
+468		Y			6855-topping-edibleflower-tulip
+469		Y			6860-topping-edibleflower-camellia
+470		Y			6861-topping-edibleflower-camellia
+471		Y			6862-topping-edibleflower-camellia
+472		Y			6863-topping-edibleflower-camellia
+473		Y			6864-topping-edibleflower-camellia
+474		Y			6865-topping-edibleflower-camellia
+475		Y			6900-topping-crypto-laszlo
+476		Y			6901-topping-crypto-laszlo
+477		Y			6902-topping-crypto-laszlo
+478		Y			6903-topping-crypto-laszlo
+479		Y			6904-topping-crypto-laszlo
+480		Y			7000-topping-misc-banhmi
+481		Y			7001-topping-misc-banhmi
+482		Y			7002-topping-misc-banhmi
+483		Y			7010-topping-misc-supernaturalpoodle
+484		Y			7011-topping-misc-supernaturalpoodle
+485		Y			7012-topping-misc-supernaturalpoodle
+486		Y			7013-topping-misc-supernaturalpoodle
+487		Y			7014-topping-misc-supernaturalpoodle
+488		Y			7015-topping-misc-supernaturalpoodle
+489		Y			7090-topping-misc-dmt
+490		Y			7100-topping-misc-lsd
+491		Y			7101-topping-misc-lsd
+492		Y			7102-topping-misc-lsd
+493		Y			7103-topping-misc-lsd
+494		Y			7104-topping-misc-lsd
+495		Y			7105-topping-misc-lsd
+496		Y			7110-topping-misc-cigarettes
+497		Y			7111-topping-misc-cigarettes
+498		Y			7112-topping-misc-cigarettes
+499		Y			7113-topping-misc-cigarettes
+500		Y			7114-topping-misc-cigarettes
+501		Y			7115-topping-misc-cigarettes
+502		Y			7120-topping-misc-jelly
+503		Y			7121-topping-misc-jelly
+504		Y			7122-topping-misc-jelly
+505		Y			7123-topping-misc-jelly
+506		Y			7130-topping-misc-buttons
+507		Y			7131-topping-misc-buttons
+508		Y			7132-topping-misc-buttons
+509		Y			7133-topping-misc-buttons
+510		Y			7134-topping-misc-buttons
+511		Y			7135-topping-misc-buttons
+512		Y			7200-topping-misc-dilldough
+513		Y			7201-topping-misc-dilldough
+514		Y			7202-topping-misc-dilldough
+515		Y			7203-topping-misc-dilldough
+516		Y			7204-topping-misc-dilldough
+517		Y			7205-topping-misc-dilldough
+518		Y			7210-topping-misc-puzzle
+519		Y			7211-topping-misc-puzzle
+520		Y			7212-topping-misc-puzzle
+521		Y			7213-topping-misc-puzzle
+522		Y			7214-topping-misc-puzzle
+523		Y			7215-topping-misc-puzzle
+524		Y			7220-topping-misc-goldflakes
+525		Y			7221-topping-misc-goldflakes
+526		Y			7222-topping-misc-goldflakes
+527		Y			7230-topping-misc-diamonds
+528		Y			7231-topping-misc-diamonds
+529		Y			7232-topping-misc-diamonds
+530		Y			7240-topping-misc-hypodermicneedle
+531		Y			7241-topping-misc-hypodermicneedle
+532		Y			7242-topping-misc-hypodermicneedle
+533		Y			7250-topping-misc-paintstrokes
+534		Y			7251-topping-misc-paintstrokes
+535		Y			7252-topping-misc-paintstrokes
+536		Y			7253-topping-misc-paintstrokes
+537		Y			7254-topping-misc-paintstrokes
+538		Y			7260-topping-misc-thingswitheyes
+539		Y			7261-topping-misc-thingswitheyes
+540		Y			7262-topping-misc-thingswitheyes
+541		Y			7263-topping-misc-thingswitheyes
+542		Y			7270-topping-misc-dogtoy
+543		Y			7271-topping-misc-dogtoy
+544		Y			7272-topping-misc-dogtoy
+545		Y			7273-topping-misc-dogtoy
+546		Y			7280-topping-misc-twinkieweiner
+547		Y			7290-topping-misc-rice
+548		Y			7291-topping-misc-rice
+549		Y			7292-topping-misc-rice
+550		Y			7293-topping-misc-rice
+551		Y			7294-topping-misc-rice
+552		Y			7295-topping-misc-rice
+553		Y			7300-topping-misc-batteries
+554		Y			7301-topping-misc-batteries
+555		Y			7302-topping-misc-batteries
+556		Y			7310-topping-misc-yarnball
+557		Y			7311-topping-misc-yarnball
+558		Y			7312-topping-misc-yarnball
+559		Y			7313-topping-misc-yarnball
+560		Y			7320-topping-misc-tumbleweeds
+561		Y			7321-topping-misc-tumbleweeds
+562		Y			7322-topping-misc-tumbleweeds
+563		Y			8160-topping-misc-pizzamafia
+564		Y			8161-topping-misc-pizzamafia
+565		Y			8162-topping-misc-pizzamafia
+566		Y			8163-topping-misc-pizzamafia
+567		Y			8164-topping-misc-pizzamafia
+568		Y			8164-topping-misc-pizzamafia
+569		Y			9100-squirt-mayo
+570		Y			9120-squirt-chirstmaslights
+571		Y			9130-squirt-ranch
+572		Y			9140-squirt-cheesewizz
+573		Y			9150-squirt-peptomics
+574		Y			9151-squirt-peptomics
+575		Y			9152-squirt-peptomics
+576		Y			9153-squirt-peptomics
+577		Y			9154-squirt-peptomics
+578		Y			9155-squirt-peptomics
+579		Y			9156-squirt-peptomics
+580		Y			9160-squirt-bbq
+581		Y			9180-squirt-squidink
+582		Y			9200-saver-swoledoge
+583		Y			9201-saver-swoledoge
+584		Y			9202-saver-swoledoge
+585		Y			9203-saver-swoledoge
+586		Y			9210-saver-table
+587		Y			9211-saver-table
+588		Y			9212-saver-table
+589		Y			9213-saver-table
+590		Y			9214-saver-table
+591		Y			9215-saver-table
+592		Y			9220-saver-goldenhungy
+593		Y			9560-seasoning-parsley
+594		Y			9561-seasoning-parsley
+595		Y			9562-seasoning-parsley
+596		Y			9563-seasoning-parsley
+597		Y			9570-seasoning-oregano
+</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label></Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>1</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>code_count</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Codes in Database: 597</Value>
+							<Default>Codes in Database: </Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>Codes in Database: </Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>0</Evaluate>
+						<Animates>0</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>1</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>all_write_csv</Name>
+					<Type>Button</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Save All Ingredient Data</Label>
+					<Help></Help>
+					<NewLine>0</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>all_write_label</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>Latest Save Date: </Value>
+						<Default>Latest Save Date: </Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label>Latest Saved: </Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<IsLabel>1</IsLabel>
+					<IsMultiLine>0</IsMultiLine>
+					<UseRichText>0</UseRichText>
+				</item>
+				<Type>Group</Type>
+				<item>
+					<Name>i_missing</Name>
+					<Label>Missing Files</Label>
+					<Secret>0</Secret>
+					<IsTab>1</IsTab>
+					<IsOpened>1</IsOpened>
+					<NbChildren>2</NbChildren>
+					<Type>Regular</Type>
+					<item>
+						<Name>ingredient_db_missing</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Row	OnDisk			Ingredient Code
+8		Y			
+12		N			1030-crust-stuffedcheese
+15		N			1060-crust-cauliflower
+23		N			2050-sauce-white
+29		N			2080-sauce-currysauce
+30		N			2090-sauce-redglitter
+41		N			3060-cheese-
+46		N			3100-cheese-
+47		N			3110-cheese-
+49		N			3140-cheese-
+50		N			3150-cheese-
+51		N			3160-cheese-
+54		N			3180-cheese-
+87		N			4040-topping-meat-ham
+88		N			4050-topping-meat-duck
+89		N			4060-topping-meat-turkey
+90		N			4070-topping-meat-prosciutto
+97		N			4100-topping-meat-chickentikka
+100		N			4130-topping-meat-bacon
+101		N			4140-topping-meat-venison
+102		N			4150-topping-meat-sausage
+103		N			4160-topping-meat-meatballs
+104		N			4170-topping-meat-dumpling
+105		N			4180-topping-meat-buffalochicken
+106		N			4190-topping-meat-charsiupork
+107		N			4200-topping-meat-cheeseburger
+135		N			4300-topping-meat-doves
+144		N			4320-topping-meat-reindeer
+145		N			4330-topping-meat-meatsticks
+148		N			4350-topping-meat-jerkchicken
+153		N			4380-topping-meat-pizzarat
+162		N			4411-topping-meat-butts
+163		N			4412-topping-meat-butts
+164		N			-topping-meat-
+170		N			5010-topping-fruit-greenpapaya
+171		N			5020-topping-fruit-pineapple
+172					
+237		Y			5182-topping-fruit-dates
+242		Y			5202-topping-pepper-chili
+256		Y			5231-topping-pepper-banana
+257		Y			5232-topping-pepper-banana
+259		Y			5234-topping-pepper-banana
+271		Y			5290-topping-pepper-aleppo
+322		Y			5700-topping-vegetable-shadowplant
+323		Y			5701-topping-vegetable-shadowplant
+324		Y			5702-topping-vegetable-shadowplant
+325		Y			5703-topping-vegetable-shadowplant
+326		Y			5704-topping-vegetable-shadowplant
+327		Y			5705-topping-vegetable-shadowplant
+340		Y			5750-topping-vegetable-artichokehearts
+341		Y			5751-topping-vegetable-artichokehearts
+342		Y			5752-topping-vegetable-artichokehearts
+343		Y			5753-topping-vegetable-artichokehearts
+344		Y			5754-topping-vegetable-artichokehearts
+345		Y			5755-topping-vegetable-artichokehearts
+348		Y			5762-topping-vegetable-asparagus
+349		Y			5763-topping-vegetable-asparagus
+350		Y			5764-topping-vegetable-asparagus
+358		Y			5790-topping-vegetable-greekolive
+363		Y			5820-topping-vegetable-greenonions
+364		Y			-topping-vegetable-
+365		Y			-topping-vegetable-
+368		Y			6006-topping-seafood-shrimp
+387					
+388					
+389					
+390					
+391					
+392					
+397		Y			6093-topping-seafood-poke
+409		Y			6140-topping-seafood-sushi
+410		Y			6141-topping-seafood-sushi
+411		Y			6142-topping-seafood-sushi
+412		Y			6143-topping-seafood-sushi
+413		Y			6144-topping-seafood-sushi
+414		Y			6145-topping-seafood-sushi
+415		Y			6146-topping-seafood-sushi
+416		Y			6147-topping-seafood-sushi
+417		Y			6148-topping-seafood-sushi
+418		Y			6149-topping-seafood-wasabi
+425		Y			6200-topping-seafood-
+426		Y			6210-topping-seafood-
+456		Y			6316-topping-herb-cannabis
+463		Y			6410-topping-eggs-gold
+470		Y			6510-topping-space-spaceshuttle
+471		Y			6511-topping-space-spacevehicles
+474					
+490		Y			6585-topping-space-madamealien
+502		Y			6626-topping-snax-starcandies
+503		Y			6627-topping-snax-starcandies
+539		Y			6690-topping-snax-sweettooth
+540					
+541					
+542		N			6800-topping-edibleflower-violets
+585		N			7091-topping-misc-dmt
+586		N			7092-topping-misc-dmt
+587		N			7093-topping-misc-dmt
+588		N			7094-topping-misc-dmt
+589		N			7095-topping-misc-dmt
+670		Y			9110-squirt-pesto
+671		Y			9111-squirt-pesto
+672		Y			9112-squirt-pesto
+684		Y			9170-squirt-applesauce
+697		N			9500-seasoning-pepperflakes
+703		N			9580-seasoning-glitter
+704		EOF			EOF
+</Value>
+							<Default></Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label></Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>1</Evaluate>
+						<Animates>1</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>0</IsLabel>
+						<IsMultiLine>1</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+					<Type>Regular</Type>
+					<item>
+						<Name>missing_count</Name>
+						<Type>String</Type>
+						<Dimension>1</Dimension>
+						<Secret>0</Secret>
+						<MasterIsAlias>0</MasterIsAlias>
+						<item>
+							<Enabled>1</Enabled>
+							<HasAnimation>0</HasAnimation>
+							<Value>Files missing on Disk but are in Database: 106</Value>
+							<Default>Files missing on Disk but are in Database: </Default>
+							<HasMaster>0</HasMaster>
+							<Expression></Expression>
+							<ExprHasRet>0</ExprHasRet>
+						</item>
+						<StringsAnimation>
+							<count>0</count>
+							<item_version>0</item_version>
+						</StringsAnimation>
+						<UserKnob>1</UserKnob>
+						<Label>Files missing on Disk but are in Database: </Label>
+						<Help></Help>
+						<NewLine>1</NewLine>
+						<Evaluate>0</Evaluate>
+						<Animates>0</Animates>
+						<Persistent>1</Persistent>
+						<IsLabel>1</IsLabel>
+						<IsMultiLine>0</IsMultiLine>
+						<UseRichText>0</UseRichText>
+					</item>
+				</item>
+			</item>
+			<item>
+				<Name>scattering_tab</Name>
+				<Label>scattering-db.csv</Label>
+				<Secret>0</Secret>
+				<IsTab>0</IsTab>
+				<IsOpened>0</IsOpened>
+				<NbChildren>15</NbChildren>
+				<Type>Regular</Type>
+				<item>
+					<Name>scatterdb</Name>
+					<Type>InputFile</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>[Project]/arrangement-db.csv</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label>scatter-db CSV file</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Sequences>0</Sequences>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>scatter_id</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>3000</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Ingredient Code</Label>
+					<Help></Help>
+					<NewLine>0</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>scatter_read_csv</Name>
+					<Type>Button</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Load Scatter Data</Label>
+					<Help>Read Scatter Data</Help>
+					<NewLine>0</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>scatter_read_label</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>Not Loaded</Value>
+						<Default>Not Loaded</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label></Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<IsLabel>1</IsLabel>
+					<IsMultiLine>0</IsMultiLine>
+					<UseRichText>0</UseRichText>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>sep___s</Name>
+					<Type>Separator</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label></Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>0</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>emission_count</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>20</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Emission Count</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>particle_rotate_max</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>360</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Particle Rotate Max</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>particle_rotate_min</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Particle Rotate Min</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>particle_scale_max</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.99999999999999989e-01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Particle Scale Max</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>particle_scale_min</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.99999999999999989e-01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Particle Scale Min</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>particle_center_x</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Particle_center_x</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>particle_center_y</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>particle_center_y</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>sep_____________s</Name>
+					<Type>Separator</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label></Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>0</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>scatter_write_csv</Name>
+					<Type>Button</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Save Scattering Data</Label>
+					<Help></Help>
+					<NewLine>0</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>scatter_write_label</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>Not Saved</Value>
+						<Default>Not Saved</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label></Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<IsLabel>1</IsLabel>
+					<IsMultiLine>0</IsMultiLine>
+					<UseRichText>0</UseRichText>
+				</item>
+			</item>
+			<item>
+				<Name>nutritional</Name>
+				<Label>nutritional-db.csv</Label>
+				<Secret>0</Secret>
+				<IsTab>0</IsTab>
+				<IsOpened>0</IsOpened>
+				<NbChildren>40</NbChildren>
+				<Type>Regular</Type>
+				<item>
+					<Name>nutritionaldb</Name>
+					<Type>InputFile</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>[Project]/nutritional-db.csv</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label>nutritional-db.csv</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<Sequences>0</Sequences>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>nutritional_id</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Ingredient ID</Label>
+					<Help></Help>
+					<NewLine>0</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>nutritional_read_csv</Name>
+					<Type>Button</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Load Nutritional Data</Label>
+					<Help></Help>
+					<NewLine>0</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>nutritional_read_label</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>Not Loaded</Value>
+						<Default>Not Loaded</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label>nutritional</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<IsLabel>1</IsLabel>
+					<IsMultiLine>0</IsMultiLine>
+					<UseRichText>0</UseRichText>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>sep___n</Name>
+					<Type>Separator</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label></Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>0</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>serving_size</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Serving Size</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>calories</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Calories</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>calories_from_fat</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>16</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Calories from Fat</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>weight</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.43430000000000007e+02</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Weight (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>trans_fat</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.60000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Trans Fat (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>monosaturated_fat</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>3.79999999999999982e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Monosaturated Fat (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>saturated_fat</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.60000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Saturated Fat (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>sodium</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.30000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Sodium (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>cholesterol</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>9.08999999999999986e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Cholesterol (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>complex_carb</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>9.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Complex Carb. (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>dietary_fiber</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>6.70000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Dietary Fiber (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>sugar</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>7.40000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Sugar (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>added_sugars</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.60000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Added Sugars  (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>protein</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>6.99999999999999956e-01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Protein (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>vitamin_a</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.70000000000000018e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Vitamin A (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>vitamin_b6</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>9.02000000000000024e-01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Vitamin B6 (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>vitamin_b12</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>7.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Vitamin B12 (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>vitamin_c</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.00000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Vitamin C (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>vitamin_e</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.39999999999999991e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Vitamin E (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>vitamin_k</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Vitamin K (g)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>biotin</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Biotin (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>folate</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.30000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Folate (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>calcium</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.00000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Calcium (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>iron</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>8.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>iron (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>pantothenic_acid</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0.00000000000000000e+00</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Pantothenic Acid (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>potassium</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>7.40000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Potassium (mg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>riboflavin</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.10000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Riboflavin (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>vitamin_d</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Vitamin D  (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>thiamin</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>2.20000000000000000e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Thiamin (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>zinc</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Zinc (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>magnesium</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Magnesium (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>selenium</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Selenium  (mcg)</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>0.00000000000000000e+00</DMax>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>sep____________________n</Name>
+					<Type>Separator</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label></Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>0</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>nutrition_write_csv</Name>
+					<Type>Button</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>Save Nutritional Data</Label>
+					<Help></Help>
+					<NewLine>0</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>nutritional_write_label</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>Not Saved</Value>
+						<Default>Not Saved</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label></Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>0</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<IsLabel>1</IsLabel>
+					<IsMultiLine>0</IsMultiLine>
+					<UseRichText>0</UseRichText>
+				</item>
+			</item>
+			<item>
+				<Name>combo_tab</Name>
+				<Label>combos.csv</Label>
+				<Secret>0</Secret>
+				<IsTab>0</IsTab>
+				<IsOpened>0</IsOpened>
+				<NbChildren>2</NbChildren>
+				<Type>Regular</Type>
+				<item>
+					<Name>combodb</Name>
+					<Type>InputFile</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value></Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>1</UserKnob>
+					<Label>combos-db.csv</Label>
+					<Help>Path to combo database
+
+[Project]/combo-db.csv</Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>0</Animates>
+					<Persistent>1</Persistent>
+					<Sequences>0</Sequences>
+				</item>
+				<Type>Regular</Type>
+				<item>
+					<Name>combo_id</Name>
+					<Type>Int</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>0</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>1</UserKnob>
+					<Label>combo_id</Label>
+					<Help></Help>
+					<NewLine>1</NewLine>
+					<Evaluate>1</Evaluate>
+					<Animates>1</Animates>
+					<Persistent>1</Persistent>
+					<Min>-2.14748364800000000e+09</Min>
+					<Max>2.14748364700000000e+09</Max>
+					<DMin>0.00000000000000000e+00</DMin>
+					<DMax>1.00000000000000000e+02</DMax>
+				</item>
+			</item>
+			<PagesCount>6</PagesCount>
+			<name>csv</name>
+			<name>scattering_tab</name>
+			<name>nutritional</name>
+			<name>combo_tab</name>
+			<name>Node</name>
+			<name>Settings</name>
+			<Children>2</Children>
+			<item>
+				<Plugin_label>Output1</Plugin_label>
+				<Plugin_script_name>Output1</Plugin_script_name>
+				<Plugin_id>fr.inria.built-in.Output</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>1</KnobsCount>
+				<item>
+					<Name>hideInputs</Name>
+					<Type>Bool</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1</Value>
+						<Default>0</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<Inputs_map>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>
+						<first>Source</first>
+						<second>Input1</second>
+					</item>
+				</Inputs_map>
+				<KnobsAge>3</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>3</PagesCount>
+				<name>Node</name>
+				<name>Settings</name>
+				<name>Info</name>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
+				<CacheID>idb1.Output1</CacheID>
+			</item>
+			<item>
+				<Plugin_label>Input1</Plugin_label>
+				<Plugin_script_name>Input1</Plugin_script_name>
+				<Plugin_id>fr.inria.built-in.Input</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>1</KnobsCount>
+				<item>
+					<Name>userTextArea</Name>
+					<Type>String</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+						<Default></Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<StringsAnimation>
+						<count>0</count>
+						<item_version>0</item_version>
+					</StringsAnimation>
+					<UserKnob>0</UserKnob>
+				</item>
+				<Inputs_map>
+					<count>0</count>
+					<item_version>0</item_version>
+				</Inputs_map>
+				<KnobsAge>1</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>3</PagesCount>
+				<name>controls</name>
+				<name>Node</name>
+				<name>Info</name>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
+				<CacheID>idb1.Input1</CacheID>
+			</item>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Group1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Read_ingredient</Plugin_label>
+			<Plugin_script_name>Read_ingredient</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>14</KnobsCount>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadPNG</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(1000-crust-thin.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>/Users/ashafer/Dropbox (Penumbra, Inc.)/pizza-oven-py/ingredients-db/1000-crust-thin.png</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>unpremult</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>sRGB</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>4</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Read1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Write1</Plugin_label>
+			<Plugin_script_name>Write1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Write</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>10</KnobsCount>
+			<item>
+				<Name>encodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.WritePNG</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(9141-squirt-cheesewizz.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>OutputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>/Users/ashafer/Dropbox (Penumbra, Inc.)/pizza-oven-py/ingredients-db/9141-squirt-cheesewizz.png</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronParamFormatChoice</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>6</Value>
+					<Default>20</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>HD</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>sRGB</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRange</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>manual</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Merge4</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>6</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Write1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>elem0</Plugin_label>
+			<Plugin_script_name>elem0</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>14</KnobsCount>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadPNG</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(6000-topping-seafood-shrimp.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>/Users/ashafer/Dropbox (Penumbra, Inc.)/pizza-oven-py/ingredients-db/6000-topping-seafood-shrimp.png</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>unpremult</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>sRGB</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>4</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Read3</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Merge_toppings</Plugin_label>
+			<Plugin_script_name>Merge_toppings</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Transform_0</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Transform_1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>1</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Merge2</CacheID>
+		</item>
+		<item>
+			<Plugin_label>elem1</Plugin_label>
+			<Plugin_script_name>elem1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>14</KnobsCount>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadPNG</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(5844-topping-vegetable-kale.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>/Users/ashafer/Dropbox (Penumbra, Inc.)/pizza-oven-py/ingredients-db/5844-topping-vegetable-kale.png</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>unpremult</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>sRGB</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>2</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Read4</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Transform_1</Plugin_label>
+			<Plugin_script_name>Transform_1</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>5</KnobsCount>
+			<item>
+				<Name>scale</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.99999999999999978e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.99999999999999978e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>uniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>transformCenterChanged</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>elem1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>107</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Transform1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Transform_0</Plugin_label>
+			<Plugin_script_name>Transform_0</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>6</KnobsCount>
+			<item>
+				<Name>rotate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4.80000000000000000e+01</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>scale</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.99999999999999989e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.99999999999999989e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>uniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>transformCenterChanged</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>elem0</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>117</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Transform3</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Test Position</Plugin_label>
+			<Plugin_script_name>Test_Position</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>5</KnobsCount>
+			<item>
+				<Name>translate</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00600000000000000e+03</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00600000000000000e+03</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>uniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.12000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>transformCenterChanged</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Merge_toppings</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>39</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Transform2</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Read1</Plugin_label>
+			<Plugin_script_name>Read1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>20</KnobsCount>
+			<item>
+				<Name>decodingPluginChoice</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>Default</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadOIIO</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(PinkRuler.jpg)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>/Users/ashafer/Dropbox (Penumbra, Inc.)/pizza-oven-py/slices/PinkRuler.jpg</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>opaque</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputPremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>opaque</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputComponents</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>RGB</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>outputLayerChoice</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>Color.RGB</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>edgePixels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>auto</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>offsetNegativeDispWindow</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>1</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Read11</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Transform1</Plugin_label>
+			<Plugin_script_name>Transform1</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>5</KnobsCount>
+			<item>
+				<Name>translate</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.24200000000000000e+03</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.08700000000000000e+03</Value>
+					<Default>0.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>uniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3.00000000000000044e-01</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.62100000000000023e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>transformCenterChanged</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Read1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>714</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Transform11</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Merge1</Plugin_label>
+			<Plugin_script_name>Merge1</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Test_Position</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Read_ingredient</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Merge1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Merge4</Plugin_label>
+			<Plugin_script_name>Merge4</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Transform1</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Merge1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Merge4</CacheID>
+		</item>
+	</NodesCollection>
+	<ProjectKnobsCount>3</ProjectKnobsCount>
+	<item>
+		<Name>projectPaths</Name>
+		<Type>Path</Type>
+		<Dimension>1</Dimension>
+		<Secret>0</Secret>
+		<MasterIsAlias>0</MasterIsAlias>
+		<item>
+			<Enabled>1</Enabled>
+			<HasAnimation>0</HasAnimation>
+			<Value>&lt;Name&gt;OCIO&lt;/Name&gt;&lt;Value&gt;/Applications/Natron.app/Contents/Resources/OpenColorIO-Configs/blender&lt;/Value&gt;&lt;Name&gt;Project&lt;/Name&gt;&lt;Value&gt;/Users/ashafer/Dropbox (Penumbra, Inc.)/pizza-oven-py/natron&lt;/Value&gt;</Value>
+			<Default></Default>
+			<HasMaster>0</HasMaster>
+			<Expression></Expression>
+			<ExprHasRet>0</ExprHasRet>
+		</item>
+		<UserKnob>0</UserKnob>
+	</item>
+	<item>
+		<Name>outputFormat</Name>
+		<Type>Choice</Type>
+		<Dimension>1</Dimension>
+		<Secret>0</Secret>
+		<MasterIsAlias>0</MasterIsAlias>
+		<item>
+			<Enabled>1</Enabled>
+			<HasAnimation>0</HasAnimation>
+			<Value>20</Value>
+			<Default>6</Default>
+			<HasMaster>0</HasMaster>
+			<Expression></Expression>
+			<ExprHasRet>0</ExprHasRet>
+		</item>
+		<ChoiceLabel>3072x3072</ChoiceLabel>
+		<UserKnob>0</UserKnob>
+	</item>
+	<item>
+		<Name>lastSaveDate</Name>
+		<Type>String</Type>
+		<Dimension>1</Dimension>
+		<Secret>0</Secret>
+		<MasterIsAlias>0</MasterIsAlias>
+		<item>
+			<Enabled>0</Enabled>
+			<HasAnimation>0</HasAnimation>
+			<Value>Sat Jun 12 09:15:46 2021</Value>
+			<Default></Default>
+			<HasMaster>0</HasMaster>
+			<Expression></Expression>
+			<ExprHasRet>0</ExprHasRet>
+		</item>
+		<StringsAnimation>
+			<count>0</count>
+			<item_version>0</item_version>
+		</StringsAnimation>
+		<UserKnob>0</UserKnob>
+	</item>
+	<AdditionalFormats class_id="10" tracking_level="0" version="0">
+		<count>4</count>
+		<item_version>3</item_version>
+		<item class_id="11" tracking_level="0" version="3">
+			<RectI class_id="12" tracking_level="0" version="0">
+				<Left>0</Left>
+				<Bottom>0</Bottom>
+				<Right>3072</Right>
+				<Top>3072</Top>
+			</RectI>
+			<Pixel_aspect_ratio>1.00000000000000000e+00</Pixel_aspect_ratio>
+			<Name></Name>
+		</item>
+		<item>
+			<RectI>
+				<Left>0</Left>
+				<Bottom>0</Bottom>
+				<Right>1297</Right>
+				<Top>1129</Top>
+			</RectI>
+			<Pixel_aspect_ratio>1.00000000000000000e+00</Pixel_aspect_ratio>
+			<Name></Name>
+		</item>
+		<item>
+			<RectI>
+				<Left>0</Left>
+				<Bottom>0</Bottom>
+				<Right>1872</Right>
+				<Top>1872</Top>
+			</RectI>
+			<Pixel_aspect_ratio>1.00000000000000000e+00</Pixel_aspect_ratio>
+			<Name></Name>
+		</item>
+		<item>
+			<RectI>
+				<Left>0</Left>
+				<Bottom>0</Bottom>
+				<Right>2378</Right>
+				<Top>162</Top>
+			</RectI>
+			<Pixel_aspect_ratio>1.00000000000000000e+00</Pixel_aspect_ratio>
+			<Name></Name>
+		</item>
+	</AdditionalFormats>
+	<Timeline_current_time>1</Timeline_current_time>
+	<CreationDate>1622674277116</CreationDate>
+</Project>
+<ProjectGui class_id="13" tracking_level="0" version="12">
+	<NodesGui class_id="14" tracking_level="0" version="0">
+		<count>14</count>
+		<item_version>6</item_version>
+		<item class_id="15" tracking_level="0" version="6">
+			<Name>Viewer1</Name>
+			<X_position>1.56786538654791275e+03</X_position>
+			<Y_position>4.48732997416325475e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>3.00000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>idb1</Name>
+			<X_position>1.35904310534746242e+03</X_position>
+			<Y_position>4.51359835643758970e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>2</Children>
+			<item>
+				<Name>idb1.Output1</Name>
+				<X_position>9.63000000000000000e+02</X_position>
+				<Y_position>2.31000000000000000e+02</Y_position>
+				<Preview_enabled>0</Preview_enabled>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
+				<Selected>0</Selected>
+				<Width>1.04000000000000000e+02</Width>
+				<Height>3.00000000000000000e+01</Height>
+				<HasOverlayColor>0</HasOverlayColor>
+				<Children>0</Children>
+			</item>
+			<item>
+				<Name>idb1.Input1</Name>
+				<X_position>9.63000000000000000e+02</X_position>
+				<Y_position>1.49000000000000000e+02</Y_position>
+				<Preview_enabled>0</Preview_enabled>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
+				<b>2.000000030e-01</b>
+				<Selected>0</Selected>
+				<Width>1.04000000000000000e+02</Width>
+				<Height>2.60000000000000000e+01</Height>
+				<HasOverlayColor>0</HasOverlayColor>
+				<Children>0</Children>
+			</item>
+		</item>
+		<item>
+			<Name>Read_ingredient</Name>
+			<X_position>1.77133416172767556e+03</X_position>
+			<Y_position>9.95882037060891889e+01</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Write1</Name>
+			<X_position>1.56786538654791275e+03</X_position>
+			<Y_position>3.24942483449935708e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>7.499961853e-01</r>
+			<g>7.499961853e-01</g>
+			<b>0.000000000e+00</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>6.00000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>elem0</Name>
+			<X_position>1.48956671665000363e+03</X_position>
+			<Y_position>-2.56804693742475024e+02</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Merge_toppings</Name>
+			<X_position>1.56786538654791275e+03</X_position>
+			<Y_position>-2.66891185847194947e+01</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>4.30000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>elem1</Name>
+			<X_position>1.63064811623017363e+03</X_position>
+			<Y_position>-2.58684366155856651e+02</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Transform_1</Name>
+			<X_position>1.64264811623017363e+03</X_position>
+			<Y_position>-1.38554464355968548e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Transform_0</Name>
+			<X_position>1.50156671665000363e+03</X_position>
+			<Y_position>-1.39042487424358342e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Test_Position</Name>
+			<X_position>1.56786538654791275e+03</X_position>
+			<Y_position>4.53108814152806190e+01</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Read1</Name>
+			<X_position>1.39109326244242402e+03</X_position>
+			<Y_position>5.94001854675925642e+01</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Transform1</Name>
+			<X_position>1.40309326244242402e+03</X_position>
+			<Y_position>1.73196896990379628e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Merge1</Name>
+			<X_position>1.56786538654791275e+03</X_position>
+			<Y_position>1.17588203706089189e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>4.30000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Merge4</Name>
+			<X_position>1.56786538654791275e+03</X_position>
+			<Y_position>2.16359504169224465e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>4.30000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+	</NodesGui>
+	<Gui_Layout class_id="16" tracking_level="0" version="2">
+		<NbWindows>1</NbWindows>
+		<Window class_id="17" tracking_level="0" version="1">
+			<ChildType>0</ChildType>
+			<Child class_id="18" tracking_level="1" version="1" object_id="_0">
+				<Sizes>675 969</Sizes>
+				<Orientation>1</Orientation>
+				<ChildIsSplitter>0</ChildIsSplitter>
+				<Child class_id="19" tracking_level="1" version="5" object_id="_1">
+					<Tabs class_id="20" tracking_level="0" version="0">
+						<count>1</count>
+						<item_version>0</item_version>
+						<item>Viewer1</item>
+					</Tabs>
+					<Index>0</Index>
+					<Name>pane1</Name>
+					<IsAnchor>1</IsAnchor>
+				</Child>
+				<ChildIsSplitter>1</ChildIsSplitter>
+				<Child object_id="_2">
+					<Sizes>473 493</Sizes>
+					<Orientation>1</Orientation>
+					<ChildIsSplitter>0</ChildIsSplitter>
+					<Child object_id="_3">
+						<Tabs>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>nodeGraph</item>
+						</Tabs>
+						<Index>0</Index>
+						<Name>pane2</Name>
+						<IsAnchor>0</IsAnchor>
+					</Child>
+					<ChildIsSplitter>0</ChildIsSplitter>
+					<Child object_id="_4">
+						<Tabs>
+							<count>2</count>
+							<item_version>0</item_version>
+							<item>properties</item>
+							<item>scriptEditor</item>
+						</Tabs>
+						<Index>0</Index>
+						<Name>pane4</Name>
+						<IsAnchor>0</IsAnchor>
+					</Child>
+				</Child>
+			</Child>
+			<MainWindow>1</MainWindow>
+			<x>0</x>
+			<y>23</y>
+			<w>1680</w>
+			<h>1047</h>
+		</Window>
+	</Gui_Layout>
+	<ViewersData class_id="21" tracking_level="0" version="0">
+		<count>1</count>
+		<item_version>0</item_version>
+		<item class_id="22" tracking_level="0" version="0">
+			<first>Viewer1</first>
+			<second class_id="23" tracking_level="0" version="14">
+				<zoomLeft>1.18498036558468243e+03</zoomLeft>
+				<zoomBottom>9.79240756075524587e+02</zoomBottom>
+				<zoomFactor>1.00000000000000000e+00</zoomFactor>
+				<UserRoIEnabled>0</UserRoIEnabled>
+				<UserRoI class_id="24" tracking_level="0" version="0">
+					<Left>4.80000000000000000e+02</Left>
+					<Bottom>2.70000000000000000e+02</Bottom>
+					<Right>1.44000000000000000e+03</Right>
+					<Top>8.10000000000000000e+02</Top>
+				</UserRoI>
+				<ClippedToProject>1</ClippedToProject>
+				<AutoContrast>0</AutoContrast>
+				<Gain>1.00000000000000000e+00</Gain>
+				<Gain>1.00000000000000000e+00</Gain>
+				<ColorSpace>sRGB</ColorSpace>
+				<Layer>Color.RGBA</Layer>
+				<AlphaLayer>Color.A</AlphaLayer>
+				<Channels>RGB</Channels>
+				<RenderScaleActivated>0</RenderScaleActivated>
+				<MipMapLevel>0</MipMapLevel>
+				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
+				<CompositingOP>0</CompositingOP>
+				<LeftBound>1</LeftBound>
+				<RightBound>250</RightBound>
+				<LeftToolbarVisible>1</LeftToolbarVisible>
+				<RightToolbarVisible>1</RightToolbarVisible>
+				<TopToolbarVisible>1</TopToolbarVisible>
+				<PlayerVisible>1</PlayerVisible>
+				<TimelineVisible>1</TimelineVisible>
+				<InfobarVisible>1</InfobarVisible>
+				<isInputAPaused>0</isInputAPaused>
+				<isInputBPaused>0</isInputBPaused>
+				<CheckerboardEnabled>0</CheckerboardEnabled>
+				<Fps>2.40000000000000000e+01</Fps>
+				<FpsLocked>1</FpsLocked>
+				<aInput>0</aInput>
+				<bInput>0</bInput>
+				<fullFrame>0</fullFrame>
+			</second>
+		</item>
+	</ViewersData>
+	<Histograms>
+		<count>0</count>
+		<item_version>0</item_version>
+	</Histograms>
+	<OpenedPanels>
+		<count>2</count>
+		<item_version>0</item_version>
+		<item>Transform_0</item>
+		<item>elem0</item>
+	</OpenedPanels>
+	<ScriptEditorInput>#import BakeExt
+try: 
+	del idbChanged
+	del readHeader
+	del resolveProjectPath
+except: pass
+import NatronEngine
+import datetime
+import csv
+import os
+import shutil
+import math
+
+def readCSV(csv_file, csv_header = [], csv_dict = {} ):
+	return
+
+def resolveProjectPath(fileparam):
+	#thisNode = app1.idb1
+	#csv_file = thisNode.ingredientdbr.get()
+	# split the param
+	project, filename = os.path.split(fileparam)
+
+	# get project path, might be a better way than calling app1
+	project = app1.projectPath.getValue()
+
+	return project, filename
+
+def readHeader (csv_file):
+	# Read the csv file
+	with file(csv_file,&quot;r&quot;) as fr:
+		#Read Headers
+		reader = csv.reader(fr)
+		header = next(reader, None)
+		print &quot;Header: &quot;, header
+		# Return header list
+		return header
+
+def writeCSV(header, csv_file):
+		with file(csv_file,&quot;w&quot;) as fw:
+			writer = csv.DictWriter(fw, fieldnames=header)
+			writer.writeheader()
+		return  
+
+def idbChanged( thisParam=False, thisNode=False, thisGroup=False, app=False, userEdited=False):
+	if not NatronEngine.natron.isBackground():
+		
+		# ############# Reader and writer Button scripts
+		# all_read_csv
+		# all_write_csv
+		# scatter_read_csv
+		# scatter_write_csv
+		# scatter_read_csv
+		# nutritional_read_csv
+		# nutritional_write_csv
+		##################################
+			#arr_path = os.path.join(project,&quot;../arrangement-db&quot;)
+			#nut_path = os.path.join(project,&quot;../nutritional-db&quot;)
+
+		if thisParam.getScriptName() == &apos;all_read_csv&apos;: # and userEdited :
+			# Get Param for ID
+			id = str(thisNode.unique_id.get())
+			check_missing = thisNode.check_missing.getValue()
+			print &quot;using param unique_id: &quot;, id
+
+			ingredientdbr = thisNode.ingredientdbr.get()
+
+			# split out the Natron [Project] token
+			project, filename = resolveProjectPath(ingredientdbr)
+
+			# resolved csv and csv temp filenames
+			csv_file = os.path.join(project, filename)
+			csv_file_tmp = 	&quot;%s.tmp&quot; % csv_file
+
+			# get csv headers
+			header = readHeader(csv_file)
+
+			idb_path = os.path.join(project,&quot;../ingredients-db&quot;)
+
+			#ingredientdbw = writeCSV(header, csv_file)
+
+			with file(csv_file,&quot;r&quot;)  as fr:
+				csv_dict = csv.DictReader(fr)
+
+				# setup counter and out vars
+				text = &quot;Row\tOnDisk\t\t\tIngredient Code\n&quot;
+				missingrow = text
+				found = 0
+				missing = []
+				ri = 1
+				oi = 0
+				mi = 0
+
+				for row in csv_dict:
+					# hacky row index counter
+					ri=ri+1
+
+					# build image file names
+					image_file = &quot;%s.png&quot; % row[&apos;filename_paste&apos;]
+					image = os.path.join(idb_path, image_file)
+
+					print &quot;check missing files?&quot;
+					if check_missing:
+						print &quot;check missing&quot;, check_missing
+						isfile =  os.path.isfile(image)
+					else:
+						print &quot;check missing&quot;, check_missing
+						isfile = True
+
+					# check file on disk, if not, add to missing row text stream
+					if not isfile:
+						mrow=&quot;%s\t\t%s\t\t\t%s\n&quot; % (ri,  row[&apos;on_disk&apos;], row[&apos;filename_paste&apos;])
+						missingrow = missingrow + mrow
+						mi=mi+1
+
+					# otherwise put them in the ingredient codes
+					else:
+						# inc included on_disk counter
+						oi=oi+1 
+
+						# Build Code List
+						text = text + &quot;%s\t\t%s\t\t\t%s\n&quot; % (oi,  row[&apos;on_disk&apos;], row[&apos;filename_paste&apos;])
+
+						print row[&apos;unique_id&apos;]
+
+						if (row[&apos;unique_id&apos;] == id):
+							print &quot;read: &quot;, id
+							found = 1
+
+							# Set Natron Param Data
+							thisNode.ingredient_row.setValue(str(row))
+							try: 
+								thisNode.category.setValue((row[&apos;category&apos;]))
+							except : 
+								pass
+							try: 
+								thisNode.type.setValue((row[&apos;type&apos;]))
+							except : 
+								pass
+							try: 
+								thisNode.nice_name.setValue((row[&apos;nice_name&apos;]))
+							except : 
+								pass
+							try: 	
+								thisNode.description.setValue((row[&apos;description&apos;]))
+							except : 
+								pass
+							try: 
+								# pretty name with png
+								thisNode.filename_png.setValue((&quot;%s.png&quot; % row[&apos;filename_paste&apos;]))
+
+								# csv entry name
+								thisNode.filename_paste.setValue(row[&apos;filename_paste&apos;])
+								thisNode.filename_paste.setValue(row[&apos;on_disk&apos;])
+
+							except : pass
+							try: 
+								thisNode.artist.setValue((row[&apos;artist&apos;]))
+							except : pass
+							try: 
+								thisNode.mafia_name.setValue((row[&apos;mafia_name&apos;]))
+							except : pass
+							try: 
+								thisNode.twitter.setValue((row[&apos;twitter&apos;]))
+							except : pass
+							try: 
+								thisNode.instagram.setValue((row[&apos;instagram&apos;]))
+							except : pass
+							try: 
+								thisNode.discord.setValue((row[&apos;discord&apos;]))
+							except : pass
+							try: 
+								thisNode.email.setValue((row[&apos;email&apos;]))
+							except : pass
+							try: 
+								thisNode.tags.setValue((row[&apos;tags&apos;]))
+							except : pass	
+							try: 
+								thisNode.public_wallet.setValue((row[&apos;public_wallet&apos;]))
+							except :
+								pass
+
+					# Load the param values
+					thisNode.ingredient_db.setValue(text)
+
+					# Display Warning if ID not found
+					if not found:
+						thisNode.filename_png.setValue(&quot;Image File Not Found in DB! : %s&quot; % str(id))
+						thisNode.category.setValue(&quot;&quot;)
+						thisNode.type.setValue(&quot;&quot;)
+						thisNode.nice_name.setValue(&quot;&quot;)
+						thisNode.mafia_name.setValue(&quot;&quot;)
+						thisNode.description.setValue(&quot;&quot;)
+						thisNode.filename_paste.setValue(&quot;&quot;)
+						thisNode.artist.setValue(&quot;&quot;)
+						thisNode.mafia_name.setValue(&quot;&quot;)
+						thisNode.twitter.setValue(&quot;&quot;)
+						thisNode.instagram.setValue(&quot;&quot;)
+						thisNode.tags.setValue(&quot;&quot;)
+						thisNode.discord.setValue(&quot;&quot;)
+						thisNode.public_wallet.setValue(&quot;&quot;)
+						thisNode.email.setValue(&quot;&quot;)
+						thisNode.on_disk.setValue(&quot;&quot;)
+	
+				thisNode.code_count.setValue(&apos;Codes in Database: %s&apos; % str(oi))
+
+				if check_missing:
+					thisNode.ingredient_db_missing.setValue(missingrow)
+					thisNode.missing_count.setValue(&apos;Files missing on Disk but are in Database: %s&apos; % str(mi))
+				else:
+					thisNode.ingredient_db_missing.setValue(&apos;&apos;)
+					thisNode.missing_count.setValue(&apos;&apos;)
+
+		#del csv_dict
+		#del missingrow
+		#del text
+</ScriptEditorInput>
+	<NumPyPanels>0</NumPyPanels>
+	<OpenedPanelsMinimized>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsMinimized>
+	<OpenedPanelsHideUnmodified>
+		<count>0</count>
+		<item_version>0</item_version>
+	</OpenedPanelsHideUnmodified>
+</ProjectGui>
+</boost_serialization>
+
