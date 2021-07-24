@@ -54,6 +54,8 @@ class Classification(Enum):
 
 
 class NutritionMetadata(Base):
+    """Metadata for ingredient nutritional information"""
+
     servings: float
     calories: float
     fat: float
@@ -76,7 +78,7 @@ class Ingredient(Base):
     classification: Classification  # - topping
     category: str
     """
-    categories can be used to group elements together 
+    categories can be used to group elements together
     so that only one of each category will show up on a pizza
     for isntance, multiple things may be in the pepperoni category
     but only one pepperoni will show up on a pizza

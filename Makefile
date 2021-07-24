@@ -25,7 +25,8 @@ all: environment start
 
 environment:
 	@echo 🔧 Setting Up Environment
-	pip3 install 'poetry==1.1.5'
+	pip3 install 'poetry==1.1.6'
+	poetry config virtualenvs.in-project true 
 	poetry install
 	$(NATRON_PATH)/natron-python -m pip install numpy
 
