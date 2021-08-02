@@ -85,8 +85,8 @@ test-natron-all:
 	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 1111
 
 test-natron-box:
-	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_box.json -f 1
+	@echo ☢️ Run Box Paper Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_box_paper.json -f 1
 
 test-natron-paper:
 	@echo ☢️ Run Cheese Natron
