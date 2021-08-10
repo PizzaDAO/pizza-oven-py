@@ -1,0 +1,32 @@
+{
+  "initiators": [
+    {
+      "type": "RunLog",
+      "params": {
+        "address": "0xC416a5c13EC95adDB74789a775e2FeF0605328AF"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "type": "orderpizzav1"
+    },
+    {
+      "type": "Copy",
+      "params": {
+        "copyPath": [
+          "artwork"
+        ]
+      }
+    },
+    {
+      "type": "EthBytes32"
+    },
+    {
+      "type": "EthTx"
+    }
+  ],
+  "startAt": null,
+  "endAt": null,
+  "minPayment": "0"
+}

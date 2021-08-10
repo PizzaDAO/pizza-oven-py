@@ -31,7 +31,7 @@ class OrderPizzaResponse(Base):
 
 
 @router.post("/order", response_model=OrderPizzaResponse, tags=[DELIVER])
-def orderPizza(request: OrderPizzaRequest = Body(...)) -> Any:
+def orderPizza(request: OrderPizzaRequest = Body(...)) -> OrderPizzaResponse:
     """
     order a pizza from the blockchain
     """
@@ -64,5 +64,4 @@ def orderPizza(request: OrderPizzaRequest = Body(...)) -> Any:
         ),
     )
 
-    json = jsonable_encoder(response)
-    return JSONResponse(content=json)
+    return response

@@ -4,7 +4,7 @@ Welcome Paisano to the Pizza Kitchen!
 
 ## 🍕 Pizza Shud B free
 
-This repository makes pizzas.  More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie.  A Chainlink oracle is also included that can fire off requests to bake a pizza.
+This repository makes pizzas. More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie. A Chainlink oracle is also included that can fire off requests to bake a pizza.
 
 ## 💻 Requirements
 
@@ -22,7 +22,7 @@ This repository makes pizzas.  More specifically, it accepts json input, transfo
 
 If you run Docker and want to run the code locally without Python dependencies, we provide a Dockerfile and docker-compose.yml.
 
-create a .env file according to the .env.example file.  You must fill in the Ethereum socket server.
+create a .env file according to the .env.example file. You must fill in the Ethereum socket server.
 
 Run the production deployment
 
@@ -81,7 +81,7 @@ Spin everything up:
 make docker-dev
 ```
 
-navigate to `http://localhost:6688` and log into the chainlink interface (using the info in `./chainlink/,api`).
+navigate to `http://localhost:6688` and log into the chainlink interface (using the info in `./chainlink/.api.credentials.rinkeby`).
 Select Bridges from the top menu bar and create a new bridge:
 
 ```

@@ -50,14 +50,23 @@ services:
     volumes:
       - ./database/db-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: $CHAINLINK_RINKEBY_DB_NAME
+      POSTGRES_DB: ChainlinkRinkebyDB
       POSTGRES_PASSWORD: $CHAINLINK_RINKEBY_DB_PASSWORD
     ports:
       - 5432:5432
     networks:
       - rare-pizzas
     healthcheck:
-      test: ["CMD", "pg_isready", "-q", "-d", "$CHAINLINK_RINKEBY_DB_NAME", "-U", "postgres"]
+      test:
+        [
+          "CMD",
+          "pg_isready",
+          "-q",
+          "-d",
+          "ChainlinkRinkebyDB",
+          "-U",
+          "postgres",
+        ]
       timeout: 5s
       interval: 10s
       retries: 10
@@ -83,7 +92,7 @@ services:
       LINK_CONTRACT_ADDRESS: $CHAINLINK_RINKEBY_TOKEN
       ETH_URL: $ETHEREUM_RINKEBY_SOCKET_SERVER
       #ETH_SECONDARY_URL: TODO
-      DATABASE_URL: postgresql://$CHAINLINK_RINKEBY_DB_USERNAME:$CHAINLINK_RINKEBY_DB_PASSWORD@$CHAINLINK_RINKEBY_DATABASE_SERVER:5432/$CHAINLINK_RINKEBY_DB_NAME?sslmode=disable
+      DATABASE_URL: postgresql://$CHAINLINK_RINKEBY_DB_USERNAME:$CHAINLINK_RINKEBY_DB_PASSWORD@$CHAINLINK_RINKEBY_DATABASE_SERVER:5432/ChainlinkRinkebyDB?sslmode=disable
     env_file:
       - "./chainlink/.env.rinkeby"
     secrets:
