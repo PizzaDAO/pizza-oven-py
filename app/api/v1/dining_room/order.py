@@ -1,7 +1,8 @@
-from typing import Any
-from fastapi import APIRouter, Body
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
+from typing import Any, Optional
+
+import time
+
+from fastapi import APIRouter, Body, BackgroundTasks, Request
 
 from app.models.base import Base
 from app.models.order import PizzaOrder, PizzaOrderData
@@ -20,48 +21,73 @@ class OrderPizzaRequest(Base):
 
     id: str
     data: PizzaOrderData
+    meta: Optional[Any]
+    responseURL: Optional[str]
 
 
 class OrderPizzaResponse(Base):
     """A response for a pizza order, as the chainlink oracle expects"""
 
     jobRunID: str
-    data: PizzaOrder
-    statusCode: int = 200
+    data: Any = {}
+    error: Optional[str] = None
+    pending: bool = False
 
 
 @router.post("/order", response_model=OrderPizzaResponse, tags=[DELIVER])
-def orderPizza(request: OrderPizzaRequest = Body(...)) -> OrderPizzaResponse:
+async def orderPizza(
+    request: Request,
+    background_tasks: BackgroundTasks,
+    request_data: OrderPizzaRequest = Body(...),
+) -> OrderPizzaResponse:
     """
     order a pizza from the blockchain
     """
 
-    print(f"{request}")
+    # TODO: validate caller has the correct inbound auth token
+    print(request.headers)
 
     # TODO: probably move this logic somewhere else
 
-    # transform the data
-    recipe = make_recipe()
-    order = reduce(recipe)
+    # we need to keep a record of the incoming jobs and allow somoene to query them when they are complete
+    # sol we basically need a document store or something in order to get the pizzas out
 
-    # render
-    pizza = Renderer().render_pizza(order)
+    def test_patch():
+        # transform the data
+        recipe = make_recipe()
+        order = reduce(recipe)
 
-    # cache the objects in the respecitve repositories
-    metadata = to_blockchain_metadata(request.id, recipe, order, pizza)
-    ipfs_hash = set_metadata(metadata)
-    pizza.assets["IPFS_HASH"] = ipfs_hash
+        # render
+        pizza = Renderer().render_pizza(order)
 
-    set_recipe(recipe)
-    set_kitchen_order(order)
-    set_pizza(pizza)
+        # cache the objects in the respecitve repositories
+        metadata = to_blockchain_metadata(request_data.id, recipe, order, pizza)
+        ipfs_hash = set_metadata(metadata)
+        pizza.assets["IPFS_HASH"] = ipfs_hash
 
-    response = OrderPizzaResponse(
-        jobRunID=request.id,
-        data=PizzaOrder(
-            address=request.data.address,
-            artwork=pizza.assets["IPFS_HASH"],
-        ),
-    )
+        set_recipe(recipe)
+        set_kitchen_order(order)
+        set_pizza(pizza)
+
+        response = OrderPizzaResponse(
+            jobRunID=request_data.id,
+            data=PizzaOrder(
+                address=request_data.data.address,
+                artwork=pizza.assets["IPFS_HASH"],
+            ),
+            pending=False,
+        )
+        print(request_data)
+        print(response)
+        # TODO: real login params loaded from the env
+        # TODO: node refusing connections
+        # requests.patch(
+        #     request_data.responseURL,
+        #     data=response.dict(),
+        #     headers={"authorization": "Bearer gj87ru9gfj73429hyg8r3q"},
+        # )
+
+    response = OrderPizzaResponse(jobRunID=request_data.id, pending=True)
+    background_tasks.add_task(test_patch)
 
     return response
