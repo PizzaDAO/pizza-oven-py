@@ -47,14 +47,6 @@ docker-dev:
 	@echo 🐳 Running Docker in dev mode
 	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.dev.yml up --build
 
-docker-postman-test:
-	@echo 🧪 Running Postman Tests in Docker
-	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose \
-	-f tests/postman/docker-compose.yml up \
-	--build \
-	--abort-on-container-exit \
-	--exit-code-from test-runner
-
 # Linting
 lint:
 	@echo 💚 Making things Pretty
@@ -72,10 +64,6 @@ auto-lint:
 # Deploy
 
 # Tests
-test:
-	@echo ✅ Testing
-	poetry run pytest . -x
-
 test-natron:
 	@echo ☢️ Test Natron
 	poetry run python app/core/renderer.py -r $(realpath .)/data/sample_recipe.json -f 111

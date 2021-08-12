@@ -4,7 +4,7 @@ Welcome Paisano to the Pizza Kitchen!
 
 ## 🍕 Pizza Shud B free
 
-This repository makes pizzas.  More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie.  A Chainlink oracle is also included that can fire off requests to bake a pizza.
+This repository makes pizzas. More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie. A Chainlink oracle is also included that can fire off requests to bake a pizza.
 
 ## 💻 Requirements
 
@@ -13,8 +13,9 @@ This repository makes pizzas.  More specifically, it accepts json input, transfo
 > 🐍 = required for running with Python.
 
 - 🐳🐍 [GNU Make](https://www.gnu.org/software/make/manual/make.html) is used to simplify the commands and GitHub Actions. This approach is recommended to simplify the command line experience. This is built in for MacOS and Linux. We arent supporting windoze right meow
-- 🐍 [Python 3.8](https://www.python.org/downloads/) is <ins>**required**</ins> to develop this API. If you uses multiple versions of python, dont.  But if you insist, [pyenv](https://github.com/pyenv/pyenv) will make your life easier.
+- 🐍 [Python 3.8](https://www.python.org/downloads/) is <ins>**required**</ins> to develop this API. If you uses multiple versions of python, dont. But if you insist, [pyenv](https://github.com/pyenv/pyenv) will make your life easier.
 - https://www.postman.com/downloads/
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 ## 🐳 Running with Docker
 
@@ -22,7 +23,7 @@ This repository makes pizzas.  More specifically, it accepts json input, transfo
 
 If you run Docker and want to run the code locally without Python dependencies, we provide a Dockerfile and docker-compose.yml.
 
-create a .env file according to the .env.example file.  You must fill in the Ethereum socket server.
+create a .env file according to the .env.example file. You must fill in the Ethereum socket server.
 
 Run the production deployment
 
@@ -81,21 +82,23 @@ Spin everything up:
 make docker-dev
 ```
 
-navigate to `http://localhost:6688` and log into the chainlink interface (using the info in `./chainlink/,api`).
+navigate to `http://localhost:6688` and log into the chainlink interface (using the info in `./chainlink/.api.credentials.rinkeby`).
 Select Bridges from the top menu bar and create a new bridge:
 
 ```
-Name	delivery1
+Name	orderpizzav1
 URL	http://pizza-oven:8000/api/v1/diningroom/order
 Confirmations	0
 Minimum Contract Payment	0
 ```
 
+make note of the incoming and outgoing access tokens, we'll need them later!
+
 Select the Jobs tab from the top menu bar and create a new job:
 
 ```
 {
-  "name": "delivery1 test",
+  "name": "Order Pizza Web Initiator",
   "initiators": [
     {
       "type": "web"
@@ -103,21 +106,23 @@ Select the Jobs tab from the top menu bar and create a new job:
   ],
   "tasks": [
     {
-      "type": "delivery1",
+      "type": "orderpizzav1",
       "params": {
-        "address": "abc123"
+        "address": "0xSOMETHING"
       }
     }
   ]
 }
 ```
 
-run the job, and then inspect the json response of the job and verify thatr it includes result data that looks like this:
+run the job, and then inspect the json response and verify that it is set to "pending".
+
+TODO: verify that the job posts back and completes when finished and the result looks lomething like this:
 
 ```
 "result": {
     "data": {
-      "address": "abc123",
+      "address": "0xSOMETHING",
       "artwork": "QmZ4q72eVU3bX95GXwMXLrguybKLKavmStLWEWVJZ1jeyz"
     },
     "error": null
