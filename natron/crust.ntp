@@ -4308,7 +4308,24 @@ Crust
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>which</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -4356,7 +4373,7 @@ Crust
 					<second>TRS_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>6</KnobsAge>
+			<KnobsAge>7</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -4543,7 +4560,7 @@ Crust
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>GMIC_Crease1</second>
+					<second>Sharpen1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>1</KnobsAge>
@@ -4568,7 +4585,7 @@ Crust
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>10</KnobsCount>
+			<KnobsCount>12</KnobsCount>
 			<item>
 				<Name>encodingPluginID</Name>
 				<Type>String</Type>
@@ -4757,6 +4774,41 @@ Crust
 				</item>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>compressionLevel</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>6</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>bitDepth</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>16u</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4765,7 +4817,7 @@ Crust
 					<second>Shuffle1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>24</KnobsAge>
+			<KnobsAge>27</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -5170,7 +5222,7 @@ Crust
 		<item>
 			<Enabled>1</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>&lt;Name&gt;OCIO&lt;/Name&gt;&lt;Value&gt;/Applications/Natron.app/Contents/Resources/OpenColorIO-Configs/blender&lt;/Value&gt;&lt;Name&gt;Project&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/natron&lt;/Value&gt;&lt;Name&gt;Images&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/ingredients-db&lt;/Value&gt;&lt;Name&gt;Proxy&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/proxy-db&lt;/Value&gt;&lt;Name&gt;Oven&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/oven&lt;/Value&gt;</Value>
+			<Value>&lt;Name&gt;OCIO&lt;/Name&gt;&lt;Value&gt;/Applications/Natron.app/Contents/Resources/OpenColorIO-Configs/blender&lt;/Value&gt;&lt;Name&gt;Project&lt;/Name&gt;&lt;Value&gt;/Users/ashafer/Dropbox (Penumbra, Inc.)/pizza-oven-py/natron&lt;/Value&gt;&lt;Name&gt;Images&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/ingredients-db&lt;/Value&gt;&lt;Name&gt;Proxy&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/proxy-db&lt;/Value&gt;&lt;Name&gt;Oven&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/oven&lt;/Value&gt;</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -5282,7 +5334,7 @@ Crust
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Aug 2 09:58:51 2021</Value>
+			<Value>Mon Aug 2 15:27:53 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -5483,8 +5535,8 @@ Crust
 				<X_position>5.84000000000000000e+02</X_position>
 				<Y_position>8.70000000000000000e+01</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.098039329e-01</r>
-				<g>5.215686560e-01</g>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>8.00000000000000000e+01</Width>
@@ -5497,8 +5549,8 @@ Crust
 				<X_position>7.59000000000000000e+02</X_position>
 				<Y_position>-1.12000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.098039329e-01</r>
-				<g>5.215686560e-01</g>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
@@ -5679,8 +5731,8 @@ Crust
 				<X_position>5.84000000000000000e+02</X_position>
 				<Y_position>8.70000000000000000e+01</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.098039329e-01</r>
-				<g>5.215686560e-01</g>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>8.00000000000000000e+01</Width>
@@ -5693,8 +5745,8 @@ Crust
 				<X_position>7.59000000000000000e+02</X_position>
 				<Y_position>-1.12000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.098039329e-01</r>
-				<g>5.215686560e-01</g>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
@@ -5961,11 +6013,11 @@ Crust
 		<Window class_id="18" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="19" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1069 575</Sizes>
+				<Sizes>1365 734</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>736 241</Sizes>
+					<Sizes>614 750</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="20" tracking_level="1" version="5" object_id="_2">
@@ -6005,10 +6057,10 @@ Crust
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>0</x>
-			<y>1</y>
-			<w>1680</w>
-			<h>980</h>
+			<x>-1697</x>
+			<y>-403</y>
+			<w>2135</w>
+			<h>1367</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="22" tracking_level="0" version="0">
@@ -6017,9 +6069,9 @@ Crust
 		<item class_id="23" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="24" tracking_level="0" version="14">
-				<zoomLeft>-5.35000000000000000e+01</zoomLeft>
-				<zoomBottom>2.84869992795358485e+03</zoomBottom>
-				<zoomFactor>1.00000000000000000e+00</zoomFactor>
+				<zoomLeft>-4.38416991150442573e+03</zoomLeft>
+				<zoomBottom>-8.19200000000000728e+01</zoomBottom>
+				<zoomFactor>1.06107271634615377e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="25" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -6037,7 +6089,7 @@ Crust
 				<Channels>RGB</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
+				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
 				<CompositingOP>0</CompositingOP>
 				<LeftBound>1</LeftBound>
 				<RightBound>10000</RightBound>
@@ -6065,9 +6117,9 @@ Crust
 	<OpenedPanels>
 		<count>3</count>
 		<item_version>0</item_version>
+		<item>Switch_default</item>
+		<item>w2</item>
 		<item>GMIC_Crease1</item>
-		<item>Sharpen1</item>
-		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>unique_id = &quot;1010&quot;
 category = &quot;crust&quot;
