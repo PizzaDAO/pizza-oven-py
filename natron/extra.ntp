@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>40</NodesCount>
+		<NodesCount>36</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Topping_0_2</Plugin_label>
 			<Plugin_script_name>Topping_0_2</Plugin_script_name>
@@ -635,7 +635,7 @@
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1619876134</Value>
+						<Value>1620068178</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -6553,96 +6553,6 @@ ret=time.time()</Expression>
 			<CacheID>GMIC_Relief_Light1_2_3_2_2_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Crop _1</Plugin_label>
-			<Plugin_script_name>Crop__1</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.CropPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>NatronParamFormatChoice</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>20</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>PC_Video</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>hidpi</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>TRS_default</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>2</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Crop14_2_2</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Switch_default</Plugin_label>
 			<Plugin_script_name>Switch_default</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
@@ -6695,7 +6605,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Crop__1</second>
+					<second>TRS_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>6</KnobsAge>
@@ -8449,7 +8359,7 @@ ret=time.time()</Expression>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1619876134</Value>
+						<Value>1620068178</Value>
 						<Default>2000</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import time
@@ -13691,168 +13601,6 @@ ret=time.time()</Expression>
 			<CacheID>Reformat4_3</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Crop_2</Plugin_label>
-			<Plugin_script_name>Crop_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.CropPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>NatronParamFormatChoice</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>20</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>PC_Video</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>hidpi</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>TRS_7100</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>3</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Crop_4000_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Premult6_2_2_2</Plugin_label>
-			<Plugin_script_name>Premult6_2_2_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.Premult</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>2</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>disableNode</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>Unpremult1_2</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>8</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Premult6_2_2_2</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Switch_7100</Plugin_label>
 			<Plugin_script_name>Switch_7100</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
@@ -13905,7 +13653,7 @@ ret=time.time()</Expression>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Premult6_2_2_2</second>
+					<second>TRS_7100</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>3</KnobsAge>
@@ -13924,78 +13672,6 @@ ret=time.time()</Expression>
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Switch_1_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Unpremult1_2</Plugin_label>
-			<Plugin_script_name>Unpremult1_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.Unpremult</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>2</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>disableNode</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>Crop_2</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>6</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Unpremult1_2</CacheID>
 		</item>
 		<item>
 			<Plugin_label>Melt_7100</Plugin_label>
@@ -15747,7 +15423,7 @@ Switch_default = 0</Value>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat May 1 06:36:48 2021</Value>
+			<Value>Mon May 3 11:56:26 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -15848,7 +15524,7 @@ Switch_default = 0</Value>
 </Project>
 <ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
-		<count>40</count>
+		<count>36</count>
 		<item_version>6</item_version>
 		<item class_id="22" tracking_level="0" version="6">
 			<Name>Topping_0_2</Name>
@@ -16579,20 +16255,6 @@ Switch_default = 0</Value>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Crop__1</Name>
-			<X_position>2.13253318758574460e+03</X_position>
-			<Y_position>6.87322493393741752e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>3.000076413e-01</g>
-			<b>1.000076309e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Switch_default</Name>
 			<X_position>2.13496344393168329e+03</X_position>
 			<Y_position>7.03511018797917768e+03</Y_position>
@@ -16678,8 +16340,8 @@ Switch_default = 0</Value>
 		</item>
 		<item>
 			<Name>TRS_default</Name>
-			<X_position>2.13253318758574505e+03</X_position>
-			<Y_position>6.64741173163156782e+03</Y_position>
+			<X_position>2.13896366327957639e+03</X_position>
+			<Y_position>6.88457495151432431e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -17307,51 +16969,9 @@ Switch_default = 0</Value>
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Crop_2</Name>
-			<X_position>3.05272680806611197e+03</X_position>
-			<Y_position>6.72287887223186863e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>3.000076413e-01</g>
-			<b>1.000076309e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Premult6_2_2_2</Name>
-			<X_position>3.05515706441205066e+03</X_position>
-			<Y_position>6.90151790788244307e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Switch_7100</Name>
 			<X_position>3.05515706441205066e+03</X_position>
 			<Y_position>7.07087939221962370e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Unpremult1_2</Name>
-			<X_position>3.05515706441205066e+03</X_position>
-			<Y_position>6.78280805295451228e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -17379,7 +16999,7 @@ Switch_default = 0</Value>
 		<item>
 			<Name>TRS_7100</Name>
 			<X_position>3.05272680806611243e+03</X_position>
-			<Y_position>6.64845325832621256e+03</Y_position>
+			<Y_position>6.86903163765772752e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -17508,11 +17128,11 @@ Switch_default = 0</Value>
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1069 575</Sizes>
+				<Sizes>1641 883</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>495 494</Sizes>
+					<Sizes>516 516</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -17553,10 +17173,10 @@ Switch_default = 0</Value>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-1951</x>
-			<y>24</y>
-			<w>1680</w>
-			<h>992</h>
+			<x>-2560</x>
+			<y>1</y>
+			<w>2560</w>
+			<h>1035</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -17656,6 +17276,7 @@ Switch_default = 0</Value>
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>w1</item>
 		<item>Read2</item>
 		<item>Read3_2</item>
 		<item>Read3</item>
@@ -17665,7 +17286,6 @@ Switch_default = 0</Value>
 		<item>input_default</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Switch_7100</item>
-		<item>Switch_default</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)

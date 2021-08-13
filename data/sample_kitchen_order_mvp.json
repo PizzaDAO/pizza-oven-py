@@ -27,8 +27,8 @@
                     "protein": 0.2
                 },
                 "image_uris": {
-                    "filename": "0000-box-cardboard.png",
-                    "output_mask": "rarepizza-#####-base-%s.png"
+                    "filename": "0000-box-white.png",
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
@@ -62,7 +62,7 @@
                 },
                 "image_uris": {
                     "filename": "0500-paper-redchecker.png",
-                    "output_mask": "rarepizza-#####-base-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
@@ -79,7 +79,7 @@
                 "name": "Traditional Thin Crust",
                 "rarity_level": 1,
                 "classification": 3,
-                "category": "thick",
+                "category": "thin",
                 "attributes": {
                     "state": "overcooked",
                     "material": "traditional"
@@ -96,7 +96,7 @@
                 },
                 "image_uris": {
                     "filename": "1000-crust-thin.png",
-                    "output_mask": "rarepizza-#####-base-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
@@ -111,7 +111,7 @@
         "sauce": {
             "ingredient": {
                 "unique_id": "2000",
-                "index": 0,
+                "index": 3,
                 "name": "Traditional Pomodoro Tomato Sauce",
                 "rarity_level": 1,
                 "classification": 4,
@@ -132,7 +132,7 @@
                 },
                 "image_uris": {
                     "filename": "2000-sauce-tomato.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
@@ -145,7 +145,7 @@
         "cheese": {
             "ingredient": {
                 "unique_id": "3090",
-                "index": 1,
+                "index": 4,
                 "name": "Aged Doge Cheez",
                 "rarity_level": 1,
                 "classification": 5,
@@ -166,7 +166,7 @@
                 },
                 "image_uris": {
                     "filename": "3090-cheese-chezdoge.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
@@ -179,7 +179,7 @@
         "pepperoni": {
             "ingredient": {
                 "unique_id": "4000",
-                "index": 2,
+                "index": 5,
                 "name": "Pepperoni",
                 "rarity_level": 1,
                 "classification": 6,
@@ -200,20 +200,20 @@
                 },
                 "image_uris": {
                     "filename": "4000-topping-meat-pepperoni.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
                 "emission_count": 1.0,
                 "emission_density": 1.0,
                 "particle_scale": 1.0,
-                "rotation": 180.0
+                "rotation": 18.0
             }
         },
         "shrimp": {
             "ingredient": {
                 "unique_id": "6000",
-                "index": 3,
+                "index": 6,
                 "name": "Shrimp",
                 "rarity_level": 1,
                 "classification": 6,
@@ -234,20 +234,20 @@
                 },
                 "image_uris": {
                     "filename": "6000-topping-seafood-shrimp.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
                 "emission_count": 1.0,
                 "emission_density": 1.0,
                 "particle_scale": 1.0,
-                "rotation": 180.0
+                "rotation": 0.0
             }
         },
         "swoledoge": {
             "ingredient": {
                 "unique_id": "6900",
-                "index": 4,
+                "index": 7,
                 "name": "Swole Doge",
                 "rarity_level": 1,
                 "classification": 7,
@@ -268,21 +268,21 @@
                 },
                 "image_uris": {
                     "filename": "6900-topping-crypto-swoledoge.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
                 "emission_count": 1.0,
                 "emission_density": 1.0,
                 "particle_scale": 1.0,
-                "rotation": 180.0,
-                "scale": 0.90
+                "rotation": 8.0,
+                "scale": 0.70
             }
         },
         "oragano": {
             "ingredient": {
                 "unique_id": "9060",
-                "index": 5,
+                "index": 8,
                 "name": "Oregano",
                 "rarity_level": 1,
                 "classification": 7,
@@ -303,7 +303,7 @@
                 },
                 "image_uris": {
                     "filename": "9060-seasoning-spice-oregano.png",
-                    "output_mask": "rarepizza-#####-topping-%s.png"
+                    "output_mask": "rarepizza-#####-layer-%s.png"
                 }
             },
             "prep": {
@@ -315,10 +315,11 @@
         }
     },
     "instructions": {
+        "base_count": 1.0,
         "sauce_count": 1.0,
         "cheese_count": 1.0,
-        "topping_count": 0.0,
-        "extras_count": 0.0,
+        "topping_count": 2.0,
+        "extras_count": 1.0,
         "baking_temp_in_celsius": 190,
         "baking_time_in_minutes": 20
     }

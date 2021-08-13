@@ -1,0 +1,52 @@
+{
+    "unique_id": 2356753620,
+    "name": "Simple MVP Cheese Doge Pizza",
+    "random_seed": "52198947997422404454920108833917741998911196589945595445581078565118427695940",
+    "recipe_id": 1,
+    "base_ingredients": {
+        "crust": {
+            "ingredient": {
+                "unique_id": "1000",
+                "index": 2,
+                "name": "Traditional Thin Crust",
+                "rarity_level": 1,
+                "classification": 3,
+                "category": "thin",
+                "attributes": {
+                    "state": "overcooked",
+                    "material": "traditional"
+                },
+                "nutrition": {
+                    "servings": 8.0,
+                    "calories": 260.2,
+                    "fat": 10.5,
+                    "cholesterol": 23.0,
+                    "sodium": 657.6,
+                    "potassium": 166.14,
+                    "carbohydrates": 30.1,
+                    "protein": 11.5
+                },
+                "image_uris": {
+                    "filename": "1000-crust-thin.png",
+                    "output_mask": "rarepizza-#####-layer-%s.png"
+                }
+            },
+            "prep": {
+                "emission_count": 1.0,
+                "emission_density": 1.0,
+                "particle_scale": 1.0,
+                "rotation": 0.0
+            }
+        }
+    },
+    "layers": {},
+    "instructions": {
+        "base_count": 1.0,
+        "sauce_count": 1.0,
+        "cheese_count": 1.0,
+        "topping_count": 2.0,
+        "extras_count": 1.0,
+        "baking_temp_in_celsius": 190,
+        "baking_time_in_minutes": 20
+    }
+}
