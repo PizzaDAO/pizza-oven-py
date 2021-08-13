@@ -43,11 +43,21 @@
 				{
 					"name": "orderPizza",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "SI/8gEsllRRJLD5HDHH1/2ESG1RKmCOy",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"c3669e3d-54f5-4c35-be2f-e8291dc6c4c4\",\n    \"data\": {\n        \"address\": \"ffkjfkf\"\n    }\n}",
+							"raw": "{\n    \"id\": \"a3f4ffa9-43a1-48ac-b8ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -197,6 +207,35 @@
 						"header": [],
 						"url": {
 							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Chainlink Callback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"cd69ad98-819a-4300-af4f-c732d4403677\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\"\n    },\n    \"responseURL\": \"http://chainlink-rinkeby:6688/v2/runs/cd69ad98-819a-4300-af4f-c732d4403677\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/diningroom/chainlink",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"diningroom",
+								"chainlink"
+							]
 						}
 					},
 					"response": []
