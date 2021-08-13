@@ -3,6 +3,7 @@ import os
 
 import ipfshttpclient
 from ipfshttpclient.client import Client
+from ipfshttpclient.client.base import ResponseBase
 
 
 class IPFSSession:
@@ -16,6 +17,15 @@ class IPFSSession:
 
     def __exit__(self, exc_type, exc_value, exc_traceback):
         self._client.close()
+
+    def pin_resource(self, path: str) -> str:
+        """pin a resource"""
+        response = self._client.add(path)
+        print(f"response: {response.as_json()}")
+        if isinstance(response, ResponseBase):
+            return response["Hash"]
+        else:
+            return "not yet implemented"
 
     def pin_json(self, json: str) -> str:
         """pin the json file to ipfs"""

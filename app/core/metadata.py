@@ -48,7 +48,7 @@ def to_blockchain_metadata(
     return RarePizzaMetadata(
         order_id=job_id,
         name=recipe.name,
-        description="some description",
+        description="some description to be filled in later",
         rarity_level=recipe.rarity_level,
         random_seed=recipe.random_seed,
         image=pizza.assets["IPFS_HASH"],

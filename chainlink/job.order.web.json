@@ -1,0 +1,24 @@
+{
+    "name": "Order Pizza Web Initiator",
+    "initiators": [
+      {
+        "type": "web"
+      }
+    ],
+    "tasks": [
+      {
+        "type": "orderpizzav1",
+        "params": {
+          "address": "0xSOMETHING"
+        }
+      },
+      {
+        "type": "Copy",
+        "params": {
+          "copyPath": [
+            "artwork"
+          ]
+        }
+      }
+    ]
+  }

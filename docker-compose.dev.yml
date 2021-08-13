@@ -18,6 +18,7 @@ services:
       - "./data:/app/data"
       - "./natron:/app/natron"
       - "./ingredients-db:/app/ingredients-db"
+      - "./output:/app/output"
     ports:
       - 8000:8000
     networks:
@@ -94,7 +95,7 @@ services:
       #ETH_SECONDARY_URL: TODO
       DATABASE_URL: postgresql://$CHAINLINK_RINKEBY_DB_USERNAME:$CHAINLINK_RINKEBY_DB_PASSWORD@$CHAINLINK_RINKEBY_DATABASE_SERVER:5432/ChainlinkRinkebyDB?sslmode=disable
     env_file:
-      - "./chainlink/.env.rinkeby"
+      - "./chainlink/.env"
     secrets:
       - password
       - api

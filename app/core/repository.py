@@ -15,6 +15,7 @@ __all__ = [
     "set_kitchen_order",
     "get_pizza",
     "set_pizza",
+    "set_pizza_image",
     "get_metadata",
     "set_metadata",
 ]
@@ -27,24 +28,36 @@ def get_recipe(recipe_id: int) -> Recipe:
     return sample(recipe_id)
 
 
-def set_recipe(recipe: Recipe) -> bool:
-    return True
+def set_recipe(recipe: Recipe) -> str:
+    json_string = recipe.json()
+    with IPFSSession(settings.IPFS_NODE_API) as session:
+        return session.pin_json(json_string)
 
 
 def get_kitchen_order(kitchen_order_id: int) -> KitchenOrder:
     pass
 
 
-def set_kitchen_order(order: KitchenOrder) -> bool:
-    return True
+def set_kitchen_order(order: KitchenOrder) -> str:
+    json_string = order.json()
+    with IPFSSession(settings.IPFS_NODE_API) as session:
+        return session.pin_json(json_string)
 
 
 def get_pizza(pizza_id: int) -> HotPizza:
     pass
 
 
-def set_pizza(pizza: HotPizza) -> bool:
-    return True
+def set_pizza(pizza: HotPizza) -> str:
+    json_string = pizza.json()
+    with IPFSSession(settings.IPFS_NODE_API) as session:
+        return session.pin_json(json_string)
+
+
+def set_pizza_image(pizza: HotPizza) -> str:
+    file_path = pizza.assets["IMAGE_PATH"]
+    with IPFSSession(settings.IPFS_NODE_API) as session:
+        return session.pin_resource(file_path)
 
 
 def get_metadata(ipfs_hash: str) -> RarePizzaMetadata:

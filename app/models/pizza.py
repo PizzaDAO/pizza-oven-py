@@ -66,7 +66,7 @@ class HotPizza(Base):
     """The rendered pizza object that includes all metadata and routes
     and everything necessary to seed IPFS and the blockchain"""
 
-    unique_id: int
+    unique_id: str
     order_id: int
     recipe_id: int
     assets: Dict[ASSET_KEY, str]
