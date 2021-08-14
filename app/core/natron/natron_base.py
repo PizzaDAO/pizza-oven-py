@@ -56,13 +56,20 @@ class NatronBase(object):
         del param
 
     def setTransform(
-        self, translate=DONT_TRANSLATE, scale=DONT_SCALE, rotate=DONT_ROTATE
+        self,
+        translate=DONT_TRANSLATE,
+        scale=DONT_SCALE,
+        rotate=DONT_ROTATE,
+        switch_id=None,
     ):
-        node = self.natron.getNode("TRS_%s" % self.unique_id)
+        if switch_id is None:
+            switch_id = self.unique_id
+
+        node = self.natron.getNode("TRS_%s" % switch_id)
         if node is None:
             node = self.natron.getNode("TRS_default")
         if node is None:
-            print("setTransform: could not find node: TRS_%s" % self.unique_id)
+            print("setTransform: could not find node: TRS_%s" % switch_id)
             return
 
         if translate is not None:
@@ -98,7 +105,7 @@ class NatronBase(object):
     def watermark(self):
         node = self.natron.getNode("watermark")
         if node is None:
-            print("setTransform: could not find node: TRS_%s" % self.unique_id)
+            print("watermark: could not find node: watermark")
             return
         else:
             param = node.getParm("text")
@@ -115,6 +122,8 @@ class NatronBase(object):
         pass
 
     def _load_json_data(self, env_var):
+        """Load the json data, assign some common properties, and return the json"""
+
         file_path = os.environ[env_var]
         with open(file_path) as json_file:
             self.element = json.load(json_file)
@@ -132,15 +141,22 @@ class NatronBase(object):
         self.rotate = self.element["prep"]["rotation"]
         self.scale = self.element["prep"]["particle_scale"]
 
-    def _load_image(self, filename):
+        return self.element
+
+    def _load_image(self, filename, node_name=None):
         print("loading: " + config.paths["database"] + filename)
-        node = self.natron.getNode("input_%s" % self.unique_id)
+        node = None
+
+        if node_name is not None:
+            node = self.natron.getNode(node_name)
+        if node is None:
+            node = self.natron.getNode("input_%s" % self.unique_id)
         if node is None:
             node = self.natron.getNode("input_default")
         if node is None:
             node = self.natron.getNode("i1")
         if node is None:
-            print("_load_image: could not find node: i1")
+            print("_load_image: could not find node for: %s" % filename)
             return
         param = node.getParam("filename")
         if param is not None:
