@@ -1,5 +1,4 @@
-from contextlib import contextmanager
-import os
+from typing import Any
 
 import ipfshttpclient
 from ipfshttpclient.client import Client
@@ -27,7 +26,7 @@ class IPFSSession:
         else:
             return "not yet implemented"
 
-    def pin_json(self, json: str) -> str:
+    def pin_json(self, json: Any) -> str:
         """pin the json file to ipfs"""
         resource_hash = self._client.add_json(json)
         print(f"json_hash: {resource_hash}")

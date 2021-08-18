@@ -67,5 +67,7 @@ def get_metadata(ipfs_hash: str) -> RarePizzaMetadata:
 
 def set_metadata(metadata: RarePizzaMetadata) -> str:
     json_string = metadata.json()
+    print("set_metadata:")
+    print(json_string)
     with IPFSSession(settings.IPFS_NODE_API) as session:
-        return session.pin_json(json_string)
+        return session.pin_json(metadata.dict())

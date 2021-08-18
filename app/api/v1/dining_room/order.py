@@ -3,6 +3,8 @@ from typing import Any, Optional, Dict
 import requests
 import time
 
+import base58
+
 from fastapi import APIRouter, Body, BackgroundTasks, Request
 
 from app.models.base import Base
@@ -66,12 +68,19 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     order_hash = set_kitchen_order(order)
     pizza_hash = set_pizza(pizza)
 
+    decoded_metadata = base58.b58decode(metadata_hash)
+    truncated_metadata = decoded_metadata[3 : len(decoded_metadata)]
+
+    print(decoded_metadata)
+    print(truncated_metadata)
+
     # build the response object
     response = OrderPizzaResponse(
         jobRunID=data.id,
         data=PizzaOrder(
             address=data.data.address,
-            artwork=metadata_hash,
+            artwork=truncated_metadata,
+            metadata=metadata_hash,
             recipe=recipe_hash,
             order=order_hash,
             pizza=pizza_hash,

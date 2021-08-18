@@ -1,4 +1,4 @@
-FROM smartcontract/chainlink:0.10.9 as base
+FROM smartcontract/chainlink:0.10.11 as base
 
 #ENV PORT=6688
 

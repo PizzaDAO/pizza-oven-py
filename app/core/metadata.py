@@ -44,21 +44,21 @@ def to_blockchain_metadata(
                 ],
             )
         )
-
+    ipfs_hash = pizza.assets["IPFS_HASH"]
     return RarePizzaMetadata(
         order_id=job_id,
         name=recipe.name,
         description="some description to be filled in later",
         rarity_level=recipe.rarity_level,
         random_seed=recipe.random_seed,
-        image=pizza.assets["IPFS_HASH"],
-        extension_uri="https://some/external/path/to/supplemantary/things",
-        external_url="https://www.rarepizzas.com/pizzas/some_token_id",
+        image=f"ipfs://{ipfs_hash}",
+        extension_uri=f"https://www.rarepizzas.com/pizzas/{ipfs_hash}/data",
+        external_url=f"https://www.rarepizzas.com/pizzas/{ipfs_hash}",
         background_color="ffffff",
         baking_temp_in_celsius=order.instructions.baking_temp_in_celsius,
         baking_time_in_minutes=order.instructions.baking_time_in_minutes,
         ingredients=ingredients,
         attributes=[
-            ERC721OpenSeaMetadataAttribute(trait_type="todo", value="add some")
+            ERC721OpenSeaMetadataAttribute(trait_type="TODO", value="add some")
         ],
     )
