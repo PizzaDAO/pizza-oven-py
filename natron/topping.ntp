@@ -11,39 +11,8 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>184</NodesCount>
+		<NodesCount>182</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
-			<Plugin_label>Viewer1</Plugin_label>
-			<Plugin_script_name>Viewer1</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>0</KnobsCount>
-			<Inputs_map class_id="3" tracking_level="0" version="0">
-				<count>1</count>
-				<item_version>0</item_version>
-				<item class_id="4" tracking_level="0" version="0">
-					<first>1</first>
-					<second>Merge30</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>0</PagesCount>
-			<Children>0</Children>
-			<UserComponents class_id="5" tracking_level="0" version="0">
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Viewer1</CacheID>
-		</item>
-		<item>
 			<Plugin_label>omakase</Plugin_label>
 			<Plugin_script_name>omakase</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Group</Plugin_id>
@@ -52,13 +21,13 @@
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
 			<KnobsCount>3</KnobsCount>
-			<item class_id="6" tracking_level="0" version="14">
+			<item class_id="3" tracking_level="0" version="14">
 				<Name>userTextArea</Name>
 				<Type>String</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
 				<MasterIsAlias>0</MasterIsAlias>
-				<item class_id="7" tracking_level="0" version="7">
+				<item class_id="4" tracking_level="0" version="7">
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
 					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
@@ -67,7 +36,7 @@
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
-				<StringsAnimation class_id="8" tracking_level="0" version="0">
+				<StringsAnimation class_id="5" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
 				</StringsAnimation>
@@ -109,7 +78,7 @@
 				</item>
 				<UserKnob>0</UserKnob>
 			</item>
-			<Inputs_map>
+			<Inputs_map class_id="6" tracking_level="0" version="0">
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
@@ -119,7 +88,7 @@
 			<HasTrackerContext>0</HasTrackerContext>
 			<MultiInstanceParent></MultiInstanceParent>
 			<UserPagesCount>3</UserPagesCount>
-			<item class_id="9" tracking_level="0" version="0">
+			<item class_id="7" tracking_level="0" version="0">
 				<Name>ComboControl</Name>
 				<Label>Combo Controls</Label>
 				<Secret>0</Secret>
@@ -1652,7 +1621,7 @@ A6  140		None		Laszo Bitcoin Centaur serving devilish spicy Jalapeno Peppers
 						<Value>[Project]/../ingredients-db/1000-crust-thin.png</Value>
 						<Default></Default>
 						<HasMaster>1</HasMaster>
-						<Master class_id="10" tracking_level="0" version="3">
+						<Master class_id="8" tracking_level="0" version="3">
 							<MasterDimension>0</MasterDimension>
 							<MasterNodeName>omakase</MasterNodeName>
 							<MasterNodeNameFull>omakase</MasterNodeNameFull>
@@ -1837,7 +1806,7 @@ A6  140		None		Laszo Bitcoin Centaur serving devilish spicy Jalapeno Peppers
 				<name>Node</name>
 				<name>Info</name>
 				<Children>0</Children>
-				<UserComponents>
+				<UserComponents class_id="9" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>2</item_version>
 				</UserComponents>
@@ -1958,7 +1927,7 @@ A6  140		None		Laszo Bitcoin Centaur serving devilish spicy Jalapeno Peppers
 				<Inputs_map>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>
+					<item class_id="10" tracking_level="0" version="0">
 						<first>Source</first>
 						<second>Merge2</second>
 					</item>
@@ -14346,7 +14315,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>30</KnobsCount>
+			<KnobsCount>31</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -14532,6 +14501,24 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			</item>
 			<item>
 				<Name>A9_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A10_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -14891,11 +14878,15 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>28</count>
+				<count>29</count>
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
 					<second>TRS_1</second>
+				</item>
+				<item>
+					<first>A10</first>
+					<second>TRS_10</second>
 				</item>
 				<item>
 					<first>A11</first>
@@ -15031,7 +15022,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>7</KnobsCount>
+			<KnobsCount>6</KnobsCount>
 			<item>
 				<Name>translate</Name>
 				<Type>Double</Type>
@@ -15041,7 +15032,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>5.62000000000000000e+02</Value>
+					<Value>-5.12000000000000000e+02</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -15050,24 +15041,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.12500000000000000e+03</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>rotate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.86000000000000000e+02</Value>
+					<Value>-5.12000000000000000e+02</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -15084,7 +15058,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>2.09999999999999992e-01</Value>
+					<Value>0.00000000000000000e+00</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -15093,7 +15067,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>2.09999999999999992e-01</Value>
+					<Value>0.00000000000000000e+00</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -15190,7 +15164,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 					<second>Merge1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>436</KnobsAge>
+			<KnobsAge>441</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -15357,7 +15331,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 					<second>Merge2</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>190</KnobsAge>
+			<KnobsAge>206</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -18459,7 +18433,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>7</KnobsCount>
+			<KnobsCount>6</KnobsCount>
 			<item>
 				<Name>translate</Name>
 				<Type>Double</Type>
@@ -18469,7 +18443,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>3.75000000000000000e+02</Value>
+					<Value>-5.12000000000000000e+02</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -18478,24 +18452,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>6.79000000000000000e+02</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>rotate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>4.80000000000000000e+01</Value>
+					<Value>-5.12000000000000000e+02</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -18512,7 +18469,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>2.37999999999999989e-01</Value>
+					<Value>0.00000000000000000e+00</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -18521,7 +18478,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>2.37999999999999989e-01</Value>
+					<Value>0.00000000000000000e+00</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -18618,7 +18575,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 					<second>Merge0</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>610</KnobsAge>
+			<KnobsAge>633</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -18934,7 +18891,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>12</KnobsAge>
+			<KnobsAge>16</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -23425,7 +23382,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>10</KnobsAge>
+			<KnobsAge>14</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -38643,7 +38600,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p1_channels</Name>
+				<Name>p0_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -38664,11 +38621,11 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>1</first>
+					<first>0</first>
 					<second>input_single</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>4</KnobsAge>
+			<KnobsAge>6</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -45629,8 +45586,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<CacheID>Group13</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Write2</Plugin_label>
-			<Plugin_script_name>Write2</Plugin_script_name>
+			<Plugin_label>Write_default</Plugin_label>
+			<Plugin_script_name>Write_default</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Write</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -45847,7 +45804,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>scatter</second>
+					<second>Crop1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>5</KnobsAge>
@@ -45898,7 +45855,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p0_channels</Name>
+				<Name>p1_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -45919,11 +45876,11 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>0</first>
+					<first>1</first>
 					<second>i0</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
+			<KnobsAge>4</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -45971,7 +45928,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p0_channels</Name>
+				<Name>p1_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -45992,7 +45949,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>0</first>
+					<first>1</first>
 					<second>i1</second>
 				</item>
 			</Inputs_map>
@@ -46012,75 +45969,6 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Switch1_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Switch</Plugin_label>
-			<Plugin_script_name>Switch</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>p1_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel></ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>1</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Switch1_3</CacheID>
 		</item>
 		<item>
 			<Plugin_label>Switch_2</Plugin_label>
@@ -48719,7 +48607,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Thu Aug 12 06:51:49 2021</Value>
+			<Value>Thu Aug 26 17:37:51 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -48921,23 +48809,9 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 </Project>
 <ProjectGui class_id="18" tracking_level="0" version="12">
 	<NodesGui class_id="19" tracking_level="0" version="0">
-		<count>184</count>
+		<count>182</count>
 		<item_version>6</item_version>
 		<item class_id="20" tracking_level="0" version="6">
-			<Name>Viewer1</Name>
-			<X_position>4.81091774825583889e+03</X_position>
-			<Y_position>7.21439839494528769e+02</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>3.00000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>omakase</Name>
 			<X_position>5.48914597226545720e+03</X_position>
 			<Y_position>5.93014363649125471e+02</Y_position>
@@ -50438,7 +50312,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Name>TRS_1</Name>
 			<X_position>8.95359689000002800e+03</X_position>
-			<Y_position>-2.57014198760908585e+02</Y_position>
+			<Y_position>-2.47629862989242611e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -50452,7 +50326,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Name>TRS_2</Name>
 			<X_position>8.75810236831972179e+03</X_position>
-			<Y_position>-2.58514198760908585e+02</Y_position>
+			<Y_position>-2.54168816240528031e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -50732,7 +50606,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Name>Merge_const</Name>
 			<X_position>5.71045307227742069e+03</X_position>
-			<Y_position>2.44884717512118641e+02</Y_position>
+			<Y_position>2.24851439664666486e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -50745,8 +50619,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text1</Name>
-			<X_position>8.95956670702847805e+03</X_position>
-			<Y_position>-8.63787479057828932e+02</Y_position>
+			<X_position>8.93691477824314643e+03</X_position>
+			<Y_position>-7.27875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50787,8 +50661,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text2</Name>
-			<X_position>8.75365124226959415e+03</X_position>
-			<Y_position>-8.65787479057828932e+02</Y_position>
+			<X_position>8.73099931348426253e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50815,8 +50689,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text3</Name>
-			<X_position>8.52047447928358815e+03</X_position>
-			<Y_position>-8.63787479057828932e+02</Y_position>
+			<X_position>8.49782255049825471e+03</X_position>
+			<Y_position>-7.27875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50829,8 +50703,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text4</Name>
-			<X_position>8.29379047174477637e+03</X_position>
-			<Y_position>-8.65787479057828932e+02</Y_position>
+			<X_position>8.27113854295944475e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50871,8 +50745,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text5</Name>
-			<X_position>8.01728222205278325e+03</X_position>
-			<Y_position>-8.65787479057828932e+02</Y_position>
+			<X_position>7.99463029326744891e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50899,8 +50773,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text6</Name>
-			<X_position>7.75185067766982866e+03</X_position>
-			<Y_position>-8.63787479057828932e+02</Y_position>
+			<X_position>7.72919874888449431e+03</X_position>
+			<Y_position>-7.27875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50927,8 +50801,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text7</Name>
-			<X_position>7.48635604699021405e+03</X_position>
-			<Y_position>-8.63787479057828932e+02</Y_position>
+			<X_position>7.46370411820487971e+03</X_position>
+			<Y_position>-7.27875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50941,8 +50815,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text8</Name>
-			<X_position>7.19561282923577346e+03</X_position>
-			<Y_position>-8.63787479057828932e+02</Y_position>
+			<X_position>7.17296090045043911e+03</X_position>
+			<Y_position>-7.27875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -50983,8 +50857,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text9</Name>
-			<X_position>6.90870890951287492e+03</X_position>
-			<Y_position>-8.63787479057828932e+02</Y_position>
+			<X_position>6.88605698072754058e+03</X_position>
+			<Y_position>-7.27875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51011,8 +50885,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text10</Name>
-			<X_position>6.63730191323983126e+03</X_position>
-			<Y_position>-8.65787479057828932e+02</Y_position>
+			<X_position>6.61464998445449692e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51025,8 +50899,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text11</Name>
-			<X_position>6.37226260515526701e+03</X_position>
-			<Y_position>-8.65787479057828932e+02</Y_position>
+			<X_position>6.34961067636993266e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51067,8 +50941,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text12</Name>
-			<X_position>6.11111655352454181e+03</X_position>
-			<Y_position>-8.65787479057828932e+02</Y_position>
+			<X_position>6.08846462473920747e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51095,8 +50969,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text113</Name>
-			<X_position>5.84067274974253633e+03</X_position>
-			<Y_position>-8.65787479057828932e+02</Y_position>
+			<X_position>5.81802082095720198e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51123,8 +50997,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text14</Name>
-			<X_position>5.65493547388874867e+03</X_position>
-			<Y_position>-7.44383052971498273e+02</Y_position>
+			<X_position>5.63228354510341433e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51151,8 +51025,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text15</Name>
-			<X_position>5.44968792197739094e+03</X_position>
-			<Y_position>-7.33054916299436172e+02</Y_position>
+			<X_position>5.42703599319205659e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51179,8 +51053,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text16</Name>
-			<X_position>5.21797918846689390e+03</X_position>
-			<Y_position>-7.46331138556395672e+02</Y_position>
+			<X_position>5.19532725968155955e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51193,8 +51067,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text17</Name>
-			<X_position>5.03146101059879948e+03</X_position>
-			<Y_position>-7.41020649653612054e+02</Y_position>
+			<X_position>5.00880908181346513e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51235,8 +51109,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text18</Name>
-			<X_position>4.81970087711956876e+03</X_position>
-			<Y_position>-7.33054916299436172e+02</Y_position>
+			<X_position>4.79704894833423441e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51277,8 +51151,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text0</Name>
-			<X_position>9.19402633389224684e+03</X_position>
-			<Y_position>-8.63787479057828932e+02</Y_position>
+			<X_position>9.18805651686379679e+03</X_position>
+			<Y_position>-7.27875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51291,8 +51165,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text19</Name>
-			<X_position>4.65870087711956876e+03</X_position>
-			<Y_position>-7.33054916299436172e+02</Y_position>
+			<X_position>4.63604894833423441e+03</X_position>
+			<Y_position>-7.27875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51333,8 +51207,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text20</Name>
-			<X_position>4.50064658717132806e+03</X_position>
-			<Y_position>-7.35616504071462714e+02</Y_position>
+			<X_position>4.47799465838599372e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51375,8 +51249,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text21</Name>
-			<X_position>4.33471547276714045e+03</X_position>
-			<Y_position>-7.35616504071462714e+02</Y_position>
+			<X_position>4.31206354398180611e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51417,8 +51291,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text22</Name>
-			<X_position>4.19471547276714045e+03</X_position>
-			<Y_position>-7.35616504071462714e+02</Y_position>
+			<X_position>4.17206354398180611e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51459,8 +51333,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text23</Name>
-			<X_position>4.01871547276714045e+03</X_position>
-			<Y_position>-7.35616504071462714e+02</Y_position>
+			<X_position>3.99606354398180611e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51501,8 +51375,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text24</Name>
-			<X_position>3.81673106275095415e+03</X_position>
-			<Y_position>-7.43168595186170933e+02</Y_position>
+			<X_position>3.79407913396561980e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51543,8 +51417,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text25</Name>
-			<X_position>3.61674665273476785e+03</X_position>
-			<Y_position>-7.43168595186170933e+02</Y_position>
+			<X_position>3.59409472394943350e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51585,8 +51459,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text26</Name>
-			<X_position>3.38380532833810958e+03</X_position>
-			<Y_position>-7.46944640743524815e+02</Y_position>
+			<X_position>3.36115339955277523e+03</X_position>
+			<Y_position>-7.29875906345821477e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51627,8 +51501,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text27</Name>
-			<X_position>3.10806046274838263e+03</X_position>
-			<Y_position>-7.43168595186170478e+02</Y_position>
+			<X_position>3.08540853396304828e+03</X_position>
+			<Y_position>-7.29875906345822386e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51669,8 +51543,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text28</Name>
-			<X_position>2.86198746048659405e+03</X_position>
-			<Y_position>-7.51720686300878697e+02</Y_position>
+			<X_position>2.83933553170125970e+03</X_position>
+			<Y_position>-7.29875906345821932e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51711,8 +51585,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Text29</Name>
-			<X_position>2.58701864045422008e+03</X_position>
-			<Y_position>-7.51720686300879152e+02</Y_position>
+			<X_position>2.56436671166888573e+03</X_position>
+			<Y_position>-7.29875906345822386e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -51726,7 +51600,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Name>Crop1</Name>
 			<X_position>5.71045307227742160e+03</X_position>
-			<Y_position>5.09129427706378010e+02</Y_position>
+			<Y_position>5.45553569247200357e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -51739,8 +51613,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Constant2</Name>
-			<X_position>5.91379712511549769e+03</X_position>
-			<Y_position>2.02917157820853845e+02</Y_position>
+			<X_position>6.33483941099990443e+03</X_position>
+			<Y_position>2.29851439664666486e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -52216,7 +52090,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Name>Switch_single</Name>
 			<X_position>9.45821143542830760e+03</X_position>
-			<Y_position>-5.16006381610556218e+02</Y_position>
+			<Y_position>-4.49829586871361698e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -52229,8 +52103,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Read2</Name>
-			<X_position>6.13230960370342655e+03</X_position>
-			<Y_position>5.52520056900198483e+02</Y_position>
+			<X_position>6.14017627358222944e+03</X_position>
+			<Y_position>3.34875523586653230e+02</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -52243,8 +52117,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Reformat1</Name>
-			<X_position>6.14430960370342655e+03</X_position>
-			<Y_position>6.59452147692384074e+02</Y_position>
+			<X_position>6.15217627358222944e+03</X_position>
+			<Y_position>4.41807614378838821e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -52257,8 +52131,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Read4</Name>
-			<X_position>5.99069952892768652e+03</X_position>
-			<Y_position>5.50399513172556226e+02</Y_position>
+			<X_position>5.99856619880648941e+03</X_position>
+			<Y_position>3.32754979859010973e+02</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -52271,8 +52145,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Reformat2</Name>
-			<X_position>6.00269952892768652e+03</X_position>
-			<Y_position>6.65408334234878453e+02</Y_position>
+			<X_position>6.01056619880648941e+03</X_position>
+			<Y_position>4.47763800921333200e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -52285,8 +52159,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>Merge30</Name>
-			<X_position>6.06636628523723448e+03</X_position>
-			<Y_position>8.11925191553127206e+02</Y_position>
+			<X_position>6.07423295511603737e+03</X_position>
+			<Y_position>5.93375315858942031e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -52299,8 +52173,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>scatter</Name>
-			<X_position>5.71045307227742251e+03</X_position>
-			<Y_position>6.01372944532233760e+02</Y_position>
+			<X_position>5.81348456357237774e+03</X_position>
+			<Y_position>7.26570387489926816e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>1.000000000e+00</r>
 			<g>0.000000000e+00</g>
@@ -52340,9 +52214,9 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			</item>
 		</item>
 		<item>
-			<Name>Write2</Name>
-			<X_position>5.71045307227742069e+03</X_position>
-			<Y_position>8.24379130188051931e+02</Y_position>
+			<Name>Write_default</Name>
+			<X_position>5.71045307227742160e+03</X_position>
+			<Y_position>9.50042418503887347e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>7.499961853e-01</r>
 			<g>7.499961853e-01</g>
@@ -52356,7 +52230,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Name>Switch_0</Name>
 			<X_position>9.27274971656899834e+03</X_position>
-			<Y_position>-5.05436882494417659e+02</Y_position>
+			<Y_position>-5.04133346005611202e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -52371,20 +52245,6 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<Name>Switch_1</Name>
 			<X_position>9.03953939662809535e+03</X_position>
 			<Y_position>-5.05436882494417659e+02</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Switch</Name>
-			<X_position>6.34964097962613414e+03</X_position>
-			<Y_position>-1.48216446609627837e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -53003,20 +52863,19 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<Window class_id="22" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="23" tracking_level="1" version="1" object_id="_0">
-				<Sizes>878 878</Sizes>
+				<Sizes>536 1988</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>523 522</Sizes>
+					<Sizes>691 689</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="24" tracking_level="1" version="5" object_id="_2">
 						<Tabs class_id="25" tracking_level="0" version="0">
-							<count>1</count>
+							<count>0</count>
 							<item_version>0</item_version>
-							<item>Viewer1</item>
 						</Tabs>
-						<Index>0</Index>
+						<Index>-1</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
@@ -53034,7 +52893,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_4">
-					<Sizes>438 437</Sizes>
+					<Sizes>1518 467</Sizes>
 					<Orientation>1</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_5">
@@ -53061,58 +52920,15 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>0</x>
-			<y>1</y>
-			<w>1792</w>
-			<h>1048</h>
+			<x>-1792</x>
+			<y>-659</y>
+			<w>2560</w>
+			<h>1383</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="26" tracking_level="0" version="0">
-		<count>1</count>
+		<count>0</count>
 		<item_version>0</item_version>
-		<item class_id="27" tracking_level="0" version="0">
-			<first>Viewer1</first>
-			<second class_id="28" tracking_level="0" version="14">
-				<zoomLeft>-3.13224864265927954e+03</zoomLeft>
-				<zoomBottom>-8.19200000000000728e+01</zoomBottom>
-				<zoomFactor>8.47449669471153771e-02</zoomFactor>
-				<UserRoIEnabled>0</UserRoIEnabled>
-				<UserRoI class_id="29" tracking_level="0" version="0">
-					<Left>1.02400000000000000e+03</Left>
-					<Bottom>1.02400000000000000e+03</Bottom>
-					<Right>3.07200000000000000e+03</Right>
-					<Top>3.07200000000000000e+03</Top>
-				</UserRoI>
-				<ClippedToProject>1</ClippedToProject>
-				<AutoContrast>0</AutoContrast>
-				<Gain>1.00000000000000000e+00</Gain>
-				<Gain>1.00000000000000000e+00</Gain>
-				<ColorSpace>sRGB</ColorSpace>
-				<Layer>Color.RGBA</Layer>
-				<AlphaLayer>Color.A</AlphaLayer>
-				<Channels>RGB</Channels>
-				<RenderScaleActivated>0</RenderScaleActivated>
-				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
-				<CompositingOP>0</CompositingOP>
-				<LeftBound>0</LeftBound>
-				<RightBound>7</RightBound>
-				<LeftToolbarVisible>1</LeftToolbarVisible>
-				<RightToolbarVisible>1</RightToolbarVisible>
-				<TopToolbarVisible>1</TopToolbarVisible>
-				<PlayerVisible>1</PlayerVisible>
-				<TimelineVisible>1</TimelineVisible>
-				<InfobarVisible>1</InfobarVisible>
-				<isInputAPaused>0</isInputAPaused>
-				<isInputBPaused>0</isInputBPaused>
-				<CheckerboardEnabled>0</CheckerboardEnabled>
-				<Fps>5.00000000000000000e+01</Fps>
-				<FpsLocked>1</FpsLocked>
-				<aInput>0</aInput>
-				<bInput>0</bInput>
-				<fullFrame>0</fullFrame>
-			</second>
-		</item>
 	</ViewersData>
 	<Histograms>
 		<count>0</count>
@@ -53121,11 +52937,11 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 	<OpenedPanels>
 		<count>5</count>
 		<item_version>0</item_version>
-		<item>scatter</item>
-		<item>Switch_9</item>
+		<item>Write_default</item>
 		<item>TRS_1</item>
-		<item>Switch_0</item>
-		<item>i1</item>
+		<item>TRS_2</item>
+		<item>TRS_0</item>
+		<item>Switch_single</item>
 	</OpenedPanels>
 	<ScriptEditorInput>def callback_scatter1( thisParam=False, thisNode=False, thisGroup=False, app=False, userEdited=False):
 	if not NatronEngine.natron.isBackground():
