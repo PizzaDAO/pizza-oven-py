@@ -12,31 +12,27 @@ class Topping(NatronBase):
         self.natron = app
         self._load_json_data(env_var)
 
-        # TODO: allow for loading one file per input node
-        # so we can have different variations of each topping?
-        self._load_image(self.in_file, "input_single")
+        for item in self.instances:
+            index = self.instances.index(item)
+            self._load_image(self.in_file, index)
 
     def render(self):
         """override the render function in your derived class to customize behavior"""
-        self._disableOthers()
-        for instance in self.instances:
-            index = self.instances.index(instance)
+        for item in self.instances:
+            index = self.instances.index(item)
+            # enable the switch
             self.enable(index)
+            # set the transform
             self.setTransform(
-                instance["translation"], instance["scale"], instance["rotation"], index
+                item["translation"], item["scale"], item["rotation"], index
             )
         self.setOutput()
 
     def render_single(self):
-        """override the render function in your derived class to customize behavior"""
-        self._disableOthers()
         self.enable("single")
-        self.setTransform(self.translate, self.scale, self.rotate)
+        item = self.instances[0]
+        self.setTransform(item["translation"], item["scale"], item["rotation"])
         self.setOutput()
-
-    def _disableOthers(self):
-        for i in range(0, self.MAX_INSTANCES):
-            self.disable(i)
 
 
 instance = Topping(app, "TOPPING_DATA_PATH")

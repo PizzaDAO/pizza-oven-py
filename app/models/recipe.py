@@ -37,6 +37,7 @@ class Classification(Enum):
 class ScatterType(IntFlag):
     """all of the different types"""
 
+    none = 0
     random = 1
     spiral = 2
     spoke = 4

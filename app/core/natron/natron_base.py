@@ -22,10 +22,8 @@ class NatronBase(object):
     def render(self):
         """override the render function in your derived class to customize behavior"""
         self.enable()
-        instance = self.instances[0]
-        self.setTransform(
-            instance["translation"], instance["scale"], instance["rotation"]
-        )
+        item = self.instances[0]
+        self.setTransform(item["translation"], item["scale"], item["rotation"])
         self.setOutput()
 
     def enable(self, switch_id=None):
@@ -110,11 +108,9 @@ class NatronBase(object):
         node = self.natron.getNode("watermark")
         if node is None:
             print("watermark: could not find node: watermark")
-            return
         else:
             param = node.getParm("text")
             param.setValue("layer %s" % self.index)
-            return
 
     def burn(self):
         pass
@@ -142,14 +138,17 @@ class NatronBase(object):
 
         return self.element
 
-    def _load_image(self, filename, node_name=None):
+    def _load_image(self, filename, switch_id=None):
         print("loading: " + config.paths["database"] + filename)
         node = None
 
-        if node_name is not None:
-            node = self.natron.getNode(node_name)
+        if switch_id is None:
+            switch_id = self.unique_id
+
+        # if node_name is not None:
+        #     node = self.natron.getNode(node_name)
         if node is None:
-            node = self.natron.getNode("input_%s" % self.unique_id)
+            node = self.natron.getNode("i%s" % switch_id)
         if node is None:
             node = self.natron.getNode("input_default")
         if node is None:

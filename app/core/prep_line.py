@@ -3,6 +3,7 @@ from app.models.recipe import (
     Recipe,
     INGREDIENT_KEY,
     RecipeInstructions,
+    ScatterType,
     ScopedIngredient,
 )
 from app.models.prep import (
@@ -67,7 +68,10 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     # TODO: bitwise determine which scatters are valid
     # an select the one to use
 
-    instances = RandomScatter(seed, nonce).evaluate(scope.scope)
+    if scope.scope.scatter_types[0] == ScatterType.none:
+        instances = [MadeIngredientPrep(translation=(0.0, 0.0), rotation=0.0, scale=1)]
+    else:
+        instances = RandomScatter(seed, nonce).evaluate(scope.scope)
 
     return MadeIngredient(
         ingredient=scope.ingredient,

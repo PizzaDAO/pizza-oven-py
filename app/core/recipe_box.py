@@ -38,12 +38,12 @@ def sample(recipe_id: int) -> Recipe:
                         protein=0.2,
                     ),
                     image_uris={
-                        "filename": "0000-box-cardboard.png",
+                        "filename": "0010-box-cardboard.png",
                         "output_mask": "rarepizza-#####-box-%s.png",
                     },
                 ),
                 scope=IngredientScope(
-                    scatter_types=[],
+                    scatter_types=[ScatterType.none],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(0.975, 0.975),
@@ -75,7 +75,7 @@ def sample(recipe_id: int) -> Recipe:
                     },
                 ),
                 scope=IngredientScope(
-                    scatter_types=[],
+                    scatter_types=[ScatterType.none],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(0.975, 0.975),
@@ -107,7 +107,7 @@ def sample(recipe_id: int) -> Recipe:
                     },
                 ),
                 scope=IngredientScope(
-                    scatter_types=[],
+                    scatter_types=[ScatterType.none],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(1.0, 1.0),
@@ -137,11 +137,11 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "2000-sauce-tomato.png",
-                        "output_mask": "rarepizza-#####-layer-%s.png",
+                        "output_mask": "rarepizza-#####-topping-%s.png",
                     },
                 ),
                 scope=IngredientScope(
-                    scatter_types=[],
+                    scatter_types=[ScatterType.none],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(1.0, 1.0),
@@ -169,11 +169,11 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "3000-cheese-mozzarella.png",
-                        "output_mask": "rarepizza-#####-layer-%s.png",
+                        "output_mask": "rarepizza-#####-topping-%s.png",
                     },
                 ),
                 scope=IngredientScope(
-                    scatter_types=[],
+                    scatter_types=[ScatterType.none],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(1.0, 1.0),
@@ -201,7 +201,7 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "4000-topping-meat-pepperoni.png",
-                        "output_mask": "rarepizza-#####-layer-%s.png",
+                        "output_mask": "rarepizza-#####-topping-%s.png",
                     },
                 ),
                 scope=IngredientScope(
@@ -233,7 +233,7 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "5000-topping-fruit-tomato.png",
-                        "output_mask": "rarepizza-#####-layer-%s.png",
+                        "output_mask": "rarepizza-#####-topping-%s.png",
                     },
                 ),
                 scope=IngredientScope(
@@ -265,7 +265,7 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "6000-topping-seafood-shrimp.png",
-                        "output_mask": "rarepizza-#####-layer-%s.png",
+                        "output_mask": "rarepizza-#####-topping-%s.png",
                     },
                 ),
                 scope=IngredientScope(
