@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>183</NodesCount>
+		<NodesCount>185</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>omakase</Plugin_label>
 			<Plugin_script_name>omakase</Plugin_script_name>
@@ -23254,7 +23254,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>6</Plugin_major_version>
 			<Plugin_minor_version>13</Plugin_minor_version>
-			<KnobsCount>5</KnobsCount>
+			<KnobsCount>4</KnobsCount>
 			<item>
 				<Name>center</Name>
 				<Type>Double</Type>
@@ -23340,28 +23340,11 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</StringsAnimation>
 				<UserKnob>0</UserKnob>
 			</item>
-			<item>
-				<Name>disableNode</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
 			<Inputs_map>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>14</KnobsAge>
+			<KnobsAge>15</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -38583,7 +38566,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>input_single</second>
+					<second>Merge31</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>6</KnobsAge>
@@ -48476,7 +48459,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Switch_single</second>
+					<second>Text0_2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -48492,6 +48475,242 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Viewer1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Text0_2</Plugin_label>
+			<Plugin_script_name>Text0_2</Plugin_script_name>
+			<Plugin_id>net.fxarena.openfx.Text</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>6</Plugin_major_version>
+			<Plugin_minor_version>13</Plugin_minor_version>
+			<KnobsCount>5</KnobsCount>
+			<item>
+				<Name>scale</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4.00000000000000022e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4.00000000000000022e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>center</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>6.16000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>5.91000000000000000e+02</Value>
+					<Default>5.00000000000000000e-01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>text</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>single</Value>
+					<Default>Enter text</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>size</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>406</Value>
+					<Default>64</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>68</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Text0_2</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Merge31</Plugin_label>
+			<Plugin_script_name>Merge31</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Text0_2</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>input_single</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Merge31</CacheID>
 		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
@@ -48599,7 +48818,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sun Aug 29 10:14:09 2021</Value>
+			<Value>Sun Aug 29 10:34:16 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -48801,7 +49020,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 </Project>
 <ProjectGui class_id="18" tracking_level="0" version="12">
 	<NodesGui class_id="19" tracking_level="0" version="0">
-		<count>183</count>
+		<count>185</count>
 		<item_version>6</item_version>
 		<item class_id="20" tracking_level="0" version="6">
 			<Name>omakase</Name>
@@ -52863,17 +53082,45 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Text0_2</Name>
+			<X_position>9.64097285420246044e+03</X_position>
+			<Y_position>-5.92905555407209704e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>5.000076294e-01</g>
+			<b>2.000000030e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Merge31</Name>
+			<X_position>9.46085731903432134e+03</X_position>
+			<Y_position>-5.15157842384991000e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>4.30000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="21" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
 		<Window class_id="22" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="23" tracking_level="1" version="1" object_id="_0">
-				<Sizes>510 1892</Sizes>
+				<Sizes>536 1988</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>683 681</Sizes>
+					<Sizes>684 681</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="24" tracking_level="1" version="5" object_id="_2">
@@ -52900,7 +53147,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_4">
-					<Sizes>1444 445</Sizes>
+					<Sizes>1517 468</Sizes>
 					<Orientation>1</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_5">
@@ -52927,10 +53174,10 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2555</x>
-			<y>-681</y>
-			<w>2438</w>
-			<h>1367</h>
+			<x>-2317</x>
+			<y>-577</y>
+			<w>2560</w>
+			<h>1368</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="26" tracking_level="0" version="0">
@@ -52939,9 +53186,9 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item class_id="27" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="28" tracking_level="0" version="14">
-				<zoomLeft>-2.04800000000000182e+01</zoomLeft>
-				<zoomBottom>-3.19648627450981166e+01</zoomBottom>
-				<zoomFactor>4.78891225961538436e-01</zoomFactor>
+				<zoomLeft>-1.16926171464200138e+02</zoomLeft>
+				<zoomBottom>-1.86392962922854963e+02</zoomBottom>
+				<zoomFactor>4.08490570907417028e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="29" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -52959,7 +53206,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<Channels>RGB</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
+				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
 				<CompositingOP>0</CompositingOP>
 				<LeftBound>0</LeftBound>
 				<RightBound>7</RightBound>
@@ -52987,11 +53234,11 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 	<OpenedPanels>
 		<count>5</count>
 		<item_version>0</item_version>
+		<item>Text0_2</item>
+		<item>Merge31</item>
 		<item>Switch_single</item>
 		<item>Switch_1</item>
 		<item>Switch_0</item>
-		<item>i0</item>
-		<item>input_single</item>
 	</OpenedPanels>
 	<ScriptEditorInput>def callback_scatter1( thisParam=False, thisNode=False, thisGroup=False, app=False, userEdited=False):
 	if not NatronEngine.natron.isBackground():
