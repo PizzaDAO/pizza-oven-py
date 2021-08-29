@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>182</NodesCount>
+		<NodesCount>183</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>omakase</Plugin_label>
 			<Plugin_script_name>omakase</Plugin_script_name>
@@ -20,7 +20,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
+			<KnobsCount>2</KnobsCount>
 			<item class_id="3" tracking_level="0" version="14">
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -30,34 +30,13 @@
 				<item class_id="4" tracking_level="0" version="7">
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;afterParamChanged: combo.cdbChanged&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<StringsAnimation class_id="5" tracking_level="0" version="0">
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>onParamChanged</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>combo.cdbChanged</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
 					<count>0</count>
 					<item_version>0</item_version>
 				</StringsAnimation>
@@ -82,7 +61,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>1067</KnobsAge>
+			<KnobsAge>1068</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -45586,8 +45565,8 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<CacheID>Group13</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Write_default</Plugin_label>
-			<Plugin_script_name>Write_default</Plugin_script_name>
+			<Plugin_label>w1</Plugin_label>
+			<Plugin_script_name>w1</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Write</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -48501,6 +48480,37 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			</UserComponents>
 			<CacheID>Switch_29</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Viewer1</Plugin_label>
+			<Plugin_script_name>Viewer1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>1</first>
+					<second>TRS_0</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Viewer1</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
 	<item>
@@ -48607,7 +48617,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Thu Aug 26 17:37:51 2021</Value>
+			<Value>Sun Aug 29 09:45:55 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -48809,19 +48819,19 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 </Project>
 <ProjectGui class_id="18" tracking_level="0" version="12">
 	<NodesGui class_id="19" tracking_level="0" version="0">
-		<count>182</count>
+		<count>183</count>
 		<item_version>6</item_version>
 		<item class_id="20" tracking_level="0" version="6">
 			<Name>omakase</Name>
-			<X_position>5.48914597226545720e+03</X_position>
-			<Y_position>5.93014363649125471e+02</Y_position>
+			<X_position>5.47359736323501329e+03</X_position>
+			<Y_position>5.94569224552169771e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>1.000000000e+00</r>
 			<g>0.000000000e+00</g>
 			<b>1.000000000e+00</b>
 			<Selected>0</Selected>
 			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
+			<Height>6.00000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>51</Children>
 			<item>
@@ -52173,7 +52183,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		</item>
 		<item>
 			<Name>scatter</Name>
-			<X_position>5.81348456357237774e+03</X_position>
+			<X_position>5.91050205877034205e+03</X_position>
 			<Y_position>7.26570387489926816e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>1.000000000e+00</r>
@@ -52214,7 +52224,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			</item>
 		</item>
 		<item>
-			<Name>Write_default</Name>
+			<Name>w1</Name>
 			<X_position>5.71045307227742160e+03</X_position>
 			<Y_position>9.50042418503887347e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -52857,25 +52867,40 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Viewer1</Name>
+			<X_position>9.33805651686379497e+03</X_position>
+			<Y_position>-2.02514198760908585e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>3.00000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="21" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
 		<Window class_id="22" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="23" tracking_level="1" version="1" object_id="_0">
-				<Sizes>536 1988</Sizes>
+				<Sizes>532 1974</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>691 689</Sizes>
+					<Sizes>683 681</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="24" tracking_level="1" version="5" object_id="_2">
 						<Tabs class_id="25" tracking_level="0" version="0">
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>Viewer1</item>
 						</Tabs>
-						<Index>-1</Index>
+						<Index>0</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
@@ -52893,7 +52918,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_4">
-					<Sizes>1518 467</Sizes>
+					<Sizes>1507 464</Sizes>
 					<Orientation>1</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_5">
@@ -52920,15 +52945,58 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-1792</x>
-			<y>-659</y>
-			<w>2560</w>
-			<h>1383</h>
+			<x>-2542</x>
+			<y>-681</y>
+			<w>2542</w>
+			<h>1367</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="26" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item class_id="27" tracking_level="0" version="0">
+			<first>Viewer1</first>
+			<second class_id="28" tracking_level="0" version="14">
+				<zoomLeft>-3.17223800383876551e+01</zoomLeft>
+				<zoomBottom>-2.04800000000000182e+01</zoomBottom>
+				<zoomFactor>4.89220252403846145e-01</zoomFactor>
+				<UserRoIEnabled>0</UserRoIEnabled>
+				<UserRoI class_id="29" tracking_level="0" version="0">
+					<Left>1.02400000000000000e+03</Left>
+					<Bottom>1.02400000000000000e+03</Bottom>
+					<Right>3.07200000000000000e+03</Right>
+					<Top>3.07200000000000000e+03</Top>
+				</UserRoI>
+				<ClippedToProject>1</ClippedToProject>
+				<AutoContrast>0</AutoContrast>
+				<Gain>1.00000000000000000e+00</Gain>
+				<Gain>1.00000000000000000e+00</Gain>
+				<ColorSpace>sRGB</ColorSpace>
+				<Layer>Color.RGBA</Layer>
+				<AlphaLayer>Color.A</AlphaLayer>
+				<Channels>RGB</Channels>
+				<RenderScaleActivated>0</RenderScaleActivated>
+				<MipMapLevel>0</MipMapLevel>
+				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
+				<CompositingOP>0</CompositingOP>
+				<LeftBound>0</LeftBound>
+				<RightBound>7</RightBound>
+				<LeftToolbarVisible>1</LeftToolbarVisible>
+				<RightToolbarVisible>1</RightToolbarVisible>
+				<TopToolbarVisible>1</TopToolbarVisible>
+				<PlayerVisible>1</PlayerVisible>
+				<TimelineVisible>1</TimelineVisible>
+				<InfobarVisible>1</InfobarVisible>
+				<isInputAPaused>0</isInputAPaused>
+				<isInputBPaused>0</isInputBPaused>
+				<CheckerboardEnabled>0</CheckerboardEnabled>
+				<Fps>5.00000000000000000e+01</Fps>
+				<FpsLocked>1</FpsLocked>
+				<aInput>0</aInput>
+				<bInput>0</bInput>
+				<fullFrame>0</fullFrame>
+			</second>
+		</item>
 	</ViewersData>
 	<Histograms>
 		<count>0</count>
@@ -52937,11 +53005,11 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 	<OpenedPanels>
 		<count>5</count>
 		<item_version>0</item_version>
-		<item>Write_default</item>
-		<item>TRS_1</item>
 		<item>TRS_2</item>
+		<item>TRS_1</item>
 		<item>TRS_0</item>
-		<item>Switch_single</item>
+		<item>TRS_default</item>
+		<item>w1</item>
 	</OpenedPanels>
 	<ScriptEditorInput>def callback_scatter1( thisParam=False, thisNode=False, thisGroup=False, app=False, userEdited=False):
 	if not NatronEngine.natron.isBackground():
