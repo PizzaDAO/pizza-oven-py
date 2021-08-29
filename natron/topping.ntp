@@ -28574,25 +28574,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>16</KnobsCount>
-			<item>
-				<Name>decodingPluginChoice</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>Default</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -28623,7 +28605,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(4000-topping-meat-pepperoni.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0000-blank-toppingT-1024.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -28644,7 +28626,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../ingredients-db/4000-topping-meat-pepperoni.png</Value>
+					<Value>[Project]/../ingredients-db/0000-blank-toppingT-1024.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -28882,7 +28864,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>11</KnobsAge>
+			<KnobsAge>17</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -38272,7 +38254,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(6000-topping-seafood-shrimp.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0000-blank-toppingS-1024.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -38293,7 +38275,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../ingredients-db/6000-topping-seafood-shrimp.png</Value>
+					<Value>[Project]/../ingredients-db/0000-blank-toppingS-1024.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -38531,7 +38513,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>16</KnobsAge>
+			<KnobsAge>18</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -38579,7 +38561,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
-				<Name>p0_channels</Name>
+				<Name>p1_channels</Name>
 				<Type>Choice</Type>
 				<Dimension>1</Dimension>
 				<Secret>0</Secret>
@@ -38600,7 +38582,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>
-					<first>0</first>
+					<first>1</first>
 					<second>input_single</second>
 				</item>
 			</Inputs_map>
@@ -48494,7 +48476,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>TRS_0</second>
+					<second>Switch_single</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -48617,7 +48599,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sun Aug 29 09:45:55 2021</Value>
+			<Value>Sun Aug 29 10:14:09 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -52887,7 +52869,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<Window class_id="22" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="23" tracking_level="1" version="1" object_id="_0">
-				<Sizes>532 1974</Sizes>
+				<Sizes>510 1892</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
@@ -52918,7 +52900,7 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_4">
-					<Sizes>1507 464</Sizes>
+					<Sizes>1444 445</Sizes>
 					<Orientation>1</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_5">
@@ -52945,9 +52927,9 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2542</x>
+			<x>-2555</x>
 			<y>-681</y>
-			<w>2542</w>
+			<w>2438</w>
 			<h>1367</h>
 		</Window>
 	</Gui_Layout>
@@ -52957,9 +52939,9 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 		<item class_id="27" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="28" tracking_level="0" version="14">
-				<zoomLeft>-3.17223800383876551e+01</zoomLeft>
-				<zoomBottom>-2.04800000000000182e+01</zoomBottom>
-				<zoomFactor>4.89220252403846145e-01</zoomFactor>
+				<zoomLeft>-2.04800000000000182e+01</zoomLeft>
+				<zoomBottom>-3.19648627450981166e+01</zoomBottom>
+				<zoomFactor>4.78891225961538436e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="29" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -53005,11 +52987,11 @@ to enable, select Merge 3 and hit &apos;d&apos;&lt;/font&gt;</Value>
 	<OpenedPanels>
 		<count>5</count>
 		<item_version>0</item_version>
-		<item>TRS_2</item>
-		<item>TRS_1</item>
-		<item>TRS_0</item>
-		<item>TRS_default</item>
-		<item>w1</item>
+		<item>Switch_single</item>
+		<item>Switch_1</item>
+		<item>Switch_0</item>
+		<item>i0</item>
+		<item>input_single</item>
 	</OpenedPanels>
 	<ScriptEditorInput>def callback_scatter1( thisParam=False, thisNode=False, thisGroup=False, app=False, userEdited=False):
 	if not NatronEngine.natron.isBackground():
