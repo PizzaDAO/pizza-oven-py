@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 from app.models.base import Base
 
@@ -28,17 +28,20 @@ class MadeInstructions(Base):
 class MadeIngredientPrep(Base):
     """rendering instructions seeded by the RNG"""
 
-    emission_count: SCALAR
-    emission_density: SCALAR
-    particle_scale: SCALAR
+    translation: Tuple[SCALAR, SCALAR]
+    """the position of the instance as cartesian coordinates"""
     rotation: SCALAR
+    """the rotation of the instance as degrees"""
+    scale: SCALAR
+    """the scale of the instance as fraction e.g. (-1,1)"""
 
 
 class MadeIngredient(Base):
     """struct for serializing the ingredient and its prep instructions"""
 
     ingredient: Ingredient
-    prep: MadeIngredientPrep
+    count: SCALAR
+    instances: List[MadeIngredientPrep]
 
 
 class KitchenOrder(Base):

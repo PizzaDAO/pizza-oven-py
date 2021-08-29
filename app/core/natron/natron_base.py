@@ -22,7 +22,10 @@ class NatronBase(object):
     def render(self):
         """override the render function in your derived class to customize behavior"""
         self.enable()
-        self.setTransform(self.translate, self.scale, self.rotate)
+        instance = self.instances[0]
+        self.setTransform(
+            instance["translation"], instance["scale"], instance["rotation"]
+        )
         self.setOutput()
 
     def enable(self, switch_id=None):
@@ -84,6 +87,7 @@ class NatronBase(object):
                 param.setValue(rotate)
             del param
         if scale is not None:
+            # value is -1 to 1
             param = node.getParam("scale")
             if param is not None:
                 param.setValue(scale, 0)
@@ -134,12 +138,7 @@ class NatronBase(object):
         self.unique_id = self.element["ingredient"]["unique_id"]
         self.in_file = self.element["ingredient"]["image_uris"]["filename"]
         self.out_file = self.element["ingredient"]["image_uris"]["output_mask"]
-
-        # node transforms
-        # TODO: translate
-        self.translate = [0, 0]
-        self.rotate = self.element["prep"]["rotation"]
-        self.scale = self.element["prep"]["particle_scale"]
+        self.instances = self.element["instances"]
 
         return self.element
 

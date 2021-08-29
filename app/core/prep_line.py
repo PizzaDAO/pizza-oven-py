@@ -13,10 +13,12 @@ from app.models.prep import (
 )
 
 from app.core.random import (
+    Counter,
     get_random,
-    get_random_deterministic,
+    get_random_deterministic_uint256,
+    select_value,
 )
-
+from app.core.scatter import RandomScatter
 from app.core.utils import clamp, to_hex, from_hex
 
 __all__ = ["reduce"]
@@ -31,16 +33,22 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     # since the recipe already received verifiable randomness
     # we use some entropy from the operating system
     random_seed = get_random(32)
-    counter = random_seed
-    deterministic_seed = get_random_deterministic(from_hex(recipe.random_seed), counter)
+    nonce = Counter(random_seed)
+    deterministic_seed = get_random_deterministic_uint256(
+        from_hex(recipe.random_seed), nonce
+    )
 
-    # TODO: select ingredient count first and then only add the ingredients that are selected
+    ingredient_count = select_ingredient_count(
+        deterministic_seed, nonce, recipe.instructions
+    )
 
+    # TODO: respect the ingredient count selected in the assignment above
     for (key, value) in recipe.base_ingredients.items():
-        reduced_base[key] = select_prep(deterministic_seed, counter, value)
+        reduced_base[key] = select_prep(deterministic_seed, nonce, value)
 
+    # TODO: respect the ingredient count selected in the assignment above
     for (key, value) in recipe.layers.items():
-        reduced_layers[key] = select_prep(deterministic_seed, counter, value)
+        reduced_layers[key] = select_prep(deterministic_seed, nonce, value)
 
     return KitchenOrder(
         unique_id=0,  # TODO: database primary key?
@@ -49,43 +57,36 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         recipe_id=recipe.unique_id,
         base_ingredients=reduced_base,
         layers=reduced_layers,
-        instructions=select_ingredient_count(
-            deterministic_seed, counter, recipe.instructions
-        ),
+        instructions=ingredient_count,
     )
 
 
-def select_prep(seed: int, counter: int, scope: ScopedIngredient) -> MadeIngredient:
+def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngredient:
     """select the scalar values for the ingredient"""
+
+    # TODO: bitwise determine which scatters are valid
+    # an select the one to use
+
+    instances = RandomScatter(seed, nonce).evaluate(scope.scope)
+
     return MadeIngredient(
         ingredient=scope.ingredient,
-        prep=MadeIngredientPrep(
-            emission_count=select_value(seed, counter, scope.scope.emission_count),
-            emission_density=select_value(seed, counter, scope.scope.emission_density),
-            particle_scale=select_value(seed, counter, scope.scope.particle_scale),
-            rotation=select_value(seed, counter, scope.scope.rotation),
-        ),
+        count=len(instances),
+        instances=instances,
     )
 
 
 def select_ingredient_count(
-    seed: int, counter: int, scope: RecipeInstructions
+    seed: int, nonce: Counter, scope: RecipeInstructions
 ) -> MadeInstructions:
     """select the scalar values for the kitchen order"""
+
+    # TODO
     return MadeInstructions(
-        sauce_count=select_value(seed, counter, scope.sauce_count),
-        cheese_count=select_value(seed, counter, scope.cheese_count),
-        topping_count=select_value(seed, counter, scope.topping_count),
-        extras_count=select_value(seed, counter, scope.extras_count),
-        baking_temp_in_celsius=select_value(
-            seed, counter, scope.baking_temp_in_celsius
-        ),
-        baking_time_in_minutes=select_value(
-            seed, counter, scope.baking_time_in_minutes
-        ),
+        sauce_count=select_value(seed, nonce, scope.sauce_count),
+        cheese_count=select_value(seed, nonce, scope.cheese_count),
+        topping_count=select_value(seed, nonce, scope.topping_count),
+        extras_count=select_value(seed, nonce, scope.extras_count),
+        baking_temp_in_celsius=select_value(seed, nonce, scope.baking_temp_in_celsius),
+        baking_time_in_minutes=select_value(seed, nonce, scope.baking_time_in_minutes),
     )
-
-
-def select_value(seed: int, counter: int, bounds: Tuple[float, float]) -> float:
-    counter += 1
-    return clamp(get_random_deterministic(seed, counter), bounds[0], bounds[1])

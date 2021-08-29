@@ -198,7 +198,15 @@ class Renderer:
         images: List[Image.Image] = []
         for layer in layers:
             print(f"opening: {layer}")
-            image = Image.open(os.path.join(output_dir, layer))
+            file = os.path.join(output_dir, layer)
+
+            # if we can't find a file, just skip it.
+            # can lead to incomplete pizzas
+            if not os.path.exists(file):
+                print(f"output file not found: {file}")
+                continue
+
+            image = Image.open(file)
             images.append(image)
 
         base = images[0]

@@ -1,16 +1,17 @@
-from enum import Enum
-from typing import Dict, Tuple
+from enum import Enum, IntFlag
+from typing import Dict, Tuple, List
 
 from app.models.base import Base
 
 __all__ = [
     "RecipeInstructions",
-    "IncredientScope",
+    "IngredientScope",
     "Classification",
     "NutritionMetadata",
     "Ingredient",
     "ScopedIngredient",
     "Recipe",
+    "ScatterType",
 ]
 
 # these types will probably change, just abstracting them for now
@@ -19,6 +20,31 @@ ATTRIBUTE_KEY = str
 IMAGEURI_KEY = str
 MIN = float
 MAX = float
+
+
+class Classification(Enum):
+    """all of the different types"""
+
+    box = 1
+    paper = 2
+    crust = 3
+    sauce = 4
+    cheese = 5
+    topping = 6
+    extras = 7
+
+
+class ScatterType(IntFlag):
+    """all of the different types"""
+
+    random = 1
+    spiral = 2
+    spoke = 4
+    gaussian = 8
+    circle = 16
+    fibonacci = 32
+    mandelbrot = 64
+    julia = 128
 
 
 class RecipeInstructions(Base):
@@ -32,25 +58,14 @@ class RecipeInstructions(Base):
     baking_time_in_minutes: Tuple[MIN, MAX]
 
 
-class IncredientScope(Base):
+class IngredientScope(Base):
     """rendering ranges for seeding the RNG"""
 
+    scatter_types: List[ScatterType]
     emission_count: Tuple[MIN, MAX]  # - [25.0,50.0]
     emission_density: Tuple[MIN, MAX]  # - [0.10,0.99]
     particle_scale: Tuple[MIN, MAX]  # - [0.05,0.15]
     rotation: Tuple[MIN, MAX]  # - [-3.14159,3.14159]
-
-
-class Classification(Enum):
-    """all of the different types"""
-
-    box = 1
-    paper = 2
-    crust = 3
-    sauce = 4
-    cheese = 5
-    topping = 6
-    extras = 7
 
 
 class NutritionMetadata(Base):
@@ -95,7 +110,7 @@ class ScopedIngredient(Base):
     """struct for serializing the ingredient and its prep instructions"""
 
     ingredient: Ingredient
-    scope: IncredientScope
+    scope: IngredientScope
 
 
 class Recipe(Base):

@@ -42,7 +42,8 @@ def sample(recipe_id: int) -> Recipe:
                         "output_mask": "rarepizza-#####-box-%s.png",
                     },
                 ),
-                scope=IncredientScope(
+                scope=IngredientScope(
+                    scatter_types=[],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(0.975, 0.975),
@@ -73,7 +74,8 @@ def sample(recipe_id: int) -> Recipe:
                         "output_mask": "rarepizza-#####-paper-%s.png",
                     },
                 ),
-                scope=IncredientScope(
+                scope=IngredientScope(
+                    scatter_types=[],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(0.975, 0.975),
@@ -104,7 +106,8 @@ def sample(recipe_id: int) -> Recipe:
                         "output_mask": "rarepizza-#####-crust-%s.png",
                     },
                 ),
-                scope=IncredientScope(
+                scope=IngredientScope(
+                    scatter_types=[],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(1.0, 1.0),
@@ -121,7 +124,7 @@ def sample(recipe_id: int) -> Recipe:
                     rarity_level=1,
                     classification=Classification.sauce,
                     category="traditional",
-                    attributes={"state": "thick", "material": "tomato"},
+                    attributes={"state": "thin", "material": "tomato"},
                     nutrition=NutritionMetadata(
                         servings=8,
                         calories=80.5,
@@ -134,10 +137,11 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "2000-sauce-tomato.png",
-                        "output_mask": "rarepizza-#####-topping-%s.png",
+                        "output_mask": "rarepizza-#####-layer-%s.png",
                     },
                 ),
-                scope=IncredientScope(
+                scope=IngredientScope(
+                    scatter_types=[],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(1.0, 1.0),
@@ -165,10 +169,11 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "3000-cheese-mozzarella.png",
-                        "output_mask": "rarepizza-#####-topping-%s.png",
+                        "output_mask": "rarepizza-#####-layer-%s.png",
                     },
                 ),
-                scope=IncredientScope(
+                scope=IngredientScope(
+                    scatter_types=[],
                     emission_count=(1.0, 1.0),
                     emission_density=(1.0, 1.0),
                     particle_scale=(1.0, 1.0),
@@ -196,13 +201,14 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "4000-topping-meat-pepperoni.png",
-                        "output_mask": "rarepizza-#####-topping-%s.png",
+                        "output_mask": "rarepizza-#####-layer-%s.png",
                     },
                 ),
-                scope=IncredientScope(
-                    emission_count=(1.0, 20.0),
+                scope=IngredientScope(
+                    scatter_types=[ScatterType.random],
+                    emission_count=(5.0, 29.0),
                     emission_density=(0.1, 0.8),
-                    particle_scale=(0.1, 0.22),
+                    particle_scale=(0.19, 0.26),
                     rotation=(-180.0, 180.0),
                 ),
             ),
@@ -227,10 +233,43 @@ def sample(recipe_id: int) -> Recipe:
                     ),
                     image_uris={
                         "filename": "5000-topping-fruit-tomato.png",
-                        "output_mask": "rarepizza-#####-topping-%s.png",
+                        "output_mask": "rarepizza-#####-layer-%s.png",
                     },
                 ),
-                scope=IncredientScope(
+                scope=IngredientScope(
+                    scatter_types=[ScatterType.random],
+                    emission_count=(1.0, 20.0),
+                    emission_density=(0.1, 0.8),
+                    particle_scale=(0.1, 0.22),
+                    rotation=(-180.0, 180.0),
+                ),
+            ),
+            "topping-3": ScopedIngredient(
+                ingredient=Ingredient(
+                    unique_id="6000",
+                    index=4,
+                    name="Shrimp",
+                    rarity_level=1,
+                    classification=Classification.topping,
+                    category="seafood",
+                    attributes={"state": "fresh"},
+                    nutrition=NutritionMetadata(
+                        servings=8,
+                        calories=22.1,
+                        fat=0.2,
+                        cholesterol=20002.4,
+                        sodium=117.8,
+                        potassium=21.5,
+                        carbohydrates=0.8,
+                        protein=6.3,
+                    ),
+                    image_uris={
+                        "filename": "6000-topping-seafood-shrimp.png",
+                        "output_mask": "rarepizza-#####-layer-%s.png",
+                    },
+                ),
+                scope=IngredientScope(
+                    scatter_types=[ScatterType.random],
                     emission_count=(1.0, 20.0),
                     emission_density=(0.1, 0.8),
                     particle_scale=(0.1, 0.22),

@@ -69,9 +69,9 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     pizza_hash = set_pizza(pizza)
 
     decoded_metadata = base58.b58decode(metadata_hash)
-    truncated_metadata = decoded_metadata[3 : len(decoded_metadata)]
+    truncated_metadata = decoded_metadata[2 : len(decoded_metadata)]
 
-    print(decoded_metadata)
+    metadata_hex = truncated_metadata.hex()
     print(truncated_metadata)
 
     # build the response object
@@ -79,7 +79,7 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
         jobRunID=data.id,
         data=PizzaOrder(
             address=data.data.address,
-            artwork=truncated_metadata,
+            artwork=metadata_hex,
             metadata=metadata_hash,
             recipe=recipe_hash,
             order=order_hash,

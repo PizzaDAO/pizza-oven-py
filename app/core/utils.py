@@ -29,15 +29,12 @@ def get_or_else_optional(optional: Optional[_T], alt_value: _T) -> _T:
     return optional
 
 
-def clamp(entropy: int, start: float, end: float) -> float:
-    """naive implementation of a range bound"""
-
-    if end == 0.0:
-        return 0.0
-    modulo = float(entropy) % end
-    if modulo < start:
-        return start
-    return modulo
+def clamp(entropy: float, start: float, end: float) -> float:
+    """
+    naive implementation of a range bound.
+    expects entropy to be a 256 bit unsigned integer
+    """
+    return start + (end - start) * entropy
 
 
 def to_hex(base_10: int) -> str:
