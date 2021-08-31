@@ -1,0 +1,29 @@
+type = "directrequest"
+schemaVersion = 1
+name = "Order Pizza (blockchain)"
+contractAddress = "0xC416a5c13EC95adDB74789a775e2FeF0605328AF"
+externalJobID = "5db19f8e-eaef-41a6-a47d-744de77427af"
+observationSource = """
+    decode_log   [type=ethabidecodelog
+                  abi="OracleRequest(bytes32 indexed specId, address requester, bytes32 requestId, uint256 payment, address callbackAddr, bytes4 callbackFunctionId, uint256 cancelExpiration, uint256 dataVersion, bytes data)"
+                  data="$(jobRun.logData)"
+                  topics="$(jobRun.logTopics)"]
+
+    decode_cbor  [type=cborparse data="$(decode_log.data)"]
+    bridge_api   [type="bridge" name="orderpizzav2" async=true requestData="$(decode_cbor.address)"]
+    parse        [type=jsonparse data="$(bridge_api)" path="data,artwork"]
+    encode_data  [type=ethabiencode abi="(bytes32 value)" data=<{ "value": $(parse) }>]
+    encode_tx    [type=ethabiencode
+                  abi="fulfillOracleRequest(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes32 data)"
+                  data=<{
+                      "requestId": $(decode_log.requestId),
+                      "payment": $(decode_log.payment),
+                      "callbackAddress": $(decode_log.callbackAddr),
+                      "callbackFunctionId": $(decode_log.callbackFunctionId),
+                      "expiration": $(decode_log.cancelExpiration),
+                      "data": $(encode_data)
+                  }>]
+    submit       [type=ethtx to="$(jobSpec.contractAddress)" data="$(encode_tx)"]
+
+    decode_log -> decode_cbor -> bridge_api -> parse -> encode_data -> encode_tx -> submit
+"""

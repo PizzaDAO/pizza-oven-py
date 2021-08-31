@@ -1,3 +1,4 @@
+from typing import Any
 from app.models.base import Base
 
 
@@ -13,7 +14,7 @@ class PizzaOrder(Base):
 
     address: str
     """the address that will own the pizza"""
-    artwork: str
+    artwork: Any
     """the ipfs hash of the artwork metadata"""
     metadata: str
     """the ipfs hash of the metadata"""

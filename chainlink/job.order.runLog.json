@@ -1,4 +1,5 @@
 {
+  "name": "Order Pizza (blockchain)",
   "initiators": [
     {
       "type": "RunLog",
@@ -20,13 +21,11 @@
       }
     },
     {
-      "type": "EthBytes32"
+      "type": "EthUint256"
     },
     {
       "type": "EthTx"
     }
   ],
-  "startAt": null,
-  "endAt": null,
   "minPayment": "0"
 }

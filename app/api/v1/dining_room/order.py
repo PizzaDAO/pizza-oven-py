@@ -19,7 +19,7 @@ from ..tags import DELIVER
 router = APIRouter()
 
 # TODO: cache this collection and make it runtime configurable
-# so that the chainlink job can change.
+# so that the chainlink bridge can change.
 # the first key is the web job and the second is the runlog
 job_tokens: Dict[str, str] = {
     "Bearer nqpw1bzD4isqeYfXCixyAbhpLs/lkim4": "SI/8gEsllRRJLD5HDHH1/2ESG1RKmCOy"
@@ -70,16 +70,24 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
 
     decoded_metadata = base58.b58decode(metadata_hash)
     truncated_metadata = decoded_metadata[2 : len(decoded_metadata)]
+    truncated_metadata_hex = truncated_metadata.hex()
+    from_bytes_big = int.from_bytes(truncated_metadata, "big")
 
-    metadata_hex = truncated_metadata.hex()
-    print(truncated_metadata)
+    # debug log out some values
+    print(f"metadata_hash: {metadata_hash}")
+    print(f"metadata_hash_len: {len(metadata_hash)}")
+    print(f"from_bytes_big: {from_bytes_big}")
+    print(f"truncated_metadata: {truncated_metadata}")
+    print(f"truncated_metadata_len: {len(truncated_metadata)}")
+    print(f"truncated_metadata_hex: {truncated_metadata_hex}")
+    print(f"truncated_metadata_hex_len: {len(truncated_metadata_hex)}")
 
     # build the response object
     response = OrderPizzaResponse(
         jobRunID=data.id,
         data=PizzaOrder(
             address=data.data.address,
-            artwork=metadata_hex,
+            artwork=str(from_bytes_big),
             metadata=metadata_hash,
             recipe=recipe_hash,
             order=order_hash,
@@ -91,7 +99,8 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     print(response.json())
 
     # TODO: real login params loaded from an env var
-    # if there's a chainlink callback specified, then patch to the callback
+    # if there's a chainlink callback specified,
+    # then patch to the callback
     if data.responseURL is not None:
         patch_response = requests.patch(
             data.responseURL,
