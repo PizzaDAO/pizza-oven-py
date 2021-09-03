@@ -37,6 +37,7 @@ RUN wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.0/Natron-
     && rm Natron-2.4.0-Linux-64-no-installer.tar.xz
 
 # do the python things
+RUN pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 RUN pip3 install 'poetry==1.1.6'
 RUN pip3 install --no-cache-dir "uvicorn[standard]" gunicorn
 RUN $NATRON_PATH/natron-python -m pip install numpy
