@@ -4,7 +4,8 @@
     "python.linting.pylintEnabled": true,
     "python.linting.pylintUseMinimalCheckers": false,
     "python.linting.pylintArgs": [
-        "--extension-pkg-whitelist=pydantic"
+        "--extension-pkg-whitelist=pydantic",
+		"--ignored-modules=googleapiclient"
     ],
     "python.linting.enabled": true,
     "python.testing.unittestArgs": [
