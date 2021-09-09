@@ -13,7 +13,7 @@ from app.models.prep import (
     MadeInstructions,
 )
 
-from app.core.random import (
+from app.core.random_num import (
     Counter,
     get_random,
     get_random_deterministic_uint256,

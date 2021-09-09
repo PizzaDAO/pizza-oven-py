@@ -4,7 +4,7 @@ from typing import Dict, List, Tuple
 
 from ..models.recipe import IngredientScope, ScatterType
 
-from .random import (
+from .random_num import (
     Counter,
     get_random_deterministic_uint256,
     get_random_deterministic_float,
