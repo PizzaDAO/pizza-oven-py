@@ -4,6 +4,7 @@ import requests
 import time
 
 import base58
+import codecs
 
 from fastapi import APIRouter, Body, BackgroundTasks, Request
 
@@ -70,17 +71,17 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
 
     decoded_metadata = base58.b58decode(metadata_hash)
     truncated_metadata = decoded_metadata[2 : len(decoded_metadata)]
-    truncated_metadata_hex = truncated_metadata.hex()
     from_bytes_big = int.from_bytes(truncated_metadata, "big")
 
     # debug log out some values
     print(f"metadata_hash: {metadata_hash}")
     print(f"metadata_hash_len: {len(metadata_hash)}")
     print(f"from_bytes_big: {from_bytes_big}")
+    print(f"decoded_metadata: {decoded_metadata}")
+    print(f"decoded_metadata: {decoded_metadata.hex()}")
     print(f"truncated_metadata: {truncated_metadata}")
     print(f"truncated_metadata_len: {len(truncated_metadata)}")
-    print(f"truncated_metadata_hex: {truncated_metadata_hex}")
-    print(f"truncated_metadata_hex_len: {len(truncated_metadata_hex)}")
+    print(f"truncated_metadata_hex: {truncated_metadata.hex()}")
 
     # build the response object
     response = OrderPizzaResponse(
