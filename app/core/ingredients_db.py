@@ -1,27 +1,16 @@
 import os.path
 import json
+
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 
+from app.core.config import Settings
+
 from app.models.recipe import *
 
-TOKEN_PATH = "data/sheets_auth_token.json"
-CREDENTIALS_PATH = "data/credentials.json"
-
-SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
-
-# The ID for the Pizza Types sheet - From Jed
-PIZZA_TYPES_SHEET = "1wHfP2I1m8_TV5tZt3FchI_zYgzZg9AomU7GOkof7TW8"  # https://docs.google.com/spreadsheets/d/1wHfP2I1m8_TV5tZt3FchI_zYgzZg9AomU7GOkof7TW8/edit?pli=1#gid=194105029
-# range for the pizza types tab
-PIZZA_TYPE_RANGE_NAME = "Jed - Pizza Types!A3:W"
-
-# The ID from the toppings database sheet - From Shrimp?
-PIZZA_INGREDIENTS_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"  # https://docs.google.com/spreadsheets/d/1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0/edit#gid=656807894
-# range for the ingredients tab
-TOPPINGS_RANGE_NAME = "ingredients-db"
-
+settings = Settings()
 ingredients_dict = {}
 recipe_dict = {}
 
@@ -34,7 +23,9 @@ recipe_dict = {}
 
 def read_ingredients():
 
-    values = fetch_sheet_data(PIZZA_INGREDIENTS_SHEET, TOPPINGS_RANGE_NAME)
+    values = fetch_sheet_data(
+        settings.PIZZA_INGREDIENTS_SHEET, settings.TOPPINGS_RANGE_NAME
+    )
 
     dict = parse_ingredients(values)
 
@@ -43,7 +34,9 @@ def read_ingredients():
 
 def read_recipes():
 
-    values = fetch_sheet_data(PIZZA_TYPES_SHEET, PIZZA_TYPE_RANGE_NAME)
+    values = fetch_sheet_data(
+        settings.PIZZA_TYPES_SHEET, settings.PIZZA_TYPE_RANGE_NAME
+    )
 
     dict = parse_recipes(values)
 
@@ -60,23 +53,27 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
     # Token is manually generated and placed in the Data folder - Not very secure - quick hack
     #
 
-    if os.path.exists(TOKEN_PATH):
+    scopes = [settings.SCOPE]
+
+    if os.path.exists(settings.TOKEN_PATH):
         print("Found AUTH token...")
-        creds = Credentials.from_authorized_user_file(TOKEN_PATH, SCOPES)
+        creds = Credentials.from_authorized_user_file(settings.TOKEN_PATH, scopes)
     # If there are no (valid) credentials available, let the user log in. BUT this will fail in Docker ENV
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_PATH, SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file(
+                settings.CREDENTIALS_PATH, scopes
+            )
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open(TOKEN_PATH, "w") as token:
+        with open(settings.TOKEN_PATH, "w") as token:
             token.write(creds.to_json())
 
     DIMENSION = "ROWS"  # default is ROWS
     # Better way to do this
-    if RANGE_NAME is PIZZA_TYPE_RANGE_NAME:
+    if RANGE_NAME is settings.PIZZA_TYPE_RANGE_NAME:
         DIMENSION = "COLUMNS"  # Need to get Columns
 
     service = build("sheets", "v4", credentials=creds)
@@ -209,7 +206,7 @@ def parse_id(text) -> str:
 
 def parse_column(raw_column) -> Recipe:
     """parse all the options"""
-    base_categories = ["box", "paper" "crust", "sauce", "cheese"]
+    base_categories = ["box", "paper", "crust", "sauce", "cheese"]
     # layer_categories = ["saver", "seasoning", "squirt", "topping"]
     base_dict = {}
     layers_dict = {}

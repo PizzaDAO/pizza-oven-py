@@ -9,7 +9,7 @@ from fastapi import APIRouter, Body, BackgroundTasks, Request
 
 from app.models.base import Base
 from app.models.order import PizzaOrder, PizzaOrderData
-from app.core.recipe_box import make_recipe
+from app.core.recipe_box import make_recipe, make_deter_recipe
 from app.core.prep_line import reduce
 from app.core.metadata import to_blockchain_metadata
 from app.core.repository import *
@@ -49,6 +49,8 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
 
     # transform the data
     recipe = make_recipe()
+    # using inbound_toked as random seed - pull pizza type from data?
+    # recipe = make_deter_recipe(inbound_token)
     order = reduce(recipe)
 
     # render
