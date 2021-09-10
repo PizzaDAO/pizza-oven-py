@@ -1,6 +1,6 @@
 from typing import Optional, TypeVar, Tuple
 from secrets import randbits
-from hashlib import sha256
+from hashlib import sha256, sha512
 
 from app.core.utils import get_optional, clamp
 
@@ -16,6 +16,9 @@ __all__ = [
 _T = TypeVar("_T")
 
 MAX_UINT256 = 2 ^ 256 - 1
+
+hexdigest: str
+hasharray: list
 
 
 class Counter:
@@ -87,3 +90,36 @@ def get_random_deterministic_float(
 
 def select_value(seed: int, nonce: Counter, bounds: Tuple[float, float]) -> float:
     return clamp(get_random_deterministic_float(seed, nonce), bounds[0], bounds[1])
+
+
+def set_hash(seed: str):
+    """seed an array with 32bit ints to be used as a pool of random numbers"""
+
+    # create a hash from the random seed
+    string = str(seed).encode("utf-8")
+
+    hash = sha512()
+    hash.update(string)
+    global hexdigest
+    hexdigest = hash.hexdigest()
+    global hasharray
+    hasharray = []
+
+    count = 32  # number of slots in the pool - results in 64/count blocks(sha512)
+    for i in range(0, count):
+        # Get 1/numblocks of the hash
+        blocksize = int(len(hexdigest) / count)
+        currentstart = (1 + i) * blocksize - blocksize
+        currentend = (1 + i) * blocksize
+        num = int(hexdigest[currentstart:currentend], 16)
+        hasharray.append(num)  # an array of "random" integers
+
+
+def pop_random() -> int:
+    num = hasharray.pop(0)
+    if num is None:
+        print("Hasharray does not exist...")  # can possibly run out of randoms...
+        # possibly generate a new hash here by incrementing the original seed
+        return 0
+
+    return num
