@@ -51,6 +51,7 @@ class ScatterType(IntFlag):
 class RecipeInstructions(Base):
     """pizza level instructions for seeding the RNG"""
 
+    crust_count: int
     sauce_count: Tuple[MIN, MAX]
     cheese_count: Tuple[MIN, MAX]
     topping_count: Tuple[MIN, MAX]

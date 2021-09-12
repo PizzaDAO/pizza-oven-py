@@ -6,8 +6,6 @@ from typing import Dict, Optional
 
 from app.models.recipe import *
 
-from app.core.random_num import get_random, pop_random, set_hash
-
 lOCAL_RECIPES_PATH = "data/recipes/"
 recipes_dict = {}
 recipe_names = []
@@ -20,19 +18,25 @@ def make_recipe() -> Recipe:
     return sample(1)
 
 
-def make_deter_recipe(seed: str, pizza_type: str = None) -> Recipe:
-    """Make a deterministic recipe from seed provided
-    given this seed, the pie should be the same every time"""
+def get_pizza_recipe(pizza_type: str) -> Recipe:
+    """load recipes if needed, then return the recipe type requested"""
 
+    # Make sure we previously loaded recipes files from /data/recipes
     if len(recipe_names) == 0:
         load_recipes()
 
-    # get the hash array set up for random numbers
-    set_hash(seed)
+    # Default to random pie if no type supplied, or type is not found
+    if pizza_type is None or pizza_type not in recipes_dict.keys():
+        pizza_type = "Random Pies"  # For now, default to a random pie
 
-    new_recipe = determine_attributes(pizza_type)
+    print("Pizza type: " + pizza_type)
 
-    return new_recipe
+    # convert the json to a Recipes object
+    recipe_json = recipes_dict[pizza_type]
+
+    recipe = Recipe.parse_obj(recipe_json)
+
+    return recipe
 
 
 def load_recipes():
@@ -61,134 +65,6 @@ def load_recipes():
                 recipe_names.append(name)
             except:
                 print("Ignoring this file: " + file)
-
-
-def determine_attributes(pizza_type: str = None) -> Recipe:
-    """Go through the base and layer dicts in the selected recipe
-    and make a random/deterministic selection for each ingredient category"""
-
-    # TODO add probabilistic distribution curves to adjust rarity across ingredient selection
-
-    pizza_index = 0
-    # First get the JSON recipe for a pizza
-    if pizza_type is None:
-        # choose a random recipe
-        rand = pop_random()
-        pizza_index = rand % len(recipe_names)
-        # Rarity alert - all options have equal probability
-
-    else:
-        # make a recipe for the requested pizza type
-        try:
-            pizza_index = recipe_names.index(pizza_type)
-        except:
-            # TEMPORARILY make a random pue if the pizza type is not valid
-            # need a better way to track pizza types by id
-            print(pizza_type + " is not a valid pizza type - Random Pies will be made")
-
-    pizza_to_make = recipe_names[pizza_index]
-
-    print("Pizza type: " + pizza_to_make)
-
-    # convert the json to a Recipes object
-    json = recipes_dict[pizza_to_make]
-
-    recipe = Recipe.parse_obj(json)
-
-    # BASE INGREDIENTS
-    base_ingredients = select_base_ingredients(recipe.base_ingredients)
-
-    recipe.base_ingredients = base_ingredients
-
-    # TOPPINGS AND LAYERS
-    # Determine how many layers and toppings the pizza will have
-    # This is a temporary solution
-    max = 3
-    topping_count = (pop_random() % max) + 1  # at least one topping
-
-    layer_ingredients = select_layer_ingredients(recipe.layers, topping_count)
-
-    recipe.layers = layer_ingredients
-
-    return recipe
-
-
-def select_base_ingredients(source_dict: dict) -> dict:
-    """Sort a dict by categories so we can make a random selection from the list"""
-    sorted_dict = {}
-    for scoped in source_dict:
-        scoped_ing: ScopedIngredient = source_dict[scoped]
-        category = scoped_ing.ingredient.category
-        # Split up the base ingredients dict into lists for each category - makes selecting easier
-        if category not in sorted_dict.keys():
-            sorted_dict[category] = list()
-
-        sorted_dict[category].append(
-            scoped_ing
-        )  # key=category : val=list of ScopedIngredients
-
-    # now pick a random selection from each category
-    selection_dict = {}
-    for item in sorted_dict:
-        max = len(sorted_dict[item])
-        random = pop_random()
-        index = random % max  # Rarity Alert - all options have equal probability
-        scoped_chosen: ScopedIngredient = sorted_dict[item][index]
-
-        selection_dict.update({scoped_chosen.ingredient.unique_id: scoped_chosen})
-
-        print(
-            "For the "
-            + item
-            + " we chose "
-            + scoped_chosen.ingredient.name
-            + "  "
-            + scoped_chosen.ingredient.unique_id
-        )
-
-    return selection_dict
-
-
-def select_layer_ingredients(source_dict: dict, count: int = 1) -> dict:
-    """layers and toppings are slightly different because we have a random number of them
-    and we don't necessarily use all the categories"""
-
-    layers_dict = {}
-    for scoped in source_dict:
-        scoped_layer: ScopedIngredient = source_dict[scoped]
-        category = scoped_layer.ingredient.category
-        # Split up the layer ingredients dict into lists for each category - makes selecting easier
-        if category not in layers_dict.keys():
-            layers_dict[category] = list()
-
-        layers_dict[category].append(scoped_layer)
-
-    selection_layers_dict = {}
-    for i in range(0, count):
-        # randomly select a topping type - can result in duplicate topping types
-        topping_types = list(layers_dict.keys())  # The list of topping types
-        rand_index = pop_random() % len(topping_types)
-        type_name = topping_types[rand_index]
-        ingredients_list = layers_dict[type_name]  # list of ScopedIngredients
-        # now choose from the list of a specific topping category
-        max = len(ingredients_list)
-        random = pop_random()
-        index = random % max  # Rarity Alert - all options have equal probability
-
-        scoped_ing_chosen: ScopedIngredient = ingredients_list[index]
-
-        selection_layers_dict.update(
-            {scoped_ing_chosen.ingredient.unique_id: scoped_ing_chosen}
-        )
-
-        print(
-            "For a topping we chose "
-            + scoped_ing_chosen.ingredient.name
-            + "   "
-            + scoped_ing_chosen.ingredient.unique_id
-        )
-
-    return selection_layers_dict
 
 
 def _remove_exts(string):

@@ -22,6 +22,8 @@ from app.core.random_num import (
 from app.core.scatter import RandomScatter
 from app.core.utils import clamp, to_hex, from_hex
 
+from app.core.recipe_box import get_pizza_recipe
+
 __all__ = ["reduce"]
 
 
@@ -43,13 +45,34 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         deterministic_seed, nonce, recipe.instructions
     )
 
+    # BASE INGREDIENTS
     # TODO: respect the ingredient count selected in the assignment above
-    for (key, value) in recipe.base_ingredients.items():
-        reduced_base[key] = select_prep(deterministic_seed, nonce, value)
+    # for (key, value) in recipe.base_ingredients.items():
+    # reduced_base[key] = select_prep(deterministic_seed, nonce, value)
+    # sort the base dict into categories that we can select from
+    sorted_base_dict = sort_dict(recipe.base_ingredients)
+    # map the ingredient categories to the MadeInstructions counts
+    base_count_dict = {
+        "crust": ingredient_count.crust_count,
+        "sauce": ingredient_count.sauce_count,
+    }
+    reduced_base = select_ingredients(
+        random_seed, nonce, base_count_dict, sorted_base_dict
+    )
 
+    # LAYER INGREDIENTS
     # TODO: respect the ingredient count selected in the assignment above
-    for (key, value) in recipe.layers.items():
-        reduced_layers[key] = select_prep(deterministic_seed, nonce, value)
+    # for (key, value) in recipe.layers.items():
+    # reduced_layers[key] = select_prep(deterministic_seed, nonce, value)
+    sorted_layer_dict = sort_dict(recipe.layers)
+    # map the ingredient categories to the MadeInstructions counts
+    layer_count_dict = {
+        "topping": ingredient_count.topping_count,
+        "extras": ingredient_count.extras_count,
+    }
+    reduced_layers = select_ingredients(
+        random_seed, nonce, layer_count_dict, sorted_layer_dict
+    )
 
     return KitchenOrder(
         unique_id=0,  # TODO: database primary key?
@@ -60,6 +83,44 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         layers=reduced_layers,
         instructions=ingredient_count,
     )
+
+
+def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -> dict:
+    reduced_dict = {}
+    for key in count_dict:
+        if key in ingredient_dict.keys():
+            made_count = int(count_dict[key])
+            for i in range(0, made_count):
+                # choose the ingredients
+                options = ingredient_dict[key]
+                opt_count = (float(len(options)), 0)
+                selected_ind = int(select_value(deterministic_seed, nonce, opt_count))
+                ingredient = ingredient_dict[key][selected_ind]
+                reduced_dict[key] = select_prep(deterministic_seed, nonce, ingredient)
+
+                print(
+                    "We chose " + reduced_dict[key].ingredient.name + " for the " + key
+                )
+
+    return reduced_dict
+
+
+def sort_dict(ingredient_dict) -> dict:
+    sorted_dict = {}
+    for scoped in ingredient_dict:
+        scoped_ing: ScopedIngredient = ingredient_dict[scoped]
+        category = scoped_ing.ingredient.category
+        # Topping sub-category temporary solution
+        # because topping categories have their type in the name i.e. "meat" - we have to pull jus the first word
+        category = category.split("-")[0]
+        # Split up the base ingredients dict into lists for each category - makes selecting easier
+        if category not in sorted_dict.keys():
+            sorted_dict[category] = list()
+        sorted_dict[category].append(
+            scoped_ing
+        )  # key=category : val=list of ScopedIngredients
+
+    return sorted_dict
 
 
 def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngredient:
@@ -86,11 +147,18 @@ def select_ingredient_count(
     """select the scalar values for the kitchen order"""
 
     # TODO
+    # rounding floats here
+    # assuming the ranges will be supplied from Google Sheets in the pizza type sheet
     return MadeInstructions(
-        sauce_count=select_value(seed, nonce, scope.sauce_count),
-        cheese_count=select_value(seed, nonce, scope.cheese_count),
-        topping_count=select_value(seed, nonce, scope.topping_count),
-        extras_count=select_value(seed, nonce, scope.extras_count),
-        baking_temp_in_celsius=select_value(seed, nonce, scope.baking_temp_in_celsius),
-        baking_time_in_minutes=select_value(seed, nonce, scope.baking_time_in_minutes),
+        crust_count=1,
+        sauce_count=round(select_value(seed, nonce, scope.sauce_count), 0),
+        cheese_count=round(select_value(seed, nonce, scope.cheese_count), 0),
+        topping_count=round(select_value(seed, nonce, scope.topping_count), 0),
+        extras_count=round(select_value(seed, nonce, scope.extras_count), 0),
+        baking_temp_in_celsius=round(
+            select_value(seed, nonce, scope.baking_temp_in_celsius), 0
+        ),
+        baking_time_in_minutes=round(
+            select_value(seed, nonce, scope.baking_time_in_minutes), 0
+        ),
     )

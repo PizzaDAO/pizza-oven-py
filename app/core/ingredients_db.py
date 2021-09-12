@@ -186,7 +186,7 @@ def parse_ingredient(row) -> ScopedIngredient:
     scoped = ScopedIngredient(
         ingredient=ingredient,
         scope=IngredientScope(
-            scatter_types=[],
+            scatter_types=[ScatterType.none],
             emission_count=[25.0, 50.0],
             emission_density=[0.10, 0.99],
             particle_scale=[0.05, 0.15],
@@ -245,12 +245,13 @@ def parse_column(raw_column) -> Recipe:
         # Where do recipe instructions come from??
         # Can this be optional for the Recipe, added later?
         instructions=RecipeInstructions(
-            sauce_count=[0.0, 1.0],
-            cheese_count=[0.0, 1.0],
-            topping_count=[0.0, 1.0],
-            extras_count=[0.0, 1.0],
-            baking_temp_in_celsius=[0.0, 1.0],
-            baking_time_in_minutes=[0.0, 1.0],
+            crust_count=1,
+            sauce_count=[1, 1],
+            cheese_count=[1, 1],
+            topping_count=[1, 3],
+            extras_count=[0, 2],
+            baking_temp_in_celsius=[395, 625],
+            baking_time_in_minutes=[5, 10],
         ),
     )
 

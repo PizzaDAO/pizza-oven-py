@@ -17,6 +17,7 @@ SCALAR = float
 class MadeInstructions(Base):
     """pizza level instructions seeded by the RNG """
 
+    crust_count: SCALAR
     sauce_count: SCALAR
     cheese_count: SCALAR
     topping_count: SCALAR
