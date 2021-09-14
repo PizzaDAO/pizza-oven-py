@@ -1,3 +1,4 @@
+from typing import Dict, Any, Optional
 import os.path
 import json
 
@@ -11,12 +12,19 @@ from app.core.config import Settings
 from app.models.recipe import *
 
 settings = Settings()
-ingredients_dict = {}
-recipe_dict = {}
+
+__all__ = [
+    "read_ingredients",
+    "read_recipes",
+    "fetch_sheet_data",
+    "parse_ingredients",
+    "parse_recipes",
+    "save_recipe",
+]
 
 """ Simple USage:
-    read_ingredients()
-    read_recipes()
+    ingredients = read_ingredients()
+    receipts = read_recipes()
     save_json() --> data/recipes/
 """
 
@@ -27,20 +35,16 @@ def read_ingredients():
         settings.PIZZA_INGREDIENTS_SHEET, settings.TOPPINGS_RANGE_NAME
     )
 
-    dict = parse_ingredients(values)
-
-    return dict
+    return parse_ingredients(values)
 
 
-def read_recipes():
+def read_recipes(ingredients: Dict[Any, ScopedIngredient]):
 
     values = fetch_sheet_data(
         settings.PIZZA_TYPES_SHEET, settings.PIZZA_TYPE_RANGE_NAME
     )
 
-    dict = parse_recipes(values)
-
-    return dict
+    return parse_recipes(values, ingredients)
 
 
 def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
@@ -94,65 +98,71 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
 
 # parse the ingredients into a collection we can use to create a recipe
 # this mapping is done to the Google Sheet - change the sheet - change this code
-def parse_ingredients(values):
-    if not values:
+def parse_ingredients(sheet_data) -> Optional[Dict]:
+    if not sheet_data:
         print("Error: We have a problem... No data found for Toppings.")
-    else:
-        # first get the column headers from 1st row
-        attr_names = []
-        for name in values[0]:
-            attr_names.append(name)
-        # Now get all the rows in the sheet
-        for r in range(1, len(values)):
-            # for r in range(1, 4):
-            # Only add the line if there is a numeric ID
-            if len(values[r]) > 2:
-                row = {}
-                for i in range(0, len(values[r])):
-                    # Put each attribute in a Key/Value pair for the row
-                    row.update({attr_names[i]: values[r][i]})
-                # Use the unique ID for the Key and the row Dictionary for the value
-                # Easy to look up ingredients by unique id
-                try:
-                    unique_id = values[r][0]
-                except:
-                    # Account for the occasional blank row - probably a cleaner way to do this...
-                    pass
-                finally:
-                    ing: ScopedIngredient = parse_ingredient(row)
-                    ingredients_dict.update({unique_id: ing})
+        return None
+
+    ingredients = {}
+
+    # first get the column headers from 1st row
+    column_headers = []
+    for name in sheet_data[0]:
+        column_headers.append(name)
+
+    # Now get all the rows in the sheet
+    for row in range(1, len(sheet_data)):
+        # for r in range(1, 4):
+        # Only add the line if there is a numeric ID
+        if len(sheet_data[row]) > 2:
+            record_entry = {}
+            for index in range(0, len(sheet_data[row])):
+                # Put each attribute in a Key/Value pair for the row
+                record_entry.update({column_headers[index]: sheet_data[row][index]})
+            # Use the unique ID for the Key and the row Dictionary for the value
+            # Easy to look up ingredients by unique id
+            if sheet_data[row][0]:
+                unique_id = sheet_data[row][0]
+                ingredient: ScopedIngredient = parse_ingredient(record_entry)
+                ingredients.update({unique_id: ingredient})
+            else:
+                # Account for the occasional blank row - probably a cleaner way to do this...
+                print("parse_ingredient: no unique id for: ")
+                print(record_entry)
 
     # TODO - Make toppings_dict a bonafied toppings datatype
-    return ingredients_dict
+    return ingredients
 
 
 # parse the pizza types into a collection we can use to drive random recipe making
 # this mapping is done to the Google Sheet - change the sheet - change this code
 # Using COLUMNS here
-def parse_recipes(values):
+def parse_recipes(
+    values, ingredients: Dict[Any, ScopedIngredient]
+) -> Optional[Dict[Any, Recipe]]:
     if not values:
         print("Error: We have a problem... No data found for Pizza Types.")
-    else:
-        columns = {}
-        for val in values:
-            try:
-                # taking the 1st element in the column - it containes the pizza type names
-                type_name = val[0]
-            except:
-                # Account for the occasional blank row - probably a cleaner way to do this...
-                pass
-            finally:
-                columns.update({type_name: val})
+        return None
+
+    recipes = {}
+    columns = {}
+    for val in values:
+        if val[0]:
+            # taking the 1st element in the column - it containes the pizza type names
+            type_name = val[0]
+            columns.update({type_name: val})
+        else:
+            # Account for the occasional blank row - probably a cleaner way to do this...
+            print("parse_recipes: no id.")
 
     # Now we have a Dict of Columns - pizza type string : raw column data
     pizza_types = list(columns.keys())
     for header in pizza_types:
         data = columns[header]
-        recipe: Recipe = parse_column(data)
-        save_json(recipe)
-        recipe_dict.update({header: recipe})
+        recipe: Recipe = parse_column(data, ingredients)
+        recipes.update({header: recipe})
 
-    return recipe_dict
+    return recipes
 
 
 def parse_ingredient(row) -> ScopedIngredient:
@@ -217,7 +227,7 @@ def parse_id(text) -> str:
     return id_string
 
 
-def parse_column(raw_column) -> Recipe:
+def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe:
     """parse all the options"""
     base_categories = ["box", "paper", "crust", "sauce", "cheese"]
     # layer_categories = ["saver", "seasoning", "squirt", "topping"]
@@ -231,20 +241,18 @@ def parse_column(raw_column) -> Recipe:
             # pull out the unique_id for each ingredient
             unique_id = parse_id(line)
 
-            try:
-                ing: ScopedIngredient = ingredients_dict[unique_id]
-            except:
-                print("This ingredient doesn't exist")
-                print("looking for: " + unique_id)
-
-            finally:
-                category = ing.ingredient.category
+            if ingredients.get(unique_id):
+                ingredient = ingredients[unique_id]
+                category = ingredient.ingredient.category
 
                 # Basic seperation of ingredients into base and layered lists
                 if category in base_categories:
-                    base_dict.update({unique_id: ing})
+                    base_dict.update({unique_id: ingredient})
                 else:
-                    layers_dict.update({unique_id: ing})
+                    layers_dict.update({unique_id: ingredient})
+            else:
+                print("This ingredient doesn't exist")
+                print("looking for: " + unique_id)
 
     pie_type = raw_column[0]
 
@@ -271,12 +279,18 @@ def parse_column(raw_column) -> Recipe:
     return recipe
 
 
-def save_json(recipe: Recipe):
+def save_recipe(recipe: Recipe):
     # Pretty Print JSON
     json_formatted_str = json.loads(recipe.json())
 
-    filename = recipe.name + ".json"
-    path = "data/recipes/" + filename
+    path = "data/recipes/"
 
-    with open(path, "w") as outfile:
+    filename = recipe.name + ".json"
+    absolute_filepath = os.path.join(path, filename)
+
+    # create the directory if it doesnt exist
+    if not os.path.exists("data/recipes"):
+        os.makedirs(path)
+
+    with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)

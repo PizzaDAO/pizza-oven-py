@@ -1,14 +1,16 @@
+from genericpath import exists
 import hashlib
 from os import listdir
 from os.path import isfile, join
 import json
-from typing import Dict, Optional
+from typing import Dict, Optional, List, Tuple
 
+from app.core.ingredients_db import *
 from app.models.recipe import *
 
+from app.core.random_num import get_random
+
 lOCAL_RECIPES_PATH = "data/recipes/"
-recipes_dict = {}
-recipe_names = []
 
 
 def make_recipe() -> Recipe:
@@ -22,27 +24,36 @@ def get_pizza_recipe(pizza_type: str) -> Recipe:
     """load recipes if needed, then return the recipe type requested"""
 
     # Make sure we previously loaded recipes files from /data/recipes
-    if len(recipe_names) == 0:
-        load_recipes()
+    (names, recipes) = load_recipes()
 
     # Default to random pie if no type supplied, or type is not found
-    if pizza_type is None or pizza_type not in recipes_dict.keys():
+    if pizza_type is None or pizza_type not in recipes.keys():
         pizza_type = "Random Pies"  # For now, default to a random pie
 
     # convert the json to a Recipes object
-    recipe_json = recipes_dict[pizza_type]
+    recipe_json = recipes[pizza_type]
 
     recipe = Recipe.parse_obj(recipe_json)
 
     return recipe
 
 
-def load_recipes():
+def load_recipes() -> Tuple[List[str], Dict]:
     """Load all the json recipes generated from the spreadsheets from /data folder"""
 
     print("loading recipe files")
     # check contents of data/recipes folder
     file_list = []
+
+    recipes_dict = {}
+    recipe_names = []
+
+    if not exists(lOCAL_RECIPES_PATH):
+        ingredients = read_ingredients()
+        recipes = read_recipes(ingredients)
+        for key, recipe in recipes.items():
+            save_recipe(recipe)
+
     try:
         file_list = [
             f
@@ -63,6 +74,8 @@ def load_recipes():
                 recipe_names.append(name)
             except:
                 print("Ignoring this file: " + file)
+
+    return (recipe_names, recipes_dict)
 
 
 def _remove_exts(string):

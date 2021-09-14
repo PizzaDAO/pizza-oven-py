@@ -31,18 +31,9 @@ def setup() -> SetupResponse:
     Gather all the recipes from Google Sheets
     """
 
-    # TODO - Better error handling/reporting would be helpful here... Just sends back if it was successful or not
-    success = True
-    try:
-        read_ingredients()
-    except:
-        success = False
+    ingredients = read_ingredients()
+    recipes = read_recipes(ingredients)
+    for key, recipe in recipes.items():
+        save_recipe(recipe)
 
-    try:
-        read_recipes()
-    except:
-        success = False
-
-    response = SetupResponse(status=success)
-
-    return response
+    return SetupResponse(status=True)
