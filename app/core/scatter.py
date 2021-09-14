@@ -60,7 +60,7 @@ class RandomScatter(Scatter):
         instances: List[MadeIngredientPrep] = []
 
         for instance_index in range(instance_count):
-            translation = self.random_point(
+            translation = self.random_point_from_center(
                 self.random_seed, self.nonce, instance_index
             )
             rotation = select_value(self.random_seed, self.nonce, scope.rotation)
@@ -72,6 +72,22 @@ class RandomScatter(Scatter):
             )
 
         return instances
+
+    def random_point_from_center(
+        self, seed: int, nonce: Counter, position: int
+    ) -> Tuple[SCALAR, SCALAR]:
+        """Slightly different calculation for random point - limits the distribution to a radius"""
+        canvas = Canvas()
+
+        rad = get_random_deterministic_float(seed, nonce, "random-point_rad", position)
+        ang = get_random_deterministic_float(seed, nonce, "random-point_ang", position)
+
+        random_radius = rad * (0.85 * canvas.center[0])  # fudge factor...
+        random_angle = ang * TWO_PI
+        x = random_radius * cos(random_angle) + canvas.center[0]
+        y = random_radius * sin(random_angle) + canvas.center[1]
+
+        return (x, y)
 
     def random_point(
         self, seed: int, nonce: Counter, position: int

@@ -93,15 +93,14 @@ class NatronBase(object):
             del param
 
     def setOutput(self):
-        print("setOutput: " + config.paths["output"] + self.out_file % self.index)
-
+        print(config.paths["output"] + self.out_file)
         node = self.natron.getNode("w1")
         if node is None:
             print("setOutput: could not find node: w1")
             return
         param = node.getParam("filename")
         if param is not None:
-            param.setValue(config.paths["output"] + self.out_file % self.index)
+            param.setValue(config.paths["output"] + self.out_file)
         del param
 
     def watermark(self):

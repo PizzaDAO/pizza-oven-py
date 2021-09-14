@@ -29,8 +29,6 @@ def get_pizza_recipe(pizza_type: str) -> Recipe:
     if pizza_type is None or pizza_type not in recipes_dict.keys():
         pizza_type = "Random Pies"  # For now, default to a random pie
 
-    print("Pizza type: " + pizza_type)
-
     # convert the json to a Recipes object
     recipe_json = recipes_dict[pizza_type]
 

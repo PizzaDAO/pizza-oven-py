@@ -44,6 +44,7 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     ingredient_count = select_ingredient_count(
         deterministic_seed, nonce, recipe.instructions
     )
+    print(ingredient_count)
 
     # BASE INGREDIENTS
     # TODO: respect the ingredient count selected in the assignment above
@@ -55,6 +56,7 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     base_count_dict = {
         "crust": ingredient_count.crust_count,
         "sauce": ingredient_count.sauce_count,
+        "cheese": ingredient_count.cheese_count,
     }
     reduced_base = select_ingredients(
         random_seed, nonce, base_count_dict, sorted_base_dict
@@ -89,17 +91,26 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
     reduced_dict = {}
     for key in count_dict:
         if key in ingredient_dict.keys():
-            made_count = int(count_dict[key])
+            made_count = int(
+                count_dict[key]
+            )  # This is the number of ingredient layers per pizza
             for i in range(0, made_count):
                 # choose the ingredients
                 options = ingredient_dict[key]
                 opt_count = (float(len(options)), 0)
                 selected_ind = int(select_value(deterministic_seed, nonce, opt_count))
-                ingredient = ingredient_dict[key][selected_ind]
-                reduced_dict[key] = select_prep(deterministic_seed, nonce, ingredient)
+                ingredient = ingredient_dict[key][selected_ind]  # MadeIngredient
+                # need unique keys so we dont overwite toppings with multiple instances
+                identifier = key + str(i)
+                reduced_dict[identifier] = select_prep(
+                    deterministic_seed, nonce, ingredient
+                )
 
                 print(
-                    "We chose " + reduced_dict[key].ingredient.name + " for the " + key
+                    "We chose "
+                    + reduced_dict[identifier].ingredient.name
+                    + " for the "
+                    + key
                 )
 
     return reduced_dict
@@ -132,6 +143,13 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     if scope.scope.scatter_types[0] == ScatterType.none:
         instances = [MadeIngredientPrep(translation=(0.0, 0.0), rotation=0.0, scale=1)]
     else:
+        instances = RandomScatter(seed, nonce).evaluate(scope.scope)
+
+    # Temporarily test the scattering - ScatterType not defined in database yet
+    # If we have a topping here - scatter it
+    #
+    # Unless better solution from comment above
+    if "topping" in scope.ingredient.category:
         instances = RandomScatter(seed, nonce).evaluate(scope.scope)
 
     return MadeIngredient(

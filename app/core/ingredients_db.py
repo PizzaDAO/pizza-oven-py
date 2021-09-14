@@ -170,27 +170,40 @@ def parse_ingredient(row) -> ScopedIngredient:
     )
 
     classification = Classification.box
+    category = row["category"]
+    if "topping" in category:
+        classification = Classification.topping
+    if category == "paper":
+        classification = Classification.paper
+    if category == "crust":
+        classification = Classification.crust
+    if category == "sauce":
+        classification = Classification.sauce
+    if category == "cheese":
+        classification = Classification.cheese
 
+    image_uri = row["filename_paste"] + ".png"
+    mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
     ingredient = Ingredient(
         unique_id=row["unique_id"],
         index=1,
         name=row["topping"],
         rarity_level=1,
         classification=classification,
-        category=row["category"],
+        category=category,
         attributes={},
         nutrition=nutrition,
-        image_uris=[],
+        image_uris={"filename": image_uri, "output_mask": mask},
     )
 
     scoped = ScopedIngredient(
         ingredient=ingredient,
         scope=IngredientScope(
             scatter_types=[ScatterType.none],
-            emission_count=[25.0, 50.0],
+            emission_count=[1.0, 24.0],
             emission_density=[0.10, 0.99],
-            particle_scale=[0.05, 0.15],
-            rotation=[-3.14159, 3.14159],
+            particle_scale=[0.2, 0.75],
+            rotation=[-180, 180],
         ),
     )
 

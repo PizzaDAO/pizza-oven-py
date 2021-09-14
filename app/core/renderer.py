@@ -233,6 +233,12 @@ class Renderer:
 
         # # iterate through each of the layers and render
         for (_, ingredient) in order.layers.items():
+            print(
+                "WILL RENDER THIS MANY "
+                + ingredient.ingredient.name
+                + ": "
+                + str(ingredient.count)
+            )
             result = self.render_ingredient(topping_layer_index, ingredient)
             rendered_layer_files.append(result)
             topping_layer_index += 1
@@ -265,52 +271,67 @@ class Renderer:
             },
         )
 
+    def map_classification(self, classification: Classification) -> str:
+        c = "base"
+        if classification == Classification.box:
+            c = "box"
+        if classification == Classification.paper:
+            c = "paper"
+        if classification == Classification.crust:
+            c = "crust"
+        if classification == Classification.sauce:
+            c = "sauce"
+        if classification == Classification.cheese:
+            c = "cheese"
+        if classification == Classification.topping:
+            c = "topping"
+        if classification == Classification.extras:
+            c = "extras"
+        return c
+
     def render_ingredient(self, layer_index: int, ingredient: MadeIngredient) -> str:
         """render the ingredient"""
+
+        # Build the output filename and save it allong with the cached Ingredient
+        category = self.map_classification(ingredient.ingredient.classification)
+        output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
+        ingredient.ingredient.image_uris["output_mask"] = output_filename
+
         data_path = self.cache_ingredient(ingredient)
 
-        category = "base"
         if ingredient.ingredient.classification == Classification.box:
-            category = "box"
             BoxRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
 
         if ingredient.ingredient.classification == Classification.paper:
-            category = "paper"
             PaperRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
 
         if ingredient.ingredient.classification == Classification.crust:
-            category = "crust"
             CrustRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
 
         if ingredient.ingredient.classification == Classification.sauce:
-            category = "topping"
             SauceRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
 
         if ingredient.ingredient.classification == Classification.cheese:
-            category = "topping"
             CheeseRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
         if ingredient.ingredient.classification == Classification.topping:
-            category = "topping"
             ToppingRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
         if ingredient.ingredient.classification == Classification.extras:
-            category = "topping"
             ExtraRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
 
-        output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
         return output_filename
 
 
