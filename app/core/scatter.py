@@ -60,11 +60,12 @@ class RandomScatter(Scatter):
         instances: List[MadeIngredientPrep] = []
 
         for instance_index in range(instance_count):
-            translation = self.random_point_from_center(
-                self.random_seed, self.nonce, instance_index
-            )
             rotation = select_value(self.random_seed, self.nonce, scope.rotation)
             scale = select_value(self.random_seed, self.nonce, scope.particle_scale)
+            translation = self.get_random_point(
+                self.random_seed, self.nonce, instance_index
+            )
+            translation = self.translate_to_canvas(translation)
             instances.append(
                 MadeIngredientPrep(
                     translation=translation, rotation=rotation, scale=scale
@@ -73,21 +74,29 @@ class RandomScatter(Scatter):
 
         return instances
 
-    def random_point_from_center(
+    def get_random_point(
         self, seed: int, nonce: Counter, position: int
     ) -> Tuple[SCALAR, SCALAR]:
         """Slightly different calculation for random point - limits the distribution to a radius"""
-        canvas = Canvas()
 
         rad = get_random_deterministic_float(seed, nonce, "random-point_rad", position)
         ang = get_random_deterministic_float(seed, nonce, "random-point_ang", position)
 
-        random_radius = rad * (0.85 * canvas.center[0])  # fudge factor...
+        random_radius = rad * (3052.0/2.0)  # 3072 is the pixel width of pies - temp minus 20 to decrease bleed off pie
         random_angle = ang * TWO_PI
-        x = random_radius * cos(random_angle) + canvas.center[0]
-        y = random_radius * sin(random_angle) + canvas.center[1]
+        x = random_radius * cos(random_angle)
+        y = random_radius * sin(random_angle)
 
         return (x, y)
+
+    def translate_to_canvas(self,point:Tuple[float,float]) -> Tuple[float,float]:
+        """translate an image location to account for its size - center the image on the point"""
+        canvas = Canvas()
+        # position based on 1024 topping image size - if pixel dimensions are different, position will be off
+        x = point[0] + canvas.center[0] - (1024/2)
+        y = point[1] + canvas.center[1] - (1024/2)
+
+        return(x,y)
 
     def random_point(
         self, seed: int, nonce: Counter, position: int

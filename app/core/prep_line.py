@@ -91,9 +91,7 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
     reduced_dict = {}
     for key in count_dict:
         if key in ingredient_dict.keys():
-            made_count = int(
-                count_dict[key]
-            )  # This is the number of ingredient layers per pizza
+            made_count = int(count_dict[key])  # This is the number of ingredient layers per pizza
             for i in range(0, made_count):
                 # choose the ingredients
                 options = ingredient_dict[key]

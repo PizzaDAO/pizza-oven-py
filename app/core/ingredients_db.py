@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, Tuple
 import os.path
 import json
 
@@ -12,6 +12,10 @@ from app.core.config import Settings
 from app.models.recipe import *
 
 settings = Settings()
+
+# Make environment variables
+LAYER_PIXEL_SIZE = 3072.0
+TOPPING_PIXEL_SIZE = 1024.0
 
 __all__ = [
     "read_ingredients",
@@ -87,7 +91,12 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
     sheet = service.spreadsheets()
     result = (
         sheet.values()
-        .get(spreadsheetId=SHEET_NAME, range=RANGE_NAME, majorDimension=DIMENSION)
+        .get(
+            spreadsheetId=SHEET_NAME,
+            range=RANGE_NAME,
+            majorDimension=DIMENSION,
+            valueRenderOption="FORMATTED_VALUE",
+        )
         .execute()
     )
 
@@ -112,7 +121,6 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
 
     # Now get all the rows in the sheet
     for row in range(1, len(sheet_data)):
-        # for r in range(1, 4):
         # Only add the line if there is a numeric ID
         if len(sheet_data[row]) > 2:
             record_entry = {}
@@ -206,6 +214,7 @@ def parse_ingredient(row) -> ScopedIngredient:
         image_uris={"filename": image_uri, "output_mask": mask},
     )
 
+    # Create a default ScopedIngredient
     scoped = ScopedIngredient(
         ingredient=ingredient,
         scope=IngredientScope(
@@ -217,8 +226,37 @@ def parse_ingredient(row) -> ScopedIngredient:
         ),
     )
 
+    scoped.scope = parse_ranges(row,scoped.scope)
+
     return scoped
 
+def parse_ranges(row, scope:IngredientScope) -> IngredientScope:
+    # Add the scope options: on_disk(not used):inches:inch_variance:min_per:max_per:pie_count:scatters:description
+    # Use if statements to defend against blank cells
+    if "min_per" in row.keys() and "max_per" in row.keys():
+        if row["min_per"].isnumeric() and row["max_per"].isnumeric():
+            scope.emission_count = (float(row["min_per"]), float(row["max_per"]))
+
+    if "inches" in row.keys():
+        if row["inches"].isnumeric():
+            inches = float(row["inches"])
+
+            if inches >= 16.0:
+                # This is a layer - it will not be scaled
+                scope.particle_scale = (1.0, 1.0)
+            elif inches < 16.0:
+                # This is a topping - provide scales
+                if "inch_variance" in row.keys():
+                    if row["inch_variance"].isnumeric():
+                        inch_variance = float(row["inch_variance"])
+                        min_size = inches - inch_variance
+                        max_size = inches + inch_variance
+                        # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
+                        min_scale = ((min_size / 6.0) * TOPPING_PIXEL_SIZE) / TOPPING_PIXEL_SIZE
+                        max_scale = ((max_size / 6.0) * TOPPING_PIXEL_SIZE) / TOPPING_PIXEL_SIZE
+                        scope.particle_scale = (min_scale, max_scale)
+
+    return scope
 
 def parse_id(text) -> str:
     words = text.split("-")
@@ -294,3 +332,4 @@ def save_recipe(recipe: Recipe):
 
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
+

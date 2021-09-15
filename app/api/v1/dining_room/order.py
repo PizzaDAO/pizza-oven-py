@@ -50,9 +50,7 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     # transform the data
     # recipe = make_recipe()
     # probably need pizza_type from OrderPizzaRequest
-    recipe = get_pizza_recipe(
-        "Random Pies"
-    )  # For names of pizza types see /data/recipes filenames are pizza types
+    recipe = get_pizza_recipe("TEST")  # For names of pizza types see /data/recipes filenames are pizza types
     order = reduce(recipe)
 
     # render
