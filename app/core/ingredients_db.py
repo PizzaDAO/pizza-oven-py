@@ -14,8 +14,8 @@ from app.models.recipe import *
 settings = Settings()
 
 # Make environment variables
-LAYER_PIXEL_SIZE = 3072.0
-TOPPING_PIXEL_SIZE = 1024.0
+TOPPING_PIXEL_SIZE = 1024
+BASE_PIXEL_SIZE = 3072
 
 __all__ = [
     "read_ingredients",
@@ -28,7 +28,7 @@ __all__ = [
 
 """ Simple USage:
     ingredients = read_ingredients()
-    receipts = read_recipes()
+    receipts = read_recipes(ingredients)
     save_json() --> data/recipes/
 """
 
@@ -237,26 +237,32 @@ def parse_ranges(row, scope:IngredientScope) -> IngredientScope:
         if row["min_per"].isnumeric() and row["max_per"].isnumeric():
             scope.emission_count = (float(row["min_per"]), float(row["max_per"]))
 
+    # An ungly chain of IFs to make sure all the values are there before we operate
     if "inches" in row.keys():
         if row["inches"].isnumeric():
             inches = float(row["inches"])
 
-            if inches >= 16.0:
-                # This is a layer - it will not be scaled
-                scope.particle_scale = (1.0, 1.0)
-            elif inches < 16.0:
-                # This is a topping - provide scales
-                if "inch_variance" in row.keys():
-                    if row["inch_variance"].isnumeric():
-                        inch_variance = float(row["inch_variance"])
-                        min_size = inches - inch_variance
-                        max_size = inches + inch_variance
-                        # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
-                        min_scale = ((min_size / 6.0) * TOPPING_PIXEL_SIZE) / TOPPING_PIXEL_SIZE
-                        max_scale = ((max_size / 6.0) * TOPPING_PIXEL_SIZE) / TOPPING_PIXEL_SIZE
-                        scope.particle_scale = (min_scale, max_scale)
+            if "inch_variance" in row.keys():
+                if row["inch_variance"].isnumeric():
+                    inch_variance = float(row["inch_variance"])
 
+                    base_categories = ["crust", "sauce", "cheese"]
+                    if row["category"] in base_categories:
+                        scope.particle_scale = get_scale_values(inches, inch_variance, BASE_PIXEL_SIZE)
+                    else:
+                        scope.particle_scale = get_scale_values(inches, inch_variance, TOPPING_PIXEL_SIZE)
+                
     return scope
+
+def get_scale_values(inches, variance, pixel_size) -> Tuple[float,float]:
+    min_size = inches - variance
+    max_size = inches + variance
+    # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
+    min_scale = min_size / (18 / (3072/pixel_size))
+    max_scale = max_size / (18 / (3072/pixel_size))
+
+    return (min_scale, max_scale)
+    
 
 def parse_id(text) -> str:
     words = text.split("-")

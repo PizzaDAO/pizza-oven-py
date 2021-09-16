@@ -25,7 +25,7 @@ def get_pizza_recipe(pizza_type: str) -> Recipe:
 
     # Make sure we previously loaded recipes files from /data/recipes
     (names, recipes) = load_recipes()
-
+    
     # Default to random pie if no type supplied, or type is not found
     if pizza_type is None or pizza_type not in recipes.keys():
         pizza_type = "Random Pies"  # For now, default to a random pie

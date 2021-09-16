@@ -139,7 +139,8 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     # an select the one to use
 
     if scope.scope.scatter_types[0] == ScatterType.none:
-        instances = [MadeIngredientPrep(translation=(0.0, 0.0), rotation=0.0, scale=1)]
+        scale = scope.scope.particle_scale[0]
+        instances = [MadeIngredientPrep(translation=(0.0, 0.0), rotation=0.0, scale=scale)]
     else:
         instances = RandomScatter(seed, nonce).evaluate(scope.scope)
 
