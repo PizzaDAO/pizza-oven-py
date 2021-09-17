@@ -42,6 +42,54 @@ class Scatter:
         """implement in your derived class"""
         ...
 
+    def translate_to_canvas(self,point:Tuple[float,float]) -> Tuple[float,float]:
+        """translate a raw point to a location on the canvas"""
+        canvas = Canvas()
+        # position based on 1024 topping image size - if pixel dimensions are different, position will be off
+        x = point[0] + canvas.center[0] - (1024/2)
+        y = point[1] + canvas.center[1] - (1024/2)
+
+        return(x,y)
+        
+class TreeRing(Scatter):
+    """Scatter that defines a circle centered in the frame, and place items evely around it"""
+
+    def evaluate(self, scope: IngredientScope) -> List[MadeIngredientPrep]:
+
+        instance_selection = select_value(
+            self.random_seed, self.nonce, scope.emission_count
+        )
+
+        instance_count = round(instance_selection)
+
+        min_radius = 250.0
+        max_radius = 3072/2 # might be a better way to calculat this, take into account the particle size
+        radius = min_radius + (get_random_deterministic_float(self.random_seed, self.nonce) * (max_radius - min_radius))
+
+        instances: List[MadeIngredientPrep] = []
+
+        for instance_index in range(instance_count):
+            rotation = select_value(self.random_seed, self.nonce, scope.rotation)
+            scale = select_value(self.random_seed, self.nonce, scope.particle_scale)
+            translation = self.calculate_tree_position(radius, instance_count, instance_index)
+            translation = self.translate_to_canvas(translation)
+            instances.append(
+                MadeIngredientPrep(
+                    translation=translation, rotation=rotation, scale=scale
+                )
+            )
+
+        return instances
+
+    def calculate_tree_position(self, radius, item_count, index) -> Tuple[float,float]:
+        """Return a position on the circle based on the index count"""
+
+        degree_int = (2 * PI) / item_count
+        rotation = index * degree_int
+        x = radius * cos(rotation)
+        y = radius * sin(rotation)
+
+        return (x, y)
 
 class RandomScatter(Scatter):
     "randomly scatter by placing items on circles"
@@ -88,15 +136,6 @@ class RandomScatter(Scatter):
         y = random_radius * sin(random_angle)
 
         return (x, y)
-
-    def translate_to_canvas(self,point:Tuple[float,float]) -> Tuple[float,float]:
-        """translate an image location to account for its size - center the image on the point"""
-        canvas = Canvas()
-        # position based on 1024 topping image size - if pixel dimensions are different, position will be off
-        x = point[0] + canvas.center[0] - (1024/2)
-        y = point[1] + canvas.center[1] - (1024/2)
-
-        return(x,y)
 
     def random_point(
         self, seed: int, nonce: Counter, position: int
