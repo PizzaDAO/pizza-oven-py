@@ -20,15 +20,19 @@ def make_recipe() -> Recipe:
     return sample(1)
 
 
-def get_pizza_recipe(pizza_type: str) -> Recipe:
+def get_pizza_recipe(pizza_index: int) -> Recipe:
     """load recipes if needed, then return the recipe type requested"""
 
     # Make sure we previously loaded recipes files from /data/recipes
     (names, recipes) = load_recipes()
-    
+
     # Default to random pie if no type supplied, or type is not found
-    if pizza_type is None or pizza_type not in recipes.keys():
+    if pizza_index >= len(recipes):
+        print(f"pizza_index: not found: {pizza_index}")
         pizza_type = "Random Pies"  # For now, default to a random pie
+    else:
+        pizza_type = names[pizza_index]
+        print(f"pizza_index: {pizza_index} pizza_type: {pizza_type}")
 
     # convert the json to a Recipes object
     recipe_json = recipes[pizza_type]

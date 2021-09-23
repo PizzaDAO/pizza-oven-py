@@ -48,9 +48,10 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     print(data)
 
     # transform the data
-    # recipe = make_recipe()
-    # probably need pizza_type from OrderPizzaRequest
-    recipe = get_pizza_recipe("Random Pies")  # For names of pizza types see /data/recipes filenames are pizza types
+
+    # For names of pizza types see /data/recipes
+    # filenames are pizza types in alphabetical order
+    recipe = get_pizza_recipe(data.data.recipe_index)
     order = reduce(recipe)
 
     # render
@@ -72,17 +73,16 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
 
     decoded_metadata = base58.b58decode(metadata_hash)
     truncated_metadata = decoded_metadata[2 : len(decoded_metadata)]
-    truncated_metadata_hex = truncated_metadata.hex()
     from_bytes_big = int.from_bytes(truncated_metadata, "big")
 
     # debug log out some values
     print(f"metadata_hash: {metadata_hash}")
     print(f"metadata_hash_len: {len(metadata_hash)}")
     print(f"from_bytes_big: {from_bytes_big}")
+    print(f"decoded_metadata: {decoded_metadata}")
+    print(f"decoded_metadata: {decoded_metadata.hex()}")
     print(f"truncated_metadata: {truncated_metadata}")
     print(f"truncated_metadata_len: {len(truncated_metadata)}")
-    print(f"truncated_metadata_hex: {truncated_metadata_hex}")
-    print(f"truncated_metadata_hex_len: {len(truncated_metadata_hex)}")
 
     # build the response object
     response = OrderPizzaResponse(

@@ -13,7 +13,7 @@ from app.core.config import Settings
 
 from PIL import Image
 from PIL import ImageFont
-from PIL import ImageDraw 
+from PIL import ImageDraw
 
 current = os.path.dirname(os.path.realpath(__file__))
 settings = Settings()
@@ -21,6 +21,7 @@ settings = Settings()
 DATA_ON_PIZZA = True
 DATA_FONT_SIZE = 64
 WATERMARK_FILE = "pizza_watermark.png"
+
 
 class BoxRenderer:
     """Render Boxes"""
@@ -186,6 +187,52 @@ class Renderer:
 
         return file_path
 
+    def draw_watermark(self, base: Image, order: KitchenOrder):
+        """draw a watermark on the pizza"""
+        draw = ImageDraw.Draw(base)
+        font_path = os.path.join(self.project_path, "../fonts/Roboto-Medium.ttf")
+        font = ImageFont.truetype(font_path, DATA_FONT_SIZE)
+        base_ingredients = ""
+        for ingredient in order.base_ingredients.values():
+            i = ingredient.ingredient
+            base_ingredients += i.unique_id + " " + i.name + " " + i.category + "\n"
+        layer_ingredients = ""
+        for ingredient in order.layers.values():
+            i = ingredient.ingredient
+            layer_ingredients += (
+                i.unique_id + " " + i.name + " - " + i.category + "\n"
+            )
+        pizza_data = (
+            "Pizza_id: "
+            + str(order.unique_id)
+            + "\n"
+            + "Recipe_id: "
+            + str(order.recipe_id)
+            + "\n"
+            + "Pizza_type: "
+            + str(order.name)
+            + "\n"
+            + "Random_seed: "
+            + str(order.random_seed)
+            + "\n\n"
+            + "Base_layers:\n"
+            + base_ingredients
+            + "\n"
+            + "Layers:\n"
+            + layer_ingredients
+        )
+        draw.text((10, 10), pizza_data, fill="white", font=font, align="left")
+
+        # add watermark
+        watermark_path = os.path.join(
+            self.project_path, "../data/" + WATERMARK_FILE
+        )
+        watermark_image = Image.open(watermark_path)
+        # bottom right corner for 4k image
+        x = 4096 - watermark_image.width
+        y = 4096 - watermark_image.height
+        base.paste(watermark_image, (x, y), watermark_image)
+
     def flatten_image(self, layers: List[str], order: KitchenOrder) -> str:
         """flatten the image layers into a single image and return its filename"""
 
@@ -218,38 +265,10 @@ class Renderer:
         for image in images:
             base.paste(image, (0, 0), image)
 
-        # USe the order print info on top of image
-        #TODO: make env variable to toggle this on/off
+        # TODO: make env variable to toggle this on/off
         if DATA_ON_PIZZA:
-            draw = ImageDraw.Draw(base)
-            font_path = os.path.join(self.project_path,"../fonts/Roboto-Medium.ttf")
-            font = ImageFont.truetype(font_path, DATA_FONT_SIZE)
-            base_ingredients = ""
-            for ingredient in order.base_ingredients.values():
-                i = ingredient.ingredient
-                base_ingredients += i.unique_id + " " + i.name + " " + i.category + "\n"
-            layer_ingredients = ""
-            for ingredient in order.layers.values():
-                i = ingredient.ingredient
-                layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + "\n"
-            pizza_data = (
-                "Pizza_id: "+ str(order.unique_id) + "\n" +
-                "Recipe_id: " + str(order.recipe_id) + "\n" +
-                "Pizza_type: " + str(order.name) + "\n" +
-                "Random_seed: " + str(order.random_seed) + "\n\n" +
-                "Base_layers:\n" + base_ingredients + "\n" +
-                "Layers:\n" + layer_ingredients
-            )
-            draw.text((10, 10),pizza_data,fill="white",font=font,align="left")
+            self.draw_watermark(base, order)
 
-            #add watermark
-            watermark_path = os.path.join(self.project_path,"../data/"+WATERMARK_FILE)
-            watermark_image = Image.open(watermark_path)
-            #bottom right corner for 4k image
-            x = 4096 - watermark_image.width
-            y = 4096 - watermark_image.height
-            base.paste(watermark_image, (x,y), watermark_image)
-            
         base.save(os.path.join(output_dir, "rarepizza-00000.png"))
 
         return "rarepizza-00000.png"
