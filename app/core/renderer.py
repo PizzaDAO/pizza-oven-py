@@ -18,7 +18,7 @@ from PIL import ImageDraw
 current = os.path.dirname(os.path.realpath(__file__))
 settings = Settings()
 
-DATA_ON_PIZZA = True
+DEV_MODE = True
 DATA_FONT_SIZE = 64
 WATERMARK_FILE = "pizza_watermark.png"
 
@@ -266,12 +266,15 @@ class Renderer:
             base.paste(image, (0, 0), image)
 
         # TODO: make env variable to toggle this on/off
-        if DATA_ON_PIZZA:
+        if DEV_MODE:
             self.draw_watermark(base, order)
 
-        base.save(os.path.join(output_dir, "rarepizza-00000.png"))
+        # Give the final output a unique filename: ORDER-ID_PIZZA-TYPE-NAME_RANDOM-SEED.png
+        unique_filename = str(order.unique_id) + "_" + order.name + "_" + str(order.random_seed + ".png")
+        
+        base.save(os.path.join(output_dir, unique_filename))
 
-        return "rarepizza-00000.png"
+        return unique_filename
 
     def render_pizza(self, job_id: str, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
