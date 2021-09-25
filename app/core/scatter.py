@@ -6,6 +6,7 @@ from ..models.recipe import IngredientScope, ScatterType
 
 from .random_num import (
     Counter,
+    deterministic_shuffle,
     get_random_deterministic_uint256,
     get_random_deterministic_float,
     select_value,
@@ -50,7 +51,73 @@ class Scatter:
         y = point[1] + canvas.center[1] - (1024/2)
 
         return(x,y)
+
+class Grid(Scatter):
+    """Creates a grid pattern to distrubute toppins evenly - Grid is alwyas the same size and can have empty
+    spots if there are fewer toppings to disburse"""
+
+    def evaluate(self, scope: IngredientScope) -> List[MadeIngredientPrep]:
+
+        instance_selection = select_value(
+            self.random_seed, self.nonce, scope.emission_count
+        )
+
+        instance_count = round(instance_selection)
+
+        grid_positions = self.build_grid(instance_count)
         
+        instances: List[MadeIngredientPrep] = []
+
+        for i in range(0,len(grid_positions)):
+            rotation = select_value(self.random_seed, self.nonce, scope.rotation)
+            scale = select_value(self.random_seed, self.nonce, scope.particle_scale)
+            translation = self.translate_to_canvas(grid_positions[i])
+            instances.append(
+                MadeIngredientPrep(
+                    translation=translation, rotation=rotation, scale=scale
+                )
+            )
+
+        return instances
+
+    def translate_to_canvas(self,point:Tuple[float,float]) -> Tuple[float,float]:
+        """translate a raw point to a location on the canvas"""
+        canvas = Canvas()
+        # Grid is created with (0,0) at top left corner, so override the translation method
+        x = point[0]
+        y = point[1]
+
+        return(x,y)
+
+    def build_grid(self, item_count) -> list:
+
+        line_count = round(sqrt(item_count)) + 1
+        item_width = 3072 / line_count #3072 is the crust layer size - grid should not extend past this
+
+        unfiltered_positions = list()
+        for i in range(0, line_count):
+            x = (i * item_width)
+            for n in range(0, line_count):
+                y = (n * item_width)
+                unfiltered_positions.append((x,y))
+        
+        # Is this gonna work with the detrministic random setup?
+        # We perform a shuffle here to spread out items over the grid when there are less items than grid spots
+        unfiltered_positions = deterministic_shuffle(unfiltered_positions)
+
+        positions:List[Tuple[float,float]] = list()
+        center = Canvas().center[X]
+        # Now filter the list to remove any toppings outside the crust layer circle
+        # Large toppings may extend past crust - This does not take into account the topping size...
+        for p in unfiltered_positions:
+            dist_from_center = sqrt( (p[0] - center)**2 + (p[1] - center)**2 )
+            
+            if( dist_from_center < (3072/2) and len(positions) < len(unfiltered_positions)):
+                positions.append(p)
+
+        return positions
+
+
 class TreeRing(Scatter):
     """Scatter that defines a circle centered in the frame, and place items evely around it"""
 
