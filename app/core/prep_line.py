@@ -15,11 +15,12 @@ from app.models.prep import (
 
 from app.core.random_num import (
     Counter,
+    deterministic_shuffle,
     get_random,
     get_random_deterministic_uint256,
     select_value,
 )
-from app.core.scatter import RandomScatter
+from app.core.scatter import Grid, RandomScatter, TreeRing
 from app.core.utils import clamp, to_hex, from_hex
 
 from app.core.recipe_box import get_pizza_recipe
@@ -76,6 +77,14 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         random_seed, nonce, layer_count_dict, sorted_layer_dict
     )
 
+    # SHUFFLER - pull out all the instances into  buffer that we can shuffle for depth swap
+    shuffled_instances = []
+    for (_, ingredient) in reduced_layers.items():
+        shuffled_instances += ingredient.instances
+        
+    # A list of all the instances - shuffled
+    shuffled_instances = deterministic_shuffle(shuffled_instances)
+
     return KitchenOrder(
         unique_id=0,  # TODO: database primary key?
         name=recipe.name,
@@ -83,7 +92,9 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         recipe_id=recipe.unique_id,
         base_ingredients=reduced_base,
         layers=reduced_layers,
+        instaces=shuffled_instances,
         instructions=ingredient_count,
+        shuffled_instances=shuffled_instances,
     )
 
 
@@ -100,16 +111,9 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
                 ingredient = ingredient_dict[key][selected_ind]  # MadeIngredient
                 # need unique keys so we dont overwite toppings with multiple instances
                 identifier = key + str(i)
-                reduced_dict[identifier] = select_prep(
-                    deterministic_seed, nonce, ingredient
-                )
+                reduced_dict[identifier] = select_prep(deterministic_seed, nonce, ingredient)
 
-                print(
-                    "We chose "
-                    + reduced_dict[identifier].ingredient.name
-                    + " for the "
-                    + key
-                )
+                print("We chose %s for the %s"%(reduced_dict[identifier].ingredient.name,key))
 
     return reduced_dict
 
@@ -140,16 +144,18 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
 
     if scope.scope.scatter_types[0] == ScatterType.none:
         scale = scope.scope.particle_scale[0]
-        instances = [MadeIngredientPrep(translation=(0.0, 0.0), rotation=0.0, scale=scale)]
+        instances = [MadeIngredientPrep(translation=(0.0, 0.0), rotation=0.0, scale=scale, image_uri=scope.ingredient.image_uris["filename"])]
     else:
-        instances = RandomScatter(seed, nonce).evaluate(scope.scope)
+        instances = RandomScatter(seed, nonce).evaluate(scope)
 
     # Temporarily test the scattering - ScatterType not defined in database yet
     # If we have a topping here - scatter it
     #
     # Unless better solution from comment above
     if "topping" in scope.ingredient.category:
-        instances = RandomScatter(seed, nonce).evaluate(scope.scope)
+        #instances = TreeRing(seed, nonce).evaluate(scope.scope)
+        instances = Grid(seed, nonce).evaluate(scope)
+        #instances = RandomScatter(seed, nonce).evaluate(scope)
 
     return MadeIngredient(
         ingredient=scope.ingredient,

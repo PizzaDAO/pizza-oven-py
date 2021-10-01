@@ -92,6 +92,18 @@ def select_value(seed: int, nonce: Counter, bounds: Tuple[float, float]) -> floa
     return clamp(get_random_deterministic_float(seed, nonce), bounds[0], bounds[1])
 
 
+def deterministic_shuffle(list) -> list:
+    """A method to shuffle a list in deterministic fashion"""
+
+    for i in range(len(list)-1,0,-1):
+        # Pick a random index from 0 to i
+        j = get_random() % i+1
+        # Swap arr[i] with the element at random index
+        list[i],list[j] = list[j],list[i]
+        
+    return list
+
+
 def set_hash(seed: str):
     """seed an array with 32bit ints to be used as a pool of random numbers"""
 

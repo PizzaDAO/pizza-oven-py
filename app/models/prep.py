@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
 
 from app.models.base import Base
 
@@ -35,7 +35,16 @@ class MadeIngredientPrep(Base):
     """the rotation of the instance as degrees"""
     scale: SCALAR
     """the scale of the instance as fraction e.g. (-1,1)"""
+    image_uri: Optional[str]
+    """path to ingredient image"""
 
+class ShuffledLayer(Base):
+    """struct for layers of depth swapped ingredient instances"""
+    unique_id: str
+    index: SCALAR
+    count: SCALAR
+    instances: List[MadeIngredientPrep]
+    output_mask: Optional[str]
 
 class MadeIngredient(Base):
     """struct for serializing the ingredient and its prep instructions"""
@@ -60,4 +69,6 @@ class KitchenOrder(Base):
     """collection of base ingredients that coule be used"""
     layers: Dict[INGREDIENT_KEY, MadeIngredient]
     """collection of layers ingredients that will ber used"""
+    shuffled_instances: List[MadeIngredientPrep]
+    """shuffled list of all instances - provides depth in arrangements"""
     instructions: MadeInstructions

@@ -2,12 +2,13 @@
 
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
+from math import ceil
 import os
 import subprocess
 import json
 
 from app.models.recipe import Classification
-from app.models.prep import KitchenOrder, MadeIngredient
+from app.models.prep import KitchenOrder, MadeIngredient, ShuffledLayer
 from app.models.pizza import HotPizza
 from app.core.config import Settings
 
@@ -187,6 +188,24 @@ class Renderer:
 
         return file_path
 
+    def cache_layer(self, layer: ShuffledLayer) -> str:
+        """Cache the ingredient data so that natron can pick it up."""
+        # create a .cache directory
+        cache_dir = os.path.join(
+            self.project_path,
+            "../.cache/",
+        )
+        if not os.path.exists(cache_dir):
+            os.makedirs(cache_dir)
+
+        file_path = os.path.join(cache_dir, f"shuffled_layer_{layer.unique_id}_{layer.index}.json")
+
+        # cache out the ingredient so it can be picked up by natron
+        with open(file_path, "w") as layer_file:
+            layer_file.write(layer.json())
+
+        return file_path
+
     def draw_watermark(self, base: Image, order: KitchenOrder):
         """draw a watermark on the pizza"""
         draw = ImageDraw.Draw(base)
@@ -290,17 +309,48 @@ class Renderer:
 
         topping_layer_index = 0
 
+        #
+        #SINGLE IGREDIENT TOPPING LAYERS
+        #
         # # iterate through each of the layers and render
-        for (_, ingredient) in order.layers.items():
-            print(
-                "WILL RENDER THIS MANY "
-                + ingredient.ingredient.name
-                + ": "
-                + str(ingredient.count)
-            )
-            result = self.render_ingredient(topping_layer_index, ingredient)
+        # for (_, ingredient) in order.layers.items():
+        #     print(
+        #         "WILL RENDER THIS MANY "
+        #         + ingredient.ingredient.name
+        #         + ": "
+        #         + str(ingredient.count)
+        #     )
+        #     result = self.render_ingredient(topping_layer_index, ingredient)
+        #     rendered_layer_files.append(result)
+        #     topping_layer_index += 1
+
+        # Iterate through shuffled instances to create layers of 30 items
+        #
+        # BATCHING
+        #
+        max = 30
+        instance_count = ceil(len(order.shuffled_instances))
+        layer_count = ceil(instance_count / max)
+
+        for i in range(layer_count):
+            if(instance_count - (i * max) < max):
+                batch_count = instance_count % max
+            else:
+                batch_count = max
+
+            sliceObj = slice(0, batch_count)
+            batch = order.shuffled_instances[sliceObj]
+            # Create a ShuffledLayer
+            shuffle_layer = ShuffledLayer(
+                unique_id=order.unique_id,
+                index=i,
+                count=batch_count,
+                instances=batch
+                )
+            result = self.render_shuffled_layer(topping_layer_index, shuffle_layer)
             rendered_layer_files.append(result)
             topping_layer_index += 1
+
 
         #       for (key, ingredient) in order.special.items():
         #           result = self.render_ingredient(ingredient)
@@ -347,6 +397,21 @@ class Renderer:
         if classification == Classification.extras:
             c = "extras"
         return c
+
+    def render_shuffled_layer(self, layer_index:int, layer:ShuffledLayer) -> str:
+        # Build the output filename and save it allong with the cached Ingredient
+        category = self.map_classification(Classification.topping) # TEMP default to "topping"
+        output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
+        layer.output_mask = output_filename
+
+        data_path = self.cache_layer(layer)
+        
+        # Using topping renderer as default here - should be layer specific?
+        # Possibly requires input from Natron dev
+        ToppingRenderer().render(
+            self.natron_path, self.project_path, data_path, self.frame)
+
+        return output_filename
 
     def render_ingredient(self, layer_index: int, ingredient: MadeIngredient) -> str:
         """render the ingredient"""

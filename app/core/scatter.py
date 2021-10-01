@@ -2,7 +2,7 @@ from math import cos, sin, sqrt
 from app.models.prep import SCALAR, MadeIngredientPrep
 from typing import Dict, List, Tuple
 
-from ..models.recipe import IngredientScope, ScatterType
+from ..models.recipe import IngredientScope, ScopedIngredient, ScatterType
 
 from .random_num import (
     Counter,
@@ -39,7 +39,7 @@ class Scatter:
         self.random_seed = random_seed
         self.nonce = nonce
 
-    def evaluate(self, scope: IngredientScope) -> List[MadeIngredientPrep]:
+    def evaluate(self, scope: ScopedIngredient) -> List[MadeIngredientPrep]:
         """implement in your derived class"""
         ...
 
@@ -56,10 +56,10 @@ class Grid(Scatter):
     """Creates a grid pattern to distrubute toppins evenly - Grid is alwyas the same size and can have empty
     spots if there are fewer toppings to disburse"""
 
-    def evaluate(self, scope: IngredientScope) -> List[MadeIngredientPrep]:
+    def evaluate(self, scope: ScopedIngredient) -> List[MadeIngredientPrep]:
 
         instance_selection = select_value(
-            self.random_seed, self.nonce, scope.emission_count
+            self.random_seed, self.nonce, scope.scope.emission_count
         )
 
         instance_count = round(instance_selection)
@@ -69,12 +69,12 @@ class Grid(Scatter):
         instances: List[MadeIngredientPrep] = []
 
         for i in range(0,len(grid_positions)):
-            rotation = select_value(self.random_seed, self.nonce, scope.rotation)
-            scale = select_value(self.random_seed, self.nonce, scope.particle_scale)
+            rotation = select_value(self.random_seed, self.nonce, scope.scope.rotation)
+            scale = select_value(self.random_seed, self.nonce, scope.scope.particle_scale)
             translation = self.translate_to_canvas(grid_positions[i])
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale
+                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
                 )
             )
 
@@ -121,10 +121,10 @@ class Grid(Scatter):
 class TreeRing(Scatter):
     """Scatter that defines a circle centered in the frame, and place items evely around it"""
 
-    def evaluate(self, scope: IngredientScope) -> List[MadeIngredientPrep]:
+    def evaluate(self, scope: ScopedIngredient) -> List[MadeIngredientPrep]:
 
         instance_selection = select_value(
-            self.random_seed, self.nonce, scope.emission_count
+            self.random_seed, self.nonce, scope.scope.emission_count
         )
 
         instance_count = round(instance_selection)
@@ -136,13 +136,13 @@ class TreeRing(Scatter):
         instances: List[MadeIngredientPrep] = []
 
         for instance_index in range(instance_count):
-            rotation = select_value(self.random_seed, self.nonce, scope.rotation)
-            scale = select_value(self.random_seed, self.nonce, scope.particle_scale)
+            rotation = select_value(self.random_seed, self.nonce, scope.scope.rotation)
+            scale = select_value(self.random_seed, self.nonce, scope.scope.particle_scale)
             translation = self.calculate_tree_position(radius, instance_count, instance_index)
             translation = self.translate_to_canvas(translation)
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale
+                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
                 )
             )
 
@@ -161,29 +161,28 @@ class TreeRing(Scatter):
 class RandomScatter(Scatter):
     "randomly scatter by placing items on circles"
 
-    def evaluate(self, scope: IngredientScope) -> List[MadeIngredientPrep]:
+    def evaluate(self, scope: ScopedIngredient) -> List[MadeIngredientPrep]:
 
-        print(scope)
+        #print(scope)
 
         instance_selection = select_value(
-            self.random_seed, self.nonce, scope.emission_count
+            self.random_seed, self.nonce, scope.scope.emission_count
         )
 
         instance_count = round(instance_selection)
-        print(f"instance count: {instance_count}")
-
+        
         instances: List[MadeIngredientPrep] = []
 
         for instance_index in range(instance_count):
-            rotation = select_value(self.random_seed, self.nonce, scope.rotation)
-            scale = select_value(self.random_seed, self.nonce, scope.particle_scale)
+            rotation = select_value(self.random_seed, self.nonce, scope.scope.rotation)
+            scale = select_value(self.random_seed, self.nonce, scope.scope.particle_scale)
             translation = self.get_random_point(
                 self.random_seed, self.nonce, instance_index
             )
             translation = self.translate_to_canvas(translation)
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale
+                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
                 )
             )
 

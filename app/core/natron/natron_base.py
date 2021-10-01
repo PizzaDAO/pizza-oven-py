@@ -92,6 +92,23 @@ class NatronBase(object):
                 param.setValue(scale, 1)
             del param
 
+    def setImageURI(self, file_path, switch_id=None):
+        node = self.natron.getNode("TRS_%s" % switch_id)
+
+        if node is None:
+            node = self.natron.getNode("i%s" % switch_id)
+        if node is None:
+            node = self.natron.getNode("input_default")
+        if node is None:
+            node = self.natron.getNode("i1")
+        if node is None:
+            print("setImageURI: could not find node for: %s" % file_path)
+            return
+        param = node.getParam("filename")
+        if param is not None:
+            param.setValue(file_path)
+        del param
+
     def setOutput(self):
         print(config.paths["output"] + self.out_file)
         node = self.natron.getNode("w1")
