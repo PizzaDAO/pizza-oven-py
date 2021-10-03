@@ -23,7 +23,7 @@ This repository makes pizzas. More specifically, it accepts json input, transfor
 
 If you run Docker and want to run the code locally without Python dependencies, we provide a Dockerfile and docker-compose.yml.
 
-create a .env file according to the .env.example file. You must fill in the Ethereum socket server.
+Copy the .env.example file and name it .env. You must fill in the Ethereum socket server with a Rinkeby websocket from [Alchemy.com](http://alchemy.com).
 
 Run the production deployment
 
