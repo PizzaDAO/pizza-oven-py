@@ -43,7 +43,7 @@ A Postman collection is also available to test the API located in the `.postman`
 - Click import on the left, then use the Raw text option and paste in the contents of the file Pizza Kitchen.postman_collection.json from the .postman folder in pizza-oven-py
 - Also, import the default environment to get you started 👆 RTFM
 
-// TODO: add autmoated test instructions
+// TODO: add automated test instructions
 
 ## 🧪 Testing
 
