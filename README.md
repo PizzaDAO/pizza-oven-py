@@ -8,6 +8,8 @@ This repository makes pizzas. More specifically, it accepts json input, transfor
 
 ## 💻 Requirements
 
+Be running Linux or MacOS
+
 > NOTE:<br>
 > 🐳 = required for running with Docker.<br>
 > 🐍 = required for running with Python.
