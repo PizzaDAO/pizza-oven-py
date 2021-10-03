@@ -25,8 +25,6 @@ If you run Docker and want to run the code locally without Python dependencies, 
 
 Copy the .env.example file and rename it .env. You must fill in the Ethereum socket server with a Rinkeby websocket from [Alchemy.com](http://alchemy.com).
 
-Next, you'll have to do the same thing for Chainlink. Copy the .env.rinkeby file in the chainlink folder and rename it ".env".
-
 Run the production deployment
 
 ```bash
