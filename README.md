@@ -25,13 +25,9 @@ If you run Docker and want to run the code locally without Python dependencies, 
 
 Copy the .env.example file and rename it .env. You must fill in the Ethereum socket server with a Rinkeby websocket from [Alchemy.com](http://alchemy.com).
 
-Run the production deployment
+Run Docker on your machine before the next step.
 
-```bash
-make docker-run
-```
-
-Run the dev deployment with hot reloading enabled
+Run the dev deployment:
 
 ```bash
 make docker-dev
