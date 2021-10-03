@@ -23,7 +23,9 @@ This repository makes pizzas. More specifically, it accepts json input, transfor
 
 If you run Docker and want to run the code locally without Python dependencies, we provide a Dockerfile and docker-compose.yml.
 
-Copy the .env.example file and name it .env. You must fill in the Ethereum socket server with a Rinkeby websocket from [Alchemy.com](http://alchemy.com).
+Copy the .env.example file and rename it .env. You must fill in the Ethereum socket server with a Rinkeby websocket from [Alchemy.com](http://alchemy.com).
+
+Next, you'll have to do the same thing for Chainlink. Copy the .env.rinkeby file in the chainlink folder and rename it ".env".
 
 Run the production deployment
 
@@ -179,6 +181,3 @@ A google login is required to pull data from a shared sheet. There is currently 
 Note:
 -If you receive a “file not found” error related to the “output” folder you may need to manually create a folder named “output” in the root directory of the project
 -The pizza will render, but the app will finish the process by throwing an ipfs error. Chances are, there is no ipfs service up and running, so the app will complain. This is ok, you can continue to generate pizzas.
-
-
-
