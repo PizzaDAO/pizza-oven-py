@@ -181,3 +181,4 @@ Note:
 -The pizza will render, but the app will finish the process by throwing an ipfs error. Chances are, there is no ipfs service up and running, so the app will complain. This is ok, you can continue to generate pizzas.
 
 
+
