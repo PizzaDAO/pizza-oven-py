@@ -32,30 +32,6 @@ make docker-dev
 
 After either command, you will find the API running at http://127.0.0.1:8000
 
-## 🐍 Running with Python
-
-### 🏃🏽 Quick Start
-
-Using [**make**](https://www.gnu.org/software/make/manual/make.html), installation and startup can be run with one command:
-
-To set up the environment:
-
-```bash
-make environment
-```
-
-To start the api:
-
-```bash
-make start
-```
-
-### 🐛 Debugging
-
-For local debugging with Visual Studio Code, just run it from the dropdown in the Run menu. Once the server is up, you can easily hit your breakpoints.
-
-If the code fails to run, [make sure your Python interpreter is set](https://code.visualstudio.com/docs/python/environments) to use your poetry environment.
-
 ### 📮 Postman
 
 A Postman collection is also available to test the API located in the `.postman` folder. You can do a few things with this:
@@ -172,3 +148,27 @@ A google login is required to pull data from a shared sheet. There is currently 
 Note:
 -If you receive a “file not found” error related to the “output” folder you may need to manually create a folder named “output” in the root directory of the project
 -The pizza will render, but the app will finish the process by throwing an ipfs error. Chances are, there is no ipfs service up and running, so the app will complain. This is ok, you can continue to generate pizzas.
+
+## 🐍 Running with Python
+
+### 🏃🏽 Quick Start
+
+Using [**make**](https://www.gnu.org/software/make/manual/make.html), installation and startup can be run with one command:
+
+To set up the environment:
+
+```bash
+make environment
+```
+
+To start the api:
+
+```bash
+make start
+```
+
+### 🐛 Debugging
+
+For local debugging with Visual Studio Code, just run it from the dropdown in the Run menu. Once the server is up, you can easily hit your breakpoints.
+
+If the code fails to run, [make sure your Python interpreter is set](https://code.visualstudio.com/docs/python/environments) to use your poetry environment.
