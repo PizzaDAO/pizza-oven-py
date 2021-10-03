@@ -37,6 +37,7 @@ After either command, you will find the API running at http://127.0.0.1:8000
 A Postman collection is also available to test the API located in the `.postman` folder. You can do a few things with this:
 
 - [Import into Postman](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman) for easy manual testing.
+- Click import on the left, then use the Raw text option and paste in the contents of the file Pizza Kitchen.postman_collection.json from the .postman folder in pizza-oven-py
 - Also, import the default environment to get you started 👆 RTFM
 
 // TODO: add autmoated test instructions
