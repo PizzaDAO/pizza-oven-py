@@ -180,3 +180,4 @@ Note:
 -If you receive a “file not found” error related to the “output” folder you may need to manually create a folder named “output” in the root directory of the project
 -The pizza will render, but the app will finish the process by throwing an ipfs error. Chances are, there is no ipfs service up and running, so the app will complain. This is ok, you can continue to generate pizzas.
 
+
