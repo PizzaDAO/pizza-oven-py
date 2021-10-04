@@ -1,326 +1,330 @@
 {
-    "unique_id": 2356753620,
-    "name": "Simple MVP Cheese Doge Pizza",
-    "random_seed": "52198947997422404454920108833917741998911196589945595445581078565118427695940",
-    "recipe_id": 1,
-    "base_ingredients": {
-        "box": {
-            "ingredient": {
-                "unique_id": "0000",
-                "index": 0,
-                "name": "Cardboard Pizza Box",
-                "rarity_level": 1,
-                "classification": 1,
-                "category": "cardboard",
-                "attributes": {
-                    "state": "open",
-                    "material": "cardboard"
-                },
-                "nutrition": {
-                    "servings": 1.0,
-                    "calories": 150.0,
-                    "fat": 0.0,
-                    "cholesterol": 0.0,
-                    "sodium": 0.7,
-                    "potassium": 0.7,
-                    "carbohydrates": 30.1,
-                    "protein": 0.2
-                },
-                "image_uris": {
-                    "filename": "0000-box-white.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 0.975,
-                "rotation": 0.0
-            }
-        },
-        "paper": {
-            "ingredient": {
-                "unique_id": "0500",
-                "index": 1,
-                "name": "Classic Red checker Wax Paper",
-                "rarity_level": 1,
-                "classification": 2,
-                "category": "red-checker",
-                "attributes": {
-                    "state": "greasy",
-                    "material": "wax"
-                },
-                "nutrition": {
-                    "servings": 1.0,
-                    "calories": 150.0,
-                    "fat": 0.0,
-                    "cholesterol": 0.0,
-                    "sodium": 0.7,
-                    "potassium": 0.7,
-                    "carbohydrates": 30.1,
-                    "protein": 0.2
-                },
-                "image_uris": {
-                    "filename": "0500-paper-redchecker.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 0.975,
-                "rotation": 0.0
-            }
-        },
-        "crust": {
-            "ingredient": {
-                "unique_id": "1000",
-                "index": 2,
-                "name": "Traditional Thin Crust",
-                "rarity_level": 1,
-                "classification": 3,
-                "category": "thin",
-                "attributes": {
-                    "state": "overcooked",
-                    "material": "traditional"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 260.2,
-                    "fat": 10.5,
-                    "cholesterol": 23.0,
-                    "sodium": 657.6,
-                    "potassium": 166.14,
-                    "carbohydrates": 30.1,
-                    "protein": 11.5
-                },
-                "image_uris": {
-                    "filename": "1000-crust-thin.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 0.0
-            }
-        }
-    },
-    "layers": {
-        "sauce": {
-            "ingredient": {
-                "unique_id": "2000",
-                "index": 3,
-                "name": "Traditional Pomodoro Tomato Sauce",
-                "rarity_level": 1,
-                "classification": 4,
-                "category": "traditional",
-                "attributes": {
-                    "state": "thin",
-                    "material": "tomato"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 80.5,
-                    "fat": 0.7,
-                    "cholesterol": 0.0,
-                    "sodium": 1151.7,
-                    "potassium": 900.4,
-                    "carbohydrates": 17.7,
-                    "protein": 3.5
-                },
-                "image_uris": {
-                    "filename": "2000-sauce-tomato.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 0.0
-            }
-        },
-        "cheese": {
-            "ingredient": {
-                "unique_id": "3090",
-                "index": 4,
-                "name": "Aged Doge Cheez",
-                "rarity_level": 1,
-                "classification": 5,
-                "category": "traditional",
-                "attributes": {
-                    "state": "aged",
-                    "vintage": "2011"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 85.1,
-                    "fat": 2006.3,
-                    "cholesterol": 20002.4,
-                    "sodium": 117.8,
-                    "potassium": 21.5,
-                    "carbohydrates": 0.6,
-                    "protein": 6.3
-                },
-                "image_uris": {
-                    "filename": "3090-cheese-chezdoge.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 180.0
-            }
-        },
-        "pepperoni": {
-            "ingredient": {
-                "unique_id": "4000",
-                "index": 5,
-                "name": "Pepperoni",
-                "rarity_level": 1,
-                "classification": 6,
-                "category": "traditional",
-                "attributes": {
-                    "state": "aged",
-                    "vintage": "2011"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 85.1,
-                    "fat": 2006.3,
-                    "cholesterol": 20002.4,
-                    "sodium": 117.8,
-                    "potassium": 21.5,
-                    "carbohydrates": 0.6,
-                    "protein": 6.3
-                },
-                "image_uris": {
-                    "filename": "4000-topping-meat-pepperoni.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 18.0
-            }
-        },
-        "shrimp": {
-            "ingredient": {
-                "unique_id": "6000",
-                "index": 6,
-                "name": "Shrimp",
-                "rarity_level": 1,
-                "classification": 6,
-                "category": "traditional",
-                "attributes": {
-                    "state": "aged",
-                    "vintage": "2011"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 85.1,
-                    "fat": 2006.3,
-                    "cholesterol": 20002.4,
-                    "sodium": 117.8,
-                    "potassium": 21.5,
-                    "carbohydrates": 0.6,
-                    "protein": 6.3
-                },
-                "image_uris": {
-                    "filename": "6000-topping-seafood-shrimp.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 0.0
-            }
-        },
-        "swoledoge": {
-            "ingredient": {
-                "unique_id": "6900",
-                "index": 7,
-                "name": "Swole Doge",
-                "rarity_level": 1,
-                "classification": 7,
-                "category": "extras",
-                "attributes": {
-                    "state": "aged",
-                    "vintage": "2011"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 85.1,
-                    "fat": 2006.3,
-                    "cholesterol": 20002.4,
-                    "sodium": 117.8,
-                    "potassium": 21.5,
-                    "carbohydrates": 0.6,
-                    "protein": 6.3
-                },
-                "image_uris": {
-                    "filename": "6900-topping-crypto-swoledoge.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 8.0,
-                "scale": 0.70
-            }
-        },
-        "oragano": {
-            "ingredient": {
-                "unique_id": "9060",
-                "index": 8,
-                "name": "Oregano",
-                "rarity_level": 1,
-                "classification": 7,
-                "category": "seasoning",
-                "attributes": {
-                    "state": "aged",
-                    "vintage": "2011"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 85.1,
-                    "fat": 2006.3,
-                    "cholesterol": 20002.4,
-                    "sodium": 117.8,
-                    "potassium": 21.5,
-                    "carbohydrates": 0.6,
-                    "protein": 6.3
-                },
-                "image_uris": {
-                    "filename": "9060-seasoning-spice-oregano.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 180.0
-            }
-        }
-    },
-    "instructions": {
-        "base_count": 1.0,
-        "sauce_count": 1.0,
-        "cheese_count": 1.0,
-        "topping_count": 2.0,
-        "extras_count": 1.0,
-        "baking_temp_in_celsius": 190,
-        "baking_time_in_minutes": 20
-    }
+	"unique_id": 0,
+	"name": "Flower Bloom Pies",
+	"random_seed": "2BF10C58",
+	"recipe_id": 1,
+	"base_ingredients": {
+		"crust0": {
+			"ingredient": {
+				"unique_id": "1000",
+				"index": 1,
+				"name": "thin",
+				"rarity_level": 1,
+				"classification": 3,
+				"category": "crust",
+				"attributes": {},
+				"nutrition": {
+					"servings": 1.0,
+					"calories": 1.0,
+					"fat": 1.0,
+					"cholesterol": 1.0,
+					"sodium": 1.0,
+					"potassium": 1.0,
+					"carbohydrates": 1.0,
+					"protein": 1.0
+				},
+				"image_uris": {
+					"filename": "1000-crust-thin.png",
+					"output_mask": "rarepizza-#####-crust"
+				}
+			},
+			"count": 1.0,
+			"instances": [{
+				"translation": [0.0, 0.0],
+				"rotation": 0.0,
+				"scale": 1.0,
+				"image_uri": "1000-crust-thin.png"
+			}]
+		},
+		"sauce0": {
+			"ingredient": {
+				"unique_id": "2000",
+				"index": 1,
+				"name": "tomato",
+				"rarity_level": 1,
+				"classification": 4,
+				"category": "sauce",
+				"attributes": {},
+				"nutrition": {
+					"servings": 1.0,
+					"calories": 1.0,
+					"fat": 1.0,
+					"cholesterol": 1.0,
+					"sodium": 1.0,
+					"potassium": 1.0,
+					"carbohydrates": 1.0,
+					"protein": 1.0
+				},
+				"image_uris": {
+					"filename": "2000-sauce-tomato.png",
+					"output_mask": "rarepizza-#####-sauce"
+				}
+			},
+			"count": 1.0,
+			"instances": [{
+				"translation": [0.0, 0.0],
+				"rotation": 0.0,
+				"scale": 1.0,
+				"image_uri": "2000-sauce-tomato.png"
+			}]
+		},
+		"cheese0": {
+			"ingredient": {
+				"unique_id": "3170",
+				"index": 1,
+				"name": "cheesecake",
+				"rarity_level": 1,
+				"classification": 5,
+				"category": "cheese",
+				"attributes": {},
+				"nutrition": {
+					"servings": 1.0,
+					"calories": 1.0,
+					"fat": 1.0,
+					"cholesterol": 1.0,
+					"sodium": 1.0,
+					"potassium": 1.0,
+					"carbohydrates": 1.0,
+					"protein": 1.0
+				},
+				"image_uris": {
+					"filename": "3170-cheese-cheesecake.png",
+					"output_mask": "rarepizza-#####-cheese"
+				}
+			},
+			"count": 1.0,
+			"instances": [{
+				"translation": [0.0, 0.0],
+				"rotation": 0.0,
+				"scale": 0.8888888888888888,
+				"image_uri": "3170-cheese-cheesecake.png"
+			}]
+		}
+	},
+	"layers": {
+		"topping0": {
+			"ingredient": {
+				"unique_id": "6421",
+				"index": 1,
+				"name": "goose",
+				"rarity_level": 1,
+				"classification": 6,
+				"category": "topping-eggs",
+				"attributes": {},
+				"nutrition": {
+					"servings": 1.0,
+					"calories": 1.0,
+					"fat": 1.0,
+					"cholesterol": 1.0,
+					"sodium": 1.0,
+					"potassium": 1.0,
+					"carbohydrates": 1.0,
+					"protein": 1.0
+				},
+				"image_uris": {
+					"filename": "6421-topping-eggs-goose.png",
+					"output_mask": "rarepizza-#####-topping-eggs"
+				}
+			},
+			"count": 8.0,
+			"instances": [{
+				"translation": [1536.0, 2304.0],
+				"rotation": -69.01185770750988,
+				"scale": 0.49347826086956526,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}, {
+				"translation": [1536.0, 1536.0],
+				"rotation": 150.1185770750988,
+				"scale": 0.7260869565217392,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}, {
+				"translation": [768.0, 1536.0],
+				"rotation": 81.81818181818181,
+				"scale": 0.6065217391304347,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}, {
+				"translation": [2304.0, 768.0],
+				"rotation": -76.12648221343873,
+				"scale": 0.3173913043478261,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}, {
+				"translation": [1536.0, 768.0],
+				"rotation": 162.92490118577075,
+				"scale": 0.5760869565217392,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}, {
+				"translation": [2304.0, 2304.0],
+				"rotation": -69.01185770750988,
+				"scale": 0.35652173913043483,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}, {
+				"translation": [2304.0, 1536.0],
+				"rotation": -125.92885375494072,
+				"scale": 0.691304347826087,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}, {
+				"translation": [768.0, 2304.0],
+				"rotation": 172.88537549407113,
+				"scale": 0.6586956521739131,
+				"image_uri": "6421-topping-eggs-goose.png"
+			}]
+		},
+		"topping1": {
+			"ingredient": {
+				"unique_id": "6855",
+				"index": 1,
+				"name": "tulip",
+				"rarity_level": 1,
+				"classification": 6,
+				"category": "topping-edibleflower",
+				"attributes": {},
+				"nutrition": {
+					"servings": 1.0,
+					"calories": 1.0,
+					"fat": 1.0,
+					"cholesterol": 1.0,
+					"sodium": 1.0,
+					"potassium": 1.0,
+					"carbohydrates": 1.0,
+					"protein": 1.0
+				},
+				"image_uris": {
+					"filename": "6855-topping-edibleflower-tulip.png",
+					"output_mask": "rarepizza-#####-topping-edibleflower"
+				}
+			},
+			"count": 8.0,
+			"instances": [{
+				"translation": [768.0, 1536.0],
+				"rotation": -0.7114624505928759,
+				"scale": 0.7130434782608697,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}, {
+				"translation": [1536.0, 768.0],
+				"rotation": 77.5494071146245,
+				"scale": 0.35,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}, {
+				"translation": [1536.0, 1536.0],
+				"rotation": -33.438735177865624,
+				"scale": 0.48260869565217396,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}, {
+				"translation": [768.0, 2304.0],
+				"rotation": -100.31620553359684,
+				"scale": 0.7478260869565219,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}, {
+				"translation": [1536.0, 2304.0],
+				"rotation": -19.209486166007906,
+				"scale": 0.7282608695652175,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}, {
+				"translation": [2304.0, 1536.0],
+				"rotation": 141.5810276679842,
+				"scale": 0.3978260869565218,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}, {
+				"translation": [2304.0, 768.0],
+				"rotation": -13.517786561264813,
+				"scale": 0.48260869565217396,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}, {
+				"translation": [2304.0, 2304.0],
+				"rotation": -49.09090909090909,
+				"scale": 0.37826086956521743,
+				"image_uri": "6855-topping-edibleflower-tulip.png"
+			}]
+		}
+	},
+	"shuffled_instances": [{
+		"translation": [1536.0, 2304.0],
+		"rotation": -69.01185770750988,
+		"scale": 0.49347826086956526,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}, {
+		"translation": [2304.0, 768.0],
+		"rotation": -76.12648221343873,
+		"scale": 0.3173913043478261,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}, {
+		"translation": [2304.0, 768.0],
+		"rotation": -13.517786561264813,
+		"scale": 0.48260869565217396,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [1536.0, 1536.0],
+		"rotation": -33.438735177865624,
+		"scale": 0.48260869565217396,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [768.0, 1536.0],
+		"rotation": 81.81818181818181,
+		"scale": 0.6065217391304347,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}, {
+		"translation": [1536.0, 1536.0],
+		"rotation": 150.1185770750988,
+		"scale": 0.7260869565217392,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}, {
+		"translation": [2304.0, 1536.0],
+		"rotation": 141.5810276679842,
+		"scale": 0.3978260869565218,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [2304.0, 1536.0],
+		"rotation": -125.92885375494072,
+		"scale": 0.691304347826087,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}, {
+		"translation": [1536.0, 768.0],
+		"rotation": 77.5494071146245,
+		"scale": 0.35,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [2304.0, 2304.0],
+		"rotation": -49.09090909090909,
+		"scale": 0.37826086956521743,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [768.0, 1536.0],
+		"rotation": -0.7114624505928759,
+		"scale": 0.7130434782608697,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [768.0, 2304.0],
+		"rotation": 172.88537549407113,
+		"scale": 0.6586956521739131,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}, {
+		"translation": [1536.0, 768.0],
+		"rotation": 162.92490118577075,
+		"scale": 0.5760869565217392,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}, {
+		"translation": [768.0, 2304.0],
+		"rotation": -100.31620553359684,
+		"scale": 0.7478260869565219,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [1536.0, 2304.0],
+		"rotation": -19.209486166007906,
+		"scale": 0.7282608695652175,
+		"image_uri": "6855-topping-edibleflower-tulip.png"
+	}, {
+		"translation": [2304.0, 2304.0],
+		"rotation": -69.01185770750988,
+		"scale": 0.35652173913043483,
+		"image_uri": "6421-topping-eggs-goose.png"
+	}],
+	"instructions": {
+		"crust_count": 1.0,
+		"sauce_count": 1.0,
+		"cheese_count": 1.0,
+		"topping_count": 2.0,
+		"extras_count": 1.0,
+		"baking_temp_in_celsius": 530.0,
+		"baking_time_in_minutes": 8.0
+	}
 }
