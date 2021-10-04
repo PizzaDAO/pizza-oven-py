@@ -23,7 +23,7 @@ Be running Linux or MacOS
 
 ### Developing locally with Docker
 
-Copy the .env.example file and rename it .env. You must fill in the Ethereum socket server with a Rinkeby websocket from [Alchemy.com](http://alchemy.com).
+Copy the .env.example file and rename it .env. You must fill in the ETHEREUM_RINKEBY_SOCKET_SERVER with a Rinkeby websocket from [Alchemy.com](http://alchemy.com).
 
 Run Docker on your machine before the next step.
 
@@ -102,49 +102,48 @@ TODO: verify that the job posts back and completes when finished and the result 
   },
 ```
 
-
-
-##  Python OrderAPI
+## Python OrderAPI
 
 ### Rendering local test pies with Postman
 
 We will spin up a server on your local machine running the pizza oven python app. Postman will allow you to send requests to the app to build out a test pie.
 
 #### Checkout and start server
+
 1. Checkout the feature/Gsheets branch
 2. Make sure you have access to the following Google sheets:
 
-	[**Pizza Types/Recipes**](https://docs.google.com/spreadsheets/d/1wHfP2I1m8_TV5tZt3FchI_zYgzZg9AomU7GOkof7TW8/edit?pli=1#gid=194105029) (owned by OmakaseChef)
+   [**Pizza Types/Recipes**](https://docs.google.com/spreadsheets/d/1wHfP2I1m8_TV5tZt3FchI_zYgzZg9AomU7GOkof7TW8/edit?pli=1#gid=194105029) (owned by OmakaseChef)
 
-	[**Ingredient List**](https://docs.google.com/spreadsheets/d/1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0/edit#gid=656807894) (owned by Snax)
-
+   [**Ingredient List**](https://docs.google.com/spreadsheets/d/1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0/edit#gid=656807894) (owned by Snax)
 
 3. Navigate to the root project folder and make the python environmernt
+
 ```bash
 make environment
 ```
+
 4. Start the local server
+
 ```bash
 make start
 ```
 
 #### Postman Setup
+
 1. Download and install - [**Postman Downloads**](https://www.postman.com/downloads/)
 2. In Postman, import the collection from the .postman folder in the root directory - 'Pizza Kitchen.postman_collection.json' (this folder is hidden by default)
 3. You should see a list of calls in your collection. You are ready to run pies!
 4. Pull all the remote Google sheets data and store it locally<br>
-Send  `dining_room —> dining_setup`<br>
-if URL is blank use:  <i>({{pizza-kitchen-url}}/api/{{version}}/dining_setup)</i><br>
-You only need to do this once. Run it again to update the local json recipes if remotes have changed
+   Send `dining_room —> dining_setup`<br>
+   if URL is blank use: <i>({{pizza-kitchen-url}}/api/{{version}}/dining_setup)</i><br>
+   You only need to do this once. Run it again to update the local json recipes if remotes have changed
 
 5. Make a pizza pie<br>
-	Send  `dining_room —> orderPizza`<br>
-Might take a minute or so, but you should see a pizza show up in the output folder in the root directory. Naming convention is unique-id_recipe-type_randomseed.png (0_Raw pies_4D01DE56.png)
-
+   Send `dining_room —> orderPizza`<br>
+   Might take a minute or so, but you should see a pizza show up in the output folder in the root directory. Naming convention is unique-id_recipe-type_randomseed.png (0_Raw pies_4D01DE56.png)
 
 ##### All done. Enjoy!
-
-
 
 Google Authentication error:
 A google login is required to pull data from a shared sheet. There is currently a token stored in /data to be used for this. It sometimes expires, and the app flow to login again fails. Make sure you have the latest token from the repo. Eventually we will need to fiugre out a better solution here… Suggestions welcome.
