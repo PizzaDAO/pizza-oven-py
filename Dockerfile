@@ -75,6 +75,7 @@ EXPOSE $PORT
 FROM base AS dev
 VOLUME [ "/app/app" ]
 VOLUME [ "/app/data" ]
+VOLUME [ "/app/fonts" ]
 VOLUME [ "/app/natron" ]
 VOLUME [ "/app/ingredients-db" ]
 VOLUME [ "/app/output" ]
@@ -84,6 +85,7 @@ CMD /start-reload.sh
 FROM base AS prod
 COPY ./app /app/app
 COPY ./data /app/data
+COPY ./fonts /app/fonts
 COPY ./natron /app/natron
 COPY ./ingredients-db /app/ingredients-db
 CMD ["/start.sh"]

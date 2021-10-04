@@ -16,6 +16,7 @@ services:
     volumes:
       - "./app:/app/app"
       - "./data:/app/data"
+      - "./fonts:/app/fonts"
       - "./natron:/app/natron"
       - "./ingredients-db:/app/ingredients-db"
       - "./output:/app/output"
