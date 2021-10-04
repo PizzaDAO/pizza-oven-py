@@ -1,46 +1,46 @@
 {
     "unique_id": 2356753620,
-    "name": "Simple MVP Cheese Doge Pizza",
+    "name": "Simple Crust Pizza",
     "random_seed": "52198947997422404454920108833917741998911196589945595445581078565118427695940",
     "recipe_id": 1,
     "base_ingredients": {
-        "crust": {
-            "ingredient": {
-                "unique_id": "1000",
-                "index": 2,
-                "name": "Traditional Thin Crust",
-                "rarity_level": 1,
-                "classification": 3,
-                "category": "thin",
-                "attributes": {
-                    "state": "overcooked",
-                    "material": "traditional"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 260.2,
-                    "fat": 10.5,
-                    "cholesterol": 23.0,
-                    "sodium": 657.6,
-                    "potassium": 166.14,
-                    "carbohydrates": 30.1,
-                    "protein": 11.5
-                },
-                "image_uris": {
-                    "filename": "1000-crust-thin.png",
-                    "output_mask": "rarepizza-#####-layer-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 0.0
-            }
-        }
+		"crust0": {
+			"ingredient": {
+				"unique_id": "1000",
+				"index": 1,
+				"name": "thin",
+				"rarity_level": 1,
+				"classification": 3,
+				"category": "crust",
+				"attributes": {},
+				"nutrition": {
+					"servings": 1.0,
+					"calories": 1.0,
+					"fat": 1.0,
+					"cholesterol": 1.0,
+					"sodium": 1.0,
+					"potassium": 1.0,
+					"carbohydrates": 1.0,
+					"protein": 1.0
+				},
+				"image_uris": {
+					"filename": "1000-crust-thin.png",
+					"output_mask": "rarepizza-#####-crust"
+				}
+			},
+			"count": 1.0,
+			"instances": [{
+				"translation": [0.0, 0.0],
+				"rotation": 0.0,
+				"scale": 1.0,
+				"image_uri": "1000-crust-thin.png"
+			}]
+		}
     },
     "layers": {},
+	"shuffled_instances": [],
     "instructions": {
+		"crust_count": 1.0,
         "base_count": 1.0,
         "sauce_count": 1.0,
         "cheese_count": 1.0,
