@@ -198,7 +198,9 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(cache_dir, f"shuffled_layer_{layer.unique_id}_{layer.index}.json")
+        file_path = os.path.join(
+            cache_dir, f"shuffled_layer_{layer.unique_id}_{layer.index}.json"
+        )
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
@@ -210,6 +212,7 @@ class Renderer:
         """draw a watermark on the pizza"""
         draw = ImageDraw.Draw(base)
         font_path = os.path.join(self.project_path, "../fonts/Roboto-Medium.ttf")
+        print(font_path)
         font = ImageFont.truetype(font_path, DATA_FONT_SIZE)
         base_ingredients = ""
         for ingredient in order.base_ingredients.values():
@@ -218,9 +221,7 @@ class Renderer:
         layer_ingredients = ""
         for ingredient in order.layers.values():
             i = ingredient.ingredient
-            layer_ingredients += (
-                i.unique_id + " " + i.name + " - " + i.category + "\n"
-            )
+            layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + "\n"
         pizza_data = (
             "Pizza_id: "
             + str(order.unique_id)
@@ -243,9 +244,7 @@ class Renderer:
         draw.text((10, 10), pizza_data, fill="white", font=font, align="left")
 
         # add watermark
-        watermark_path = os.path.join(
-            self.project_path, "../data/" + WATERMARK_FILE
-        )
+        watermark_path = os.path.join(self.project_path, "../data/" + WATERMARK_FILE)
         watermark_image = Image.open(watermark_path)
         # bottom right corner for 4k image
         x = 4096 - watermark_image.width
@@ -289,8 +288,14 @@ class Renderer:
             self.draw_watermark(base, order)
 
         # Give the final output a unique filename: ORDER-ID_PIZZA-TYPE-NAME_RANDOM-SEED.png
-        unique_filename = str(order.unique_id) + "_" + order.name + "_" + str(order.random_seed + ".png")
-        
+        unique_filename = (
+            str(order.unique_id)
+            + "_"
+            + order.name
+            + "_"
+            + str(order.random_seed + ".png")
+        )
+
         base.save(os.path.join(output_dir, unique_filename))
 
         return unique_filename
@@ -310,7 +315,7 @@ class Renderer:
         topping_layer_index = 0
 
         #
-        #SINGLE IGREDIENT TOPPING LAYERS
+        # SINGLE IGREDIENT TOPPING LAYERS
         #
         # # iterate through each of the layers and render
         # for (_, ingredient) in order.layers.items():
@@ -333,7 +338,7 @@ class Renderer:
         layer_count = ceil(instance_count / max)
 
         for i in range(layer_count):
-            if(instance_count - (i * max) < max):
+            if instance_count - (i * max) < max:
                 batch_count = instance_count % max
             else:
                 batch_count = max
@@ -342,15 +347,11 @@ class Renderer:
             batch = order.shuffled_instances[sliceObj]
             # Create a ShuffledLayer
             shuffle_layer = ShuffledLayer(
-                unique_id=order.unique_id,
-                index=i,
-                count=batch_count,
-                instances=batch
-                )
+                unique_id=order.unique_id, index=i, count=batch_count, instances=batch
+            )
             result = self.render_shuffled_layer(topping_layer_index, shuffle_layer)
             rendered_layer_files.append(result)
             topping_layer_index += 1
-
 
         #       for (key, ingredient) in order.special.items():
         #           result = self.render_ingredient(ingredient)
@@ -398,18 +399,21 @@ class Renderer:
             c = "extras"
         return c
 
-    def render_shuffled_layer(self, layer_index:int, layer:ShuffledLayer) -> str:
+    def render_shuffled_layer(self, layer_index: int, layer: ShuffledLayer) -> str:
         # Build the output filename and save it allong with the cached Ingredient
-        category = self.map_classification(Classification.topping) # TEMP default to "topping"
+        category = self.map_classification(
+            Classification.topping
+        )  # TEMP default to "topping"
         output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
         layer.output_mask = output_filename
 
         data_path = self.cache_layer(layer)
-        
+
         # Using topping renderer as default here - should be layer specific?
         # Possibly requires input from Natron dev
         ToppingRenderer().render(
-            self.natron_path, self.project_path, data_path, self.frame)
+            self.natron_path, self.project_path, data_path, self.frame
+        )
 
         return output_filename
 
