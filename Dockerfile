@@ -73,6 +73,7 @@ EXPOSE $PORT
 
 # mount the volume locally in DEV mode
 FROM base AS dev
+VOLUME [ "/app/.cache" ]
 VOLUME [ "/app/app" ]
 VOLUME [ "/app/data" ]
 VOLUME [ "/app/fonts" ]
