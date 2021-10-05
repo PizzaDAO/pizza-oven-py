@@ -152,7 +152,7 @@ class CheeseRenderer:
         print(f"CheeseRenderer:render {data_path}")
         os.environ["CHEESE_DATA_PATH"] = data_path
         try:
-            subprocess.run(
+            result = subprocess.run(
                 [
                     f"{executable_path}/NatronRenderer",
                     "-l",
