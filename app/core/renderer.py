@@ -7,7 +7,7 @@ import os
 import subprocess
 import json
 
-from app.models.recipe import Classification
+from app.models.recipe import Classification, classification_as_string
 from app.models.prep import KitchenOrder, MadeIngredient, ShuffledLayer
 from app.models.pizza import HotPizza
 from app.core.config import Settings
@@ -31,17 +31,26 @@ class BoxRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
-        # TODO: things like capture stdout or errors
+        print(f"BoxRenderer:render {data_path}")
         os.environ["BOX_DATA_PATH"] = data_path
-        subprocess.check_call(
-            [
-                f"{executable_path}/NatronRenderer",
-                "-l",
-                f"{current}/natron/box.py",
-                f"{project_path}/box.ntp",
-                f"{frame}",
-            ]
-        )
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/box.py",
+                    f"{project_path}/box.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"BoxRenderer exited with error code: {e.returncode}")
+            print(e)
 
 
 class PaperRenderer:
@@ -51,16 +60,26 @@ class PaperRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
+        print(f"PaperRenderer:render {data_path}")
         os.environ["PAPER_DATA_PATH"] = data_path
-        subprocess.check_call(
-            [
-                f"{executable_path}/NatronRenderer",
-                "-l",
-                f"{current}/natron/paper.py",
-                f"{project_path}/waxpaper.ntp",
-                f"{frame}",
-            ]
-        )
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/paper.py",
+                    f"{project_path}/waxpaper.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"PaperRenderer exited with error code: {e.returncode}")
+            print(e)
 
 
 class CrustRenderer:
@@ -70,16 +89,28 @@ class CrustRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
+        print(f"CrustRenderer:render {data_path}")
         os.environ["CRUST_DATA_PATH"] = data_path
-        subprocess.check_call(
-            [
-                f"{executable_path}/NatronRenderer",
-                "-l",
-                f"{current}/natron/crust.py",
-                f"{project_path}/crust.ntp",
-                f"{frame}",
-            ]
-        )
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/crust.py",
+                    f"{project_path}/crust.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True
+                # stdout=subprocess.PIPE,
+                # stderr=subprocess.STDOUT,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"CrustRenderer exited with error code: {e.returncode}")
+            print(e)
 
 
 class SauceRenderer:
@@ -89,16 +120,26 @@ class SauceRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
+        print(f"SauceRenderer:render {data_path}")
         os.environ["SAUCE_DATA_PATH"] = data_path
-        subprocess.check_call(
-            [
-                f"{executable_path}/NatronRenderer",
-                "-l",
-                f"{current}/natron/sauce.py",
-                f"{project_path}/sauce.ntp",
-                f"{frame}",
-            ]
-        )
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/sauce.py",
+                    f"{project_path}/sauce.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"SauceRenderer exited with error code: {e.returncode}")
+            print(e)
 
 
 class CheeseRenderer:
@@ -108,16 +149,26 @@ class CheeseRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
+        print(f"CheeseRenderer:render {data_path}")
         os.environ["CHEESE_DATA_PATH"] = data_path
-        subprocess.check_call(
-            [
-                f"{executable_path}/NatronRenderer",
-                "-l",
-                f"{current}/natron/cheese.py",
-                f"{project_path}/cheese.ntp",
-                f"{frame}",
-            ]
-        )
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/cheese.py",
+                    f"{project_path}/cheese.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"CheeseRenderer exited with error code: {e.returncode}")
+            print(e)
 
 
 class ToppingRenderer:
@@ -127,16 +178,27 @@ class ToppingRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
+        print(f"ToppingRenderer:render {data_path}")
         os.environ["TOPPING_DATA_PATH"] = data_path
-        subprocess.check_call(
-            [
-                f"{executable_path}/NatronRenderer",
-                "-l",
-                f"{current}/natron/topping.py",
-                f"{project_path}/topping.ntp",
-                f"{frame}",
-            ]
-        )
+
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/topping.py",
+                    f"{project_path}/topping.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"ToppingRenderer exited with error code: {e.returncode}")
+            print(e)
 
 
 class ExtraRenderer:
@@ -146,16 +208,26 @@ class ExtraRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
+        print(f"ExtraRenderer:render {data_path}")
         os.environ["EXTRA_DATA_PATH"] = data_path
-        subprocess.check_call(
-            [
-                f"{executable_path}/NatronRenderer",
-                "-l",
-                f"{current}/natron/extra.py",
-                f"{project_path}/extra.ntp",
-                f"{frame}",
-            ]
-        )
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/extra.py",
+                    f"{project_path}/extra.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"ExtraRenderer exited with error code: {e.returncode}")
+            print(e)
 
 
 @dataclass
@@ -198,7 +270,9 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(cache_dir, f"shuffled_layer_{layer.unique_id}_{layer.index}.json")
+        file_path = os.path.join(
+            cache_dir, f"shuffled_layer_{layer.unique_id}_{layer.index}.json"
+        )
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
@@ -208,8 +282,10 @@ class Renderer:
 
     def draw_watermark(self, base: Image, order: KitchenOrder):
         """draw a watermark on the pizza"""
+        print("draw_watermark")
         draw = ImageDraw.Draw(base)
         font_path = os.path.join(self.project_path, "../fonts/Roboto-Medium.ttf")
+        print(font_path)
         font = ImageFont.truetype(font_path, DATA_FONT_SIZE)
         base_ingredients = ""
         for ingredient in order.base_ingredients.values():
@@ -218,9 +294,7 @@ class Renderer:
         layer_ingredients = ""
         for ingredient in order.layers.values():
             i = ingredient.ingredient
-            layer_ingredients += (
-                i.unique_id + " " + i.name + " - " + i.category + "\n"
-            )
+            layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + "\n"
         pizza_data = (
             "Pizza_id: "
             + str(order.unique_id)
@@ -243,9 +317,7 @@ class Renderer:
         draw.text((10, 10), pizza_data, fill="white", font=font, align="left")
 
         # add watermark
-        watermark_path = os.path.join(
-            self.project_path, "../data/" + WATERMARK_FILE
-        )
+        watermark_path = os.path.join(self.project_path, "../data/" + WATERMARK_FILE)
         watermark_image = Image.open(watermark_path)
         # bottom right corner for 4k image
         x = 4096 - watermark_image.width
@@ -255,7 +327,7 @@ class Renderer:
     def flatten_image(self, layers: List[str], order: KitchenOrder) -> str:
         """flatten the image layers into a single image and return its filename"""
 
-        print("flattening")
+        print("flatten_image")
         print(layers)
 
         output_dir = os.path.join(
@@ -263,8 +335,7 @@ class Renderer:
             "../output/",
         )
         if not os.path.exists(output_dir):
-            print("output directory not found")
-            return ""
+            os.makedirs(output_dir)
 
         images: List[Image.Image] = []
         for layer in layers:
@@ -289,14 +360,21 @@ class Renderer:
             self.draw_watermark(base, order)
 
         # Give the final output a unique filename: ORDER-ID_PIZZA-TYPE-NAME_RANDOM-SEED.png
-        unique_filename = str(order.unique_id) + "_" + order.name + "_" + str(order.random_seed + ".png")
-        
+        unique_filename = (
+            str(order.unique_id)
+            + "_"
+            + order.name
+            + "_"
+            + str(order.random_seed + ".png")
+        )
+
         base.save(os.path.join(output_dir, unique_filename))
 
         return unique_filename
 
     def render_pizza(self, job_id: str, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
+        print("render_pizza")
         rendered_layer_files: List[str] = []
 
         base_layer_index = 0
@@ -309,8 +387,16 @@ class Renderer:
 
         topping_layer_index = 0
 
+        # Make sure there is an output folder to write to
+        output_dir = os.path.join(
+            self.project_path,
+            "../output/",
+        )
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
         #
-        #SINGLE IGREDIENT TOPPING LAYERS
+        # SINGLE IGREDIENT TOPPING LAYERS
         #
         # # iterate through each of the layers and render
         # for (_, ingredient) in order.layers.items():
@@ -328,30 +414,31 @@ class Renderer:
         #
         # BATCHING
         #
-        max = 30
-        instance_count = ceil(len(order.shuffled_instances))
-        layer_count = ceil(instance_count / max)
+        max_instances = 30
+        instance_count = ceil(len(order.instances))
+        layer_count = ceil(instance_count / max_instances)
 
-        for i in range(layer_count):
-            if(instance_count - (i * max) < max):
-                batch_count = instance_count % max
+        for index in range(layer_count):
+            if instance_count - (index * max_instances) < max_instances:
+                batch_count = instance_count % max_instances
             else:
-                batch_count = max
+                batch_count = max_instances
 
             sliceObj = slice(0, batch_count)
-            batch = order.shuffled_instances[sliceObj]
+            batch = order.instances[sliceObj]
+
             # Create a ShuffledLayer
             shuffle_layer = ShuffledLayer(
                 unique_id=order.unique_id,
-                index=i,
+                index=index,
                 count=batch_count,
-                instances=batch
-                )
-            result = self.render_shuffled_layer(topping_layer_index, shuffle_layer)
+                instances=batch,
+            )
+            result = self.render_instances(topping_layer_index, shuffle_layer)
             rendered_layer_files.append(result)
             topping_layer_index += 1
 
-
+        # render any special ingredients
         #       for (key, ingredient) in order.special.items():
         #           result = self.render_ingredient(ingredient)
         #           if not result:
@@ -380,45 +467,34 @@ class Renderer:
             },
         )
 
-    def map_classification(self, classification: Classification) -> str:
-        c = "base"
-        if classification == Classification.box:
-            c = "box"
-        if classification == Classification.paper:
-            c = "paper"
-        if classification == Classification.crust:
-            c = "crust"
-        if classification == Classification.sauce:
-            c = "sauce"
-        if classification == Classification.cheese:
-            c = "cheese"
-        if classification == Classification.topping:
-            c = "topping"
-        if classification == Classification.extras:
-            c = "extras"
-        return c
-
-    def render_shuffled_layer(self, layer_index:int, layer:ShuffledLayer) -> str:
+    def render_instances(self, layer_index: int, layer: ShuffledLayer) -> str:
         # Build the output filename and save it allong with the cached Ingredient
-        category = self.map_classification(Classification.topping) # TEMP default to "topping"
-        output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
+        print("render_shuffled_layer")
+        category = classification_as_string(
+            Classification.topping
+        )  # TEMP default to "topping"
+        output_filename = f"{self.frame}-instances-{category}-{layer_index}.png"
         layer.output_mask = output_filename
 
         data_path = self.cache_layer(layer)
-        
+
         # Using topping renderer as default here - should be layer specific?
         # Possibly requires input from Natron dev
         ToppingRenderer().render(
-            self.natron_path, self.project_path, data_path, self.frame)
+            self.natron_path, self.project_path, data_path, self.frame
+        )
 
         return output_filename
 
     def render_ingredient(self, layer_index: int, ingredient: MadeIngredient) -> str:
         """render the ingredient"""
 
+        print(f"render_ingredient: {ingredient.ingredient.classification.name}")
         # Build the output filename and save it allong with the cached Ingredient
-        category = self.map_classification(ingredient.ingredient.classification)
-        output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
+        category = classification_as_string(ingredient.ingredient.classification)
+        output_filename = (
+            f"{self.frame}-{category}-{ingredient.ingredient.name}-{layer_index}.png"
+        )
         ingredient.ingredient.image_uris["output_mask"] = output_filename
 
         data_path = self.cache_ingredient(ingredient)

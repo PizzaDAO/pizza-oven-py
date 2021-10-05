@@ -3,82 +3,49 @@
     "name": "My Cool First Super Rare Pizza Test With Everything!",
     "random_seed": "52198947997422404454920108833917741998911196589945595445581078565118427695940",
     "recipe_id": 1,
-    "base_ingredients": {},
-    "layers": {
-        "sauce-default": {
-            "ingredient": {
-                "unique_id": "2000",
-                "index": 0,
-                "name": "Traditional Pomodoro Tomato Sauce",
-                "rarity_level": 1,
-                "classification": 4,
-                "category": "traditional",
-                "attributes": {
-                    "state": "thin",
-                    "material": "tomato"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 80.5,
-                    "fat": 0.7,
-                    "cholesterol": 0.0,
-                    "sodium": 1151.7,
-                    "potassium": 900.4,
-                    "carbohydrates": 17.7,
-                    "protein": 3.5
-                },
-                "image_uris": {
-                    "filename": "2010-sauce-tomato.png",
-                    "output_mask": "rarepizza-#####-sauce-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 0.0
-            }
-        },
-        "sauce-2010": {
-            "ingredient": {
-                "unique_id": "2010",
-                "index": 1,
-                "name": "Traditional Pesto Sauce",
-                "rarity_level": 1,
-                "classification": 4,
-                "category": "traditional",
-                "attributes": {
-                    "state": "thin",
-                    "material": "pesto"
-                },
-                "nutrition": {
-                    "servings": 8.0,
-                    "calories": 80.5,
-                    "fat": 0.7,
-                    "cholesterol": 0.0,
-                    "sodium": 1151.7,
-                    "potassium": 900.4,
-                    "carbohydrates": 17.7,
-                    "protein": 3.5
-                },
-                "image_uris": {
-                    "filename": "2010-sauce-pesto.png",
-                    "output_mask": "rarepizza-#####-sauce-%s.png"
-                }
-            },
-            "prep": {
-                "emission_count": 1.0,
-                "emission_density": 1.0,
-                "particle_scale": 1.0,
-                "rotation": 0.0
-            }
-        }
+    "base_ingredients": {
+		"sauce0": {
+			"ingredient": {
+				"unique_id": "2000",
+				"index": 1,
+				"name": "tomato",
+				"rarity_level": 1,
+				"classification": 4,
+				"category": "sauce",
+				"attributes": {},
+				"nutrition": {
+					"servings": 1.0,
+					"calories": 1.0,
+					"fat": 1.0,
+					"cholesterol": 1.0,
+					"sodium": 1.0,
+					"potassium": 1.0,
+					"carbohydrates": 1.0,
+					"protein": 1.0
+				},
+				"image_uris": {
+					"filename": "2000-sauce-tomato.png",
+					"output_mask": "rarepizza-#####-sauce"
+				}
+			},
+			"count": 1.0,
+			"instances": [{
+				"translation": [0.0, 0.0],
+				"rotation": 0.0,
+				"scale": 1.0,
+				"image_uri": "2000-sauce-tomato.png"
+			}]
+		}
     },
+    "layers": {},
+	"shuffled_instances": [],
     "instructions": {
+		"crust_count": 1.0,
+        "base_count": 1.0,
         "sauce_count": 1.0,
         "cheese_count": 1.0,
-        "topping_count": 8.0,
-        "extras_count": 2.0,
+        "topping_count": 2.0,
+        "extras_count": 1.0,
         "baking_temp_in_celsius": 190,
         "baking_time_in_minutes": 20
     }

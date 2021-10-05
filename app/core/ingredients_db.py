@@ -187,21 +187,13 @@ def parse_ingredient(row) -> ScopedIngredient:
         protein=1.0,
     )
 
-    classification = Classification.box
     category = row["category"]
-    if "topping" in category:
-        classification = Classification.topping
-    if category == "paper":
-        classification = Classification.paper
-    if category == "crust":
-        classification = Classification.crust
-    if category == "sauce":
-        classification = Classification.sauce
-    if category == "cheese":
-        classification = Classification.cheese
+    classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
-    mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
+    mask = (
+        "rarepizza-#####-" + category + "%s" + ".png"
+    )  # Will be overwritten by Renderer
     ingredient = Ingredient(
         unique_id=row["unique_id"],
         index=1,
@@ -226,11 +218,12 @@ def parse_ingredient(row) -> ScopedIngredient:
         ),
     )
 
-    scoped.scope = parse_ranges(row,scoped.scope)
+    scoped.scope = parse_ranges(row, scoped.scope)
 
     return scoped
 
-def parse_ranges(row, scope:IngredientScope) -> IngredientScope:
+
+def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
     # Add the scope options: on_disk(not used):inches:inch_variance:min_per:max_per:pie_count:scatters:description
     # Use if statements to defend against blank cells
     if "min_per" in row.keys() and "max_per" in row.keys():
@@ -248,21 +241,26 @@ def parse_ranges(row, scope:IngredientScope) -> IngredientScope:
 
                     base_categories = ["crust", "sauce", "cheese"]
                     if row["category"] in base_categories:
-                        scope.particle_scale = get_scale_values(inches, inch_variance, BASE_PIXEL_SIZE)
+                        scope.particle_scale = get_scale_values(
+                            inches, inch_variance, BASE_PIXEL_SIZE
+                        )
                     else:
-                        scope.particle_scale = get_scale_values(inches, inch_variance, TOPPING_PIXEL_SIZE)
-                
+                        scope.particle_scale = get_scale_values(
+                            inches, inch_variance, TOPPING_PIXEL_SIZE
+                        )
+
     return scope
 
-def get_scale_values(inches, variance, pixel_size) -> Tuple[float,float]:
+
+def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     min_size = inches - variance
     max_size = inches + variance
     # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
-    min_scale = min_size / (18 / (3072/pixel_size))
-    max_scale = max_size / (18 / (3072/pixel_size))
+    min_scale = min_size / (18 / (3072 / pixel_size))
+    max_scale = max_size / (18 / (3072 / pixel_size))
 
     return (min_scale, max_scale)
-    
+
 
 def parse_id(text) -> str:
     words = text.split("-")
@@ -338,4 +336,3 @@ def save_recipe(recipe: Recipe):
 
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
-
