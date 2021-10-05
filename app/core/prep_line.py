@@ -1,4 +1,4 @@
-from typing import Dict, Tuple
+from typing import Dict, Tuple, List
 from app.models.recipe import (
     Recipe,
     INGREDIENT_KEY,
@@ -30,7 +30,7 @@ __all__ = ["reduce"]
 
 def reduce(recipe: Recipe) -> KitchenOrder:
     """reduce the range values of a recipe to scalar values"""
-    reduced_base: Dict[INGREDIENT_KEY, MadeIngredient] = {}
+    selected_base_ingredients: Dict[INGREDIENT_KEY, MadeIngredient] = {}
     reduced_layers: Dict[INGREDIENT_KEY, MadeIngredient] = {}
 
     # get a random seed
@@ -42,25 +42,29 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         from_hex(recipe.random_seed), nonce
     )
 
-    ingredient_count = select_ingredient_count(
+    order_instructions = select_ingredient_count(
         deterministic_seed, nonce, recipe.instructions
     )
-    print(ingredient_count)
+    print(f"creating kitchen order for recipe: {recipe.name}")
+    print("instructions:")
+    print(order_instructions)
 
     # BASE INGREDIENTS
     # TODO: respect the ingredient count selected in the assignment above
     # for (key, value) in recipe.base_ingredients.items():
     # reduced_base[key] = select_prep(deterministic_seed, nonce, value)
     # sort the base dict into categories that we can select from
-    sorted_base_dict = sort_dict(recipe.base_ingredients)
+    base_ingredients = sort_dict(recipe.base_ingredients)
     # map the ingredient categories to the MadeInstructions counts
-    base_count_dict = {
-        "crust": ingredient_count.crust_count,
-        "sauce": ingredient_count.sauce_count,
-        "cheese": ingredient_count.cheese_count,
+    base_ingredient_counts = {
+        "box": order_instructions.box_count,
+        "paper": order_instructions.paper_count,
+        "crust": order_instructions.crust_count,
+        "sauce": order_instructions.sauce_count,
+        "cheese": order_instructions.cheese_count,
     }
-    reduced_base = select_ingredients(
-        random_seed, nonce, base_count_dict, sorted_base_dict
+    selected_base_ingredients = select_ingredients(
+        random_seed, nonce, base_ingredient_counts, base_ingredients
     )
 
     # LAYER INGREDIENTS
@@ -70,8 +74,8 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     sorted_layer_dict = sort_dict(recipe.layers)
     # map the ingredient categories to the MadeInstructions counts
     layer_count_dict = {
-        "topping": ingredient_count.topping_count,
-        "extras": ingredient_count.extras_count,
+        "topping": order_instructions.topping_count,
+        "extras": order_instructions.extras_count,
     }
     reduced_layers = select_ingredients(
         random_seed, nonce, layer_count_dict, sorted_layer_dict
@@ -81,7 +85,7 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     shuffled_instances = []
     for (_, ingredient) in reduced_layers.items():
         shuffled_instances += ingredient.instances
-        
+
     # A list of all the instances - shuffled
     shuffled_instances = deterministic_shuffle(shuffled_instances)
 
@@ -90,11 +94,10 @@ def reduce(recipe: Recipe) -> KitchenOrder:
         name=recipe.name,
         random_seed=to_hex(random_seed),
         recipe_id=recipe.unique_id,
-        base_ingredients=reduced_base,
+        base_ingredients=selected_base_ingredients,
         layers=reduced_layers,
-        instaces=shuffled_instances,
-        instructions=ingredient_count,
-        shuffled_instances=shuffled_instances,
+        instances=shuffled_instances,
+        instructions=order_instructions,
     )
 
 
@@ -102,7 +105,9 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
     reduced_dict = {}
     for key in count_dict:
         if key in ingredient_dict.keys():
-            made_count = int(count_dict[key])  # This is the number of ingredient layers per pizza
+            made_count = int(
+                count_dict[key]
+            )  # This is the number of ingredient layers per pizza
             for i in range(0, made_count):
                 # choose the ingredients
                 options = ingredient_dict[key]
@@ -111,15 +116,20 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
                 ingredient = ingredient_dict[key][selected_ind]  # MadeIngredient
                 # need unique keys so we dont overwite toppings with multiple instances
                 identifier = key + str(i)
-                reduced_dict[identifier] = select_prep(deterministic_seed, nonce, ingredient)
+                reduced_dict[identifier] = select_prep(
+                    deterministic_seed, nonce, ingredient
+                )
 
-                print("We chose %s for the %s"%(reduced_dict[identifier].ingredient.name,key))
+                print(
+                    "We chose %s for the %s"
+                    % (reduced_dict[identifier].ingredient.name, key)
+                )
 
     return reduced_dict
 
 
 def sort_dict(ingredient_dict) -> dict:
-    sorted_dict = {}
+    sorted_dict: Dict[str, List[ScopedIngredient]] = {}
     for scoped in ingredient_dict:
         scoped_ing: ScopedIngredient = ingredient_dict[scoped]
         category = scoped_ing.ingredient.category
@@ -128,7 +138,7 @@ def sort_dict(ingredient_dict) -> dict:
         category = category.split("-")[0]
         # Split up the base ingredients dict into lists for each category - makes selecting easier
         if category not in sorted_dict.keys():
-            sorted_dict[category] = list()
+            sorted_dict[category] = []
         sorted_dict[category].append(
             scoped_ing
         )  # key=category : val=list of ScopedIngredients
@@ -144,7 +154,14 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
 
     if scope.scope.scatter_types[0] == ScatterType.none:
         scale = scope.scope.particle_scale[0]
-        instances = [MadeIngredientPrep(translation=(0.0, 0.0), rotation=0.0, scale=scale, image_uri=scope.ingredient.image_uris["filename"])]
+        instances = [
+            MadeIngredientPrep(
+                translation=(0.0, 0.0),
+                rotation=0.0,
+                scale=scale,
+                image_uri=scope.ingredient.image_uris["filename"],
+            )
+        ]
     else:
         instances = RandomScatter(seed, nonce).evaluate(scope)
 
@@ -153,9 +170,9 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     #
     # Unless better solution from comment above
     if "topping" in scope.ingredient.category:
-        #instances = TreeRing(seed, nonce).evaluate(scope.scope)
+        # instances = TreeRing(seed, nonce).evaluate(scope.scope)
         instances = Grid(seed, nonce).evaluate(scope)
-        #instances = RandomScatter(seed, nonce).evaluate(scope)
+        # instances = RandomScatter(seed, nonce).evaluate(scope)
 
     return MadeIngredient(
         ingredient=scope.ingredient,
@@ -173,6 +190,8 @@ def select_ingredient_count(
     # rounding floats here
     # assuming the ranges will be supplied from Google Sheets in the pizza type sheet
     return MadeInstructions(
+        box_count=1,
+        paper_count=1,
         crust_count=1,
         sauce_count=round(select_value(seed, nonce, scope.sauce_count), 0),
         cheese_count=round(select_value(seed, nonce, scope.cheese_count), 0),

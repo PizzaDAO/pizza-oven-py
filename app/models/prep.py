@@ -17,7 +17,9 @@ SCALAR = float
 class MadeInstructions(Base):
     """pizza level instructions seeded by the RNG """
 
-    crust_count: SCALAR
+    box_count: SCALAR = 1
+    paper_count: SCALAR = 1
+    crust_count: SCALAR = 1
     sauce_count: SCALAR
     cheese_count: SCALAR
     topping_count: SCALAR
@@ -38,13 +40,16 @@ class MadeIngredientPrep(Base):
     image_uri: Optional[str]
     """path to ingredient image"""
 
+
 class ShuffledLayer(Base):
     """struct for layers of depth swapped ingredient instances"""
+
     unique_id: str
     index: SCALAR
     count: SCALAR
     instances: List[MadeIngredientPrep]
     output_mask: Optional[str]
+
 
 class MadeIngredient(Base):
     """struct for serializing the ingredient and its prep instructions"""
@@ -69,6 +74,6 @@ class KitchenOrder(Base):
     """collection of base ingredients that coule be used"""
     layers: Dict[INGREDIENT_KEY, MadeIngredient]
     """collection of layers ingredients that will ber used"""
-    shuffled_instances: List[MadeIngredientPrep]
+    instances: List[MadeIngredientPrep]
     """shuffled list of all instances - provides depth in arrangements"""
     instructions: MadeInstructions
