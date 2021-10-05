@@ -10,6 +10,7 @@ from google.oauth2.credentials import Credentials
 from app.core.config import Settings
 
 from app.models.recipe import *
+from app.models.recipe import Rarity
 
 settings = Settings()
 
@@ -119,6 +120,8 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
     for name in sheet_data[0]:
         column_headers.append(name)
 
+    current_ingredient_code = "000"
+    current_rarity: Rarity = Rarity.common
     # Now get all the rows in the sheet
     for row in range(1, len(sheet_data)):
         # Only add the line if there is a numeric ID
@@ -130,8 +133,32 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
             # Use the unique ID for the Key and the row Dictionary for the value
             # Easy to look up ingredients by unique id
             if sheet_data[row][0]:
+                # Get the 3-digit ingredient code
+                next_ingredient_code = sheet_data[row][0][0:3]
+
+                if (
+                    next_ingredient_code
+                    and next_ingredient_code != current_ingredient_code
+                ):
+                    current_ingredient_code = next_ingredient_code
+                    # Assign rarity here for all variants of an ingredient
+                    # We do this here because in order to track the ingredient code
+                    if record_entry["topping rarity"]:
+                        current_rarity = map_rarity(record_entry["topping rarity"])
+                    else:
+                        current_rarity = Rarity.undefined
+                    print(
+                        "We have a new ingredient: "
+                        + current_ingredient_code
+                        + " with rarity: "
+                        + str(current_rarity)
+                    )
+
                 unique_id = sheet_data[row][0]
                 ingredient: ScopedIngredient = parse_ingredient(record_entry)
+                # Assign top level id and rarity to ingredient
+                ingredient.ingredient.ingredient_rarity = current_rarity
+                ingredient.ingredient.ingredient_id = current_ingredient_code
                 ingredients.update({unique_id: ingredient})
             else:
                 # Account for the occasional blank row - probably a cleaner way to do this...
@@ -140,6 +167,24 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
 
     # TODO - Make toppings_dict a bonafied toppings datatype
     return ingredients
+
+
+def map_rarity(rarity_string) -> Rarity:
+    if rarity_string == "common":
+        return Rarity.common
+    if rarity_string == "uncommon":
+        return Rarity.uncommon
+    if rarity_string == "rare":
+        return Rarity.rare
+    if rarity_string == "epic":
+        return Rarity.epic
+    if rarity_string == "grail":
+        return Rarity.grail
+    if rarity_string is None:
+        return Rarity.undefined
+
+    # shouldn't get here
+    return Rarity.common
 
 
 # parse the pizza types into a collection we can use to drive random recipe making
@@ -202,11 +247,16 @@ def parse_ingredient(row) -> ScopedIngredient:
 
     image_uri = row["filename_paste"] + ".png"
     mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
+    variant_rarity = map_rarity(row["variant rarity"])
+    variant_id = row["unique_id"][3:4]
     ingredient = Ingredient(
         unique_id=row["unique_id"],
+        ingredient_id="00",
+        variant_id=variant_id,
         index=1,
         name=row["topping"],
-        rarity_level=1,
+        ingredient_rarity=Rarity.common,
+        variant_rarity=variant_rarity,
         classification=classification,
         category=category,
         attributes={},
@@ -226,11 +276,12 @@ def parse_ingredient(row) -> ScopedIngredient:
         ),
     )
 
-    scoped.scope = parse_ranges(row,scoped.scope)
+    scoped.scope = parse_ranges(row, scoped.scope)
 
     return scoped
 
-def parse_ranges(row, scope:IngredientScope) -> IngredientScope:
+
+def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
     # Add the scope options: on_disk(not used):inches:inch_variance:min_per:max_per:pie_count:scatters:description
     # Use if statements to defend against blank cells
     if "min_per" in row.keys() and "max_per" in row.keys():
@@ -248,21 +299,26 @@ def parse_ranges(row, scope:IngredientScope) -> IngredientScope:
 
                     base_categories = ["crust", "sauce", "cheese"]
                     if row["category"] in base_categories:
-                        scope.particle_scale = get_scale_values(inches, inch_variance, BASE_PIXEL_SIZE)
+                        scope.particle_scale = get_scale_values(
+                            inches, inch_variance, BASE_PIXEL_SIZE
+                        )
                     else:
-                        scope.particle_scale = get_scale_values(inches, inch_variance, TOPPING_PIXEL_SIZE)
-                
+                        scope.particle_scale = get_scale_values(
+                            inches, inch_variance, TOPPING_PIXEL_SIZE
+                        )
+
     return scope
 
-def get_scale_values(inches, variance, pixel_size) -> Tuple[float,float]:
+
+def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     min_size = inches - variance
     max_size = inches + variance
     # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
-    min_scale = min_size / (18 / (3072/pixel_size))
-    max_scale = max_size / (18 / (3072/pixel_size))
+    min_scale = min_size / (18 / (3072 / pixel_size))
+    max_scale = max_size / (18 / (3072 / pixel_size))
 
     return (min_scale, max_scale)
-    
+
 
 def parse_id(text) -> str:
     words = text.split("-")
@@ -313,7 +369,7 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
             crust_count=1,
             sauce_count=[1, 1],
             cheese_count=[1, 1],
-            topping_count=[1, 3],
+            topping_count=[0, 8],
             extras_count=[0, 2],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
@@ -338,4 +394,3 @@ def save_recipe(recipe: Recipe):
 
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
-

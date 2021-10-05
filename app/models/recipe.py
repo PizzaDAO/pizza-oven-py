@@ -48,6 +48,17 @@ class ScatterType(IntFlag):
     julia = 128
 
 
+class Rarity(IntFlag):
+    """all of the different types"""
+
+    common = 0
+    uncommon = 1
+    rare = 2
+    epic = 3
+    grail = 4
+    undefined = 5
+
+
 class RecipeInstructions(Base):
     """pizza level instructions for seeding the RNG"""
 
@@ -89,9 +100,12 @@ class Ingredient(Base):
     # TODO: add artist attribution fields
 
     unique_id: str  # - 0001
+    ingredient_id: str  # - 000
+    variant_id: str  # - 1
     index: int  # 1
     name: str  # - "Pepperoni"
-    rarity_level: int  # - 1
+    ingredient_rarity: Rarity  # - 1
+    variant_rarity: Rarity
     classification: Classification  # - topping
     category: str
     """
