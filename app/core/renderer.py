@@ -262,8 +262,7 @@ class Renderer:
             "../output/",
         )
         if not os.path.exists(output_dir):
-            print("output directory not found")
-            return ""
+            os.makedirs(output_dir)
 
         images: List[Image.Image] = []
         for layer in layers:
@@ -313,6 +312,14 @@ class Renderer:
             base_layer_index += 1
 
         topping_layer_index = 0
+
+        # Make sure there is an output folder to write to
+        output_dir = os.path.join(
+            self.project_path,
+            "../output/",
+        )
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
 
         #
         # SINGLE IGREDIENT TOPPING LAYERS
@@ -404,7 +411,7 @@ class Renderer:
         category = self.map_classification(
             Classification.topping
         )  # TEMP default to "topping"
-        output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
+        output_filename = f"0000-depth_shuffle-{category}-{layer_index}.png"
         layer.output_mask = output_filename
 
         data_path = self.cache_layer(layer)
@@ -422,7 +429,7 @@ class Renderer:
 
         # Build the output filename and save it allong with the cached Ingredient
         category = self.map_classification(ingredient.ingredient.classification)
-        output_filename = f"rarepizza-{self.frame}-{category}-{layer_index}.png"
+        output_filename = f"0000-{ingredient.ingredient.unique_id}-{ingredient.ingredient.name}-{category}-{layer_index}.png"
         ingredient.ingredient.image_uris["output_mask"] = output_filename
 
         data_path = self.cache_ingredient(ingredient)
