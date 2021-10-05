@@ -27,6 +27,8 @@ Copy the .env.example file and rename it .env. You must fill in the ETHEREUM_RIN
 
 Run Docker on your machine before the next step.
 
+In docker preferences, set the available RAM to at least 4gb
+
 Run the dev deployment:
 
 ```bash
