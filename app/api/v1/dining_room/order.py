@@ -83,6 +83,9 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     print(f"decoded_metadata: {decoded_metadata.hex()}")
     print(f"truncated_metadata: {truncated_metadata}")
     print(f"truncated_metadata_len: {len(truncated_metadata)}")
+    print("\n --------- YOUR PIZZA IS COMPLETE ---------- \n")
+    print(f"\nipfs image: {metadata.image} \n")
+    print("\n ------------------------------------------- \n")
 
     # build the response object
     response = OrderPizzaResponse(
