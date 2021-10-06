@@ -252,7 +252,9 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(cache_dir, f"{ingredient.ingredient.unique_id}.json")
+        file_path = os.path.join(
+            cache_dir, f"ingredient-{ingredient.ingredient.unique_id}.json"
+        )
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as ingredient_file:
@@ -271,7 +273,7 @@ class Renderer:
             os.makedirs(cache_dir)
 
         file_path = os.path.join(
-            cache_dir, f"shuffled_layer_{layer.unique_id}_{layer.index}.json"
+            cache_dir, f"layer-{layer.unique_id}_{layer.index}.json"
         )
 
         # cache out the ingredient so it can be picked up by natron
