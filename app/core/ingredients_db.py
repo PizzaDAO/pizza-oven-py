@@ -130,9 +130,10 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
             for index in range(0, len(sheet_data[row])):
                 # Put each attribute in a Key/Value pair for the row
                 record_entry.update({column_headers[index]: sheet_data[row][index]})
+
             # Use the unique ID for the Key and the row Dictionary for the value
             # Easy to look up ingredients by unique id
-            if sheet_data[row][0]:
+            if sheet_data[row][0] and record_entry["on_disk"] == "Y":
                 # Get the 3-digit ingredient code
                 next_ingredient_code = sheet_data[row][0][0:3]
 
@@ -141,18 +142,12 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                     and next_ingredient_code != current_ingredient_code
                 ):
                     current_ingredient_code = next_ingredient_code
-                    # Assign rarity here for all variants of an ingredient
-                    # We do this here because in order to track the ingredient code
+                    # Assign topping rarity here for all variants of an ingredient
+                    # We do this here in order to track the ingredient code
                     if record_entry["topping rarity"]:
                         current_rarity = map_rarity(record_entry["topping rarity"])
                     else:
                         current_rarity = Rarity.undefined
-                    print(
-                        "We have a new ingredient: "
-                        + current_ingredient_code
-                        + " with rarity: "
-                        + str(current_rarity)
-                    )
 
                 unique_id = sheet_data[row][0]
                 ingredient: ScopedIngredient = parse_ingredient(record_entry)
@@ -162,14 +157,16 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 ingredients.update({unique_id: ingredient})
             else:
                 # Account for the occasional blank row - probably a cleaner way to do this...
-                print("parse_ingredient: no unique id for: ")
-                print(record_entry)
+                print("parse_ingredient: no unique id for row  " + str(row))
+                # print(record_entry)
 
     # TODO - Make toppings_dict a bonafied toppings datatype
     return ingredients
 
 
 def map_rarity(rarity_string) -> Rarity:
+    """map strings from google sheet to Rrity enum"""
+
     if rarity_string == "common":
         return Rarity.common
     if rarity_string == "uncommon":
@@ -184,7 +181,7 @@ def map_rarity(rarity_string) -> Rarity:
         return Rarity.undefined
 
     # shouldn't get here
-    return Rarity.common
+    return Rarity.undefined
 
 
 # parse the pizza types into a collection we can use to drive random recipe making
