@@ -14,6 +14,7 @@ Be running Linux or MacOS
 - 🐍 [Python 3.8](https://www.python.org/downloads/) is <ins>**required**</ins> to develop this API. If you uses multiple versions of python, dont. But if you insist, [pyenv](https://github.com/pyenv/pyenv) will make your life easier.
 - [postman](https://www.postman.com/downloads/) is used for issuing requests during development and testing
 - [Docker](https://docs.docker.com/get-docker/) is used to make environment configuration easier
+- - If you're running Ubuntu, you'll need to install [docker compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
 - [Natron](https://github.com/NatronGitHub/Natron/releases/tag/v2.4.0) is used for rendering. ONLY NEEDED IF you plan to develop locally.
 
 ## 🐳 Running with Docker
