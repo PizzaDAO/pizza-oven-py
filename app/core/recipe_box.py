@@ -55,7 +55,7 @@ def load_recipes() -> Tuple[List[str], Dict]:
     if not exists(lOCAL_RECIPES_PATH):
         ingredients = read_ingredients()
         recipes = read_recipes(ingredients)
-        for key, recipe in recipes.items():
+        for _, recipe in recipes.items():
             save_recipe(recipe)
 
     try:
@@ -64,7 +64,7 @@ def load_recipes() -> Tuple[List[str], Dict]:
             for f in listdir(lOCAL_RECIPES_PATH)
             if isfile(join(lOCAL_RECIPES_PATH, f))
         ]
-    except Exception:
+    except Exception as e:
         print("Can't get list of recipe files")
     finally:
         for file in file_list:
@@ -76,7 +76,7 @@ def load_recipes() -> Tuple[List[str], Dict]:
                 f.close()
 
                 recipe_names.append(name)
-            except:
+            except Exception as e:
                 print("Ignoring this file: " + file)
 
     return (recipe_names, recipes_dict)

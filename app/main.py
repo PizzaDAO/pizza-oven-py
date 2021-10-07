@@ -66,5 +66,5 @@ if __name__ == "__main__":
         help="The port to listen on",
     )
     args = parser.parse_args()
-
+    print("running uvicorn in development mode")
     uvicorn.run(app, host="0.0.0.0", port=args.port)
