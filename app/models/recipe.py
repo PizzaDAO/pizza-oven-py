@@ -12,6 +12,8 @@ __all__ = [
     "ScopedIngredient",
     "Recipe",
     "ScatterType",
+    "classification_as_string",
+    "classification_from_string",
 ]
 
 # these types will probably change, just abstracting them for now
@@ -32,6 +34,41 @@ class Classification(Enum):
     cheese = 5
     topping = 6
     extras = 7
+
+
+def classification_as_string(classification: Classification) -> str:
+    c = "base"
+    if classification == Classification.box:
+        c = "box"
+    if classification == Classification.paper:
+        c = "paper"
+    if classification == Classification.crust:
+        c = "crust"
+    if classification == Classification.sauce:
+        c = "sauce"
+    if classification == Classification.cheese:
+        c = "cheese"
+    if classification == Classification.topping:
+        c = "topping"
+    if classification == Classification.extras:
+        c = "extras"
+    return c
+
+
+def classification_from_string(category: str) -> Classification:
+    classification = Classification.box
+
+    if "topping" in category:
+        classification = Classification.topping
+    if category == "paper":
+        classification = Classification.paper
+    if category == "crust":
+        classification = Classification.crust
+    if category == "sauce":
+        classification = Classification.sauce
+    if category == "cheese":
+        classification = Classification.cheese
+    return classification
 
 
 class ScatterType(IntFlag):

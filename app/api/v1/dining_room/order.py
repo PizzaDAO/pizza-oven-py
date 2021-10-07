@@ -18,10 +18,15 @@ from ..tags import DELIVER
 
 router = APIRouter()
 
+OUTGOING_TOKEN = str
+INCOMING_TOKEN = str
+
+# Job tokens are required to communicate with the chainlink node
+# the chainlink node web interface shows these tokens when you create a bridge.
+# add your token to the list for testing only.  not for prod.
 # TODO: cache this collection and make it runtime configurable
 # so that the chainlink bridge can change.
-# the first key is the web job and the second is the runlog
-job_tokens: Dict[str, str] = {
+job_tokens: Dict[OUTGOING_TOKEN, INCOMING_TOKEN] = {
     "Bearer nqpw1bzD4isqeYfXCixyAbhpLs/lkim4": "SI/8gEsllRRJLD5HDHH1/2ESG1RKmCOy"
 }
 
@@ -83,6 +88,9 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     print(f"decoded_metadata: {decoded_metadata.hex()}")
     print(f"truncated_metadata: {truncated_metadata}")
     print(f"truncated_metadata_len: {len(truncated_metadata)}")
+    print("\n --------- YOUR PIZZA IS COMPLETE ---------- \n")
+    print(f"\nipfs image: {metadata.image} \n")
+    print("\n ------------------------------------------- \n")
 
     # build the response object
     response = OrderPizzaResponse(
@@ -100,10 +108,11 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
 
     print(response.json())
 
-    # TODO: real login params loaded from an env var
     # if there's a chainlink callback specified,
     # then patch to the callback
     if data.responseURL is not None:
+        print("issuing chainlink response.")
+        # TODO: real login params loaded from an env var
         patch_response = requests.patch(
             data.responseURL,
             data=response.json(),
@@ -129,6 +138,7 @@ async def orderPizza(
     # TODO: cache a record of the incoming jobs
     # and add an api to query them.
     # allow for incomplete jobs to be queried and restarted.
+    # allow for more than one job to be queued at a time
 
     response = OrderPizzaResponse(jobRunID=data.id, pending=True)
     background_tasks.add_task(render_pizza, request.headers["authorization"], data)

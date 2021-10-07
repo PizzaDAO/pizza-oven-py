@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "08b9f800-64ae-4c6f-942b-514182d3e7f2",
+		"_postman_id": "ed474882-7513-4fca-9c3c-6c962baebfa3",
 		"name": "Pizza Kitchen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/dining_setup",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"dining_setup"
+							]
 						}
 					},
 					"response": []
@@ -68,7 +76,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"a3f4ffa9-43a1-48ac-b8ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\"\n    }\n}",
+							"raw": "{\n    \"id\": \"a3f4ffa9-43a1-48ac-b8ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"recipe_index\": 0\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"

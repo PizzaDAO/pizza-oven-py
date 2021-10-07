@@ -229,18 +229,8 @@ def parse_ingredient(row) -> ScopedIngredient:
         protein=1.0,
     )
 
-    classification = Classification.box
     category = row["category"]
-    if "topping" in category:
-        classification = Classification.topping
-    if category == "paper":
-        classification = Classification.paper
-    if category == "crust":
-        classification = Classification.crust
-    if category == "sauce":
-        classification = Classification.sauce
-    if category == "cheese":
-        classification = Classification.cheese
+    classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
     mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
