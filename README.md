@@ -4,7 +4,7 @@ Welcome Paisano to the Pizza Kitchen!
 
 ## 🍕 Pizza Shud B free
 
-This repository makes pizzas. More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie. A Chainlink oracle is also included that can fire off requests to bake a pizza. The application is developed in python and uses modern python development tools (e.g. Poetry for dependency management and FastAPI for serving up the api.)
+This repository makes pizzas. More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie. A Chainlink oracle is also included that can fire off requests to bake a pizza. The application is developed in python and uses modern python development tools (e.g. Poetry for dependency management and FastAPI for serving up the api).
 
 ## 💻 Requirements
 
