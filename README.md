@@ -45,7 +45,7 @@ make environment
 
 Copy the `.env.example` file and rename it `.env`. You must fill in the `ETHEREUM_RINKEBY_SOCKET_SERVER` with a Rinkeby websocket from [Alchemy.com](http://alchemy.com) or Infura.
 
-Run Docker on your machine and make sure that the RAM in docker is set to at least 4gb
+Run Docker on your machine and make sure that the RAM in docker is **set to at least 4gb**
 
 Run the dev deployment:
 
@@ -147,7 +147,7 @@ TODO: verify that the job posts back and completes when finished and the result 
 
 #### Chainlink Blockchain Job
 
-If yo uare jsut testing the api code, you do not need to do this step.
+If you are jsut testing the api code, you do not need to do this step.
 
 In order for the chainlink node to handle requests that come from the blockchain, another job must be created. Create a new job and drop in the contests of the `./chainlink/job.order.runLog.json` file.
 
