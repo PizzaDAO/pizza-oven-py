@@ -60,6 +60,8 @@ def classification_from_string(category: str) -> Classification:
 
     if "topping" in category:
         classification = Classification.topping
+    if category == "box":
+        classification = Classification.box
     if category == "paper":
         classification = Classification.paper
     if category == "crust":
