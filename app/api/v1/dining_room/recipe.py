@@ -6,6 +6,7 @@ from fastapi.responses import JSONResponse
 from app.models.base import Base
 from app.models.recipe import Recipe
 from app.core.repository import get_recipe
+from app.core.recipe_box import get_pizza_recipe
 
 from ..tags import ORDER
 
@@ -30,6 +31,6 @@ def recipe(recipe_id: int) -> Any:
     Get a specific recipe from the kitchen (by id)
     """
 
-    data = get_recipe(recipe_id)
-    json = jsonable_encoder(data)
+    recipe = get_pizza_recipe(recipe_id)
+    json = jsonable_encoder(recipe)
     return JSONResponse(content=json)
