@@ -351,6 +351,7 @@ class Renderer:
                 continue
 
             image = Image.open(file)
+            # image = image.convert("RGBA")
             images.append(image)
 
         base = images[0]
@@ -361,14 +362,8 @@ class Renderer:
         if DEV_MODE:
             self.draw_watermark(base, order)
 
-        # Give the final output a unique filename: ORDER-ID_PIZZA-TYPE-NAME_RANDOM-SEED.png
-        unique_filename = (
-            str(order.unique_id)
-            + "_"
-            + order.name
-            + "_"
-            + str(order.random_seed + ".png")
-        )
+        # Give the final output a unique filename: 0000.png
+        unique_filename = str(self.frame).zfill(4) + ".png"
 
         base.save(os.path.join(output_dir, unique_filename))
 
@@ -379,15 +374,13 @@ class Renderer:
         print("render_pizza")
         rendered_layer_files: List[str] = []
 
-        base_layer_index = 0
+        layer_index = 0
 
         # iterate through each the base ingredients and render
         for (_, ingredient) in order.base_ingredients.items():
-            result = self.render_ingredient(base_layer_index, ingredient)
+            result = self.render_ingredient(layer_index, ingredient)
             rendered_layer_files.append(result)
-            base_layer_index += 1
-
-        topping_layer_index = 0
+            layer_index += 1
 
         # Make sure there is an output folder to write to
         output_dir = os.path.join(
@@ -436,9 +429,9 @@ class Renderer:
                 count=batch_count,
                 instances=batch,
             )
-            result = self.render_instances(topping_layer_index, shuffle_layer)
+            result = self.render_instances(layer_index, shuffle_layer)
             rendered_layer_files.append(result)
-            topping_layer_index += 1
+            layer_index += 1
 
         # render any special ingredients
         #       for (key, ingredient) in order.special.items():
@@ -472,10 +465,8 @@ class Renderer:
     def render_instances(self, layer_index: int, layer: ShuffledLayer) -> str:
         # Build the output filename and save it allong with the cached Ingredient
         print("render_shuffled_layer")
-        category = classification_as_string(
-            Classification.topping
-        )  # TEMP default to "topping"
-        output_filename = f"{self.frame}-instances-{category}-{layer_index}.png"
+        frame_string = str(self.frame).zfill(4)
+        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
         layer.output_mask = output_filename
 
         data_path = self.cache_layer(layer)
@@ -494,9 +485,8 @@ class Renderer:
         print(f"render_ingredient: {ingredient.ingredient.classification.name}")
         # Build the output filename and save it allong with the cached Ingredient
         category = classification_as_string(ingredient.ingredient.classification)
-        output_filename = (
-            f"{self.frame}-{category}-{ingredient.ingredient.name}-{layer_index}.png"
-        )
+        frame_string = str(self.frame).zfill(4)
+        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
         ingredient.ingredient.image_uris["output_mask"] = output_filename
 
         data_path = self.cache_ingredient(ingredient)
