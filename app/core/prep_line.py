@@ -1,4 +1,4 @@
-from typing import Dict, Tuple, List
+from typing import Dict, Tuple, List, Optional
 from app.models.recipe import (
     Recipe,
     INGREDIENT_KEY,
@@ -21,31 +21,38 @@ from app.core.random_num import (
     select_value,
 )
 from app.core.scatter import Grid, RandomScatter, TreeRing
-from app.core.utils import clamp, to_hex, from_hex
-
-from app.core.recipe_box import get_pizza_recipe
+from app.core.utils import clamp, to_hex
 
 __all__ = ["reduce"]
 
 
-def reduce(recipe: Recipe) -> KitchenOrder:
-    """reduce the range values of a recipe to scalar values"""
+def reduce(
+    recipe: Recipe, token_id: int, random_seed: Optional[int] = None
+) -> KitchenOrder:
+    """
+    reduce the range values of a recipe to scalar values.
+    expects the token id to be provided
+    expects a 32 bit unsigned integer as a random number
+    """
     selected_base_ingredients: Dict[INGREDIENT_KEY, MadeIngredient] = {}
     reduced_layers: Dict[INGREDIENT_KEY, MadeIngredient] = {}
 
-    # get a random seed
-    # since the recipe already received verifiable randomness
-    # we use some entropy from the operating system
-    random_seed = get_random(32)
-    nonce = Counter(random_seed)
-    deterministic_seed = get_random_deterministic_uint256(
-        from_hex(recipe.random_seed), nonce
-    )
+    # TODO: TESTING get a random seed, if none exists
+    if random_seed is None:
+        print("WARNING! using random number from the operating system")
+        random_seed = get_random()
+
+    nonce = Counter(random_seed % 17)
+    deterministic_seed = get_random_deterministic_uint256(random_seed, nonce)
 
     order_instructions = select_ingredient_count(
         deterministic_seed, nonce, recipe.instructions
     )
     print(f"creating kitchen order for recipe: {recipe.name}")
+    print(f"random_seed base-10: {random_seed}")
+    print(f"random_seed base-16: {to_hex(random_seed)}")
+    print(f"deterministic_seed base-10: {deterministic_seed}")
+    print(f"deterministic_seed base-16: {to_hex(deterministic_seed)}")
     print("instructions:")
     print(order_instructions)
 
@@ -90,7 +97,7 @@ def reduce(recipe: Recipe) -> KitchenOrder:
     shuffled_instances = deterministic_shuffle(shuffled_instances)
 
     return KitchenOrder(
-        unique_id=0,  # TODO: database primary key?
+        token_id=token_id,
         name=recipe.name,
         random_seed=to_hex(random_seed),
         recipe_id=recipe.unique_id,

@@ -25,9 +25,7 @@ def bake_pizza(request: KitchenOrderRequest = Body(...)) -> Any:
     Bake the pizza!
     """
 
-    pizza = Renderer().render_pizza(request.order)
-
-    # TODO: all the things save out the assets, populate IPFS, etc.
+    pizza = Renderer().render_pizza(request.job_id, request.order)
 
     json = jsonable_encoder(pizza)
     return JSONResponse(content=json)

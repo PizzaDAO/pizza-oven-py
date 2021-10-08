@@ -1,7 +1,5 @@
 from typing import Any
-from fastapi import APIRouter, BackgroundTasks
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
+from fastapi import APIRouter
 from app.models.base import Base
 from ..tags import UTILITY
 from app.core.ingredients_db import *
@@ -33,7 +31,7 @@ def setup() -> SetupResponse:
 
     ingredients = read_ingredients()
     recipes = read_recipes(ingredients)
-    for key, recipe in recipes.items():
+    for _, recipe in recipes.items():
         save_recipe(recipe)
 
     return SetupResponse(status=True)

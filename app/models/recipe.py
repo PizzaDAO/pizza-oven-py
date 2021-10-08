@@ -161,8 +161,6 @@ class Recipe(Base):
     """
     Name of the pizza.  This can be randomly generated & will show up in metadata
     """
-    random_seed: str
-    """The random seed that was used to generate the order"""
     rarity_level: float  # - 4
     base_ingredients: Dict[INGREDIENT_KEY, ScopedIngredient]
     """collection of base ingredients that coule be used as part of a kitchen order"""

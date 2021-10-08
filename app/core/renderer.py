@@ -273,7 +273,7 @@ class Renderer:
             os.makedirs(cache_dir)
 
         file_path = os.path.join(
-            cache_dir, f"layer-{layer.unique_id}_{layer.index}.json"
+            cache_dir, f"layer-{layer.token_id}_{layer.index}.json"
         )
 
         # cache out the ingredient so it can be picked up by natron
@@ -299,7 +299,7 @@ class Renderer:
             layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + "\n"
         pizza_data = (
             "Pizza_id: "
-            + str(order.unique_id)
+            + str(order.token_id)
             + "\n"
             + "Recipe_id: "
             + str(order.recipe_id)
@@ -363,7 +363,7 @@ class Renderer:
 
         # Give the final output a unique filename: ORDER-ID_PIZZA-TYPE-NAME_RANDOM-SEED.png
         unique_filename = (
-            str(order.unique_id)
+            str(order.token_id)
             + "_"
             + order.name
             + "_"
@@ -431,7 +431,7 @@ class Renderer:
 
             # Create a ShuffledLayer
             shuffle_layer = ShuffledLayer(
-                unique_id=order.unique_id,
+                token_id=order.token_id,
                 index=index,
                 count=batch_count,
                 instances=batch,
@@ -460,7 +460,7 @@ class Renderer:
         # note the IPFS id probably isnt populated in this function but instead by the caller
         return HotPizza(
             unique_id=job_id,
-            order_id=order.unique_id,
+            order_id=order.token_id,
             recipe_id=order.recipe_id,
             assets={
                 "BLOB": "the binary representation of the pizza",

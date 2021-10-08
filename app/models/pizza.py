@@ -51,10 +51,13 @@ class IngredientMetadata(Base):
 
 
 class RarePizzaMetadata(ERC721Metadata, ERC721OpenSeaExtensions):
-    order_id: str
-    """the order job id"""
+    job_id: str
+    """the order job id, usually the chainlink job id"""
+    token_id: int
+    """the token id of the pizza that was made"""
     rarity_level: int
     random_seed: str
+    "the random seed used to create the order"
     extension_uri: str
     """a uri that we can predefine and add content to later"""
     baking_temp_in_celsius: int

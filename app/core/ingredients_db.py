@@ -301,7 +301,6 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
     recipe = Recipe(
         unique_id=1,
         name=pie_type,
-        random_seed="0x99",
         rarity_level=3.0,
         base_ingredients=base_dict,
         layers=layers_dict,

@@ -7,6 +7,8 @@ class PizzaOrderData(Base):
 
     address: str
     """address of blockchain sender"""
+    token_id: int = 1
+    """the token id that is being redeemed. defaults to 1 for now"""
     recipe_index: int = 21  # the current index order of the random pie
     """the index of the recipe to make"""
 
