@@ -14,7 +14,7 @@ from app.models.pizza import (
 def to_blockchain_metadata(
     job_id: str, recipe: Recipe, order: KitchenOrder, pizza: HotPizza
 ) -> RarePizzaMetadata:
-
+    """create metadata from the recipe, order, and pizza render to make blockchain metadata"""
     ingredients: List[IngredientMetadata] = []
 
     for (_, value) in order.base_ingredients.items():
