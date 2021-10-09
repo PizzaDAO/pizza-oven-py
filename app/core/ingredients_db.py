@@ -33,6 +33,9 @@ __all__ = [
     save_json() --> data/recipes/
 """
 
+# A dictionary for storing Box and Paper ingredients
+box_paper_dict: Dict[str, ScopedIngredient] = {}
+
 
 def read_ingredients():
 
@@ -155,6 +158,10 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 ingredient.ingredient.ingredient_rarity = current_rarity
                 ingredient.ingredient.ingredient_id = current_ingredient_code
                 ingredients.update({unique_id: ingredient})
+
+                # Pull out the Box and Paper ingredients for later
+                if unique_id[0] == "0":
+                    box_paper_dict.update({unique_id: ingredient})
             else:
                 # Account for the occasional blank row - probably a cleaner way to do this...
                 print("parse_ingredient: no unique id for row  " + str(row))
@@ -210,6 +217,10 @@ def parse_recipes(
     for header in pizza_types:
         data = columns[header]
         recipe: Recipe = parse_column(data, ingredients)
+
+        # Add the Box and Paper ingredients to the base_ingredient Dict
+        recipe.base_ingredients.update(box_paper_dict)
+
         recipes.update({header: recipe})
 
     return recipes
@@ -284,7 +295,7 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
                 if row["inch_variance"].isnumeric():
                     inch_variance = float(row["inch_variance"])
 
-                    base_categories = ["crust", "sauce", "cheese"]
+                    base_categories = ["box", "paper", "crust", "sauce", "cheese"]
                     if row["category"] in base_categories:
                         scope.particle_scale = get_scale_values(
                             inches, inch_variance, BASE_PIXEL_SIZE
