@@ -253,7 +253,7 @@ class Renderer:
             os.makedirs(cache_dir)
 
         file_path = os.path.join(
-            cache_dir, f"ingredient-{ingredient.ingredient.unique_id}.json"
+            cache_dir, f"ingredient-{ingredient.ingredient.index}.json"
         )
 
         # cache out the ingredient so it can be picked up by natron
@@ -272,9 +272,7 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(
-            cache_dir, f"layer-{layer.token_id}_{layer.index}.json"
-        )
+        file_path = os.path.join(cache_dir, f"layer-{layer.index}.json")
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
@@ -468,6 +466,7 @@ class Renderer:
         frame_string = str(self.frame).zfill(4)
         output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
         layer.output_mask = output_filename
+        layer.index = layer_index
 
         data_path = self.cache_layer(layer)
 
@@ -488,6 +487,7 @@ class Renderer:
         frame_string = str(self.frame).zfill(4)
         output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
         ingredient.ingredient.image_uris["output_mask"] = output_filename
+        ingredient.ingredient.index = layer_index
 
         data_path = self.cache_ingredient(ingredient)
 

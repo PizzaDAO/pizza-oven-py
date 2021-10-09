@@ -26,11 +26,11 @@ class Topping(NatronBase):
         file_path = os.environ[env_var]
         with open(file_path) as json_file:
             self.element = json.load(json_file)
-        print(self.element)
+        # print(self.element)
 
         # Depth swap layers has different JSON -source is a ShuffledLayer
         self.index = self.element["index"]
-        self.unique_id = self.element["unique_id"]
+        self.unique_id = self.element["token_id"]
         self.out_file = self.element["output_mask"]
         self.instances = self.element["instances"]
 
