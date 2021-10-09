@@ -4,7 +4,7 @@ Welcome Paisano to the Pizza Kitchen!
 
 ## 🍕 Pizza Shud B free
 
-This repository makes pizzas. More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie. A Chainlink oracle is also included that can fire off requests to bake a pizza. The application is developed in python and uses modern python development tools (e.g. Poetry for dependency management and FastAPI for serving up the api.)
+This repository makes pizzas. More specifically, it accepts json input, transforms it and then passes it into the rendering pieline for some 🤌 fresh apizza pie. A Chainlink oracle is also included that can fire off requests to bake a pizza. The application is developed in python and uses modern python development tools (e.g. Poetry for dependency management and FastAPI for serving up the api).
 
 ## 💻 Requirements
 
@@ -14,7 +14,8 @@ Be running Linux or MacOS
 - 🐍 [Python 3.8](https://www.python.org/downloads/) is <ins>**required**</ins> to develop this API. If you uses multiple versions of python, dont. But if you insist, [pyenv](https://github.com/pyenv/pyenv) will make your life easier.
 - [postman](https://www.postman.com/downloads/) is used for issuing requests during development and testing
 - [Docker](https://docs.docker.com/get-docker/) is used to make environment configuration easier
-- [Natron](https://github.com/NatronGitHub/Natron/releases/tag/v2.4.0) is used for rendering. you only need to install this if you planm to develop locally.
+- - If you're running Ubuntu, you'll need to install [docker compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
+- [Natron](https://github.com/NatronGitHub/Natron/releases/tag/v2.4.0) is used for rendering. ONLY NEEDED IF you plan to develop locally.
 
 ## 🐳 Running with Docker
 
@@ -44,7 +45,7 @@ make environment
 
 Copy the `.env.example` file and rename it `.env`. You must fill in the `ETHEREUM_RINKEBY_SOCKET_SERVER` with a Rinkeby websocket from [Alchemy.com](http://alchemy.com) or Infura.
 
-Run Docker on your machine and make sure that the RAM in docker is set to at least 4gb
+Run Docker on your machine and make sure that the RAM in docker is **set to at least 4gb**
 
 Run the dev deployment:
 
@@ -146,7 +147,7 @@ TODO: verify that the job posts back and completes when finished and the result 
 
 #### Chainlink Blockchain Job
 
-If yo uare jsut testing the api code, you do not need to do this step.
+If you are jsut testing the api code, you do not need to do this step.
 
 In order for the chainlink node to handle requests that come from the blockchain, another job must be created. Create a new job and drop in the contests of the `./chainlink/job.order.runLog.json` file.
 

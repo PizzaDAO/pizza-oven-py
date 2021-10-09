@@ -10,6 +10,7 @@ from google.oauth2.credentials import Credentials
 from app.core.config import Settings
 
 from app.models.recipe import *
+from app.models.recipe import Rarity
 
 settings = Settings()
 
@@ -122,6 +123,8 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
     for name in sheet_data[0]:
         column_headers.append(name)
 
+    current_ingredient_code = "000"
+    current_rarity: Rarity = Rarity.common
     # Now get all the rows in the sheet
     for row in range(1, len(sheet_data)):
         # Only add the line if there is a numeric ID
@@ -130,11 +133,30 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
             for index in range(0, len(sheet_data[row])):
                 # Put each attribute in a Key/Value pair for the row
                 record_entry.update({column_headers[index]: sheet_data[row][index]})
+
             # Use the unique ID for the Key and the row Dictionary for the value
             # Easy to look up ingredients by unique id
             if sheet_data[row][0] and record_entry["on_disk"] == "Y":
+                # Get the 3-digit ingredient code
+                next_ingredient_code = sheet_data[row][0][0:3]
+
+                if (
+                    next_ingredient_code
+                    and next_ingredient_code != current_ingredient_code
+                ):
+                    current_ingredient_code = next_ingredient_code
+                    # Assign topping rarity here for all variants of an ingredient
+                    # We do this here in order to track the ingredient code
+                    if record_entry["topping rarity"]:
+                        current_rarity = map_rarity(record_entry["topping rarity"])
+                    else:
+                        current_rarity = Rarity.undefined
+
                 unique_id = sheet_data[row][0]
                 ingredient: ScopedIngredient = parse_ingredient(record_entry)
+                # Assign top level id and rarity to ingredient
+                ingredient.ingredient.ingredient_rarity = current_rarity
+                ingredient.ingredient.ingredient_id = current_ingredient_code
                 ingredients.update({unique_id: ingredient})
 
                 # Pull out the Box and Paper ingredients for later
@@ -142,10 +164,31 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                     box_paper_dict.update({unique_id: ingredient})
             else:
                 # Account for the occasional blank row - probably a cleaner way to do this...
-                print("parse_ingredient skipping: " + sheet_data[row][0])
+                print("parse_ingredient: no unique id for row  " + str(row))
+                # print(record_entry)
 
     # TODO - Make toppings_dict a bonafied toppings datatype
     return ingredients
+
+
+def map_rarity(rarity_string) -> Rarity:
+    """map strings from google sheet to Rrity enum"""
+
+    if rarity_string == "common":
+        return Rarity.common
+    if rarity_string == "uncommon":
+        return Rarity.uncommon
+    if rarity_string == "rare":
+        return Rarity.rare
+    if rarity_string == "epic":
+        return Rarity.epic
+    if rarity_string == "grail":
+        return Rarity.grail
+    if rarity_string is None:
+        return Rarity.undefined
+
+    # shouldn't get here
+    return Rarity.undefined
 
 
 # parse the pizza types into a collection we can use to drive random recipe making
@@ -201,14 +244,17 @@ def parse_ingredient(row) -> ScopedIngredient:
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
-    mask = (
-        "rarepizza-#####-" + category + "%s" + ".png"
-    )  # Will be overwritten by Renderer
+    mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
+    variant_rarity = map_rarity(row["variant rarity"])
+    variant_id = row["unique_id"][3:4]
     ingredient = Ingredient(
         unique_id=row["unique_id"],
+        ingredient_id="00",
+        variant_id=variant_id,
         index=1,
         name=row["topping"],
-        rarity_level=1,
+        ingredient_rarity=Rarity.common,
+        variant_rarity=variant_rarity,
         classification=classification,
         category=category,
         attributes={},
@@ -321,7 +367,7 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
             crust_count=1,
             sauce_count=[1, 1],
             cheese_count=[1, 1],
-            topping_count=[1, 3],
+            topping_count=[0, 8],
             extras_count=[0, 2],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
