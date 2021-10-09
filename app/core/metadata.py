@@ -21,7 +21,7 @@ def to_blockchain_metadata(
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
-                rarity=value.ingredient.rarity_level,
+                rarity=value.ingredient.ingredient_rarity,
                 classification=value.ingredient.classification.name,
                 category=value.ingredient.category,
                 nutrition=value.ingredient.nutrition,
@@ -35,7 +35,7 @@ def to_blockchain_metadata(
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
-                rarity=value.ingredient.rarity_level,
+                rarity=value.ingredient.ingredient_rarity,
                 classification=value.ingredient.classification.name,
                 category=value.ingredient.category,
                 nutrition=value.ingredient.nutrition,
