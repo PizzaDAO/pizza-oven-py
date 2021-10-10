@@ -36,7 +36,7 @@ def create_metadata(request: RarePizzaMetadataRequest = Body(...)) -> Any:
     """
 
     metadata = to_blockchain_metadata(
-        request.pizza.unique_id, request.recipe, request.order, request.pizza
+        request.pizza.job_id, request.recipe, request.order, request.pizza
     )
     data = RarePizzaMetadataResponse(ipfs_hash="unknown", metadata=metadata)
 

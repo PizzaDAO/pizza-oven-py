@@ -446,16 +446,25 @@ class Renderer:
             "../output/",
         )
 
+        # save the kitchen order out to the file system
+        kitchen_order_file_path = os.path.join(
+            output_dir, f"{str(self.frame).zfill(4)}.json"
+        )
+        with open(kitchen_order_file_path, "w") as kitchen_order_file:
+            kitchen_order_file.write(order.json())
+
         # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
         # note the IPFS id probably isnt populated in this function but instead by the caller
         return HotPizza(
-            unique_id=job_id,
-            order_id=order.token_id,
+            job_id=job_id,
+            token_id=order.token_id,
+            random_seed=order.random_seed,
             recipe_id=order.recipe_id,
             assets={
                 "BLOB": "the binary representation of the pizza",
                 "IMAGE_PATH": os.path.join(output_dir, output_file),
+                "ORDER_PATH": kitchen_order_file_path,
                 "IPFS_HASH": "filled_in_by_calling_set_metadata",
             },
         )
