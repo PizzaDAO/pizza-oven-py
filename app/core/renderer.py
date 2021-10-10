@@ -236,7 +236,7 @@ class Renderer:
 
     natron_path: str = field(default=settings.DEFAULT_NATRON_EXECUTABLE_PATH)
     project_path: str = field(default=settings.DEFAULT_NATRON_PROJECT_PATH)
-    frame: str = field(default="00000")
+    frame: int = field(default=0)
 
     rendered_files: Dict[str, str] = field(default_factory=lambda: {})
 
@@ -359,6 +359,8 @@ class Renderer:
         # TODO: make env variable to toggle this on/off
         if DEV_MODE:
             self.draw_watermark(base, order)
+
+        # TODO: cleanup intermediate files
 
         # Give the final output a unique filename: 0000.png
         unique_filename = str(self.frame).zfill(4) + ".png"

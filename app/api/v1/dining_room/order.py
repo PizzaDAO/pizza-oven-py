@@ -64,7 +64,7 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     order = reduce(recipe, data.data.token_id, random_number)
 
     # render
-    pizza = Renderer().render_pizza(data.id, order)
+    pizza = Renderer(frame=inbound_token).render_pizza(data.id, order)
 
     # publish the pizza image to IPFS
     pizza_image_hash = set_pizza_image(pizza)
