@@ -41,7 +41,7 @@ def get_random_remote() -> int:
 
 
 def get_random(bits: int = 256) -> int:
-    """A naive implementation of a random mumber"""
+    """A naive implementation of a random mumber. TODO: use chainlink"""
     return randbits(bits)
 
 
@@ -95,12 +95,12 @@ def select_value(seed: int, nonce: Counter, bounds: Tuple[float, float]) -> floa
 def deterministic_shuffle(list) -> list:
     """A method to shuffle a list in deterministic fashion"""
 
-    for i in range(len(list)-1,0,-1):
+    for i in range(len(list) - 1, 0, -1):
         # Pick a random index from 0 to i
-        j = get_random() % i+1
+        j = get_random() % i + 1
         # Swap arr[i] with the element at random index
-        list[i],list[j] = list[j],list[i]
-        
+        list[i], list[j] = list[j], list[i]
+
     return list
 
 

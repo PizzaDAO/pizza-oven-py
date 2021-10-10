@@ -29,10 +29,25 @@ class RarePizzaMetadataResponse(Base):
     metadata: RarePizzaMetadata
 
 
+@router.get("/", response_model=RarePizzaMetadataResponse, tags=[METADATA])
+def create_metadata(request: RarePizzaMetadataRequest = Body(...)) -> Any:
+    """
+    create the metadata for the specific pizza
+    """
+
+    metadata = to_blockchain_metadata(
+        request.pizza.job_id, request.recipe, request.order, request.pizza
+    )
+    data = RarePizzaMetadataResponse(ipfs_hash="unknown", metadata=metadata)
+
+    json = jsonable_encoder(data)
+    return JSONResponse(content=json)
+
+
 @router.get("/{ipfs_hash}", response_model=RarePizzaMetadataResponse, tags=[METADATA])
 def get_blockchain_metadata(ipfs_hash: str) -> Any:
     """
-    get the metadata for the specific pizza
+    get the metadata for the specific pizza from ipfs
     """
 
     metadata = get_metadata(ipfs_hash)
@@ -42,7 +57,9 @@ def get_blockchain_metadata(ipfs_hash: str) -> Any:
     return JSONResponse(content=json)
 
 
-@router.post("/{job_id}", response_model=RarePizzaMetadataResponse, tags=[METADATA])
+@router.post(
+    "/jobs/{job_id}", response_model=RarePizzaMetadataResponse, tags=[METADATA]
+)
 def set_blockchain_metadata(
     job_id: str, request: RarePizzaMetadataRequest = Body(...)
 ) -> Any:

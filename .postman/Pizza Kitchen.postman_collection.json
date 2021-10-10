@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ed474882-7513-4fca-9c3c-6c962baebfa3",
+		"_postman_id": "6321d3cf-0ce5-4ef1-a134-d215691cbbc8",
 		"name": "Pizza Kitchen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -76,7 +76,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"a3f4ffa9-43a1-48ac-b8ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"recipe_index\": 0\n    }\n}",
+							"raw": "{\n    \"id\": \"a3f4ffa9-43a1-48ac-b8ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"token_id\": 1,\n        \"recipe_index\": 5\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -122,7 +122,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"recipe\": {{recipe}}\n}",
+							"raw": "{\n    \"token_id\": 1,\n    \"random_seed\": \"0xa326a9c13EC95adDB74789a375e2FeF060532bAF\",\n    \"recipe\": {{recipe}}\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -139,35 +139,6 @@
 								"{{version}}",
 								"kitchen",
 								"preparePizza"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "metadata",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"recipe\": {{recipe}},\n    \"order\": {{order}},\n    \"pizza\": {{pizza}}\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/metadata/1",
-							"host": [
-								"{{pizza-kitchen-url}}"
-							],
-							"path": [
-								"api",
-								"{{version}}",
-								"metadata",
-								"1"
 							]
 						}
 					},
@@ -192,7 +163,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"order\": {{order}}\n}",
+							"raw": "{\n    \"job_id\": \"57438675894578430\",\n    \"order\": {{order}}\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -209,6 +180,68 @@
 								"{{version}}",
 								"oven",
 								"bake"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_metadata",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipe\": {{recipe}},\n    \"order\": {{order}},\n    \"pizza\": {{pizza}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/metadata/",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"metadata",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blockchain_metadata",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipe\": {{recipe}},\n    \"order\": {{order}},\n    \"pizza\": {{pizza}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/metadata/jobs/1",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"metadata",
+								"jobs",
+								"1"
 							]
 						}
 					},

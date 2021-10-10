@@ -44,7 +44,7 @@ class MadeIngredientPrep(Base):
 class ShuffledLayer(Base):
     """struct for layers of depth swapped ingredient instances"""
 
-    unique_id: str
+    token_id: int
     index: SCALAR
     count: SCALAR
     instances: List[MadeIngredientPrep]
@@ -63,7 +63,8 @@ class KitchenOrder(Base):
     """a recipe includes all of the static information necessary
     to tell the renderer what to do"""
 
-    unique_id: int
+    token_id: int
+    """the token id for which this order is made"""
     name: str
     random_seed: str
     """The random seed that was used to generate the order"""

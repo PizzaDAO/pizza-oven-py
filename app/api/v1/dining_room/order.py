@@ -12,6 +12,7 @@ from app.models.order import PizzaOrder, PizzaOrderData
 from app.core.recipe_box import get_pizza_recipe, make_recipe
 from app.core.prep_line import reduce
 from app.core.metadata import to_blockchain_metadata
+from app.core.random_num import get_random
 from app.core.repository import *
 from app.core.renderer import Renderer
 from ..tags import DELIVER
@@ -57,10 +58,13 @@ def render_pizza(inbound_token: str, data: OrderPizzaRequest) -> OrderPizzaRespo
     # For names of pizza types see /data/recipes
     # filenames are pizza types in alphabetical order
     recipe = get_pizza_recipe(data.data.recipe_index)
-    order = reduce(recipe)
+
+    # get a random number and reduce the recipe into a kitchen order
+    random_number = get_random()
+    order = reduce(recipe, data.data.token_id, random_number)
 
     # render
-    pizza = Renderer().render_pizza(data.id, order)
+    pizza = Renderer(frame=inbound_token).render_pizza(data.id, order)
 
     # publish the pizza image to IPFS
     pizza_image_hash = set_pizza_image(pizza)

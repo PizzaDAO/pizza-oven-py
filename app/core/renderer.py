@@ -236,7 +236,7 @@ class Renderer:
 
     natron_path: str = field(default=settings.DEFAULT_NATRON_EXECUTABLE_PATH)
     project_path: str = field(default=settings.DEFAULT_NATRON_PROJECT_PATH)
-    frame: str = field(default="00000")
+    frame: int = field(default=0)
 
     rendered_files: Dict[str, str] = field(default_factory=lambda: {})
 
@@ -253,7 +253,7 @@ class Renderer:
             os.makedirs(cache_dir)
 
         file_path = os.path.join(
-            cache_dir, f"ingredient-{ingredient.ingredient.unique_id}.json"
+            cache_dir, f"ingredient-{ingredient.ingredient.index}.json"
         )
 
         # cache out the ingredient so it can be picked up by natron
@@ -272,9 +272,7 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(
-            cache_dir, f"layer-{layer.unique_id}_{layer.index}.json"
-        )
+        file_path = os.path.join(cache_dir, f"layer-{layer.index}.json")
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
@@ -299,7 +297,7 @@ class Renderer:
             layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + "\n"
         pizza_data = (
             "Pizza_id: "
-            + str(order.unique_id)
+            + str(order.token_id)
             + "\n"
             + "Recipe_id: "
             + str(order.recipe_id)
@@ -351,6 +349,7 @@ class Renderer:
                 continue
 
             image = Image.open(file)
+            # image = image.convert("RGBA")
             images.append(image)
 
         base = images[0]
@@ -361,14 +360,10 @@ class Renderer:
         if DEV_MODE:
             self.draw_watermark(base, order)
 
-        # Give the final output a unique filename: ORDER-ID_PIZZA-TYPE-NAME_RANDOM-SEED.png
-        unique_filename = (
-            str(order.unique_id)
-            + "_"
-            + order.name
-            + "_"
-            + str(order.random_seed + ".png")
-        )
+        # TODO: cleanup intermediate files
+
+        # Give the final output a unique filename: 0000.png
+        unique_filename = str(self.frame).zfill(4) + ".png"
 
         base.save(os.path.join(output_dir, unique_filename))
 
@@ -379,15 +374,13 @@ class Renderer:
         print("render_pizza")
         rendered_layer_files: List[str] = []
 
-        base_layer_index = 0
+        layer_index = 0
 
         # iterate through each the base ingredients and render
         for (_, ingredient) in order.base_ingredients.items():
-            result = self.render_ingredient(base_layer_index, ingredient)
+            result = self.render_ingredient(layer_index, ingredient)
             rendered_layer_files.append(result)
-            base_layer_index += 1
-
-        topping_layer_index = 0
+            layer_index += 1
 
         # Make sure there is an output folder to write to
         output_dir = os.path.join(
@@ -431,14 +424,14 @@ class Renderer:
 
             # Create a ShuffledLayer
             shuffle_layer = ShuffledLayer(
-                unique_id=order.unique_id,
+                token_id=order.token_id,
                 index=index,
                 count=batch_count,
                 instances=batch,
             )
-            result = self.render_instances(topping_layer_index, shuffle_layer)
+            result = self.render_instances(layer_index, shuffle_layer)
             rendered_layer_files.append(result)
-            topping_layer_index += 1
+            layer_index += 1
 
         # render any special ingredients
         #       for (key, ingredient) in order.special.items():
@@ -455,16 +448,25 @@ class Renderer:
             "../output/",
         )
 
+        # save the kitchen order out to the file system
+        kitchen_order_file_path = os.path.join(
+            output_dir, f"{str(self.frame).zfill(4)}.json"
+        )
+        with open(kitchen_order_file_path, "w") as kitchen_order_file:
+            kitchen_order_file.write(order.json())
+
         # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
         # note the IPFS id probably isnt populated in this function but instead by the caller
         return HotPizza(
-            unique_id=job_id,
-            order_id=order.unique_id,
+            job_id=job_id,
+            token_id=order.token_id,
+            random_seed=order.random_seed,
             recipe_id=order.recipe_id,
             assets={
                 "BLOB": "the binary representation of the pizza",
                 "IMAGE_PATH": os.path.join(output_dir, output_file),
+                "ORDER_PATH": kitchen_order_file_path,
                 "IPFS_HASH": "filled_in_by_calling_set_metadata",
             },
         )
@@ -472,11 +474,10 @@ class Renderer:
     def render_instances(self, layer_index: int, layer: ShuffledLayer) -> str:
         # Build the output filename and save it allong with the cached Ingredient
         print("render_shuffled_layer")
-        category = classification_as_string(
-            Classification.topping
-        )  # TEMP default to "topping"
-        output_filename = f"{self.frame}-instances-{category}-{layer_index}.png"
+        frame_string = str(self.frame).zfill(4)
+        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
         layer.output_mask = output_filename
+        layer.index = layer_index
 
         data_path = self.cache_layer(layer)
 
@@ -494,10 +495,10 @@ class Renderer:
         print(f"render_ingredient: {ingredient.ingredient.classification.name}")
         # Build the output filename and save it allong with the cached Ingredient
         category = classification_as_string(ingredient.ingredient.classification)
-        output_filename = (
-            f"{self.frame}-{category}-{ingredient.ingredient.name}-{layer_index}.png"
-        )
+        frame_string = str(self.frame).zfill(4)
+        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
         ingredient.ingredient.image_uris["output_mask"] = output_filename
+        ingredient.ingredient.index = layer_index
 
         data_path = self.cache_ingredient(ingredient)
 

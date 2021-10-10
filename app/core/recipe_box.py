@@ -8,8 +8,6 @@ from typing import Dict, Optional, List, Tuple
 from app.core.ingredients_db import *
 from app.models.recipe import *
 
-from app.core.random_num import get_random
-
 lOCAL_RECIPES_PATH = "data/recipes/"
 
 
@@ -97,7 +95,6 @@ def sample(recipe_id: int) -> Recipe:
     return Recipe(
         unique_id=recipe_id,
         name="My Cool First Super Rare Pizza Test",
-        random_seed=get_random(),
         rarity_level=4,
         base_ingredients={
             "box": ScopedIngredient(

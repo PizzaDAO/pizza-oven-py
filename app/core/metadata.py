@@ -14,14 +14,14 @@ from app.models.pizza import (
 def to_blockchain_metadata(
     job_id: str, recipe: Recipe, order: KitchenOrder, pizza: HotPizza
 ) -> RarePizzaMetadata:
-
+    """create metadata from the recipe, order, and pizza render to make blockchain metadata"""
     ingredients: List[IngredientMetadata] = []
 
-    for (key, value) in order.base_ingredients.items():
+    for (_, value) in order.base_ingredients.items():
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
-                rarity=value.ingredient.rarity_level,
+                rarity=value.ingredient.ingredient_rarity,
                 classification=value.ingredient.classification.name,
                 category=value.ingredient.category,
                 nutrition=value.ingredient.nutrition,
@@ -31,11 +31,11 @@ def to_blockchain_metadata(
             )
         )
 
-    for (key, value) in order.layers.items():
+    for (_, value) in order.layers.items():
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
-                rarity=value.ingredient.rarity_level,
+                rarity=value.ingredient.ingredient_rarity,
                 classification=value.ingredient.classification.name,
                 category=value.ingredient.category,
                 nutrition=value.ingredient.nutrition,
@@ -46,11 +46,12 @@ def to_blockchain_metadata(
         )
     ipfs_hash = pizza.assets["IPFS_HASH"]
     return RarePizzaMetadata(
-        order_id=job_id,
+        job_id=job_id,
+        token_id=order.token_id,
         name=recipe.name,
         description="some description to be filled in later",
         rarity_level=recipe.rarity_level,
-        random_seed=recipe.random_seed,
+        random_seed=order.random_seed,
         image=f"ipfs://{ipfs_hash}",
         extension_uri=f"https://www.rarepizzas.com/pizzas/{ipfs_hash}/data",
         external_url=f"https://www.rarepizzas.com/pizzas/{ipfs_hash}",
