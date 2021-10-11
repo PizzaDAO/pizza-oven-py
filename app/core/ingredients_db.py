@@ -288,11 +288,11 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
 
     # An ungly chain of IFs to make sure all the values are there before we operate
     if "inches" in row.keys():
-        if row["inches"].isnumeric():
+        if row["inches"].replace(".", "", 1).isdigit():
             inches = float(row["inches"])
 
             if "inch_variance" in row.keys():
-                if row["inch_variance"].isnumeric():
+                if row["inch_variance"].replace(".", "", 1).isdigit():
                     inch_variance = float(row["inch_variance"])
 
                     base_categories = ["box", "paper", "crust", "sauce", "cheese"]
