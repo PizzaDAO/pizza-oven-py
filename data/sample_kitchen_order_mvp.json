@@ -1,7 +1,7 @@
 {
     "token_id": 0,
     "name": "Manual_Custom",
-    "random_seed": "30FF1444",
+    "random_seed": "669FF659",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -28,7 +28,7 @@
                 },
                 "image_uris": {
                     "filename": "0000-box-white.png",
-                    "output_mask": "#####-box"
+                    "output_mask": "rarepizza-#####-box"
                 }
             },
             "count": 1.0,
@@ -68,7 +68,7 @@
                 },
                 "image_uris": {
                     "filename": "0500-paper-redchecker.png",
-                    "output_mask": "#####-paper"
+                    "output_mask": "rarepizza-#####-paper"
                 }
             },
             "count": 1.0,
@@ -108,7 +108,7 @@
                 },
                 "image_uris": {
                     "filename": "1000-crust-thin.png",
-                    "output_mask": "#####-crust"
+                    "output_mask": "rarepizza-#####-crust"
                 }
             },
             "count": 1.0,
@@ -148,7 +148,7 @@
                 },
                 "image_uris": {
                     "filename": "2000-sauce-tomato.png",
-                    "output_mask": "#####-sauce"
+                    "output_mask": "rarepizza-#####-sauce"
                 }
             },
             "count": 1.0,
@@ -188,7 +188,7 @@
                 },
                 "image_uris": {
                     "filename": "3000-cheese-mozzarella.png",
-                    "output_mask": "#####-cheese"
+                    "output_mask": "rarepizza-#####-cheese"
                 }
             },
             "count": 1.0,
@@ -230,153 +230,18 @@
                 },
                 "image_uris": {
                     "filename": "4000-topping-meat-pepperoni.png",
-                    "output_mask": "#####-topping-meat"
+                    "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 16.0,
+            "count": 1.0,
             "instances": [
-                {
-                    "translation": [
-                        454.4483814856211,
-                        742.2139348072646
-                    ],
-                    "rotation": 24.901185770751,
-                    "scale": 0.32641633728590247,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1488.1631219387934,
-                        989.3513331233321
-                    ],
-                    "rotation": -26.32411067193678,
-                    "scale": 0.319828722002635,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        731.230112297799,
-                        200.23412516343024
-                    ],
-                    "rotation": -34.861660079051376,
-                    "scale": 0.32674571805006586,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        495.2262077114626,
-                        1604.4651578149615
-                    ],
-                    "rotation": 14.940711462450594,
-                    "scale": 0.2803030303030303,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1079.6867832842495,
-                        668.1090072093757
-                    ],
-                    "rotation": -10.671936758893281,
-                    "scale": 0.3316864295125165,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        647.9191799806827,
-                        650.2494047777582
-                    ],
-                    "rotation": -180.0,
-                    "scale": 0.31389986824769434,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
                 {
                     "translation": [
                         1024.0,
                         1024.0
                     ],
-                    "rotation": 113.12252964426875,
-                    "scale": 0.2822793148880105,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1085.9875671861582,
-                        1169.1692172021199
-                    ],
-                    "rotation": -56.20553359683794,
-                    "scale": 0.32608695652173914,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1358.859722219867,
-                        1082.8065956900755
-                    ],
-                    "rotation": 59.0513833992095,
-                    "scale": 0.25527009222661395,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        169.1842715314798,
-                        1098.4918112723926
-                    ],
-                    "rotation": -91.77865612648222,
-                    "scale": 0.31093544137022394,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1147.1585675206493,
-                        972.3121431760994
-                    ],
-                    "rotation": -114.54545454545455,
-                    "scale": 0.28919631093544135,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1012.7687032554265,
-                        1626.9626008813052
-                    ],
-                    "rotation": -96.04743083003952,
-                    "scale": 0.2974308300395257,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1155.389559843581,
-                        961.0122075322925
-                    ],
-                    "rotation": 170.03952569169962,
-                    "scale": 0.29183135704874835,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1240.8938331980903,
-                        549.063295114428
-                    ],
-                    "rotation": 131.6205533596838,
-                    "scale": 0.2779973649538867,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        971.7209916148283,
-                        1068.7349474112352
-                    ],
-                    "rotation": 51.936758893280654,
-                    "scale": 0.3214756258234519,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        387.64511309411296,
-                        1263.602702318413
-                    ],
-                    "rotation": 41.97628458498025,
-                    "scale": 0.283596837944664,
+                    "rotation": 0.0,
+                    "scale": 1.0,
                     "image_uri": "4000-topping-meat-pepperoni.png"
                 }
             ]
@@ -405,7 +270,7 @@
                 },
                 "image_uris": {
                     "filename": "5170-topping-fruit-blackolives.png",
-                    "output_mask": "#####-topping-fruit"
+                    "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
             "count": 12.0,
@@ -415,8 +280,8 @@
                         1774.0,
                         1024.0
                     ],
-                    "rotation": 154.38735177865613,
-                    "scale": 0.1733201581027668,
+                    "rotation": -20.632411067193686,
+                    "scale": 0.1593544137022398,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -424,8 +289,8 @@
                         1673.5192186876275,
                         1398.9997127404417
                     ],
-                    "rotation": 168.61660079051381,
-                    "scale": 0.15777338603425559,
+                    "rotation": 106.00790513833994,
+                    "scale": 0.1808300395256917,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -433,8 +298,8 @@
                         1399.0005745188964,
                         1673.5187211393504
                     ],
-                    "rotation": -137.31225296442688,
-                    "scale": 0.15342555994729906,
+                    "rotation": -7.826086956521721,
+                    "scale": 0.17608695652173914,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -442,8 +307,8 @@
                         1024.0009950961726,
                         1773.9999999993397
                     ],
-                    "rotation": 118.81422924901187,
-                    "scale": 0.1777997364953887,
+                    "rotation": -168.61660079051384,
+                    "scale": 0.1795125164690382,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -451,8 +316,8 @@
                         649.001149038673,
                         1673.5197162347613
                     ],
-                    "rotation": 20.632411067193686,
-                    "scale": 0.15276679841897234,
+                    "rotation": -104.58498023715414,
+                    "scale": 0.17305665349143612,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -460,8 +325,8 @@
                         374.48177641006953,
                         1399.001436296691
                     ],
-                    "rotation": 47.66798418972331,
-                    "scale": 0.15988142292490118,
+                    "rotation": -167.19367588932806,
+                    "scale": 0.18175230566534917,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -469,8 +334,8 @@
                         274.0000000026406,
                         1024.001990192345
                     ],
-                    "rotation": -171.46245059288538,
-                    "scale": 0.1580368906455863,
+                    "rotation": 10.67193675889331,
+                    "scale": 0.15566534914361002,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -478,8 +343,8 @@
                         374.4797862192489,
                         649.0020108184478
                     ],
-                    "rotation": 4.980237154150217,
-                    "scale": 0.1564558629776021,
+                    "rotation": -155.8102766798419,
+                    "scale": 0.16462450592885375,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -487,8 +352,8 @@
                         648.9977019261746,
                         374.4822739606333
                     ],
-                    "rotation": 167.19367588932806,
-                    "scale": 0.16818181818181818,
+                    "rotation": 160.0790513833992,
+                    "scale": 0.17002635046113307,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -496,8 +361,8 @@
                         1023.997014711482,
                         274.0000000059413
                     ],
-                    "rotation": 6.403162055335969,
-                    "scale": 0.18043478260869567,
+                    "rotation": 152.96442687747037,
+                    "scale": 0.1756916996047431,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -505,8 +370,8 @@
                         1398.9971274011168,
                         374.47928867440226
                     ],
-                    "rotation": 154.38735177865613,
-                    "scale": 0.16001317523056655,
+                    "rotation": -19.209486166007906,
+                    "scale": 0.15355731225296443,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 },
                 {
@@ -514,8 +379,8 @@
                         1673.5172284876598,
                         648.9968401497003
                     ],
-                    "rotation": -20.632411067193686,
-                    "scale": 0.15355731225296443,
+                    "rotation": 71.85770750988141,
+                    "scale": 0.16462450592885375,
                     "image_uri": "5170-topping-fruit-blackolives.png"
                 }
             ]
@@ -524,65 +389,20 @@
     "instances": [
         {
             "translation": [
-                454.4483814856211,
-                742.2139348072646
+                0,
+                0
             ],
-            "rotation": 24.901185770751,
-            "scale": 0.32641633728590247,
+            "rotation": 0,
+            "scale": 1.0,
             "image_uri": "4000-topping-meat-pepperoni.png"
         },
         {
             "translation": [
-                1012.7687032554265,
-                1626.9626008813052
+                4096.0,
+                4096.0
             ],
-            "rotation": -96.04743083003952,
-            "scale": 0.2974308300395257,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1673.5192186876275,
-                1398.9997127404417
-            ],
-            "rotation": 168.61660079051381,
-            "scale": 0.15777338603425559,
-            "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                647.9191799806827,
-                650.2494047777582
-            ],
-            "rotation": -180.0,
-            "scale": 0.31389986824769434,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1488.1631219387934,
-                989.3513331233321
-            ],
-            "rotation": -26.32411067193678,
-            "scale": 0.319828722002635,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1079.6867832842495,
-                668.1090072093757
-            ],
-            "rotation": -10.671936758893281,
-            "scale": 0.3316864295125165,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                169.1842715314798,
-                1098.4918112723926
-            ],
-            "rotation": -91.77865612648222,
-            "scale": 0.31093544137022394,
+            "rotation": 0,
+            "scale": 0.5,
             "image_uri": "4000-topping-meat-pepperoni.png"
         },
         {
@@ -590,71 +410,8 @@
                 374.4797862192489,
                 649.0020108184478
             ],
-            "rotation": 4.980237154150217,
-            "scale": 0.1564558629776021,
-            "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                374.48177641006953,
-                1399.001436296691
-            ],
-            "rotation": 47.66798418972331,
-            "scale": 0.15988142292490118,
-            "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                1399.0005745188964,
-                1673.5187211393504
-            ],
-            "rotation": -137.31225296442688,
-            "scale": 0.15342555994729906,
-            "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                274.0000000026406,
-                1024.001990192345
-            ],
-            "rotation": -171.46245059288538,
-            "scale": 0.1580368906455863,
-            "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                1774.0,
-                1024.0
-            ],
-            "rotation": 154.38735177865613,
-            "scale": 0.1733201581027668,
-            "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                495.2262077114626,
-                1604.4651578149615
-            ],
-            "rotation": 14.940711462450594,
-            "scale": 0.2803030303030303,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                971.7209916148283,
-                1068.7349474112352
-            ],
-            "rotation": 51.936758893280654,
-            "scale": 0.3214756258234519,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1673.5172284876598,
-                648.9968401497003
-            ],
-            "rotation": -20.632411067193686,
-            "scale": 0.15355731225296443,
+            "rotation": -155.8102766798419,
+            "scale": 0.16462450592885375,
             "image_uri": "5170-topping-fruit-blackolives.png"
         },
         {
@@ -662,80 +419,62 @@
                 1024.0009950961726,
                 1773.9999999993397
             ],
-            "rotation": 118.81422924901187,
-            "scale": 0.1777997364953887,
+            "rotation": -168.61660079051384,
+            "scale": 0.1795125164690382,
             "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                1085.9875671861582,
-                1169.1692172021199
-            ],
-            "rotation": -56.20553359683794,
-            "scale": 0.32608695652173914,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1147.1585675206493,
-                972.3121431760994
-            ],
-            "rotation": -114.54545454545455,
-            "scale": 0.28919631093544135,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1240.8938331980903,
-                549.063295114428
-            ],
-            "rotation": 131.6205533596838,
-            "scale": 0.2779973649538867,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1155.389559843581,
-                961.0122075322925
-            ],
-            "rotation": 170.03952569169962,
-            "scale": 0.29183135704874835,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                731.230112297799,
-                200.23412516343024
-            ],
-            "rotation": -34.861660079051376,
-            "scale": 0.32674571805006586,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1023.997014711482,
-                274.0000000059413
-            ],
-            "rotation": 6.403162055335969,
-            "scale": 0.18043478260869567,
-            "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                387.64511309411296,
-                1263.602702318413
-            ],
-            "rotation": 41.97628458498025,
-            "scale": 0.283596837944664,
-            "image_uri": "4000-topping-meat-pepperoni.png"
         },
         {
             "translation": [
                 1398.9971274011168,
                 374.47928867440226
             ],
-            "rotation": 154.38735177865613,
-            "scale": 0.16001317523056655,
+            "rotation": -19.209486166007906,
+            "scale": 0.15355731225296443,
+            "image_uri": "5170-topping-fruit-blackolives.png"
+        },
+        {
+            "translation": [
+                1673.5192186876275,
+                1398.9997127404417
+            ],
+            "rotation": 106.00790513833994,
+            "scale": 0.1808300395256917,
+            "image_uri": "5170-topping-fruit-blackolives.png"
+        },
+        {
+            "translation": [
+                1023.997014711482,
+                274.0000000059413
+            ],
+            "rotation": 152.96442687747037,
+            "scale": 0.1756916996047431,
+            "image_uri": "5170-topping-fruit-blackolives.png"
+        },
+        {
+            "translation": [
+                1399.0005745188964,
+                1673.5187211393504
+            ],
+            "rotation": -7.826086956521721,
+            "scale": 0.17608695652173914,
+            "image_uri": "5170-topping-fruit-blackolives.png"
+        },
+        {
+            "translation": [
+                274.0000000026406,
+                1024.001990192345
+            ],
+            "rotation": 10.67193675889331,
+            "scale": 0.15566534914361002,
+            "image_uri": "5170-topping-fruit-blackolives.png"
+        },
+        {
+            "translation": [
+                1673.5172284876598,
+                648.9968401497003
+            ],
+            "rotation": 71.85770750988141,
+            "scale": 0.16462450592885375,
             "image_uri": "5170-topping-fruit-blackolives.png"
         },
         {
@@ -743,36 +482,27 @@
                 648.9977019261746,
                 374.4822739606333
             ],
-            "rotation": 167.19367588932806,
-            "scale": 0.16818181818181818,
+            "rotation": 160.0790513833992,
+            "scale": 0.17002635046113307,
             "image_uri": "5170-topping-fruit-blackolives.png"
         },
         {
             "translation": [
-                1358.859722219867,
-                1082.8065956900755
+                374.48177641006953,
+                1399.001436296691
             ],
-            "rotation": 59.0513833992095,
-            "scale": 0.25527009222661395,
-            "image_uri": "4000-topping-meat-pepperoni.png"
+            "rotation": -167.19367588932806,
+            "scale": 0.18175230566534917,
+            "image_uri": "5170-topping-fruit-blackolives.png"
         },
         {
             "translation": [
                 649.001149038673,
                 1673.5197162347613
             ],
-            "rotation": 20.632411067193686,
-            "scale": 0.15276679841897234,
+            "rotation": -104.58498023715414,
+            "scale": 0.17305665349143612,
             "image_uri": "5170-topping-fruit-blackolives.png"
-        },
-        {
-            "translation": [
-                1024.0,
-                1024.0
-            ],
-            "rotation": 113.12252964426875,
-            "scale": 0.2822793148880105,
-            "image_uri": "4000-topping-meat-pepperoni.png"
         }
     ],
     "instructions": {
