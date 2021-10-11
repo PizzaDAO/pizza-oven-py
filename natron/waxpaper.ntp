@@ -20,7 +20,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>11</KnobsCount>
+			<KnobsCount>10</KnobsCount>
 			<item class_id="3" tracking_level="0" version="14">
 				<Name>encodingPluginID</Name>
 				<Type>String</Type>
@@ -51,7 +51,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(rp-#####-paper.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(####-paper.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -72,7 +72,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>../output/rp-#####-paper.png</Value>
+					<Value>../output/####-paper.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -208,24 +208,6 @@
 				</item>
 				<UserKnob>0</UserKnob>
 			</item>
-			<item>
-				<Name>bitDepth</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>16u</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
 			<Inputs_map class_id="6" tracking_level="0" version="0">
 				<count>1</count>
 				<item_version>0</item_version>
@@ -234,7 +216,7 @@
 					<second>Sharpen1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>51</KnobsAge>
+			<KnobsAge>53</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -5585,7 +5567,7 @@
 		<item>
 			<Enabled>1</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>&lt;Name&gt;OCIO&lt;/Name&gt;&lt;Value&gt;/Applications/Natron.app/Contents/Resources/OpenColorIO-Configs/blender&lt;/Value&gt;&lt;Name&gt;Project&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/natron&lt;/Value&gt;&lt;Name&gt;Images&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/ingredients-db&lt;/Value&gt;</Value>
+			<Value>&lt;Name&gt;OCIO&lt;/Name&gt;&lt;Value&gt;/Applications/Natron.app/Contents/Resources/OpenColorIO-Configs/blender&lt;/Value&gt;&lt;Name&gt;Project&lt;/Name&gt;&lt;Value&gt;/Users/ashafer/Development/pizza-oven-tmp/natron&lt;/Value&gt;&lt;Name&gt;Images&lt;/Name&gt;&lt;Value&gt;/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-repo/pizza-oven-py/ingredients-db&lt;/Value&gt;</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -5697,7 +5679,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Aug 2 11:52:45 2021</Value>
+			<Value>Mon Oct 11 07:05:23 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -5830,7 +5812,7 @@
 			<b>0.000000000e+00</b>
 			<Selected>0</Selected>
 			<Width>1.04000000000000000e+02</Width>
-			<Height>6.00000000000000000e+01</Height>
+			<Height>4.30000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
@@ -5922,8 +5904,8 @@
 				<X_position>5.84000000000000000e+02</X_position>
 				<Y_position>8.70000000000000000e+01</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.098039329e-01</r>
-				<g>5.215686560e-01</g>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>8.00000000000000000e+01</Width>
@@ -5936,8 +5918,8 @@
 				<X_position>7.59000000000000000e+02</X_position>
 				<Y_position>-1.12000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.098039329e-01</r>
-				<g>5.215686560e-01</g>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
@@ -6179,7 +6161,7 @@
 				<b>3.900053501e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6188,12 +6170,12 @@
 				<X_position>7.59000000000000000e+02</X_position>
 				<Y_position>1.67000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
+				<r>6.999923587e-01</r>
 				<g>3.000076413e-01</g>
 				<b>1.000076309e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6207,7 +6189,7 @@
 				<b>7.759975791e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6221,7 +6203,7 @@
 				<b>1.000000000e+00</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6235,7 +6217,7 @@
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>8.00000000000000000e+01</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6249,7 +6231,7 @@
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6258,12 +6240,12 @@
 				<X_position>1.00000000000000000e+03</X_position>
 				<Y_position>4.97000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6277,7 +6259,7 @@
 				<b>3.000076413e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>3.40000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6291,7 +6273,7 @@
 				<b>7.759975791e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>5.60000000000000000e+01</Height>
+				<Height>4.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -6429,7 +6411,7 @@
 			<first>Viewer1</first>
 			<second class_id="24" tracking_level="0" version="14">
 				<zoomLeft>-9.13216359749522098e+02</zoomLeft>
-				<zoomBottom>1.40278998237884457e+03</zoomBottom>
+				<zoomBottom>2.99114380910030877e+03</zoomBottom>
 				<zoomFactor>1.93911453996207905e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="25" tracking_level="0" version="0">
