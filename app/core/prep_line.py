@@ -167,6 +167,7 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
                 rotation=0.0,
                 scale=scale,
                 image_uri=scope.ingredient.image_uris["filename"],
+                scatter_type="None"
             )
         ]
     else:

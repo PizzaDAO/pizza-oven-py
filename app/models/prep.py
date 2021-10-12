@@ -39,6 +39,8 @@ class MadeIngredientPrep(Base):
     """the scale of the instance as fraction e.g. (-1,1)"""
     image_uri: Optional[str]
     """path to ingredient image"""
+    scatter_type: str
+    """scatter type for ingredient"""
 
 
 class ShuffledLayer(Base):

@@ -74,7 +74,11 @@ class Grid(Scatter):
             translation = self.translate_to_canvas(grid_positions[i])
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=scope.ingredient.image_uris["filename"],
+                    scatter_type=self.__class__.__name__
                 )
             )
 
@@ -142,7 +146,11 @@ class TreeRing(Scatter):
             translation = self.translate_to_canvas(translation)
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=scope.ingredient.image_uris["filename"],
+                    scatter_type=self.__class__.__name__
                 )
             )
 
@@ -182,7 +190,11 @@ class RandomScatter(Scatter):
             translation = self.translate_to_canvas(translation)
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=scope.ingredient.image_uris["filename"],
+                    scatter_type=self.__class__.__name__
                 )
             )
 
