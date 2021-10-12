@@ -384,7 +384,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(#####-box.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(####--natron-box.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -405,7 +405,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>../output/#####-box.png</Value>
+					<Value>../output/####--natron-box.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -585,7 +585,7 @@
 					<second>Sharpen1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>51</KnobsAge>
+			<KnobsAge>52</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -2722,7 +2722,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge1</second>
+					<second>w1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -5069,7 +5069,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Oct 11 12:02:01 2021</Value>
+			<Value>Tue Oct 12 08:10:27 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -5206,7 +5206,7 @@
 			<b>0.000000000e+00</b>
 			<Selected>0</Selected>
 			<Width>1.04000000000000000e+02</Width>
-			<Height>4.30000000000000000e+01</Height>
+			<Height>6.00000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
@@ -5734,9 +5734,9 @@
 		<item class_id="23" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="24" tracking_level="0" version="14">
-				<zoomLeft>-2.62922578512396740e+03</zoomLeft>
-				<zoomBottom>-9.98780826446281139e+02</zoomBottom>
-				<zoomFactor>1.51492387820512803e-01</zoomFactor>
+				<zoomLeft>-3.50563438016528926e+03</zoomLeft>
+				<zoomBottom>-8.19200000000000728e+01</zoomBottom>
+				<zoomFactor>1.13619290865384609e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="25" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -5780,18 +5780,17 @@
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>10</count>
+		<count>9</count>
 		<item_version>0</item_version>
+		<item>w1</item>
+		<item>Reformat1</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Switch_default</item>
 		<item>i1</item>
 		<item>TRS_default</item>
 		<item>Switch_0010</item>
-		<item>Reformat1</item>
 		<item>Sharpen1</item>
-		<item>w1</item>
 		<item>Merge1</item>
-		<item>Grade1_2</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
