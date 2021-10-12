@@ -252,9 +252,8 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(
-            cache_dir, f"ingredient-{ingredient.ingredient.index}.json"
-        )
+        layer_string = str(ingredient.ingredient.index).zfill(2)
+        file_path = os.path.join(cache_dir, f"layer-{layer_string}.json")
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as ingredient_file:
@@ -272,7 +271,8 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(cache_dir, f"layer-{layer.index}.json")
+        layer_string = str(layer.index).zfill(2)
+        file_path = os.path.join(cache_dir, f"layer-{layer_string}.json")
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
@@ -475,7 +475,8 @@ class Renderer:
         # Build the output filename and save it allong with the cached Ingredient
         print("render_shuffled_layer")
         frame_string = str(self.frame).zfill(4)
-        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
+        layer_string = str(layer_index).zfill(2)
+        output_filename = f"{frame_string}-layer-{layer_string}.png"
         layer.output_mask = output_filename
         layer.index = layer_index
 
@@ -496,7 +497,8 @@ class Renderer:
         # Build the output filename and save it allong with the cached Ingredient
         category = classification_as_string(ingredient.ingredient.classification)
         frame_string = str(self.frame).zfill(4)
-        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
+        layer_string = str(layer_index).zfill(2)
+        output_filename = f"{frame_string}-layer-{layer_string}.png"
         ingredient.ingredient.image_uris["output_mask"] = output_filename
         ingredient.ingredient.index = layer_index
 
