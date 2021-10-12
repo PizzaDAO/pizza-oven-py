@@ -46,7 +46,10 @@ class IPFSSession:
 
 
 class PinataPy:
-    """A pinata api client session object"""
+    """
+    A pinata api client session object
+    mostly this: https://github.com/Vourhey/pinatapy
+    """
 
     def __init__(self, pinata_api_key: str, pinata_secret_api_key: str) -> None:
         self._auth_headers: Headers = {
