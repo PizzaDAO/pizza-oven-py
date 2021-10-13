@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, Tuple
+from typing import Dict, Any, Optional, Tuple, List
 import os.path
 import json
 
@@ -25,6 +25,8 @@ __all__ = [
     "parse_ingredients",
     "parse_recipes",
     "save_recipe",
+    "save_ingredients",
+    "get_variants_for_ingredient",
 ]
 
 """ Simple USage:
@@ -391,3 +393,41 @@ def save_recipe(recipe: Recipe):
 
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
+
+
+def save_ingredients(ingredient_dict):
+    list = []
+    for k, v in ingredient_dict.items():
+        list.append(json.loads(v.json()))
+
+    path = "data/ingredients/"
+
+    filename = "ingredient_db.json"
+    absolute_filepath = os.path.join(path, filename)
+
+    # create the directory if it doesnt exist
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    with open(absolute_filepath, "w") as outfile:
+        json.dump(list, outfile, indent=4)
+
+
+def get_variants_for_ingredient(ingredient_id: str) -> List:
+    # load the ingredients JSON and pull out the variants
+
+    variants: List[ScopedIngredient] = []
+    path = "data/ingredients/ingredient_db.json"
+    try:
+        f = open(path)
+        contents = json.load(f)
+        for item in contents:
+            scoped = ScopedIngredient.parse_obj(item)
+            if scoped.ingredient.ingredient_id == ingredient_id:
+                variants.append(scoped)
+        f.close()
+
+    except Exception as e:
+        print("Looking for variants of " + ingredient_id + "... But can't find any")
+
+    return variants

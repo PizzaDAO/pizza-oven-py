@@ -1,14 +1,16 @@
 from genericpath import exists
 import hashlib
-from os import listdir
-from os.path import isfile, join
+from os import listdir, path
+from os.path import isfile, join, exists
 import json
 from typing import Dict, Optional, List, Tuple
 
 from app.core.ingredients_db import *
+from app.core.ingredients_db import save_ingredients
 from app.models.recipe import *
 
 lOCAL_RECIPES_PATH = "data/recipes/"
+lOCAL_INGREDIENT_DB_PATH = "data/ingredients/"
 
 
 def make_recipe() -> Recipe:
@@ -52,6 +54,11 @@ def load_recipes() -> Tuple[List[str], Dict]:
 
     if not exists(lOCAL_RECIPES_PATH):
         ingredients = read_ingredients()
+
+        if not path.exists(lOCAL_INGREDIENT_DB_PATH + "ingredient_db.json"):
+            print("Loading and saving the ingredient db")
+            save_ingredients(ingredients)
+
         recipes = read_recipes(ingredients)
         for _, recipe in recipes.items():
             save_recipe(recipe)

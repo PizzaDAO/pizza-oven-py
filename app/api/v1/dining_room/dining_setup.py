@@ -34,4 +34,7 @@ def setup() -> SetupResponse:
     for _, recipe in recipes.items():
         save_recipe(recipe)
 
+    # save all the ingredients to a JSON file so we can access later
+    save_ingredients(ingredients)
+
     return SetupResponse(status=True)

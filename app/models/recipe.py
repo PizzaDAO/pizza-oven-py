@@ -85,6 +85,8 @@ class ScatterType(IntFlag):
     fibonacci = 32
     mandelbrot = 64
     julia = 128
+    grid = 512
+    treering = 1024
 
 
 class Rarity(IntFlag):

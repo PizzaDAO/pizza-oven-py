@@ -22,6 +22,7 @@ __all__ = [
     "Canvas",
     "Scatter",
     "RandomScatter",
+    "RandomScatter2",
 ]
 
 
@@ -43,14 +44,15 @@ class Scatter:
         """implement in your derived class"""
         ...
 
-    def translate_to_canvas(self,point:Tuple[float,float]) -> Tuple[float,float]:
+    def translate_to_canvas(self, point: Tuple[float, float]) -> Tuple[float, float]:
         """translate a raw point to a location on the canvas"""
         canvas = Canvas()
         # position based on 1024 topping image size - if pixel dimensions are different, position will be off
-        x = point[0] + canvas.center[0] - (1024/2)
-        y = point[1] + canvas.center[1] - (1024/2)
+        x = point[0] + canvas.center[0] - (1024 / 2)
+        y = point[1] + canvas.center[1] - (1024 / 2)
 
-        return(x,y)
+        return (x, y)
+
 
 class Grid(Scatter):
     """Creates a grid pattern to distrubute toppins evenly - Grid is alwyas the same size and can have empty
@@ -65,54 +67,63 @@ class Grid(Scatter):
         instance_count = round(instance_selection)
 
         grid_positions = self.build_grid(instance_count)
-        
+
         instances: List[MadeIngredientPrep] = []
 
-        for i in range(0,len(grid_positions)):
+        for i in range(0, len(grid_positions)):
             rotation = select_value(self.random_seed, self.nonce, scope.scope.rotation)
-            scale = select_value(self.random_seed, self.nonce, scope.scope.particle_scale)
+            scale = select_value(
+                self.random_seed, self.nonce, scope.scope.particle_scale
+            )
             translation = self.translate_to_canvas(grid_positions[i])
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=scope.ingredient.image_uris["filename"],
                 )
             )
 
         return instances
 
-    def translate_to_canvas(self,point:Tuple[float,float]) -> Tuple[float,float]:
+    def translate_to_canvas(self, point: Tuple[float, float]) -> Tuple[float, float]:
         """translate a raw point to a location on the canvas"""
         canvas = Canvas()
         # Grid is created with (0,0) at top left corner, so override the translation method
         x = point[0]
         y = point[1]
 
-        return(x,y)
+        return (x, y)
 
     def build_grid(self, item_count) -> list:
 
         line_count = round(sqrt(item_count)) + 1
-        item_width = 3072 / line_count #3072 is the crust layer size - grid should not extend past this
+        item_width = (
+            3072 / line_count
+        )  # 3072 is the crust layer size - grid should not extend past this
 
         unfiltered_positions = list()
         for i in range(0, line_count):
-            x = (i * item_width)
+            x = i * item_width
             for n in range(0, line_count):
-                y = (n * item_width)
-                unfiltered_positions.append((x,y))
-        
+                y = n * item_width
+                unfiltered_positions.append((x, y))
+
         # Is this gonna work with the detrministic random setup?
         # We perform a shuffle here to spread out items over the grid when there are less items than grid spots
         unfiltered_positions = deterministic_shuffle(unfiltered_positions)
 
-        positions:List[Tuple[float,float]] = list()
+        positions: List[Tuple[float, float]] = list()
         center = Canvas().center[X]
         # Now filter the list to remove any toppings outside the crust layer circle
         # Large toppings may extend past crust - This does not take into account the topping size...
         for p in unfiltered_positions:
-            dist_from_center = sqrt( (p[0] - center)**2 + (p[1] - center)**2 )
-            
-            if( dist_from_center < (3072/2) and len(positions) < len(unfiltered_positions)):
+            dist_from_center = sqrt((p[0] - center) ** 2 + (p[1] - center) ** 2)
+
+            if dist_from_center < (3072 / 2) and len(positions) < len(
+                unfiltered_positions
+            ):
                 positions.append(p)
 
         return positions
@@ -130,25 +141,37 @@ class TreeRing(Scatter):
         instance_count = round(instance_selection)
 
         min_radius = 250.0
-        max_radius = 3072/2 # might be a better way to calculat this, take into account the particle size
-        radius = min_radius + (get_random_deterministic_float(self.random_seed, self.nonce) * (max_radius - min_radius))
+        max_radius = (
+            3072 / 2
+        )  # might be a better way to calculat this, take into account the particle size
+        radius = min_radius + (
+            get_random_deterministic_float(self.random_seed, self.nonce)
+            * (max_radius - min_radius)
+        )
 
         instances: List[MadeIngredientPrep] = []
 
         for instance_index in range(instance_count):
             rotation = select_value(self.random_seed, self.nonce, scope.scope.rotation)
-            scale = select_value(self.random_seed, self.nonce, scope.scope.particle_scale)
-            translation = self.calculate_tree_position(radius, instance_count, instance_index)
+            scale = select_value(
+                self.random_seed, self.nonce, scope.scope.particle_scale
+            )
+            translation = self.calculate_tree_position(
+                radius, instance_count, instance_index
+            )
             translation = self.translate_to_canvas(translation)
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=scope.ingredient.image_uris["filename"],
                 )
             )
 
         return instances
 
-    def calculate_tree_position(self, radius, item_count, index) -> Tuple[float,float]:
+    def calculate_tree_position(self, radius, item_count, index) -> Tuple[float, float]:
         """Return a position on the circle based on the index count"""
 
         degree_int = (2 * PI) / item_count
@@ -158,31 +181,37 @@ class TreeRing(Scatter):
 
         return (x, y)
 
+
 class RandomScatter(Scatter):
     "randomly scatter by placing items on circles"
 
     def evaluate(self, scope: ScopedIngredient) -> List[MadeIngredientPrep]:
 
-        #print(scope)
+        # print(scope)
 
         instance_selection = select_value(
             self.random_seed, self.nonce, scope.scope.emission_count
         )
 
         instance_count = round(instance_selection)
-        
+
         instances: List[MadeIngredientPrep] = []
 
         for instance_index in range(instance_count):
             rotation = select_value(self.random_seed, self.nonce, scope.scope.rotation)
-            scale = select_value(self.random_seed, self.nonce, scope.scope.particle_scale)
+            scale = select_value(
+                self.random_seed, self.nonce, scope.scope.particle_scale
+            )
             translation = self.get_random_point(
                 self.random_seed, self.nonce, instance_index
             )
             translation = self.translate_to_canvas(translation)
             instances.append(
                 MadeIngredientPrep(
-                    translation=translation, rotation=rotation, scale=scale, image_uri=scope.ingredient.image_uris["filename"]
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=scope.ingredient.image_uris["filename"],
                 )
             )
 
@@ -196,7 +225,9 @@ class RandomScatter(Scatter):
         rad = get_random_deterministic_float(seed, nonce, "random-point_rad", position)
         ang = get_random_deterministic_float(seed, nonce, "random-point_ang", position)
 
-        random_radius = rad * (3052.0/2.0)  # 3072 is the pixel width of pies - temp minus 20 to decrease bleed off pie
+        random_radius = rad * (
+            3052.0 / 2.0
+        )  # 3072 is the pixel width of pies - temp minus 20 to decrease bleed off pie
         random_angle = ang * TWO_PI
         x = random_radius * cos(random_angle)
         y = random_radius * sin(random_angle)
@@ -222,5 +253,54 @@ class RandomScatter(Scatter):
         print(f"x: {x}")
         y = Canvas.center[Y] + r * radius * sin(theta)
         print(f"y: {y}")
+
+        return (x, y)
+
+
+class RandomScatter2(Scatter):
+    "randomly scatter by placing items on circles"
+
+    def evaluate2(
+        self, topping_list: List[ScopedIngredient]
+    ) -> List[MadeIngredientPrep]:
+
+        instances: List[MadeIngredientPrep] = []
+
+        for ingredient in topping_list:
+            rotation = select_value(
+                self.random_seed, self.nonce, ingredient.scope.rotation
+            )
+            scale = select_value(
+                self.random_seed, self.nonce, ingredient.scope.particle_scale
+            )
+
+            index = topping_list.index(ingredient)
+            translation = self.get_random_point(self.random_seed, self.nonce, index)
+            translation = self.translate_to_canvas(translation)
+            instances.append(
+                MadeIngredientPrep(
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=ingredient.ingredient.image_uris["filename"],
+                )
+            )
+
+        return instances
+
+    def get_random_point(
+        self, seed: int, nonce: Counter, position: int
+    ) -> Tuple[SCALAR, SCALAR]:
+        """Slightly different calculation for random point - limits the distribution to a radius"""
+
+        rad = get_random_deterministic_float(seed, nonce, "random-point_rad", position)
+        ang = get_random_deterministic_float(seed, nonce, "random-point_ang", position)
+
+        random_radius = rad * (
+            3052.0 / 2.0
+        )  # 3072 is the pixel width of pies - temp minus 20 to decrease bleed off pie
+        random_angle = ang * TWO_PI
+        x = random_radius * cos(random_angle)
+        y = random_radius * sin(random_angle)
 
         return (x, y)
