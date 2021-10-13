@@ -77,8 +77,7 @@ class Grid(Scatter):
                     translation=translation,
                     rotation=rotation,
                     scale=scale,
-                    image_uri=scope.ingredient.image_uris["filename"],
-                    scatter_type=self.__class__.__name__
+                    image_uri=scope.ingredient.image_uris["filename"]
                 )
             )
 
@@ -149,8 +148,7 @@ class TreeRing(Scatter):
                     translation=translation,
                     rotation=rotation,
                     scale=scale,
-                    image_uri=scope.ingredient.image_uris["filename"],
-                    scatter_type=self.__class__.__name__
+                    image_uri=scope.ingredient.image_uris["filename"]
                 )
             )
 
@@ -193,8 +191,7 @@ class RandomScatter(Scatter):
                     translation=translation,
                     rotation=rotation,
                     scale=scale,
-                    image_uri=scope.ingredient.image_uris["filename"],
-                    scatter_type=self.__class__.__name__
+                    image_uri=scope.ingredient.image_uris["filename"]
                 )
             )
 
