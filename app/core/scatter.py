@@ -48,8 +48,8 @@ class Scatter:
         """translate a raw point to a location on the canvas"""
         canvas = Canvas()
         # position based on 1024 topping image size - if pixel dimensions are different, position will be off
-        x = point[0] + canvas.center[0] - (1024 / 2)
-        y = point[1] + canvas.center[1] - (1024 / 2)
+        x = point[0] + (3072 / 2)
+        y = point[1] + (3072 / 2)
 
         return (x, y)
 

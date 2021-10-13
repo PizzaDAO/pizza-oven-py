@@ -57,6 +57,7 @@ def select_from_variants(
     instances = []
     for i in range(instance_count):
         index = random_weighted_index(random_seed, nonce, i, freq)
+
         instances.append(variants[index])
 
     return instances
@@ -70,7 +71,9 @@ def makeDistribution(options: List[ScopedIngredient]):
         weight_sum += weight_for_rarity(item.ingredient.variant_rarity)
 
     for item in options:
-        weight_percent = weight_for_rarity(item.ingredient.variant_rarity) / weight_sum
+        weight_percent = 100 * (
+            weight_for_rarity(item.ingredient.variant_rarity) / weight_sum
+        )
         freq.append(weight_percent)
 
     return freq
