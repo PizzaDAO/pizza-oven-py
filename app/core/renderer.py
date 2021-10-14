@@ -433,12 +433,12 @@ class Renderer:
             rendered_layer_files.append(result)
             layer_index += 1
 
-        # render any special ingredients
-        #       for (key, ingredient) in order.special.items():
-        #           result = self.render_ingredient(ingredient)
-        #           if not result:
-        #               print(f"error rendering special {ingredient.ingredient.name}")
-        #               break
+        # SPECIALS Temp - render seasoning and savers for make testing
+        if order.specials is not None:
+            for (_, ingredient) in order.specials.items():
+                result = self.render_ingredient(layer_index, ingredient)
+                rendered_layer_files.append(result)
+                layer_index += 1
 
         # combiner all the images together
         output_file = self.flatten_image(rendered_layer_files, order)
