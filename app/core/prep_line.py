@@ -21,7 +21,7 @@ from app.core.random_num import (
     select_value,
 )
 import json
-from app.core.scatter import Grid, RandomScatter, TreeRing, RandomScatter2
+from app.core.scatter import Grid, RandomScatter, TreeRing
 from app.core.utils import clamp, to_hex
 from app.core.ingredients_db import get_variants_for_ingredient
 from app.core.rarity import select_from_variants
@@ -200,7 +200,7 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
 
         # populate the scatter type with the selected_variants
         if scatter_type == ScatterType.random:
-            instances = RandomScatter2(seed, nonce).evaluate2(selected_variants)
+            instances = RandomScatter(seed, nonce).evaluate(selected_variants)
 
         # instances = TreeRing(seed, nonce).evaluate(scope.scope)
         # instances = Grid(seed, nonce).evaluate(scope)
