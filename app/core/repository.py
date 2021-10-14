@@ -5,8 +5,8 @@ from app.models.prep import KitchenOrder
 from app.models.pizza import HotPizza, RarePizzaMetadata
 
 from app.core.recipe_box import sample
-from app.core.ipfs_adapter import IPFSSession
-from app.core.config import Settings
+from app.core.ipfs_adapter import IPFSSession, PinataPy
+from app.core.config import IPFSMode, Settings
 
 __all__ = [
     "get_recipe",
@@ -56,8 +56,18 @@ def set_pizza(pizza: HotPizza) -> str:
 
 def set_pizza_image(pizza: HotPizza) -> str:
     file_path = pizza.assets["IMAGE_PATH"]
-    with IPFSSession(settings.IPFS_NODE_API) as session:
-        return session.pin_resource(file_path)
+    if settings.IPFS_MODE == IPFSMode.remote:
+        print("pinning using local node")
+        with IPFSSession(settings.IPFS_NODE_API) as session:
+            return session.pin_resource(file_path)
+    elif settings.IPFS_MODE == IPFSMode.pinata:
+        print("pinning using pinata")
+        return PinataPy(
+            settings.PINATA_API_KEY, settings.PINATA_API_SECRET
+        ).pin_file_to_ipfs(file_path)["IpfsHash"]
+    else:
+        print("pinning not implemented")
+        return ""
 
 
 def get_metadata(ipfs_hash: str) -> RarePizzaMetadata:
@@ -69,5 +79,16 @@ def set_metadata(metadata: RarePizzaMetadata) -> str:
     json_string = metadata.json()
     print("set_metadata:")
     print(json_string)
-    with IPFSSession(settings.IPFS_NODE_API) as session:
-        return session.pin_json(metadata.dict())
+
+    if settings.IPFS_MODE == IPFSMode.remote:
+        print("pinning using local node")
+        with IPFSSession(settings.IPFS_NODE_API) as session:
+            return session.pin_json(metadata.dict())
+    elif settings.IPFS_MODE == IPFSMode.pinata:
+        print("pinning using pinata")
+        return PinataPy(
+            settings.PINATA_API_KEY, settings.PINATA_API_SECRET
+        ).pin_json_to_ipfs(json_string)["IpfsHash"]
+    else:
+        print("pinning not implemented")
+        return ""
