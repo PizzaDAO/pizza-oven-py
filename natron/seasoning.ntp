@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>5</NodesCount>
+		<NodesCount>4</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>w1</Plugin_label>
 			<Plugin_script_name>w1</Plugin_script_name>
@@ -51,7 +51,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(####-seasoning.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(####-natron-seasoning.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -72,7 +72,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>../output/####-seasoning.png</Value>
+					<Value>../output/####-natron-seasoning.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -216,7 +216,7 @@
 					<second>Reformat1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>54</KnobsAge>
+			<KnobsAge>55</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -232,33 +232,6 @@
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Write3</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Viewer1</Plugin_label>
-			<Plugin_script_name>Viewer1</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>0</KnobsCount>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>1</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>0</PagesCount>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Viewer1</CacheID>
 		</item>
 		<item>
 			<Plugin_label>input_default</Plugin_label>
@@ -921,7 +894,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Oct 11 08:51:15 2021</Value>
+			<Value>Tue Oct 12 16:59:26 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -1042,7 +1015,7 @@
 </Project>
 <ProjectGui class_id="12" tracking_level="0" version="12">
 	<NodesGui class_id="13" tracking_level="0" version="0">
-		<count>5</count>
+		<count>4</count>
 		<item_version>6</item_version>
 		<item class_id="14" tracking_level="0" version="6">
 			<Name>w1</Name>
@@ -1055,20 +1028,6 @@
 			<Selected>0</Selected>
 			<Width>1.04000000000000000e+02</Width>
 			<Height>6.00000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Viewer1</Name>
-			<X_position>-3.56413577151098252e+02</X_position>
-			<Y_position>-2.67734382251873467e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>3.00000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
@@ -1120,20 +1079,19 @@
 		<Window class_id="16" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="17" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1069 575</Sizes>
+				<Sizes>1641 883</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>489 488</Sizes>
+					<Sizes>683 682</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="18" tracking_level="1" version="5" object_id="_2">
 						<Tabs class_id="19" tracking_level="0" version="0">
-							<count>1</count>
+							<count>0</count>
 							<item_version>0</item_version>
-							<item>Viewer1</item>
 						</Tabs>
-						<Index>0</Index>
+						<Index>-1</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
@@ -1164,58 +1122,15 @@
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>21</x>
+			<x>0</x>
 			<y>23</y>
-			<w>1680</w>
-			<h>980</h>
+			<w>2560</w>
+			<h>1368</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="20" tracking_level="0" version="0">
-		<count>1</count>
+		<count>0</count>
 		<item_version>0</item_version>
-		<item class_id="21" tracking_level="0" version="0">
-			<first>Viewer1</first>
-			<second class_id="22" tracking_level="0" version="14">
-				<zoomLeft>-3.04043462146872207e+03</zoomLeft>
-				<zoomBottom>-6.34729647980456321e+02</zoomBottom>
-				<zoomFactor>1.12237491176650314e-01</zoomFactor>
-				<UserRoIEnabled>0</UserRoIEnabled>
-				<UserRoI class_id="23" tracking_level="0" version="0">
-					<Left>7.68000000000000000e+02</Left>
-					<Bottom>7.68000000000000000e+02</Bottom>
-					<Right>2.30400000000000000e+03</Right>
-					<Top>2.30400000000000000e+03</Top>
-				</UserRoI>
-				<ClippedToProject>1</ClippedToProject>
-				<AutoContrast>0</AutoContrast>
-				<Gain>1.00000000000000000e+00</Gain>
-				<Gain>1.00000000000000000e+00</Gain>
-				<ColorSpace>sRGB</ColorSpace>
-				<Layer>-</Layer>
-				<AlphaLayer>-</AlphaLayer>
-				<Channels>RGB</Channels>
-				<RenderScaleActivated>0</RenderScaleActivated>
-				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
-				<CompositingOP>0</CompositingOP>
-				<LeftBound>1</LeftBound>
-				<RightBound>10000</RightBound>
-				<LeftToolbarVisible>1</LeftToolbarVisible>
-				<RightToolbarVisible>1</RightToolbarVisible>
-				<TopToolbarVisible>1</TopToolbarVisible>
-				<PlayerVisible>1</PlayerVisible>
-				<TimelineVisible>1</TimelineVisible>
-				<InfobarVisible>1</InfobarVisible>
-				<isInputAPaused>0</isInputAPaused>
-				<isInputBPaused>0</isInputBPaused>
-				<CheckerboardEnabled>0</CheckerboardEnabled>
-				<Fps>1.00000000000000000e+00</Fps>
-				<FpsLocked>1</FpsLocked>
-				<aInput>-1</aInput>
-				<bInput>0</bInput>
-				<fullFrame>0</fullFrame>
-			</second>
-		</item>
 	</ViewersData>
 	<Histograms>
 		<count>0</count>

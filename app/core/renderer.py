@@ -234,9 +234,10 @@ class ExtraRenderer:
 class Renderer:
     """render the kitchen order"""
 
+    frame: int = field()
+    job_id: str = field()
     natron_path: str = field(default=settings.DEFAULT_NATRON_EXECUTABLE_PATH)
     project_path: str = field(default=settings.DEFAULT_NATRON_PROJECT_PATH)
-    frame: int = field(default=0)
 
     rendered_files: Dict[str, str] = field(default_factory=lambda: {})
 
@@ -369,7 +370,7 @@ class Renderer:
 
         return unique_filename
 
-    def render_pizza(self, job_id: str, order: KitchenOrder) -> HotPizza:
+    def render_pizza(self, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
         print("render_pizza")
         rendered_layer_files: List[str] = []
@@ -459,7 +460,7 @@ class Renderer:
         # and pass the rendering back to the caller
         # note the IPFS id probably isnt populated in this function but instead by the caller
         return HotPizza(
-            job_id=job_id,
+            job_id=self.job_id,
             token_id=order.token_id,
             random_seed=order.random_seed,
             recipe_id=order.recipe_id,
@@ -605,8 +606,8 @@ if __name__ == "__main__":
     if args.kitchen_order_path is not None:
         with open(args.kitchen_order_path) as json_file:
             kitchen_order = KitchenOrder(**json.load(json_file))
-            Renderer(args.natron_path, args.project_path, args.frame).render_pizza(
-                "some-job-id", kitchen_order
-            )
+            Renderer(
+                args.frame, "abc-1234", args.natron_path, args.project_path
+            ).render_pizza(kitchen_order)
 
     # TODO: load the recipe, parse it, and render

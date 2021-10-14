@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>26</NodesCount>
+		<NodesCount>25</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Merge2_2</Plugin_label>
 			<Plugin_script_name>Merge2_2</Plugin_script_name>
@@ -1713,166 +1713,6 @@ Cheese&lt;/font&gt;</Value>
 			<CacheID>Read12_3_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Crop _1</Plugin_label>
-			<Plugin_script_name>Crop__1</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.CropPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>6</KnobsCount>
-			<item>
-				<Name>extent</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>project</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>NatronParamFormatChoice</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>29</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>PC_Video</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>bottomLeft</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0.00000000000000000e+00</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0.00000000000000000e+00</Value>
-					<Default>0.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>size</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>4.09600000000000000e+03</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>4.09600000000000000e+03</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>interactive</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>TRS_default</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>5</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Crop14_2_2</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Switch_default</Plugin_label>
 			<Plugin_script_name>Switch_default</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
@@ -2074,7 +1914,7 @@ Cheese&lt;/font&gt;</Value>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Crop__1</second>
+					<second>Bake_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>1</KnobsAge>
@@ -2317,7 +2157,7 @@ Cheese&lt;/font&gt;</Value>
 				<item_version>0</item_version>
 				<item>
 					<first>In</first>
-					<second>Crop__1</second>
+					<second>TRS_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>100685</KnobsAge>
@@ -10591,7 +10431,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
-					<ChoiceLabel></ChoiceLabel>
+					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 					<UserKnob>0</UserKnob>
 				</item>
 				<Inputs_map>
@@ -19236,7 +19076,7 @@ ret = y_new
 						<second>Mask</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>39</KnobsAge>
+				<KnobsAge>40</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -43332,7 +43172,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>8</KnobsAge>
+				<KnobsAge>9</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -43685,7 +43525,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Oct 11 07:08:50 2021</Value>
+			<Value>Wed Oct 13 14:22:43 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -43816,7 +43656,7 @@ ret = y_new
 </Project>
 <ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
-		<count>26</count>
+		<count>25</count>
 		<item_version>6</item_version>
 		<item class_id="22" tracking_level="0" version="6">
 			<Name>Merge2_2</Name>
@@ -44095,20 +43935,6 @@ ret = y_new
 			<Selected>0</Selected>
 			<Width>1.28000000000000000e+02</Width>
 			<Height>7.80000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Crop__1</Name>
-			<X_position>2.13875156801839330e+03</X_position>
-			<Y_position>3.64036101613424853e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>3.000076413e-01</g>
-			<b>1.000076309e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
@@ -44648,9 +44474,9 @@ ret = y_new
 				<X_position>2.42963011525821730e+03</X_position>
 				<Y_position>3.68219754277950688e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -44661,12 +44487,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -44675,12 +44501,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -44690,9 +44516,9 @@ ret = y_new
 				<X_position>2.42963011525821730e+03</X_position>
 				<Y_position>3.21363972531535364e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -44703,12 +44529,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -44717,12 +44543,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -44900,9 +44726,9 @@ ret = y_new
 				<X_position>2.25848073166842278e+03</X_position>
 				<Y_position>-2.03648233741959871e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -44913,12 +44739,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -44927,12 +44753,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -44942,9 +44768,9 @@ ret = y_new
 				<X_position>2.25848073166842278e+03</X_position>
 				<Y_position>-2.12269236947845002e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -44955,12 +44781,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -44969,12 +44795,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45054,9 +44880,9 @@ ret = y_new
 				<X_position>2.42963011525821685e+03</X_position>
 				<Y_position>2.41992011784328224e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45067,12 +44893,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45081,12 +44907,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45110,9 +44936,9 @@ ret = y_new
 				<X_position>2.42963011525821730e+03</X_position>
 				<Y_position>4.10011258825805089e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>4.30000000000000000e+01</Height>
@@ -45123,12 +44949,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45137,12 +44963,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45194,9 +45020,9 @@ ret = y_new
 				<X_position>2.12992312435465965e+03</X_position>
 				<Y_position>5.18268865004408235e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45207,12 +45033,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45221,12 +45047,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45236,9 +45062,9 @@ ret = y_new
 				<X_position>2.25687146258123812e+03</X_position>
 				<Y_position>-1.88990140302088639e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45249,12 +45075,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45263,12 +45089,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45306,9 +45132,9 @@ ret = y_new
 				<X_position>2.01212080938286272e+03</X_position>
 				<Y_position>1.58677980195854070e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45319,12 +45145,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45333,12 +45159,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45348,9 +45174,9 @@ ret = y_new
 				<X_position>2.01212080938286272e+03</X_position>
 				<Y_position>1.64773862494590412e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45361,12 +45187,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45375,12 +45201,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45474,9 +45300,9 @@ ret = y_new
 				<X_position>2.12992312435465965e+03</X_position>
 				<Y_position>5.21868865004408235e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45487,12 +45313,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45501,12 +45327,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45628,9 +45454,9 @@ ret = y_new
 				<X_position>2.12992312435465965e+03</X_position>
 				<Y_position>5.11228158191148032e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45641,12 +45467,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45655,12 +45481,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45670,9 +45496,9 @@ ret = y_new
 				<X_position>2.12992312435465965e+03</X_position>
 				<Y_position>5.14828158191148032e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45683,12 +45509,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45697,12 +45523,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45838,9 +45664,9 @@ ret = y_new
 				<X_position>2.06533129974143503e+03</X_position>
 				<Y_position>8.83116314550175957e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45851,12 +45677,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45865,12 +45691,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45908,9 +45734,9 @@ ret = y_new
 				<X_position>2.19110559881055178e+03</X_position>
 				<Y_position>1.01307695423083578e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -45921,12 +45747,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -45935,12 +45761,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46062,9 +45888,9 @@ ret = y_new
 				<X_position>2.19110559881055087e+03</X_position>
 				<Y_position>7.42067265949311604e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46075,12 +45901,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46089,12 +45915,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46104,9 +45930,9 @@ ret = y_new
 				<X_position>2.19110559881055087e+03</X_position>
 				<Y_position>7.98847690234401398e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46117,12 +45943,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46131,12 +45957,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46244,9 +46070,9 @@ ret = y_new
 				<X_position>2.18150491718761259e+03</X_position>
 				<Y_position>6.12056313722132927e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46257,12 +46083,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46271,12 +46097,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46286,9 +46112,9 @@ ret = y_new
 				<X_position>2.16508237491285217e+03</X_position>
 				<Y_position>5.46366144623091714e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46299,12 +46125,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46313,12 +46139,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46328,9 +46154,9 @@ ret = y_new
 				<X_position>2.12992312435466010e+03</X_position>
 				<Y_position>5.04028158191148032e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46341,12 +46167,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46355,12 +46181,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46370,9 +46196,9 @@ ret = y_new
 				<X_position>2.12992312435465965e+03</X_position>
 				<Y_position>5.07628158191148032e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46383,12 +46209,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46397,12 +46223,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46426,9 +46252,9 @@ ret = y_new
 				<X_position>2.01212080938286272e+03</X_position>
 				<Y_position>1.71763499066781651e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46439,12 +46265,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46453,12 +46279,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46510,9 +46336,9 @@ ret = y_new
 				<X_position>2.12992312435465965e+03</X_position>
 				<Y_position>5.34682660717669933e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>4.30000000000000000e+01</Height>
@@ -46523,12 +46349,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46537,12 +46363,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46552,9 +46378,9 @@ ret = y_new
 				<X_position>2.42963011525821685e+03</X_position>
 				<Y_position>2.72746123483743486e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>4.30000000000000000e+01</Height>
@@ -46565,12 +46391,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46579,12 +46405,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46636,9 +46462,9 @@ ret = y_new
 				<X_position>2.42963011525821730e+03</X_position>
 				<Y_position>2.88863442822045909e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -46649,12 +46475,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46663,12 +46489,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46706,9 +46532,9 @@ ret = y_new
 				<X_position>2.42963011525821639e+03</X_position>
 				<Y_position>2.30515248081336586e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>4.30000000000000000e+01</Height>
@@ -46719,12 +46545,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46733,12 +46559,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46944,9 +46770,9 @@ ret = y_new
 				<X_position>2.07138437577894001e+03</X_position>
 				<Y_position>9.49768591092482893e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>4.30000000000000000e+01</Height>
@@ -46957,12 +46783,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -46971,12 +46797,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -47462,9 +47288,9 @@ ret = y_new
 				<X_position>2.09498221385188208e+03</X_position>
 				<Y_position>2.26543683112812869e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>4.30000000000000000e+01</Height>
@@ -47475,12 +47301,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -47489,12 +47315,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -47546,9 +47372,9 @@ ret = y_new
 				<X_position>2.16144588909188496e+03</X_position>
 				<Y_position>6.39526463297872760e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>4.30000000000000000e+01</Height>
@@ -47559,12 +47385,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -47573,12 +47399,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -47602,9 +47428,9 @@ ret = y_new
 				<X_position>2.16153979405830069e+03</X_position>
 				<Y_position>6.17045860276697022e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
@@ -47615,12 +47441,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>1.75000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>3.098039329e-01</r>
-					<g>5.215991735e-01</g>
+					<r>3.000076413e-01</r>
+					<g>5.000076294e-01</g>
 					<b>2.000000030e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -47629,12 +47455,12 @@ ret = y_new
 					<X_position>6.42000000000000000e+02</X_position>
 					<Y_position>2.47000000000000000e+02</Y_position>
 					<Preview_enabled>0</Preview_enabled>
-					<r>7.000076175e-01</r>
-					<g>7.000076175e-01</g>
-					<b>7.000076175e-01</b>
+					<r>6.999923587e-01</r>
+					<g>6.999923587e-01</g>
+					<b>6.999923587e-01</b>
 					<Selected>0</Selected>
 					<Width>1.04000000000000000e+02</Width>
-					<Height>2.60000000000000000e+01</Height>
+					<Height>3.00000000000000000e+01</Height>
 					<HasOverlayColor>0</HasOverlayColor>
 					<Children>0</Children>
 				</item>
@@ -47744,11 +47570,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1619 870</Sizes>
+				<Sizes>1641 883</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>681 681</Sizes>
+					<Sizes>683 682</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -47764,12 +47590,11 @@ ret = y_new
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>4</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
-							<item>scriptEditor</item>
 						</Tabs>
 						<Index>0</Index>
 						<Name>pane3</Name>
@@ -47789,10 +47614,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>179</x>
+			<x>0</x>
 			<y>23</y>
-			<w>2525</w>
-			<h>1365</h>
+			<w>2560</w>
+			<h>1368</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -47801,9 +47626,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-3.41851218390804570e+03</zoomLeft>
-				<zoomBottom>-6.14400000000000546e+01</zoomBottom>
-				<zoomFactor>1.63386418269230754e-01</zoomFactor>
+				<zoomLeft>-4.62222656488549637e+03</zoomLeft>
+				<zoomBottom>-8.19200000000000728e+01</zoomBottom>
+				<zoomFactor>1.23009314903846145e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -47847,9 +47672,10 @@ ret = y_new
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>1</count>
+		<count>2</count>
 		<item_version>0</item_version>
 		<item>Bake_default</item>
+		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>sy =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
