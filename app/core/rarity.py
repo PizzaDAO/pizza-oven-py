@@ -70,6 +70,12 @@ def makeDistribution(options: List[ScopedIngredient]):
     for item in options:
         weight_sum += weight_for_rarity(item.ingredient.variant_rarity)
 
+    if weight_sum == 0:
+        print(
+            "Possible missing rarity assignments for this variant group - check google sheet"
+        )
+        return [1] * len(options)
+
     for item in options:
         weight_percent = 100 * (
             weight_for_rarity(item.ingredient.variant_rarity) / weight_sum
