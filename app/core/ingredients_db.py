@@ -129,8 +129,8 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
     current_rarity: Rarity = Rarity.common
     # Now get all the rows in the sheet
     for row in range(1, len(sheet_data)):
-        # Only add the line if there is a numeric ID
-        if len(sheet_data[row]) > 2:
+        # Only add the line if there are at least 16 cells - BRITTLE look out for DB changes
+        if len(sheet_data[row]) >= 16:
             record_entry = {}
             for index in range(0, len(sheet_data[row])):
                 # Put each attribute in a Key/Value pair for the row
@@ -139,6 +139,13 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
             # Use the unique ID for the Key and the row Dictionary for the value
             # Easy to look up ingredients by unique id
             if sheet_data[row][0] and record_entry["on_disk"] == "Y":
+                # check to see if the png is in ingredients-db folder
+                filename = record_entry["filename_paste"] + ".png"
+                path = "ingredients-db/"
+                absolute_filepath = os.path.join(path, filename)
+                if not os.path.exists(absolute_filepath):
+                    print("Missing image for ingredient: " + filename)
+
                 # Get the 3-digit ingredient code
                 next_ingredient_code = sheet_data[row][0][0:3]
 
@@ -164,11 +171,11 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 # Pull out the Box and Paper ingredients for later
                 if unique_id[0] == "0":
                     box_paper_dict.update({unique_id: ingredient})
-            else:
-                # Account for the occasional blank row - probably a cleaner way to do this...
-                print("parse_ingredient: no unique id for row  " + str(row))
-                # print(record_entry)
-
+        else:
+            print(
+                "Probably missing a fuc%*! period in the last column at row "
+                + sheet_data[row][0]
+            )
     # TODO - Make toppings_dict a bonafied toppings datatype
     return ingredients
 
@@ -351,8 +358,10 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
                 else:
                     layers_dict.update({unique_id: ingredient})
             else:
-                print("This ingredient doesn't exist")
-                print("looking for: " + unique_id)
+                print(
+                    "Recipe %s contains non-existant ingredient with id: %s"
+                    % (raw_column[0], unique_id)
+                )
 
     pie_type = raw_column[0]
 
