@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, Tuple
+from typing import Dict, Any, Optional, Tuple, List
 import os.path
 import json
 
@@ -25,6 +25,8 @@ __all__ = [
     "parse_ingredients",
     "parse_recipes",
     "save_recipe",
+    "save_ingredients",
+    "get_variants_for_ingredient",
 ]
 
 """ Simple USage:
@@ -127,8 +129,8 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
     current_rarity: Rarity = Rarity.common
     # Now get all the rows in the sheet
     for row in range(1, len(sheet_data)):
-        # Only add the line if there is a numeric ID
-        if len(sheet_data[row]) > 2:
+        # Only add the line if there are at least 16 cells - BRITTLE look out for DB changes
+        if len(sheet_data[row]) >= 16:
             record_entry = {}
             for index in range(0, len(sheet_data[row])):
                 # Put each attribute in a Key/Value pair for the row
@@ -137,6 +139,13 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
             # Use the unique ID for the Key and the row Dictionary for the value
             # Easy to look up ingredients by unique id
             if sheet_data[row][0] and record_entry["on_disk"] == "Y":
+                # check to see if the png is in ingredients-db folder
+                filename = record_entry["filename_paste"] + ".png"
+                path = "ingredients-db/"
+                absolute_filepath = os.path.join(path, filename)
+                if not os.path.exists(absolute_filepath):
+                    print("Missing image for ingredient: " + filename)
+
                 # Get the 3-digit ingredient code
                 next_ingredient_code = sheet_data[row][0][0:3]
 
@@ -162,11 +171,11 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 # Pull out the Box and Paper ingredients for later
                 if unique_id[0] == "0":
                     box_paper_dict.update({unique_id: ingredient})
-            else:
-                # Account for the occasional blank row - probably a cleaner way to do this...
-                print("parse_ingredient: no unique id for row  " + str(row))
-                # print(record_entry)
-
+        else:
+            print(
+                "Wrong number of cells in row... Maybe missing a period in row "
+                + sheet_data[row][0]
+            )
     # TODO - Make toppings_dict a bonafied toppings datatype
     return ingredients
 
@@ -349,8 +358,10 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
                 else:
                     layers_dict.update({unique_id: ingredient})
             else:
-                print("This ingredient doesn't exist")
-                print("looking for: " + unique_id)
+                print(
+                    "Recipe %s contains non-existant ingredient with id: %s"
+                    % (raw_column[0], unique_id)
+                )
 
     pie_type = raw_column[0]
 
@@ -391,3 +402,41 @@ def save_recipe(recipe: Recipe):
 
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
+
+
+def save_ingredients(ingredient_dict):
+    list = []
+    for k, v in ingredient_dict.items():
+        list.append(json.loads(v.json()))
+
+    path = "data/ingredients/"
+
+    filename = "ingredient_db.json"
+    absolute_filepath = os.path.join(path, filename)
+
+    # create the directory if it doesnt exist
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    with open(absolute_filepath, "w") as outfile:
+        json.dump(list, outfile, indent=4)
+
+
+def get_variants_for_ingredient(ingredient_id: str) -> List:
+    # load the ingredients JSON and pull out the variants
+
+    variants: List[ScopedIngredient] = []
+    path = "data/ingredients/ingredient_db.json"
+    try:
+        f = open(path)
+        contents = json.load(f)
+        for item in contents:
+            scoped = ScopedIngredient.parse_obj(item)
+            if scoped.ingredient.ingredient_id == ingredient_id:
+                variants.append(scoped)
+        f.close()
+
+    except Exception as e:
+        print("Looking for variants of " + ingredient_id + "... But can't find any")
+
+    return variants
