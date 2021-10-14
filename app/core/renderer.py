@@ -295,7 +295,8 @@ class Renderer:
         layer_ingredients = ""
         for ingredient in order.layers.values():
             i = ingredient.ingredient
-            layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + "\n"
+            scatter_type = ingredient.scatter_type
+            layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + " - scatter_type: " + scatter_type + "\n"
         pizza_data = (
             "Pizza_id: "
             + str(order.token_id)
