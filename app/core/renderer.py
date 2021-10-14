@@ -234,9 +234,10 @@ class ExtraRenderer:
 class Renderer:
     """render the kitchen order"""
 
+    frame: int = field()
+    job_id: str = field()
     natron_path: str = field(default=settings.DEFAULT_NATRON_EXECUTABLE_PATH)
     project_path: str = field(default=settings.DEFAULT_NATRON_PROJECT_PATH)
-    frame: int = field(default=0)
 
     rendered_files: Dict[str, str] = field(default_factory=lambda: {})
 
@@ -252,9 +253,8 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(
-            cache_dir, f"ingredient-{ingredient.ingredient.index}.json"
-        )
+        layer_string = str(ingredient.ingredient.index).zfill(2)
+        file_path = os.path.join(cache_dir, f"layer-{layer_string}.json")
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as ingredient_file:
@@ -272,7 +272,8 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(cache_dir, f"layer-{layer.index}.json")
+        layer_string = str(layer.index).zfill(2)
+        file_path = os.path.join(cache_dir, f"layer-{layer_string}.json")
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
@@ -294,7 +295,8 @@ class Renderer:
         layer_ingredients = ""
         for ingredient in order.layers.values():
             i = ingredient.ingredient
-            layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + "\n"
+            scatter_type = ingredient.scatter_type
+            layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + " - scatter_type: " + scatter_type + "\n"
         pizza_data = (
             "Pizza_id: "
             + str(order.token_id)
@@ -369,7 +371,7 @@ class Renderer:
 
         return unique_filename
 
-    def render_pizza(self, job_id: str, order: KitchenOrder) -> HotPizza:
+    def render_pizza(self, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
         print("render_pizza")
         rendered_layer_files: List[str] = []
@@ -459,7 +461,7 @@ class Renderer:
         # and pass the rendering back to the caller
         # note the IPFS id probably isnt populated in this function but instead by the caller
         return HotPizza(
-            job_id=job_id,
+            job_id=self.job_id,
             token_id=order.token_id,
             random_seed=order.random_seed,
             recipe_id=order.recipe_id,
@@ -475,7 +477,8 @@ class Renderer:
         # Build the output filename and save it allong with the cached Ingredient
         print("render_shuffled_layer")
         frame_string = str(self.frame).zfill(4)
-        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
+        layer_string = str(layer_index).zfill(2)
+        output_filename = f"{frame_string}-layer-{layer_string}.png"
         layer.output_mask = output_filename
         layer.index = layer_index
 
@@ -496,7 +499,8 @@ class Renderer:
         # Build the output filename and save it allong with the cached Ingredient
         category = classification_as_string(ingredient.ingredient.classification)
         frame_string = str(self.frame).zfill(4)
-        output_filename = f"rarepizza-{frame_string}-layer-{layer_index}.png"
+        layer_string = str(layer_index).zfill(2)
+        output_filename = f"{frame_string}-layer-{layer_string}.png"
         ingredient.ingredient.image_uris["output_mask"] = output_filename
         ingredient.ingredient.index = layer_index
 
@@ -603,8 +607,8 @@ if __name__ == "__main__":
     if args.kitchen_order_path is not None:
         with open(args.kitchen_order_path) as json_file:
             kitchen_order = KitchenOrder(**json.load(json_file))
-            Renderer(args.natron_path, args.project_path, args.frame).render_pizza(
-                "some-job-id", kitchen_order
-            )
+            Renderer(
+                args.frame, "abc-1234", args.natron_path, args.project_path
+            ).render_pizza(kitchen_order)
 
     # TODO: load the recipe, parse it, and render

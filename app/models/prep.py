@@ -1,8 +1,7 @@
 from typing import Dict, List, Tuple, Optional
 
 from app.models.base import Base
-
-from app.models.recipe import Ingredient, INGREDIENT_KEY
+from app.models.recipe import INGREDIENT_KEY, Ingredient, ScatterType
 
 __all__ = [
     "MadeInstructions",
@@ -57,6 +56,7 @@ class MadeIngredient(Base):
     ingredient: Ingredient
     count: SCALAR
     instances: List[MadeIngredientPrep]
+    scatter_type: Optional[str] = ScatterType.none
 
 
 class KitchenOrder(Base):

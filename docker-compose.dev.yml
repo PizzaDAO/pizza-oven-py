@@ -26,11 +26,26 @@ services:
     networks:
       - rare-pizzas
     environment:
-      API_MODE: "development"
+      # API
+      API_MODE: $API_MODE
       PROJECT_NAME: "Rare Pizzas Kitchen"
+      # Ethereum
+      ETHEREUM_MODE: $ETHEREUM_MODE
+      ETHEREUM_RINKEBY_HTTP_SERVER: $ETHEREUM_RINKEBY_HTTP_SERVER
+      ETHEREUM_MUMBAI_HTTP_SERVER: $ETHEREUM_MUMBAI_HTTP_SERVER
+      ETHEREUM_MAINNET_HTTP_SERVER: $ETHEREUM_MAINNET_HTTP_SERVER
+      ETHEREUM_POLYGON_HTTP_SERVER: $ETHEREUM_POLYGON_HTTP_SERVER
+      ETHEREUM_TESTNET_PRIVATE_KEY: $ETHEREUM_TESTNET_PRIVATE_KEY
+      ETHEREUM_MAINNET_PRIVATE_KEY: $ETHEREUM_MAINNET_PRIVATE_KEY
+      # IPFS
+      IPFS_MODE: $IPFS_MODE
+      PINATA_API_KEY: $PINATA_API_KEY
+      PINATA_API_SECRET: $PINATA_API_SECRET
+      # MISC
       PORT: 8000
 
   # Add IPFS node
+  # only used during development
   ipfs0:
     container_name: ipfs0
     image: ipfs/go-ipfs:v0.7.0

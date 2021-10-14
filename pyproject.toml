@@ -12,19 +12,18 @@ packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-fastapi = "~0.61"
-uvicorn = "~0.11"
-ipfshttpclient = "^0.7.0"
+ipfshttpclient = "0.8.0a2"
 Pillow = "^8.3.1"
 base58 = "^2.1.0"
 dropbox = "^11.18.0"
 google-api-python-client = "^2.19.1"
 google-auth-httplib2 = "^0.1.0"
 google-auth-oauthlib = "^0.4.6"
+fastapi = "^0.70.0"
+web3 = "^5.24.0"
 
 [tool.poetry.dev-dependencies]
 black = { version = "20.8b1", allow-prereleases = true }
-fastapi = "~0.61"
 mypy = "^0.812"
 pydeps = "*"
 pylint = "*"
