@@ -173,7 +173,7 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                     box_paper_dict.update({unique_id: ingredient})
         else:
             print(
-                "Probably missing a fuc%*! period in the last column at row "
+                "Wrong number of cells in row... Maybe missing a period in row "
                 + sheet_data[row][0]
             )
     # TODO - Make toppings_dict a bonafied toppings datatype

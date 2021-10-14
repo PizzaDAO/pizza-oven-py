@@ -80,9 +80,10 @@ def makeDistribution(options: List[ScopedIngredient]):
         weight_sum += weight
 
     for item in options:
-        weight_percent = 100 * (
-            weight_for_rarity(item.ingredient.variant_rarity) / weight_sum
-        )
+        weight = weight_for_rarity(item.ingredient.variant_rarity)
+        if weight == 0:
+            weight = weight_for_rarity(Rarity.common)
+        weight_percent = 100 * (weight / weight_sum)
         freq.append(weight_percent)
 
     return freq
@@ -117,29 +118,32 @@ def random_weighted_index(
     for i in range(max_count):
         prefix[i] = prefix[i - 1] + freq[i]
 
+    # Raondomly choose an index given the length of the variant list
     max = prefix[max_count - 1]
-
     rand = get_random_deterministic_uint256(random_seed, nonce, str(personalization))
-    r = rand % max
+    rand_val = rand % max
 
-    # Find index of ceiling of r in prefix array
-    indexc = findCeil(prefix, r, 0, max_count - 1)
+    # Map the randomly chosen index to a probability distribution detailed by prefix list created above
+    rarified_index = map_to_probability(prefix, rand_val, max_count - 1)
 
-    return indexc
+    return rarified_index
 
 
 # Utility function to find ceiling of r in arr[l..h]
-def findCeil(arr, r, l, h):
+def map_to_probability(probability_list, rand_val, max_index):
+    """Map the chosen index to a list of probabilites based on weights"""
 
-    while l < h:
-        mid = l + ((h - l) >> 1)
-        # Same as mid = (l+h)/2
-        if r > arr[mid]:
-            l = mid + 1
+    index = 0
+
+    while index < max_index:
+        middle = index + ((max_index - index) >> 1)
+
+        if rand_val > probability_list[middle]:
+            index = middle + 1
         else:
-            h = mid
+            max_index = middle
 
-    if arr[l] >= r:
-        return l
+    if probability_list[index] >= rand_val:
+        return index
     else:
         return -1
