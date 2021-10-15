@@ -174,7 +174,7 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
                 translation=(0.0, 0.0),
                 rotation=0.0,
                 scale=scale,
-                image_uri=scope.ingredient.image_uris["filename"]
+                image_uri=scope.ingredient.image_uris["filename"],
             )
         ]
 
@@ -209,7 +209,8 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     return MadeIngredient(
         ingredient=scope.ingredient,
         count=len(instances),
-        instances=instances
+        instances=instances,
+        scatter_type=scatter_type,
     )
 
 

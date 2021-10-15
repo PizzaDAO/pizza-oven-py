@@ -1,5 +1,5 @@
 from enum import Enum, IntFlag
-from typing import Dict, Tuple, List
+from typing import Dict, Tuple, List, Optional
 
 from app.models.base import Base
 
@@ -87,6 +87,17 @@ class ScatterType(IntFlag):
     julia = 128
     grid = 512
     treering = 1024
+
+
+def scatter_to_string(scatter_type: Optional[ScatterType]) -> str:
+    c = "None"
+    if scatter_type == ScatterType.random:
+        c = "random"
+    if scatter_type == ScatterType.grid:
+        c = "grid"
+    if scatter_type == ScatterType.treering:
+        c = "treering"
+    return c
 
 
 class Rarity(IntFlag):

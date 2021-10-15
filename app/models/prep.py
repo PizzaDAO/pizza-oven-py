@@ -56,7 +56,7 @@ class MadeIngredient(Base):
     ingredient: Ingredient
     count: SCALAR
     instances: List[MadeIngredientPrep]
-    scatter_type: Optional[str] = ScatterType.none
+    scatter_type: Optional[ScatterType] = ScatterType.none
 
 
 class KitchenOrder(Base):
