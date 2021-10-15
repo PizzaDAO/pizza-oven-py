@@ -20,8 +20,11 @@ from app.core.random_num import (
     get_random_deterministic_uint256,
     select_value,
 )
+import json
 from app.core.scatter import Grid, RandomScatter, TreeRing
 from app.core.utils import clamp, to_hex
+from app.core.ingredients_db import get_variants_for_ingredient
+from app.core.rarity import select_from_variants
 
 __all__ = ["reduce"]
 
@@ -144,11 +147,16 @@ def sort_dict(ingredient_dict) -> dict:
         # because topping categories have their type in the name i.e. "meat" - we have to pull jus the first word
         category = category.split("-")[0]
         # Split up the base ingredients dict into lists for each category - makes selecting easier
-        if category not in sorted_dict.keys():
-            sorted_dict[category] = []
-        sorted_dict[category].append(
-            scoped_ing
-        )  # key=category : val=list of ScopedIngredients
+        #
+        # Parse ingredients - only using unique IDs ending in a 0
+        #
+        id = scoped_ing.ingredient.unique_id
+        if id[-1] == "0":
+            if category not in sorted_dict.keys():
+                sorted_dict[category] = []
+            sorted_dict[category].append(
+                scoped_ing
+            )  # key=category : val=list of ScopedIngredients
 
     return sorted_dict
 
@@ -169,16 +177,33 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
                 image_uri=scope.ingredient.image_uris["filename"]
             )
         ]
-    else:
-        instances = RandomScatter(seed, nonce).evaluate(scope)
+
+    # else:
+    # instances = RandomScatter(seed, nonce).evaluate(scope)
 
     # Temporarily test the scattering - ScatterType not defined in database yet
     # If we have a topping here - scatter it
     #
     # Unless better solution from comment above
     if "topping" in scope.ingredient.category:
+        # now create a list of instances made of all the variants for a given ingredient
+        id = scope.ingredient.ingredient_id
+        variant_list = get_variants_for_ingredient(id)
+
+        if len(variant_list) > 1:
+            selected_variants = select_from_variants(seed, nonce, variant_list, scope)
+        else:
+            selected_variants = variant_list
+
+        # Then pick a scatter type
+        scatter_type = ScatterType.random
+
+        # populate the scatter type with the selected_variants
+        if scatter_type == ScatterType.random:
+            instances = RandomScatter(seed, nonce).evaluate(selected_variants)
+
         # instances = TreeRing(seed, nonce).evaluate(scope.scope)
-        instances = Grid(seed, nonce).evaluate(scope)
+        # instances = Grid(seed, nonce).evaluate(scope)
         # instances = RandomScatter(seed, nonce).evaluate(scope)
 
     return MadeIngredient(

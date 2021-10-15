@@ -74,7 +74,9 @@ class KitchenOrder(Base):
     base_ingredients: Dict[INGREDIENT_KEY, MadeIngredient]
     """collection of base ingredients that coule be used"""
     layers: Dict[INGREDIENT_KEY, MadeIngredient]
-    """collection of layers ingredients that will ber used"""
+    """collection of layers ingredients that will be used"""
+    specials: Optional[Dict[INGREDIENT_KEY, MadeIngredient]]
+    """collection of special ingredients that will be used"""
     instances: List[MadeIngredientPrep]
     """shuffled list of all instances - provides depth in arrangements"""
     instructions: MadeInstructions
