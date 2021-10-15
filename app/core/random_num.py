@@ -3,6 +3,10 @@ from secrets import randbits
 from hashlib import sha256, sha512
 
 from app.core.utils import get_optional, clamp
+from app.core.ethereum_adapter import get_contract_address, EthereumAdapter
+from app.core.config import ApiMode, Settings
+
+settings = Settings()
 
 __all__ = [
     "Counter",
@@ -33,11 +37,17 @@ class Counter:
         return self.nonce
 
 
-def get_random_remote() -> int:
+def get_random_remote(job_id: str) -> Optional[int]:
     """call a remote function to get a random number"""
 
-    # TODO: call chainlink oracle pointed to matic
-    return get_random()
+    random_num = EthereumAdapter(get_contract_address()).get_random_number(job_id)
+    if random_num is None and settings.API_MODE == ApiMode.development:
+        print(
+            "failed retrieving chainlink VRF number. returning a system number in development mode."
+        )
+        return get_random()
+
+    return random_num
 
 
 def get_random(bits: int = 256) -> int:
