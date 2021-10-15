@@ -168,6 +168,7 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     # an select the one to use
 
     if scope.scope.scatter_types[0] == ScatterType.none:
+        scatter_type = ScatterType.none
         scale = scope.scope.particle_scale[0]
         instances = [
             MadeIngredientPrep(
