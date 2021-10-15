@@ -7,7 +7,11 @@ import os
 import subprocess
 import json
 
-from app.models.recipe import Classification, classification_as_string
+from app.models.recipe import (
+    Classification,
+    classification_as_string,
+    scatter_to_string,
+)
 from app.models.prep import KitchenOrder, MadeIngredient, ShuffledLayer
 from app.models.pizza import HotPizza
 from app.core.config import Settings
@@ -296,7 +300,16 @@ class Renderer:
         for ingredient in order.layers.values():
             i = ingredient.ingredient
             scatter_type = ingredient.scatter_type
-            layer_ingredients += i.unique_id + " " + i.name + " - " + i.category + " - scatter_type: " + scatter_type + "\n"
+            layer_ingredients += (
+                i.unique_id
+                + " "
+                + i.name
+                + " - "
+                + i.category
+                + " - scatter_type: "
+                + scatter_to_string(scatter_type)
+                + "\n"
+            )
         pizza_data = (
             "Pizza_id: "
             + str(order.token_id)
