@@ -172,7 +172,6 @@ async def orderPizza(
 async def testVRF(
     data: OrderPizzaRequest = Body(...),
 ) -> Any:
-    # this is just for testing so just take the first key
     random_num = EthereumAdapter(get_contract_address()).get_random_number(data.id)
     return random_num
 
