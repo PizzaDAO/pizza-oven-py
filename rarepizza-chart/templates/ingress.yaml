@@ -11,10 +11,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "rarepizza.chainstarters.io"
+    - "rarepizza.app.chainstarters.io"
     secretName: "rarepizza-tls-secret"
   rules:
-  - host: "rarepizza.chainstarters.io"
+  - host: "rarepizza.app.chainstarters.io"
     http:
       paths:
       - path: /chainlink-rinkby
