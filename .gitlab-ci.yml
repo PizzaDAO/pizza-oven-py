@@ -1,0 +1,30 @@
+stages:
+  - build
+  - deploy
+
+build-chainlink:
+  stage: build
+  only:
+    refs:
+      - tags
+    variables: 
+      - $CI_COMMIT_TAG =~ /chainlink/i
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - echo "{\"credsStore\":\"ecr-login\",\"credHelpers\":{\"$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com\":\"ecr-login\"}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --cache=true --context $CI_PROJECT_DIR/chainlink --dockerfile $CI_PROJECT_DIR/chainlink/Dockerfile --target prod --destination $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"
+    
+deploy:
+  stage: deploy
+  image: dtzar/helm-kubectl:3.1.2
+  needs: ["build"]
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /dev/i
+  script:
+    helm upgrade -i --set projectName=$PROJECT_NAME --set environment=dev --set image.tag=$CI_COMMIT_TAG --set image.repository=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME $PROJECT_NAME-dev-api graphql-api-chart-sa
+

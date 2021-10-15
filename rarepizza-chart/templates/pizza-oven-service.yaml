@@ -6,7 +6,7 @@ metadata:
   name: pizza-oven
 spec:
   ports:
-    - name: "8000"
+    - name: pizza-oven
       port: 8000
       targetPort: pizza-oven
   selector:

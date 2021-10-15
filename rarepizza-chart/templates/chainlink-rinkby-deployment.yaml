@@ -16,7 +16,6 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        app.kubernetes.io/network/rare-pizzas: "true"
         app.kubernetes.io/component: chainlink-rinkby
         {{- include "rarepizza.selectorLabels" . | nindent 8 }}
     spec:
@@ -87,7 +86,7 @@ spec:
                   name: chainlink-config
           ports:
             - name: rinkby
-              containerPort: 6688
+              containerPort: {{ .Values.chainlink.port }}
           volumeMounts:
             - mountPath: /run/secrets/password
               name: password
