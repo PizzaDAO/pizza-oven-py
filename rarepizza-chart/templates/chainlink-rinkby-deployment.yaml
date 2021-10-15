@@ -1,0 +1,127 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chainlink-rinkby
+  labels:
+    {{- include "rarepizza.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "rarepizza.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        app.kubernetes.io/network/rare-pizzas: "true"
+        app.kubernetes.io/component: chainlink-rinkby
+        {{- include "rarepizza.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: chainlink-rinkby
+          restartPolicy: Always
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.rinkbyTag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/bin/sh"]
+          args: ["-c", "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
+          env:
+            - name: PORT
+              value: {{ .Values.chainlink.port }}
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: chainlink
+                  key: DB_CONNECTION_RINKBY
+            - name: ALLOW_ORIGINS
+              valueFrom:
+                configMapKeyRef:
+                  key: ALLOW_ORIGINS
+                  name: chainlink-config
+            - name: BRIDGE_RESPONSE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: BRIDGE_RESPONSE_URL_RINKBY
+                  name: chainlink-config
+            - name: CHAINLINK_TLS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: CHAINLINK_TLS_PORT
+                  name: chainlink-config
+            - name: ETH_CHAIN_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: ETH_CHAIN_ID
+                  name: chainlink-config
+            - name: GAS_UPDATER_ENABLED
+              valueFrom:
+                configMapKeyRef:
+                  key: GAS_UPDATER_ENABLED
+                  name: chainlink-config
+            - name: LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  key: LOG_LEVEL
+                  name: chainlink-config
+            - name: MIN_OUTGOING_CONFIRMATIONS
+              valueFrom:
+                configMapKeyRef:
+                  key: MIN_OUTGOING_CONFIRMATIONS
+                  name: chainlink-config
+            - name: ROOT
+              valueFrom:
+                configMapKeyRef:
+                  key: ROOT
+                  name: chainlink-config
+            - name: SECURE_COOKIES
+              valueFrom:
+                configMapKeyRef:
+                  key: SECURE_COOKIES
+                  name: chainlink-config
+          ports:
+            - name: rinkby
+              containerPort: 6688
+          volumeMounts:
+            - mountPath: /run/secrets/password
+              name: password
+            - mountPath: /run/secrets/api
+              name: api
+            - mountPath: /chainlink
+              name: chainlink-pvc
+          volumes:
+          - name: password
+            secret:
+              items:
+                - key: password
+                  path: password
+              secretName: chainlink
+          - name: api
+            secret:
+              items:
+                - key: api
+                  path: api
+              secretName: chainlink
+          - name: chainlink-pvc
+            persistentVolumeClaim:
+              claimName: chainlink-pvc
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

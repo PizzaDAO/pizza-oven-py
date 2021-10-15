@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pizza-oven
+  labels:
+    {{- include "rarepizza.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "rarepizza.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        app.kubernetes.io/network/rare-pizzas: "true"
+        app.kubernetes.io/component: pizza-oven
+        {{- include "rarepizza.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: pizza-oven
+          restartPolicy: Always
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.pizzaOven.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/bin/sh"]
+          args: ["-c", "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
+          env:
+            - name: API_MODE
+              value: {{ .Values.pizzaOven.apiMode }}
+            - name: PORT
+              value: "8000"
+            - name: PROJECT_NAME
+              value: Rare Pizzas Kitchen
+          ports:
+            - name: pizza-oven
+              containerPort: {{ .Values.pizzaOven.port }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
