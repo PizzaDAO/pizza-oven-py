@@ -9,15 +9,19 @@ from fastapi import APIRouter, Body, BackgroundTasks, Request
 
 from app.models.base import Base
 from app.models.order import PizzaOrder, PizzaOrderData
+from app.core.ethereum_adapter import get_contract_address, EthereumAdapter
 from app.core.recipe_box import get_pizza_recipe, make_recipe
 from app.core.prep_line import reduce
 from app.core.metadata import to_blockchain_metadata
-from app.core.random_num import get_random
+from app.core.random_num import get_random_remote
 from app.core.repository import *
 from app.core.renderer import Renderer
 from ..tags import DELIVER
 
+from app.core.config import Settings
+
 router = APIRouter()
+settings = Settings()
 
 CHAINLINK_AUTH_TOKEN = str
 "this is the outgoing token in the chainlink node"
@@ -64,7 +68,11 @@ def render_pizza(
     recipe = get_pizza_recipe(data.data.recipe_index)
 
     # get a random number and reduce the recipe into a kitchen order
-    random_number = get_random()
+    random_number = get_random_remote(data.id)
+    if random_number is None:
+        # if we didnt get a verifiable random number
+        # then kill the job and allow it to be restart later
+        return
     kitchen_order = reduce(recipe, data.data.token_id, random_number)
 
     # render
@@ -158,6 +166,15 @@ async def orderPizza(
     )
 
     return response
+
+
+@router.post("/test_vrf", tags=[DELIVER])
+async def testVRF(
+    data: OrderPizzaRequest = Body(...),
+) -> Any:
+    # this is just for testing so just take the first key
+    random_num = EthereumAdapter(get_contract_address()).get_random_number(data.id)
+    return random_num
 
 
 @router.post("/chainlink", response_model=OrderPizzaResponse, tags=[DELIVER])
