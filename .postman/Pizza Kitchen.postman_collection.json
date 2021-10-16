@@ -152,6 +152,39 @@
 					"response": []
 				},
 				{
+					"name": "Prepare Ingredient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"order\", JSON.stringify(jsonData));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/kitchen/ingredient/4000",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"kitchen",
+								"ingredient",
+								"4000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "bake",
 					"event": [
 						{
