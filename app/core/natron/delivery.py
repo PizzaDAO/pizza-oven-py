@@ -3,6 +3,7 @@
 import os
 import json
 
+import natron_config as config
 from natron_base import NatronBase
 
 # This python 2.7 method will build the final delivery nodegraph inside of Natron
@@ -12,14 +13,14 @@ class Delivery(NatronBase):
     def __init__(self, app, env_var):
         self.natron = app
         self._load_json_data(env_var)
-        print("deliverynodes __init__")
+        print("delivery __init__")
 
     def render(self):
         # Start of node "Merge1"
-        print("rendering in deliverynodes.py")
+        print("rendering in delivery.py")
         count = 6  # temper
 
-        mergeNode = app.createNode("net.sf.openfx.MergePlugin", 1)
+        mergeNode = self.natron.createNode("net.sf.openfx.MergePlugin", 1)
         mergeNode.setScriptName("Merge1")
         mergeNode.setLabel("Merge1")
         mergeNode.setPosition(1069, 322)
@@ -28,19 +29,15 @@ class Delivery(NatronBase):
         # End of node "Merge1"
 
         # Iterate through the layer count and dynamically build a Natron node graph with params set
-        for i in range(0, count + 1):
-            position = 150 * i
+        i = 0
+        for layer_filename in self.element:
             pad = "0"
             layer = format(i, pad + str(2))  # layer pad 2
-            tokenID = format(frame, pad + str(4))  # frame pad 4
 
             # Start of Read_ nodes
-            lastNode = app.createNode("fr.inria.built-in.Read", 1)
+            lastNode = self.natron.createNode("fr.inria.built-in.Read", 1)
             lastNode.setScriptName("Read_%s" % layer)
             lastNode.setLabel("Read_%s" % layer)
-            lastNode.setPosition(position, 65)
-            lastNode.setSize(128, 78)
-            lastNode.setColor(0.7, 0.7, 0.7)
 
             param = lastNode.getParam("decodingPluginID")
             if param is not None:
@@ -49,10 +46,7 @@ class Delivery(NatronBase):
 
             param = lastNode.getParam("filename")
             if param is not None:
-                filename = """[Project]/../output/%s-layer-%s.png""" % (
-                    """####""",
-                    layer,
-                )
+                filename = layer_filename
                 param.setValue(filename)
                 del param
 
@@ -76,9 +70,14 @@ class Delivery(NatronBase):
 
             del lastNode
             # End of node "Read_"
+            i += 1
 
+        self.setOutput(mergeNode)
+
+    def setOutput(self, mergeNode):
         # build writer node
-        writeNode = app.createNode("fr.inria.built-in.Write", 1)
+        print(config.paths["output"] + self.out_file)
+        writeNode = self.natron.createNode("fr.inria.built-in.Write", 1)
         writeNode.setScriptName("w1")
         writeNode.setLabel("w1")
         writeNode.setPosition(1069, 713)
@@ -92,7 +91,7 @@ class Delivery(NatronBase):
 
         param = writeNode.getParam("filename")
         if param is not None:
-            param.setValue("[Project]/../output/####.png")
+            param.setValue(config.paths["output"] + self.out_file)
             del param
 
         param = writeNode.getParam("NatronParamFormatChoice")
@@ -107,6 +106,17 @@ class Delivery(NatronBase):
 
         # connect write node
         writeNode.connectInput(0, mergeNode)
+
+    def _load_json_data(self, env_var):
+        """Load the json data, assign some common properties, and return the json"""
+
+        file_path = os.environ[env_var]
+        with open(file_path) as json_file:
+            self.element = json.load(json_file)
+        print(self.element)
+
+        self.index = frame
+        self.out_file = "####.png"
 
 
 instance = Delivery(app, "DELIVERY_DATA_PATH")
