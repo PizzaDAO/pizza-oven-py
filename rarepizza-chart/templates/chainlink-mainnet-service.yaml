@@ -1,3 +1,4 @@
+{{ - if Values.chainlink.mainnet.enabled -}}
 apiVersion: v1
 kind: Service
 metadata:
@@ -14,3 +15,5 @@ spec:
     app.kubernetes.io/component: chainlink-mainnet
 status:
   loadBalancer: {}
+{{ - end }}
+

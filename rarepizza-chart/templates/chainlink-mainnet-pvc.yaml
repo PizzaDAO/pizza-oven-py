@@ -1,3 +1,4 @@
+{{ - if Values.chainlink.mainnet.enabled -}}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -11,3 +12,4 @@ spec:
     requests:
       storage: 500Mi
 status: {}
+{{ - end }}

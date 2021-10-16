@@ -24,6 +24,7 @@ spec:
             name: chainlink-rinkby
             port: 
               name: rinkby
+      {{ - if Values.chainlink.mainnet.enabled -}}
       - path: /chainlink-mainnet
         pathType: Prefix
         backend:
@@ -31,6 +32,7 @@ spec:
             name: chainlink-mainnet
             port: 
               name: mainnet
+      {{ - end }}
       - path: /oven
         pathType: Prefix
         backend:
