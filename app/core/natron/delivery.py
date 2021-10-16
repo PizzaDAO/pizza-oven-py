@@ -30,7 +30,7 @@ class Delivery(NatronBase):
 
         # Iterate through the layer count and dynamically build a Natron node graph with params set
         i = 0
-        for layer_filename in self.element:
+        for layer_filename in self.element["layers"]:
             pad = "0"
             layer = format(i, pad + str(2))  # layer pad 2
 
@@ -46,7 +46,8 @@ class Delivery(NatronBase):
 
             param = lastNode.getParam("filename")
             if param is not None:
-                filename = layer_filename
+                filename = config.paths["output"] + layer_filename
+                print(filename)
                 param.setValue(filename)
                 del param
 
@@ -111,11 +112,13 @@ class Delivery(NatronBase):
         """Load the json data, assign some common properties, and return the json"""
 
         file_path = os.environ[env_var]
+        print("loading")
+        print(file_path)
         with open(file_path) as json_file:
             self.element = json.load(json_file)
         print(self.element)
 
-        self.index = frame
+        self.index = self.element["frame"]
         self.out_file = "####.png"
 
 

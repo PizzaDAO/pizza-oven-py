@@ -6,6 +6,7 @@ from math import ceil
 import os
 import subprocess
 import json
+from app.models.base import Base
 
 from app.models.recipe import (
     Classification,
@@ -321,11 +322,16 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
-        file_path = os.path.join(cache_dir, f"{self.frame}-manifest.json")
+        class DeliveryManifest(Base):
+            frame: int
+            layers: List[str]
+
+        padded_token_id = str(self.frame).zfill(4)
+        file_path = os.path.join(cache_dir, f"{padded_token_id}-manifest.json")
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
-            layer_file.write(json.dumps(layers))
+            layer_file.write(DeliveryManifest(frame=self.frame, layers=layers).json())
 
         return file_path
 
@@ -414,7 +420,11 @@ class Renderer:
             self.draw_watermark(output_image, order)
             output_image.save(os.path.join(output_dir, output_filename))
 
-        # TODO: cleanup intermediate files
+        # cleanup intermediate files
+        if settings.API_MODE == ApiMode.production:
+            for layer_filename in layers:
+                layer_filepath = os.path.join(output_dir, layer_filename)
+                os.remove(layer_filepath)
 
         return output_filename
 
