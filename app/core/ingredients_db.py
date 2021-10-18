@@ -291,6 +291,8 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
         r_min = float(row["rotation"]) * -1
         r_max = float(row["rotation"])
         scope.rotation = (r_min, r_max)
+    else:
+        scope.rotation = (-180, 180)
 
     if has_value("inches", row):
         inches = float(row["inches"])
