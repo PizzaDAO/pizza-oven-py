@@ -385,7 +385,7 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
             crust_count=1,
             sauce_count=[1, 1],
             cheese_count=[1, 1],
-            topping_count=[0, 8],
+            topping_count=[1, 8],
             extras_count=[0, 2],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
