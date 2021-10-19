@@ -452,45 +452,45 @@ class Renderer:
         #
         # SINGLE IGREDIENT TOPPING LAYERS
         #
-        # # iterate through each of the layers and render
-        # for (_, ingredient) in order.layers.items():
-        #     print(
-        #         "WILL RENDER THIS MANY "
-        #         + ingredient.ingredient.name
-        #         + ": "
-        #         + str(ingredient.count)
-        #     )
-        #     result = self.render_ingredient(topping_layer_index, ingredient)
-        #     rendered_layer_files.append(result)
-        #     topping_layer_index += 1
+        # iterate through each of the layers and render
+        for (_, ingredient) in order.layers.items():
+            print(
+                "WILL RENDER THIS MANY "
+                + ingredient.ingredient.name
+                + ": "
+                + str(ingredient.count)
+            )
+            result = self.render_ingredient(layer_index, ingredient)
+            rendered_layer_files.append(result)
+            layer_index += 1
 
         # Iterate through shuffled instances to create layers of 30 items
         #
         # BATCHING
         #
-        max_instances = 30
-        instance_count = ceil(len(order.instances))
-        layer_count = ceil(instance_count / max_instances)
+        # max_instances = 30
+        # instance_count = ceil(len(order.instances))
+        # layer_count = ceil(instance_count / max_instances)
 
-        for index in range(layer_count):
-            if instance_count - (index * max_instances) < max_instances:
-                batch_count = instance_count % max_instances
-            else:
-                batch_count = max_instances
+        # for index in range(layer_count):
+        #     if instance_count - (index * max_instances) < max_instances:
+        #         batch_count = instance_count % max_instances
+        #     else:
+        #         batch_count = max_instances
 
-            sliceObj = slice(0, batch_count)
-            batch = order.instances[sliceObj]
+        #     sliceObj = slice(0, batch_count)
+        #     batch = order.instances[sliceObj]
 
-            # Create a ShuffledLayer
-            shuffle_layer = ShuffledLayer(
-                token_id=order.token_id,
-                index=index,
-                count=batch_count,
-                instances=batch,
-            )
-            result = self.render_instances(layer_index, shuffle_layer)
-            rendered_layer_files.append(result)
-            layer_index += 1
+        #     # Create a ShuffledLayer
+        #     shuffle_layer = ShuffledLayer(
+        #         token_id=order.token_id,
+        #         index=index,
+        #         count=batch_count,
+        #         instances=batch,
+        #     )
+        #     result = self.render_instances(layer_index, shuffle_layer)
+        #     rendered_layer_files.append(result)
+        #     layer_index += 1
 
         # SPECIALS Temp - render seasoning and savers for make testing
         if order.specials is not None:
