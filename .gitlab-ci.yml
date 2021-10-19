@@ -1,7 +1,7 @@
 stages:
   - build
   - deploy
-
+image: docker:latest
 services:
   - docker:dind
 before_script:
