@@ -15,7 +15,7 @@ build-chainlink-rinkby:
   before_script:
     - docker info
     - apk add --no-cache py3-pip
-    - pip install awscli
+    - pip3 install awscli
   only:
     refs:
       - tags
@@ -31,7 +31,7 @@ build-chainlink-rinkby:
   before_script:
     - docker info
     - apk add --no-cache py3-pip
-    - pip install awscli
+    - pip3 install awscli
   only:
     refs:
       - tags
@@ -47,7 +47,7 @@ build-oven:
   before_script:
     - docker info
     - apk add --no-cache py3-pip
-    - pip install awscli
+    - pip3 install awscli
   only:
     refs:
       - tags
@@ -63,7 +63,7 @@ build-all:
   before_script:
     - docker info
     - apk add --no-cache py3-pip
-    - pip install awscli
+    - pip3 install awscli
   only:
     refs:
       - tags
