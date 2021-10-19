@@ -1,6 +1,12 @@
 stages:
   - build
   - deploy
+image: docker:19.03.12
+services:
+  - docker:19.03.12-dind
+
+before_script:
+  - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
 
 build-chainlink-rinkby:
   stage: build
@@ -9,26 +15,22 @@ build-chainlink-rinkby:
       - tags
     variables: 
       - $CI_COMMIT_TAG =~ /chainlink-rinkby/i
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
   script:
-    - echo "{\"credsStore\":\"ecr-login\",\"credHelpers\":{\"$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com\":\"ecr-login\"}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --cache=true --context $CI_PROJECT_DIR/chainlink --dockerfile $CI_PROJECT_DIR/chainlink/Dockerfile --target prod --destination $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"
+    - docker build -t chainlink-rinkby /chainlink
+    - docker tag chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    - docker push chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     
-build-chainlink-mainnet:
+build-chainlink-rinkby:
   stage: build
   only:
     refs:
       - tags
     variables: 
       - $CI_COMMIT_TAG =~ /chainlink-mainnet/i
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
   script:
-    - echo "{\"credsStore\":\"ecr-login\",\"credHelpers\":{\"$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com\":\"ecr-login\"}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --cache=true --context $CI_PROJECT_DIR/chainlink --dockerfile $CI_PROJECT_DIR/chainlink/Dockerfile --target prod --destination $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"
+    - docker build -t chainlink-mainnet /chainlink
+    - docker tag chainlink-mainnet $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    - docker push chainlink-mainnet $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
 
 build-oven:
   stage: build
@@ -37,12 +39,10 @@ build-oven:
       - tags
     variables: 
       - $CI_COMMIT_TAG =~ /pizza-oven/i
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
   script:
-    - echo "{\"credsStore\":\"ecr-login\",\"credHelpers\":{\"$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com\":\"ecr-login\"}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --cache=true --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --target prod --destination $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"
+    - docker build -t pizza-oven .
+    - docker tag pizza-oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    - docker push pizza-oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
 
 build-all:
   stage: build
@@ -51,14 +51,13 @@ build-all:
       - tags
     variables: 
       - $CI_COMMIT_TAG =~ /all/i
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
   script:
-    - echo "{\"credsStore\":\"ecr-login\",\"credHelpers\":{\"$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com\":\"ecr-login\"}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --cache=true --context $CI_PROJECT_DIR/chainlink --dockerfile $CI_PROJECT_DIR/chainlink/Dockerfile --target prod --destination $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-rinkby
-    - /kaniko/executor --cache=true --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --target prod --destination $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-pizza-oven
-
+    - docker build -t pizza-oven .
+    - docker tag pizza-oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-pizza-oven
+    - docker push pizza-oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-pizza-oven
+    - docker build -t chainlink-rinkby .
+    - docker tag chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-chainlink-rinkby
+    - docker push chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-chainlink-rinkby
 
 
 deploy-all:
@@ -71,5 +70,5 @@ deploy-all:
     variables:
       - $CI_COMMIT_TAG =~ /all/i
   script:
-    helm upgrade -i --reuse-values --set pizzaOven.tag="$CI_COMMIT_TAG"-pizza-oven --set chainlink.mainnet.enabled=false --set chainlink.image.rinkbyTag="$CI_COMMIT_TAG"-rinkby --set image.repository=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
+    helm upgrade -i --reuse-values --set pizzaOven.tag="$CI_COMMIT_TAG"-pizza-oven --set chainlink.mainnet.enabled=false --set chainlink.image.rinkbyTag="$CI_COMMIT_TAG"-chainlink-rinkby --set image.repository=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
 
