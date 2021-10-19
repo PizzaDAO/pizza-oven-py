@@ -1,14 +1,18 @@
 stages:
   - build
   - deploy
-image: bentolor/docker-dind-awscli
-services:
-  - docker-dind-awscli
 
 build-chainlink-rinkby:
   stage: build
+  image: 
+    name: amazon/aws-cli
+    entrypoint: [""]
+  services:
+    - docker:dind
   before_script:
-    - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
+    - amazon-linux-extras install docker
+    - aws --version
+    - docker --version
   only:
     refs:
       - tags
@@ -21,8 +25,15 @@ build-chainlink-rinkby:
     
 build-chainlink-rinkby:
   stage: build
+  image: 
+    name: amazon/aws-cli
+    entrypoint: [""]
+  services:
+    - docker:dind
   before_script:
-    - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
+    - amazon-linux-extras install docker
+    - aws --version
+    - docker --version
   only:
     refs:
       - tags
@@ -35,8 +46,15 @@ build-chainlink-rinkby:
 
 build-oven:
   stage: build
+  image: 
+    name: amazon/aws-cli
+    entrypoint: [""]
+  services:
+    - docker:dind
   before_script:
-    - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
+    - amazon-linux-extras install docker
+    - aws --version
+    - docker --version
   only:
     refs:
       - tags
@@ -49,8 +67,15 @@ build-oven:
 
 build-all:
   stage: build
+  image: 
+    name: amazon/aws-cli
+    entrypoint: [""]
+  services:
+    - docker:dind
   before_script:
-    - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
+    - amazon-linux-extras install docker
+    - aws --version
+    - docker --version
   only:
     refs:
       - tags
