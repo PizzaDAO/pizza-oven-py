@@ -136,14 +136,41 @@ class IngredientScope(Base):
 class NutritionMetadata(Base):
     """Metadata for ingredient nutritional information"""
 
-    servings: float
+    serving_size: float
+    mass: float
     calories: float
-    fat: float
-    cholesterol: float
-    sodium: float
+    vitamin_c: float
+    magnesium: float
+    vitamin_b5: float
+    vitamin_d: float
+    vitamin_b7: float
     potassium: float
-    carbohydrates: float
+    cholesterol: float
+    vitamin_a: float
+    dietary_fiber: float
+    vitamin_b6: float
+    sugar: float
     protein: float
+    iron: float
+    complex_carb: float
+    selenium: float
+    vitamin_k: float
+    vitamin_b12: float
+    calories_from_fat: float
+    vitamin_e: float
+    zinc: float
+    saturated_fat: float
+    iodine: float
+    trans_fat: float
+    sodium: float
+    monosaturated_fat: float
+    calcium: float
+    riboflavin: float
+    thiamin: float
+    folate: float
+    added_sugar: float
+    chromium: float
+    manganese: float
 
 
 class Ingredient(Base):
