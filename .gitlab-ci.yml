@@ -1,17 +1,13 @@
 stages:
   - build
   - deploy
-image: docker:19.03.12
+image: bentolor/docker-dind-awscli
 services:
-  - docker:19.03.12-dind
+  - docker-dind-awscli
 
 build-chainlink-rinkby:
   stage: build
   before_script:
-    - apk add --update --no-cache curl unzip
-    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    - unzip awscliv2.zip
-    - sudo ./aws/install
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
   only:
     refs:
@@ -26,10 +22,6 @@ build-chainlink-rinkby:
 build-chainlink-rinkby:
   stage: build
   before_script:
-    - apk add --update --no-cache curl unzip
-    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    - unzip awscliv2.zip
-    - sudo ./aws/install
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
   only:
     refs:
@@ -44,10 +36,6 @@ build-chainlink-rinkby:
 build-oven:
   stage: build
   before_script:
-    - apk add --update --no-cache curl unzip
-    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    - unzip awscliv2.zip
-    - sudo ./aws/install
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
   only:
     refs:
@@ -62,10 +50,6 @@ build-oven:
 build-all:
   stage: build
   before_script:
-    - apk add --update --no-cache curl unzip
-    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    - unzip awscliv2.zip
-    - sudo ./aws/install
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
   only:
     refs:
