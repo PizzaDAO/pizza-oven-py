@@ -22,9 +22,11 @@ build-chainlink-rinkby:
     variables: 
       - $CI_COMMIT_TAG =~ /chainlink-rinkby/i
   script:
-    - docker build -t chainlink-rinkby /chainlink
-    - docker tag chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
-    - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    - pwd
+    - ls chainlink
+    # - docker build -t chainlink-rinkby /chainlink
+    # - docker tag chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    # - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     
 build-chainlink-rinkby:
   stage: build
