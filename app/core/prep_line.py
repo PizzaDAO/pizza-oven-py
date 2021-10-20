@@ -176,9 +176,12 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         scatter_type = ScatterType.none
         scale = scope.scope.particle_scale[0]
         rotation = round(select_value(seed, nonce, scope.scope.rotation))
+        translation = (0.0, 0.0)
+        if scope.ingredient.classification == Classification.lastchance:
+            translation = (3072 / 2, 3072 / 2)
         instances = [
             MadeIngredientPrep(
-                translation=(0.0, 0.0),
+                translation=translation,
                 rotation=rotation,
                 scale=scale,
                 image_uri=scope.ingredient.image_uris["filename"],

@@ -2,7 +2,13 @@ from typing import Dict, Tuple, List
 from app.models.prep import KitchenOrder
 from app.core.ingredients_db import read_ingredients
 from app.core.scatter import Grid, RandomScatter, Scatter, TreeRing
-from app.models.recipe import Ingredient, Recipe, RecipeInstructions, ScatterType
+from app.models.recipe import (
+    Classification,
+    Ingredient,
+    Recipe,
+    RecipeInstructions,
+    ScatterType,
+)
 
 from app.models.recipe import (
     Recipe,
@@ -223,11 +229,13 @@ def make_prep(
 
 def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngredient:
     """select the scalar values for the ingredient"""
-
+    translation = (0.0, 0.0)
+    if scope.ingredient.classification == Classification.lastchance:
+        translation = (3072 / 2, 3072 / 2)
     scale = scope.scope.particle_scale[0]
     instances = [
         MadeIngredientPrep(
-            translation=(0.0, 0.0),
+            translation=translation,
             rotation=0.0,
             scale=scale,
             image_uri=scope.ingredient.image_uris["filename"],
