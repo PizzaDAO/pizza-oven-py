@@ -29,8 +29,10 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.rinkbyTag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/sh"]
-          args: ["-c", "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
+          command:
+            - /bin/sh
+            - -c
+            - chainlink node start -d -p /run/secrets/password -a /run/secrets/api
           env:
             - name: PORT
               value: {{ .Values.chainlink.port }}

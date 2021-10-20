@@ -29,8 +29,6 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.pizzaOven.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/sh"]
-          args: ["-c", "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
           env:
             - name: API_MODE
               value: {{ .Values.pizzaOven.apiMode }}
