@@ -17,6 +17,7 @@ from app.core.metadata import to_blockchain_metadata
 from app.core.random_num import get_random_remote
 from app.core.repository import *
 from app.core.renderer import Renderer
+from app.core.utils import to_hex
 from app.models.pizza import HotPizza
 from app.models.prep import KitchenOrder
 from app.models.recipe import Recipe
@@ -27,9 +28,6 @@ from app.core.config import Settings
 
 router = APIRouter()
 settings = Settings()
-
-# TODO: api's for querying storage
-# api's for chainlink tokens
 
 
 def publish_order_result(
@@ -132,11 +130,12 @@ def patch_and_complete_job(
         print(patch_response.text)
 
         # update the job as complete
-        render_task.set_status(TaskStatus.error)
+        render_task.set_status(TaskStatus.complete)
         set_render_task(render_task)
     else:
         # chainlink wasnt specified to jsut mark the job complete
-        render_task.set_status(TaskStatus.error)
+        print("job complete!")
+        render_task.set_status(TaskStatus.complete)
         set_render_task(render_task)
 
     return order_response
@@ -157,15 +156,20 @@ def run_render_task(
         # TODO: search for *any* job
         return None
 
-    # if the job is already in progress, skip it
-    if not render_task.should_restart():
-        print("job in progress or already complete")
-        return None
+    # if the job is already complete
+    if render_task.status == TaskStatus.complete:
+        print("job complete")
+        return patch_and_complete_job(render_task)
 
     # check if the job finished but just didnt get marked complete
     if render_task.metadata_hash is not None:
         print("job finished rendering but wasn't complete")
         return patch_and_complete_job(render_task)
+
+    # if the job is already in progress, skip it
+    if not render_task.should_restart(settings.RENDER_TASK_TIMEOUT_IN_MINUTES):
+        print("job in progress")
+        return None
 
     # set the job as started
     render_task.set_status(TaskStatus.started)
@@ -186,6 +190,8 @@ def run_render_task(
         set_render_task(render_task)
         return None
 
+    render_task.random_number = to_hex(random_number)
+    set_render_task(render_task)
     # resolve the kitchen order for natron from the input values
     kitchen_order = reduce(recipe, render_task.request.data.token_id, random_number)
 
@@ -209,15 +215,15 @@ def run_render_task(
     if order_response is not None:
         print("updating the task with the ipfs hash of the metadata")
 
-        render_task.metadata_hash = order_response.data["metadata"]
+        render_task.metadata_hash = order_response.data.metadata
         set_render_task(render_task)
 
         return patch_and_complete_job(render_task, order_response)
-    else:
-        print("something went wrong. setting error state and returning none.")
-        render_task.set_status(TaskStatus.error)
-        set_render_task(render_task)
-        return None
+
+    print("something went wrong. setting error state and returning none.")
+    render_task.set_status(TaskStatus.error)
+    set_render_task(render_task)
+    return None
 
 
 @router.post("/order", response_model=OrderPizzaResponse, tags=[DELIVER])
@@ -241,7 +247,18 @@ async def orderPizza(
 
     # cache the render task
     existing_job = get_render_task(data.id)
-    if existing_job is None:
+    if existing_job is not None:
+        print("job exists!")
+        if existing_job.status == TaskStatus.complete:
+            # try to return the job if it's finished
+            response = get_order_response(data.id)
+            if response is not None:
+                print("job complete, returning")
+                return response
+            # let all other cases fakll through
+
+    else:
+
         print("existing job not found, caching")
         set_render_task(
             RenderTask(

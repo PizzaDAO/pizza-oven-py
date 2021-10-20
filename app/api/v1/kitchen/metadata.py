@@ -8,7 +8,11 @@ from app.models.recipe import Recipe
 from app.models.prep import KitchenOrder
 from app.models.pizza import HotPizza, RarePizzaMetadata
 from app.core.metadata import to_blockchain_metadata
-from app.core.repository import get_metadata, set_metadata
+from app.core.repository import (
+    get_metadata_from_storage,
+    get_metadata_from_ipfs,
+    set_metadata,
+)
 from ..tags import METADATA
 
 router = APIRouter()
@@ -44,13 +48,30 @@ def create_metadata(request: RarePizzaMetadataRequest = Body(...)) -> Any:
     return JSONResponse(content=json)
 
 
-@router.get("/{ipfs_hash}", response_model=RarePizzaMetadataResponse, tags=[METADATA])
-def get_blockchain_metadata(ipfs_hash: str) -> Any:
+@router.get(
+    "/storage/{job_id}", response_model=RarePizzaMetadataResponse, tags=[METADATA]
+)
+def get_blockchain_metadata_from_storage(job_id: str) -> Any:
+    """
+    get the metadata for the specific pizza from storage
+    """
+
+    metadata = get_metadata_from_storage(job_id)
+    data = RarePizzaMetadataResponse(ipfs_hash="", metadata=metadata)
+
+    json = jsonable_encoder(data)
+    return JSONResponse(content=json)
+
+
+@router.get(
+    "/ipfs/{ipfs_hash}", response_model=RarePizzaMetadataResponse, tags=[METADATA]
+)
+def get_blockchain_metadata_from_ipfs(ipfs_hash: str) -> Any:
     """
     get the metadata for the specific pizza from ipfs
     """
 
-    metadata = get_metadata(ipfs_hash)
+    metadata = get_metadata_from_ipfs(ipfs_hash)
     data = RarePizzaMetadataResponse(ipfs_hash=ipfs_hash, metadata=metadata)
 
     json = jsonable_encoder(data)

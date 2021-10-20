@@ -41,6 +41,11 @@ class Settings(BaseSettings):
     # Application
     API_MODE: ApiMode = ApiMode.development
     STORAGE_MODE: StorageMode = StorageMode.local
+    ETHEREUM_MODE: EthereumMode = EthereumMode.testnet
+    IPFS_MODE: IPFSMode = IPFSMode.remote
+
+    RENDER_TASK_TIMEOUT_IN_MINUTES: int = 15
+    BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: int = 120
 
     API_V1_STR: str = "/api/v1"
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = Field(
@@ -49,7 +54,6 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "pizza-oven-py"
 
     # Ethereum
-    ETHEREUM_MODE: EthereumMode = EthereumMode.testnet
     ETHEREUM_RINKEBY_HTTP_SERVER: str = ""
     ETHEREUM_MUMBAI_HTTP_SERVER: str = ""
     ETHEREUM_MAINNET_HTTP_SERVER: str = ""
@@ -64,10 +68,7 @@ class Settings(BaseSettings):
     ETHEREUM_TESTNET_CONTRACT_ADDRESS: str = ""
     ETHEREUM_MAINNET_CONTRACT_ADDRESS: str = ""
 
-    BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: int = 120
-
     # IPFS
-    IPFS_MODE: IPFSMode = IPFSMode.remote
     IPFS_NODE_API: str = "/dns/ipfs0/tcp/5001/http"
     PINATA_API_KEY = ""
     PINATA_API_SECRET = ""

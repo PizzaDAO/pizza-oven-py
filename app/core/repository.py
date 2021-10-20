@@ -27,8 +27,8 @@ __all__ = [
     "get_pizza",
     "set_pizza",
     "set_pizza_image",
-    "get_metadata",
-    "set_metadata",
+    "get_metadata_from_ipfs",
+    "get_metadata_from_storage",
 ]
 
 settings = Settings()
@@ -82,7 +82,8 @@ def set_chainlink_token(name: str, inbound_token: str, outbound_token) -> str:
 def get_order_response(job_id: str) -> Optional[OrderPizzaResponse]:
     try:
         with get_storage(DataCollection.order_responses) as storage:
-            result = storage.get({"job_id": job_id})
+
+            result = storage.get({"jobRunID": job_id})
             return OrderPizzaResponse(**result)
     except Exception as error:
         print(sys.exc_info())
@@ -129,8 +130,9 @@ def get_kitchen_order(ipfs_hash: int) -> KitchenOrder:
 
 def set_kitchen_order(order: KitchenOrder) -> str:
     json_string = order.json()
-    print("set_kitchen_order:")
-    print(json_string)
+    print(
+        f"set_kitchen_order: token_id: {order.token_id} random_seed: {order.random_seed}"
+    )
 
     if settings.IPFS_MODE == IPFSMode.remote:
         print("pinning using local node")
@@ -186,15 +188,37 @@ def set_pizza_image(pizza: HotPizza) -> str:
         return ""
 
 
-def get_metadata(ipfs_hash: str) -> RarePizzaMetadata:
+def get_metadata_from_ipfs(ipfs_hash: str) -> RarePizzaMetadata:
     with IPFSSession(settings.IPFS_NODE_API) as session:
         return RarePizzaMetadata(**json.load(session.get_json(ipfs_hash)))
+
+
+def get_metadata_from_storage(job_id: str) -> RarePizzaMetadata:
+    try:
+        with get_storage(DataCollection.metadata) as storage:
+
+            result = storage.get({"job_id": job_id})
+            return RarePizzaMetadata(**result)
+    except Exception as error:
+        print(sys.exc_info())
+        print(error)
+        return None
 
 
 def set_metadata(metadata: RarePizzaMetadata) -> str:
     json_string = metadata.json()
     print("set_metadata:")
     print(json_string)
+
+    # metadata is set both in storage and in the blockchain
+
+    try:
+        with get_storage(DataCollection.metadata) as storage:
+            storage.set(metadata.dict(), f"metadata-{metadata.job_id}")
+    except Exception as error:
+        print(sys.exc_info())
+        # raise error
+        # continue since ipfs is more important
 
     if settings.IPFS_MODE == IPFSMode.remote:
         print("pinning using local node")

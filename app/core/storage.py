@@ -1,6 +1,12 @@
 from typing import Dict, Protocol, Optional, Any, List, Union
 from collections.abc import MutableMapping
 
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+from app.core.config import Settings
+
 import mmap
 import os
 import json
@@ -18,6 +24,11 @@ __all__ = [
 
 DOCUMENT_VALUE_TYPE = Union[MutableMapping, List[MutableMapping]]
 
+settings = Settings()
+
+firebase_credentials = credentials.Certificate(settings.GOOGLE_APPLICATION_CREDENTIALS)
+firebase_app = firebase_admin.initialize_app(firebase_credentials)
+
 
 class DataCollection:
     render_task = "render_task"
@@ -25,6 +36,8 @@ class DataCollection:
     recipes = "recipes"
     ingredients = "ingredients"
     order_responses = "order_responses"
+    kitchen_orders = "kitchen_orders"
+    metadata = "metadata"
 
 
 class IStorage(Protocol):
@@ -36,12 +49,14 @@ class IStorage(Protocol):
 
     def find(self, filter: MutableMapping, skip: int = 0, limit: int = 0) -> Any:
         """
-        Find items matching the filter
+        Find items matching the filter. This interface is extremely flexible
+        but in most cases it only expects the primary key field id and name
         """
 
     def get(self, filter: MutableMapping) -> Any:
         """
-        Get an item from the container
+        Get an item from the container. This interface is extremely flexible
+        but in most cases it only expects the primary key field id and name
         """
 
     def set(self, value: DOCUMENT_VALUE_TYPE, filename: Optional[str] = None) -> Any:
@@ -123,9 +138,72 @@ class LocalStorage(IStorage):
         pass
 
 
+class FirebaseStorage(IStorage):
+    def __init__(self, collection: str):
+        super().__init__()
+        self._id = 0
+        self._collection = collection
+
+        self._client: Any
+        self._database: Any
+
+    def __enter__(self) -> Any:
+        self._client = firestore.client(app=firebase_app)
+        self._database = self._client.collection(self._collection)
+        return self
+
+    def __exit__(self, exc_type: Any, exc_value: Any, exc_traceback: Any) -> None:
+        pass
+
+    def find(self, filter: MutableMapping, skip: int = 0, limit: int = 0) -> Any:
+        """
+        Find items matching the filter
+        """
+        # this is a simple example that only considers the first value in the filter
+        query = self._database.where(
+            list(filter.keys())[0], "==", list(filter.values())[0]
+        )
+        docs = query.stream()
+        return [doc.to_dict() for doc in docs]
+
+    def get(self, filter: MutableMapping) -> Any:
+        """
+        Get an item from the container
+        """
+        # this is a simple example that only considers the value of the first filter key
+        document_id = f"{self._collection}-{list(filter.values())[0]}"
+        doc = self._database.document(document_id).get()
+        if doc.exists:
+            return doc.to_dict()
+        return None
+
+    def set(self, value: DOCUMENT_VALUE_TYPE, filename: Optional[str] = None) -> Any:
+        """
+        Set and item in the container
+        """
+        if isinstance(value, List):
+            # TODO: insert lists
+            pass
+        else:
+            document_id = f"{self._collection}-{list(value.values())[0]}"
+            print(f"set: {document_id}")
+            self._database.document(document_id).set(value, merge=True)
+
+    def update(self, filter: MutableMapping, value: DOCUMENT_VALUE_TYPE) -> Any:
+        """
+        Update an item
+        """
+        if isinstance(value, List):
+            # TODO: insert lists
+            pass
+        else:
+            doc = self._database.document(list(filter.values())[0])
+            doc.update(value)
+
+
 def get_storage(collection: str, settings: Settings = Settings()) -> IStorage:
     """Get a storage repository by settings strage mode."""
-    # if settings.STORAGE_MODE == StorageMode.firebase:
-    # return FirebaseStorage(settings.MONGODB_URI, container, collection)
+    if settings.STORAGE_MODE == StorageMode.firebase:
+        return FirebaseStorage(collection)
 
     return LocalStorage(collection)
