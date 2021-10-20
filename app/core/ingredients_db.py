@@ -309,7 +309,7 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
                 scope.particle_scale = get_scale_values(
                     inches, inch_variance, BASE_PIXEL_SIZE
                 )
-                # force no scatter type here
+                # force no scatter type here fir base and lastchance
                 scope.scatter_types = [ScatterType.none]
             else:
                 scope.particle_scale = get_scale_values(

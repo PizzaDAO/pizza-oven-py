@@ -179,6 +179,7 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         translation = (0.0, 0.0)
         if scope.ingredient.classification == Classification.lastchance:
             translation = (3072 / 2, 3072 / 2)
+
         instances = [
             MadeIngredientPrep(
                 translation=translation,
@@ -187,9 +188,6 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
                 image_uri=scope.ingredient.image_uris["filename"],
             )
         ]
-
-    # else:
-    # instances = RandomScatter(seed, nonce).evaluate(scope)
 
     # Temporarily test the scattering - ScatterType not defined in database yet
     # If we have a topping here - scatter it
@@ -205,7 +203,7 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         else:
             selected_variants = variant_list
 
-        # Then pick a scatter type
+        # TODO: Then pick a scatter type
         scatter_type = ScatterType.grid
 
         # populate the scatter type with the selected_variants
