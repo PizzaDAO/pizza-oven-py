@@ -32,7 +32,8 @@ spec:
           command:
             - /bin/sh
             - -c
-            - chainlink node start -d -p /run/secrets/password -a /run/secrets/api
+            - ls ~/
+            # - chainlink node start -d -p /run/secrets/password -a /run/secrets/api
           env:
             - name: PORT
               value: {{ .Values.chainlink.port }}
