@@ -20,21 +20,21 @@ class Topping(NatronBase):
             image_uri = item["image_uri"]
             self._load_image(image_uri, index)
 
-    def _load_json_data(self, env_var):
-        """Override for depth swap JSON"""
+    # def _load_json_data(self, env_var):
+    #     """Override for depth swap JSON"""
 
-        file_path = os.environ[env_var]
-        with open(file_path) as json_file:
-            self.element = json.load(json_file)
-        # print(self.element)
+    #     file_path = os.environ[env_var]
+    #     with open(file_path) as json_file:
+    #         self.element = json.load(json_file)
+    #     # print(self.element)
 
-        # Depth swap layers has different JSON -source is a ShuffledLayer
-        self.index = self.element["index"]
-        self.unique_id = self.element["token_id"]
-        self.out_file = self.element["output_mask"]
-        self.instances = self.element["instances"]
+    #     # Depth swap layers has different JSON -source is a ShuffledLayer
+    #     self.index = self.element["index"]
+    #     self.unique_id = self.element["token_id"]
+    #     self.out_file = self.element["output_mask"]
+    #     self.instances = self.element["instances"]
 
-        return self.element
+    #     return self.element
 
     def render(self):
         """override the render function in your derived class to customize behavior"""

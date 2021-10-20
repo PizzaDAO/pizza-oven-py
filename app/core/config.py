@@ -22,6 +22,13 @@ class IPFSMode(str, Enum):
     pinata = "pinata"
 
 
+class EthereumNetworkChainId(int, Enum):
+    mainnet = 1
+    rinkeby = 4
+    matic = 137
+    maticmum = 80001
+
+
 # pylint:disable=too-few-public-methods
 class Settings(BaseSettings):
     """Settings for the app"""
@@ -42,8 +49,16 @@ class Settings(BaseSettings):
     ETHEREUM_MAINNET_HTTP_SERVER: str = ""
     ETHEREUM_POLYGON_HTTP_SERVER: str = ""
 
+    ETHEREUM_TESTNET_ACCOUNT_ADDRESS: str = ""
     ETHEREUM_TESTNET_PRIVATE_KEY: str = ""
+
+    ETHEREUM_MAINNET_ACCOUNT_ADDRESS: str = ""
     ETHEREUM_MAINNET_PRIVATE_KEY: str = ""
+
+    ETHEREUM_TESTNET_CONTRACT_ADDRESS: str = ""
+    ETHEREUM_MAINNET_CONTRACT_ADDRESS: str = ""
+
+    BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: int = 120
 
     # IPFS
     IPFS_MODE: IPFSMode = IPFSMode.remote

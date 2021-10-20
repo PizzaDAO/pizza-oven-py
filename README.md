@@ -63,7 +63,7 @@ A Postman collection is also available to test the API located in the `.postman`
 
 1. Download and install - [**Postman Downloads**](https://www.postman.com/downloads/)
 2. follow [Import into Postman](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman) but steps generally are:
-3. In Postman, import the collection from the .postman folder in the root directory - 'Pizza Kitchen.postman_collection.json' (this folder is hidden by default)
+3. In Postman, import the collection and environment from the .postman folder in the root directory - 'Pizza Kitchen.postman_collection.json' and 'Pizza Kitchen.postman_environment.json' (this folder is hidden by default)
 4. You should see a list of calls in your collection. You are ready to run pies!
 5. Pull all the remote Google sheets data and store it locally<br>
    Send `dining_room —> dining_setup`<br>

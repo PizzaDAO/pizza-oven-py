@@ -24,7 +24,7 @@ import json
 from app.core.scatter import Grid, RandomScatter, TreeRing
 from app.core.utils import clamp, to_hex
 from app.core.ingredients_db import get_variants_for_ingredient
-from app.core.rarity import select_from_variants
+from app.core.rarity import select_from_variants, ingredient_with_rarity
 
 __all__ = ["reduce"]
 
@@ -92,12 +92,12 @@ def reduce(
     )
 
     # SHUFFLER - pull out all the instances into  buffer that we can shuffle for depth swap
-    shuffled_instances = []
-    for (_, ingredient) in reduced_layers.items():
-        shuffled_instances += ingredient.instances
+    # shuffled_instances = []
+    # for (_, ingredient) in reduced_layers.items():
+    #     shuffled_instances += ingredient.instances
 
     # A list of all the instances - shuffled
-    shuffled_instances = deterministic_shuffle(shuffled_instances)
+    # shuffled_instances = deterministic_shuffle(shuffled_instances)
 
     return KitchenOrder(
         token_id=token_id,
@@ -106,25 +106,24 @@ def reduce(
         recipe_id=recipe.unique_id,
         base_ingredients=selected_base_ingredients,
         layers=reduced_layers,
-        instances=shuffled_instances,
+        instances=[],  # empty array since switched back to single ing layers
         instructions=order_instructions,
     )
 
 
 def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -> dict:
     reduced_dict = {}
+
     for key in count_dict:
         if key in ingredient_dict.keys():
             made_count = int(
                 count_dict[key]
             )  # This is the number of ingredient layers per pizza
             for i in range(0, made_count):
-                # choose the ingredients
-                options = ingredient_dict[key]
-                opt_count = (float(len(options)), 0)
-                selected_ind = int(select_value(deterministic_seed, nonce, opt_count))
-                ingredient = ingredient_dict[key][selected_ind]  # MadeIngredient
-                # need unique keys so we dont overwite toppings with multiple instances
+                # select a topping based on rarity
+                values = list(ingredient_dict[key])
+
+                ingredient = ingredient_with_rarity(deterministic_seed, nonce, values)
                 identifier = key + str(i)
                 reduced_dict[identifier] = select_prep(
                     deterministic_seed, nonce, ingredient
@@ -168,11 +167,13 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     # an select the one to use
 
     if scope.scope.scatter_types[0] == ScatterType.none:
+        scatter_type = ScatterType.none
         scale = scope.scope.particle_scale[0]
+        rotation = round(select_value(seed, nonce, scope.scope.rotation))
         instances = [
             MadeIngredientPrep(
                 translation=(0.0, 0.0),
-                rotation=0.0,
+                rotation=rotation,
                 scale=scale,
                 image_uri=scope.ingredient.image_uris["filename"],
             )
@@ -222,7 +223,7 @@ def select_ingredient_count(
     # TODO
     # rounding floats here
     # assuming the ranges will be supplied from Google Sheets in the pizza type sheet
-    return MadeInstructions(
+    made = MadeInstructions(
         box_count=1,
         paper_count=1,
         crust_count=1,
@@ -237,3 +238,5 @@ def select_ingredient_count(
             select_value(seed, nonce, scope.baking_time_in_minutes), 0
         ),
     )
+
+    return made

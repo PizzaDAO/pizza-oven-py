@@ -238,17 +238,6 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """Most of these are placeholders for the moment - Only 3 values in Ingredient are added from the spreadsheets"""
 
-    nutrition = NutritionMetadata(
-        servings=1.0,
-        calories=1.0,
-        fat=1.0,
-        cholesterol=1.0,
-        sodium=1.0,
-        potassium=1.0,
-        carbohydrates=1.0,
-        protein=1.0,
-    )
-
     category = row["category"]
     classification = classification_from_string(category)
 
@@ -256,6 +245,9 @@ def parse_ingredient(row) -> ScopedIngredient:
     mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
     variant_rarity = map_rarity(row["variant rarity"])
     variant_id = row["unique_id"][3:4]
+
+    nutrition = parse_nutrition(row)
+
     ingredient = Ingredient(
         unique_id=row["unique_id"],
         ingredient_id="00",
@@ -291,30 +283,46 @@ def parse_ingredient(row) -> ScopedIngredient:
 def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
     # Add the scope options: on_disk(not used):inches:inch_variance:min_per:max_per:pie_count:scatters:description
     # Use if statements to defend against blank cells
-    if "min_per" in row.keys() and "max_per" in row.keys():
-        if row["min_per"].isnumeric() and row["max_per"].isnumeric():
-            scope.emission_count = (float(row["min_per"]), float(row["max_per"]))
 
-    # An ungly chain of IFs to make sure all the values are there before we operate
-    if "inches" in row.keys():
-        if row["inches"].replace(".", "", 1).isdigit():
-            inches = float(row["inches"])
+    if has_value("min_per", row) and has_value("max_per", row):
+        scope.emission_count = (float(row["min_per"]), float(row["max_per"]))
 
-            if "inch_variance" in row.keys():
-                if row["inch_variance"].replace(".", "", 1).isdigit():
-                    inch_variance = float(row["inch_variance"])
+    if has_value("rotation", row):
+        r_min = float(row["rotation"]) * -1
+        r_max = float(row["rotation"])
+        scope.rotation = (r_min, r_max)
+    else:
+        scope.rotation = (-180, 180)
 
-                    base_categories = ["box", "paper", "crust", "sauce", "cheese"]
-                    if row["category"] in base_categories:
-                        scope.particle_scale = get_scale_values(
-                            inches, inch_variance, BASE_PIXEL_SIZE
-                        )
-                    else:
-                        scope.particle_scale = get_scale_values(
-                            inches, inch_variance, TOPPING_PIXEL_SIZE
-                        )
+    if has_value("inches", row):
+        inches = float(row["inches"])
+
+        if has_value("inch_variance", row):
+            inch_variance = float(row["inch_variance"])
+
+            base_categories = ["box", "paper", "crust", "sauce", "cheese"]
+            special_categories = ["saver", "seasoning", "squirt", "extra"]
+            if (
+                row["category"] in base_categories
+                or row["category"] in special_categories
+            ):
+                scope.particle_scale = get_scale_values(
+                    inches, inch_variance, BASE_PIXEL_SIZE
+                )
+            else:
+                scope.particle_scale = get_scale_values(
+                    inches, inch_variance, TOPPING_PIXEL_SIZE
+                )
 
     return scope
+
+
+def has_value(label: str, row) -> bool:
+    if label in row.keys():
+        if row[label].replace(".", "", 1).isdigit():
+            return True
+
+    return False
 
 
 def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
@@ -377,7 +385,7 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
             crust_count=1,
             sauce_count=[1, 1],
             cheese_count=[1, 1],
-            topping_count=[0, 8],
+            topping_count=[1, 8],
             extras_count=[0, 2],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
@@ -440,3 +448,85 @@ def get_variants_for_ingredient(ingredient_id: str) -> List:
         print("Looking for variants of " + ingredient_id + "... But can't find any")
 
     return variants
+
+
+def parse_nutrition(row) -> NutritionMetadata:
+    # NUTRITIONAL DATA
+    if has_value("serving_size", row):
+        data = NutritionMetadata(
+            serving_size=row["serving_size"],
+            mass=row["mass"],
+            calories=row["calories"],
+            vitamin_c=row["vitamin_c"],
+            magnesium=row["magnesium"],
+            vitamin_b5=row["vitamin_b5"],
+            vitamin_d=row["vitamin_d"],
+            vitamin_b7=row["vitamin_b7"],
+            potassium=row["potassium"],
+            cholesterol=row["cholesterol"],
+            vitamin_a=row["vitamin_a"],
+            dietary_fiber=row["dietary_fiber"],
+            vitamin_b6=row["vitamin_b6"],
+            sugar=row["sugar"],
+            protein=row["protein"],
+            iron=row["iron"],
+            complex_carb=row["complex_carb"],
+            selenium=row["selenium"],
+            vitamin_k=row["vitamin_k"],
+            vitamin_b12=row["vitamin_b12"],
+            calories_from_fat=row["calories_from_fat"],
+            vitamin_e=row["vitamin_e"],
+            zinc=row["zinc"],
+            saturated_fat=row["saturated_fat"],
+            iodine=row["iodine"],
+            trans_fat=row["trans_fat"],
+            sodium=row["sodium"],
+            monosaturated_fat=row["monosaturated_fat"],
+            calcium=row["calcium"],
+            riboflavin=row["riboflavin"],
+            thiamin=row["thiamin"],
+            folate=row["folate"],
+            added_sugar=row["added_sugar"],
+            chromium=row["chromium"],
+            manganese=row["manganese"],
+        )
+    else:
+        data = NutritionMetadata(
+            serving_size=0,
+            mass=0,
+            calories=0,
+            vitamin_c=0,
+            magnesium=0,
+            vitamin_b5=0,
+            vitamin_d=0,
+            vitamin_b7=0,
+            potassium=0,
+            cholesterol=0,
+            vitamin_a=0,
+            dietary_fiber=0,
+            vitamin_b6=0,
+            sugar=0,
+            protein=0,
+            iron=0,
+            complex_carb=0,
+            selenium=0,
+            vitamin_k=0,
+            vitamin_b12=0,
+            calories_from_fat=0,
+            vitamin_e=0,
+            zinc=0,
+            saturated_fat=0,
+            iodine=0,
+            trans_fat=0,
+            sodium=0,
+            monosaturated_fat=0,
+            calcium=0,
+            riboflavin=0,
+            thiamin=0,
+            folate=0,
+            added_sugar=0,
+            chromium=0,
+            manganese=0,
+        )
+
+    return data

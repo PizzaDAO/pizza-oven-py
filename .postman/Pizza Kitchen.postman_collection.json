@@ -41,11 +41,18 @@
 							}
 						}
 					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/1",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/13",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -53,7 +60,7 @@
 								"api",
 								"{{version}}",
 								"recipe",
-								"1"
+								"13"
 							]
 						}
 					},
@@ -139,6 +146,39 @@
 								"{{version}}",
 								"kitchen",
 								"preparePizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prepare Ingredient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"order\", JSON.stringify(jsonData));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/kitchen/ingredient/4000",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"kitchen",
+								"ingredient",
+								"4000"
 							]
 						}
 					},
@@ -287,6 +327,35 @@
 								"{{version}}",
 								"diningroom",
 								"chainlink"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test VRF Callback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"cd69ad98\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\"\n    },\n    \"responseURL\": \"http://chainlink-rinkeby:6688/v2/runs/cd69ad98-819a-4300-af4f-c732d4403677\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/diningroom/test_vrf",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"diningroom",
+								"test_vrf"
 							]
 						}
 					},

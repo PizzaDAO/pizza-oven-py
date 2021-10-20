@@ -6,6 +6,7 @@ from math import ceil
 import os
 import subprocess
 import json
+from app.models.base import Base
 
 from app.models.recipe import (
     Classification,
@@ -14,7 +15,7 @@ from app.models.recipe import (
 )
 from app.models.prep import KitchenOrder, MadeIngredient, ShuffledLayer
 from app.models.pizza import HotPizza
-from app.core.config import Settings
+from app.core.config import ApiMode, Settings
 
 from PIL import Image
 from PIL import ImageFont
@@ -23,7 +24,6 @@ from PIL import ImageDraw
 current = os.path.dirname(os.path.realpath(__file__))
 settings = Settings()
 
-DEV_MODE = True
 DATA_FONT_SIZE = 64
 WATERMARK_FILE = "pizza_watermark.png"
 
@@ -234,6 +234,35 @@ class ExtraRenderer:
             print(e)
 
 
+class DeliveryRenderer:
+    """Render delivery"""
+
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, data_path, frame):
+        print(f"DeliveryRenderer:render {data_path}")
+        os.environ["DELIVERY_DATA_PATH"] = data_path
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/delivery.py",
+                    f"{project_path}/delivery.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"DeliveryRenderer exited with error code: {e.returncode}")
+            print(e)
+
+
 @dataclass
 class Renderer:
     """render the kitchen order"""
@@ -282,6 +311,27 @@ class Renderer:
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
             layer_file.write(layer.json())
+
+        return file_path
+
+    def cache_layer_manifest(self, layers: List[str]) -> str:
+        cache_dir = os.path.join(
+            self.project_path,
+            "../.cache/",
+        )
+        if not os.path.exists(cache_dir):
+            os.makedirs(cache_dir)
+
+        class DeliveryManifest(Base):
+            frame: int
+            layers: List[str]
+
+        padded_token_id = str(self.frame).zfill(4)
+        file_path = os.path.join(cache_dir, f"{padded_token_id}-manifest.json")
+
+        # cache out the ingredient so it can be picked up by natron
+        with open(file_path, "w") as layer_file:
+            layer_file.write(DeliveryManifest(frame=self.frame, layers=layers).json())
 
         return file_path
 
@@ -345,44 +395,38 @@ class Renderer:
         print("flatten_image")
         print(layers)
 
+        # cache the layer manifest no natron knows how to read it
+        data_path = self.cache_layer_manifest(layers)
+
+        # render the layer manifest
+        DeliveryRenderer().render(
+            self.natron_path, self.project_path, data_path, self.frame
+        )
+
+        # load the output directory
         output_dir = os.path.join(
             self.project_path,
             "../output/",
         )
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-
-        images: List[Image.Image] = []
-        for layer in layers:
-            print(f"opening: {layer}")
-            file = os.path.join(output_dir, layer)
-
-            # if we can't find a file, just skip it.
-            # can lead to incomplete pizzas
-            if not os.path.exists(file):
-                print(f"output file not found: {file}")
-                continue
-
-            image = Image.open(file)
-            # image = image.convert("RGBA")
-            images.append(image)
-
-        base = images[0]
-        for image in images:
-            base.paste(image, (0, 0), image)
-
-        # TODO: make env variable to toggle this on/off
-        if DEV_MODE:
-            self.draw_watermark(base, order)
-
-        # TODO: cleanup intermediate files
 
         # Give the final output a unique filename: 0000.png
-        unique_filename = str(self.frame).zfill(4) + ".png"
+        output_filename = str(self.frame).zfill(4) + ".png"
 
-        base.save(os.path.join(output_dir, unique_filename))
+        # draw the water mark on the image
+        if settings.API_MODE == ApiMode.development:
+            file = os.path.join(output_dir, output_filename)
 
-        return unique_filename
+            output_image = Image.open(file)
+            self.draw_watermark(output_image, order)
+            output_image.save(os.path.join(output_dir, output_filename))
+
+        # cleanup intermediate files
+        if settings.API_MODE == ApiMode.production:
+            for layer_filename in layers:
+                layer_filepath = os.path.join(output_dir, layer_filename)
+                os.remove(layer_filepath)
+
+        return output_filename
 
     def render_pizza(self, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
@@ -408,45 +452,45 @@ class Renderer:
         #
         # SINGLE IGREDIENT TOPPING LAYERS
         #
-        # # iterate through each of the layers and render
-        # for (_, ingredient) in order.layers.items():
-        #     print(
-        #         "WILL RENDER THIS MANY "
-        #         + ingredient.ingredient.name
-        #         + ": "
-        #         + str(ingredient.count)
-        #     )
-        #     result = self.render_ingredient(topping_layer_index, ingredient)
-        #     rendered_layer_files.append(result)
-        #     topping_layer_index += 1
+        # iterate through each of the layers and render
+        for (_, ingredient) in order.layers.items():
+            print(
+                "WILL RENDER THIS MANY "
+                + ingredient.ingredient.name
+                + ": "
+                + str(ingredient.count)
+            )
+            result = self.render_ingredient(layer_index, ingredient)
+            rendered_layer_files.append(result)
+            layer_index += 1
 
         # Iterate through shuffled instances to create layers of 30 items
         #
         # BATCHING
         #
-        max_instances = 30
-        instance_count = ceil(len(order.instances))
-        layer_count = ceil(instance_count / max_instances)
+        # max_instances = 30
+        # instance_count = ceil(len(order.instances))
+        # layer_count = ceil(instance_count / max_instances)
 
-        for index in range(layer_count):
-            if instance_count - (index * max_instances) < max_instances:
-                batch_count = instance_count % max_instances
-            else:
-                batch_count = max_instances
+        # for index in range(layer_count):
+        #     if instance_count - (index * max_instances) < max_instances:
+        #         batch_count = instance_count % max_instances
+        #     else:
+        #         batch_count = max_instances
 
-            sliceObj = slice(0, batch_count)
-            batch = order.instances[sliceObj]
+        #     sliceObj = slice(0, batch_count)
+        #     batch = order.instances[sliceObj]
 
-            # Create a ShuffledLayer
-            shuffle_layer = ShuffledLayer(
-                token_id=order.token_id,
-                index=index,
-                count=batch_count,
-                instances=batch,
-            )
-            result = self.render_instances(layer_index, shuffle_layer)
-            rendered_layer_files.append(result)
-            layer_index += 1
+        #     # Create a ShuffledLayer
+        #     shuffle_layer = ShuffledLayer(
+        #         token_id=order.token_id,
+        #         index=index,
+        #         count=batch_count,
+        #         instances=batch,
+        #     )
+        #     result = self.render_instances(layer_index, shuffle_layer)
+        #     rendered_layer_files.append(result)
+        #     layer_index += 1
 
         # SPECIALS Temp - render seasoning and savers for make testing
         if order.specials is not None:
