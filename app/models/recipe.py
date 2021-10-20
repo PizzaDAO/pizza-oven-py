@@ -11,6 +11,7 @@ __all__ = [
     "Ingredient",
     "ScopedIngredient",
     "Recipe",
+    "Rarity",
     "ScatterType",
     "classification_as_string",
     "classification_from_string",
@@ -24,7 +25,7 @@ MIN = float
 MAX = float
 
 
-class Classification(Enum):
+class Classification(int, Enum):
     """all of the different types"""
 
     box = 1

@@ -11,6 +11,11 @@ class ApiMode(str, Enum):
     production = "production"
 
 
+class StorageMode(str, Enum):
+    local = "local"
+    firebase = "firebase"
+
+
 class EthereumMode(str, Enum):
     testnet = "testnet"
     mainnet = "mainnet"
@@ -35,6 +40,7 @@ class Settings(BaseSettings):
 
     # Application
     API_MODE: ApiMode = ApiMode.development
+    STORAGE_MODE: StorageMode = StorageMode.local
 
     API_V1_STR: str = "/api/v1"
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = Field(
@@ -66,10 +72,13 @@ class Settings(BaseSettings):
     PINATA_API_KEY = ""
     PINATA_API_SECRET = ""
 
+    # Google Firebase
+    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.json"
+
     # Google Sheets
     # ingredients_db settings
-    TOKEN_PATH = "data/sheets_auth_token.json"
-    CREDENTIALS_PATH = "data/credentials.json"
+    GOOGLE_SHEETS_TOKEN_PATH = "secrets/sheets.json"
+    GOOGLE_SHEETS_CREDENTIALS_PATH = "secrets/credentials.json"
     SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly"
     PIZZA_TYPES_SHEET = "1wHfP2I1m8_TV5tZt3FchI_zYgzZg9AomU7GOkof7TW8"
     PIZZA_TYPE_RANGE_NAME = "Jed - Pizza Types!A3:W"

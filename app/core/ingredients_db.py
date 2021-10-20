@@ -69,20 +69,22 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
 
     scopes = [settings.SCOPE]
 
-    if os.path.exists(settings.TOKEN_PATH):
+    if os.path.exists(settings.GOOGLE_SHEETS_TOKEN_PATH):
         print("Found AUTH token...")
-        creds = Credentials.from_authorized_user_file(settings.TOKEN_PATH, scopes)
+        creds = Credentials.from_authorized_user_file(
+            settings.GOOGLE_SHEETS_TOKEN_PATH, scopes
+        )
     # If there are no (valid) credentials available, let the user log in. BUT this will fail in Docker ENV
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                settings.CREDENTIALS_PATH, scopes
+                settings.GOOGLE_SHEETS_CREDENTIALS_PATH, scopes
             )
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open(settings.TOKEN_PATH, "w") as token:
+        with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
             token.write(creds.to_json())
 
     DIMENSION = "ROWS"  # default is ROWS
@@ -223,14 +225,16 @@ def parse_recipes(
 
     # Now we have a Dict of Columns - pizza type string : raw column data
     pizza_types = list(columns.keys())
+    recipe_id = 0
     for header in pizza_types:
         data = columns[header]
-        recipe: Recipe = parse_column(data, ingredients)
+        recipe: Recipe = parse_column(recipe_id, data, ingredients)
 
         # Add the Box and Paper ingredients to the base_ingredient Dict
         recipe.base_ingredients.update(box_paper_dict)
 
         recipes.update({header: recipe})
+        recipe_id += 1
 
     return recipes
 
@@ -334,7 +338,9 @@ def parse_id(text) -> str:
     return id_string
 
 
-def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe:
+def parse_column(
+    recipe_id: int, raw_column, ingredients: Dict[Any, ScopedIngredient]
+) -> Recipe:
     """parse all the options"""
     base_categories = ["box", "paper", "crust", "sauce", "cheese"]
     # layer_categories = ["saver", "seasoning", "squirt", "topping"]
@@ -366,7 +372,7 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
     pie_type = raw_column[0]
 
     recipe = Recipe(
-        unique_id=1,
+        unique_id=recipe_id,
         name=pie_type,
         rarity_level=3.0,
         base_ingredients=base_dict,
