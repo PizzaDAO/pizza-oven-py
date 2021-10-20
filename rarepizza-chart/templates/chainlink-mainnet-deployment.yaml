@@ -90,8 +90,10 @@ spec:
               containerPort: {{ .Values.chainlink.envPort }}
           volumeMounts:
             - mountPath: /run/secrets/password
+              subPath: password
               name: password
             - mountPath: /run/secrets/api
+              subPath: api
               name: api
             - mountPath: /chainlink
               name: chainlink-pvc
