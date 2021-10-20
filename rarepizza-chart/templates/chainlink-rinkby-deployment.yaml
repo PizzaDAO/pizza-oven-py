@@ -39,53 +39,53 @@ spec:
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
-                  name: chainlink-secret
-                  key: DB_CONNECTION_RINKBY
+                  name: chainlink-rinkby-secret
+                  key: DB_CONNECTION
             - name: ALLOW_ORIGINS
               valueFrom:
                 configMapKeyRef:
                   key: ALLOW_ORIGINS
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
             - name: BRIDGE_RESPONSE_URL
               valueFrom:
                 configMapKeyRef:
-                  key: BRIDGE_RESPONSE_URL_RINKBY
-                  name: chainlink-config
+                  key: BRIDGE_RESPONSE_URL
+                  name: chainlink-rinkby-config
             - name: CHAINLINK_TLS_PORT
               valueFrom:
                 configMapKeyRef:
                   key: CHAINLINK_TLS_PORT
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
             - name: ETH_CHAIN_ID
               valueFrom:
                 configMapKeyRef:
                   key: ETH_CHAIN_ID
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
             - name: GAS_UPDATER_ENABLED
               valueFrom:
                 configMapKeyRef:
                   key: GAS_UPDATER_ENABLED
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
             - name: LOG_LEVEL
               valueFrom:
                 configMapKeyRef:
                   key: LOG_LEVEL
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
             - name: MIN_OUTGOING_CONFIRMATIONS
               valueFrom:
                 configMapKeyRef:
                   key: MIN_OUTGOING_CONFIRMATIONS
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
             - name: ROOT
               valueFrom:
                 configMapKeyRef:
                   key: ROOT
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
             - name: SECURE_COOKIES
               valueFrom:
                 configMapKeyRef:
                   key: SECURE_COOKIES
-                  name: chainlink-config
+                  name: chainlink-rinkby-config
           ports:
             - name: rinkby
               containerPort: {{ .Values.chainlink.envPort }}
@@ -106,13 +106,13 @@ spec:
             items:
               - key: password
                 path: password
-            secretName: chainlink-secret
+            secretName: chainlink-rinkby-secret
         - name: api
           secret:
             items:
               - key: api
                 path: api
-            secretName: chainlink-secret
+            secretName: chainlink-rinkby-secret
         - name: chainlink-pvc
           persistentVolumeClaim:
             claimName: chainlink-pvc

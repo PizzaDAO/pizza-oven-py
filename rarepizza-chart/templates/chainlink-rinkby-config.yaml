@@ -1,8 +1,7 @@
 apiVersion: v1
 data:
   ALLOW_ORIGINS: http://pizza-oven,http://localhost,http://localhost:6688
-  BRIDGE_RESPONSE_URL_RINKBY: http://chainlink-rinkeby:6688
-  BRIDGE_RESPONSE_URL_MAINNET: http://chainlink-mainnet:6688
+  BRIDGE_RESPONSE_URL: http://chainlink-rinkeby:6688
   CHAINLINK_TLS_PORT: "0"
   ETH_CHAIN_ID: "4"
   GAS_UPDATER_ENABLED: "true"
@@ -12,7 +11,6 @@ data:
   SECURE_COOKIES: "false"
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
   labels:
     app.kubernetes.io/component: chainlink
-  name: chainlink-config
+  name: chainlink-rinkby-config

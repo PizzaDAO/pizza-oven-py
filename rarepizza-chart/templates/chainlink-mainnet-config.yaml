@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  ROOT: /chainlink
+  LOG_LEVEL: debug
+  ETH_CHAIN_ID: 1
+  CHAINLINK_TLS_PORT: 0
+  SECURE_COOKIES: false
+  GAS_UPDATER_ENABLED: true
+  ALLOW_ORIGINS: *
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/component: chainlink
+  name: chainlink-mainnet-config
