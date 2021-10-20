@@ -8,7 +8,7 @@ metadata:
 spec:
   ports:
     - name: rinkby
-      port: {{ .Values.chainlink.port }}
+      port: {{ .Values.chainlink.envPort }}
       targetPort: rinkby
   selector:
     app.kubernetes.io/component: chainlink-rinkby

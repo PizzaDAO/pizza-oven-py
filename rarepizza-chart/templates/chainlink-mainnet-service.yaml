@@ -1,4 +1,4 @@
-{{ - if Values.chainlink.mainnet.enabled -}}
+{{ if .Values.chainlink.mainnet.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -9,11 +9,11 @@ metadata:
 spec:
   ports:
     - name: mainnet
-      port: 6688
+      port: {{ .Values.chainlink.envPort }}
       targetPort: mainnet
   selector:
     app.kubernetes.io/component: chainlink-mainnet
 status:
   loadBalancer: {}
-{{ - end }}
+{{ end }}
 

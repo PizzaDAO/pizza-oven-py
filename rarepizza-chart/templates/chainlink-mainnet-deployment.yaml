@@ -1,4 +1,4 @@
-{{ - if Values.chainlink.mainnet.enabled -}}
+{{ if .Values.chainlink.mainnet.enabled }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,9 +23,9 @@ spec:
       serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      restartPolicy: Always
       containers:
         - name: chainlink-mainnet
-          restartPolicy: Always
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.mainnetTag | default .Chart.AppVersion }}"
@@ -38,7 +38,7 @@ spec:
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
-                  name: chainlink
+                  name: chainlink-secret
                   key: DB_CONNECTION_MAINNET
             - name: ALLOW_ORIGINS
               valueFrom:
@@ -87,7 +87,7 @@ spec:
                   name: chainlink-config
           ports:
             - name: mainnet
-              containerPort: {{ .Values.chainlink.port }}
+              containerPort: {{ .Values.chainlink.envPort }}
           volumeMounts:
             - mountPath: /run/secrets/password
               name: password
@@ -95,24 +95,24 @@ spec:
               name: api
             - mountPath: /chainlink
               name: chainlink-pvc
-          volumes:
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
           - name: password
             secret:
               items:
                 - key: password
                   path: password
-              secretName: chainlink
+              secretName: chainlink-secret
           - name: api
             secret:
               items:
                 - key: api
                   path: api
-              secretName: chainlink
+              secretName: chainlink-secret
           - name: chainlink-pvc
             persistentVolumeClaim:
               claimName: chainlink-pvc
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -125,4 +125,4 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-{{- end }}
+{{ end }}

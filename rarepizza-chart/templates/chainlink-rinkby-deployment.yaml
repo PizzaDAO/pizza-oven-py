@@ -22,9 +22,9 @@ spec:
       serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      restartPolicy: Always
       containers:
         - name: chainlink-rinkby
-          restartPolicy: Always
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.rinkbyTag | default .Chart.AppVersion }}"
@@ -37,7 +37,7 @@ spec:
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
-                  name: chainlink
+                  name: chainlink-secret
                   key: DB_CONNECTION_RINKBY
             - name: ALLOW_ORIGINS
               valueFrom:
@@ -86,7 +86,7 @@ spec:
                   name: chainlink-config
           ports:
             - name: rinkby
-              containerPort: {{ .Values.chainlink.port }}
+              containerPort: {{ .Values.chainlink.envPort }}
           volumeMounts:
             - mountPath: /run/secrets/password
               name: password
@@ -94,24 +94,24 @@ spec:
               name: api
             - mountPath: /chainlink
               name: chainlink-pvc
-          volumes:
-          - name: password
-            secret:
-              items:
-                - key: password
-                  path: password
-              secretName: chainlink
-          - name: api
-            secret:
-              items:
-                - key: api
-                  path: api
-              secretName: chainlink
-          - name: chainlink-pvc
-            persistentVolumeClaim:
-              claimName: chainlink-pvc
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: password
+          secret:
+            items:
+              - key: password
+                path: password
+            secretName: chainlink-secret
+        - name: api
+          secret:
+            items:
+              - key: api
+                path: api
+            secretName: chainlink-secret
+        - name: chainlink-pvc
+          persistentVolumeClaim:
+            claimName: chainlink-pvc
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

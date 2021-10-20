@@ -22,9 +22,9 @@ spec:
       serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      restartPolicy: Always
       containers:
         - name: pizza-oven
-          restartPolicy: Always
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.pizzaOven.image.tag | default .Chart.AppVersion }}"
