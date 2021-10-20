@@ -10,7 +10,7 @@ variables:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_DRIVER: overlay2
 
-build-chainlink-rinkby:
+build-rinkby:
   stage: build
   before_script:
     - docker info
@@ -20,15 +20,15 @@ build-chainlink-rinkby:
     refs:
       - tags
     variables: 
-      - $CI_COMMIT_TAG =~ /chainlink-rinkby/i
+      - $CI_COMMIT_TAG =~ /rinkby/i
   script:
     - pwd
     - ls chainlink
-    # - docker build -t chainlink-rinkby /chainlink
-    # - docker tag chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    # - docker build -t rinkby /chainlink
+    # - docker tag rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     # - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     
-build-chainlink-rinkby:
+build-mainnet:
   stage: build
   before_script:
     - docker info
@@ -38,10 +38,10 @@ build-chainlink-rinkby:
     refs:
       - tags
     variables: 
-      - $CI_COMMIT_TAG =~ /chainlink-mainnet/i
+      - $CI_COMMIT_TAG =~ /mainnet/i
   script:
-    - docker build -t chainlink-mainnet /chainlink
-    - docker tag chainlink-mainnet $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    - docker build -t mainnet /chainlink
+    - docker tag mainnet $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
 
 build-oven:
@@ -54,10 +54,10 @@ build-oven:
     refs:
       - tags
     variables: 
-      - $CI_COMMIT_TAG =~ /pizza-oven/i
+      - $CI_COMMIT_TAG =~ /oven/i
   script:
-    - docker build -t pizza-oven .
-    - docker tag pizza-oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+    - docker build -t oven .
+    - docker tag oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
 
 build-all:
@@ -73,13 +73,13 @@ build-all:
       - $CI_COMMIT_TAG =~ /all/i
   script:
     - docker build -t pizza-oven .
-    - docker tag pizza-oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-pizza-oven
+    - docker tag pizza-oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-oven
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
-    - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-pizza-oven
-    - docker build -t chainlink-rinkby /chainlink
-    - docker tag chainlink-rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-chainlink-rinkby
+    - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-oven
+    - docker build -t rinkby /chainlink
+    - docker tag rinkby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-rinkby
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
-    - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-chainlink-rinkby
+    - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:"$CI_COMMIT_TAG"-rinkby
 
 
 deploy-all:
@@ -92,5 +92,5 @@ deploy-all:
     variables:
       - $CI_COMMIT_TAG =~ /all/i
   script:
-    helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG"-pizza-oven --set chainlink.mainnet.enabled=false --set chainlink.image.rinkbyTag="$CI_COMMIT_TAG"-chainlink-rinkby --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
+    helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG"-oven --set chainlink.mainnet.enabled=false --set chainlink.image.rinkbyTag="$CI_COMMIT_TAG"-rinkby --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
 
