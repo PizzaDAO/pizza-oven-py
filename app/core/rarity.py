@@ -47,7 +47,7 @@ def select_from_variants(
 ) -> List[ScopedIngredient]:
     """given a list of variants, deterministically select a series based on weights"""
 
-    variants = sort_by_rarity(variants)
+    variants = sort_by_rarity(variants, "variant")
 
     freq = makeDistribution(variants)
 
@@ -61,6 +61,19 @@ def select_from_variants(
         instances.append(variants[index])
 
     return instances
+
+
+def ingredient_with_rarity(
+    random_seed: int, nonce: Counter, ingredients: List[ScopedIngredient]
+) -> ScopedIngredient:
+
+    sorted = sort_by_rarity(ingredients, "topping")
+
+    freq = makeDistribution(sorted)
+
+    index = random_weighted_index(random_seed, nonce, 1, freq)
+
+    return sorted[index]
 
 
 def makeDistribution(options: List[ScopedIngredient]):
@@ -89,21 +102,28 @@ def makeDistribution(options: List[ScopedIngredient]):
     return freq
 
 
-def sort_by_rarity(variant_list: List[ScopedIngredient]):
+def sort_by_rarity(option_list: List[ScopedIngredient], sort_type: str):
     """Sort a list by rarity - ascending in rarity - last is most rare"""
     # getting length of list of tuples
-    length = len(variant_list)
+    length = len(option_list)
     for i in range(0, length):
-
         for j in range(0, length - i - 1):
-            rarity1 = weight_for_rarity(variant_list[j].ingredient.variant_rarity)
-            rarity2 = weight_for_rarity(variant_list[j + 1].ingredient.variant_rarity)
+            if sort_type == "variant":
+                rarity1 = weight_for_rarity(option_list[j].ingredient.variant_rarity)
+                rarity2 = weight_for_rarity(
+                    option_list[j + 1].ingredient.variant_rarity
+                )
+            else:
+                rarity1 = weight_for_rarity(option_list[j].ingredient.ingredient_rarity)
+                rarity2 = weight_for_rarity(
+                    option_list[j + 1].ingredient.ingredient_rarity
+                )
             if rarity2 > rarity1:
-                temp = variant_list[j]
-                variant_list[j] = variant_list[j + 1]
-                variant_list[j + 1] = temp
+                temp = option_list[j]
+                option_list[j] = option_list[j + 1]
+                option_list[j + 1] = temp
 
-    return variant_list
+    return option_list
 
 
 def random_weighted_index(
