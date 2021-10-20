@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>12</NodesCount>
+		<NodesCount>11</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Topping_0_2</Plugin_label>
 			<Plugin_script_name>Topping_0_2</Plugin_script_name>
@@ -196,7 +196,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(7200-extra-misc-chirstmaslights.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(9200-lastchance-extra-squirt-hotsauce.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -234,7 +234,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../ingredients-db/7200-extra-misc-chirstmaslights.png</Value>
+					<Value>/Users/ashafer/Development/pizza-oven-tmp/ingredients-db/9200-lastchance-extra-squirt-hotsauce.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -473,7 +473,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>71</KnobsAge>
+			<KnobsAge>73</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -491,101 +491,6 @@
 			<CacheID>Read12_3_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Merge_Toppings</Plugin_label>
-			<Plugin_script_name>Merge_Toppings</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A2_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item class_id="8" tracking_level="0" version="0">
-					<first>A</first>
-					<second>Dot9</second>
-				</item>
-				<item>
-					<first>A2</first>
-					<second>Dot10</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>8</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Merge10</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Dot9</Plugin_label>
 			<Plugin_script_name>Dot9</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
@@ -597,7 +502,7 @@
 			<Inputs_map>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>
+				<item class_id="8" tracking_level="0" version="0">
 					<first></first>
 					<second>Switch_default</second>
 				</item>
@@ -615,33 +520,6 @@
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Dot9</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Dot10</Plugin_label>
-			<Plugin_script_name>Dot10</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>0</KnobsCount>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>0</PagesCount>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Dot10</CacheID>
 		</item>
 		<item>
 			<Plugin_label>Clamp7</Plugin_label>
@@ -713,7 +591,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Merge_Toppings</second>
+					<second>Dot9</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -1015,7 +893,7 @@
 					<second>TRS_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>6</KnobsAge>
+			<KnobsAge>8</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -1484,6 +1362,37 @@
 			</UserComponents>
 			<CacheID>Reformat1</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Viewer1</Plugin_label>
+			<Plugin_script_name>Viewer1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>1</first>
+					<second>Clamp7</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Viewer1</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
 	<item>
@@ -1607,7 +1516,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Wed Oct 13 14:13:23 2021</Value>
+			<Value>Wed Oct 20 11:42:51 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -1718,7 +1627,7 @@
 </Project>
 <ProjectGui class_id="14" tracking_level="0" version="12">
 	<NodesGui class_id="15" tracking_level="0" version="0">
-		<count>12</count>
+		<count>11</count>
 		<item_version>6</item_version>
 		<item class_id="16" tracking_level="0" version="6">
 			<Name>Topping_0_2</Name>
@@ -1763,37 +1672,9 @@
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Merge_Toppings</Name>
-			<X_position>1.41997556400753365e+03</X_position>
-			<Y_position>6.79551169254239903e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>4.30000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Dot9</Name>
 			<X_position>1.35005182669515034e+03</X_position>
 			<Y_position>7.04111018797917768e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.50000000000000000e+01</Width>
-			<Height>1.50000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Dot10</Name>
-			<X_position>1.49760074490118586e+03</X_position>
-			<Y_position>6.97267907632560036e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -1888,6 +1769,20 @@
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Viewer1</Name>
+			<X_position>1.65404109983637136e+03</X_position>
+			<Y_position>5.15344416795649886e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>3.00000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="17" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
@@ -1898,15 +1793,16 @@
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>683 682</Sizes>
+					<Sizes>696 696</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="20" tracking_level="1" version="5" object_id="_2">
 						<Tabs class_id="21" tracking_level="0" version="0">
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>Viewer1</item>
 						</Tabs>
-						<Index>-1</Index>
+						<Index>0</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
@@ -1938,26 +1834,71 @@
 			</Child>
 			<MainWindow>1</MainWindow>
 			<x>0</x>
-			<y>23</y>
+			<y>1</y>
 			<w>2560</w>
-			<h>1368</h>
+			<h>1395</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="22" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item class_id="23" tracking_level="0" version="0">
+			<first>Viewer1</first>
+			<second class_id="24" tracking_level="0" version="14">
+				<zoomLeft>-1.11518748603351969e+03</zoomLeft>
+				<zoomBottom>-2.04800000000000182e+01</zoomBottom>
+				<zoomFactor>5.04244290865384581e-01</zoomFactor>
+				<UserRoIEnabled>0</UserRoIEnabled>
+				<UserRoI class_id="25" tracking_level="0" version="0">
+					<Left>7.68000000000000000e+02</Left>
+					<Bottom>7.68000000000000000e+02</Bottom>
+					<Right>2.30400000000000000e+03</Right>
+					<Top>2.30400000000000000e+03</Top>
+				</UserRoI>
+				<ClippedToProject>1</ClippedToProject>
+				<AutoContrast>0</AutoContrast>
+				<Gain>1.00000000000000000e+00</Gain>
+				<Gain>1.00000000000000000e+00</Gain>
+				<ColorSpace>sRGB</ColorSpace>
+				<Layer>Color.RGBA</Layer>
+				<AlphaLayer>Color.A</AlphaLayer>
+				<Channels>RGB</Channels>
+				<RenderScaleActivated>0</RenderScaleActivated>
+				<MipMapLevel>0</MipMapLevel>
+				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
+				<CompositingOP>0</CompositingOP>
+				<LeftBound>1</LeftBound>
+				<RightBound>10000</RightBound>
+				<LeftToolbarVisible>1</LeftToolbarVisible>
+				<RightToolbarVisible>1</RightToolbarVisible>
+				<TopToolbarVisible>1</TopToolbarVisible>
+				<PlayerVisible>1</PlayerVisible>
+				<TimelineVisible>1</TimelineVisible>
+				<InfobarVisible>1</InfobarVisible>
+				<isInputAPaused>0</isInputAPaused>
+				<isInputBPaused>0</isInputBPaused>
+				<CheckerboardEnabled>0</CheckerboardEnabled>
+				<Fps>1.00000000000000000e+00</Fps>
+				<FpsLocked>1</FpsLocked>
+				<aInput>0</aInput>
+				<bInput>0</bInput>
+				<fullFrame>0</fullFrame>
+			</second>
+		</item>
 	</ViewersData>
 	<Histograms>
 		<count>0</count>
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>4</count>
+		<count>6</count>
 		<item_version>0</item_version>
+		<item>input_default</item>
 		<item>w1</item>
+		<item>Switch_default</item>
+		<item>TRS_default</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Reformat1</item>
-		<item>TRS_default</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
