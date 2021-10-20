@@ -90,5 +90,5 @@ deploy-all:
     variables:
       - $CI_COMMIT_TAG =~ /all/i
   script:
-    helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG"-pizza-oven --set chainlink.mainnet.enabled=false --set chainlink.image.rinkbyTag="$CI_COMMIT_TAG"-chainlink-rinkby --set image.repository=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
+    helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG"-pizza-oven --set chainlink.mainnet.enabled=false --set chainlink.image.rinkbyTag="$CI_COMMIT_TAG"-chainlink-rinkby --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
 
