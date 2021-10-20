@@ -347,8 +347,6 @@ def parse_id(text) -> str:
 def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe:
     """parse all the options"""
     base_categories = ["box", "paper", "crust", "sauce", "cheese"]
-    layer_categories = ["topping"]
-    lastchance_categories = ["lastchance"]
     base_dict = {}
     layers_dict = {}
     lastchance_dict = {}
@@ -365,12 +363,15 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
                 category = ingredient.ingredient.category
 
                 # Basic seperation of ingredients into base and layered lists
-                if category in base_categories:
-                    base_dict.update({unique_id: ingredient})
-                if category in layer_categories:
+                if ingredient.ingredient.classification == Classification.topping:
                     layers_dict.update({unique_id: ingredient})
-                if category in lastchance_categories:
+
+                elif ingredient.ingredient.classification == Classification.lastchance:
                     lastchance_dict.update({unique_id: ingredient})
+
+                elif category in base_categories:
+                    base_dict.update({unique_id: ingredient})
+
             else:
                 print(
                     "Recipe %s contains non-existant ingredient with id: %s"
