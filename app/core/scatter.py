@@ -191,25 +191,29 @@ class TreeRing(Scatter):
 
         instances: List[MadeIngredientPrep] = []
 
+        inner_circle = 2800
+
         min_radius = 250.0
         max_radius = (
-            3072 / 2
+            inner_circle / 2
         )  # might be a better way to calculat this, take into account the particle size
         radius = min_radius + (
             get_random_deterministic_float(self.random_seed, self.nonce)
             * (max_radius - min_radius)
         )
 
-        for ingredient in topping_list:
+        for i in range(0, len(topping_list)):
+            ingredient = topping_list[i]
             rotation = select_value(
                 self.random_seed, self.nonce, ingredient.scope.rotation
             )
             scale = select_value(
                 self.random_seed, self.nonce, ingredient.scope.particle_scale
             )
-            index = topping_list.index(ingredient)
-            translation = self.calculate_tree_position(radius, len(topping_list), index)
+
+            translation = self.calculate_tree_position(radius, len(topping_list), i)
             translation = self.translate_to_canvas(translation)
+
             instances.append(
                 MadeIngredientPrep(
                     translation=translation,
