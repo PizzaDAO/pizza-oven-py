@@ -5,6 +5,9 @@ from app.models.recipe import (
     RecipeInstructions,
     ScatterType,
     ScopedIngredient,
+    Classification,
+    classification_as_string,
+    scatter_to_string,
 )
 from app.models.prep import (
     KitchenOrder,
@@ -196,8 +199,8 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         else:
             selected_variants = variant_list
 
-        # Then pick a scatter type
-        scatter_type = ScatterType.random
+        # TODO: Then pick a scatter type
+        scatter_type = get_scatter_type(seed, nonce, num_of_instances)
 
         # populate the scatter type with the selected_variants
         if scatter_type == ScatterType.random:
@@ -213,6 +216,30 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         instances=instances,
         scatter_type=scatter_type,
     )
+
+
+def get_scatter_type(seed, nonce, num_of_instances: int) -> ScatterType:
+    scatter_type = ScatterType.random
+
+    scatter_roll = select_value(seed, nonce, (0, 100))
+
+    if scatter_roll > 80:
+        # 20% treeRing
+        scatter_type = ScatterType.treering
+    if scatter_roll < 80 and scatter_roll > 40:
+        # 40% Grid
+        scatter_type = ScatterType.grid
+    if scatter_roll < 40:
+        # 40% Random
+        scatter_type = ScatterType.random
+
+    if num_of_instances > 1 and num_of_instances < 7:
+        scatter_type = ScatterType.random
+
+    if num_of_instances == 1:
+        scatter_type = ScatterType.hero
+
+    return scatter_type
 
 
 def select_ingredient_count(
