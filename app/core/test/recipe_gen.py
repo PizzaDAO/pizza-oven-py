@@ -64,9 +64,3 @@ if __name__ == "__main__":
         kitchen_order_file_path = os.path.join(output_dir, f"{str(i).zfill(4)}.json")
         with open(kitchen_order_file_path, "w") as kitchen_order_file:
             kitchen_order_file.write(kitchen_order.json())
-
-    # with open(args.kitchen_order_path) as json_file:
-    #     kitchen_order = KitchenOrder(**json.load(json_file))
-    #     Renderer(
-    #         args.frame, "abc-1234", args.natron_path, args.project_path
-    #     ).render_pizza(kitchen_order)
