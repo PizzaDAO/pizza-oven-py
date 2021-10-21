@@ -87,6 +87,7 @@ class ScatterType(IntFlag):
     julia = 128
     grid = 512
     treering = 1024
+    hero = 2048
 
 
 def scatter_to_string(scatter_type: Optional[ScatterType]) -> str:
@@ -97,6 +98,8 @@ def scatter_to_string(scatter_type: Optional[ScatterType]) -> str:
         c = "grid"
     if scatter_type == ScatterType.treering:
         c = "treering"
+    if scatter_type == ScatterType.hero:
+        c = "hero"
     return c
 
 

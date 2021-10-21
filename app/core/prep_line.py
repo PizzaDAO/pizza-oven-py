@@ -5,6 +5,8 @@ from app.models.recipe import (
     RecipeInstructions,
     ScatterType,
     ScopedIngredient,
+    classification_as_string,
+    scatter_to_string,
 )
 from app.models.prep import (
     KitchenOrder,
@@ -21,7 +23,7 @@ from app.core.random_num import (
     select_value,
 )
 import json
-from app.core.scatter import Grid, RandomScatter, TreeRing
+from app.core.scatter import Grid, Hero, RandomScatter, TreeRing
 from app.core.utils import clamp, to_hex
 from app.core.ingredients_db import get_variants_for_ingredient
 from app.core.rarity import select_from_variants, ingredient_with_rarity
@@ -186,26 +188,28 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     # If we have a topping here - scatter it
     #
     # Unless better solution from comment above
-    if "topping" in scope.ingredient.category:
+
+    if scope.ingredient.classification == Classification.topping:
         # now create a list of instances made of all the variants for a given ingredient
         id = scope.ingredient.ingredient_id
         variant_list = get_variants_for_ingredient(id)
 
-        if len(variant_list) > 1:
+        num_of_instances = len(variant_list)
+        if num_of_instances > 1:
             selected_variants = select_from_variants(seed, nonce, variant_list, scope)
         else:
             selected_variants = variant_list
 
-        # Then pick a scatter type
-        scatter_type = ScatterType.random
-
+        # TODO: Then pick a scatter type
+        scatter_type = get_scatter_type(seed, nonce, num_of_instances)
+        print(scatter_to_string(scatter_type))
         # populate the scatter type with the selected_variants
         if scatter_type == ScatterType.random:
             instances = RandomScatter(seed, nonce).evaluate(selected_variants)
-
-        # instances = TreeRing(seed, nonce).evaluate(scope.scope)
-        # instances = Grid(seed, nonce).evaluate(scope)
-        # instances = RandomScatter(seed, nonce).evaluate(scope)
+        if scatter_type == ScatterType.grid:
+            instances = Grid(seed, nonce).evaluate(selected_variants)
+        if scatter_type == ScatterType.hero:
+            instances = Hero(seed, nonce).evaluate(selected_variants)
 
     return MadeIngredient(
         ingredient=scope.ingredient,
@@ -213,6 +217,31 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         instances=instances,
         scatter_type=scatter_type,
     )
+
+
+def get_scatter_type(seed, nonce, num_of_instances: int) -> ScatterType:
+    scatter_type = ScatterType.random
+
+    scatter_roll = select_value(seed, nonce, (0, 100))
+
+    if scatter_roll > 80:
+        # 20% treeRing
+        scatter_type = ScatterType.treering
+    if scatter_roll < 80 and scatter_roll > 40:
+        # 40% Grid
+        scatter_type = ScatterType.grid
+    if scatter_roll < 40:
+        # 40% Random
+        scatter_type = ScatterType.random
+
+    if num_of_instances > 1 and num_of_instances < 7:
+        scatter_type = ScatterType.random
+
+    if num_of_instances == 1:
+        scatter_type = ScatterType.hero
+
+    # shouldn't get here
+    return scatter_type
 
 
 def select_ingredient_count(
