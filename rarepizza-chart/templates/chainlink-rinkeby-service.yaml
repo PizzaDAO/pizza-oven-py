@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app.kubernetes.io/component: chainlink-rinkeby-service
+  name: chainlink-rinkeby
+spec:
+  ports:
+    - name: rinkeby
+      port: {{ .Values.chainlink.envPort }}
+      targetPort: rinkeby
+  selector:
+    app.kubernetes.io/component: chainlink-rinkeby
+status:
+  loadBalancer: {}

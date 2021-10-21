@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chainlink-rinkby
+  name: chainlink-rinkeby
   labels:
     {{- include "rarepizza.labels" . | nindent 4 }}
 spec:
@@ -16,7 +16,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        app.kubernetes.io/component: chainlink-rinkby
+        app.kubernetes.io/component: chainlink-rinkeby
         {{- include "rarepizza.selectorLabels" . | nindent 8 }}
     spec:
       serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
@@ -24,70 +24,28 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       restartPolicy: Always
       containers:
-        - name: chainlink-rinkby
+        - name: chainlink-rinkeby
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.rinkbyTag | default .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.rinkebyTag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             - /bin/sh
             - -c
             - chainlink node start -d -p /run/secrets/password -a /run/secrets/api
+          envFrom:
+            - configMapRef:
+                name: chainlink-rinkeby-config
           env:
             - name: PORT
               value: {{ .Values.chainlink.port }}
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
-                  name: chainlink-rinkby-secret
+                  name: chainlink-rinkeby-secret
                   key: DB_CONNECTION
-            - name: ALLOW_ORIGINS
-              valueFrom:
-                configMapKeyRef:
-                  key: ALLOW_ORIGINS
-                  name: chainlink-rinkby-config
-            - name: BRIDGE_RESPONSE_URL
-              valueFrom:
-                configMapKeyRef:
-                  key: BRIDGE_RESPONSE_URL
-                  name: chainlink-rinkby-config
-            - name: CHAINLINK_TLS_PORT
-              valueFrom:
-                configMapKeyRef:
-                  key: CHAINLINK_TLS_PORT
-                  name: chainlink-rinkby-config
-            - name: ETH_CHAIN_ID
-              valueFrom:
-                configMapKeyRef:
-                  key: ETH_CHAIN_ID
-                  name: chainlink-rinkby-config
-            - name: GAS_UPDATER_ENABLED
-              valueFrom:
-                configMapKeyRef:
-                  key: GAS_UPDATER_ENABLED
-                  name: chainlink-rinkby-config
-            - name: LOG_LEVEL
-              valueFrom:
-                configMapKeyRef:
-                  key: LOG_LEVEL
-                  name: chainlink-rinkby-config
-            - name: MIN_OUTGOING_CONFIRMATIONS
-              valueFrom:
-                configMapKeyRef:
-                  key: MIN_OUTGOING_CONFIRMATIONS
-                  name: chainlink-rinkby-config
-            - name: ROOT
-              valueFrom:
-                configMapKeyRef:
-                  key: ROOT
-                  name: chainlink-rinkby-config
-            - name: SECURE_COOKIES
-              valueFrom:
-                configMapKeyRef:
-                  key: SECURE_COOKIES
-                  name: chainlink-rinkby-config
           ports:
-            - name: rinkby
+            - name: rinkeby
               containerPort: {{ .Values.chainlink.envPort }}
           volumeMounts:
             - mountPath: /run/secrets/password
@@ -97,7 +55,7 @@ spec:
               subPath: api
               name: api
             - mountPath: /chainlink
-              name: chainlink-pvc
+              name: chainlink-rinkeby-pvc
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
@@ -106,16 +64,16 @@ spec:
             items:
               - key: password
                 path: password
-            secretName: chainlink-rinkby-secret
+            secretName: chainlink-rinkeby-secret
         - name: api
           secret:
             items:
               - key: api
                 path: api
-            secretName: chainlink-rinkby-secret
-        - name: chainlink-pvc
+            secretName: chainlink-rinkeby-secret
+        - name: chainlink-rinkeby-pvc
           persistentVolumeClaim:
-            claimName: chainlink-pvc
+            claimName: chainlink-rinkeby-pvc
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

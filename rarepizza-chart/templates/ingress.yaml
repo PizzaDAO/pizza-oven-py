@@ -17,13 +17,13 @@ spec:
   - host: "rarepizza.app.chainstarters.io"
     http:
       paths:
-      - path: /chainlink-rinkby
+      - path: /chainlink-rinkeby
         pathType: Prefix
         backend:
           service: 
-            name: chainlink-rinkby
+            name: chainlink-rinkeby
             port: 
-              name: rinkby
+              name: rinkeby
       {{ if .Values.chainlink.mainnet.enabled }}
       - path: /chainlink-mainnet
         pathType: Prefix

@@ -9,8 +9,9 @@ data:
   MIN_OUTGOING_CONFIRMATIONS: "2"
   ROOT: /chainlink
   SECURE_COOKIES: "false"
+  ETH_URL: "wss://rinkeby.infura.io/ws/v3/b39b118b38094c928c737b53cce5dec1"
 kind: ConfigMap
 metadata:
   labels:
     app.kubernetes.io/component: chainlink
-  name: chainlink-rinkby-config
+  name: chainlink-rinkeby-config
