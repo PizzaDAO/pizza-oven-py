@@ -21,6 +21,7 @@ services:
       - "./natron:/app/natron"
       - "./ingredients-db:/app/ingredients-db"
       - "./output:/app/output"
+      - "./secrets:/app/secrets"
     ports:
       - 8000:8000
     networks:
@@ -28,6 +29,7 @@ services:
     environment:
       # API
       API_MODE: $API_MODE
+      STORAGE_MODE: $STORAGE_MODE
       PROJECT_NAME: "Rare Pizzas Kitchen"
       # Ethereum
       ETHEREUM_MODE: $ETHEREUM_MODE
@@ -45,6 +47,10 @@ services:
       IPFS_MODE: $IPFS_MODE
       PINATA_API_KEY: $PINATA_API_KEY
       PINATA_API_SECRET: $PINATA_API_SECRET
+      # GOOGLE
+      GOOGLE_APPLICATION_CREDENTIALS: $GOOGLE_APPLICATION_CREDENTIALS
+      GOOGLE_SHEETS_TOKEN_PATH: $GOOGLE_SHEETS_TOKEN_PATH
+      GOOGLE_SHEETS_CREDENTIALS_PATH: $GOOGLE_SHEETS_CREDENTIALS_PATH
       # MISC
       PORT: 8000
 
