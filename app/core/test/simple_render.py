@@ -107,6 +107,26 @@ class SimpleRenderer:
         y = (base.height - toppings.height) / 2  # -128
         base.paste(toppings, (int(x), int(y)), toppings)
 
+        # LASTCHANCES
+        for (_, ingredient) in order.lastchances.items():
+            filename = ingredient.ingredient.image_uris["filename"]
+            file = os.path.join(images_db, filename)
+            print("pasting: " + filename)
+            try:
+                image = Image.open(file)
+
+                prep = ingredient.instances[0]
+                w = int(image.width * prep.scale)
+                h = int(image.height * prep.scale)
+                newsize = (w, h)
+                image = image.resize(newsize, Image.BICUBIC)
+                x = int((base.width - image.width) / 2)
+                y = int((base.height - image.height) / 2)
+
+                base.paste(image, (x, y), image)
+            except Exception as e:
+                print("skipping image... can't find " + filename)
+
         self.draw_watermark(base, order)
 
         print("WE done")
