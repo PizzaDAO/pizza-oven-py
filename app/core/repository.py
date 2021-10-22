@@ -1,10 +1,11 @@
 import json
 import sys
 from typing import Optional
+
 from app.models.order import OrderPizzaResponse
 from app.models.render_task import RenderTask
 
-from app.models.chainlink_token import ChainlinkToken
+from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.recipe import Recipe
 from app.models.prep import KitchenOrder
 from app.models.pizza import HotPizza, RarePizzaMetadata
@@ -16,6 +17,8 @@ from app.core.storage import *
 __all__ = [
     "get_render_task",
     "set_render_task",
+    "set_gsheets_token",
+    "get_gsheets_token",
     "get_chainlink_token",
     "set_chainlink_token",
     "get_order_response",
@@ -55,6 +58,27 @@ def set_render_task(task: RenderTask) -> str:
     except Exception as error:
         print(sys.exc_info())
         raise error
+
+
+def set_gsheets_token(auth_token: GSheetsToken) -> str:
+    try:
+        with get_storage(DataCollection.gsheets_tokens) as storage:
+            return storage.set({"name": "gsheets", "auth": auth_token.dict()}, "sheets")
+    except Exception as error:
+        print(sys.exc_info())
+        raise error
+
+
+def get_gsheets_token() -> Optional[GSheetsToken]:
+    try:
+        with get_storage(DataCollection.gsheets_tokens) as storage:
+            result = storage.get({"name": "gsheets"})
+            return GSheetsToken(**result["auth"])
+    except Exception as error:
+        print(sys.exc_info())
+        print(error)
+        # if we get an error, try to return the default
+        return None
 
 
 def get_chainlink_token(inbound_token: str) -> Optional[ChainlinkToken]:
@@ -192,7 +216,7 @@ def get_metadata_from_ipfs(ipfs_hash: str) -> RarePizzaMetadata:
         return RarePizzaMetadata(**json.load(session.get_json(ipfs_hash)))
 
 
-def get_metadata_from_storage(job_id: str) -> RarePizzaMetadata:
+def get_metadata_from_storage(job_id: str) -> Optional[RarePizzaMetadata]:
     try:
         with get_storage(DataCollection.metadata) as storage:
 

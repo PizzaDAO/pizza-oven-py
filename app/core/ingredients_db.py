@@ -11,6 +11,9 @@ from app.core.config import Settings
 
 from app.models.recipe import *
 from app.models.recipe import Rarity
+from app.models.auth_tokens import GSheetsToken
+
+from app.core.repository import get_gsheets_token, set_gsheets_token
 
 settings = Settings()
 
@@ -69,21 +72,43 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
 
     scopes = [settings.SCOPE]
 
-    if os.path.exists(settings.GOOGLE_SHEETS_TOKEN_PATH):
-        print("Found AUTH token...")
+    # try to fetch the auth token from the data store before
+    # trying to get it from the file system
+    # this code is a bit hacky and is done to maintain compatibility
+    creds = None
+    internal_gsheets_creds = get_gsheets_token()
+    if internal_gsheets_creds is not None:
+        print("found cached Gsheets auth credentials in the datastore")
+        creds = Credentials(
+            token=internal_gsheets_creds.token,
+            refresh_token=internal_gsheets_creds.refresh_token,
+            token_uri=internal_gsheets_creds.token_uri,
+            client_id=internal_gsheets_creds.client_id,
+            client_secret=internal_gsheets_creds.client_secret,
+            scopes=internal_gsheets_creds.scopes,
+            expiry=internal_gsheets_creds.expiry.replace(tzinfo=None),
+        )
+
+    if creds is None and os.path.exists(settings.GOOGLE_SHEETS_TOKEN_PATH):
+        print("Gsheet Auth not found in server instance, falling back to file system")
         creds = Credentials.from_authorized_user_file(
             settings.GOOGLE_SHEETS_TOKEN_PATH, scopes
         )
-    # If there are no (valid) credentials available, let the user log in. BUT this will fail in Docker ENV
+    # If there are no (valid) credentials available, let the user log in.
+    # BUT this will fail in Docker ENV
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
+            print("refreshing gsheets auth token using the refresh token")
             creds.refresh(Request())
         else:
+            print("trying to refresh auth token with installed app flow")
             flow = InstalledAppFlow.from_client_secrets_file(
                 settings.GOOGLE_SHEETS_CREDENTIALS_PATH, scopes
             )
             creds = flow.run_local_server(port=0)
+
         # Save the credentials for the next run
+        set_gsheets_token(creds)
         with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
             token.write(creds.to_json())
 

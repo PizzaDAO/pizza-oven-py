@@ -4,10 +4,12 @@ import requests
 import sys
 
 from fastapi import APIRouter, Body, BackgroundTasks, Request
+from google.oauth2.credentials import Credentials
+
 from app.api.v1.dining_room.order import run_render_task
 
 from app.core.repository import *
-from app.models.chainlink_token import ChainlinkToken
+from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.render_task import RenderTask
 from app.models.order import OrderPizzaResponse
 
@@ -17,6 +19,18 @@ from app.core.config import Settings
 
 router = APIRouter()
 settings = Settings()
+
+
+@router.post("/gsheets_token", tags=[ADMIN])
+async def add_gsheets_token(
+    data: GSheetsToken = Body(...),
+) -> Any:
+    return set_gsheets_token(data)
+
+
+@router.get("/gsheets_token", tags=[ADMIN])
+async def fetch_gsheets_token() -> Any:
+    return get_gsheets_token()
 
 
 @router.post("/add_chainlink_token", tags=[ADMIN])

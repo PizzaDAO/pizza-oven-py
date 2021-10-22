@@ -32,6 +32,7 @@ firebase_app = firebase_admin.initialize_app(firebase_credentials)
 
 class DataCollection:
     render_task = "render_task"
+    gsheets_tokens = "gsheets_tokens"
     chainlink_tokens = "chainlink_tokens"
     recipes = "recipes"
     ingredients = "ingredients"
