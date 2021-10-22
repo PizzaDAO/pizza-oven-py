@@ -208,7 +208,6 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         else:
             selected_variants = variant_list
 
-        # TODO: Then pick a scatter type
         scatter_type = get_scatter_type(seed, nonce, num_of_instances)
 
         # populate the scatter type with the selected_variants

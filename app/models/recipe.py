@@ -11,6 +11,7 @@ __all__ = [
     "Ingredient",
     "ScopedIngredient",
     "Recipe",
+    "Rarity",
     "ScatterType",
     "classification_as_string",
     "classification_from_string",
@@ -24,7 +25,7 @@ MIN = float
 MAX = float
 
 
-class Classification(Enum):
+class Classification(int, Enum):
     """all of the different types"""
 
     box = 1
@@ -34,6 +35,7 @@ class Classification(Enum):
     cheese = 5
     topping = 6
     extras = 7
+    lastchance = 8
 
 
 def classification_as_string(classification: Classification) -> str:
@@ -52,6 +54,8 @@ def classification_as_string(classification: Classification) -> str:
         c = "topping"
     if classification == Classification.extras:
         c = "extras"
+    if classification == Classification.lastchance:
+        c = "lastchance"
     return c
 
 
@@ -70,6 +74,9 @@ def classification_from_string(category: str) -> Classification:
         classification = Classification.sauce
     if category == "cheese":
         classification = Classification.cheese
+
+    if "lastchance" in category:
+        classification = Classification.lastchance
     return classification
 
 
@@ -121,7 +128,7 @@ class RecipeInstructions(Base):
     sauce_count: Tuple[MIN, MAX]
     cheese_count: Tuple[MIN, MAX]
     topping_count: Tuple[MIN, MAX]
-    extras_count: Tuple[MIN, MAX]
+    lastchance_count: Tuple[MIN, MAX]
     baking_temp_in_celsius: Tuple[MIN, MAX]
     baking_time_in_minutes: Tuple[MIN, MAX]
 
@@ -225,4 +232,6 @@ class Recipe(Base):
     """collection of base ingredients that coule be used as part of a kitchen order"""
     layers: Dict[INGREDIENT_KEY, ScopedIngredient]
     """collection of layers ingredients that coule be used"""
+    lastchances: Dict[INGREDIENT_KEY, ScopedIngredient]
+    """collection of last chance toppers"""
     instructions: RecipeInstructions
