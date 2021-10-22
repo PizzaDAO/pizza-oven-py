@@ -240,7 +240,7 @@ def parse_recipes(
 
 
 def parse_ingredient(row) -> ScopedIngredient:
-    """Most of these are placeholders for the moment - Only 3 values in Ingredient are added from the spreadsheets"""
+    """parse ScopedIngredient from a row in the database"""
 
     category = row["category"]
     classification = classification_from_string(category)
@@ -305,7 +305,7 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
             inch_variance = float(row["inch_variance"])
 
             base_categories = ["box", "paper", "crust", "sauce", "cheese"]
-            special_categories = ["saver", "seasoning", "squirt", "extra"]
+            special_categories = ["lastchance"]
             if (
                 row["category"] in base_categories
                 or row["category"] in special_categories
@@ -313,6 +313,8 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
                 scope.particle_scale = get_scale_values(
                     inches, inch_variance, BASE_PIXEL_SIZE
                 )
+                # force no scatter type here fir base and lastchance
+                scope.scatter_types = [ScatterType.none]
             else:
                 scope.particle_scale = get_scale_values(
                     inches, inch_variance, TOPPING_PIXEL_SIZE
@@ -351,9 +353,9 @@ def parse_column(
 ) -> Recipe:
     """parse all the options"""
     base_categories = ["box", "paper", "crust", "sauce", "cheese"]
-    # layer_categories = ["saver", "seasoning", "squirt", "topping"]
     base_dict = {}
     layers_dict = {}
+    lastchance_dict = {}
     for i in range(1, len(raw_column)):
         line = raw_column[i]
 
@@ -367,10 +369,15 @@ def parse_column(
                 category = ingredient.ingredient.category
 
                 # Basic seperation of ingredients into base and layered lists
-                if category in base_categories:
-                    base_dict.update({unique_id: ingredient})
-                else:
+                if ingredient.ingredient.classification == Classification.topping:
                     layers_dict.update({unique_id: ingredient})
+
+                elif ingredient.ingredient.classification == Classification.lastchance:
+                    lastchance_dict.update({unique_id: ingredient})
+
+                elif category in base_categories:
+                    base_dict.update({unique_id: ingredient})
+
             else:
                 print(
                     "Recipe %s contains non-existant ingredient with id: %s"
@@ -385,6 +392,7 @@ def parse_column(
         rarity_level=3.0,
         base_ingredients=base_dict,
         layers=layers_dict,
+        lastchances=lastchance_dict,
         # Where do recipe instructions come from??
         # Can this be optional for the Recipe, added later?
         instructions=RecipeInstructions(
@@ -392,7 +400,7 @@ def parse_column(
             sauce_count=[1, 1],
             cheese_count=[1, 1],
             topping_count=[1, 8],
-            extras_count=[0, 2],
+            lastchance_count=[0, 2],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
         ),

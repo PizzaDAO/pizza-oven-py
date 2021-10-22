@@ -22,7 +22,7 @@ class MadeInstructions(Base):
     sauce_count: SCALAR
     cheese_count: SCALAR
     topping_count: SCALAR
-    extras_count: SCALAR
+    lastchance_count: SCALAR
     baking_temp_in_celsius: SCALAR
     baking_time_in_minutes: SCALAR
 
@@ -75,7 +75,7 @@ class KitchenOrder(Base):
     """collection of base ingredients that coule be used"""
     layers: Dict[INGREDIENT_KEY, MadeIngredient]
     """collection of layers ingredients that will be used"""
-    specials: Optional[Dict[INGREDIENT_KEY, MadeIngredient]]
+    lastchances: Dict[INGREDIENT_KEY, MadeIngredient]
     """collection of special ingredients that will be used"""
     instances: List[MadeIngredientPrep]
     """shuffled list of all instances - provides depth in arrangements"""

@@ -1,5 +1,6 @@
 from typing import Dict, Tuple, List, Optional
 from app.models.recipe import (
+    Classification,
     Recipe,
     INGREDIENT_KEY,
     RecipeInstructions,
@@ -83,12 +84,16 @@ def reduce(
     # reduced_layers[key] = select_prep(deterministic_seed, nonce, value)
     sorted_layer_dict = sort_dict(recipe.layers)
     # map the ingredient categories to the MadeInstructions counts
-    layer_count_dict = {
-        "topping": order_instructions.topping_count,
-        "extras": order_instructions.extras_count,
-    }
+    layer_count_dict = {"topping": order_instructions.topping_count}
     reduced_layers = select_ingredients(
         random_seed, nonce, layer_count_dict, sorted_layer_dict
+    )
+
+    # LASTCHANCE INGREDIENTS
+    sorted_lastchances_dict = sort_dict(recipe.lastchances)
+    lastchance_count_dict = {"lastchance": order_instructions.lastchance_count}
+    reduced_lastchances = select_ingredients(
+        random_seed, nonce, lastchance_count_dict, sorted_lastchances_dict
     )
 
     # SHUFFLER - pull out all the instances into  buffer that we can shuffle for depth swap
@@ -106,6 +111,7 @@ def reduce(
         recipe_id=recipe.unique_id,
         base_ingredients=selected_base_ingredients,
         layers=reduced_layers,
+        lastchances=reduced_lastchances,
         instances=[],  # empty array since switched back to single ing layers
         instructions=order_instructions,
     )
@@ -170,17 +176,18 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         scatter_type = ScatterType.none
         scale = scope.scope.particle_scale[0]
         rotation = round(select_value(seed, nonce, scope.scope.rotation))
+        translation = (0.0, 0.0)
+        if scope.ingredient.classification == Classification.lastchance:
+            translation = (3072 / 2, 3072 / 2)
+
         instances = [
             MadeIngredientPrep(
-                translation=(0.0, 0.0),
+                translation=translation,
                 rotation=rotation,
                 scale=scale,
                 image_uri=scope.ingredient.image_uris["filename"],
             )
         ]
-
-    # else:
-    # instances = RandomScatter(seed, nonce).evaluate(scope)
 
     # Temporarily test the scattering - ScatterType not defined in database yet
     # If we have a topping here - scatter it
@@ -196,12 +203,14 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         else:
             selected_variants = variant_list
 
-        # Then pick a scatter type
-        scatter_type = ScatterType.random
+        # TODO: Then pick a scatter type
+        scatter_type = ScatterType.grid
 
         # populate the scatter type with the selected_variants
         if scatter_type == ScatterType.random:
             instances = RandomScatter(seed, nonce).evaluate(selected_variants)
+        if scatter_type == ScatterType.grid:
+            instances = Grid(seed, nonce).evaluate(selected_variants)
 
         # instances = TreeRing(seed, nonce).evaluate(scope.scope)
         # instances = Grid(seed, nonce).evaluate(scope)
@@ -230,7 +239,7 @@ def select_ingredient_count(
         sauce_count=round(select_value(seed, nonce, scope.sauce_count), 0),
         cheese_count=round(select_value(seed, nonce, scope.cheese_count), 0),
         topping_count=round(select_value(seed, nonce, scope.topping_count), 0),
-        extras_count=round(select_value(seed, nonce, scope.extras_count), 0),
+        lastchance_count=round(select_value(seed, nonce, scope.lastchance_count), 0),
         baking_temp_in_celsius=round(
             select_value(seed, nonce, scope.baking_temp_in_celsius), 0
         ),
