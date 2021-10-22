@@ -44,7 +44,7 @@ RUN $NATRON_PATH/natron-python -m pip install numpy
 # do the app things
 COPY ./pyproject.toml /tmp/
 COPY ./poetry.lock /tmp/
-RUN cd /tmp && poetry export -f requirements.txt > requirements.txt
+RUN cd /tmp && poetry export --without-hashes -f requirements.txt > requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
 # Cleaning cache:
@@ -64,6 +64,7 @@ RUN mkdir -p /app/data
 RUN mkdir -p /app/natron
 RUN mkdir -p /app/ingredients-db
 RUN mkdir -p /app/output
+RUN mkdir -p /app/secrets
 
 WORKDIR /app
 ENV PYTHONPATH=/app
@@ -80,6 +81,7 @@ VOLUME [ "/app/fonts" ]
 VOLUME [ "/app/natron" ]
 VOLUME [ "/app/ingredients-db" ]
 VOLUME [ "/app/output" ]
+VOLUME [ "/app/secrets" ]
 CMD /start-reload.sh
 
 # just start the app normally
@@ -89,4 +91,6 @@ COPY ./data /app/data
 COPY ./fonts /app/fonts
 COPY ./natron /app/natron
 COPY ./ingredients-db /app/ingredients-db
+COPY ./output /app/output
+COPY ./secrets /app/secrets
 CMD ["/start.sh"]
