@@ -71,6 +71,7 @@ class SimpleRenderer:
                 prep = ingredient.instances[i]
                 if prep.image_uri:
                     filename = prep.image_uri
+                    # creating a simple image cache - seems to speed this up and it matters when running hundreds of recipes
                     if filename in image_cache.keys():
                         image = image_cache[filename]
                     else:
@@ -82,29 +83,39 @@ class SimpleRenderer:
                             print("skipping image... can't find " + filename)
 
                 print("pasting: " + filename)
+                # Cale image based on 1024 pixel dimension
                 n = int(1024 * prep.scale)
                 newsize = (n, n)
-                image = image.resize(newsize, Image.BICUBIC)
-                x = int(prep.translation[0] - (image.width / 2))
-                y = int(prep.translation[1] - (image.height / 2))
+                scaled = image.resize(newsize, Image.BICUBIC)
+                # place image in canvas and adjust for new width and height - centered
+                x = int(prep.translation[0] - (newsize[0] / 2))
+                y = int(prep.translation[1] - (newsize[0] / 2))
 
-                # weird mirror job - This is actually due to differeent coordinate spaces - 0,0 is top left for PIL
+                # rotate around the center
+                rot = int(prep.rotation)
+                rotated = scaled.rotate(
+                    rot,
+                    Image.NEAREST,
+                    center=(scaled.width / 2, scaled.height / 2),
+                    expand=1,
+                )
+
+                # Transalate due to differeent coordinate spaces - 0,0 is top left for PIL, bottom left for Natron
                 half = int(3072 / 2)
                 if y > half:
                     y = y - ((y - half) * 2) - n
                 else:
                     y = y + ((half - y) * 2) - n
 
-                rot = int(prep.rotation)
-                final = image.rotate(rot, Image.NEAREST, expand=1)
+                toppings.paste(rotated, (x, y), rotated)
 
-                toppings.paste(final, (x, y), final)
-
+        # mimic the global scale bump performed in Natron
         s = int(3072 * 0.75)
         bump = (s, s)
         toppings = toppings.resize(bump, Image.BICUBIC)
         x = (base.width - toppings.width) / 2  # -128
         y = (base.height - toppings.height) / 2  # -128
+
         base.paste(toppings, (int(x), int(y)), toppings)
 
         # LASTCHANCES
@@ -199,7 +210,10 @@ class SimpleRenderer:
             os.path.split(current_directory)[0] + "/../../data/" + WATERMARK_FILE
         )
         watermark_image = Image.open(watermark_path)
+        n = int(watermark_image.width * 0.75)
+        newsize = (n, n)
+        watermark_image = watermark_image.resize(newsize, Image.BICUBIC)
         # bottom right corner for 4k image
-        x = 4096 - watermark_image.width
-        y = 4096 - watermark_image.height
+        x = 3072 - watermark_image.width
+        y = 3072 - watermark_image.height
         base.paste(watermark_image, (x, y), watermark_image)
