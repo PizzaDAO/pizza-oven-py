@@ -360,6 +360,12 @@ class Renderer:
                 + scatter_to_string(scatter_type)
                 + "\n"
             )
+        lastchances_ingredients = ""
+        for ingredient in order.lastchances.values():
+            i = ingredient.ingredient
+            lastchances_ingredients += (
+                i.unique_id + " " + i.name + " - " + i.category + "\n"
+            )
         pizza_data = (
             "Pizza_id: "
             + str(order.token_id)
@@ -378,6 +384,9 @@ class Renderer:
             + "\n"
             + "Layers:\n"
             + layer_ingredients
+            + "\n"
+            + "Lastchances:\n"
+            + lastchances_ingredients
         )
         draw.text((10, 10), pizza_data, fill="white", font=font, align="left")
 
@@ -492,9 +501,9 @@ class Renderer:
         #     rendered_layer_files.append(result)
         #     layer_index += 1
 
-        # SPECIALS Temp - render seasoning and savers for make testing
-        if order.specials is not None:
-            for (_, ingredient) in order.specials.items():
+        # LAST CHANCES - render seasoning and savers for make testing
+        if order.lastchances is not None:
+            for (_, ingredient) in order.lastchances.items():
                 result = self.render_ingredient(layer_index, ingredient)
                 rendered_layer_files.append(result)
                 layer_index += 1
@@ -591,7 +600,7 @@ class Renderer:
             ToppingRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )
-        if ingredient.ingredient.classification == Classification.extras:
+        if ingredient.ingredient.classification == Classification.lastchance:
             ExtraRenderer().render(
                 self.natron_path, self.project_path, data_path, self.frame
             )

@@ -69,20 +69,22 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
 
     scopes = [settings.SCOPE]
 
-    if os.path.exists(settings.TOKEN_PATH):
+    if os.path.exists(settings.GOOGLE_SHEETS_TOKEN_PATH):
         print("Found AUTH token...")
-        creds = Credentials.from_authorized_user_file(settings.TOKEN_PATH, scopes)
+        creds = Credentials.from_authorized_user_file(
+            settings.GOOGLE_SHEETS_TOKEN_PATH, scopes
+        )
     # If there are no (valid) credentials available, let the user log in. BUT this will fail in Docker ENV
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                settings.CREDENTIALS_PATH, scopes
+                settings.GOOGLE_SHEETS_CREDENTIALS_PATH, scopes
             )
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open(settings.TOKEN_PATH, "w") as token:
+        with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
             token.write(creds.to_json())
 
     DIMENSION = "ROWS"  # default is ROWS
@@ -223,20 +225,22 @@ def parse_recipes(
 
     # Now we have a Dict of Columns - pizza type string : raw column data
     pizza_types = list(columns.keys())
+    recipe_id = 0
     for header in pizza_types:
         data = columns[header]
-        recipe: Recipe = parse_column(data, ingredients)
+        recipe: Recipe = parse_column(recipe_id, data, ingredients)
 
         # Add the Box and Paper ingredients to the base_ingredient Dict
         recipe.base_ingredients.update(box_paper_dict)
 
         recipes.update({header: recipe})
+        recipe_id += 1
 
     return recipes
 
 
 def parse_ingredient(row) -> ScopedIngredient:
-    """Most of these are placeholders for the moment - Only 3 values in Ingredient are added from the spreadsheets"""
+    """parse ScopedIngredient from a row in the database"""
 
     category = row["category"]
     classification = classification_from_string(category)
@@ -301,7 +305,7 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
             inch_variance = float(row["inch_variance"])
 
             base_categories = ["box", "paper", "crust", "sauce", "cheese"]
-            special_categories = ["saver", "seasoning", "squirt", "extra"]
+            special_categories = ["lastchance"]
             if (
                 row["category"] in base_categories
                 or row["category"] in special_categories
@@ -309,6 +313,8 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
                 scope.particle_scale = get_scale_values(
                     inches, inch_variance, BASE_PIXEL_SIZE
                 )
+                # force no scatter type here fir base and lastchance
+                scope.scatter_types = [ScatterType.none]
             else:
                 scope.particle_scale = get_scale_values(
                     inches, inch_variance, TOPPING_PIXEL_SIZE
@@ -342,12 +348,14 @@ def parse_id(text) -> str:
     return id_string
 
 
-def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe:
+def parse_column(
+    recipe_id: int, raw_column, ingredients: Dict[Any, ScopedIngredient]
+) -> Recipe:
     """parse all the options"""
     base_categories = ["box", "paper", "crust", "sauce", "cheese"]
-    # layer_categories = ["saver", "seasoning", "squirt", "topping"]
     base_dict = {}
     layers_dict = {}
+    lastchance_dict = {}
     for i in range(1, len(raw_column)):
         line = raw_column[i]
 
@@ -361,10 +369,15 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
                 category = ingredient.ingredient.category
 
                 # Basic seperation of ingredients into base and layered lists
-                if category in base_categories:
-                    base_dict.update({unique_id: ingredient})
-                else:
+                if ingredient.ingredient.classification == Classification.topping:
                     layers_dict.update({unique_id: ingredient})
+
+                elif ingredient.ingredient.classification == Classification.lastchance:
+                    lastchance_dict.update({unique_id: ingredient})
+
+                elif category in base_categories:
+                    base_dict.update({unique_id: ingredient})
+
             else:
                 print(
                     "Recipe %s contains non-existant ingredient with id: %s"
@@ -374,11 +387,12 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
     pie_type = raw_column[0]
 
     recipe = Recipe(
-        unique_id=1,
+        unique_id=recipe_id,
         name=pie_type,
         rarity_level=3.0,
         base_ingredients=base_dict,
         layers=layers_dict,
+        lastchances=lastchance_dict,
         # Where do recipe instructions come from??
         # Can this be optional for the Recipe, added later?
         instructions=RecipeInstructions(
@@ -386,7 +400,7 @@ def parse_column(raw_column, ingredients: Dict[Any, ScopedIngredient]) -> Recipe
             sauce_count=[1, 1],
             cheese_count=[1, 1],
             topping_count=[1, 8],
-            extras_count=[0, 2],
+            lastchance_count=[0, 2],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
         ),
