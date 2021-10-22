@@ -191,7 +191,6 @@ class NatronBase(object):
         self.added_sugar = self.element["ingredient"]["nutrition"]["added_sugar"]
         self.chromium = self.element["ingredient"]["nutrition"]["chromium"]
         self.manganese = self.element["ingredient"]["nutrition"]["manganese"]
-        self.weight = self.element["ingredient"]["nutrition"]["weight"]
 
         return self.element
 
@@ -429,11 +428,11 @@ class NatronBase(object):
                 param.setValue(self.manganese)
             del param
 
-        if self.weight is not None:
-            param = node.getParam("weight")
-            if param is not None:
-                param.setValue(self.weight)
-            del param
+        # if self.weight is not None:
+        #     param = node.getParam("weight")
+        #     if param is not None:
+        #         param.setValue(self.weight)
+        #     del param
 
         if self.height is not None:
             param = node.getParam("height")
