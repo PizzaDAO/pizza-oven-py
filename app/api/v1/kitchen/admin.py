@@ -51,14 +51,38 @@ async def get_existing_render_task(job_id: str) -> Optional[RenderTask]:
 async def set_existing_render_task(
     data: RenderTask = Body(...),
 ) -> Optional[str]:
+    """
+    set or update a specific render task.
+    Note this endpoint is naive and does not consider
+    wether an existing blockchain requests exists
+    which means it can succeed in the render but fail
+    when posting the transaction back to the contract
+    """
     render_task = set_render_task(data)
     return render_task
 
 
 @router.post("/render_task/{job_id}/rerun", tags=[ADMIN])
 async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse]:
+    """rerun a specific render task"""
     render_task = get_render_task(job_id)
     if render_task is None:
         print("re run render failed")
         return None
     return run_render_task(render_task.job_id, render_task)
+
+
+@router.post("/render_task/{job_id}/rerun-async", tags=[ADMIN])
+async def rerun_existing_render_task_async(
+    job_id: str, background_tasks: BackgroundTasks
+) -> Optional[OrderPizzaResponse]:
+    """rerun a specific render task asynchronously"""
+    render_task = get_render_task(job_id)
+    if render_task is None:
+        print("re run render failed")
+        return None
+
+    response = OrderPizzaResponse(jobRunID=render_task.job_id, pending=True)
+    background_tasks.add_task(run_render_task, render_task.job_id, render_task)
+
+    return response
