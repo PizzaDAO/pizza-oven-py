@@ -17,7 +17,7 @@ from app.core.metadata import to_blockchain_metadata
 from app.core.random_num import get_random_remote
 from app.core.repository import *
 from app.core.renderer import Renderer
-from app.core.utils import to_hex
+from app.core.utils import from_hex, to_hex
 from app.models.pizza import HotPizza
 from app.models.prep import KitchenOrder
 from app.models.recipe import Recipe
@@ -122,6 +122,7 @@ def patch_and_complete_job(
             print("no chainlink token found for job")
             return None
 
+        # patch back to the node using the response url
         patch_response = requests.patch(
             render_task.request.responseURL,
             data=order_response.json(),
@@ -181,17 +182,30 @@ def run_render_task(
     # filenames are pizza types in alphabetical order
     recipe = get_pizza_recipe(render_task.request.data.recipe_id)
 
+    random_number = None
+
+    # check if the render task already has a random number
+    # which can happen if the rerun is restarted
+    if render_task.random_number != None:
+        loaded_random = from_hex(render_task.random_number)
+        print(f"rendering with render_task preloaded number: {loaded_random}")
+        random_number = loaded_random
+
     # get a random number and reduce the recipe into a kitchen order
-    random_number = get_random_remote(render_task.job_id)
     if random_number is None:
-        # if we didnt get a verifiable random number
-        # then kill the job and allow it to be restart later
+        random_number = get_random_remote(render_task.job_id)
+
+    # if we didnt get a verifiable random number
+    # then kill the job and allow it to be restart later
+    if random_number is None:
         render_task.set_status(TaskStatus.error)
         set_render_task(render_task)
         return None
 
+    # cache the random number since we know we have one
     render_task.random_number = to_hex(random_number)
     set_render_task(render_task)
+
     # resolve the kitchen order for natron from the input values
     kitchen_order = reduce(recipe, render_task.request.data.token_id, random_number)
 

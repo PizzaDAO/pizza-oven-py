@@ -29,6 +29,7 @@ __all__ = [
     "set_pizza_image",
     "get_metadata_from_ipfs",
     "get_metadata_from_storage",
+    "set_metadata",
 ]
 
 settings = Settings()
@@ -64,16 +65,14 @@ def get_chainlink_token(inbound_token: str) -> Optional[ChainlinkToken]:
     except Exception as error:
         print(sys.exc_info())
         print(error)
-        return None
+        # if we get an error, try to return the default
+        return ChainlinkToken()
 
 
-def set_chainlink_token(name: str, inbound_token: str, outbound_token) -> str:
+def set_chainlink_token(auth_token: ChainlinkToken) -> str:
     try:
-        token = ChainlinkToken(
-            inbound_token=inbound_token, outbound_token=outbound_token
-        )
         with get_storage(DataCollection.chainlink_tokens) as storage:
-            return storage.set(token.dict(), f"chainlink_token-{name}")
+            return storage.set(auth_token.dict(), f"chainlink_token-{auth_token.name}")
     except Exception as error:
         print(sys.exc_info())
         raise error

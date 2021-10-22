@@ -16,5 +16,6 @@ CHAINLINK_RESPONSE_TOKEN = str
 class ChainlinkToken(Base):
     """the chainlink inbound and outbound tokens"""
 
+    name: str = "orderpizzav1"
     inbound_token: CHAINLINK_AUTH_TOKEN = "Bearer nqpw1bzD4isqeYfXCixyAbhpLs/lkim4"
     outbound_token: CHAINLINK_RESPONSE_TOKEN = "SI/8gEsllRRJLD5HDHH1/2ESG1RKmCOy"

@@ -1,3 +1,4 @@
+ADMIN = "Admin Functions"
 BAKE = "Bake Pizza"
 ORDER = "Order Recipe"
 PREP = "Prepare Order"

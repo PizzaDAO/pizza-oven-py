@@ -428,6 +428,7 @@ class NatronBase(object):
                 param.setValue(self.manganese)
             del param
 
+        # TODO: fix when added to the spreadsheet
         # if self.weight is not None:
         #     param = node.getParam("weight")
         #     if param is not None:
