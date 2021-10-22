@@ -56,11 +56,14 @@ if __name__ == "__main__":
         img = SimpleRenderer().render_pizza(kitchen_order)
 
         # Save Image
-        unique_filename = str(i).zfill(4) + ".png"
+        pizza_name = kitchen_order.name
+        unique_filename = str(i).zfill(4) + "-" + pizza_name + ".png"
         img.save(os.path.join(output_dir, unique_filename))
 
         # Save KO JSON
         # save the kitchen order out to the file system
-        kitchen_order_file_path = os.path.join(output_dir, f"{str(i).zfill(4)}.json")
+        kitchen_order_file_path = os.path.join(
+            output_dir, f"{str(i).zfill(4)}_{pizza_name}.json"
+        )
         with open(kitchen_order_file_path, "w") as kitchen_order_file:
             kitchen_order_file.write(kitchen_order.json())
