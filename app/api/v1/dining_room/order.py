@@ -117,7 +117,7 @@ def patch_and_complete_job(
         print("issuing chainlink response.")
 
         # fetch the chainlink token needed to patch back
-        chainlink_token = get_chainlink_token(render_task.request_token)
+        chainlink_token = get_chainlink_token(render_task.request.data.bridge)
         if chainlink_token is None:
             print("no chainlink token found for job")
             return None

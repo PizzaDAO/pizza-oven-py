@@ -47,6 +47,14 @@ async def get_existing_render_task(job_id: str) -> Optional[RenderTask]:
     return render_task
 
 
+@router.post("/render_task", tags=[ADMIN])
+async def set_existing_render_task(
+    data: RenderTask = Body(...),
+) -> Optional[str]:
+    render_task = set_render_task(data)
+    return render_task
+
+
 @router.post("/render_task/{job_id}/rerun", tags=[ADMIN])
 async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse]:
     render_task = get_render_task(job_id)
