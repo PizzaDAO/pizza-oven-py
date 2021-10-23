@@ -1,6 +1,9 @@
-from app.models.base import Base
+from typing import Optional, Sequence
 
-__all__ = ["ChainlinkToken"]
+from app.models.base import Base
+from datetime import datetime
+
+__all__ = ["ChainlinkToken", "GSheetsToken"]
 
 CHAINLINK_AUTH_TOKEN = str
 "this is the outgoing token in the chainlink node"
@@ -11,6 +14,18 @@ CHAINLINK_RESPONSE_TOKEN = str
 # the chainlink node web interface shows these tokens when you create a bridge.
 # you need to put your token in the database at runtime
 # or you need to change the defaults below to your values
+
+
+class GSheetsToken(Base):
+    """the auth token for the google sheets"""
+
+    token: Optional[str] = None
+    refresh_token: str
+    token_uri: str
+    client_id: str
+    client_secret: str
+    scopes: Sequence[str]
+    expiry: datetime
 
 
 class ChainlinkToken(Base):

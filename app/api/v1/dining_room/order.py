@@ -5,7 +5,7 @@ import sys
 
 import base58
 
-from fastapi import APIRouter, Body, BackgroundTasks, Request
+from fastapi import APIRouter, Body, BackgroundTasks, Request, status
 from app.core.repository import get_render_task, set_render_task
 
 from app.models.base import Base
@@ -117,7 +117,7 @@ def patch_and_complete_job(
         print("issuing chainlink response.")
 
         # fetch the chainlink token needed to patch back
-        chainlink_token = get_chainlink_token(render_task.request_token)
+        chainlink_token = get_chainlink_token(render_task.request.data.bridge)
         if chainlink_token is None:
             print("no chainlink token found for job")
             return None
@@ -126,18 +126,29 @@ def patch_and_complete_job(
         patch_response = requests.patch(
             render_task.request.responseURL,
             data=order_response.json(),
-            headers={"authorization": f"Bearer {chainlink_token}"},
+            headers={"authorization": f"Bearer {chainlink_token.outbound_token}"},
         )
         print(patch_response.text)
 
-        # update the job as complete
-        render_task.set_status(TaskStatus.complete)
-        set_render_task(render_task)
+        # check the status code to make sure it was successful
+        # before we mark the job complete
+        if (
+            patch_response.status_code >= status.HTTP_200_OK
+            and patch_response.status_code < status.HTTP_300_MULTIPLE_CHOICES
+        ):
+            print("post back to chainlink complete.")
+            # update the job as complete
+            render_task.set_status(TaskStatus.complete)
+            set_render_task(render_task)
+            print("job complete!")
+        else:
+            print("chainlink postback failed")
     else:
         # chainlink wasnt specified to jsut mark the job complete
-        print("job complete!")
+
         render_task.set_status(TaskStatus.complete)
         set_render_task(render_task)
+        print("job complete!")
 
     return order_response
 

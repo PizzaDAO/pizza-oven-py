@@ -7,6 +7,8 @@ __all__ = ["PizzaOrderData", "PizzaOrder", "OrderPizzaRequest", "OrderPizzaRespo
 class PizzaOrderData(Base):
     """Information coming from the blockchain for a pizza order"""
 
+    bridge: str = "orderpizzav1"
+    """the name of the chainlink bridge, used to resolve the auth tokens"""
     address: str
     """address of blockchain sender"""
     token_id: int  # = 1
