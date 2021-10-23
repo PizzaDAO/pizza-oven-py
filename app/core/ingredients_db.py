@@ -108,7 +108,16 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
             creds = flow.run_local_server(port=0)
 
         # Save the credentials for the next run
-        set_gsheets_token(creds)
+        internal_creds = GSheetsToken(
+            token=creds.token,
+            refresh_token=creds.refresh_token,
+            token_uri=creds.token_uri,
+            client_id=creds.client_id,
+            client_secret=creds.client_secret,
+            scopes=creds.scopes,
+            expiry=creds.expiry.replace(tzinfo=None),
+        )
+        set_gsheets_token(internal_creds)
         with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
             token.write(creds.to_json())
 
