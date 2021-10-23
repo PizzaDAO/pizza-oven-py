@@ -74,10 +74,8 @@ spec:
         - name: chainlink-rinkeby-pvc
           persistentVolumeClaim:
             claimName: chainlink-rinkeby-pvc
-      {{- with .Values.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+      nodeSelector: 
+        role: chainlink
       {{- with .Values.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}

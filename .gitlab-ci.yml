@@ -26,6 +26,18 @@ build-rinkeby:
     - docker tag rinkeby $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
     - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+
+deploy-rinkeby:
+  stage: deploy
+  image: dtzar/helm-kubectl:3.1.2
+  needs: ["build-rinkeby"]
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /rinkeby/i
+  script:
+    helm upgrade -i --reuse-values --set chainlink.image.rinkebyTag="$CI_COMMIT_TAG" --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
     
 build-mainnet:
   stage: build
@@ -44,6 +56,18 @@ build-mainnet:
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
     - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
 
+deploy-mainnet:
+  stage: deploy
+  image: dtzar/helm-kubectl:3.1.2
+  needs: ["build-mainnet"]
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /mainnet/i
+  script:
+    helm upgrade -i --reuse-values --set chainlink.image.mainnetTag="$CI_COMMIT_TAG" --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
+
 build-oven:
   stage: build
   before_script:
@@ -60,6 +84,20 @@ build-oven:
     - docker tag oven $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME
     - docker push $ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME:$CI_COMMIT_TAG
+
+deploy-oven:
+  stage: deploy
+  image: dtzar/helm-kubectl:3.1.2
+  needs: ["build-oven"]
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /oven/i
+  script:
+    helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG" --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
+
+
 
 build-all:
   stage: build
@@ -93,5 +131,5 @@ deploy-all:
     variables:
       - $CI_COMMIT_TAG =~ /all/i
   script:
-    helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG"-oven --set chainlink.mainnet.enabled=false --set chainlink.image.rinkebyTag="$CI_COMMIT_TAG"-rinkeby --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
+    helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG"-oven --set chainlink.image.rinkebyTag="$CI_COMMIT_TAG"-rinkeby --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
 

@@ -41,10 +41,8 @@ spec:
               containerPort: {{ .Values.pizzaOven.port }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      {{- with .Values.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+      nodeSelector: 
+        role: worker
       {{- with .Values.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}
