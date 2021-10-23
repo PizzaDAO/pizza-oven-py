@@ -56,9 +56,14 @@ class Delivery(NatronBase):
                 param.setValue(10000, 0)
                 del param
 
+            param = lastNode.getParam("filePremult")
+            if param is not None:
+                param.set("unpremult")
+                del param
+
             param = lastNode.getParam("onMissingFrame")
             if param is not None:
-                param.set(4)
+                param.set("black")
                 del param
 
             param = lastNode.getParam("timeDomainUserEdited")
