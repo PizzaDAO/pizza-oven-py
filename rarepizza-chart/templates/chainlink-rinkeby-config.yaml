@@ -10,6 +10,7 @@ data:
   ROOT: /chainlink
   SECURE_COOKIES: "false"
   ETH_URL: "wss://rinkeby.infura.io/ws/v3/b39b118b38094c928c737b53cce5dec1"
+  MINIMUM_CONTRACT_PAYMENT_LINK_JUELS: "100000000000000000"
 kind: ConfigMap
 metadata:
   labels:

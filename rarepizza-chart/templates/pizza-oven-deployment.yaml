@@ -36,6 +36,9 @@ spec:
               value: "8000"
             - name: PROJECT_NAME
               value: Rare Pizzas Kitchen
+          envFrom:
+            - configMapRef:
+                name: pizza-oven-config
           ports:
             - name: pizza-oven
               containerPort: {{ .Values.pizzaOven.port }}
