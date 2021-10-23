@@ -1,7 +1,7 @@
 from typing import Dict, Optional, List, Tuple
 from enum import Enum
 
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from app.models.base import Base
 from app.models.order import OrderPizzaRequest
@@ -25,16 +25,16 @@ class RenderTask(Base):
     """the authorization request token"""
     request: OrderPizzaRequest
     """the original request passed in"""
+    status: TaskStatus = TaskStatus.new
+    timestamp: datetime = datetime.now(timezone.utc)
     random_number: Optional[str]
     """the random number in hex returned from chainlink"""
     metadata_hash: Optional[str]
     """the ipfs hash of the metadata when the rendering is complete"""
-    status: TaskStatus = TaskStatus.new
-    timestamp: datetime = datetime.utcnow()
 
     def set_status(self, new_status: TaskStatus) -> None:
         self.status = new_status
-        self.timestamp = datetime.utcnow()
+        self.timestamp = datetime.now(timezone.utc)
 
     def should_restart(self, timeout_in_mins: int = 15) -> bool:
         """job should restart if certain conditions are met"""
@@ -43,7 +43,7 @@ class RenderTask(Base):
             or self.status == TaskStatus.error
             or (
                 self.status == TaskStatus.started
-                and datetime.utcnow() - self.timestamp
+                and datetime.now(timezone.utc) - self.timestamp
                 > timedelta(minutes=timeout_in_mins)
             )
         )

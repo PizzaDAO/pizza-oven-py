@@ -154,6 +154,8 @@ class NutritionMetadata(Base):
     vitamin_b5: float
     vitamin_d: float
     vitamin_b7: float
+    height: float
+    moisture: float
     potassium: float
     cholesterol: float
     vitamin_a: float

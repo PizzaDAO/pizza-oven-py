@@ -1,10 +1,11 @@
 import json
 import sys
 from typing import Optional
+
 from app.models.order import OrderPizzaResponse
 from app.models.render_task import RenderTask
 
-from app.models.chainlink_token import ChainlinkToken
+from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.recipe import Recipe
 from app.models.prep import KitchenOrder
 from app.models.pizza import HotPizza, RarePizzaMetadata
@@ -16,6 +17,8 @@ from app.core.storage import *
 __all__ = [
     "get_render_task",
     "set_render_task",
+    "set_gsheets_token",
+    "get_gsheets_token",
     "get_chainlink_token",
     "set_chainlink_token",
     "get_order_response",
@@ -29,6 +32,7 @@ __all__ = [
     "set_pizza_image",
     "get_metadata_from_ipfs",
     "get_metadata_from_storage",
+    "set_metadata",
 ]
 
 settings = Settings()
@@ -56,6 +60,27 @@ def set_render_task(task: RenderTask) -> str:
         raise error
 
 
+def set_gsheets_token(auth_token: GSheetsToken) -> str:
+    try:
+        with get_storage(DataCollection.gsheets_tokens) as storage:
+            return storage.set({"name": "gsheets", "auth": auth_token.dict()}, "sheets")
+    except Exception as error:
+        print(sys.exc_info())
+        raise error
+
+
+def get_gsheets_token() -> Optional[GSheetsToken]:
+    try:
+        with get_storage(DataCollection.gsheets_tokens) as storage:
+            result = storage.get({"name": "gsheets"})
+            return GSheetsToken(**result["auth"])
+    except Exception as error:
+        print(sys.exc_info())
+        print(error)
+        # if we get an error, try to return the default
+        return None
+
+
 def get_chainlink_token(inbound_token: str) -> Optional[ChainlinkToken]:
     try:
         with get_storage(DataCollection.chainlink_tokens) as storage:
@@ -64,16 +89,14 @@ def get_chainlink_token(inbound_token: str) -> Optional[ChainlinkToken]:
     except Exception as error:
         print(sys.exc_info())
         print(error)
-        return None
+        # if we get an error, try to return the default
+        return ChainlinkToken()
 
 
-def set_chainlink_token(name: str, inbound_token: str, outbound_token) -> str:
+def set_chainlink_token(auth_token: ChainlinkToken) -> str:
     try:
-        token = ChainlinkToken(
-            inbound_token=inbound_token, outbound_token=outbound_token
-        )
         with get_storage(DataCollection.chainlink_tokens) as storage:
-            return storage.set(token.dict(), f"chainlink_token-{name}")
+            return storage.set(auth_token.dict(), f"chainlink_token-{auth_token.name}")
     except Exception as error:
         print(sys.exc_info())
         raise error
@@ -193,7 +216,7 @@ def get_metadata_from_ipfs(ipfs_hash: str) -> RarePizzaMetadata:
         return RarePizzaMetadata(**json.load(session.get_json(ipfs_hash)))
 
 
-def get_metadata_from_storage(job_id: str) -> RarePizzaMetadata:
+def get_metadata_from_storage(job_id: str) -> Optional[RarePizzaMetadata]:
     try:
         with get_storage(DataCollection.metadata) as storage:
 
