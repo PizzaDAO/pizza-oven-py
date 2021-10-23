@@ -8,9 +8,7 @@ metadata:
 spec:
   ports:
     - name: rinkeby
-      port: {{ .Values.chainlink.envPort }}
+      port: 6688
       targetPort: rinkeby
-  selector:
-    app.kubernetes.io/component: chainlink-rinkeby
 status:
   loadBalancer: {}

@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  ALLOW_ORIGINS: http://pizza-oven,http://localhost,http://localhost:6688
+  ALLOW_ORIGINS: "*"
   BRIDGE_RESPONSE_URL: http://chainlink-rinkeby:6688
   CHAINLINK_TLS_PORT: "0"
   ETH_CHAIN_ID: "4"
@@ -9,7 +9,6 @@ data:
   MIN_OUTGOING_CONFIRMATIONS: "2"
   ROOT: /chainlink
   SECURE_COOKIES: "false"
-  ETH_URL: "wss://rinkeby.infura.io/ws/v3/b39b118b38094c928c737b53cce5dec1"
   MINIMUM_CONTRACT_PAYMENT_LINK_JUELS: "100000000000000000"
 kind: ConfigMap
 metadata:

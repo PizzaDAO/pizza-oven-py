@@ -11,13 +11,15 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "rarepizza.app.chainstarters.io"
+    - "rinkeby.pizza-dao.chainstarters.io"
+    - "mainnet.pizza-dao.chainstarters.io"
+    - "oven.pizza-dao.chainstarters.io"
     secretName: "rarepizza-tls-secret"
   rules:
-  - host: "rarepizza.app.chainstarters.io"
+  - host: "rinkeby.pizza-dao.chainstarters.io"
     http:
       paths:
-      - path: /chainlink-rinkeby
+      - path: /
         pathType: Prefix
         backend:
           service: 
@@ -25,7 +27,10 @@ spec:
             port: 
               name: rinkeby
       {{ if .Values.chainlink.mainnet.enabled }}
-      - path: /chainlink-mainnet
+  - host: "mainnet.pizza-dao.chainstarters.io"
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service: 
@@ -33,7 +38,10 @@ spec:
             port: 
               name: mainnet
       {{ end }}
-      - path: /oven
+  - host: "oven.pizza-dao.chainstarters.io"
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service: 

@@ -37,7 +37,7 @@ spec:
                 name: chainlink-mainnet-config
           env:
             - name: PORT
-              value: {{ .Values.chainlink.port }}
+              value: "6688"
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
@@ -45,7 +45,7 @@ spec:
                   key: DB_CONNECTION
           ports:
             - name: mainnet
-              containerPort: {{ .Values.chainlink.envPort }}
+              containerPort: 6688
           volumeMounts:
             - mountPath: /run/secrets/password
               subPath: password
