@@ -9,8 +9,11 @@
       {
         "type": "orderpizzav1",
         "params": {
+          "bridge": "orderpizzav1",
           "address": "0xSOMETHING",
-          "recipe_index": 0
+          "requestor": "0xSOMETHING_ELSE",
+          "token_id": 123,
+          "recipe_id": 5
         }
       },
       {

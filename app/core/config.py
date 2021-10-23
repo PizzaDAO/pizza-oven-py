@@ -11,6 +11,11 @@ class ApiMode(str, Enum):
     production = "production"
 
 
+class StorageMode(str, Enum):
+    local = "local"
+    firebase = "firebase"
+
+
 class EthereumMode(str, Enum):
     testnet = "testnet"
     mainnet = "mainnet"
@@ -35,6 +40,12 @@ class Settings(BaseSettings):
 
     # Application
     API_MODE: ApiMode = ApiMode.development
+    STORAGE_MODE: StorageMode = StorageMode.local
+    ETHEREUM_MODE: EthereumMode = EthereumMode.testnet
+    IPFS_MODE: IPFSMode = IPFSMode.remote
+
+    RENDER_TASK_TIMEOUT_IN_MINUTES: int = 15
+    BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: int = 120
 
     API_V1_STR: str = "/api/v1"
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = Field(
@@ -43,7 +54,6 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "pizza-oven-py"
 
     # Ethereum
-    ETHEREUM_MODE: EthereumMode = EthereumMode.testnet
     ETHEREUM_RINKEBY_HTTP_SERVER: str = ""
     ETHEREUM_MUMBAI_HTTP_SERVER: str = ""
     ETHEREUM_MAINNET_HTTP_SERVER: str = ""
@@ -58,18 +68,18 @@ class Settings(BaseSettings):
     ETHEREUM_TESTNET_CONTRACT_ADDRESS: str = ""
     ETHEREUM_MAINNET_CONTRACT_ADDRESS: str = ""
 
-    BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: int = 120
-
     # IPFS
-    IPFS_MODE: IPFSMode = IPFSMode.remote
     IPFS_NODE_API: str = "/dns/ipfs0/tcp/5001/http"
     PINATA_API_KEY = ""
     PINATA_API_SECRET = ""
 
+    # Google Firebase
+    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.json"
+
     # Google Sheets
     # ingredients_db settings
-    TOKEN_PATH = "data/sheets_auth_token.json"
-    CREDENTIALS_PATH = "data/credentials.json"
+    GOOGLE_SHEETS_TOKEN_PATH = "secrets/sheets.json"
+    GOOGLE_SHEETS_CREDENTIALS_PATH = "secrets/credentials.json"
     SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly"
     PIZZA_TYPES_SHEET = "1wHfP2I1m8_TV5tZt3FchI_zYgzZg9AomU7GOkof7TW8"
     PIZZA_TYPE_RANGE_NAME = "Jed - Pizza Types!A3:W"

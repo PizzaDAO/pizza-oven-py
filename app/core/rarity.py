@@ -80,17 +80,20 @@ def makeDistribution(options: List[ScopedIngredient]):
     """Create a list of relative weight values"""
     freq = []
     weight_sum = 0
+    missing_rarity = False
     for item in options:
         weight = weight_for_rarity(item.ingredient.variant_rarity)
         if weight == 0:
-            print(
-                f"Possibly missing rarity assignments for {options[0].ingredient.unique_id}"
-            )
             weight = weight_for_rarity(
                 Rarity.common
             )  # can't be zero - default to common
-
+            missing_rarity = True
         weight_sum += weight
+
+    if missing_rarity:
+        print(
+            f"Possibly missing rarity assignments for {options[0].ingredient.unique_id}"
+        )
 
     for item in options:
         weight = weight_for_rarity(item.ingredient.variant_rarity)

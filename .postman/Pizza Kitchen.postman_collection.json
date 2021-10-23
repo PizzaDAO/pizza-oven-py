@@ -52,7 +52,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/13",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/3",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -60,7 +60,7 @@
 								"api",
 								"{{version}}",
 								"recipe",
-								"13"
+								"3"
 							]
 						}
 					},
@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"a3f4ffa9-43a1-48ac-b8ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"token_id\": 1,\n        \"recipe_index\": 5\n    }\n}",
+							"raw": "{\n    \"id\": \"b3f4ffa9-43a1-48ac-b8ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"requestor\": \"0xB53eD63EC95adDB74789a775e2FeF0605328AF\",\n        \"token_id\": 1,\n        \"recipe_id\": 4\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -356,6 +356,170 @@
 								"{{version}}",
 								"diningroom",
 								"test_vrf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Add Chainlink Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"orderpizzav1\",\n    \"inbound_token\": \"Bearer nqpw1bzD4isqeYfXCixyAbhpLs/lkim4\",\n    \"outbound_token\": \"SI/8gEsllRRJLD5HDHH1/2ESG1RKmCOy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/add_chainlink_token",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"add_chainlink_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Render Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"render_task",
+								"2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Render Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job_id\": \"2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851\",\n    \"request_token\": \"Bearer nqpw1bzD4isqeYfXCixyAbhpLs/lkim4\",\n    \"request\": {\n        \"id\": \"2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851\",\n        \"data\": {\n            \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n            \"token_id\": 549,\n            \"recipe_id\": 5,\n            \"requestor\": \"92352557023643128056647953993718484966024936578\"\n        },\n        \"meta\": null,\n        \"responseURL\": \"http://chainlink-rinkeby:6688/v2/runs/2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851\"\n    },\n    \"status\": \"started\",\n    \"timestamp\": \"2021-10-22T06:34:37.505674+00:00\",\n    \"random_number\": null,\n    \"metadata_hash\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"render_task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rerun Render Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851/rerun",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"render_task",
+								"2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851",
+								"rerun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Gsheets Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/gsheets_token",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"gsheets_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Gsheets Token Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\": \"ya29.a0ARrdaM8PQcIv6KojjIlbYTdZ44YFRcOCLkJ33xSNeoPGzHs-BTUr8YlGeg40-hSW7IFvo7IkmYyTFsJTk4DDg_bZs5yzXNGUeTAwsb8x4Dj1ShsZHNInKwUKm4FNeiwtMszaSojcFcICSmpAIVW4NSnybu_deg\", \"refresh_token\": \"1//06siIDliHqMmuCgYIARAAGAYSNwF-L9IruMk5btM27Lu2KjpHryoTo5Hwmi3YKwU27rqoj-3PVNyb4H-camIm44wkh6139oIH4kI\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"client_id\": \"689734124839-55mnint9qfpgbke5fckgdnuuf9r0cgub.apps.googleusercontent.com\", \"client_secret\": \"pFk-Mbsg8bkFOyzO8a0-d9Ec\", \"scopes\": [\"https://www.googleapis.com/auth/spreadsheets.readonly\"], \"expiry\": \"2021-10-22T20:25:57.956692Z\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/gsheets_token",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"gsheets_token"
 							]
 						}
 					},

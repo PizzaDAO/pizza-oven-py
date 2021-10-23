@@ -103,3 +103,7 @@ test-natron-extra:
 test-natron-mvp:
 	@echo ☢️ Run MVP Natron
 	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 1
+
+test-recipe-gen:
+	@echo ☢️ Run Recipe Generator for testing
+	poetry run python app/core/test/recipe_gen.py -r 5 -c 1

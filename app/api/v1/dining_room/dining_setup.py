@@ -3,6 +3,7 @@ from fastapi import APIRouter
 from app.models.base import Base
 from ..tags import UTILITY
 from app.core.ingredients_db import *
+from app.core.repository import set_recipe
 
 """ -This is a FastAPI endpoint that should be called at the beginning of a session
     -It will read from the Google sheets (ingredients_db, and Pizza_types)
@@ -32,7 +33,7 @@ def setup() -> SetupResponse:
     ingredients = read_ingredients()
     recipes = read_recipes(ingredients)
     for _, recipe in recipes.items():
-        save_recipe(recipe)
+        set_recipe(recipe)
 
     # save all the ingredients to a JSON file so we can access later
     save_ingredients(ingredients)

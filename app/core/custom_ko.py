@@ -2,7 +2,13 @@ from typing import Dict, Tuple, List
 from app.models.prep import KitchenOrder
 from app.core.ingredients_db import read_ingredients
 from app.core.scatter import Grid, RandomScatter, Scatter, TreeRing
-from app.models.recipe import Ingredient, Recipe, RecipeInstructions, ScatterType
+from app.models.recipe import (
+    Classification,
+    Ingredient,
+    Recipe,
+    RecipeInstructions,
+    ScatterType,
+)
 
 from app.models.recipe import (
     Recipe,
@@ -32,6 +38,7 @@ def get_kitchen_order(unique_id: str):
 
     ingredients = read_ingredients()
 
+    # The follwing code block repsects the incoming id and will produce a pie accordingly
     variants: list = []
     target_id = unique_id[0:3]
     for key in ingredients.keys():
@@ -41,13 +48,27 @@ def get_kitchen_order(unique_id: str):
             if current_code == target_id:
                 ingredient = {key: (3, RandomScatter)}
                 variants.append(ingredient)
+    # No lastchances
+    lastchances = []
 
-    ko = make_order(variants, ingredients)
+    # In some cases a very specific kitchen order is needed
+    # uncomment the code here and enter values to create a custom KO
+    # ingredient_1 = {"4000": (12, RandomScatter)}
+    # ingredient_2 = {"5170": (8, RandomScatter)}
+    # ingredient_3 = {"9350": (3, RandomScatter)}
+    # ingredient_4 = {"9392": (2, RandomScatter)}
+
+    # variants = [ingredient_1, ingredient_2, ingredient_3, ingredient_4]
+
+    # lastchance_1 = {"9910": (1, RandomScatter)}
+    # lastchances = [lastchance_1]
+
+    ko = make_order(variants, lastchances, ingredients)
 
     return ko
 
 
-def make_order(variants, ingredients):
+def make_order(variants, lastchances, ingredients):
 
     box_id = "0000"
     box = ingredients[box_id]
@@ -75,12 +96,19 @@ def make_order(variants, ingredients):
         value = ingredients[key]
         layer_ingredients.update({key: value})
 
+    lastchance_ingredients = {}
+    for item in lastchances:
+        id = list(item.keys())
+        key = id[0]
+        value = ingredients[key]
+        lastchance_ingredients.update({key: value})
+
     recipe_instructions = RecipeInstructions(
         crust_count=1,
         sauce_count=[1, 1],
         cheese_count=[1, 1],
         topping_count=[0, 8],
-        extras_count=[0, 2],
+        lastchance_count=[0, 2],
         baking_temp_in_celsius=[395, 625],
         baking_time_in_minutes=[5, 10],
     )
@@ -92,18 +120,22 @@ def make_order(variants, ingredients):
         rarity_level=0,
         base_ingredients=base_ingredients,  # Dict[INGREDIENT_KEY, ScopedIngredient],
         layers=layer_ingredients,  # Dict[INGREDIENT_KEY, ScopedIngredient],
+        lastchances=lastchance_ingredients,
         instructions=recipe_instructions,
     )
 
-    kitchen_order = manual_reduce(recipe, variants)
+    kitchen_order = manual_reduce(recipe, variants, lastchances)
 
     return kitchen_order
 
 
-def manual_reduce(recipe: Recipe, ingredient_options: List) -> KitchenOrder:
+def manual_reduce(
+    recipe: Recipe, ingredient_options: List, lastchance_options: List
+) -> KitchenOrder:
     """reduce the range values of a recipe to scalar values"""
     reduced_base: Dict[INGREDIENT_KEY, MadeIngredient] = {}
     reduced_layers: Dict[INGREDIENT_KEY, MadeIngredient] = {}
+    reduced_lastchances: Dict[INGREDIENT_KEY, MadeIngredient] = {}
 
     # get a random seed
     # since the recipe already received verifiable randomness
@@ -130,10 +162,17 @@ def manual_reduce(recipe: Recipe, ingredient_options: List) -> KitchenOrder:
         # prepped = select_prep(random_seed, nonce, recipe.layers[id])
         reduced_layers.update({id: prepped})
 
+    for ing in recipe.lastchances.keys():
+        prepped = select_prep(random_seed, nonce, recipe.lastchances[ing])
+        reduced_lastchances.update({ing: prepped})
+
     # SHUFFLER - pull out all the instances into  buffer that we can shuffle for depth swap
     shuffled_instances = []
     for (_, ingredient) in reduced_layers.items():
         shuffled_instances += ingredient.instances
+
+    # re-arrange instances to a grid
+    # shuffled_instances = Grid(random_seed, nonce).arrange(shuffled_instances)
 
     # A list of all the instances - shuffled
     shuffled_instances = deterministic_shuffle(shuffled_instances)
@@ -143,7 +182,7 @@ def manual_reduce(recipe: Recipe, ingredient_options: List) -> KitchenOrder:
         sauce_count=1,
         cheese_count=1,
         topping_count=len(reduced_layers),
-        extras_count=0,
+        lastchance_count=1,
         baking_temp_in_celsius=450,
         baking_time_in_minutes=450,
     )
@@ -154,12 +193,13 @@ def manual_reduce(recipe: Recipe, ingredient_options: List) -> KitchenOrder:
     # easy = f"rarrepizza-{name}-{id}"
 
     return KitchenOrder(
-        token_id="1111",  # TODO: database primary key?
+        token_id="1",  # TODO: database primary key?
         name=recipe.name,
         random_seed=to_hex(random_seed),
         recipe_id=recipe.unique_id,
         base_ingredients=reduced_base,
         layers=reduced_layers,
+        lastchances=reduced_lastchances,
         instaces=shuffled_instances,
         instructions=made_instructions,
         instances=shuffled_instances,
@@ -194,11 +234,13 @@ def make_prep(
 
 def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngredient:
     """select the scalar values for the ingredient"""
-
+    translation = (0.0, 0.0)
+    if scope.ingredient.classification == Classification.lastchance:
+        translation = (3072 / 2, 3072 / 2)
     scale = scope.scope.particle_scale[0]
     instances = [
         MadeIngredientPrep(
-            translation=(0.0, 0.0),
+            translation=translation,
             rotation=0.0,
             scale=scale,
             image_uri=scope.ingredient.image_uris["filename"],
@@ -209,5 +251,5 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         ingredient=scope.ingredient,
         count=len(instances),
         instances=instances,
-        scatter_type=ScatterType.random,
+        scatter_type=ScatterType.none,
     )
