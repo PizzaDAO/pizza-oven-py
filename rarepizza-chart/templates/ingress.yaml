@@ -7,8 +7,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    # nginx.ingress.kubernetes.io/limit-rpm: "0"
-    # nginx.ingress.kubernetes.io/limit-connections: "0"
 spec:
   tls:
   - hosts:
