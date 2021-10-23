@@ -249,13 +249,15 @@ def parse_recipes(
     recipes = {}
     columns = {}
     for val in values:
-        if val[0]:
+        # Check to see if there is a name on the first cell
+        # Of the recipe sheet is changed, this can fail - currently have "." in the first cell of the sheet to compare against
+        if len(val[0]) > 1:
             # taking the 1st element in the column - it containes the pizza type names
             type_name = val[0]
             columns.update({type_name: val})
         else:
             # Account for the occasional blank row - probably a cleaner way to do this...
-            print("parse_recipes: no id.")
+            print("parse_recipes: no id found - most likely a blank column")
 
     # Now we have a Dict of Columns - pizza type string : raw column data
     pizza_types = list(columns.keys())
