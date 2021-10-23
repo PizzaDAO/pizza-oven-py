@@ -9,6 +9,7 @@ spec:
     - name: pizza-oven
       port: 8000
       targetPort: pizza-oven
+  type: LoadBalancer
   selector:
     app.kubernetes.io/component: pizza-oven
 status:

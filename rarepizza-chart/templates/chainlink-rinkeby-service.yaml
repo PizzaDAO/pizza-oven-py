@@ -10,5 +10,7 @@ spec:
     - name: rinkeby
       port: 6688
       targetPort: rinkeby
+  selector:
+    app.kubernetes.io/component: chainlink-rinkeby
 status:
   loadBalancer: {}

@@ -138,3 +138,13 @@ deploy-all:
   script:
     helm upgrade -i --reuse-values --set pizzaOven.image.tag="$CI_COMMIT_TAG"-oven --set chainlink.image.rinkebyTag="$CI_COMMIT_TAG"-rinkeby --set chainlink.image.mainnetTag="$CI_COMMIT_TAG"-mainnet --set image.repository=$ACCOUNT_ID_NUMBER.dkr.ecr.$AWS_REGION.amazonaws.com/$CLUSTER_NAME-$PROJECT_NAME rarepizzas rarepizza-chart
 
+deploy-new-chart:
+  stage: deploy
+  image: dtzar/helm-kubectl:3.1.2
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /chart/i
+  script:
+    helm upgrade -i --reuse-values -n rare-pizzas-one rarepizzas rarepizza-chart

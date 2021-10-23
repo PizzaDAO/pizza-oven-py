@@ -11,6 +11,8 @@ spec:
     - name: mainnet
       port: 6688
       targetPort: mainnet
+  selector:
+    app.kubernetes.io/component: chainlink-mainnet
 status:
   loadBalancer: {}
 {{ end }}
