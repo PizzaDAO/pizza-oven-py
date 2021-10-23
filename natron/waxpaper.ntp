@@ -247,7 +247,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Roto1_2_2_3</second>
+					<second>Merge1</second>
 				</item>
 				<item>
 					<first>10</first>
@@ -2212,8 +2212,8 @@
 			<CacheID>i1_21</CacheID>
 		</item>
 		<item>
-			<Plugin_label>TRS_default</Plugin_label>
-			<Plugin_script_name>TRS_default</Plugin_script_name>
+			<Plugin_label>TRS_paper</Plugin_label>
+			<Plugin_script_name>TRS_paper</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -2229,7 +2229,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.03800000000000026e+01</Value>
+					<Value>1.21199999999999992e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2238,7 +2238,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-1.05700000000000003e+01</Value>
+					<Value>4.72999999999999972e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2255,15 +2255,13 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-5.00000000000000000e-01</Value>
+					<Value>2.37999999999999989e+00</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
-					<Expression>y=TRS_default.translate.get()[1]/11
-#y1 = y/10
-x=TRS_default.translate.get()[0]/11
-#x1 = x/10
+					<Expression>y = thisNode.translate.get()[1]
+x = thisNode.translate.get()[0]
 
-ret = round(random(x,y),1)
+ret = round((x+y)/25,2)
 </Expression>
 					<ExprHasRet>1</ExprHasRet>
 				</item>
@@ -2278,19 +2276,19 @@ ret = round(random(x,y),1)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.69999999999999973e-01</Value>
+					<Value>9.43396205727999981e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
-					<Expression></Expression>
+					<Expression>ret=1-((thisNode.scale.get()[dimension])*.06)</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.69999999999999973e-01</Value>
+					<Value>9.43396205727999981e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
-					<Expression></Expression>
+					<Expression>ret=1-((thisNode.scale.get()[dimension])*.06)</Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
 				<UserKnob>0</UserKnob>
@@ -2358,7 +2356,7 @@ ret = round(random(x,y),1)
 					<second>Grade4</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>60</KnobsAge>
+			<KnobsAge>103</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -6234,7 +6232,7 @@ ret = round(random(x,y),1)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
+					<Value>3</Value>
 					<Default>0</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>frame%4</Expression>
@@ -6822,7 +6820,7 @@ ret = round(random(x,y),1)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.89338590076658919e-01</Value>
+					<Value>9.33043897650903009e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.7535,1)</Expression>
@@ -14546,7 +14544,7 @@ ret = round(random(x,y),1)
 				</item>
 				<item>
 					<first>Source</first>
-					<second>TRS_default</second>
+					<second>TRS_paper</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>22</KnobsAge>
@@ -21062,7 +21060,7 @@ ret = round(random(x,y),1)
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Oct 23 13:18:51 2021</Value>
+			<Value>Sat Oct 23 13:40:06 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -21178,7 +21176,7 @@ ret = round(random(x,y),1)
 			<Name></Name>
 		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>2992</Timeline_current_time>
+	<Timeline_current_time>1515</Timeline_current_time>
 	<CreationDate>1613936932294</CreationDate>
 </Project>
 <ProjectGui class_id="25" tracking_level="0" version="12">
@@ -21396,7 +21394,7 @@ ret = round(random(x,y),1)
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>TRS_default</Name>
+			<Name>TRS_paper</Name>
 			<X_position>3.12942024506373969e+02</X_position>
 			<Y_position>-2.06567372351695030e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
@@ -22171,8 +22169,8 @@ ret = round(random(x,y),1)
 		<item class_id="33" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="34" tracking_level="0" version="14">
-				<zoomLeft>-6.92703297965660204e+03</zoomLeft>
-				<zoomBottom>-2.30347779860484025e+02</zoomBottom>
+				<zoomLeft>-5.92040786312385717e+03</zoomLeft>
+				<zoomBottom>-6.08919563059896973e+02</zoomBottom>
 				<zoomFactor>9.15582314102831585e-02</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="35" tracking_level="0" version="0">
@@ -22206,7 +22204,7 @@ ret = round(random(x,y),1)
 				<CheckerboardEnabled>0</CheckerboardEnabled>
 				<Fps>1.00000000000000000e+00</Fps>
 				<FpsLocked>1</FpsLocked>
-				<aInput>9</aInput>
+				<aInput>0</aInput>
 				<bInput>0</bInput>
 				<fullFrame>0</fullFrame>
 			</second>
@@ -22219,7 +22217,7 @@ ret = round(random(x,y),1)
 	<OpenedPanels>
 		<count>4</count>
 		<item_version>0</item_version>
-		<item>TRS_default</item>
+		<item>TRS_paper</item>
 		<item>Roto1_2_2_3</item>
 		<item>ColorCorrect5</item>
 		<item>Roto1_2_2</item>
