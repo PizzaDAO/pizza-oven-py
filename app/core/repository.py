@@ -143,11 +143,13 @@ def set_recipe(recipe: Recipe) -> str:
         print(sys.exc_info())
         raise error
 
+
 def get_kitchen_order_from_data_directory(kitchen_order_index: int) -> KitchenOrder:
     # todo: just read it from the data directory
+    pass
+
 
 # Everything below here is on IPFS
-
 
 
 def get_kitchen_order(ipfs_hash: int) -> KitchenOrder:

@@ -10,7 +10,7 @@ from app.models.base import Base
 from app.models.prep import KitchenOrder
 from app.core.prep_line import reduce
 from app.core.utils import from_hex
-from app.core.repository import get_kitchen_order()
+from app.core.repository import get_kitchen_order
 
 from ..dining_room.recipe import RecipeRequest
 from ..tags import TEST
@@ -56,9 +56,9 @@ def kitchen_order(request: Request, skip: int = 0, limit: int = 100) -> Any:
     run a set of predefined kitchen orders as a test
     """
 
-    #iterate through each of the kitchen orders
+    # iterate through each of the kitchen orders
     # and run them
-    for i in range(skip,limit):
+    for i in range(skip, limit):
         kitchen_order = get_kitchen_order(i)
 
         try:
@@ -72,6 +72,5 @@ def kitchen_order(request: Request, skip: int = 0, limit: int = 100) -> Any:
         except Exception as error:
             print(sys.exc_info())
             print(error)
-
 
     return
