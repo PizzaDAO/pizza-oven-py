@@ -38,25 +38,30 @@ def get_kitchen_order(unique_id: str):
 
     ingredients = read_ingredients()
 
-    # variants: list = []
-    # target_id = unique_id[0:3]
-    # for key in ingredients.keys():
-    #     # Get the 3-digit ingredient code
-    #     current_code = key[0:3]
-    #     if int(current_code) > 399:
-    #         if current_code == target_id:
-    #             ingredient = {key: (3, Grid)}
-    #             variants.append(ingredient)
+    # The follwing code block repsects the incoming id and will produce a pie accordingly
+    variants: list = []
+    target_id = unique_id[0:3]
+    for key in ingredients.keys():
+        # Get the 3-digit ingredient code
+        current_code = key[0:3]
+        if int(current_code) > 399:
+            if current_code == target_id:
+                ingredient = {key: (3, RandomScatter)}
+                variants.append(ingredient)
+    # No lastchances
+    lastchances = []
 
-    ingredient_1 = {"4000": (12, RandomScatter)}
-    ingredient_2 = {"5170": (8, RandomScatter)}
-    ingredient_3 = {"9350": (3, RandomScatter)}
-    ingredient_4 = {"9392": (2, RandomScatter)}
+    # In some cases a very specific kitchen order is needed
+    # uncomment the code here and enter values to create a custom KO
+    # ingredient_1 = {"4000": (12, RandomScatter)}
+    # ingredient_2 = {"5170": (8, RandomScatter)}
+    # ingredient_3 = {"9350": (3, RandomScatter)}
+    # ingredient_4 = {"9392": (2, RandomScatter)}
 
-    variants = [ingredient_1, ingredient_2, ingredient_3, ingredient_4]
+    # variants = [ingredient_1, ingredient_2, ingredient_3, ingredient_4]
 
-    lastchance_1 = {"9910": (1, RandomScatter)}
-    lastchances = [lastchance_1]
+    # lastchance_1 = {"9910": (1, RandomScatter)}
+    # lastchances = [lastchance_1]
 
     ko = make_order(variants, lastchances, ingredients)
 
