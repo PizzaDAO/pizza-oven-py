@@ -1,49 +1,49 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: rarepizza-ingress
-  labels:
-    app.kubernetes.io/component: rarepizza-ingress
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-spec:
-  tls:
-  - hosts:
-    - "rinkeby.pizza-dao.chainstarters.io"
-    - "mainnet.pizza-dao.chainstarters.io"
-    - "oven.pizza-dao.chainstarters.io"
-    secretName: "rarepizza-tls-secret"
-  rules:
-  - host: "rinkeby.pizza-dao.chainstarters.io"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service: 
-            name: chainlink-rinkeby
-            port: 
-              name: rinkeby
-      {{ if .Values.chainlink.mainnet.enabled }}
-  - host: "mainnet.pizza-dao.chainstarters.io"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service: 
-            name: chainlink-mainnet
-            port: 
-              name: mainnet
-      {{ end }}
-  - host: "oven.pizza-dao.chainstarters.io"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service: 
-            name: pizza-oven
-            port: 
-              name: pizza-oven
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: rarepizza-ingress
+#   labels:
+#     app.kubernetes.io/component: rarepizza-ingress
+#   annotations:
+#     kubernetes.io/ingress.class: nginx
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+# spec:
+#   tls:
+#   - hosts:
+#     - "rinkeby.pizza-dao.chainstarters.io"
+#     - "mainnet.pizza-dao.chainstarters.io"
+#     - "oven.pizza-dao.chainstarters.io"
+#     secretName: "rarepizza-tls-secret"
+#   rules:
+#   - host: "rinkeby.pizza-dao.chainstarters.io"
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service: 
+#             name: chainlink-rinkeby
+#             port: 
+#               name: rinkeby
+#       {{ if .Values.chainlink.mainnet.enabled }}
+#   - host: "mainnet.pizza-dao.chainstarters.io"
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service: 
+#             name: chainlink-mainnet
+#             port: 
+#               name: mainnet
+#       {{ end }}
+#   - host: "oven.pizza-dao.chainstarters.io"
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service: 
+#             name: pizza-oven
+#             port: 
+#               name: pizza-oven
