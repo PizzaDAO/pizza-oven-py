@@ -37,12 +37,14 @@ async def fetch_gsheets_token() -> Any:
 async def add_chainlink_token(
     data: ChainlinkToken = Body(...),
 ) -> Any:
+    """add a chainlink token"""
     set_chainlink_token(data)
     return
 
 
 @router.get("/render_task/{job_id}", tags=[ADMIN])
 async def get_existing_render_task(job_id: str) -> Optional[RenderTask]:
+    """get an existing render task"""
     render_task = get_render_task(job_id)
     return render_task
 

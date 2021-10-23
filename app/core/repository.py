@@ -25,6 +25,7 @@ __all__ = [
     "set_order_response",
     "get_recipe",
     "set_recipe",
+    "get_kitchen_order_from_data_directory",
     "get_kitchen_order",
     "set_kitchen_order",
     "get_pizza",
@@ -142,8 +143,11 @@ def set_recipe(recipe: Recipe) -> str:
         print(sys.exc_info())
         raise error
 
+def get_kitchen_order_from_data_directory(kitchen_order_index: int) -> KitchenOrder:
+    # todo: just read it from the data directory
 
 # Everything below here is on IPFS
+
 
 
 def get_kitchen_order(ipfs_hash: int) -> KitchenOrder:
