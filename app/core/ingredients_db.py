@@ -118,8 +118,11 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
             expiry=creds.expiry.replace(tzinfo=None),
         )
         set_gsheets_token(internal_creds)
-        with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
-            token.write(creds.to_json())
+        try:
+            with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
+                token.write(creds.to_json())
+        except:
+            print("could not write to google sheet token: read only filesystem")
 
     DIMENSION = "ROWS"  # default is ROWS
     # Better way to do this
