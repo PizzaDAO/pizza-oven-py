@@ -76,6 +76,7 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
     # trying to get it from the file system
     # this code is a bit hacky and is done to maintain compatibility
     creds = None
+
     internal_gsheets_creds = get_gsheets_token()
     if internal_gsheets_creds is not None:
         print("found cached Gsheets auth credentials in the datastore")
@@ -89,17 +90,40 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
             expiry=internal_gsheets_creds.expiry.replace(tzinfo=None),
         )
 
-    if creds is None and os.path.exists(settings.GOOGLE_SHEETS_TOKEN_PATH):
-        print("Gsheet Auth not found in server instance, falling back to file system")
+    if creds is not None:
+        print("refreshing cached Gsheets auth token using the refresh token")
+        try:
+            creds.refresh(Request())
+        except Exception as error:
+            print(error)
+
+    if (creds is None or not creds.valid) and os.path.exists(
+        settings.GOOGLE_SHEETS_TOKEN_PATH
+    ):
+        print(
+            "Gsheet Auth not found or invalid in server instance, falling back to file system"
+        )
         creds = Credentials.from_authorized_user_file(
             settings.GOOGLE_SHEETS_TOKEN_PATH, scopes
         )
+
+        if creds is not None:
+            print("refreshing cached Gsheets auth token using the refresh token")
+            try:
+                creds.refresh(Request())
+            except Exception as error:
+                print(error)
+
     # If there are no (valid) credentials available, let the user log in.
     # BUT this will fail in Docker ENV
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             print("refreshing gsheets auth token using the refresh token")
-            creds.refresh(Request())
+            try:
+                creds.refresh(Request())
+            except Exception as error:
+                print(error)
+                return
         else:
             print("trying to refresh auth token with installed app flow")
             flow = InstalledAppFlow.from_client_secrets_file(
@@ -107,6 +131,8 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
             )
             creds = flow.run_local_server(port=0)
 
+    if creds and creds.valid:
+        print("updating credentials")
         # Save the credentials for the next run
         internal_creds = GSheetsToken(
             token=creds.token,
