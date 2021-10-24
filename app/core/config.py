@@ -74,7 +74,7 @@ class Settings(BaseSettings):
     PINATA_API_SECRET = ""
 
     # Google Firebase
-    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.json"
+    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.dev.json"
 
     # Google Sheets
     # ingredients_db settings
