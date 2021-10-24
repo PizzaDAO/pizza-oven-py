@@ -55,6 +55,41 @@ class Scatter:
 
         return (x, y)
 
+    def prevent_overflow(
+        self, instances: List[MadeIngredientPrep]
+    ) -> List[MadeIngredientPrep]:
+        """This will take an instance off the edgee and move it towrds center to prevent overhand"""
+        canvas = Canvas()
+
+        # The circumference to use as a boundary - past this, reign it in
+        inner_circle = 3000
+        inner_radius = inner_circle / 2
+
+        translated_instances = []
+        for instance in instances:
+            # calculate the distance from the center
+            x = instance.translation[0]
+            y = instance.translation[1]
+            dist_from_center = sqrt(
+                (x - canvas.center[0]) ** 2 + (y - canvas.center[0]) ** 2
+            )
+
+            # take scale into account
+            relative_size = instance.scale * 1024
+            # approximate the fall off amount - won't be perfect due to image variation
+            edge_distance = dist_from_center + (relative_size / 2)
+            print(edge_distance)
+            # if an instance is too far, reign it in
+            if edge_distance > inner_radius:
+                fall_off = edge_distance - inner_radius
+                tx = instance.translation[0] - fall_off
+                ty = instance.translation[1] - fall_off
+                instance.translation = (tx, ty)
+
+            translated_instances.append(instance)
+
+        return translated_instances
+
 
 class Hero(Scatter):
     """Creates a grid pattern to distrubute toppins evenly - Grid is alwyas the same size and can have empty
@@ -82,6 +117,8 @@ class Hero(Scatter):
         translation = self.translate_to_canvas(made.translation)
         made.translation = translation
         instances.append(made)
+
+        # instances = self.prevent_overflow(instances)
 
         return instances
 
@@ -124,6 +161,8 @@ class Grid(Scatter):
                         image_uri=ingredient.ingredient.image_uris["filename"],
                     )
                 )
+
+        # instances = self.prevent_overflow(instances)
 
         return instances
 
@@ -241,6 +280,8 @@ class TreeRing(Scatter):
                 )
             )
 
+        # instances = self.prevent_overflow(instances)
+
         return instances
 
     def calculate_tree_position(self, radius, item_count, index) -> Tuple[float, float]:
@@ -284,6 +325,8 @@ class RandomScatter(Scatter):
                     image_uri=ingredient.ingredient.image_uris["filename"],
                 )
             )
+
+        # instances = self.prevent_overflow(instances)
 
         return instances
 
