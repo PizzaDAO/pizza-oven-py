@@ -53,12 +53,18 @@ spec:
             - name: rinkeby
               containerPort: 6688
           volumeMounts:
-            - mountPath: /run/secrets
+            - mountPath: "/run/secrets/keystore"
+              subPath: keystore
               name: keystore
-            - mountPath: /run/secrets
+              readOnly: true
+            - mountPath: "/run/secrets/password"
+              subPath: password
               name: password
-            - mountPath: /run/secrets
+              readOnly: true
+            - mountPath: "/run/secrets/api"
+              subPath: api
               name: api
+              readOnly: true
             - mountPath: /chainlink
               name: chainlink-rinkeby-pvc
           resources:

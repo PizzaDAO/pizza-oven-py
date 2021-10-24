@@ -84,12 +84,18 @@ spec:
             - name: pizza-oven
               containerPort: 8000
           volumeMounts:
-            - mountPath: /secrets
+            - mountPath: "/app/secrets/firebase.json"
+              subPath: firebase.json
               name: firebase
-            - mountPath: /secrets
+              readOnly: true
+            - mountPath: "/app/secrets/sheets.json"
+              subPath: sheets.json
               name: sheets
-            - mountPath: /secrets
+              readOnly: true
+            - mountPath: "/app/secrets/credentials.json"
+              subPath: credentials.json
               name: credentials
+              readOnly: true
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
@@ -111,7 +117,6 @@ spec:
               - key: credentials.json
                 path: credentials.json
             secretName: pizza-oven-secret
-
       nodeSelector: 
         role: worker
       {{- with .Values.affinity }}
