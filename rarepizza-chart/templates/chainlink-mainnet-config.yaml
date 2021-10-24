@@ -1,12 +1,15 @@
 apiVersion: v1
 data:
   ROOT: /chainlink
+  BRIDGE_RESPONSE_URL: http://chainlink-mainnet:6688
   LOG_LEVEL: debug
+  JSON_CONSOLE: true
   ETH_CHAIN_ID: "1"
   CHAINLINK_TLS_PORT: "0"
   SECURE_COOKIES: "false"
   GAS_UPDATER_ENABLED: "true"
   MINIMUM_CONTRACT_PAYMENT_LINK_JUELS: "100000000000000000"
+  LINK_CONTRACT_ADDRESS: "0x514910771af9ca656af840dff83e8264ecf986ca"
   ALLOW_ORIGINS: "*"
 kind: ConfigMap
 metadata:

@@ -43,10 +43,18 @@ spec:
                 secretKeyRef:
                   name: chainlink-mainnet-secret
                   key: DB_CONNECTION
+            - name: ETH_URL
+              valueFrom:
+                secretKeyRef:
+                  name: chainlink-mainnet-secret
+                  key: ETHEREUM_MAINNET_SOCKET_SERVER
           ports:
             - name: mainnet
               containerPort: 6688
           volumeMounts:
+            - mountPath: /run/secrets/keystore
+              subPath: keystore
+              name: keystore
             - mountPath: /run/secrets/password
               subPath: password
               name: password
@@ -58,6 +66,12 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
+          - name: keystore
+          secret:
+            items:
+              - key: keystore
+                path: keystore
+            secretName: chainlink-mainnet-secret
           - name: password
             secret:
               items:

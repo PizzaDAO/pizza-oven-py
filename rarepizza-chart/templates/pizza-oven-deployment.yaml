@@ -30,20 +30,99 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.pizzaOven.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: API_MODE
-              value: {{ .Values.pizzaOven.apiMode }}
             - name: PORT
               value: "8000"
             - name: PROJECT_NAME
               value: Rare Pizzas Kitchen
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: "run/secrets/firebase"
+            - name: GOOGLE_SHEETS_TOKEN_PATH
+              value: "run/secrets/sheets"
+            - name: GOOGLE_SHEETS_CREDENTIALS_PATH
+              value: "run/secrets/credentials"
+            - name: ETHEREUM_MUMBAI_HTTP_SERVER
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MUMBAI_HTTP_SERVER
+            - name: ETHEREUM_POLYGON_HTTP_SERVER
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_POLYGON_HTTP_SERVER
+            - name: ETHEREUM_TESTNET_ACCOUNT_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_TESTNET_ACCOUNT_ADDRESS
+            - name: ETHEREUM_TESTNET_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_TESTNET_PRIVATE_KEY
+            - name: ETHEREUM_MAINNET_ACCOUNT_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MAINNET_ACCOUNT_ADDRESS
+            - name: ETHEREUM_MAINNET_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MAINNET_PRIVATE_KEY
+            - name: DROPBOX_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: DROPBOX_TOKEN
+            - name: PINATA_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: PINATA_API_KEY
+            - name: PINATA_API_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: PINATA_API_SECRET
           envFrom:
             - configMapRef:
                 name: pizza-oven-config
           ports:
             - name: pizza-oven
               containerPort: 8000
+          volumeMounts:
+            - mountPath: run/secrets/firebase
+              subPath: firebase
+              name: firebase
+            - mountPath: run/secrets/sheets
+              subPath: sheets
+              name: sheets
+            - mountPath: run/secrets/credentials
+              subPath: credentials
+              name: credentials
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: firebase
+          secret:
+            items:
+              - key: firebase
+                path: firebase
+            secretName: pizza-oven-secret
+        - name: sheets
+          secret:
+            items:
+              - key: sheets
+                path: sheets
+            secretName: pizza-oven-secret
+        - name: credentials
+          secret:
+            items:
+              - key: credentials
+                path: credentials
+            secretName: pizza-oven-secret
+
       nodeSelector: 
         role: worker
       {{- with .Values.affinity }}
