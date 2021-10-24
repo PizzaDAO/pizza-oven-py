@@ -32,14 +32,6 @@ spec:
           env:
             - name: PORT
               value: "8000"
-            - name: PROJECT_NAME
-              value: Rare Pizzas Kitchen
-            - name: GOOGLE_APPLICATION_CREDENTIALS
-              value: "run/secrets/firebase"
-            - name: GOOGLE_SHEETS_TOKEN_PATH
-              value: "run/secrets/sheets"
-            - name: GOOGLE_SHEETS_CREDENTIALS_PATH
-              value: "run/secrets/credentials"
             - name: ETHEREUM_MUMBAI_HTTP_SERVER
               valueFrom:
                 secretKeyRef:
@@ -92,13 +84,13 @@ spec:
             - name: pizza-oven
               containerPort: 8000
           volumeMounts:
-            - mountPath: run/secrets/firebase
+            - mountPath: secrets/firebase.json
               subPath: firebase
               name: firebase
-            - mountPath: run/secrets/sheets
+            - mountPath: secrets/sheets.json
               subPath: sheets
               name: sheets
-            - mountPath: run/secrets/credentials
+            - mountPath: secrets/credentials.json
               subPath: credentials
               name: credentials
           resources:
@@ -107,20 +99,20 @@ spec:
         - name: firebase
           secret:
             items:
-              - key: firebase
-                path: firebase
+              - key: firebase.prod.json
+                path: firebase.prod.json
             secretName: pizza-oven-secret
         - name: sheets
           secret:
             items:
-              - key: sheets
-                path: sheets
+              - key: sheets.json
+                path: sheets.json
             secretName: pizza-oven-secret
         - name: credentials
           secret:
             items:
-              - key: credentials
-                path: credentials
+              - key: credentials.json
+                path: credentials.json
             secretName: pizza-oven-secret
 
       nodeSelector: 
