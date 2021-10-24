@@ -98,12 +98,12 @@ class Settings(BaseSettings):
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
 
     # Pizza Oven Config
-    MIN_TOPPING_LAYER_COUNT = os.environ["MIN_TOPPING_LAYER_COUNT"]
-    MAX_TOPPING_LAYER_COUNT = os.environ["MAX_TOPPING_LAYER_COUNT"]
-    RARITY_WEIGHT_COMMON = os.environ["RARITY_WEIGHT_COMMON"]
-    RARITY_WEIGHT_UNCOMMON = os.environ["RARITY_WEIGHT_UNCOMMON"]
-    RARITY_WEIGHT_RARE = os.environ["RARITY_WEIGHT_RARE"]
-    RARITY_WEIGHT_GRAIL = os.environ["RARITY_WEIGHT_GRAIL"]
+    MIN_TOPPING_LAYER_COUNT = 1
+    MAX_TOPPING_LAYER_COUNT = 4
+    RARITY_WEIGHT_COMMON = 550
+    RARITY_WEIGHT_UNCOMMON = 340
+    RARITY_WEIGHT_RARE = 100
+    RARITY_WEIGHT_GRAIL = 10
 
     class Config:
         case_sensitive = True
