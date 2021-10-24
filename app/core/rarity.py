@@ -22,19 +22,22 @@ from app.core.random_num import (
     select_value,
 )
 
+from app.core.config import Settings
+
+settings = Settings()
 
 __all__ = ["select_from_variants"]
 
 # Probabilistic distribution weights
 def weight_for_rarity(rarity: Rarity) -> int:
     if rarity == Rarity.common:
-        return 550
+        return int(settings.RARITY_WEIGHT_COMMON)
     if rarity == Rarity.uncommon:
-        return 340
+        return int(settings.RARITY_WEIGHT_UNCOMMON)
     if rarity == Rarity.rare:
-        return 100
+        return int(settings.RARITY_WEIGHT_RARE)
     if rarity == Rarity.grail:
-        return 10
+        return int(settings.RARITY_WEIGHT_GRAIL)
 
     return 0
 

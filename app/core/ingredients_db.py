@@ -278,7 +278,7 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """parse ScopedIngredient from a row in the database"""
 
-    category = row["category"]
+    category = parse_first_word(row["category"])
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
@@ -342,9 +342,11 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
 
             base_categories = ["box", "paper", "crust", "sauce", "cheese"]
             special_categories = ["lastchance"]
+            # need to pull out primary category - the first word before the first dash
+            primary_category = parse_first_word(row["category"])
             if (
-                row["category"] in base_categories
-                or row["category"] in special_categories
+                primary_category in base_categories
+                or primary_category in special_categories
             ):
                 scope.particle_scale = get_scale_values(
                     inches, inch_variance, BASE_PIXEL_SIZE
@@ -377,7 +379,7 @@ def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     return (min_scale, max_scale)
 
 
-def parse_id(text) -> str:
+def parse_first_word(text) -> str:
     words = text.split("-")
     id_string = words[0]
 
@@ -398,7 +400,7 @@ def parse_column(
         # Hacky test to make sure we are not parsing a blank cell in the spreadsheet
         if "-" in line:
             # pull out the unique_id for each ingredient
-            unique_id = parse_id(line)
+            unique_id = parse_first_word(line)
 
             if ingredients.get(unique_id):
                 ingredient = ingredients[unique_id]
@@ -435,8 +437,11 @@ def parse_column(
             crust_count=1,
             sauce_count=[1, 1],
             cheese_count=[1, 1],
-            topping_count=[1, 8],
-            lastchance_count=[0, 2],
+            topping_count=[
+                settings.MIN_TOPPING_LAYER_COUNT,
+                settings.MAX_TOPPING_LAYER_COUNT,
+            ],
+            lastchance_count=[0, 1],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
         ),
