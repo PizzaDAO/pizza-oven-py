@@ -97,5 +97,13 @@ class Settings(BaseSettings):
     # Local Storage - Natron testing
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
 
+    # Pizza Oven Config
+    MIN_TOPPING_LAYER_COUNT = 1
+    MAX_TOPPING_LAYER_COUNT = 4
+    RARITY_WEIGHT_COMMON = 550
+    RARITY_WEIGHT_UNCOMMON = 340
+    RARITY_WEIGHT_RARE = 100
+    RARITY_WEIGHT_GRAIL = 10
+
     class Config:
         case_sensitive = True
