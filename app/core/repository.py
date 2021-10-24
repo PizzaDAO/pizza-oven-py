@@ -149,6 +149,7 @@ def set_recipe(recipe: Recipe) -> str:
 
 def get_kitchen_order_from_data_directory(kitchen_order_index: int) -> KitchenOrder:
     # todo: just read it from the data directory
+<<<<<<< HEAD
     current_directory = os.path.dirname(__file__)
     orders_path = os.path.split(current_directory)[0] + settings.KO_STRESS_TEST_PATH
     file_list = []
@@ -176,6 +177,11 @@ def get_kitchen_order_from_data_directory(kitchen_order_index: int) -> KitchenOr
     return KitchenOrder()
 
 
+=======
+    pass
+
+
+>>>>>>> e3976e6a05c245a5365abeb03bf3008a1b2b4d1a
 # Everything below here is on IPFS
 
 
