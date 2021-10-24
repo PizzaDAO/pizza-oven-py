@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/component: pizza-oven
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+  name: pizza-oven
+spec:
+  ports:
+    - name: pizza-oven
+      port: 8000
+      targetPort: pizza-oven
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/component: pizza-oven
+status:
+  loadBalancer: {}

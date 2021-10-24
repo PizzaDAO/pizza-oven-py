@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  ALLOW_ORIGINS: "*"
+  BRIDGE_RESPONSE_URL: http://chainlink-rinkeby:6688
+  CHAINLINK_TLS_PORT: "0"
+  ETH_CHAIN_ID: "4"
+  GAS_UPDATER_ENABLED: "true"
+  LOG_LEVEL: debug
+  MIN_OUTGOING_CONFIRMATIONS: "2"
+  ROOT: /chainlink
+  SECURE_COOKIES: "false"
+  MINIMUM_CONTRACT_PAYMENT_LINK_JUELS: "100000000000000000"
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/component: chainlink
+  name: chainlink-rinkeby-config
