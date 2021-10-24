@@ -31,7 +31,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.mainnetTag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["/bin/sh"]
-          args: ["-c", "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
+          args: ["-c", "chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
           envFrom:
             - configMapRef:
                 name: chainlink-mainnet-config
@@ -41,12 +41,20 @@ spec:
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
-                  name: chainlink-mainnet-secret
-                  key: DB_CONNECTION
+                  name: pizza-oven-secret
+                  key: MAINNET_DB_CONNECTION
+            - name: ETH_URL
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MAINNET_SOCKET_SERVER
           ports:
             - name: mainnet
               containerPort: 6688
           volumeMounts:
+            - mountPath: /run/secrets/keystore
+              subPath: keystore
+              name: keystore
             - mountPath: /run/secrets/password
               subPath: password
               name: password
@@ -58,18 +66,24 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
+          - name: keystore
+          secret:
+            items:
+              - key: UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c
+                path: UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c
+            secretName: pizza-oven-secret
           - name: password
             secret:
               items:
-                - key: password
-                  path: password
-              secretName: chainlink-mainnet-secret
+                - key: .chainlink.wallet.1.mainnet
+                  path: .chainlink.wallet.1.mainnet
+              secretName: pizza-oven-secret
           - name: api
             secret:
               items:
-                - key: api
-                  path: api
-              secretName: chainlink-mainnet-secret
+                - key: .chainlink.api.mainnet
+                  path: .chainlink.api.mainnet
+              secretName: pizza-oven-secret
           - name: chainlink-mainnet-pvc
             persistentVolumeClaim:
               claimName: chainlink-mainnet-pvc

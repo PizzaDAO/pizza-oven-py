@@ -32,7 +32,7 @@ spec:
           command:
             - /bin/sh
             - -c
-            - chainlink node start -d -p /run/secrets/password -a /run/secrets/api
+            - chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api
           envFrom:
             - configMapRef:
                 name: chainlink-rinkeby-config
@@ -42,12 +42,20 @@ spec:
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
-                  name: chainlink-rinkeby-secret
-                  key: DB_CONNECTION
+                  name: pizza-oven-secret
+                  key: RINKEBY_DB_CONNECTION
+            - name: ETH_URL
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_RINKEBY_SOCKET_SERVER
           ports:
             - name: rinkeby
               containerPort: 6688
           volumeMounts:
+            - mountPath: /run/secrets/keystore
+              subPath: keystore
+              name: keystore
             - mountPath: /run/secrets/password
               subPath: password
               name: password
@@ -59,18 +67,24 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
+        - name: keystore
+          secret:
+            items:
+              - key: UTC--2021-05-01T18-03-43.214447000Z--bBa8473580dB06239f1383753e1ed714E4eEd6f5
+                path: UTC--2021-05-01T18-03-43.214447000Z--bBa8473580dB06239f1383753e1ed714E4eEd6f5
+            secretName: pizza-oven-secret
         - name: password
           secret:
             items:
-              - key: password
-                path: password
-            secretName: chainlink-rinkeby-secret
+              - key: .chainlink.wallet.1.rinkeby
+                path: .chainlink.wallet.1.rinkeby
+            secretName: pizza-oven-secret
         - name: api
           secret:
             items:
-              - key: api
-                path: api
-            secretName: chainlink-rinkeby-secret
+              - key: .chainlink.api.rinkeby
+                path: .chainlink.api.rinkeby
+            secretName: pizza-oven-secret
         - name: chainlink-rinkeby-pvc
           persistentVolumeClaim:
             claimName: chainlink-rinkeby-pvc
