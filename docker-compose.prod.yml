@@ -1,0 +1,92 @@
+# this will run all the containers locally
+# It mounts the codebase within the container and runs the APIs
+# it simulates the production deployment
+
+version: "3.8"
+services:
+  pizza-oven:
+    image: rarepizzaskitchen.azurecr.io/pizza-kitchen-python:0.0.1
+    depends_on:
+      - chainlink-mainnet
+    build:
+      context: .
+      target: prod
+      network: host
+    ports:
+      - 8000:8000
+    networks:
+      - rare-pizzas
+    env_file: .env.prod
+
+  # Add a postgres database
+  postgres-database-mainnet:
+    container_name: pizza-database-mainnet
+    build:
+      context: ./database
+    volumes:
+      - ./database/db-data-mainnet:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ChainlinkMainnetDB
+      POSTGRES_PASSWORD: $CHAINLINK_MAINNET_DB_PASSWORD
+    ports:
+      - 5432:5432
+    networks:
+      - rare-pizzas
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "pg_isready",
+          "-q",
+          "-d",
+          "ChainlinkMainnetDB",
+          "-U",
+          "postgres",
+        ]
+      timeout: 5s
+      interval: 10s
+      retries: 10
+
+  # Add a mainnet chainlink node
+  chainlink-mainnet:
+    image: rarepizzaskitchen.azurecr.io/chainlink-mainnet:0.10.3
+    depends_on:
+      postgres-database-mainnet:
+        condition: service_healthy
+    build:
+      context: ./chainlink
+      target: prod
+    entrypoint: /bin/sh -c "chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
+    volumes: # mount the working directory
+      - "./chainlink/mainnet:/chainlink"
+    ports:
+      - 6688:6688
+    networks:
+      - rare-pizzas
+    environment:
+      PORT: 6688
+      LINK_CONTRACT_ADDRESS: $CHAINLINK_MAINNET_TOKEN
+      ETH_URL: $ETHEREUM_MAINNET_SOCKET_SERVER
+      DATABASE_URL: postgresql://$CHAINLINK_MAINNET_DB_USERNAME:$CHAINLINK_MAINNET_DB_PASSWORD@$CHAINLINK_MAINNET_DATABASE_SERVER:5432/ChainlinkMainnetDB?sslmode=disable
+    env_file:
+      - ./chainlink/.env.prod
+    secrets:
+      - keystore
+      - password
+      - api
+
+networks:
+  rare-pizzas:
+    driver: bridge
+
+# configure some dev secrets (insecure, don't actually use this in prod since it is insecure)
+secrets:
+  keystore:
+    file: "./secrets/UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c"
+  password:
+    file: "./secrets/.chainlink.wallet.1.mainnet"
+  api:
+    file: "./secrets/.chainlink.api.mainnet"
+
+volumes:
+  chainlink-db-data:
