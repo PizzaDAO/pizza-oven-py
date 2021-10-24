@@ -1,6 +1,9 @@
 import json
 import sys
+import os
 from typing import Optional
+from os import listdir
+from os.path import isfile, join
 
 from app.models.order import OrderPizzaResponse
 from app.models.render_task import RenderTask
@@ -25,6 +28,7 @@ __all__ = [
     "set_order_response",
     "get_recipe",
     "set_recipe",
+    "get_kitchen_order_from_data_directory",
     "get_kitchen_order",
     "set_kitchen_order",
     "get_pizza",
@@ -141,6 +145,36 @@ def set_recipe(recipe: Recipe) -> str:
     except Exception as error:
         print(sys.exc_info())
         raise error
+
+
+def get_kitchen_order_from_data_directory(kitchen_order_index: int) -> KitchenOrder:
+    # todo: just read it from the data directory
+
+    current_directory = os.path.dirname(__file__)
+    orders_path = os.path.split(current_directory)[0] + settings.KO_STRESS_TEST_PATH
+    file_list = []
+    try:
+        for f in listdir(orders_path):
+            if isfile(join(orders_path, f)) and "json" in f:
+                file_list.append(f)
+
+    except Exception:
+        print("Failed to locate stress test KitchenOrders!")
+    finally:
+        try:
+            file = file_list[kitchen_order_index]
+            f = open(orders_path + file)
+            kitchen_order = KitchenOrder(**json.load(f))
+            f.close()
+
+            return kitchen_order
+
+        except Exception as e:
+            print("KO stress test: failed to open kitchen order")
+            print(e)
+
+    # should never get here
+    return KitchenOrder()
 
 
 # Everything below here is on IPFS
