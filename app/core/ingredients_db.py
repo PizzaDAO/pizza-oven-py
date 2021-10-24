@@ -435,8 +435,11 @@ def parse_column(
             crust_count=1,
             sauce_count=[1, 1],
             cheese_count=[1, 1],
-            topping_count=[1, 8],
-            lastchance_count=[0, 2],
+            topping_count=[
+                settings.MIN_TOPPING_LAYER_COUNT,
+                settings.MAX_TOPPING_LAYER_COUNT,
+            ],
+            lastchance_count=[0, 1],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
         ),

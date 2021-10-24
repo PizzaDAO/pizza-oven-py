@@ -74,7 +74,7 @@ class Settings(BaseSettings):
     PINATA_API_SECRET = ""
 
     # Google Firebase
-    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.dev.json"
+    GOOGLE_APPLICATION_CREDENTIALS = "secrets/firebase.dev.json"
 
     # Google Sheets
     # ingredients_db settings
@@ -96,6 +96,14 @@ class Settings(BaseSettings):
 
     # Local Storage - Natron testing
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
+
+    # Pizza Oven Config
+    MIN_TOPPING_LAYER_COUNT = os.environ["MIN_TOPPING_LAYER_COUNT"]
+    MAX_TOPPING_LAYER_COUNT = os.environ["MAX_TOPPING_LAYER_COUNT"]
+    RARITY_WEIGHT_COMMON = os.environ["RARITY_WEIGHT_COMMON"]
+    RARITY_WEIGHT_UNCOMMON = os.environ["RARITY_WEIGHT_UNCOMMON"]
+    RARITY_WEIGHT_RARE = os.environ["RARITY_WEIGHT_RARE"]
+    RARITY_WEIGHT_GRAIL = os.environ["RARITY_WEIGHT_GRAIL"]
 
     class Config:
         case_sensitive = True
