@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chainlink-rinkeby
+  labels:
+    {{- include "rarepizza.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "rarepizza.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        app.kubernetes.io/component: chainlink-rinkeby
+        {{- include "rarepizza.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      restartPolicy: Always
+      containers:
+        - name: chainlink-rinkeby
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.rinkebyTag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - /bin/sh
+            - -c
+            - chainlink node start -d -p /run/secrets/password -a /run/secrets/api
+          envFrom:
+            - configMapRef:
+                name: chainlink-rinkeby-config
+          env:
+            - name: PORT
+              value: "6688"
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: chainlink-rinkeby-secret
+                  key: DB_CONNECTION
+          ports:
+            - name: rinkeby
+              containerPort: 6688
+          volumeMounts:
+            - mountPath: /run/secrets/password
+              subPath: password
+              name: password
+            - mountPath: /run/secrets/api
+              subPath: api
+              name: api
+            - mountPath: /chainlink
+              name: chainlink-rinkeby-pvc
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: password
+          secret:
+            items:
+              - key: password
+                path: password
+            secretName: chainlink-rinkeby-secret
+        - name: api
+          secret:
+            items:
+              - key: api
+                path: api
+            secretName: chainlink-rinkeby-secret
+        - name: chainlink-rinkeby-pvc
+          persistentVolumeClaim:
+            claimName: chainlink-rinkeby-pvc
+      nodeSelector: 
+        role: chainlink
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

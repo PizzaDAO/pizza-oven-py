@@ -78,6 +78,7 @@ database/db-data/
 chainlink/rinkeby/
 
 .env
+.env.prod
 
 natron/old/
 
@@ -86,4 +87,7 @@ data/ingredients/
 
 workspace.code-workspace
 
-.env.prod
+# Chart
+rarepizza-chart/templates/*secret.yaml
+
+secrets/

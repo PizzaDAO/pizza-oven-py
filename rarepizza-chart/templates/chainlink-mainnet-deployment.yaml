@@ -1,0 +1,86 @@
+{{ if .Values.chainlink.mainnet.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chainlink-mainnet
+  labels:
+    {{- include "rarepizza.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "rarepizza.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        app.kubernetes.io/component: chainlink-mainnet
+        {{- include "rarepizza.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      restartPolicy: Always
+      containers:
+        - name: chainlink-mainnet
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.mainnetTag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/bin/sh"]
+          args: ["-c", "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
+          envFrom:
+            - configMapRef:
+                name: chainlink-mainnet-config
+          env:
+            - name: PORT
+              value: "6688"
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: chainlink-mainnet-secret
+                  key: DB_CONNECTION
+          ports:
+            - name: mainnet
+              containerPort: 6688
+          volumeMounts:
+            - mountPath: /run/secrets/password
+              subPath: password
+              name: password
+            - mountPath: /run/secrets/api
+              subPath: api
+              name: api
+            - mountPath: /chainlink
+              name: chainlink-mainnet-pvc
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+          - name: password
+            secret:
+              items:
+                - key: password
+                  path: password
+              secretName: chainlink-mainnet-secret
+          - name: api
+            secret:
+              items:
+                - key: api
+                  path: api
+              secretName: chainlink-mainnet-secret
+          - name: chainlink-mainnet-pvc
+            persistentVolumeClaim:
+              claimName: chainlink-mainnet-pvc
+      nodeSelector:
+        role: chainlink
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{ end }}
