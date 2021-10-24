@@ -2,8 +2,8 @@ apiVersion: v1
 data:
   ROOT: /chainlink
   BRIDGE_RESPONSE_URL: http://chainlink-mainnet:6688
-  LOG_LEVEL: debug
-  JSON_CONSOLE: true
+  LOG_LEVEL: info
+  JSON_CONSOLE: "true"
   ETH_CHAIN_ID: "1"
   CHAINLINK_TLS_PORT: "0"
   SECURE_COOKIES: "false"
