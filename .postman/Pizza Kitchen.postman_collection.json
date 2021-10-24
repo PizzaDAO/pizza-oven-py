@@ -226,6 +226,57 @@
 					"response": []
 				},
 				{
+					"name": "Natron-StressTest",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"utility\", JSON.stringify(jsonData));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job_id\": \"57438675894578430\",\n    \"order\": {{order}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/tests/order",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"tests",
+								"order"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": 0
+								},
+								{
+									"key": "limit",
+									"value": 10
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "create_metadata",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true

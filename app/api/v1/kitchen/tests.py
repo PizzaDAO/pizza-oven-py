@@ -1,3 +1,4 @@
+import os
 from typing import Any
 import sys
 from fastapi import APIRouter, Body, Request
@@ -10,13 +11,15 @@ from app.models.base import Base
 from app.models.prep import KitchenOrder
 from app.core.prep_line import reduce
 from app.core.utils import from_hex
-from app.core.repository import get_kitchen_order()
+from app.core.repository import get_kitchen_order_from_data_directory
 
 from ..dining_room.recipe import RecipeRequest
 from ..tags import TEST
 
 from app.core.renderer import Renderer
 import app.core.custom_ko as custom_ko
+
+from app.core.dropbox_adapter import DropboxSession
 
 router = APIRouter()
 
@@ -50,16 +53,18 @@ def ingredient(ingredient_id: str) -> Any:
     return JSONResponse(content=json)
 
 
-@router.post("/kitchen/order", tags=[TEST])
+@router.post("/order", tags=[TEST])
 def kitchen_order(request: Request, skip: int = 0, limit: int = 100) -> Any:
     """
     run a set of predefined kitchen orders as a test
     """
 
-    #iterate through each of the kitchen orders
+    # iterate through each of the kitchen orders
     # and run them
-    for i in range(skip,limit):
-        kitchen_order = get_kitchen_order(i)
+    for i in range(skip, limit):
+        # get orders from /data as list
+
+        kitchen_order = get_kitchen_order_from_data_directory(i)
 
         try:
             # render the pizza
@@ -67,11 +72,15 @@ def kitchen_order(request: Request, skip: int = 0, limit: int = 100) -> Any:
                 frame=i, job_id=f"test-kitchen-order-{str(i)}"
             ).render_pizza(kitchen_order)
 
-            # TODO: publish out the pizza somewhere it can be viewed, like dropbox
+            # publish out the pizza to Dropbox
+            DropboxSession().send_image_file(pizza.assets["IMAGE_PATH"])
+
+            print("Pizza is complete! moving to next...")
 
         except Exception as error:
             print(sys.exc_info())
             print(error)
 
+    print("All pizzas in session are complete. nice job!")
 
     return

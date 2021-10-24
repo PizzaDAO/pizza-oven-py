@@ -91,5 +91,12 @@ class Settings(BaseSettings):
     DEFAULT_NATRON_PROJECT_PATH = os.environ["NATRON_PROJECT_PATH"]
     DEFAULT_NATRON_FRAME = 9
 
+    # Dropbox - natron testing
+    # SHOULD GO IN SECRETS??
+    DROPBOX_TOKEN = "8YmLqiwJ7a4AAAAAAAAAAYq1LToZ4GpTkJmNDEn-AGdUwJzkhx7lXkTwgEeqvFHV"
+
+    # Local Storage - Natron testing
+    KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
+
     class Config:
         case_sensitive = True
