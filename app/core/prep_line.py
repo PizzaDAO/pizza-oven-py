@@ -206,18 +206,22 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         selected_variants = select_from_variants(seed, nonce, variant_list, scope)
         # The number of instances we have to scatter
         num_of_instances = len(selected_variants)
-        # choose a scatter typee, partially influenced by the instance count
-        scatter_type = get_scatter_type(seed, nonce, num_of_instances)
 
-        # populate the scatter type with the selected_variants
-        if scatter_type == ScatterType.random:
-            instances = RandomScatter(seed, nonce).evaluate(selected_variants)
-        if scatter_type == ScatterType.grid:
-            instances = Grid(seed, nonce).evaluate(selected_variants)
-        if scatter_type == ScatterType.hero:
-            instances = Hero(seed, nonce).evaluate(selected_variants)
-        if scatter_type == ScatterType.treering:
-            instances = TreeRing(seed, nonce).evaluate(selected_variants)
+        instances = []
+        # Make sure we have instances to actually scatter
+        if num_of_instances > 0:
+            # choose a scatter typee, partially influenced by the instance count
+            scatter_type = get_scatter_type(seed, nonce, num_of_instances)
+
+            # populate the scatter type with the selected_variants
+            if scatter_type == ScatterType.random:
+                instances = RandomScatter(seed, nonce).evaluate(selected_variants)
+            if scatter_type == ScatterType.grid:
+                instances = Grid(seed, nonce).evaluate(selected_variants)
+            if scatter_type == ScatterType.hero:
+                instances = Hero(seed, nonce).evaluate(selected_variants)
+            if scatter_type == ScatterType.treering:
+                instances = TreeRing(seed, nonce).evaluate(selected_variants)
 
     return MadeIngredient(
         ingredient=scope.ingredient,

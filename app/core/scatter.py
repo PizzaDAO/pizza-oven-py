@@ -195,6 +195,10 @@ class Grid(Scatter):
 
         # The number of sections in the grid based on how many instances we will have
         line_count = ceil(sqrt(item_count))
+        # prevent divide by zero in case we try to build a grid with zero instances
+        if line_count < 1:
+            line_count = 1
+
         # The width of each cell in the grid
         item_width = inner_circle / line_count
 
