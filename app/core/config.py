@@ -86,14 +86,13 @@ class Settings(BaseSettings):
     PIZZA_INGREDIENTS_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
     TOPPINGS_RANGE_NAME = "ingredients-db"
 
+    # Dropbox - natron testing
+    DROPBOX_TOKEN = ""
+
     # Misc ENV VARS
     DEFAULT_NATRON_EXECUTABLE_PATH = os.environ["NATRON_PATH"]
     DEFAULT_NATRON_PROJECT_PATH = os.environ["NATRON_PROJECT_PATH"]
     DEFAULT_NATRON_FRAME = 9
-
-    # Dropbox - natron testing
-    # SHOULD GO IN SECRETS??
-    DROPBOX_TOKEN = "8YmLqiwJ7a4AAAAAAAAAAYq1LToZ4GpTkJmNDEn-AGdUwJzkhx7lXkTwgEeqvFHV"
 
     # Local Storage - Natron testing
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
