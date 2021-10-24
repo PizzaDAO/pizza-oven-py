@@ -84,14 +84,11 @@ spec:
             - name: pizza-oven
               containerPort: 8000
           volumeMounts:
-            - mountPath: secrets/firebase.json
-              subPath: firebase
+            - mountPath: /secrets
               name: firebase
-            - mountPath: secrets/sheets.json
-              subPath: sheets
+            - mountPath: /secrets
               name: sheets
-            - mountPath: secrets/credentials.json
-              subPath: credentials
+            - mountPath: /secrets
               name: credentials
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
@@ -100,7 +97,7 @@ spec:
           secret:
             items:
               - key: firebase.prod.json
-                path: firebase.prod.json
+                path: firebase.json
             secretName: pizza-oven-secret
         - name: sheets
           secret:

@@ -53,14 +53,11 @@ spec:
             - name: rinkeby
               containerPort: 6688
           volumeMounts:
-            - mountPath: /run/secrets/keystore
-              subPath: keystore
+            - mountPath: /run/secrets
               name: keystore
-            - mountPath: /run/secrets/password
-              subPath: password
+            - mountPath: /run/secrets
               name: password
-            - mountPath: /run/secrets/api
-              subPath: api
+            - mountPath: /run/secrets
               name: api
             - mountPath: /chainlink
               name: chainlink-rinkeby-pvc
@@ -71,19 +68,19 @@ spec:
           secret:
             items:
               - key: UTC--2021-05-01T18-03-43.214447000Z--bBa8473580dB06239f1383753e1ed714E4eEd6f5
-                path: UTC--2021-05-01T18-03-43.214447000Z--bBa8473580dB06239f1383753e1ed714E4eEd6f5
+                path: keystore
             secretName: pizza-oven-secret
         - name: password
           secret:
             items:
               - key: .chainlink.wallet.1.rinkeby
-                path: .chainlink.wallet.1.rinkeby
+                path: password
             secretName: pizza-oven-secret
         - name: api
           secret:
             items:
               - key: .chainlink.api.rinkeby
-                path: .chainlink.api.rinkeby
+                path: api
             secretName: pizza-oven-secret
         - name: chainlink-rinkeby-pvc
           persistentVolumeClaim:

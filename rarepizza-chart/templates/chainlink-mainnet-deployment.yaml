@@ -52,14 +52,11 @@ spec:
             - name: mainnet
               containerPort: 6688
           volumeMounts:
-            - mountPath: /run/secrets/keystore
-              subPath: keystore
+            - mountPath: /run/secrets
               name: keystore
-            - mountPath: /run/secrets/password
-              subPath: password
+            - mountPath: /run/secrets
               name: password
-            - mountPath: /run/secrets/api
-              subPath: api
+            - mountPath: /run/secrets
               name: api
             - mountPath: /chainlink
               name: chainlink-mainnet-pvc
@@ -67,22 +64,22 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
           - name: keystore
-          secret:
-            items:
-              - key: UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c
-                path: UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c
-            secretName: pizza-oven-secret
+            secret:
+              items:
+                - key: UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c
+                  path: keystore
+              secretName: pizza-oven-secret
           - name: password
             secret:
               items:
                 - key: .chainlink.wallet.1.mainnet
-                  path: .chainlink.wallet.1.mainnet
+                  path: password
               secretName: pizza-oven-secret
           - name: api
             secret:
               items:
                 - key: .chainlink.api.mainnet
-                  path: .chainlink.api.mainnet
+                  path: api
               secretName: pizza-oven-secret
           - name: chainlink-mainnet-pvc
             persistentVolumeClaim:
