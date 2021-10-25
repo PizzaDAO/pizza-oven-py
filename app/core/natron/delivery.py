@@ -81,6 +81,26 @@ class Delivery(NatronBase):
         self.setOutput(mergeNode)
 
     def setOutput(self, mergeNode):
+        # Start of node "FinalGrade" for colorcorrection
+        gradeNode = app.createNode("net.sf.openfx.GradePlugin", 2)
+        gradeNode.setScriptName("FinalGrade")
+        gradeNode.setLabel("FinalGrade")
+        gradeNode.setPosition(1069, 478)
+        gradeNode.setSize(104, 26)
+        gradeNode.setColor(0.48, 0.66, 1)
+        param = gradeNode.getParam("white")
+        if param is not None:
+            param.setValue(1.313, 0)
+            param.setValue(1.313, 1)
+            param.setValue(1.313, 2)
+            param.setValue(1.313, 3)
+        del param
+
+        param = gradeNode.getParam("premult")
+        if param is not None:
+            param.setValue(True)
+        del param
+
         # build writer node
         print(config.paths["output"] + self.out_file)
         writeNode = self.natron.createNode("fr.inria.built-in.Write", 1)
@@ -110,8 +130,9 @@ class Delivery(NatronBase):
             param.setValue(True)
             del param
 
-        # connect write node
-        writeNode.connectInput(0, mergeNode)
+        # connect everything up
+        gradeNode.connectInput(0, mergeNode)
+        writeNode.connectInput(0, gradeNode)
 
     def _load_json_data(self, env_var):
         """Load the json data, assign some common properties, and return the json"""
