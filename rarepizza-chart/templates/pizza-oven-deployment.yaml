@@ -29,6 +29,12 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.pizzaOven.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          resources:
+            requests:
+              memory: "8Gi"
+              cpu: "3000m"
+            limits:
+              memory: "15Gi"
           env:
             - name: PORT
               value: "8000"
