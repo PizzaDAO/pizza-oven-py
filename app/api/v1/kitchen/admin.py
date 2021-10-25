@@ -60,6 +60,7 @@ async def set_existing_render_task(
     which means it can succeed in the render but fail
     when posting the transaction back to the contract
     """
+    # TODO: update instead
     render_task = set_render_task(data)
     return render_task
 
@@ -69,7 +70,7 @@ async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse
     """rerun a specific render task"""
     render_task = get_render_task(job_id)
     if render_task is None:
-        print("re run render failed")
+        print(f"{job_id} - re run render failed to find job")
         return None
     return run_render_task(render_task.job_id, render_task)
 
@@ -81,7 +82,7 @@ async def rerun_existing_render_task_async(
     """rerun a specific render task asynchronously"""
     render_task = get_render_task(job_id)
     if render_task is None:
-        print("re run render failed")
+        print(f"{job_id} - re run render failed to find job")
         return None
 
     render_task.status = TaskStatus.new
