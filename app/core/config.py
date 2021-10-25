@@ -74,7 +74,7 @@ class Settings(BaseSettings):
     PINATA_API_SECRET = ""
 
     # Google Firebase
-    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.json"
+    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.dev.json"
 
     # Google Sheets
     # ingredients_db settings
@@ -86,10 +86,24 @@ class Settings(BaseSettings):
     PIZZA_INGREDIENTS_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
     TOPPINGS_RANGE_NAME = "ingredients-db"
 
+    # Dropbox - natron testing
+    DROPBOX_TOKEN = ""
+
     # Misc ENV VARS
     DEFAULT_NATRON_EXECUTABLE_PATH = os.environ["NATRON_PATH"]
     DEFAULT_NATRON_PROJECT_PATH = os.environ["NATRON_PROJECT_PATH"]
     DEFAULT_NATRON_FRAME = 9
+
+    # Local Storage - Natron testing
+    KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
+
+    # Pizza Oven Config
+    MIN_TOPPING_LAYER_COUNT = 1
+    MAX_TOPPING_LAYER_COUNT = 4
+    RARITY_WEIGHT_COMMON = 550
+    RARITY_WEIGHT_UNCOMMON = 340
+    RARITY_WEIGHT_RARE = 100
+    RARITY_WEIGHT_GRAIL = 10
 
     class Config:
         case_sensitive = True

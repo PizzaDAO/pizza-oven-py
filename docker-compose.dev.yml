@@ -26,33 +26,7 @@ services:
       - 8000:8000
     networks:
       - rare-pizzas
-    environment:
-      # API
-      API_MODE: $API_MODE
-      STORAGE_MODE: $STORAGE_MODE
-      PROJECT_NAME: "Rare Pizzas Kitchen"
-      # Ethereum
-      ETHEREUM_MODE: $ETHEREUM_MODE
-      ETHEREUM_RINKEBY_HTTP_SERVER: $ETHEREUM_RINKEBY_HTTP_SERVER
-      ETHEREUM_MUMBAI_HTTP_SERVER: $ETHEREUM_MUMBAI_HTTP_SERVER
-      ETHEREUM_MAINNET_HTTP_SERVER: $ETHEREUM_MAINNET_HTTP_SERVER
-      ETHEREUM_POLYGON_HTTP_SERVER: $ETHEREUM_POLYGON_HTTP_SERVER
-      ETHEREUM_TESTNET_ACCOUNT_ADDRESS: $ETHEREUM_TESTNET_ACCOUNT_ADDRESS
-      ETHEREUM_TESTNET_PRIVATE_KEY: $ETHEREUM_TESTNET_PRIVATE_KEY
-      ETHEREUM_MAINNET_ACCOUNT_ADDRESS: $ETHEREUM_MAINNET_ACCOUNT_ADDRESS
-      ETHEREUM_MAINNET_PRIVATE_KEY: $ETHEREUM_MAINNET_PRIVATE_KEY
-      ETHEREUM_TESTNET_CONTRACT_ADDRESS: $ETHEREUM_TESTNET_CONTRACT_ADDRESS
-      ETHEREUM_MAINNET_CONTRACT_ADDRESS: $ETHEREUM_MAINNET_CONTRACT_ADDRESS
-      # IPFS
-      IPFS_MODE: $IPFS_MODE
-      PINATA_API_KEY: $PINATA_API_KEY
-      PINATA_API_SECRET: $PINATA_API_SECRET
-      # GOOGLE
-      GOOGLE_APPLICATION_CREDENTIALS: $GOOGLE_APPLICATION_CREDENTIALS
-      GOOGLE_SHEETS_TOKEN_PATH: $GOOGLE_SHEETS_TOKEN_PATH
-      GOOGLE_SHEETS_CREDENTIALS_PATH: $GOOGLE_SHEETS_CREDENTIALS_PATH
-      # MISC
-      PORT: 8000
+    env_file: .env
 
   # Add IPFS node
   # only used during development
@@ -78,7 +52,7 @@ services:
     volumes:
       - ./database/db-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: ChainlinkRinkebyDB
+      POSTGRES_DB: $CHAINLINK_RINKEBY_DB_NAME
       POSTGRES_PASSWORD: $CHAINLINK_RINKEBY_DB_PASSWORD
     ports:
       - 5432:5432
@@ -108,7 +82,7 @@ services:
     build:
       context: ./chainlink
       target: dev
-    entrypoint: /bin/sh -c "chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
+    entrypoint: /bin/sh -c "chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
     volumes: # mount the working directory
       - "./chainlink/rinkeby:/chainlink"
     ports:
@@ -119,11 +93,11 @@ services:
       PORT: 6688
       LINK_CONTRACT_ADDRESS: $CHAINLINK_RINKEBY_TOKEN
       ETH_URL: $ETHEREUM_RINKEBY_SOCKET_SERVER
-      #ETH_SECONDARY_URL: TODO
-      DATABASE_URL: postgresql://$CHAINLINK_RINKEBY_DB_USERNAME:$CHAINLINK_RINKEBY_DB_PASSWORD@$CHAINLINK_RINKEBY_DATABASE_SERVER:5432/ChainlinkRinkebyDB?sslmode=disable
+      DATABASE_URL: postgresql://$CHAINLINK_RINKEBY_DB_USERNAME:$CHAINLINK_RINKEBY_DB_PASSWORD@$CHAINLINK_RINKEBY_DATABASE_SERVER:5432/$CHAINLINK_RINKEBY_DB_NAME?sslmode=disable
     env_file:
       - "./chainlink/.env"
     secrets:
+      - keystore
       - password
       - api
 
@@ -133,10 +107,12 @@ networks:
 
 # configure some dev secrets (insecure, don't use in prod)
 secrets:
+  keystore:
+    file: "./secrets/UTC--2021-05-01T18-03-43.214447000Z--bBa8473580dB06239f1383753e1ed714E4eEd6f5"
   password:
-    file: "./chainlink/.password"
+    file: "./secrets/.chainlink.wallet.1.rinkeby"
   api:
-    file: "./chainlink/.api.credentials.rinkeby"
+    file: "./secrets/.chainlink.api.rinkeby"
 
 volumes:
   chainlink-db-data:

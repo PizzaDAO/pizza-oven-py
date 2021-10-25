@@ -59,8 +59,10 @@ RUN chmod +x /start.sh
 RUN chmod +x /start-reload.sh
 
 # Create directories
+RUN mkdir -p /app/.cache
 RUN mkdir -p /app/logs
 RUN mkdir -p /app/data
+RUN mkdir -p /app/fonts
 RUN mkdir -p /app/natron
 RUN mkdir -p /app/ingredients-db
 RUN mkdir -p /app/output

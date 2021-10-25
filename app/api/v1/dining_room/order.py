@@ -197,7 +197,7 @@ def run_render_task(
 
     # check if the render task already has a random number
     # which can happen if the rerun is restarted
-    if render_task.random_number != None:
+    if render_task.random_number is not None:
         loaded_random = from_hex(render_task.random_number)
         print(f"rendering with render_task preloaded number: {loaded_random}")
         random_number = loaded_random
@@ -264,11 +264,6 @@ async def orderPizza(
     # TODO: validate caller has the correct inbound auth token
     print(request.headers)
     print(data)
-
-    # TODO ISSUE #32: cache a record of the incoming jobs
-    # and add an api to query them.
-    # allow for incomplete jobs to be queried and restarted.
-    # allow for more than one job to be queued at a time
 
     # cache the render task
     existing_job = get_render_task(data.id)

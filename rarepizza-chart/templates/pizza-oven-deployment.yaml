@@ -1,0 +1,135 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pizza-oven
+  labels:
+    {{- include "rarepizza.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "rarepizza.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        app.kubernetes.io/component: pizza-oven
+        {{- include "rarepizza.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      restartPolicy: Always
+      containers:
+        - name: pizza-oven
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.pizzaOven.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          resources:
+            requests:
+              memory: "8Gi"
+              cpu: "3000m"
+            limits:
+              memory: "15Gi"
+          env:
+            - name: PORT
+              value: "8000"
+            - name: ETHEREUM_MUMBAI_HTTP_SERVER
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MUMBAI_HTTP_SERVER
+            - name: ETHEREUM_POLYGON_HTTP_SERVER
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_POLYGON_HTTP_SERVER
+            - name: ETHEREUM_TESTNET_ACCOUNT_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_TESTNET_ACCOUNT_ADDRESS
+            - name: ETHEREUM_TESTNET_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_TESTNET_PRIVATE_KEY
+            - name: ETHEREUM_MAINNET_ACCOUNT_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MAINNET_ACCOUNT_ADDRESS
+            - name: ETHEREUM_MAINNET_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MAINNET_PRIVATE_KEY
+            - name: DROPBOX_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: DROPBOX_TOKEN
+            - name: PINATA_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: PINATA_API_KEY
+            - name: PINATA_API_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: PINATA_API_SECRET
+          envFrom:
+            - configMapRef:
+                name: pizza-oven-config
+          ports:
+            - name: pizza-oven
+              containerPort: 8000
+          volumeMounts:
+            - mountPath: "/app/secrets/firebase.json"
+              subPath: firebase.json
+              name: firebase
+              readOnly: true
+            - mountPath: "/app/secrets/sheets.json"
+              subPath: sheets.json
+              name: sheets
+              readOnly: true
+            - mountPath: "/app/secrets/credentials.json"
+              subPath: credentials.json
+              name: credentials
+              readOnly: true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: firebase
+          secret:
+            items:
+              - key: firebase.prod.json
+                path: firebase.json
+            secretName: pizza-oven-secret
+        - name: sheets
+          secret:
+            items:
+              - key: sheets.json
+                path: sheets.json
+            secretName: pizza-oven-secret
+        - name: credentials
+          secret:
+            items:
+              - key: credentials.json
+                path: credentials.json
+            secretName: pizza-oven-secret
+      nodeSelector: 
+        role: worker
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

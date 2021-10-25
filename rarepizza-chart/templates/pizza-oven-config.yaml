@@ -1,0 +1,25 @@
+apiVersion: v1
+data:
+  API_MODE: "production"
+  STORAGE_MODE: "firebase"
+  ETHEREUM_MODE: "testnet" # TODO: update to mainnet
+  IPFS_MODE: "pinata"
+  PROJECT_NAME: "Rare Pizzas Kitchen"
+  RENDER_TASK_TIMEOUT_IN_MINUTES: "15"
+  BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: "300"
+  ETHEREUM_TESTNET_CONTRACT_ADDRESS: "0x0f03E846492C704321dF4cEdF6FB07475F4A728A"
+  ETHEREUM_MAINNET_CONTRACT_ADDRESS: "" # TODO: update when deployed
+  GOOGLE_APPLICATION_CREDENTIALS: secrets/firebase.json
+  GOOGLE_SHEETS_TOKEN_PATH: secrets/sheets.json
+  GOOGLE_SHEETS_CREDENTIALS_PATH: secrets/credentials.json
+  MIN_TOPPING_LAYER_COUNT: "1"
+  MAX_TOPPING_LAYER_COUNT: "5"
+  RARITY_WEIGHT_COMMON: "550"
+  RARITY_WEIGHT_UNCOMMON: "340"
+  RARITY_WEIGHT_RARE: "100"
+  RARITY_WEIGHT_GRAIL: "10"
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/component: pizza-oven
+  name: pizza-oven-config
