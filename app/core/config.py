@@ -104,6 +104,7 @@ class Settings(BaseSettings):
     RARITY_WEIGHT_UNCOMMON = 340
     RARITY_WEIGHT_RARE = 100
     RARITY_WEIGHT_GRAIL = 10
+    LASTCHANCE_OCCURENCE_PERRCENTAGE = 20
 
     class Config:
         case_sensitive = True

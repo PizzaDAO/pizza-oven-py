@@ -30,7 +30,11 @@ from app.core.utils import clamp, to_hex
 from app.core.ingredients_db import get_variants_for_ingredient
 from app.core.rarity import select_from_variants, ingredient_with_rarity
 
+from app.core.config import Settings
+
 __all__ = ["reduce"]
+
+settings = Settings()
 
 
 def reduce(
@@ -93,11 +97,17 @@ def reduce(
     )
 
     # LASTCHANCE INGREDIENTS
-    sorted_lastchances_dict = sort_dict(recipe.lastchances)
-    lastchance_count_dict = {"lastchance": order_instructions.lastchance_count}
-    reduced_lastchances = select_ingredients(
-        random_seed, nonce, lastchance_count_dict, sorted_lastchances_dict
-    )
+    # decide whether or not there will be a lastchance
+    # some recipes have only a couple, and one will get select often, making a lot of pies with the same lastchance
+    # throttle the chances for a lastchance with a rarity value
+    sorted_lastchances_dict = {}
+    chance_for_lastchance = select_value(random_seed, nonce, (0, 100))
+    if chance_for_lastchance > settings.LASTCHANCE_OCCURENCE_PERRCENTAGE:
+        sorted_lastchances_dict = sort_dict(recipe.lastchances)
+        lastchance_count_dict = {"lastchance": order_instructions.lastchance_count}
+        reduced_lastchances = select_ingredients(
+            random_seed, nonce, lastchance_count_dict, sorted_lastchances_dict
+        )
 
     # SHUFFLER - pull out all the instances into  buffer that we can shuffle for depth swap
     # shuffled_instances = []
