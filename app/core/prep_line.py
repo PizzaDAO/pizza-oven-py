@@ -133,28 +133,57 @@ def reduce(
 
 def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -> dict:
     reduced_dict = {}
-
+    # keep track of the chosen ingredient IDs so we don't chose duplicates
+    # also use this list to order layers on the pie, lower IDs below higher IDs
+    chosen_ids = []
     for key in count_dict:
         if key in ingredient_dict.keys():
-            made_count = int(
-                count_dict[key]
-            )  # This is the number of ingredient layers per pizza
+            # This is the number of ingredient layers for this particular layer
+            made_count = int(count_dict[key])
             for i in range(0, made_count):
                 # select a topping based on rarity
                 values = list(ingredient_dict[key])
 
                 ingredient = ingredient_with_rarity(deterministic_seed, nonce, values)
                 identifier = key + str(i)
-                reduced_dict[identifier] = select_prep(
-                    deterministic_seed, nonce, ingredient
-                )
+                # Only add a topping once - if its already in the dict, don't add it
+                # This prevents a single ingredient being picked multiple times
+                ingredient_id = ingredient.ingredient.unique_id
+                if ingredient_id not in chosen_ids:
+                    reduced_dict[identifier] = select_prep(
+                        deterministic_seed, nonce, ingredient
+                    )
+                    chosen_ids.append(ingredient_id)
 
-                print(
-                    "We chose %s for the %s"
-                    % (reduced_dict[identifier].ingredient.name, key)
-                )
+                    print(
+                        "We chose %s for the %s"
+                        % (reduced_dict[identifier].ingredient.name, key)
+                    )
 
-    return reduced_dict
+            # Re-order the layer dict, sorted by ingredient ID - lower on the bottom
+            # rememeber: reduced_dict contains key/value pairs in the form of "topping0":MadeIngredient
+            # so we have to pull out the ingredient IDs from value pairs to re-order the layer stack
+            ordered_dict = {}
+            # sort the list of chosen IDs
+            chosen_ids.sort()
+            for id in chosen_ids:
+                layer_tuple = get_tuple_with_id(id, reduced_dict)
+                if layer_tuple:
+                    key = layer_tuple[0]
+                    val = layer_tuple[1]
+                    ordered_dict.update({key: val})
+
+    return ordered_dict
+
+
+def get_tuple_with_id(
+    unique_id: str, source_dict: Dict[str, MadeIngredient]
+) -> Optional[Tuple[str, MadeIngredient]]:
+    """convenience method to return a layer tuple with a specific ingredient ID"""
+    for (_, ingredient) in source_dict.items():
+        if unique_id == ingredient.ingredient.unique_id:
+            return (_, ingredient)
+    return None
 
 
 def sort_dict(ingredient_dict) -> dict:
