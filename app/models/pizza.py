@@ -1,4 +1,4 @@
-from typing import Dict, List, Union
+from typing import Dict, List, Union, Optional
 
 from app.models.base import Base
 from app.models.recipe import NutritionMetadata
@@ -12,6 +12,15 @@ ASSET_KEY = str
 class ERC721OpenSeaMetadataAttribute(Base):
     trait_type: str
     value: Union[str, int]
+
+class ERC721OpenSeaMetadataBoostAttribute(Base):
+    """For attributes to be displayed on a numeric or percentage scale"""
+    display_type: str
+    """Should be set to 'boost_number' or 'boost_percentage'"""
+    trait_type: str
+    value: int
+    max_value: Optional[int]
+    """Sets a ceiling to the scale, otherwise will be infered by max observer in rest of NFT collection."""
 
 
 class ERC721Metadata(Base):
@@ -32,7 +41,10 @@ class ERC721OpenSeaExtensions(Base):
     """This is the URL that will appear below the asset's image on OpenSea and view the item on your site."""
     background_color: str
     """Background color of the item on OpenSea. Must be a six-character hexadecimal without a pre-pended #."""
-    attributes: List[ERC721OpenSeaMetadataAttribute]
+    attributes: List[Union[
+        ERC721OpenSeaMetadataBoostAttribute,
+        ERC721OpenSeaMetadataAttribute,
+    ]]
     """These are the attributes for the item, which will show up on the OpenSea page for the item."""
 
 

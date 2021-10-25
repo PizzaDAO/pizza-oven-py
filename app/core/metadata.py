@@ -8,6 +8,7 @@ from app.models.pizza import (
     IngredientMetadata,
     NutritionMetadata,
     ERC721OpenSeaMetadataAttribute,
+    ERC721OpenSeaMetadataBoostAttribute
 )
 
 
@@ -16,6 +17,8 @@ def to_blockchain_metadata(
 ) -> RarePizzaMetadata:
     """create metadata from the recipe, order, and pizza render to make blockchain metadata"""
     ingredients: List[IngredientMetadata] = []
+    attributes: List[ERC721OpenSeaMetadataAttribute] = []
+    boost_attributes: List[ERC721OpenSeaMetadataBoostAttribute] = []
 
     for (_, value) in order.base_ingredients.items():
         ingredients.append(
@@ -26,8 +29,17 @@ def to_blockchain_metadata(
                 category=value.ingredient.category,
                 nutrition=value.ingredient.nutrition,
                 attributes=[
-                    ERC721OpenSeaMetadataAttribute(trait_type="todo", value="add some")
+                    ERC721OpenSeaMetadataAttribute(
+                        trait_type=value.ingredient.classification.name, 
+                        value=value.ingredient.name
+                        )
                 ],
+            )
+        )
+        attributes.append(
+            ERC721OpenSeaMetadataAttribute(
+                trait_type=value.ingredient.category.name,
+                value=value.ingredient.name,
             )
         )
 
@@ -40,26 +52,43 @@ def to_blockchain_metadata(
                 category=value.ingredient.category,
                 nutrition=value.ingredient.nutrition,
                 attributes=[
-                    ERC721OpenSeaMetadataAttribute(trait_type="todo", value="add some")
+                    ERC721OpenSeaMetadataAttribute(
+                        trait_type=value.ingredient.classification.name, 
+                        value=value.ingredient.name
+                        )
                 ],
             )
         )
+        attributes.append(
+            ERC721OpenSeaMetadataAttribute(
+                trait_type=value.ingredient.classification.name,
+                value=value.ingredient.name,
+            )
+        )
+    boost_attributes.append(
+        ERC721OpenSeaMetadataBoostAttribute(
+            display_type="boost_number",
+            trait_type=recipe.name, 
+            value=recipe.rarity_level
+            )
+    )
+    print(boost_attributes)
     ipfs_hash = pizza.assets["IPFS_HASH"]
-    return RarePizzaMetadata(
+    metadata =  RarePizzaMetadata(
         job_id=job_id,
         token_id=order.token_id,
-        name=recipe.name,
-        description="some description to be filled in later",
+        name=f"Rare Pizza #{order.token_id}",
+        description=f"A delicious {recipe.name} pizza. That's amore!",
         rarity_level=recipe.rarity_level,
         random_seed=order.random_seed,
         image=f"ipfs://{ipfs_hash}",
-        extension_uri=f"https://www.rarepizzas.com/pizzas/{ipfs_hash}/data",
-        external_url=f"https://www.rarepizzas.com/pizzas/{ipfs_hash}",
+        extension_uri=f"https://www.rarepizzas.com/pizzas/{order.token_id}/data",
+        external_url=f"https://www.rarepizzas.com/pizzas/{order.token_id}",
         background_color="ffffff",
         baking_temp_in_celsius=order.instructions.baking_temp_in_celsius,
         baking_time_in_minutes=order.instructions.baking_time_in_minutes,
         ingredients=ingredients,
-        attributes=[
-            ERC721OpenSeaMetadataAttribute(trait_type="TODO", value="add some")
-        ],
+        attributes=[attributes,boost_attributes],
     )
+    print(metadata.attributes)
+    return metadata
