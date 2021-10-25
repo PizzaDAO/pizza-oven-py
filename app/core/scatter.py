@@ -62,7 +62,7 @@ class Scatter:
         canvas = Canvas()
 
         # The circumference to use as a boundary - past this, reign it in
-        inner_circle = 2800
+        inner_circle = 2650
         inner_radius = inner_circle / 2
 
         translated_instances = []
@@ -128,6 +128,108 @@ class Hero(Scatter):
         return instances
 
 
+class FiveSpot(Scatter):
+    """Creates a pattern of five locations on the pie that can be randomized"""
+
+    def evaluate(
+        self, topping_list: List[ScopedIngredient]
+    ) -> List[MadeIngredientPrep]:
+
+        # The base locations we will use
+        locations = [(850, 850), (2222, 850), (2222, 2222), (850, 2222), (1536, 1536)]
+        # rarndomize list for variety of placements
+        locations = deterministic_shuffle(locations)
+
+        instances: List[MadeIngredientPrep] = []
+
+        for i in range(0, len(topping_list)):
+            ingredient = topping_list[i]
+            rotation = select_value(
+                self.random_seed, self.nonce, ingredient.scope.rotation
+            )
+            scale = select_value(
+                self.random_seed, self.nonce, ingredient.scope.particle_scale
+            )
+
+            # topping lists greater than five should not be passed to this scatter
+            # if it happens, ignore the excess instances - for now
+            if len(locations) > 0:
+                next_spot = locations.pop()
+                translation = self.randomize(next_spot)
+                instances.append(
+                    MadeIngredientPrep(
+                        translation=translation,
+                        rotation=rotation,
+                        scale=scale,
+                        image_uri=ingredient.ingredient.image_uris["filename"],
+                    )
+                )
+
+        instances = self.prevent_overflow(instances)
+
+        return instances
+
+    # a randmizer that will add jitter to each position
+    # when y values move more it looks better
+    def randomize(self, posiion: tuple) -> tuple:
+        randx = select_value(self.random_seed, self.nonce, (-5, 5))
+        randy = select_value(self.random_seed, self.nonce, (-5, 5))
+
+        return (posiion[0] + randx, posiion[1] + randy)
+
+
+class SpokeCluster(Scatter):
+    """Creates a pattern of instancies evenly distributed around a center with random radius"""
+
+    def evaluate(
+        self, topping_list: List[ScopedIngredient]
+    ) -> List[MadeIngredientPrep]:
+
+        instances: List[MadeIngredientPrep] = []
+
+        degree_int = (2 * PI) / len(topping_list)
+
+        inner_circle = 2800
+        # max radius is the inner circle minus half the scaled width - this preevents rings on the pie edge
+        max_radius = (inner_circle - 200) / 2
+
+        for i in range(0, len(topping_list)):
+            ingredient = topping_list[i]
+            rotation = select_value(
+                self.random_seed, self.nonce, ingredient.scope.rotation
+            )
+            scale = select_value(
+                self.random_seed, self.nonce, ingredient.scope.particle_scale
+            )
+
+            # radius min should be relative to scale size - bigger instances have bigger min radius
+            min_radius = 300 * scale
+
+            radius = select_value(
+                self.random_seed, self.nonce, (min_radius, max_radius)
+            )
+
+            spoke_angle = i * degree_int
+            x = radius * cos(spoke_angle)
+            y = radius * sin(spoke_angle)
+
+            next_spot = (x, y)
+            translation = self.translate_to_canvas(next_spot)
+
+            instances.append(
+                MadeIngredientPrep(
+                    translation=translation,
+                    rotation=rotation,
+                    scale=scale,
+                    image_uri=ingredient.ingredient.image_uris["filename"],
+                )
+            )
+
+        instances = self.prevent_overflow(instances)
+
+        return instances
+
+
 class Grid(Scatter):
     """Creates a grid pattern to distrubute toppins evenly - Grid is alwyas the same size and can have empty
     spots if there are fewer toppings to disburse"""
@@ -183,8 +285,8 @@ class Grid(Scatter):
     # a randmizer that will add jitter to each position
     # when y values move more it looks better
     def randomize(self, posiion: tuple) -> tuple:
-        randx = select_value(self.random_seed, self.nonce, (-75, 75))
-        randy = select_value(self.random_seed, self.nonce, (-55, 95))
+        randx = select_value(self.random_seed, self.nonce, (-95, 95))
+        randy = select_value(self.random_seed, self.nonce, (-95, 95))
 
         return (posiion[0] + randx, posiion[1] + randy)
 
@@ -262,13 +364,24 @@ class TreeRing(Scatter):
         instance_scale = topping_list[0].scope.particle_scale[1]
 
         # choose a random radius for the ring
-        min_radius = 400.0
+        min_radius = 100.0
         # max radius is the inner circle minus half the scaled width - this preevents rings on the pie edge
-        max_radius = inner_circle - (((instance_scale * 1024) / 2) / 2)
+        max_radius = (inner_circle - ((instance_scale * 1024) / 2)) / 2
         # make radius with respect to instance scale
         # larger instances should have larger radius to accmodate
         scaled_radius = instance_scale * (max_radius - min_radius)
         radius = min_radius + scaled_radius
+
+        # if we have a small ingredient, let the ring change in diameter, there should be room
+        variance = 1 - instance_scale
+        if variance > 0.5:
+            radius_variance = select_value(
+                self.random_seed, self.nonce, (0, variance * max_radius)
+            )
+        else:
+            radius_variance = 0
+
+        radius = radius + radius_variance
 
         for i in range(0, len(topping_list)):
             ingredient = topping_list[i]

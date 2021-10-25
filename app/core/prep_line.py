@@ -25,7 +25,7 @@ from app.core.random_num import (
     select_value,
 )
 import json
-from app.core.scatter import Grid, Hero, RandomScatter, TreeRing
+from app.core.scatter import FiveSpot, Grid, Hero, RandomScatter, SpokeCluster, TreeRing
 from app.core.utils import clamp, to_hex
 from app.core.ingredients_db import get_variants_for_ingredient
 from app.core.rarity import select_from_variants, ingredient_with_rarity
@@ -133,6 +133,7 @@ def reduce(
 
 def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -> dict:
     reduced_dict = {}
+    ordered_dict = {}
     # keep track of the chosen ingredient IDs so we don't chose duplicates
     # also use this list to order layers on the pie, lower IDs below higher IDs
     chosen_ids = []
@@ -163,7 +164,7 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
             # Re-order the layer dict, sorted by ingredient ID - lower on the bottom
             # rememeber: reduced_dict contains key/value pairs in the form of "topping0":MadeIngredient
             # so we have to pull out the ingredient IDs from value pairs to re-order the layer stack
-            ordered_dict = {}
+
             # sort the list of chosen IDs
             chosen_ids.sort()
             for id in chosen_ids:
@@ -262,6 +263,10 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
                 instances = Hero(seed, nonce).evaluate(selected_variants)
             if scatter_type == ScatterType.treering:
                 instances = TreeRing(seed, nonce).evaluate(selected_variants)
+            if scatter_type == ScatterType.fivespot:
+                instances = FiveSpot(seed, nonce).evaluate(selected_variants)
+            if scatter_type == ScatterType.spokecluster:
+                instances = SpokeCluster(seed, nonce).evaluate(selected_variants)
 
     return MadeIngredient(
         ingredient=scope.ingredient,
@@ -276,21 +281,36 @@ def get_scatter_type(seed, nonce, num_of_instances: int) -> ScatterType:
 
     scatter_roll = select_value(seed, nonce, (0, 100))
 
-    if scatter_roll > 80:
-        # 20% treeRing
-        scatter_type = ScatterType.treering
-    if scatter_roll < 80 and scatter_roll > 40:
-        # 40% Grid
-        scatter_type = ScatterType.grid
-    if scatter_roll < 40:
-        # 40% Random
-        scatter_type = ScatterType.random
-
-    if num_of_instances > 1 and num_of_instances < 7:
-        scatter_type = ScatterType.random
-
     if num_of_instances == 1:
         scatter_type = ScatterType.hero
+
+    elif num_of_instances > 1 and num_of_instances <= 5:
+        if scatter_roll < 20:
+            # 20% random
+            scatter_type = ScatterType.random
+        if scatter_roll > 20 and scatter_roll < 60:
+            # 40% Spokecluster
+            scatter_type = ScatterType.spokecluster
+        if scatter_roll > 60:
+            # 40% Random
+            scatter_type = ScatterType.fivespot
+
+    elif num_of_instances > 5:
+        if scatter_roll < 10:
+            # 10% random
+            scatter_type = ScatterType.random
+
+        if scatter_roll > 10 and scatter_roll < 40:
+            # 30% Grid
+            scatter_type = ScatterType.grid
+
+        if scatter_roll > 40 and scatter_roll < 70:
+            # 30% random
+            scatter_type = ScatterType.spokecluster
+
+        if scatter_roll > 70:
+            # 30% Random
+            scatter_type = ScatterType.treering
 
     return scatter_type
 

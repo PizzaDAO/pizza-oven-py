@@ -95,6 +95,8 @@ class ScatterType(IntFlag):
     grid = 512
     treering = 1024
     hero = 2048
+    fivespot = 3000
+    spokecluster = 4000
 
 
 def scatter_to_string(scatter_type: Optional[ScatterType]) -> str:
@@ -107,6 +109,10 @@ def scatter_to_string(scatter_type: Optional[ScatterType]) -> str:
         c = "treering"
     if scatter_type == ScatterType.hero:
         c = "hero"
+    if scatter_type == ScatterType.fivespot:
+        c = "fivespot"
+    if scatter_type == ScatterType.spokecluster:
+        c = "spokecluster"
     return c
 
 
