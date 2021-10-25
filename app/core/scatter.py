@@ -258,15 +258,17 @@ class TreeRing(Scatter):
         # the circumference of the circle we will place instances - just inside the crust
         inner_circle = 2800
 
+        # maximum scale for this ingredient
+        instance_scale = topping_list[0].scope.particle_scale[1]
+
         # choose a random radius for the ring
-        min_radius = 250.0
-        max_radius = (
-            inner_circle / 2
-        )  # might be a better way to calculat this, take into account the particle size
-        radius = min_radius + (
-            get_random_deterministic_float(self.random_seed, self.nonce)
-            * (max_radius - min_radius)
-        )
+        min_radius = 400.0
+        # max radius is the inner circle minus half the scaled width - this preevents rings on the pie edge
+        max_radius = inner_circle - (((instance_scale * 1024) / 2) / 2)
+        # make radius with respect to instance scale
+        # larger instances should have larger radius to accmodate
+        scaled_radius = instance_scale * (max_radius - min_radius)
+        radius = min_radius + scaled_radius
 
         for i in range(0, len(topping_list)):
             ingredient = topping_list[i]
