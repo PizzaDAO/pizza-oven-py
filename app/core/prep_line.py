@@ -100,9 +100,10 @@ def reduce(
     # decide whether or not there will be a lastchance
     # some recipes have only a couple, and one will get select often, making a lot of pies with the same lastchance
     # throttle the chances for a lastchance with a rarity value
-    sorted_lastchances_dict = {}
+    reduced_lastchances = {}
     chance_for_lastchance = select_value(random_seed, nonce, (0, 100))
-    if chance_for_lastchance > settings.LASTCHANCE_OCCURENCE_PERRCENTAGE:
+    # if the random number is under the defined percentege its a go - lastchance added
+    if chance_for_lastchance < settings.LASTCHANCE_OCCURENCE_PERCENTAGE:
         sorted_lastchances_dict = sort_dict(recipe.lastchances)
         lastchance_count_dict = {"lastchance": order_instructions.lastchance_count}
         reduced_lastchances = select_ingredients(
