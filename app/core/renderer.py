@@ -286,8 +286,11 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
+        padded_token_id = str(self.frame).zfill(4)
         layer_string = str(ingredient.ingredient.index).zfill(2)
-        file_path = os.path.join(cache_dir, f"layer-{layer_string}.json")
+        file_path = os.path.join(
+            cache_dir, f"{padded_token_id}-layer-{layer_string}.json"
+        )
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as ingredient_file:
@@ -305,8 +308,11 @@ class Renderer:
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
+        padded_token_id = str(self.frame).zfill(4)
         layer_string = str(layer.index).zfill(2)
-        file_path = os.path.join(cache_dir, f"layer-{layer_string}.json")
+        file_path = os.path.join(
+            cache_dir, f"{padded_token_id}-layer-{layer_string}.json"
+        )
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
