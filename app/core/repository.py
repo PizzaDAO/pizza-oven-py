@@ -199,7 +199,7 @@ def set_kitchen_order(order: KitchenOrder) -> str:
         print("pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
-        ).pin_json_to_ipfs(json_string)["IpfsHash"]
+        ).pin_json_to_ipfs(order.dict())["IpfsHash"]
     else:
         print("pinning not implemented")
         return ""
@@ -223,7 +223,7 @@ def set_pizza(pizza: HotPizza) -> str:
         print("pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
-        ).pin_json_to_ipfs(json_string)["IpfsHash"]
+        ).pin_json_to_ipfs(pizza.dict())["IpfsHash"]
     else:
         print("pinning not implemented")
         return ""
@@ -285,7 +285,7 @@ def set_metadata(metadata: RarePizzaMetadata) -> str:
         print("pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
-        ).pin_json_to_ipfs(json_string)["IpfsHash"]
+        ).pin_json_to_ipfs(metadata.dict())["IpfsHash"]
     else:
         print("pinning not implemented")
         return ""
