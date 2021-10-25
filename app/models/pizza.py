@@ -13,8 +13,10 @@ class ERC721OpenSeaMetadataAttribute(Base):
     trait_type: str
     value: Union[str, int]
 
+
 class ERC721OpenSeaMetadataBoostAttribute(Base):
     """For attributes to be displayed on a numeric or percentage scale"""
+
     display_type: str
     """Should be set to 'boost_number' or 'boost_percentage'"""
     trait_type: str
@@ -32,6 +34,11 @@ class ERC721Metadata(Base):
     """This is the URL to the image of the item."""
 
 
+METADATA_ATTRIBUTE = Union[
+    ERC721OpenSeaMetadataBoostAttribute, ERC721OpenSeaMetadataAttribute
+]
+
+
 class ERC721OpenSeaExtensions(Base):
     """
     https://docs.opensea.io/docs/metadata-standards
@@ -41,10 +48,7 @@ class ERC721OpenSeaExtensions(Base):
     """This is the URL that will appear below the asset's image on OpenSea and view the item on your site."""
     background_color: str
     """Background color of the item on OpenSea. Must be a six-character hexadecimal without a pre-pended #."""
-    attributes: List[Union[
-        ERC721OpenSeaMetadataBoostAttribute,
-        ERC721OpenSeaMetadataAttribute,
-    ]]
+    attributes: List[METADATA_ATTRIBUTE]
     """These are the attributes for the item, which will show up on the OpenSea page for the item."""
 
 
