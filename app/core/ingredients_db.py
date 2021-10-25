@@ -76,6 +76,7 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
     # trying to get it from the file system
     # this code is a bit hacky and is done to maintain compatibility
     creds = None
+
     internal_gsheets_creds = get_gsheets_token()
     if internal_gsheets_creds is not None:
         print("found cached Gsheets auth credentials in the datastore")
@@ -89,17 +90,40 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
             expiry=internal_gsheets_creds.expiry.replace(tzinfo=None),
         )
 
-    if creds is None and os.path.exists(settings.GOOGLE_SHEETS_TOKEN_PATH):
-        print("Gsheet Auth not found in server instance, falling back to file system")
+    if creds is not None:
+        print("refreshing cached Gsheets auth token using the refresh token")
+        try:
+            creds.refresh(Request())
+        except Exception as error:
+            print(error)
+
+    if (creds is None or not creds.valid) and os.path.exists(
+        settings.GOOGLE_SHEETS_TOKEN_PATH
+    ):
+        print(
+            "Gsheet Auth not found or invalid in server instance, falling back to file system"
+        )
         creds = Credentials.from_authorized_user_file(
             settings.GOOGLE_SHEETS_TOKEN_PATH, scopes
         )
+
+        if creds is not None:
+            print("refreshing cached Gsheets auth token using the refresh token")
+            try:
+                creds.refresh(Request())
+            except Exception as error:
+                print(error)
+
     # If there are no (valid) credentials available, let the user log in.
     # BUT this will fail in Docker ENV
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             print("refreshing gsheets auth token using the refresh token")
-            creds.refresh(Request())
+            try:
+                creds.refresh(Request())
+            except Exception as error:
+                print(error)
+                return
         else:
             print("trying to refresh auth token with installed app flow")
             flow = InstalledAppFlow.from_client_secrets_file(
@@ -107,6 +131,8 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
             )
             creds = flow.run_local_server(port=0)
 
+    if creds and creds.valid:
+        print("updating credentials")
         # Save the credentials for the next run
         internal_creds = GSheetsToken(
             token=creds.token,
@@ -118,8 +144,11 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
             expiry=creds.expiry.replace(tzinfo=None),
         )
         set_gsheets_token(internal_creds)
-        with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
-            token.write(creds.to_json())
+        try:
+            with open(settings.GOOGLE_SHEETS_TOKEN_PATH, "w") as token:
+                token.write(creds.to_json())
+        except:
+            print("could not write to google sheet token: read only filesystem")
 
     DIMENSION = "ROWS"  # default is ROWS
     # Better way to do this
@@ -278,7 +307,7 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """parse ScopedIngredient from a row in the database"""
 
-    category = row["category"]
+    category = parse_first_word(row["category"])
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
@@ -342,9 +371,11 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
 
             base_categories = ["box", "paper", "crust", "sauce", "cheese"]
             special_categories = ["lastchance"]
+            # need to pull out primary category - the first word before the first dash
+            primary_category = parse_first_word(row["category"])
             if (
-                row["category"] in base_categories
-                or row["category"] in special_categories
+                primary_category in base_categories
+                or primary_category in special_categories
             ):
                 scope.particle_scale = get_scale_values(
                     inches, inch_variance, BASE_PIXEL_SIZE
@@ -377,7 +408,7 @@ def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     return (min_scale, max_scale)
 
 
-def parse_id(text) -> str:
+def parse_first_word(text) -> str:
     words = text.split("-")
     id_string = words[0]
 
@@ -398,7 +429,7 @@ def parse_column(
         # Hacky test to make sure we are not parsing a blank cell in the spreadsheet
         if "-" in line:
             # pull out the unique_id for each ingredient
-            unique_id = parse_id(line)
+            unique_id = parse_first_word(line)
 
             if ingredients.get(unique_id):
                 ingredient = ingredients[unique_id]
@@ -435,8 +466,11 @@ def parse_column(
             crust_count=1,
             sauce_count=[1, 1],
             cheese_count=[1, 1],
-            topping_count=[1, 8],
-            lastchance_count=[0, 2],
+            topping_count=[
+                settings.MIN_TOPPING_LAYER_COUNT,
+                settings.MAX_TOPPING_LAYER_COUNT,
+            ],
+            lastchance_count=[0, 1],
             baking_temp_in_celsius=[395, 625],
             baking_time_in_minutes=[5, 10],
         ),

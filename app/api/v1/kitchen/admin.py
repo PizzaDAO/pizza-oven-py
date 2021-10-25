@@ -10,7 +10,7 @@ from app.api.v1.dining_room.order import run_render_task
 
 from app.core.repository import *
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
-from app.models.render_task import RenderTask
+from app.models.render_task import RenderTask, TaskStatus
 from app.models.order import OrderPizzaResponse
 
 from ..tags import ADMIN
@@ -83,6 +83,9 @@ async def rerun_existing_render_task_async(
     if render_task is None:
         print("re run render failed")
         return None
+
+    render_task.status = TaskStatus.new
+    set_render_task(render_task)
 
     response = OrderPizzaResponse(jobRunID=render_task.job_id, pending=True)
     background_tasks.add_task(run_render_task, render_task.job_id, render_task)
