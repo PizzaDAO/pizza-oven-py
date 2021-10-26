@@ -10,8 +10,9 @@ from app.core.ingredients_db import save_ingredients
 from app.models.recipe import *
 from app.core.repository import get_recipe
 
-lOCAL_RECIPES_PATH = "data/recipes/"
-lOCAL_INGREDIENT_DB_PATH = "data/ingredients/"
+from app.core.config import Settings
+
+settings = Settings()
 
 
 def get_pizza_recipe(recipe_id: int) -> Recipe:
@@ -53,12 +54,12 @@ def load_recipes() -> Tuple[List[str], Dict]:
     recipes_dict = {}
     recipe_names = []
 
-    if not exists(lOCAL_RECIPES_PATH):
+    # if it doesnt exist try to load it
+    if not exists(settings.lOCAL_RECIPES_PATH):
         ingredients = read_ingredients()
 
-        if not path.exists(lOCAL_INGREDIENT_DB_PATH + "ingredient_db.json"):
-            print("Loading and saving the ingredient db")
-            save_ingredients(ingredients)
+        print("Loading and saving the ingredient db")
+        save_ingredients(ingredients)
 
         recipes = read_recipes(ingredients)
         for _, recipe in recipes.items():
@@ -67,15 +68,15 @@ def load_recipes() -> Tuple[List[str], Dict]:
     try:
         file_list = [
             f
-            for f in listdir(lOCAL_RECIPES_PATH)
-            if isfile(join(lOCAL_RECIPES_PATH, f))
+            for f in listdir(settings.lOCAL_RECIPES_PATH)
+            if isfile(join(settings.lOCAL_RECIPES_PATH, f))
         ]
-    except Exception as e:
+    except Exception as error:
         print("Can't get list of recipe files")
     finally:
         for file in file_list:
             try:
-                f = open(lOCAL_RECIPES_PATH + file)
+                f = open(path.join(settings.lOCAL_RECIPES_PATH, file))
                 contents = json.load(f)
                 name = _remove_exts(file)
                 recipes_dict.update({name: contents})

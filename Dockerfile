@@ -65,7 +65,6 @@ RUN mkdir -p /app/data
 RUN mkdir -p /app/fonts
 RUN mkdir -p /app/natron
 RUN mkdir -p /app/ingredients-db
-RUN mkdir -p /app/output
 RUN mkdir -p /app/secrets
 
 WORKDIR /app
@@ -82,7 +81,6 @@ VOLUME [ "/app/data" ]
 VOLUME [ "/app/fonts" ]
 VOLUME [ "/app/natron" ]
 VOLUME [ "/app/ingredients-db" ]
-VOLUME [ "/app/output" ]
 VOLUME [ "/app/secrets" ]
 CMD /start-reload.sh
 
@@ -93,6 +91,5 @@ COPY ./data /app/data
 COPY ./fonts /app/fonts
 COPY ./natron /app/natron
 COPY ./ingredients-db /app/ingredients-db
-COPY ./output /app/output
 COPY ./secrets /app/secrets
 CMD ["/start.sh"]
