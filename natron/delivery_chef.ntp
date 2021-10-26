@@ -163,7 +163,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-00.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-00.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -442,7 +442,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-01.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-01.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -721,7 +721,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-02.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-02.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1000,7 +1000,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-03.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-03.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1279,7 +1279,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-04.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-04.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1576,7 +1576,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-05.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-05.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1873,7 +1873,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-06.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-06.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -2170,7 +2170,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-07.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-07.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -2467,7 +2467,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####-layer-08.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-08.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -2749,7 +2749,7 @@ Molto Bene and happy pizza making
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../output/####.png</Value>
+					<Value>[Project]/../.cache/output/####.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -8601,7 +8601,7 @@ for i in xrange(0,count+1):
 
     param = lastNode.getParam(&quot;filename&quot;)
     if param is not None:
-        filename = &quot;&quot;&quot;[Project]/../output/%s-layer-%s.png&quot;&quot;&quot; % (&quot;&quot;&quot;####&quot;&quot;&quot;, layer)
+        filename = &quot;&quot;&quot;[Project]/../.cache/output/%s-layer-%s.png&quot;&quot;&quot; % (&quot;&quot;&quot;####&quot;&quot;&quot;, layer)
         param.setValue(filename)
         del param
 
@@ -8639,7 +8639,7 @@ if param is not None:
 
 param = writeNode.getParam(&quot;filename&quot;)
 if param is not None:
-    param.setValue(&quot;[Project]/../output/####.png&quot;)
+    param.setValue(&quot;[Project]/../.cache/output/####.png&quot;)
     del param
 
 param = writeNode.getParam(&quot;NatronParamFormatChoice&quot;)
