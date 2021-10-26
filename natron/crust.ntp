@@ -1819,7 +1819,7 @@ Crust
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>5</KnobsCount>
+			<KnobsCount>6</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -1839,6 +1839,24 @@ Crust
 					<count>0</count>
 					<item_version>0</item_version>
 				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -1914,7 +1932,7 @@ Crust
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>4</count>
+				<count>5</count>
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
@@ -1931,6 +1949,10 @@ Crust
 				<item>
 					<first>A4</first>
 					<second>Switch_1020</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Merge4</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>8</KnobsAge>
@@ -43993,7 +44015,7 @@ ret = y_new
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+00</Value>
+						<Value>8.14620000000000011e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
@@ -44994,7 +45016,7 @@ ret = y_new
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+00</Value>
+						<Value>8.14620000000000011e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
@@ -55890,7 +55912,7 @@ ret = y_new
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+00</Value>
+						<Value>8.14620000000000011e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
@@ -56157,7 +56179,7 @@ ret = y_new
 					<item>
 						<Enabled>0</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+00</Value>
+						<Value>8.14620000000000011e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>1</HasMaster>
 						<Master>
@@ -117119,7 +117141,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Oct 25 17:20:59 2021</Value>
+			<Value>Mon Oct 25 17:43:32 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -126763,9 +126785,9 @@ ret = y_new
 			<X_position>1.38746259559577084e+03</X_position>
 			<Y_position>-3.27058077673147454e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
-			<r>7.000076175e-01</r>
-			<g>7.000076175e-01</g>
-			<b>7.000076175e-01</b>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
 			<Selected>0</Selected>
 			<Width>1.04000000000000000e+02</Width>
 			<Height>2.60000000000000000e+01</Height>
@@ -126776,12 +126798,12 @@ ret = y_new
 				<X_position>6.42000000000000000e+02</X_position>
 				<Y_position>1.75000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>3.098039329e-01</r>
-				<g>5.215991735e-01</g>
+				<r>3.000076413e-01</r>
+				<g>5.000076294e-01</g>
 				<b>2.000000030e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>2.60000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -126790,12 +126812,12 @@ ret = y_new
 				<X_position>6.42000000000000000e+02</X_position>
 				<Y_position>2.47000000000000000e+02</Y_position>
 				<Preview_enabled>0</Preview_enabled>
-				<r>7.000076175e-01</r>
-				<g>7.000076175e-01</g>
-				<b>7.000076175e-01</b>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
-				<Height>2.60000000000000000e+01</Height>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -126876,7 +126898,7 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1480 798</Sizes>
+				<Sizes>1481 797</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
@@ -126920,7 +126942,7 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-1804</x>
+			<x>-2359</x>
 			<y>-297</y>
 			<w>2314</w>
 			<h>1360</h>
@@ -126932,9 +126954,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-5.83910671701451975e+03</zoomLeft>
-				<zoomBottom>-5.89127407900423691e+02</zoomBottom>
-				<zoomFactor>9.42070231183465834e-02</zoomFactor>
+				<zoomLeft>-2.32496371248114701e+03</zoomLeft>
+				<zoomBottom>1.35161608301111187e+02</zoomBottom>
+				<zoomFactor>1.62760416666666935e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
