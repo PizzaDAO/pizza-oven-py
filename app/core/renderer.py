@@ -407,7 +407,7 @@ class Renderer:
     def flatten_image(self, layers: List[str], order: KitchenOrder) -> str:
         """flatten the image layers into a single image and return its filename"""
 
-        print("flatten_image")
+        print(f"{self.job_id} - flatten_image")
         print(layers)
 
         # cache the layer manifest no natron knows how to read it
@@ -445,7 +445,7 @@ class Renderer:
 
     def render_pizza(self, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
-        print("render_pizza")
+        print(f"{self.job_id} - render_pizza")
         rendered_layer_files: List[str] = []
 
         layer_index = 0
