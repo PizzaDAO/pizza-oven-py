@@ -1,7 +1,7 @@
 {
-    "token_id": 0,
+    "token_id": 1,
     "name": "4010-salami",
-    "random_seed": "8493E986",
+    "random_seed": "05206DAC",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -221,8 +221,8 @@
                 "variant_id": "1",
                 "index": 1,
                 "name": "pesto",
-                "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -286,13 +286,13 @@
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3031",
-                "ingredient_id": "303",
-                "variant_id": "1",
+                "unique_id": "3020",
+                "ingredient_id": "302",
+                "variant_id": "0",
                 "index": 1,
-                "name": "smokedmozzarella",
-                "ingredient_rarity": 2,
-                "variant_rarity": 1,
+                "name": "ricotta",
+                "ingredient_rarity": 1,
+                "variant_rarity": 5,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3031-cheese-smokedmozzarella.png",
+                    "filename": "3020-cheese-ricotta.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8888888888888888,
-                    "image_uri": "3031-cheese-smokedmozzarella.png"
+                    "scale": 1.0,
+                    "image_uri": "3020-cheese-ricotta.png"
                 }
             ],
             "scatter_type": 1
@@ -363,7 +363,7 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "salami",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -419,8 +419,8 @@
                         788.3333333333334,
                         933.3333333333334
                     ],
-                    "rotation": 95.33596837944663,
-                    "scale": 0.7036231884057971,
+                    "rotation": -46.95652173913044,
+                    "scale": 0.7024374176548089,
                     "image_uri": "4010-topping-meat-salami.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -83.9525691699605,
-                    "scale": 0.6992753623188406,
+                    "rotation": -212.01581027667984,
+                    "scale": 0.6502635046113308,
                     "image_uri": "4010-topping-meat-salami.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         1721.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": 163.63636363636363,
-                    "scale": 0.7063899868247694,
+                    "rotation": -320.15810276679844,
+                    "scale": 0.6814888010540184,
                     "image_uri": "4010-topping-meat-salami.png"
                 }
             ],
@@ -451,7 +451,7 @@
                 "variant_id": "1",
                 "index": 1,
                 "name": "salami",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 1,
                 "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-meat",
@@ -507,8 +507,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": 271.77865612648225,
-                    "scale": 0.941699604743083,
+                    "rotation": 9.960474308300434,
+                    "scale": 1.0319499341238472,
                     "image_uri": "4011-topping-meat-salami.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": -294.54545454545456,
-                    "scale": 1.0359025032938076,
+                    "rotation": -328.69565217391306,
+                    "scale": 0.9634387351778656,
                     "image_uri": "4011-topping-meat-salami.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         2655.0,
                         933.3333333333334
                     ],
-                    "rotation": 300.2371541501976,
-                    "scale": 0.962121212121212,
+                    "rotation": 152.2529644268775,
+                    "scale": 0.9627799736495388,
                     "image_uri": "4011-topping-meat-salami.png"
                 }
             ],
@@ -539,7 +539,7 @@
                 "variant_id": "2",
                 "index": 1,
                 "name": "salami",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 1,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-meat",
@@ -595,8 +595,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -342.92490118577075,
-                    "scale": 0.6265480895915678,
+                    "rotation": 69.72332015810275,
+                    "scale": 0.6407773386034256,
                     "image_uri": "4012-topping-meat-salami.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 305.92885375494075,
-                    "scale": 0.6905797101449276,
+                    "rotation": 348.61660079051387,
+                    "scale": 0.6336627140974967,
                     "image_uri": "4012-topping-meat-salami.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -325.8498023715415,
-                    "scale": 0.6842555994729907,
+                    "rotation": -27.035573122529627,
+                    "scale": 0.6478919631093545,
                     "image_uri": "4012-topping-meat-salami.png"
                 }
             ],
@@ -628,8 +628,8 @@
                 788.3333333333334,
                 933.3333333333334
             ],
-            "rotation": 95.33596837944663,
-            "scale": 0.7036231884057971,
+            "rotation": -46.95652173913044,
+            "scale": 0.7024374176548089,
             "image_uri": "4010-topping-meat-salami.png"
         },
         {
@@ -637,8 +637,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": -83.9525691699605,
-            "scale": 0.6992753623188406,
+            "rotation": -212.01581027667984,
+            "scale": 0.6502635046113308,
             "image_uri": "4010-topping-meat-salami.png"
         },
         {
@@ -646,8 +646,8 @@
                 1721.6666666666667,
                 933.3333333333334
             ],
-            "rotation": 163.63636363636363,
-            "scale": 0.7063899868247694,
+            "rotation": -320.15810276679844,
+            "scale": 0.6814888010540184,
             "image_uri": "4010-topping-meat-salami.png"
         },
         {
@@ -655,8 +655,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": 271.77865612648225,
-            "scale": 0.941699604743083,
+            "rotation": 9.960474308300434,
+            "scale": 1.0319499341238472,
             "image_uri": "4011-topping-meat-salami.png"
         },
         {
@@ -664,8 +664,8 @@
                 1721.6666666666667,
                 2800.0
             ],
-            "rotation": -294.54545454545456,
-            "scale": 1.0359025032938076,
+            "rotation": -328.69565217391306,
+            "scale": 0.9634387351778656,
             "image_uri": "4011-topping-meat-salami.png"
         },
         {
@@ -673,8 +673,8 @@
                 2655.0,
                 933.3333333333334
             ],
-            "rotation": 300.2371541501976,
-            "scale": 0.962121212121212,
+            "rotation": 152.2529644268775,
+            "scale": 0.9627799736495388,
             "image_uri": "4011-topping-meat-salami.png"
         },
         {
@@ -682,8 +682,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": -342.92490118577075,
-            "scale": 0.6265480895915678,
+            "rotation": 69.72332015810275,
+            "scale": 0.6407773386034256,
             "image_uri": "4012-topping-meat-salami.png"
         },
         {
@@ -691,8 +691,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 305.92885375494075,
-            "scale": 0.6905797101449276,
+            "rotation": 348.61660079051387,
+            "scale": 0.6336627140974967,
             "image_uri": "4012-topping-meat-salami.png"
         },
         {
@@ -700,8 +700,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -325.8498023715415,
-            "scale": 0.6842555994729907,
+            "rotation": -27.035573122529627,
+            "scale": 0.6478919631093545,
             "image_uri": "4012-topping-meat-salami.png"
         }
     ],

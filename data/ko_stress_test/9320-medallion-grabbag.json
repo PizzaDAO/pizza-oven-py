@@ -1,62 +1,62 @@
 {
-    "token_id": 0,
+    "token_id": 312,
     "name": "9320-medallion-grabbag",
-    "random_seed": "C118066C",
+    "random_seed": "11FDFFD4",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0000",
-                "ingredient_id": "000",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 0,
+                "name": "cardboard",
+                "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 90.0,
-                    "mass": 994.0,
-                    "calories": 92.0,
-                    "vitamin_c": 1.0,
-                    "magnesium": 2.0,
-                    "vitamin_b5": 3.0,
-                    "vitamin_d": 4.0,
-                    "vitamin_b7": 5.0,
-                    "height": 10.0,
-                    "moisture": 11.0,
-                    "potassium": 10.0,
-                    "cholesterol": 15.0,
-                    "vitamin_a": 16.0,
-                    "dietary_fiber": 16.0,
-                    "vitamin_b6": 17.0,
-                    "sugar": 20.0,
-                    "protein": 21.0,
-                    "iron": 25.0,
-                    "complex_carb": 30.0,
-                    "selenium": 31.0,
-                    "vitamin_k": 32.0,
-                    "vitamin_b12": 40.0,
-                    "calories_from_fat": 41.0,
-                    "vitamin_e": 42.0,
-                    "zinc": 50.0,
-                    "saturated_fat": 51.0,
-                    "iodine": 52.0,
-                    "trans_fat": 60.0,
-                    "sodium": 61.0,
-                    "monosaturated_fat": 62.0,
-                    "calcium": 63.0,
-                    "riboflavin": 70.0,
-                    "thiamin": 71.0,
-                    "folate": 72.0,
-                    "added_sugar": 23.0,
-                    "chromium": 22.0,
-                    "manganese": 24.0
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0000-box-white.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0000-box-white.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0532",
-                "ingredient_id": "053",
-                "variant_id": "2",
+                "unique_id": "0510",
+                "ingredient_id": "051",
+                "variant_id": "0",
                 "index": 1,
-                "name": "cherry-code",
+                "name": "greenchecker",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0532-paper-cherry-code.png",
+                    "filename": "0510-paper-greenchecker.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0532-paper-cherry-code.png"
+                    "image_uri": "0510-paper-greenchecker.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1040",
-                "ingredient_id": "104",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "castle",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1040-crust-castle.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1040-crust-castle.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2071",
-                "ingredient_id": "207",
-                "variant_id": "1",
+                "unique_id": "2010",
+                "ingredient_id": "201",
+                "variant_id": "0",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "pesto",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2071-sauce-prismicfluid.png",
+                    "filename": "2010-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2071-sauce-prismicfluid.png"
+                    "image_uri": "2010-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3032",
-                "ingredient_id": "303",
-                "variant_id": "2",
+                "unique_id": "3080",
+                "ingredient_id": "308",
+                "variant_id": "0",
                 "index": 1,
-                "name": "smokedmozzarella",
-                "ingredient_rarity": 2,
-                "variant_rarity": 1,
+                "name": "fetabits",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3032-cheese-smokedmozzarella.png",
+                    "filename": "3080-cheese-fetabits.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.6111111111111112,
-                    "image_uri": "3032-cheese-smokedmozzarella.png"
+                    "scale": 0.8888888888888888,
+                    "image_uri": "3080-cheese-fetabits.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         611.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": -49.80237154150194,
-                    "scale": 0.625,
+                    "rotation": -4.2687747035573125,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9320-topping-omakase-sanitized-medallion-grabbag.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         321.6666666666667,
                         1400.0
                     ],
-                    "rotation": -35.57312252964425,
-                    "scale": 0.625,
+                    "rotation": -55.49407114624506,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9320-topping-omakase-sanitized-medallion-grabbag.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         611.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": 209.16996047430825,
-                    "scale": 0.625,
+                    "rotation": 101.02766798418969,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9320-topping-omakase-sanitized-medallion-grabbag.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         788.3333333333334,
                         466.6666666666667
                     ],
-                    "rotation": 69.72332015810275,
-                    "scale": 0.625,
+                    "rotation": -64.03162055335969,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9321-topping-omakase-sanitized-medallion-subatomicparticles.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1078.3333333333335,
                         933.3333333333334
                     ],
-                    "rotation": 323.0039525691699,
-                    "scale": 0.625,
+                    "rotation": -303.0830039525692,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9321-topping-omakase-sanitized-medallion-subatomicparticles.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         788.3333333333334,
                         1400.0
                     ],
-                    "rotation": -106.71936758893278,
-                    "scale": 0.625,
+                    "rotation": -286.00790513833994,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9321-topping-omakase-sanitized-medallion-subatomicparticles.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -217.70750988142294,
-                    "scale": 0.625,
+                    "rotation": -132.3320158102767,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9322-topping-omakase-sanitized-medallion-rosepetals.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         788.3333333333334,
                         2333.3333333333335
                     ],
-                    "rotation": 149.40711462450594,
-                    "scale": 0.625,
+                    "rotation": 132.33201581027674,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9322-topping-omakase-sanitized-medallion-rosepetals.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1078.3333333333335,
                         2800.0
                     ],
-                    "rotation": -212.01581027667984,
-                    "scale": 0.625,
+                    "rotation": -214.86166007905138,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9322-topping-omakase-sanitized-medallion-rosepetals.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1255.0,
                         466.6666666666667
                     ],
-                    "rotation": 311.62055335968387,
-                    "scale": 0.625,
+                    "rotation": 223.399209486166,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1545.0,
                         933.3333333333334
                     ],
-                    "rotation": 180.71146245059288,
-                    "scale": 0.625,
+                    "rotation": -337.2332015810277,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -214.86166007905138,
-                    "scale": 0.625,
+                    "rotation": 183.55731225296438,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         1545.0,
                         1866.6666666666667
                     ],
-                    "rotation": -175.01976284584978,
-                    "scale": 0.625,
+                    "rotation": 277.47035573122525,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9324-topping-omakase-sanitized-medallion-rainbowspiders.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         1255.0,
                         2333.3333333333335
                     ],
-                    "rotation": -135.17786561264825,
-                    "scale": 0.625,
+                    "rotation": 72.56916996047431,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9324-topping-omakase-sanitized-medallion-rainbowspiders.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -83.9525691699605,
-                    "scale": 0.625,
+                    "rotation": -18.49802371541506,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9324-topping-omakase-sanitized-medallion-rainbowspiders.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         1721.6666666666667,
                         466.6666666666667
                     ],
-                    "rotation": 55.49407114624506,
-                    "scale": 0.625,
+                    "rotation": 260.3952569169961,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2011.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": 75.41501976284582,
-                    "scale": 0.625,
+                    "rotation": -217.70750988142294,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         1721.6666666666667,
                         1400.0
                     ],
-                    "rotation": 129.48616600790513,
-                    "scale": 0.625,
+                    "rotation": 200.63241106719363,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
                 }
             ],
@@ -947,8 +947,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": -234.7826086956522,
-                    "scale": 0.625,
+                    "rotation": -291.699604743083,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
                 },
                 {
@@ -956,8 +956,8 @@
                         1721.6666666666667,
                         2333.3333333333335
                     ],
-                    "rotation": -92.49011857707507,
-                    "scale": 0.625,
+                    "rotation": 180.71146245059288,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
                 },
                 {
@@ -965,8 +965,8 @@
                         2188.3333333333335,
                         466.6666666666667
                     ],
-                    "rotation": 314.46640316205537,
-                    "scale": 0.625,
+                    "rotation": -146.56126482213438,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
                 }
             ],
@@ -1035,8 +1035,8 @@
                         2478.3333333333335,
                         933.3333333333334
                     ],
-                    "rotation": 192.094861660079,
-                    "scale": 0.625,
+                    "rotation": -209.16996047430828,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
                 },
                 {
@@ -1044,8 +1044,8 @@
                         2188.3333333333335,
                         1400.0
                     ],
-                    "rotation": 229.09090909090912,
-                    "scale": 0.625,
+                    "rotation": -192.09486166007903,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
                 },
                 {
@@ -1053,8 +1053,8 @@
                         2478.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": 32.72727272727269,
-                    "scale": 0.625,
+                    "rotation": -291.699604743083,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
                 }
             ],
@@ -1123,8 +1123,8 @@
                         2188.3333333333335,
                         2333.3333333333335
                     ],
-                    "rotation": -223.39920948616603,
-                    "scale": 0.625,
+                    "rotation": 3.675889328063242,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
                 },
                 {
@@ -1132,8 +1132,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -155.098814229249,
-                    "scale": 0.625,
+                    "rotation": 22.411067193675883,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
                 },
                 {
@@ -1141,8 +1141,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -243.3201581027668,
-                    "scale": 0.625,
+                    "rotation": -22.88537549407115,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
                 }
             ],
@@ -1211,8 +1211,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -115.25691699604744,
-                    "scale": 0.625,
+                    "rotation": -27.628458498023715,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9329-topping-omakase-sanitized-medallion-jalapenoworm.png"
                 },
                 {
@@ -1220,8 +1220,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -18.49802371541506,
-                    "scale": 0.625,
+                    "rotation": -3.4387351778656132,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9329-topping-omakase-sanitized-medallion-jalapenoworm.png"
                 },
                 {
@@ -1229,8 +1229,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -4.2687747035573125,
-                    "scale": 0.625,
+                    "rotation": -23.83399209486166,
+                    "scale": 0.5499999999999999,
                     "image_uri": "9329-topping-omakase-sanitized-medallion-jalapenoworm.png"
                 }
             ],
@@ -1244,8 +1244,8 @@
                 611.6666666666667,
                 933.3333333333334
             ],
-            "rotation": -49.80237154150194,
-            "scale": 0.625,
+            "rotation": -4.2687747035573125,
+            "scale": 0.5499999999999999,
             "image_uri": "9320-topping-omakase-sanitized-medallion-grabbag.png"
         },
         {
@@ -1253,8 +1253,8 @@
                 321.6666666666667,
                 1400.0
             ],
-            "rotation": -35.57312252964425,
-            "scale": 0.625,
+            "rotation": -55.49407114624506,
+            "scale": 0.5499999999999999,
             "image_uri": "9320-topping-omakase-sanitized-medallion-grabbag.png"
         },
         {
@@ -1262,8 +1262,8 @@
                 611.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": 209.16996047430825,
-            "scale": 0.625,
+            "rotation": 101.02766798418969,
+            "scale": 0.5499999999999999,
             "image_uri": "9320-topping-omakase-sanitized-medallion-grabbag.png"
         },
         {
@@ -1271,8 +1271,8 @@
                 788.3333333333334,
                 466.6666666666667
             ],
-            "rotation": 69.72332015810275,
-            "scale": 0.625,
+            "rotation": -64.03162055335969,
+            "scale": 0.5499999999999999,
             "image_uri": "9321-topping-omakase-sanitized-medallion-subatomicparticles.png"
         },
         {
@@ -1280,8 +1280,8 @@
                 1078.3333333333335,
                 933.3333333333334
             ],
-            "rotation": 323.0039525691699,
-            "scale": 0.625,
+            "rotation": -303.0830039525692,
+            "scale": 0.5499999999999999,
             "image_uri": "9321-topping-omakase-sanitized-medallion-subatomicparticles.png"
         },
         {
@@ -1289,8 +1289,8 @@
                 788.3333333333334,
                 1400.0
             ],
-            "rotation": -106.71936758893278,
-            "scale": 0.625,
+            "rotation": -286.00790513833994,
+            "scale": 0.5499999999999999,
             "image_uri": "9321-topping-omakase-sanitized-medallion-subatomicparticles.png"
         },
         {
@@ -1298,8 +1298,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": -217.70750988142294,
-            "scale": 0.625,
+            "rotation": -132.3320158102767,
+            "scale": 0.5499999999999999,
             "image_uri": "9322-topping-omakase-sanitized-medallion-rosepetals.png"
         },
         {
@@ -1307,44 +1307,44 @@
                 788.3333333333334,
                 2333.3333333333335
             ],
-            "rotation": 149.40711462450594,
-            "scale": 0.625,
+            "rotation": 132.33201581027674,
+            "scale": 0.5499999999999999,
             "image_uri": "9322-topping-omakase-sanitized-medallion-rosepetals.png"
         },
         {
             "translation": [
                 1078.3333333333335,
                 2800.0
-            ],
-            "rotation": -212.01581027667984,
-            "scale": 0.625,
-            "image_uri": "9322-topping-omakase-sanitized-medallion-rosepetals.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                466.6666666666667
-            ],
-            "rotation": 311.62055335968387,
-            "scale": 0.625,
-            "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                933.3333333333334
-            ],
-            "rotation": 180.71146245059288,
-            "scale": 0.625,
-            "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
             ],
             "rotation": -214.86166007905138,
-            "scale": 0.625,
+            "scale": 0.5499999999999999,
+            "image_uri": "9322-topping-omakase-sanitized-medallion-rosepetals.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                466.6666666666667
+            ],
+            "rotation": 223.399209486166,
+            "scale": 0.5499999999999999,
+            "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                933.3333333333334
+            ],
+            "rotation": -337.2332015810277,
+            "scale": 0.5499999999999999,
+            "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                1400.0
+            ],
+            "rotation": 183.55731225296438,
+            "scale": 0.5499999999999999,
             "image_uri": "9323-topping-omakase-sanitized-medallion-rosepetals.png"
         },
         {
@@ -1352,8 +1352,8 @@
                 1545.0,
                 1866.6666666666667
             ],
-            "rotation": -175.01976284584978,
-            "scale": 0.625,
+            "rotation": 277.47035573122525,
+            "scale": 0.5499999999999999,
             "image_uri": "9324-topping-omakase-sanitized-medallion-rainbowspiders.png"
         },
         {
@@ -1361,135 +1361,9 @@
                 1255.0,
                 2333.3333333333335
             ],
-            "rotation": -135.17786561264825,
-            "scale": 0.625,
+            "rotation": 72.56916996047431,
+            "scale": 0.5499999999999999,
             "image_uri": "9324-topping-omakase-sanitized-medallion-rainbowspiders.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                2800.0
-            ],
-            "rotation": -83.9525691699605,
-            "scale": 0.625,
-            "image_uri": "9324-topping-omakase-sanitized-medallion-rainbowspiders.png"
-        },
-        {
-            "translation": [
-                1721.6666666666667,
-                466.6666666666667
-            ],
-            "rotation": 55.49407114624506,
-            "scale": 0.625,
-            "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
-        },
-        {
-            "translation": [
-                2011.6666666666667,
-                933.3333333333334
-            ],
-            "rotation": 75.41501976284582,
-            "scale": 0.625,
-            "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
-        },
-        {
-            "translation": [
-                1721.6666666666667,
-                1400.0
-            ],
-            "rotation": 129.48616600790513,
-            "scale": 0.625,
-            "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
-        },
-        {
-            "translation": [
-                2011.6666666666667,
-                1866.6666666666667
-            ],
-            "rotation": -234.7826086956522,
-            "scale": 0.625,
-            "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
-        },
-        {
-            "translation": [
-                1721.6666666666667,
-                2333.3333333333335
-            ],
-            "rotation": -92.49011857707507,
-            "scale": 0.625,
-            "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
-        },
-        {
-            "translation": [
-                2188.3333333333335,
-                466.6666666666667
-            ],
-            "rotation": 314.46640316205537,
-            "scale": 0.625,
-            "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
-        },
-        {
-            "translation": [
-                2478.3333333333335,
-                933.3333333333334
-            ],
-            "rotation": 192.094861660079,
-            "scale": 0.625,
-            "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
-        },
-        {
-            "translation": [
-                2188.3333333333335,
-                1400.0
-            ],
-            "rotation": 229.09090909090912,
-            "scale": 0.625,
-            "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
-        },
-        {
-            "translation": [
-                2478.3333333333335,
-                1866.6666666666667
-            ],
-            "rotation": 32.72727272727269,
-            "scale": 0.625,
-            "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
-        },
-        {
-            "translation": [
-                2188.3333333333335,
-                2333.3333333333335
-            ],
-            "rotation": -223.39920948616603,
-            "scale": 0.625,
-            "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -155.098814229249,
-            "scale": 0.625,
-            "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -243.3201581027668,
-            "scale": 0.625,
-            "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
-            ],
-            "rotation": -115.25691699604744,
-            "scale": 0.625,
-            "image_uri": "9329-topping-omakase-sanitized-medallion-jalapenoworm.png"
         },
         {
             "translation": [
@@ -1497,7 +1371,133 @@
                 2800.0
             ],
             "rotation": -18.49802371541506,
-            "scale": 0.625,
+            "scale": 0.5499999999999999,
+            "image_uri": "9324-topping-omakase-sanitized-medallion-rainbowspiders.png"
+        },
+        {
+            "translation": [
+                1721.6666666666667,
+                466.6666666666667
+            ],
+            "rotation": 260.3952569169961,
+            "scale": 0.5499999999999999,
+            "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
+        },
+        {
+            "translation": [
+                2011.6666666666667,
+                933.3333333333334
+            ],
+            "rotation": -217.70750988142294,
+            "scale": 0.5499999999999999,
+            "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
+        },
+        {
+            "translation": [
+                1721.6666666666667,
+                1400.0
+            ],
+            "rotation": 200.63241106719363,
+            "scale": 0.5499999999999999,
+            "image_uri": "9325-topping-omakase-sanitized-medallion-rainbowspiders.png"
+        },
+        {
+            "translation": [
+                2011.6666666666667,
+                1866.6666666666667
+            ],
+            "rotation": -291.699604743083,
+            "scale": 0.5499999999999999,
+            "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
+        },
+        {
+            "translation": [
+                1721.6666666666667,
+                2333.3333333333335
+            ],
+            "rotation": 180.71146245059288,
+            "scale": 0.5499999999999999,
+            "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
+        },
+        {
+            "translation": [
+                2188.3333333333335,
+                466.6666666666667
+            ],
+            "rotation": -146.56126482213438,
+            "scale": 0.5499999999999999,
+            "image_uri": "9326-topping-omakase-sanitized-medallion-starshrimp.png"
+        },
+        {
+            "translation": [
+                2478.3333333333335,
+                933.3333333333334
+            ],
+            "rotation": -209.16996047430828,
+            "scale": 0.5499999999999999,
+            "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
+        },
+        {
+            "translation": [
+                2188.3333333333335,
+                1400.0
+            ],
+            "rotation": -192.09486166007903,
+            "scale": 0.5499999999999999,
+            "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
+        },
+        {
+            "translation": [
+                2478.3333333333335,
+                1866.6666666666667
+            ],
+            "rotation": -291.699604743083,
+            "scale": 0.5499999999999999,
+            "image_uri": "9327-topping-omakase-sanitized-medallion-starshrimp.png"
+        },
+        {
+            "translation": [
+                2188.3333333333335,
+                2333.3333333333335
+            ],
+            "rotation": 3.675889328063242,
+            "scale": 0.5499999999999999,
+            "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                1400.0
+            ],
+            "rotation": 22.411067193675883,
+            "scale": 0.5499999999999999,
+            "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                1400.0
+            ],
+            "rotation": -22.88537549407115,
+            "scale": 0.5499999999999999,
+            "image_uri": "9328-topping-omakase-sanitized-medallion-jalapenoworm.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                1400.0
+            ],
+            "rotation": -27.628458498023715,
+            "scale": 0.5499999999999999,
+            "image_uri": "9329-topping-omakase-sanitized-medallion-jalapenoworm.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                2800.0
+            ],
+            "rotation": -3.4387351778656132,
+            "scale": 0.5499999999999999,
             "image_uri": "9329-topping-omakase-sanitized-medallion-jalapenoworm.png"
         },
         {
@@ -1505,8 +1505,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -4.2687747035573125,
-            "scale": 0.625,
+            "rotation": -23.83399209486166,
+            "scale": 0.5499999999999999,
             "image_uri": "9329-topping-omakase-sanitized-medallion-jalapenoworm.png"
         }
     ],

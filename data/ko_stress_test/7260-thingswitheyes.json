@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 240,
     "name": "7260-thingswitheyes",
-    "random_seed": "883C0C6C",
+    "random_seed": "B1DCF904",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0541",
-                "ingredient_id": "054",
-                "variant_id": "1",
+                "unique_id": "0510",
+                "ingredient_id": "051",
+                "variant_id": "0",
                 "index": 1,
-                "name": "blackberry-code",
+                "name": "greenchecker",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0541-paper-blackberry-code.png",
+                    "filename": "0510-paper-greenchecker.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0541-paper-blackberry-code.png"
+                    "image_uri": "0510-paper-greenchecker.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2073",
-                "ingredient_id": "207",
-                "variant_id": "3",
+                "unique_id": "2010",
+                "ingredient_id": "201",
+                "variant_id": "0",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "pesto",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2073-sauce-prismicfluid.png",
+                    "filename": "2010-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,19 +279,19 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2073-sauce-prismicfluid.png"
+                    "image_uri": "2010-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3050",
-                "ingredient_id": "305",
+                "unique_id": "3080",
+                "ingredient_id": "308",
                 "variant_id": "0",
                 "index": 1,
-                "name": "tvaruzek",
-                "ingredient_rarity": 2,
+                "name": "fetabits",
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3050-cheese-tvaruzek.png",
+                    "filename": "3080-cheese-fetabits.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.8888888888888888,
-                    "image_uri": "3050-cheese-tvaruzek.png"
+                    "image_uri": "3080-cheese-fetabits.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         555.0,
                         700.0
                     ],
-                    "rotation": 7.114624505928873,
-                    "scale": 0.5381422924901185,
+                    "rotation": 123.79446640316206,
+                    "scale": 0.4895256916996047,
                     "image_uri": "7260-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         845.0,
                         1400.0
                     ],
-                    "rotation": 163.63636363636363,
-                    "scale": 0.5191699604743083,
+                    "rotation": 146.56126482213443,
+                    "scale": 0.5333992094861659,
                     "image_uri": "7260-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         555.0,
                         2100.0
                     ],
-                    "rotation": 237.62845849802375,
-                    "scale": 0.49110671936758893,
+                    "rotation": 152.2529644268775,
+                    "scale": 0.45197628458498024,
                     "image_uri": "7260-topping-misc-thingswitheyes.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         1255.0,
                         700.0
                     ],
-                    "rotation": 92.49011857707512,
-                    "scale": 0.39314888010540183,
+                    "rotation": 29.881422924901187,
+                    "scale": 0.41054018445322793,
                     "image_uri": "7261-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1545.0,
                         1400.0
                     ],
-                    "rotation": 163.63636363636363,
-                    "scale": 0.37615283267457184,
+                    "rotation": 180.71146245059288,
+                    "scale": 0.43425559947299075,
                     "image_uri": "7261-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         1255.0,
                         2100.0
                     ],
-                    "rotation": 254.70355731225288,
-                    "scale": 0.4093544137022398,
+                    "rotation": -21.343873517786562,
+                    "scale": 0.42911725955204216,
                     "image_uri": "7261-topping-misc-thingswitheyes.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 61.18577075098813,
-                    "scale": 0.4346508563899868,
+                    "rotation": 214.86166007905138,
+                    "scale": 0.39156785243741765,
                     "image_uri": "7262-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1955.0,
                         700.0
                     ],
-                    "rotation": -55.49407114624506,
-                    "scale": 0.3733860342555995,
+                    "rotation": 266.0869565217391,
+                    "scale": 0.46587615283267453,
                     "image_uri": "7262-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2245.0,
                         1400.0
                     ],
-                    "rotation": -55.49407114624506,
-                    "scale": 0.46271409749670617,
+                    "rotation": 237.62845849802375,
+                    "scale": 0.4129117259552042,
                     "image_uri": "7262-topping-misc-thingswitheyes.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1955.0,
                         2100.0
                     ],
-                    "rotation": -257.5494071146245,
-                    "scale": 0.37615283267457184,
+                    "rotation": -41.26482213438737,
+                    "scale": 0.36903820816864297,
                     "image_uri": "7263-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         2655.0,
                         2100.0
                     ],
-                    "rotation": 12.806324110671937,
-                    "scale": 0.45955204216073775,
+                    "rotation": -27.035573122529627,
+                    "scale": 0.39077733860342556,
                     "image_uri": "7263-topping-misc-thingswitheyes.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -101.02766798418975,
-                    "scale": 0.3682476943346509,
+                    "rotation": -49.80237154150194,
+                    "scale": 0.377733860342556,
                     "image_uri": "7263-topping-misc-thingswitheyes.png"
                 }
             ],
@@ -716,8 +716,8 @@
                 555.0,
                 700.0
             ],
-            "rotation": 7.114624505928873,
-            "scale": 0.5381422924901185,
+            "rotation": 123.79446640316206,
+            "scale": 0.4895256916996047,
             "image_uri": "7260-topping-misc-thingswitheyes.png"
         },
         {
@@ -725,8 +725,8 @@
                 845.0,
                 1400.0
             ],
-            "rotation": 163.63636363636363,
-            "scale": 0.5191699604743083,
+            "rotation": 146.56126482213443,
+            "scale": 0.5333992094861659,
             "image_uri": "7260-topping-misc-thingswitheyes.png"
         },
         {
@@ -734,8 +734,8 @@
                 555.0,
                 2100.0
             ],
-            "rotation": 237.62845849802375,
-            "scale": 0.49110671936758893,
+            "rotation": 152.2529644268775,
+            "scale": 0.45197628458498024,
             "image_uri": "7260-topping-misc-thingswitheyes.png"
         },
         {
@@ -743,8 +743,8 @@
                 1255.0,
                 700.0
             ],
-            "rotation": 92.49011857707512,
-            "scale": 0.39314888010540183,
+            "rotation": 29.881422924901187,
+            "scale": 0.41054018445322793,
             "image_uri": "7261-topping-misc-thingswitheyes.png"
         },
         {
@@ -752,8 +752,8 @@
                 1545.0,
                 1400.0
             ],
-            "rotation": 163.63636363636363,
-            "scale": 0.37615283267457184,
+            "rotation": 180.71146245059288,
+            "scale": 0.43425559947299075,
             "image_uri": "7261-topping-misc-thingswitheyes.png"
         },
         {
@@ -761,8 +761,8 @@
                 1255.0,
                 2100.0
             ],
-            "rotation": 254.70355731225288,
-            "scale": 0.4093544137022398,
+            "rotation": -21.343873517786562,
+            "scale": 0.42911725955204216,
             "image_uri": "7261-topping-misc-thingswitheyes.png"
         },
         {
@@ -770,8 +770,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 61.18577075098813,
-            "scale": 0.4346508563899868,
+            "rotation": 214.86166007905138,
+            "scale": 0.39156785243741765,
             "image_uri": "7262-topping-misc-thingswitheyes.png"
         },
         {
@@ -779,8 +779,8 @@
                 1955.0,
                 700.0
             ],
-            "rotation": -55.49407114624506,
-            "scale": 0.3733860342555995,
+            "rotation": 266.0869565217391,
+            "scale": 0.46587615283267453,
             "image_uri": "7262-topping-misc-thingswitheyes.png"
         },
         {
@@ -788,8 +788,8 @@
                 2245.0,
                 1400.0
             ],
-            "rotation": -55.49407114624506,
-            "scale": 0.46271409749670617,
+            "rotation": 237.62845849802375,
+            "scale": 0.4129117259552042,
             "image_uri": "7262-topping-misc-thingswitheyes.png"
         },
         {
@@ -797,8 +797,8 @@
                 1955.0,
                 2100.0
             ],
-            "rotation": -257.5494071146245,
-            "scale": 0.37615283267457184,
+            "rotation": -41.26482213438737,
+            "scale": 0.36903820816864297,
             "image_uri": "7263-topping-misc-thingswitheyes.png"
         },
         {
@@ -806,8 +806,8 @@
                 2655.0,
                 2100.0
             ],
-            "rotation": 12.806324110671937,
-            "scale": 0.45955204216073775,
+            "rotation": -27.035573122529627,
+            "scale": 0.39077733860342556,
             "image_uri": "7263-topping-misc-thingswitheyes.png"
         },
         {
@@ -815,8 +815,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -101.02766798418975,
-            "scale": 0.3682476943346509,
+            "rotation": -49.80237154150194,
+            "scale": 0.377733860342556,
             "image_uri": "7263-topping-misc-thingswitheyes.png"
         }
     ],

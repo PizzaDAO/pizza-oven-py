@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 249,
     "name": "7360-frenchfry",
-    "random_seed": "843B7E6B",
+    "random_seed": "76858389",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0500",
-                "ingredient_id": "050",
+                "unique_id": "0520",
+                "ingredient_id": "052",
                 "variant_id": "0",
                 "index": 1,
-                "name": "redchecker",
+                "name": "doodle",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0500-paper-redchecker.png",
+                    "filename": "0520-paper-doodle.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0500-paper-redchecker.png"
+                    "image_uri": "0520-paper-doodle.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1020",
-                "ingredient_id": "102",
+                "unique_id": "1050",
+                "ingredient_id": "105",
                 "variant_id": "0",
                 "index": 1,
-                "name": "moon",
+                "name": "whitebread",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1020-crust-moon.png",
+                    "filename": "1050-crust-whitebread.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1020-crust-moon.png"
+                    "image_uri": "1050-crust-whitebread.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2070",
+                "unique_id": "2072",
                 "ingredient_id": "207",
-                "variant_id": "0",
+                "variant_id": "2",
                 "index": 1,
                 "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2070-sauce-prismicfluid.png",
+                    "filename": "2072-sauce-prismicfluid.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2070-sauce-prismicfluid.png"
+                    "image_uri": "2072-sauce-prismicfluid.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3191",
+                "unique_id": "3194",
                 "ingredient_id": "319",
-                "variant_id": "1",
+                "variant_id": "4",
                 "index": 1,
                 "name": "gruyere",
                 "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3191-cheese-gruyere.png",
+                    "filename": "3194-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.7777777777777778,
-                    "image_uri": "3191-cheese-gruyere.png"
+                    "image_uri": "3194-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": 340.07905138339925,
-                    "scale": 0.6375164690382081,
+                    "rotation": -1.4229249011857519,
+                    "scale": 0.7050395256916997,
                     "image_uri": "7360-topping-misc-frenchfry.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": -214.86166007905138,
-                    "scale": 0.6546442687747036,
+                    "rotation": -314.4664031620553,
+                    "scale": 0.6836297760210804,
                     "image_uri": "7360-topping-misc-frenchfry.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": -254.70355731225297,
-                    "scale": 0.6819828722002635,
+                    "rotation": -231.93675889328063,
+                    "scale": 0.6908761528326746,
                     "image_uri": "7360-topping-misc-frenchfry.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": -197.78656126482213,
-                    "scale": 0.4708498023715415,
+                    "rotation": 214.86166007905138,
+                    "scale": 0.5103754940711462,
                     "image_uri": "7361-topping-misc-frenchfry.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": -254.70355731225297,
-                    "scale": 0.5077404479578392,
+                    "rotation": -291.699604743083,
+                    "scale": 0.47710803689064557,
                     "image_uri": "7361-topping-misc-frenchfry.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": -331.54150197628456,
-                    "scale": 0.4767786561264822,
+                    "rotation": 345.77075098814225,
+                    "scale": 0.5307971014492754,
                     "image_uri": "7361-topping-misc-frenchfry.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": -260.39525691699606,
-                    "scale": 0.6398221343873518,
+                    "rotation": -325.8498023715415,
+                    "scale": 0.6846179183135706,
                     "image_uri": "7362-topping-misc-frenchfry.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": 152.2529644268775,
-                    "scale": 0.6661725955204216,
+                    "rotation": 277.47035573122525,
+                    "scale": 0.6688076416337286,
                     "image_uri": "7362-topping-misc-frenchfry.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -283.1620553359684,
-                    "scale": 0.6421277997364954,
+                    "rotation": -254.70355731225297,
+                    "scale": 0.6480566534914362,
                     "image_uri": "7362-topping-misc-frenchfry.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": -126.6403162055336,
-                    "scale": 0.49720026350461133,
+                    "rotation": 286.00790513834,
+                    "scale": 0.49785902503293805,
                     "image_uri": "7363-topping-misc-frenchfry.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": -260.39525691699606,
-                    "scale": 0.5024703557312252,
+                    "rotation": -340.0790513833992,
+                    "scale": 0.5215744400527009,
                     "image_uri": "7363-topping-misc-frenchfry.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": 15.652173913043441,
-                    "scale": 0.5222332015810276,
+                    "rotation": 177.86561264822137,
+                    "scale": 0.47348484848484845,
                     "image_uri": "7363-topping-misc-frenchfry.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": -266.0869565217391,
-                    "scale": 0.6477272727272727,
+                    "rotation": -123.79446640316206,
+                    "scale": 0.6483860342555995,
                     "image_uri": "7364-topping-misc-frenchfry.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": -197.78656126482213,
-                    "scale": 0.6421277997364954,
+                    "rotation": 18.498023715415002,
+                    "scale": 0.6599143610013175,
                     "image_uri": "7364-topping-misc-frenchfry.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": 120.94861660079056,
-                    "scale": 0.65332674571805,
+                    "rotation": -323.00395256916994,
+                    "scale": 0.6592555994729908,
                     "image_uri": "7364-topping-misc-frenchfry.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": -345.7707509881423,
-                    "scale": 0.5130105401844532,
+                    "rotation": 69.72332015810275,
+                    "scale": 0.4794137022397892,
                     "image_uri": "7365-topping-misc-frenchfry.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": 328.6956521739131,
-                    "scale": 0.466897233201581,
+                    "rotation": -200.6324110671937,
+                    "scale": 0.4672266139657444,
                     "image_uri": "7365-topping-misc-frenchfry.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -340.0790513833992,
-                    "scale": 0.5268445322793148,
+                    "rotation": -9.960474308300377,
+                    "scale": 0.5347496706192358,
                     "image_uri": "7365-topping-misc-frenchfry.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": 340.07905138339925,
-            "scale": 0.6375164690382081,
+            "rotation": -1.4229249011857519,
+            "scale": 0.7050395256916997,
             "image_uri": "7360-topping-misc-frenchfry.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": -214.86166007905138,
-            "scale": 0.6546442687747036,
+            "rotation": -314.4664031620553,
+            "scale": 0.6836297760210804,
             "image_uri": "7360-topping-misc-frenchfry.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": -254.70355731225297,
-            "scale": 0.6819828722002635,
+            "rotation": -231.93675889328063,
+            "scale": 0.6908761528326746,
             "image_uri": "7360-topping-misc-frenchfry.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": -197.78656126482213,
-            "scale": 0.4708498023715415,
+            "rotation": 214.86166007905138,
+            "scale": 0.5103754940711462,
             "image_uri": "7361-topping-misc-frenchfry.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": -254.70355731225297,
-            "scale": 0.5077404479578392,
+            "rotation": -291.699604743083,
+            "scale": 0.47710803689064557,
             "image_uri": "7361-topping-misc-frenchfry.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": -331.54150197628456,
-            "scale": 0.4767786561264822,
+            "rotation": 345.77075098814225,
+            "scale": 0.5307971014492754,
             "image_uri": "7361-topping-misc-frenchfry.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": -260.39525691699606,
-            "scale": 0.6398221343873518,
+            "rotation": -325.8498023715415,
+            "scale": 0.6846179183135706,
             "image_uri": "7362-topping-misc-frenchfry.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": 152.2529644268775,
-            "scale": 0.6661725955204216,
+            "rotation": 277.47035573122525,
+            "scale": 0.6688076416337286,
             "image_uri": "7362-topping-misc-frenchfry.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": -283.1620553359684,
-            "scale": 0.6421277997364954,
+            "rotation": -254.70355731225297,
+            "scale": 0.6480566534914362,
             "image_uri": "7362-topping-misc-frenchfry.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": -126.6403162055336,
-            "scale": 0.49720026350461133,
+            "rotation": 286.00790513834,
+            "scale": 0.49785902503293805,
             "image_uri": "7363-topping-misc-frenchfry.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": -260.39525691699606,
-            "scale": 0.5024703557312252,
+            "rotation": -340.0790513833992,
+            "scale": 0.5215744400527009,
             "image_uri": "7363-topping-misc-frenchfry.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": 15.652173913043441,
-            "scale": 0.5222332015810276,
+            "rotation": 177.86561264822137,
+            "scale": 0.47348484848484845,
             "image_uri": "7363-topping-misc-frenchfry.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": -266.0869565217391,
-            "scale": 0.6477272727272727,
+            "rotation": -123.79446640316206,
+            "scale": 0.6483860342555995,
             "image_uri": "7364-topping-misc-frenchfry.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": -197.78656126482213,
-            "scale": 0.6421277997364954,
+            "rotation": 18.498023715415002,
+            "scale": 0.6599143610013175,
             "image_uri": "7364-topping-misc-frenchfry.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": 120.94861660079056,
-            "scale": 0.65332674571805,
+            "rotation": -323.00395256916994,
+            "scale": 0.6592555994729908,
             "image_uri": "7364-topping-misc-frenchfry.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": -345.7707509881423,
-            "scale": 0.5130105401844532,
+            "rotation": 69.72332015810275,
+            "scale": 0.4794137022397892,
             "image_uri": "7365-topping-misc-frenchfry.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": 328.6956521739131,
-            "scale": 0.466897233201581,
+            "rotation": -200.6324110671937,
+            "scale": 0.4672266139657444,
             "image_uri": "7365-topping-misc-frenchfry.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -340.0790513833992,
-            "scale": 0.5268445322793148,
+            "rotation": -9.960474308300377,
+            "scale": 0.5347496706192358,
             "image_uri": "7365-topping-misc-frenchfry.png"
         }
     ],

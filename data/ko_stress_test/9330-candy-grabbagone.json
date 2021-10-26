@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 313,
     "name": "9330-candy-grabbagone",
-    "random_seed": "EF9944FC",
+    "random_seed": "6F9A76D9",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
+                "name": "greasy",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0540",
-                "ingredient_id": "054",
+                "unique_id": "0520",
+                "ingredient_id": "052",
                 "variant_id": "0",
                 "index": 1,
-                "name": "blackberry-code",
+                "name": "doodle",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0540-paper-blackberry-code.png",
+                    "filename": "0520-paper-doodle.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0540-paper-blackberry-code.png"
+                    "image_uri": "0520-paper-doodle.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1050",
-                "ingredient_id": "105",
+                "unique_id": "1020",
+                "ingredient_id": "102",
                 "variant_id": "0",
                 "index": 1,
-                "name": "whitebread",
+                "name": "moon",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1050-crust-whitebread.png",
+                    "filename": "1020-crust-moon.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1050-crust-whitebread.png"
+                    "image_uri": "1020-crust-moon.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2072",
-                "ingredient_id": "207",
-                "variant_id": "2",
+                "unique_id": "2011",
+                "ingredient_id": "201",
+                "variant_id": "1",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "pesto",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2072-sauce-prismicfluid.png",
+                    "filename": "2011-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2072-sauce-prismicfluid.png"
+                    "image_uri": "2011-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3033",
-                "ingredient_id": "303",
-                "variant_id": "3",
+                "unique_id": "3090",
+                "ingredient_id": "309",
+                "variant_id": "0",
                 "index": 1,
-                "name": "smokedmozzarella",
+                "name": "chezdoge",
                 "ingredient_rarity": 2,
-                "variant_rarity": 2,
+                "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3033-cheese-smokedmozzarella.png",
+                    "filename": "3090-cheese-chezdoge.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8888888888888888,
-                    "image_uri": "3033-cheese-smokedmozzarella.png"
+                    "scale": 0.8222222222222223,
+                    "image_uri": "3090-cheese-chezdoge.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         611.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": 220.5533596837945,
-                    "scale": 0.5412384716732542,
+                    "rotation": 103.87351778656131,
+                    "scale": 0.5965744400527009,
                     "image_uri": "9330-topping-omakase-sanitized-candy-grabbagone.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         321.6666666666667,
                         1400.0
                     ],
-                    "rotation": 268.93280632411063,
-                    "scale": 0.5361001317523056,
+                    "rotation": 320.1581027667984,
+                    "scale": 0.5333333333333333,
                     "image_uri": "9330-topping-omakase-sanitized-candy-grabbagone.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         611.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": -49.80237154150194,
-                    "scale": 0.6198945981554677,
+                    "rotation": 217.707509881423,
+                    "scale": 0.6100131752305665,
                     "image_uri": "9330-topping-omakase-sanitized-candy-grabbagone.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         788.3333333333334,
                         466.6666666666667
                     ],
-                    "rotation": 311.62055335968387,
-                    "scale": 0.5440052700922267,
+                    "rotation": -311.6205533596838,
+                    "scale": 0.613965744400527,
                     "image_uri": "9331-topping-omakase-sanitized-candy-donuts.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1078.3333333333335,
                         933.3333333333334
                     ],
-                    "rotation": -157.94466403162056,
-                    "scale": 0.62266139657444,
+                    "rotation": 203.47826086956525,
+                    "scale": 0.6032938076416337,
                     "image_uri": "9331-topping-omakase-sanitized-candy-donuts.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         788.3333333333334,
                         1400.0
                     ],
-                    "rotation": 212.01581027667987,
-                    "scale": 0.5685111989459816,
+                    "rotation": -112.41106719367588,
+                    "scale": 0.6198945981554677,
                     "image_uri": "9331-topping-omakase-sanitized-candy-donuts.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -118.10276679841897,
-                    "scale": 0.5333333333333333,
+                    "rotation": -249.01185770750988,
+                    "scale": 0.5815546772068511,
                     "image_uri": "9332-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         788.3333333333334,
                         2333.3333333333335
                     ],
-                    "rotation": -86.79841897233206,
-                    "scale": 0.6048748353096178,
+                    "rotation": -143.71541501976284,
+                    "scale": 0.5934123847167325,
                     "image_uri": "9332-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1078.3333333333335,
                         2800.0
                     ],
-                    "rotation": -52.64822134387356,
-                    "scale": 0.6080368906455863,
+                    "rotation": 186.40316205533588,
+                    "scale": 0.5957839262187088,
                     "image_uri": "9332-topping-omakase-sanitized-candy-icecream.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1255.0,
                         466.6666666666667
                     ],
-                    "rotation": -229.0909090909091,
-                    "scale": 0.5969696969696969,
+                    "rotation": -46.95652173913044,
+                    "scale": 0.6013175230566534,
                     "image_uri": "9333-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1545.0,
                         933.3333333333334
                     ],
-                    "rotation": -24.189723320158066,
-                    "scale": 0.5416337285902503,
+                    "rotation": -101.02766798418975,
+                    "scale": 0.5949934123847167,
                     "image_uri": "9333-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -212.01581027667984,
-                    "scale": 0.5606060606060606,
+                    "rotation": -44.11067193675888,
+                    "scale": 0.589064558629776,
                     "image_uri": "9333-topping-omakase-sanitized-candy-icecream.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         1545.0,
                         1866.6666666666667
                     ],
-                    "rotation": -18.49802371541506,
-                    "scale": 0.5534914361001317,
+                    "rotation": 257.5494071146245,
+                    "scale": 0.5483530961791832,
                     "image_uri": "9334-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         1255.0,
                         2333.3333333333335
                     ],
-                    "rotation": 351.4624505928854,
-                    "scale": 0.6325428194993412,
+                    "rotation": -66.87747035573125,
+                    "scale": 0.6202898550724637,
                     "image_uri": "9334-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 266.0869565217391,
-                    "scale": 0.5641633728590251,
+                    "rotation": 234.78260869565213,
+                    "scale": 0.5839262187088274,
                     "image_uri": "9334-topping-omakase-sanitized-candy-icecream.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         1721.6666666666667,
                         466.6666666666667
                     ],
-                    "rotation": -268.9328063241107,
-                    "scale": 0.5744400527009222,
+                    "rotation": 229.09090909090912,
+                    "scale": 0.572463768115942,
                     "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2011.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": -266.0869565217391,
-                    "scale": 0.5961791831357048,
+                    "rotation": 342.92490118577075,
+                    "scale": 0.6277997364953887,
                     "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         1721.6666666666667,
                         1400.0
                     ],
-                    "rotation": 229.09090909090912,
-                    "scale": 0.5953886693017127,
+                    "rotation": 98.18181818181819,
+                    "scale": 0.6159420289855072,
                     "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
                 }
             ],
@@ -947,8 +947,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": -209.16996047430828,
-                    "scale": 0.6025032938076416,
+                    "rotation": 209.16996047430825,
+                    "scale": 0.5696969696969697,
                     "image_uri": "9336-topping-omakase-sanitized-candy-marshmellow.png"
                 },
                 {
@@ -956,8 +956,8 @@
                         1721.6666666666667,
                         2333.3333333333335
                     ],
-                    "rotation": 231.93675889328063,
-                    "scale": 0.5602108036890645,
+                    "rotation": -106.71936758893278,
+                    "scale": 0.5475625823451911,
                     "image_uri": "9336-topping-omakase-sanitized-candy-marshmellow.png"
                 },
                 {
@@ -965,8 +965,8 @@
                         2188.3333333333335,
                         466.6666666666667
                     ],
-                    "rotation": -75.41501976284587,
-                    "scale": 0.5815546772068511,
+                    "rotation": -44.11067193675888,
+                    "scale": 0.5447957839262187,
                     "image_uri": "9336-topping-omakase-sanitized-candy-marshmellow.png"
                 }
             ],
@@ -1035,8 +1035,8 @@
                         2478.3333333333335,
                         933.3333333333334
                     ],
-                    "rotation": -135.17786561264825,
-                    "scale": 0.5787878787878787,
+                    "rotation": -237.62845849802372,
+                    "scale": 0.5997364953886692,
                     "image_uri": "9337-topping-omakase-sanitized-candy-marshmellow.png"
                 },
                 {
@@ -1044,8 +1044,8 @@
                         2188.3333333333335,
                         1400.0
                     ],
-                    "rotation": 9.960474308300434,
-                    "scale": 0.5661396574440053,
+                    "rotation": 163.63636363636363,
+                    "scale": 0.62266139657444,
                     "image_uri": "9337-topping-omakase-sanitized-candy-marshmellow.png"
                 },
                 {
@@ -1053,8 +1053,8 @@
                         2478.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -64.03162055335969,
-                    "scale": 0.563768115942029,
+                    "rotation": -83.9525691699605,
+                    "scale": 0.5459815546772069,
                     "image_uri": "9337-topping-omakase-sanitized-candy-marshmellow.png"
                 }
             ],
@@ -1123,8 +1123,8 @@
                         2188.3333333333335,
                         2333.3333333333335
                     ],
-                    "rotation": 294.5454545454545,
-                    "scale": 0.5412384716732542,
+                    "rotation": 12.806324110671937,
+                    "scale": 0.6325428194993412,
                     "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
                 },
                 {
@@ -1132,8 +1132,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 98.18181818181819,
-                    "scale": 0.614361001317523,
+                    "rotation": -126.6403162055336,
+                    "scale": 0.6040843214756257,
                     "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
                 },
                 {
@@ -1141,8 +1141,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -317.3122529644269,
-                    "scale": 0.6281949934123847,
+                    "rotation": 192.094861660079,
+                    "scale": 0.5353096179183136,
                     "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
                 }
             ],
@@ -1211,8 +1211,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -286.00790513833994,
-                    "scale": 0.5538866930171278,
+                    "rotation": -157.94466403162056,
+                    "scale": 0.6266139657444005,
                     "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
                 },
                 {
@@ -1220,8 +1220,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -243.3201581027668,
-                    "scale": 0.5657444005270093,
+                    "rotation": -209.16996047430828,
+                    "scale": 0.6135704874835309,
                     "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
                 },
                 {
@@ -1229,8 +1229,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -152.25296442687747,
-                    "scale": 0.6230566534914361,
+                    "rotation": 98.18181818181819,
+                    "scale": 0.6250329380764164,
                     "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
                 }
             ],
@@ -1244,8 +1244,8 @@
                 611.6666666666667,
                 933.3333333333334
             ],
-            "rotation": 220.5533596837945,
-            "scale": 0.5412384716732542,
+            "rotation": 103.87351778656131,
+            "scale": 0.5965744400527009,
             "image_uri": "9330-topping-omakase-sanitized-candy-grabbagone.png"
         },
         {
@@ -1253,8 +1253,8 @@
                 321.6666666666667,
                 1400.0
             ],
-            "rotation": 268.93280632411063,
-            "scale": 0.5361001317523056,
+            "rotation": 320.1581027667984,
+            "scale": 0.5333333333333333,
             "image_uri": "9330-topping-omakase-sanitized-candy-grabbagone.png"
         },
         {
@@ -1262,8 +1262,8 @@
                 611.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": -49.80237154150194,
-            "scale": 0.6198945981554677,
+            "rotation": 217.707509881423,
+            "scale": 0.6100131752305665,
             "image_uri": "9330-topping-omakase-sanitized-candy-grabbagone.png"
         },
         {
@@ -1271,8 +1271,8 @@
                 788.3333333333334,
                 466.6666666666667
             ],
-            "rotation": 311.62055335968387,
-            "scale": 0.5440052700922267,
+            "rotation": -311.6205533596838,
+            "scale": 0.613965744400527,
             "image_uri": "9331-topping-omakase-sanitized-candy-donuts.png"
         },
         {
@@ -1280,8 +1280,8 @@
                 1078.3333333333335,
                 933.3333333333334
             ],
-            "rotation": -157.94466403162056,
-            "scale": 0.62266139657444,
+            "rotation": 203.47826086956525,
+            "scale": 0.6032938076416337,
             "image_uri": "9331-topping-omakase-sanitized-candy-donuts.png"
         },
         {
@@ -1289,8 +1289,8 @@
                 788.3333333333334,
                 1400.0
             ],
-            "rotation": 212.01581027667987,
-            "scale": 0.5685111989459816,
+            "rotation": -112.41106719367588,
+            "scale": 0.6198945981554677,
             "image_uri": "9331-topping-omakase-sanitized-candy-donuts.png"
         },
         {
@@ -1298,8 +1298,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": -118.10276679841897,
-            "scale": 0.5333333333333333,
+            "rotation": -249.01185770750988,
+            "scale": 0.5815546772068511,
             "image_uri": "9332-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1307,8 +1307,8 @@
                 788.3333333333334,
                 2333.3333333333335
             ],
-            "rotation": -86.79841897233206,
-            "scale": 0.6048748353096178,
+            "rotation": -143.71541501976284,
+            "scale": 0.5934123847167325,
             "image_uri": "9332-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1316,8 +1316,8 @@
                 1078.3333333333335,
                 2800.0
             ],
-            "rotation": -52.64822134387356,
-            "scale": 0.6080368906455863,
+            "rotation": 186.40316205533588,
+            "scale": 0.5957839262187088,
             "image_uri": "9332-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1325,8 +1325,8 @@
                 1255.0,
                 466.6666666666667
             ],
-            "rotation": -229.0909090909091,
-            "scale": 0.5969696969696969,
+            "rotation": -46.95652173913044,
+            "scale": 0.6013175230566534,
             "image_uri": "9333-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1334,8 +1334,8 @@
                 1545.0,
                 933.3333333333334
             ],
-            "rotation": -24.189723320158066,
-            "scale": 0.5416337285902503,
+            "rotation": -101.02766798418975,
+            "scale": 0.5949934123847167,
             "image_uri": "9333-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1343,8 +1343,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": -212.01581027667984,
-            "scale": 0.5606060606060606,
+            "rotation": -44.11067193675888,
+            "scale": 0.589064558629776,
             "image_uri": "9333-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1352,8 +1352,8 @@
                 1545.0,
                 1866.6666666666667
             ],
-            "rotation": -18.49802371541506,
-            "scale": 0.5534914361001317,
+            "rotation": 257.5494071146245,
+            "scale": 0.5483530961791832,
             "image_uri": "9334-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1361,8 +1361,8 @@
                 1255.0,
                 2333.3333333333335
             ],
-            "rotation": 351.4624505928854,
-            "scale": 0.6325428194993412,
+            "rotation": -66.87747035573125,
+            "scale": 0.6202898550724637,
             "image_uri": "9334-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1370,35 +1370,35 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 266.0869565217391,
-            "scale": 0.5641633728590251,
+            "rotation": 234.78260869565213,
+            "scale": 0.5839262187088274,
             "image_uri": "9334-topping-omakase-sanitized-candy-icecream.png"
         },
         {
             "translation": [
                 1721.6666666666667,
                 466.6666666666667
-            ],
-            "rotation": -268.9328063241107,
-            "scale": 0.5744400527009222,
-            "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
-        },
-        {
-            "translation": [
-                2011.6666666666667,
-                933.3333333333334
-            ],
-            "rotation": -266.0869565217391,
-            "scale": 0.5961791831357048,
-            "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
-        },
-        {
-            "translation": [
-                1721.6666666666667,
-                1400.0
             ],
             "rotation": 229.09090909090912,
-            "scale": 0.5953886693017127,
+            "scale": 0.572463768115942,
+            "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
+        },
+        {
+            "translation": [
+                2011.6666666666667,
+                933.3333333333334
+            ],
+            "rotation": 342.92490118577075,
+            "scale": 0.6277997364953887,
+            "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
+        },
+        {
+            "translation": [
+                1721.6666666666667,
+                1400.0
+            ],
+            "rotation": 98.18181818181819,
+            "scale": 0.6159420289855072,
             "image_uri": "9335-topping-omakase-sanitized-candy-icecream.png"
         },
         {
@@ -1406,8 +1406,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": -209.16996047430828,
-            "scale": 0.6025032938076416,
+            "rotation": 209.16996047430825,
+            "scale": 0.5696969696969697,
             "image_uri": "9336-topping-omakase-sanitized-candy-marshmellow.png"
         },
         {
@@ -1415,8 +1415,8 @@
                 1721.6666666666667,
                 2333.3333333333335
             ],
-            "rotation": 231.93675889328063,
-            "scale": 0.5602108036890645,
+            "rotation": -106.71936758893278,
+            "scale": 0.5475625823451911,
             "image_uri": "9336-topping-omakase-sanitized-candy-marshmellow.png"
         },
         {
@@ -1424,8 +1424,8 @@
                 2188.3333333333335,
                 466.6666666666667
             ],
-            "rotation": -75.41501976284587,
-            "scale": 0.5815546772068511,
+            "rotation": -44.11067193675888,
+            "scale": 0.5447957839262187,
             "image_uri": "9336-topping-omakase-sanitized-candy-marshmellow.png"
         },
         {
@@ -1433,8 +1433,8 @@
                 2478.3333333333335,
                 933.3333333333334
             ],
-            "rotation": -135.17786561264825,
-            "scale": 0.5787878787878787,
+            "rotation": -237.62845849802372,
+            "scale": 0.5997364953886692,
             "image_uri": "9337-topping-omakase-sanitized-candy-marshmellow.png"
         },
         {
@@ -1442,8 +1442,8 @@
                 2188.3333333333335,
                 1400.0
             ],
-            "rotation": 9.960474308300434,
-            "scale": 0.5661396574440053,
+            "rotation": 163.63636363636363,
+            "scale": 0.62266139657444,
             "image_uri": "9337-topping-omakase-sanitized-candy-marshmellow.png"
         },
         {
@@ -1451,8 +1451,8 @@
                 2478.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": -64.03162055335969,
-            "scale": 0.563768115942029,
+            "rotation": -83.9525691699605,
+            "scale": 0.5459815546772069,
             "image_uri": "9337-topping-omakase-sanitized-candy-marshmellow.png"
         },
         {
@@ -1460,9 +1460,45 @@
                 2188.3333333333335,
                 2333.3333333333335
             ],
-            "rotation": 294.5454545454545,
-            "scale": 0.5412384716732542,
+            "rotation": 12.806324110671937,
+            "scale": 0.6325428194993412,
             "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                1400.0
+            ],
+            "rotation": -126.6403162055336,
+            "scale": 0.6040843214756257,
+            "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                1400.0
+            ],
+            "rotation": 192.094861660079,
+            "scale": 0.5353096179183136,
+            "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                1400.0
+            ],
+            "rotation": -157.94466403162056,
+            "scale": 0.6266139657444005,
+            "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                2800.0
+            ],
+            "rotation": -209.16996047430828,
+            "scale": 0.6135704874835309,
+            "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
         },
         {
             "translation": [
@@ -1470,43 +1506,7 @@
                 1400.0
             ],
             "rotation": 98.18181818181819,
-            "scale": 0.614361001317523,
-            "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -317.3122529644269,
-            "scale": 0.6281949934123847,
-            "image_uri": "9338-topping-omakase-sanitized-candy-starcandies.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
-            ],
-            "rotation": -286.00790513833994,
-            "scale": 0.5538866930171278,
-            "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                2800.0
-            ],
-            "rotation": -243.3201581027668,
-            "scale": 0.5657444005270093,
-            "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -152.25296442687747,
-            "scale": 0.6230566534914361,
+            "scale": 0.6250329380764164,
             "image_uri": "9339-topping-omakase-sanitized-candy-starcandies.png"
         }
     ],

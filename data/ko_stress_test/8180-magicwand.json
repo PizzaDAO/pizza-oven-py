@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 276,
     "name": "8180-magicwand",
-    "random_seed": "7A99F140",
+    "random_seed": "9CC44C88",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0530",
+                "unique_id": "0532",
                 "ingredient_id": "053",
-                "variant_id": "0",
+                "variant_id": "2",
                 "index": 1,
-                "name": "cherry-code",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0530-paper-cherry-code.png",
+                    "filename": "0532-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0530-paper-cherry-code.png"
+                    "image_uri": "0532-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2073",
-                "ingredient_id": "207",
-                "variant_id": "3",
+                "unique_id": "2010",
+                "ingredient_id": "201",
+                "variant_id": "0",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "pesto",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2073-sauce-prismicfluid.png",
+                    "filename": "2010-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,19 +279,19 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2073-sauce-prismicfluid.png"
+                    "image_uri": "2010-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3050",
-                "ingredient_id": "305",
+                "unique_id": "3080",
+                "ingredient_id": "308",
                 "variant_id": "0",
                 "index": 1,
-                "name": "tvaruzek",
-                "ingredient_rarity": 2,
+                "name": "fetabits",
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3050-cheese-tvaruzek.png",
+                    "filename": "3080-cheese-fetabits.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.8888888888888888,
-                    "image_uri": "3050-cheese-tvaruzek.png"
+                    "image_uri": "3080-cheese-fetabits.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         788.3333333333334,
                         933.3333333333334
                     ],
-                    "rotation": 234.78260869565213,
-                    "scale": 1.4835309617918315,
+                    "rotation": 283.1620553359684,
+                    "scale": 1.5254281949934123,
                     "image_uri": "8180-topping-misc-magicwand.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": 314.46640316205537,
-                    "scale": 1.4988142292490119,
+                    "rotation": 115.25691699604738,
+                    "scale": 1.500395256916996,
                     "image_uri": "8180-topping-misc-magicwand.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         1721.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": 55.49407114624506,
-                    "scale": 1.4666666666666668,
+                    "rotation": 9.960474308300434,
+                    "scale": 1.4679841897233203,
                     "image_uri": "8180-topping-misc-magicwand.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": -297.39130434782606,
-                    "scale": 1.8361001317523056,
+                    "rotation": 69.72332015810275,
+                    "scale": 1.8508563899868247,
                     "image_uri": "8181-topping-misc-magicwand.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": 288.8537549407115,
-                    "scale": 1.8334650856389987,
+                    "rotation": -246.16600790513834,
+                    "scale": 1.859288537549407,
                     "image_uri": "8181-topping-misc-magicwand.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         2655.0,
                         933.3333333333334
                     ],
-                    "rotation": 98.18181818181819,
-                    "scale": 1.8595520421607377,
+                    "rotation": -72.56916996047431,
+                    "scale": 1.8197628458498023,
                     "image_uri": "8181-topping-misc-magicwand.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 18.498023715415002,
-                    "scale": 1.4714097496706193,
+                    "rotation": -320.15810276679844,
+                    "scale": 1.4990777338603425,
                     "image_uri": "8182-topping-misc-magicwand.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 194.94071146245062,
-                    "scale": 1.5156785243741764,
+                    "rotation": 226.2450592885375,
+                    "scale": 1.4990777338603425,
                     "image_uri": "8182-topping-misc-magicwand.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -192.09486166007903,
-                    "scale": 1.5204216073781291,
+                    "rotation": -81.10671936758894,
+                    "scale": 1.5154150197628458,
                     "image_uri": "8182-topping-misc-magicwand.png"
                 }
             ],
@@ -628,8 +628,8 @@
                 788.3333333333334,
                 933.3333333333334
             ],
-            "rotation": 234.78260869565213,
-            "scale": 1.4835309617918315,
+            "rotation": 283.1620553359684,
+            "scale": 1.5254281949934123,
             "image_uri": "8180-topping-misc-magicwand.png"
         },
         {
@@ -637,8 +637,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": 314.46640316205537,
-            "scale": 1.4988142292490119,
+            "rotation": 115.25691699604738,
+            "scale": 1.500395256916996,
             "image_uri": "8180-topping-misc-magicwand.png"
         },
         {
@@ -646,8 +646,8 @@
                 1721.6666666666667,
                 933.3333333333334
             ],
-            "rotation": 55.49407114624506,
-            "scale": 1.4666666666666668,
+            "rotation": 9.960474308300434,
+            "scale": 1.4679841897233203,
             "image_uri": "8180-topping-misc-magicwand.png"
         },
         {
@@ -655,8 +655,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": -297.39130434782606,
-            "scale": 1.8361001317523056,
+            "rotation": 69.72332015810275,
+            "scale": 1.8508563899868247,
             "image_uri": "8181-topping-misc-magicwand.png"
         },
         {
@@ -664,8 +664,8 @@
                 1721.6666666666667,
                 2800.0
             ],
-            "rotation": 288.8537549407115,
-            "scale": 1.8334650856389987,
+            "rotation": -246.16600790513834,
+            "scale": 1.859288537549407,
             "image_uri": "8181-topping-misc-magicwand.png"
         },
         {
@@ -673,8 +673,8 @@
                 2655.0,
                 933.3333333333334
             ],
-            "rotation": 98.18181818181819,
-            "scale": 1.8595520421607377,
+            "rotation": -72.56916996047431,
+            "scale": 1.8197628458498023,
             "image_uri": "8181-topping-misc-magicwand.png"
         },
         {
@@ -682,8 +682,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": 18.498023715415002,
-            "scale": 1.4714097496706193,
+            "rotation": -320.15810276679844,
+            "scale": 1.4990777338603425,
             "image_uri": "8182-topping-misc-magicwand.png"
         },
         {
@@ -691,8 +691,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 194.94071146245062,
-            "scale": 1.5156785243741764,
+            "rotation": 226.2450592885375,
+            "scale": 1.4990777338603425,
             "image_uri": "8182-topping-misc-magicwand.png"
         },
         {
@@ -700,8 +700,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -192.09486166007903,
-            "scale": 1.5204216073781291,
+            "rotation": -81.10671936758894,
+            "scale": 1.5154150197628458,
             "image_uri": "8182-topping-misc-magicwand.png"
         }
     ],

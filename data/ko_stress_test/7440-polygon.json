@@ -1,62 +1,62 @@
 {
-    "token_id": 0,
+    "token_id": 257,
     "name": "7440-polygon",
-    "random_seed": "7D7922D1",
+    "random_seed": "12C54B84",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0000",
+                "ingredient_id": "000",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 0,
                 "variant_rarity": 5,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
-                    "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
-                    "height": 0.0,
-                    "moisture": 0.0,
-                    "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
-                    "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
-                    "riboflavin": 0.0,
-                    "thiamin": 0.0,
-                    "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "serving_size": 90.0,
+                    "mass": 994.0,
+                    "calories": 92.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 2.0,
+                    "vitamin_b5": 3.0,
+                    "vitamin_d": 4.0,
+                    "vitamin_b7": 5.0,
+                    "height": 10.0,
+                    "moisture": 11.0,
+                    "potassium": 10.0,
+                    "cholesterol": 15.0,
+                    "vitamin_a": 16.0,
+                    "dietary_fiber": 16.0,
+                    "vitamin_b6": 17.0,
+                    "sugar": 20.0,
+                    "protein": 21.0,
+                    "iron": 25.0,
+                    "complex_carb": 30.0,
+                    "selenium": 31.0,
+                    "vitamin_k": 32.0,
+                    "vitamin_b12": 40.0,
+                    "calories_from_fat": 41.0,
+                    "vitamin_e": 42.0,
+                    "zinc": 50.0,
+                    "saturated_fat": 51.0,
+                    "iodine": 52.0,
+                    "trans_fat": 60.0,
+                    "sodium": 61.0,
+                    "monosaturated_fat": 62.0,
+                    "calcium": 63.0,
+                    "riboflavin": 70.0,
+                    "thiamin": 71.0,
+                    "folate": 72.0,
+                    "added_sugar": 23.0,
+                    "chromium": 22.0,
+                    "manganese": 24.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0000-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0000-box-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0500",
-                "ingredient_id": "050",
+                "unique_id": "0520",
+                "ingredient_id": "052",
                 "variant_id": "0",
                 "index": 1,
-                "name": "redchecker",
+                "name": "doodle",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0500-paper-redchecker.png",
+                    "filename": "0520-paper-doodle.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0500-paper-redchecker.png"
+                    "image_uri": "0520-paper-doodle.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1050",
-                "ingredient_id": "105",
+                "unique_id": "1000",
+                "ingredient_id": "100",
                 "variant_id": "0",
                 "index": 1,
-                "name": "whitebread",
+                "name": "thin",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1050-crust-whitebread.png",
+                    "filename": "1000-crust-thin.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1050-crust-whitebread.png"
+                    "image_uri": "1000-crust-thin.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2040",
-                "ingredient_id": "204",
-                "variant_id": "0",
+                "unique_id": "2051",
+                "ingredient_id": "205",
+                "variant_id": "1",
                 "index": 1,
-                "name": "nutella",
-                "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 1,
+                "variant_rarity": 2,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2040-sauce-nutella.png",
+                    "filename": "2051-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,8 +278,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 1.0,
-                    "image_uri": "2040-sauce-nutella.png"
+                    "scale": 0.2,
+                    "image_uri": "2051-sauce-white.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": -229.0909090909091,
-                    "scale": 0.3874505928853755,
+                    "rotation": 348.61660079051387,
+                    "scale": 0.3625494071146245,
                     "image_uri": "7440-topping-misc-polygon.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 15.652173913043441,
-                    "scale": 0.4186758893280632,
+                    "rotation": -320.15810276679844,
+                    "scale": 0.39179841897233203,
                     "image_uri": "7440-topping-misc-polygon.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": 61.18577075098813,
-                    "scale": 0.34555335968379447,
+                    "rotation": 328.6956521739131,
+                    "scale": 0.4123517786561265,
                     "image_uri": "7440-topping-misc-polygon.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": 286.00790513834,
-                    "scale": 0.23636363636363636,
+                    "rotation": 260.3952569169961,
+                    "scale": 0.2043478260869565,
                     "image_uri": "7441-topping-misc-polygon.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": -69.72332015810275,
-                    "scale": 0.25849802371541497,
+                    "rotation": -203.47826086956522,
+                    "scale": 0.27944664031620553,
                     "image_uri": "7441-topping-misc-polygon.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": -58.339920948616566,
-                    "scale": 0.2845849802371542,
+                    "rotation": 143.71541501976282,
+                    "scale": 0.24545454545454543,
                     "image_uri": "7441-topping-misc-polygon.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": 166.48221343873513,
-                    "scale": 0.3281620553359684,
+                    "rotation": -103.87351778656125,
+                    "scale": 0.3807312252964427,
                     "image_uri": "7442-topping-misc-polygon.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": -277.4703557312253,
-                    "scale": 0.40088932806324107,
+                    "rotation": 194.94071146245062,
+                    "scale": 0.4099802371541502,
                     "image_uri": "7442-topping-misc-polygon.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": 140.8695652173913,
-                    "scale": 0.3578063241106719,
+                    "rotation": -61.18577075098813,
+                    "scale": 0.3866600790513834,
                     "image_uri": "7442-topping-misc-polygon.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 9.960474308300434,
-                    "scale": 0.2928853754940711,
+                    "rotation": -308.77470355731225,
+                    "scale": 0.24861660079051381,
                     "image_uri": "7443-topping-misc-polygon.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": 177.86561264822137,
-                    "scale": 0.19999999999999998,
+                    "rotation": -334.3873517786561,
+                    "scale": 0.22094861660079052,
                     "image_uri": "7443-topping-misc-polygon.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": 172.17391304347825,
-                    "scale": 0.22806324110671936,
+                    "rotation": -163.63636363636365,
+                    "scale": 0.2952569169960474,
                     "image_uri": "7443-topping-misc-polygon.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": 132.33201581027674,
-                    "scale": 0.39021739130434785,
+                    "rotation": -234.7826086956522,
+                    "scale": 0.3325098814229249,
                     "image_uri": "7444-topping-misc-polygon.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": -180.71146245059288,
-                    "scale": 0.4060276679841897,
+                    "rotation": 234.78260869565213,
+                    "scale": 0.42183794466403157,
                     "image_uri": "7444-topping-misc-polygon.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": 152.2529644268775,
-                    "scale": 0.4135375494071146,
+                    "rotation": 41.26482213438737,
+                    "scale": 0.32618577075098815,
                     "image_uri": "7444-topping-misc-polygon.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": -169.3280632411067,
-                    "scale": 0.21818181818181817,
+                    "rotation": -143.71541501976284,
+                    "scale": 0.22687747035573122,
                     "image_uri": "7445-topping-misc-polygon.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": -328.69565217391306,
-                    "scale": 0.2972332015810277,
+                    "rotation": -75.41501976284587,
+                    "scale": 0.25059288537549407,
                     "image_uri": "7445-topping-misc-polygon.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 203.47826086956525,
-                    "scale": 0.29881422924901185,
+                    "rotation": -268.9328063241107,
+                    "scale": 0.26047430830039525,
                     "image_uri": "7445-topping-misc-polygon.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": -229.0909090909091,
-            "scale": 0.3874505928853755,
+            "rotation": 348.61660079051387,
+            "scale": 0.3625494071146245,
             "image_uri": "7440-topping-misc-polygon.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 15.652173913043441,
-            "scale": 0.4186758893280632,
+            "rotation": -320.15810276679844,
+            "scale": 0.39179841897233203,
             "image_uri": "7440-topping-misc-polygon.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": 61.18577075098813,
-            "scale": 0.34555335968379447,
+            "rotation": 328.6956521739131,
+            "scale": 0.4123517786561265,
             "image_uri": "7440-topping-misc-polygon.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": 286.00790513834,
-            "scale": 0.23636363636363636,
+            "rotation": 260.3952569169961,
+            "scale": 0.2043478260869565,
             "image_uri": "7441-topping-misc-polygon.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": -69.72332015810275,
-            "scale": 0.25849802371541497,
+            "rotation": -203.47826086956522,
+            "scale": 0.27944664031620553,
             "image_uri": "7441-topping-misc-polygon.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": -58.339920948616566,
-            "scale": 0.2845849802371542,
+            "rotation": 143.71541501976282,
+            "scale": 0.24545454545454543,
             "image_uri": "7441-topping-misc-polygon.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": 166.48221343873513,
-            "scale": 0.3281620553359684,
+            "rotation": -103.87351778656125,
+            "scale": 0.3807312252964427,
             "image_uri": "7442-topping-misc-polygon.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": -277.4703557312253,
-            "scale": 0.40088932806324107,
+            "rotation": 194.94071146245062,
+            "scale": 0.4099802371541502,
             "image_uri": "7442-topping-misc-polygon.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": 140.8695652173913,
-            "scale": 0.3578063241106719,
+            "rotation": -61.18577075098813,
+            "scale": 0.3866600790513834,
             "image_uri": "7442-topping-misc-polygon.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": 9.960474308300434,
-            "scale": 0.2928853754940711,
+            "rotation": -308.77470355731225,
+            "scale": 0.24861660079051381,
             "image_uri": "7443-topping-misc-polygon.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": 177.86561264822137,
-            "scale": 0.19999999999999998,
+            "rotation": -334.3873517786561,
+            "scale": 0.22094861660079052,
             "image_uri": "7443-topping-misc-polygon.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": 172.17391304347825,
-            "scale": 0.22806324110671936,
+            "rotation": -163.63636363636365,
+            "scale": 0.2952569169960474,
             "image_uri": "7443-topping-misc-polygon.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": 132.33201581027674,
-            "scale": 0.39021739130434785,
+            "rotation": -234.7826086956522,
+            "scale": 0.3325098814229249,
             "image_uri": "7444-topping-misc-polygon.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": -180.71146245059288,
-            "scale": 0.4060276679841897,
+            "rotation": 234.78260869565213,
+            "scale": 0.42183794466403157,
             "image_uri": "7444-topping-misc-polygon.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": 152.2529644268775,
-            "scale": 0.4135375494071146,
+            "rotation": 41.26482213438737,
+            "scale": 0.32618577075098815,
             "image_uri": "7444-topping-misc-polygon.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": -169.3280632411067,
-            "scale": 0.21818181818181817,
+            "rotation": -143.71541501976284,
+            "scale": 0.22687747035573122,
             "image_uri": "7445-topping-misc-polygon.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": -328.69565217391306,
-            "scale": 0.2972332015810277,
+            "rotation": -75.41501976284587,
+            "scale": 0.25059288537549407,
             "image_uri": "7445-topping-misc-polygon.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 203.47826086956525,
-            "scale": 0.29881422924901185,
+            "rotation": -268.9328063241107,
+            "scale": 0.26047430830039525,
             "image_uri": "7445-topping-misc-polygon.png"
         }
     ],
