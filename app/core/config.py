@@ -40,9 +40,10 @@ class OvenToppingParams(Base):
 
     min_topping_layer_count: int = 1
     max_topping_layer_count: int = 4
-    rarity_weight_common: int = 550
-    rarity_weight_uncommon: int = 340
-    rarity_weight_rare: int = 100
+    rarity_weight_common: int = 450
+    rarity_weight_uncommon: int = 300
+    rarity_weight_rare: int = 150
+    rarity_weight_epic: int = 90
     rarity_weight_grail: int = 10
     lastchance_occurance_percentage: int = 20
     scatter_origin_x: int = 0
@@ -210,6 +211,14 @@ class Settings(BaseSettings):
     LARGE_TIER_1: int = 10
     LARGE_TIER_2: int = 40
     LARGE_TIER_3: int = 70
+    MIN_TOPPING_LAYER_COUNT = 1
+    MAX_TOPPING_LAYER_COUNT = 4
+    RARITY_WEIGHT_COMMON = 450
+    RARITY_WEIGHT_UNCOMMON = 300
+    RARITY_WEIGHT_RARE = 150
+    RARITY_WEIGHT_EPIC = 90
+    RARITY_WEIGHT_GRAIL = 10
+    LASTCHANCE_OCCURENCE_PERCENTAGE = 20
 
     class Config:
         case_sensitive = True
