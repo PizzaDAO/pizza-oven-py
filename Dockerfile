@@ -86,6 +86,7 @@ CMD /start-reload.sh
 
 # just start the app normally
 FROM base AS prod
+COPY ./.cache /app/.cache
 COPY ./app /app/app
 COPY ./data /app/data
 COPY ./fonts /app/fonts
