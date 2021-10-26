@@ -53,7 +53,7 @@ class EthereumAdapter:
         self,
         contract_address: str,
     ):
-        print(f"connecting to contracat: {contract_address}")
+        print(f"connecting to contract: {contract_address}")
         self._client: Web3 = Web3(Web3.HTTPProvider(get_server_uri()))
         # Address
         self._contract: Contract = self._client.eth.contract(
@@ -66,18 +66,18 @@ class EthereumAdapter:
         # Strip the job id and covert it to bytes
         stripped = job_id.replace("-", "")
         job_id_bytes = bytes.fromhex(stripped)
-        print(f"querying VRF for jobId: {stripped}")
+        print(f"{job_id} - querying VRF for jobId: {stripped}")
 
         try:
 
             # try to find the number if it exists already
             existing = self.find_random_number(job_id_bytes)
             if existing != 0:
-                print(f"existing VRF found for jobId: {job_id}")
+                print(f"{job_id} - existing VRF found")
                 return existing
 
             nonce = self._client.eth.get_transaction_count(get_account_address())
-            print(f"account: {get_account_address()} nonce: {nonce}")
+            print(f"{job_id} - account: {get_account_address()} nonce: {nonce}")
 
             # build the transaction
             tx = self._contract.functions.getRandomNumber(
@@ -109,7 +109,7 @@ class EthereumAdapter:
             # wait for a response
             random_number = self.wait_for_random_number(job_id_bytes)
             if random_number != 0:
-                print(f"VRF success jobId: {job_id} vrf: {random_number}")
+                print(f"{job_id} - VRF success: {random_number}")
                 return random_number
 
         except Exception as error:
@@ -132,6 +132,7 @@ class EthereumAdapter:
                 current += 1
                 time.sleep(15)
             else:
+                print("waiting for VRF random number timed out. the job must be re-run")
                 break
         return random_number
 

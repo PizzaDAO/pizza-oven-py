@@ -18,7 +18,7 @@ class ERC721OpenSeaMetadataBoostAttribute(Base):
     """For attributes to be displayed on a numeric or percentage scale"""
 
     display_type: str
-    """Should be set to 'boost_number' or 'boost_percentage'"""
+    """Should be set to 'boost_number' or 'boost_percentage' or 'number'"""
     trait_type: str
     value: int
     max_value: Optional[int]

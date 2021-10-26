@@ -32,5 +32,15 @@ class ChainlinkToken(Base):
     """the chainlink inbound and outbound tokens"""
 
     name: str = "orderpizzav1"
-    inbound_token: CHAINLINK_AUTH_TOKEN = "Bearer nqpw1bzD4isqeYfXCixyAbhpLs/lkim4"
-    outbound_token: CHAINLINK_RESPONSE_TOKEN = "SI/8gEsllRRJLD5HDHH1/2ESG1RKmCOy"
+    outbound_token: CHAINLINK_AUTH_TOKEN = "Bearer nqpw1bzD4isqeYfXCixyAbhpLs/lkim4"
+    """
+    this is the outbound token from the chainlink node. 
+    (from the perspective of the api, it is actually the inbound token. confusing. i know.
+    this is the token we receive when a request comes in.
+    """
+    inbound_token: CHAINLINK_RESPONSE_TOKEN = "SI/8gEsllRRJLD5HDHH1/2ESG1RKmCOy"
+    """
+    this is the inbound token from the chainlink node. 
+    (from the perspective of the api, it is actually the outbound token. confusing. i know.
+    this is the token we send out when patching back to a running job.
+    """

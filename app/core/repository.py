@@ -1,9 +1,10 @@
 import json
 import sys
 import os
-from typing import Optional
+from typing import Optional, List
 from os import listdir
 from os.path import isfile, join
+from collections.abc import MutableMapping
 
 from app.models.order import OrderPizzaResponse
 from app.models.render_task import RenderTask
@@ -19,6 +20,7 @@ from app.core.storage import *
 
 __all__ = [
     "get_render_task",
+    "find_render_task",
     "set_render_task",
     "set_gsheets_token",
     "get_gsheets_token",
@@ -53,6 +55,20 @@ def get_render_task(job_id: str) -> Optional[RenderTask]:
         print(sys.exc_info())
         print(error)
         return None
+
+
+def find_render_task(filter: MutableMapping) -> List[RenderTask]:
+    try:
+        with get_storage(DataCollection.render_task) as storage:
+            render_tasks: List[RenderTask] = []
+            result = storage.find({"status": filter})
+            for item in result:
+                render_tasks.append(RenderTask(**item))
+            return render_tasks
+    except Exception as error:
+        print(sys.exc_info())
+        print(error)
+        return []
 
 
 def set_render_task(task: RenderTask) -> str:

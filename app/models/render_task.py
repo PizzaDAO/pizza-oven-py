@@ -26,11 +26,13 @@ class RenderTask(Base):
     request: OrderPizzaRequest
     """the original request passed in"""
     status: TaskStatus = TaskStatus.new
+
     timestamp: datetime = datetime.now(timezone.utc)
     random_number: Optional[str]
     """the random number in hex returned from chainlink"""
     metadata_hash: Optional[str]
     """the ipfs hash of the metadata when the rendering is complete"""
+    message: Optional[str] = None
 
     def set_status(self, new_status: TaskStatus) -> None:
         self.status = new_status

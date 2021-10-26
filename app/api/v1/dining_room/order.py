@@ -56,15 +56,15 @@ def publish_order_result(
     from_bytes_big = int.from_bytes(truncated_metadata, "big")
 
     # debug log out some values
-    print(f"metadata_hash: {metadata_hash}")
-    print(f"metadata_hash_len: {len(metadata_hash)}")
-    print(f"from_bytes_big: {from_bytes_big}")
-    print(f"decoded_metadata: {decoded_metadata}")
-    print(f"decoded_metadata: {decoded_metadata.hex()}")
-    print(f"truncated_metadata: {truncated_metadata}")
-    print(f"truncated_metadata_len: {len(truncated_metadata)}")
+    print(f"{render_task.job_id} - metadata_hash: {metadata_hash}")
+    print(f"{render_task.job_id} - metadata_hash_len: {len(metadata_hash)}")
+    print(f"{render_task.job_id} - from_bytes_big: {from_bytes_big}")
+    print(f"{render_task.job_id} - decoded_metadata: {decoded_metadata}")
+    print(f"{render_task.job_id} - decoded_metadata: {decoded_metadata.hex()}")
+    print(f"{render_task.job_id} - truncated_metadata: {truncated_metadata}")
+    print(f"{render_task.job_id} - truncated_metadata_len: {len(truncated_metadata)}")
     print("\n --------- YOUR PIZZA IS COMPLETE ---------- \n")
-    print(f"\nipfs image: {metadata.image} \n")
+    print(f"\n    ipfs image: {metadata.image} \n")
     print("\n ------------------------------------------- \n")
 
     # build the response object
@@ -87,6 +87,7 @@ def publish_order_result(
     except Exception as error:
         print(sys.exc_info())
         print(error)
+        render_task.message = str(error)
         render_task.set_status(TaskStatus.error)
         set_render_task(render_task)
         return None
@@ -106,7 +107,9 @@ def patch_and_complete_job(
     # its possible something failed and wasn't caught
     # so we'll queue the job to re-run again
     if order_response is None:
-        print("actually the pizza order didnt complete")
+        message = "the pizza order didnt complete"
+        print(f"{render_task.job_id} - {message}")
+        render_task.message = message
         render_task.set_status(TaskStatus.error)
         set_render_task(render_task)
         return None
@@ -114,19 +117,19 @@ def patch_and_complete_job(
     # if there's a chainlink callback specified,
     # then patch to the callback
     if render_task.request.responseURL is not None:
-        print("issuing chainlink response.")
+        print(f"{render_task.job_id} - issuing chainlink response.")
 
         # fetch the chainlink token needed to patch back
         chainlink_token = get_chainlink_token(render_task.request.data.bridge)
         if chainlink_token is None:
-            print("no chainlink token found for job")
+            print(f"{render_task.job_id} - no chainlink token found for job")
             return None
 
         # patch back to the node using the response url
         patch_response = requests.patch(
             render_task.request.responseURL,
             data=order_response.json(),
-            headers={"authorization": f"Bearer {chainlink_token.outbound_token}"},
+            headers={"authorization": f"Bearer {chainlink_token.inbound_token}"},
         )
         print(patch_response.text)
 
@@ -136,19 +139,23 @@ def patch_and_complete_job(
             patch_response.status_code >= status.HTTP_200_OK
             and patch_response.status_code < status.HTTP_300_MULTIPLE_CHOICES
         ):
-            print("post back to chainlink complete.")
+            message = "post back to chainlink complete"
+            print(f"{render_task.job_id} - {message}.")
             # update the job as complete
+            render_task.message = message
             render_task.set_status(TaskStatus.complete)
             set_render_task(render_task)
-            print("job complete!")
+            print(f"{render_task.job_id} - job complete!")
         else:
-            print("chainlink postback failed")
+            print(f"{render_task.job_id} - chainlink postback failed")
     else:
-        # chainlink wasnt specified to jsut mark the job complete
-
+        # chainlink wasnt specified so just mark the job complete
+        message = "chainlink responseURL not specified"
+        print(f"{render_task.job_id} - {message}")
+        render_task.message = message
         render_task.set_status(TaskStatus.complete)
         set_render_task(render_task)
-        print("job complete!")
+        print(f"{render_task.job_id} - job complete!")
 
     return order_response
 
@@ -164,27 +171,29 @@ def run_render_task(
 
     # if we didnt find a job, then just get any ole job
     if render_task is None:
-        print("could not find job")
+        print(f"{job_id} - could not find job")
         # TODO: search for *any* job
+
         return None
 
     # if the job is already complete
     if render_task.status == TaskStatus.complete:
-        print("job complete")
+        print(f"{job_id} - job complete")
         return patch_and_complete_job(render_task)
 
     # check if the job finished but just didnt get marked complete
     if render_task.metadata_hash is not None:
-        print("job finished rendering but wasn't complete")
+        print(f"{job_id} - job finished rendering but wasn't complete")
         return patch_and_complete_job(render_task)
 
     # if the job is already in progress, skip it
     if not render_task.should_restart(settings.RENDER_TASK_TIMEOUT_IN_MINUTES):
-        print("job in progress")
+        print(f"{job_id} - job already in progress")
         return None
 
     # set the job as started
     render_task.set_status(TaskStatus.started)
+    render_task.message = None
     set_render_task(render_task)
 
     # transform the data
@@ -199,7 +208,9 @@ def run_render_task(
     # which can happen if the rerun is restarted
     if render_task.random_number is not None:
         loaded_random = from_hex(render_task.random_number)
-        print(f"rendering with render_task preloaded number: {loaded_random}")
+        print(
+            f"{job_id} - rendering with render_task preloaded number: {loaded_random}"
+        )
         random_number = loaded_random
 
     # get a random number and reduce the recipe into a kitchen order
@@ -209,6 +220,7 @@ def run_render_task(
     # if we didnt get a verifiable random number
     # then kill the job and allow it to be restart later
     if random_number is None:
+        render_task.message = "could not get a VRF random number"
         render_task.set_status(TaskStatus.error)
         set_render_task(render_task)
         return None
@@ -228,7 +240,8 @@ def run_render_task(
 
     except Exception as error:
         print(sys.exc_info())
-        print(error)
+        print(f"{job_id} - {error}")
+        render_task.message = str(error)
         render_task.set_status(TaskStatus.error)
         set_render_task(render_task)
         return None
@@ -238,15 +251,18 @@ def run_render_task(
 
     # update the task with the ipfs hash
     if order_response is not None:
-        print("updating the task with the ipfs hash of the metadata")
+        print(f"{job_id} - updating the task with the ipfs hash of the metadata")
 
         render_task.metadata_hash = order_response.data.metadata
+        render_task.message = None
         set_render_task(render_task)
 
         return patch_and_complete_job(render_task, order_response)
 
-    print("something went wrong. setting error state and returning none.")
+    message = "something went wrong. setting error state and returning none."
+    print(f"{job_id} - {message}")
     render_task.set_status(TaskStatus.error)
+    render_task.message = message
     set_render_task(render_task)
     return None
 
@@ -268,18 +284,18 @@ async def orderPizza(
     # cache the render task
     existing_job = get_render_task(data.id)
     if existing_job is not None:
-        print("job exists!")
+        print(f"{existing_job.job_id} - job exists!")
         if existing_job.status == TaskStatus.complete:
             # try to return the job if it's finished
             response = get_order_response(data.id)
             if response is not None:
-                print("job complete, returning")
+                print(f"{existing_job.job_id} - job complete, returning")
                 return response
-            # let all other cases fakll through
+            # let all other cases fall through
 
     else:
 
-        print("existing job not found, caching")
+        print(f"{data.id} - existing job not found, caching")
         set_render_task(
             RenderTask(
                 job_id=data.id,
@@ -319,6 +335,3 @@ async def rerender_job(
         status=TaskStatus.started,
     )
     return run_render_task(data.id, render_task)
-
-
-# TODO: rerender if any?
