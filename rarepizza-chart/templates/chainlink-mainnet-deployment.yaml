@@ -1,0 +1,103 @@
+{{ if .Values.chainlink.mainnet.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chainlink-mainnet
+  labels:
+    {{- include "rarepizza.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "rarepizza.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        app.kubernetes.io/component: chainlink-mainnet
+        {{- include "rarepizza.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "rarepizza.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      restartPolicy: Always
+      containers:
+        - name: chainlink-mainnet
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.chainlink.image.mainnetTag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/bin/sh"]
+          args: ["-c", "chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api"]
+          envFrom:
+            - configMapRef:
+                name: chainlink-mainnet-config
+          env:
+            - name: PORT
+              value: "6688"
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: MAINNET_DB_CONNECTION
+            - name: ETH_URL
+              valueFrom:
+                secretKeyRef:
+                  name: pizza-oven-secret
+                  key: ETHEREUM_MAINNET_SOCKET_SERVER
+          ports:
+            - name: mainnet
+              containerPort: 6688
+          volumeMounts:
+            - mountPath: "/run/secrets/keystore"
+              subPath: keystore
+              name: keystore
+              readOnly: true
+            - mountPath: "/run/secrets/password"
+              subPath: password
+              name: password
+              readOnly: true
+            - mountPath: "/run/secrets/api"
+              subPath: api
+              name: api
+              readOnly: true
+            - mountPath: /chainlink
+              name: chainlink-mainnet-pvc
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+          - name: keystore
+            secret:
+              items:
+                - key: UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c
+                  path: keystore
+              secretName: pizza-oven-secret
+          - name: password
+            secret:
+              items:
+                - key: .chainlink.wallet.1.mainnet
+                  path: password
+              secretName: pizza-oven-secret
+          - name: api
+            secret:
+              items:
+                - key: .chainlink.api.mainnet
+                  path: api
+              secretName: pizza-oven-secret
+          - name: chainlink-mainnet-pvc
+            persistentVolumeClaim:
+              claimName: chainlink-mainnet-pvc
+      nodeSelector:
+        role: chainlink
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{ end }}

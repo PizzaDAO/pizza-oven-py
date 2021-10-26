@@ -74,10 +74,13 @@ ipfs/data/
 Icon
 
 database/db-data/
+database/db-data-mainnet/
 
 chainlink/rinkeby/
+chainlink/mainnet/
 
 .env
+.env.prod
 
 natron/old/
 
@@ -86,4 +89,7 @@ data/ingredients/
 
 workspace.code-workspace
 
-ingredients-db/_DelSyncFiles/
+# Chart
+rarepizza-chart/templates/*secret.yaml
+
+secrets/

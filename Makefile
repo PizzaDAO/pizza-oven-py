@@ -1,4 +1,4 @@
-.PHONY: all environment lint install-poetry start test test-natron
+.PHONY: all environment docker-dev docker-prod lint install-poetry start test test-natron
 
 .EXPORT_ALL_VARIABLES:
 OS ?= $(shell python -c 'import platform; print(platform.system())')
@@ -46,6 +46,10 @@ docker-run:
 docker-dev:
 	@echo 🐳 Running Docker in dev mode
 	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.dev.yml up --build
+
+docker-prod:
+	@echo 🐳 Running Docker in prod mode
+	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.prod.yml up --build
 
 # Linting
 lint:

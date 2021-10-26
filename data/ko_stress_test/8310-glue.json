@@ -1,0 +1,719 @@
+{
+    "token_id": 0,
+    "name": "8310-glue",
+    "random_seed": "A9777326",
+    "recipe_id": 9999,
+    "base_ingredients": {
+        "box": {
+            "ingredient": {
+                "unique_id": "0010",
+                "ingredient_id": "001",
+                "variant_id": "0",
+                "index": 1,
+                "name": "cardboard",
+                "ingredient_rarity": 5,
+                "variant_rarity": 5,
+                "classification": 1,
+                "category": "box",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "0010-box-cardboard.png",
+                    "output_mask": "rarepizza-#####-box"
+                }
+            },
+            "count": 1.0,
+            "instances": [
+                {
+                    "translation": [
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": 0.0,
+                    "scale": 1.0,
+                    "image_uri": "0010-box-cardboard.png"
+                }
+            ],
+            "scatter_type": 1
+        },
+        "paper": {
+            "ingredient": {
+                "unique_id": "0500",
+                "ingredient_id": "050",
+                "variant_id": "0",
+                "index": 1,
+                "name": "redchecker",
+                "ingredient_rarity": 5,
+                "variant_rarity": 5,
+                "classification": 2,
+                "category": "paper",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "0500-paper-redchecker.png",
+                    "output_mask": "rarepizza-#####-paper"
+                }
+            },
+            "count": 1.0,
+            "instances": [
+                {
+                    "translation": [
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": 0.0,
+                    "scale": 1.0,
+                    "image_uri": "0500-paper-redchecker.png"
+                }
+            ],
+            "scatter_type": 1
+        },
+        "crust": {
+            "ingredient": {
+                "unique_id": "1050",
+                "ingredient_id": "105",
+                "variant_id": "0",
+                "index": 1,
+                "name": "whitebread",
+                "ingredient_rarity": 5,
+                "variant_rarity": 5,
+                "classification": 3,
+                "category": "crust",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "1050-crust-whitebread.png",
+                    "output_mask": "rarepizza-#####-crust"
+                }
+            },
+            "count": 1.0,
+            "instances": [
+                {
+                    "translation": [
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": 0.0,
+                    "scale": 1.0,
+                    "image_uri": "1050-crust-whitebread.png"
+                }
+            ],
+            "scatter_type": 1
+        },
+        "sauce": {
+            "ingredient": {
+                "unique_id": "2040",
+                "ingredient_id": "204",
+                "variant_id": "0",
+                "index": 1,
+                "name": "nutella",
+                "ingredient_rarity": 3,
+                "variant_rarity": 5,
+                "classification": 4,
+                "category": "sauce",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "2040-sauce-nutella.png",
+                    "output_mask": "rarepizza-#####-sauce"
+                }
+            },
+            "count": 1.0,
+            "instances": [
+                {
+                    "translation": [
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": 0.0,
+                    "scale": 1.0,
+                    "image_uri": "2040-sauce-nutella.png"
+                }
+            ],
+            "scatter_type": 1
+        },
+        "cheese": {
+            "ingredient": {
+                "unique_id": "3120",
+                "ingredient_id": "312",
+                "variant_id": "0",
+                "index": 1,
+                "name": "korbacik",
+                "ingredient_rarity": 2,
+                "variant_rarity": 5,
+                "classification": 5,
+                "category": "cheese",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "3120-cheese-korbacik.png",
+                    "output_mask": "rarepizza-#####-cheese"
+                }
+            },
+            "count": 1.0,
+            "instances": [
+                {
+                    "translation": [
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": 0.0,
+                    "scale": 0.09722222222222222,
+                    "image_uri": "3120-cheese-korbacik.png"
+                }
+            ],
+            "scatter_type": 1
+        }
+    },
+    "layers": {
+        "8310": {
+            "ingredient": {
+                "unique_id": "8310",
+                "ingredient_id": "831",
+                "variant_id": "0",
+                "index": 1,
+                "name": "glue",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
+                "classification": 6,
+                "category": "topping-misc",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "8310-topping-misc-glue.png",
+                    "output_mask": "rarepizza-#####-topping-misc"
+                }
+            },
+            "count": 3.0,
+            "instances": [
+                {
+                    "translation": [
+                        788.3333333333334,
+                        933.3333333333334
+                    ],
+                    "rotation": -280.3162055335969,
+                    "scale": 0.9814229249011858,
+                    "image_uri": "8310-topping-misc-glue.png"
+                },
+                {
+                    "translation": [
+                        1078.3333333333335,
+                        1866.6666666666667
+                    ],
+                    "rotation": 78.26086956521743,
+                    "scale": 1.0083003952569172,
+                    "image_uri": "8310-topping-misc-glue.png"
+                },
+                {
+                    "translation": [
+                        1721.6666666666667,
+                        933.3333333333334
+                    ],
+                    "rotation": -317.3122529644269,
+                    "scale": 0.9727272727272728,
+                    "image_uri": "8310-topping-misc-glue.png"
+                }
+            ],
+            "scatter_type": 512
+        },
+        "8311": {
+            "ingredient": {
+                "unique_id": "8311",
+                "ingredient_id": "831",
+                "variant_id": "1",
+                "index": 1,
+                "name": "glue",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
+                "classification": 6,
+                "category": "topping-misc",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "8311-topping-misc-glue.png",
+                    "output_mask": "rarepizza-#####-topping-misc"
+                }
+            },
+            "count": 3.0,
+            "instances": [
+                {
+                    "translation": [
+                        2011.6666666666667,
+                        1866.6666666666667
+                    ],
+                    "rotation": -129.48616600790515,
+                    "scale": 1.0098814229249014,
+                    "image_uri": "8311-topping-misc-glue.png"
+                },
+                {
+                    "translation": [
+                        1721.6666666666667,
+                        2800.0
+                    ],
+                    "rotation": 354.308300395257,
+                    "scale": 0.9693017127799737,
+                    "image_uri": "8311-topping-misc-glue.png"
+                },
+                {
+                    "translation": [
+                        2655.0,
+                        933.3333333333334
+                    ],
+                    "rotation": 251.85770750988138,
+                    "scale": 1.0175230566534914,
+                    "image_uri": "8311-topping-misc-glue.png"
+                }
+            ],
+            "scatter_type": 512
+        },
+        "8312": {
+            "ingredient": {
+                "unique_id": "8312",
+                "ingredient_id": "831",
+                "variant_id": "2",
+                "index": 1,
+                "name": "glue",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
+                "classification": 6,
+                "category": "topping-misc",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "8312-topping-misc-glue.png",
+                    "output_mask": "rarepizza-#####-topping-misc"
+                }
+            },
+            "count": 3.0,
+            "instances": [
+                {
+                    "translation": [
+                        1255.0,
+                        1400.0
+                    ],
+                    "rotation": -120.9486166007905,
+                    "scale": 0.977733860342556,
+                    "image_uri": "8312-topping-misc-glue.png"
+                },
+                {
+                    "translation": [
+                        1545.0,
+                        2800.0
+                    ],
+                    "rotation": 89.6442687747035,
+                    "scale": 0.9795783926218709,
+                    "image_uri": "8312-topping-misc-glue.png"
+                },
+                {
+                    "translation": [
+                        2655.0,
+                        1400.0
+                    ],
+                    "rotation": -32.72727272727275,
+                    "scale": 0.9666666666666667,
+                    "image_uri": "8312-topping-misc-glue.png"
+                }
+            ],
+            "scatter_type": 512
+        }
+    },
+    "lastchances": {},
+    "instances": [
+        {
+            "translation": [
+                788.3333333333334,
+                933.3333333333334
+            ],
+            "rotation": -280.3162055335969,
+            "scale": 0.9814229249011858,
+            "image_uri": "8310-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                1078.3333333333335,
+                1866.6666666666667
+            ],
+            "rotation": 78.26086956521743,
+            "scale": 1.0083003952569172,
+            "image_uri": "8310-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                1721.6666666666667,
+                933.3333333333334
+            ],
+            "rotation": -317.3122529644269,
+            "scale": 0.9727272727272728,
+            "image_uri": "8310-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                2011.6666666666667,
+                1866.6666666666667
+            ],
+            "rotation": -129.48616600790515,
+            "scale": 1.0098814229249014,
+            "image_uri": "8311-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                1721.6666666666667,
+                2800.0
+            ],
+            "rotation": 354.308300395257,
+            "scale": 0.9693017127799737,
+            "image_uri": "8311-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                933.3333333333334
+            ],
+            "rotation": 251.85770750988138,
+            "scale": 1.0175230566534914,
+            "image_uri": "8311-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                1400.0
+            ],
+            "rotation": -120.9486166007905,
+            "scale": 0.977733860342556,
+            "image_uri": "8312-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                2800.0
+            ],
+            "rotation": 89.6442687747035,
+            "scale": 0.9795783926218709,
+            "image_uri": "8312-topping-misc-glue.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                1400.0
+            ],
+            "rotation": -32.72727272727275,
+            "scale": 0.9666666666666667,
+            "image_uri": "8312-topping-misc-glue.png"
+        }
+    ],
+    "instructions": {
+        "box_count": 1,
+        "paper_count": 1,
+        "crust_count": 1.0,
+        "sauce_count": 1.0,
+        "cheese_count": 1.0,
+        "topping_count": 3.0,
+        "lastchance_count": 0.0,
+        "baking_temp_in_celsius": 450.0,
+        "baking_time_in_minutes": 450.0
+    }
+}
