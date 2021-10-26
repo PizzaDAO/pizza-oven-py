@@ -24,9 +24,6 @@ from PIL import ImageDraw
 current = os.path.dirname(os.path.realpath(__file__))
 settings = Settings()
 
-DATA_FONT_SIZE = 64
-WATERMARK_FILE = "pizza_watermark.png"
-
 
 class BoxRenderer:
     """Render Boxes"""
@@ -280,8 +277,7 @@ class Renderer:
         """Cache the ingredient data so that natron can pick it up."""
         # create a .cache directory
         cache_dir = os.path.join(
-            self.project_path,
-            "../.cache/",
+            self.project_path, "../", settings.INTERMEDIATE_FOLDER_PATH
         )
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
@@ -302,8 +298,7 @@ class Renderer:
         """Cache the ingredient data so that natron can pick it up."""
         # create a .cache directory
         cache_dir = os.path.join(
-            self.project_path,
-            "../.cache/",
+            self.project_path, "../", settings.INTERMEDIATE_FOLDER_PATH
         )
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
@@ -322,9 +317,9 @@ class Renderer:
 
     def cache_layer_manifest(self, layers: List[str]) -> str:
         cache_dir = os.path.join(
-            self.project_path,
-            "../.cache/",
+            self.project_path, "../", settings.INTERMEDIATE_FOLDER_PATH
         )
+
         if not os.path.exists(cache_dir):
             os.makedirs(cache_dir)
 
@@ -347,7 +342,7 @@ class Renderer:
         draw = ImageDraw.Draw(base)
         font_path = os.path.join(self.project_path, "../fonts/Roboto-Medium.ttf")
         print(font_path)
-        font = ImageFont.truetype(font_path, DATA_FONT_SIZE)
+        font = ImageFont.truetype(font_path, settings.DATA_FONT_SIZE)
         base_ingredients = ""
         for ingredient in order.base_ingredients.values():
             i = ingredient.ingredient
@@ -397,7 +392,9 @@ class Renderer:
         draw.text((10, 10), pizza_data, fill="white", font=font, align="left")
 
         # add watermark
-        watermark_path = os.path.join(self.project_path, "../data/" + WATERMARK_FILE)
+        watermark_path = os.path.join(
+            self.project_path, "../data", settings.WATERMARK_FILE
+        )
         watermark_image = Image.open(watermark_path)
         # bottom right corner for 4k image
         x = 4096 - watermark_image.width
@@ -419,10 +416,7 @@ class Renderer:
         )
 
         # load the output directory
-        output_dir = os.path.join(
-            self.project_path,
-            "../output/",
-        )
+        output_dir = os.path.join(self.project_path, "../", settings.OUTPUT_FOLDER_PATH)
 
         # Give the final output a unique filename: 0000.png
         output_filename = str(self.frame).zfill(4) + ".png"
@@ -457,10 +451,7 @@ class Renderer:
             layer_index += 1
 
         # Make sure there is an output folder to write to
-        output_dir = os.path.join(
-            self.project_path,
-            "../output/",
-        )
+        output_dir = os.path.join(self.project_path, "../", settings.OUTPUT_FOLDER_PATH)
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
@@ -517,10 +508,7 @@ class Renderer:
         # combiner all the images together
         output_file = self.flatten_image(rendered_layer_files, order)
 
-        output_dir = os.path.join(
-            self.project_path,
-            "../output/",
-        )
+        output_dir = os.path.join(self.project_path, "../", settings.OUTPUT_FOLDER_PATH)
 
         # save the kitchen order out to the file system
         kitchen_order_file_path = os.path.join(

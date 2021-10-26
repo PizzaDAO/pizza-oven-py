@@ -180,7 +180,9 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
 # this mapping is done to the Google Sheet - change the sheet - change this code
 def parse_ingredients(sheet_data) -> Optional[Dict]:
     if not sheet_data:
-        print("Error: We have a problem... No data found for Toppings.")
+        print(
+            "parse_ingredients: Error: We have a problem... No data found for Toppings."
+        )
         return None
 
     ingredients = {}
@@ -206,8 +208,9 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
             if sheet_data[row][0] and record_entry["on_disk"] == "Y":
                 # check to see if the png is in ingredients-db folder
                 filename = record_entry["filename_paste"] + ".png"
-                path = "ingredients-db/"
-                absolute_filepath = os.path.join(path, filename)
+                absolute_filepath = os.path.join(
+                    settings.LOCAL_INGREDIENTS_DB_PATH, filename
+                )
                 if not os.path.exists(absolute_filepath):
                     print("Missing image for ingredient: " + filename)
 
@@ -483,14 +486,12 @@ def save_recipe(recipe: Recipe):
     # Pretty Print JSON
     json_formatted_str = json.loads(recipe.json())
 
-    path = "data/recipes/"
-
     filename = recipe.name + ".json"
-    absolute_filepath = os.path.join(path, filename)
+    absolute_filepath = os.path.join(settings.lOCAL_RECIPES_PATH, filename)
 
     # create the directory if it doesnt exist
-    if not os.path.exists("data/recipes"):
-        os.makedirs(path)
+    if not os.path.exists(settings.lOCAL_RECIPES_PATH):
+        os.makedirs(settings.lOCAL_RECIPES_PATH)
 
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
@@ -501,14 +502,14 @@ def save_ingredients(ingredient_dict):
     for k, v in ingredient_dict.items():
         list.append(json.loads(v.json()))
 
-    path = "data/ingredients/"
-
-    filename = "ingredient_db.json"
-    absolute_filepath = os.path.join(path, filename)
+    absolute_filepath = os.path.join(
+        settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH,
+        settings.LOCAL_INGREDIENT_DB_MANIFEST_FILENAME,
+    )
 
     # create the directory if it doesnt exist
-    if not os.path.exists(path):
-        os.makedirs(path)
+    if not os.path.exists(settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH):
+        os.makedirs(settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH)
 
     with open(absolute_filepath, "w") as outfile:
         json.dump(list, outfile, indent=4)
@@ -518,7 +519,10 @@ def get_variants_for_ingredient(ingredient_id: str) -> List:
     # load the ingredients JSON and pull out the variants
 
     variants: List[ScopedIngredient] = []
-    path = "data/ingredients/ingredient_db.json"
+    path = os.path.join(
+        settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH,
+        settings.LOCAL_INGREDIENT_DB_MANIFEST_FILENAME,
+    )
     try:
         f = open(path)
         contents = json.load(f)
