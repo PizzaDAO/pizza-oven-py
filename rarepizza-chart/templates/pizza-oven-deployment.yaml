@@ -102,7 +102,7 @@ spec:
               subPath: credentials.json
               name: credentials
               readOnly: true
-            - mountPath: /app/ingredients-db
+            - mountPath: /app/.cache
               name: pizza-oven-pvc
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
