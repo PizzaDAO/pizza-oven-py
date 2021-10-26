@@ -1397,7 +1397,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>ColorCorrect3</second>
+					<second>w1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -1586,7 +1586,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>/Users/ashafer/Development/pizza-oven-tmp/ingredients-db/0010-box-cardboard.png</Value>
+					<Value>[Project]/../ingredients-db/0010-box-cardboard.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1825,7 +1825,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>137</KnobsAge>
+			<KnobsAge>139</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -4007,7 +4007,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>6.02342341026989692e-01</Value>
+					<Value>6.24609195627388480e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.5135,.95)</Expression>
@@ -4781,7 +4781,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
+					<Value>2</Value>
 					<Default>0</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>frame%4</Expression>
@@ -5386,7 +5386,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.80435619973577532e-01</Value>
+					<Value>9.92009766665287285e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.94,1)</Expression>
@@ -5395,7 +5395,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.99393720109946981e-01</Value>
+					<Value>9.52651750887744120e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.94,1)</Expression>
@@ -11002,7 +11002,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -11098,6 +11098,24 @@
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -11275,7 +11293,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>3</KnobsAge>
+			<KnobsAge>4</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -11417,7 +11435,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -11513,6 +11531,24 @@
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -11690,7 +11726,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>1</KnobsAge>
+			<KnobsAge>2</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -12026,7 +12062,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>8.40108515001600553e-01</Value>
+					<Value>6.46272496014949849e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.5135,.95)</Expression>
@@ -12352,7 +12388,7 @@
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Oct 25 17:49:17 2021</Value>
+			<Value>Mon Oct 25 22:11:01 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -12468,7 +12504,7 @@
 			<Name></Name>
 		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>1</Timeline_current_time>
+	<Timeline_current_time>2</Timeline_current_time>
 	<CreationDate>1613936932294</CreationDate>
 </Project>
 <ProjectGui class_id="18" tracking_level="0" version="12">
@@ -12995,8 +13031,8 @@
 		</item>
 		<item>
 			<Name>Read7_2</Name>
-			<X_position>-1.13740442629739209e+03</X_position>
-			<Y_position>-3.52453141594698991e+03</Y_position>
+			<X_position>-1.14269655785343821e+03</X_position>
+			<Y_position>-3.52188535016896640e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -13547,7 +13583,7 @@
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2314</x>
+			<x>-2532</x>
 			<y>-297</y>
 			<w>2314</w>
 			<h>1360</h>
@@ -13559,9 +13595,9 @@
 		<item class_id="27" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="28" tracking_level="0" version="14">
-				<zoomLeft>-6.16853014020713090e+02</zoomLeft>
-				<zoomBottom>7.31284463739009084e+02</zoomBottom>
-				<zoomFactor>3.35018643028490326e-01</zoomFactor>
+				<zoomLeft>-3.18895152892880560e+03</zoomLeft>
+				<zoomBottom>5.42300886678513962e+02</zoomBottom>
+				<zoomFactor>1.61602580735675128e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="29" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -13576,7 +13612,7 @@
 				<ColorSpace>sRGB</ColorSpace>
 				<Layer>Color.RGBA</Layer>
 				<AlphaLayer>Color.A</AlphaLayer>
-				<Channels>RGB</Channels>
+				<Channels>A</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
 				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
@@ -13607,16 +13643,16 @@
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
-		<item>ColorCorrect3</item>
-		<item>Shuffle4</item>
-		<item>Clamp2</item>
-		<item>Clamp1</item>
-		<item>Read3</item>
-		<item>Switch_0010</item>
-		<item>Switch_default</item>
+		<item>Read7</item>
+		<item>Read7_2_2</item>
+		<item>Read_s3</item>
+		<item>Read_s3_2</item>
+		<item>Read_s3_2_2_2</item>
+		<item>Read_s7</item>
+		<item>Read_s3_2_2</item>
 		<item>Read2</item>
-		<item>Read4</item>
-		<item>Merge4</item>
+		<item>input_default</item>
+		<item>i1</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
