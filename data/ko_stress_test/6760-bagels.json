@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 201,
     "name": "6760-bagels",
-    "random_seed": "18F65D8C",
+    "random_seed": "90042907",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0500",
-                "ingredient_id": "050",
+                "unique_id": "0520",
+                "ingredient_id": "052",
                 "variant_id": "0",
                 "index": 1,
-                "name": "redchecker",
+                "name": "doodle",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0500-paper-redchecker.png",
+                    "filename": "0520-paper-doodle.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0500-paper-redchecker.png"
+                    "image_uri": "0520-paper-doodle.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1020",
-                "ingredient_id": "102",
+                "unique_id": "1050",
+                "ingredient_id": "105",
                 "variant_id": "0",
                 "index": 1,
-                "name": "moon",
+                "name": "whitebread",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1020-crust-moon.png",
+                    "filename": "1050-crust-whitebread.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1020-crust-moon.png"
+                    "image_uri": "1050-crust-whitebread.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2070",
+                "unique_id": "2072",
                 "ingredient_id": "207",
-                "variant_id": "0",
+                "variant_id": "2",
                 "index": 1,
                 "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2070-sauce-prismicfluid.png",
+                    "filename": "2072-sauce-prismicfluid.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,7 +279,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2070-sauce-prismicfluid.png"
+                    "image_uri": "2072-sauce-prismicfluid.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         555.0,
                         700.0
                     ],
-                    "rotation": -160.7905138339921,
-                    "scale": 0.8351119894598156,
+                    "rotation": -103.87351778656125,
+                    "scale": 0.8366930171277998,
                     "image_uri": "6760-topping-snax-bagels.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         845.0,
                         1400.0
                     ],
-                    "rotation": -334.3873517786561,
-                    "scale": 0.8584321475625823,
+                    "rotation": -268.9328063241107,
+                    "scale": 0.7876811594202898,
                     "image_uri": "6760-topping-snax-bagels.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         555.0,
                         2100.0
                     ],
-                    "rotation": 92.49011857707512,
-                    "scale": 0.8552700922266139,
+                    "rotation": 95.33596837944663,
+                    "scale": 0.7947957839262187,
                     "image_uri": "6760-topping-snax-bagels.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         1255.0,
                         700.0
                     ],
-                    "rotation": -146.56126482213438,
-                    "scale": 0.8078392621870882,
+                    "rotation": -78.26086956521738,
+                    "scale": 0.8789855072463768,
                     "image_uri": "6761-topping-snax-bagels.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1545.0,
                         1400.0
                     ],
-                    "rotation": -277.4703557312253,
-                    "scale": 0.8469696969696969,
+                    "rotation": 83.9525691699605,
+                    "scale": 0.8189064558629776,
                     "image_uri": "6761-topping-snax-bagels.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         1255.0,
                         2100.0
                     ],
-                    "rotation": 197.78656126482213,
-                    "scale": 0.880961791831357,
+                    "rotation": -4.2687747035573125,
+                    "scale": 0.8627799736495388,
                     "image_uri": "6761-topping-snax-bagels.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 303.08300395256913,
-                    "scale": 0.8521080368906455,
+                    "rotation": 234.78260869565213,
+                    "scale": 0.8347167325428195,
                     "image_uri": "6762-topping-snax-bagels.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1955.0,
                         700.0
                     ],
-                    "rotation": -249.01185770750988,
-                    "scale": 0.8445981554677207,
+                    "rotation": -7.114624505928873,
+                    "scale": 0.8663372859025033,
                     "image_uri": "6762-topping-snax-bagels.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2245.0,
                         1400.0
                     ],
-                    "rotation": -254.70355731225297,
-                    "scale": 0.8193017127799737,
+                    "rotation": -32.72727272727275,
+                    "scale": 0.8355072463768116,
                     "image_uri": "6762-topping-snax-bagels.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1955.0,
                         2100.0
                     ],
-                    "rotation": 243.32015810276687,
-                    "scale": 0.8196969696969697,
+                    "rotation": 29.881422924901187,
+                    "scale": 0.8698945981554677,
                     "image_uri": "6763-topping-snax-bagels.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         2655.0,
                         2100.0
                     ],
-                    "rotation": 194.94071146245062,
-                    "scale": 0.7987483530961792,
+                    "rotation": -9.960474308300377,
+                    "scale": 0.7983530961791832,
                     "image_uri": "6763-topping-snax-bagels.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -300.2371541501976,
-                    "scale": 0.8240447957839262,
+                    "rotation": -7.114624505928873,
+                    "scale": 0.8113965744400526,
                     "image_uri": "6763-topping-snax-bagels.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -152.25296442687747,
-                    "scale": 0.8572463768115942,
+                    "rotation": 115.25691699604738,
+                    "scale": 0.7900527009222661,
                     "image_uri": "6764-topping-snax-bagels.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -263.2411067193676,
-                    "scale": 0.8185111989459816,
+                    "rotation": -38.41897233201581,
+                    "scale": 0.8722661396574439,
                     "image_uri": "6764-topping-snax-bagels.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 109.56521739130437,
-                    "scale": 0.8706851119894597,
+                    "rotation": -311.6205533596838,
+                    "scale": 0.7999341238471673,
                     "image_uri": "6764-topping-snax-bagels.png"
                 }
             ],
@@ -804,8 +804,8 @@
                 555.0,
                 700.0
             ],
-            "rotation": -160.7905138339921,
-            "scale": 0.8351119894598156,
+            "rotation": -103.87351778656125,
+            "scale": 0.8366930171277998,
             "image_uri": "6760-topping-snax-bagels.png"
         },
         {
@@ -813,8 +813,8 @@
                 845.0,
                 1400.0
             ],
-            "rotation": -334.3873517786561,
-            "scale": 0.8584321475625823,
+            "rotation": -268.9328063241107,
+            "scale": 0.7876811594202898,
             "image_uri": "6760-topping-snax-bagels.png"
         },
         {
@@ -822,8 +822,8 @@
                 555.0,
                 2100.0
             ],
-            "rotation": 92.49011857707512,
-            "scale": 0.8552700922266139,
+            "rotation": 95.33596837944663,
+            "scale": 0.7947957839262187,
             "image_uri": "6760-topping-snax-bagels.png"
         },
         {
@@ -831,8 +831,8 @@
                 1255.0,
                 700.0
             ],
-            "rotation": -146.56126482213438,
-            "scale": 0.8078392621870882,
+            "rotation": -78.26086956521738,
+            "scale": 0.8789855072463768,
             "image_uri": "6761-topping-snax-bagels.png"
         },
         {
@@ -840,8 +840,8 @@
                 1545.0,
                 1400.0
             ],
-            "rotation": -277.4703557312253,
-            "scale": 0.8469696969696969,
+            "rotation": 83.9525691699605,
+            "scale": 0.8189064558629776,
             "image_uri": "6761-topping-snax-bagels.png"
         },
         {
@@ -849,8 +849,8 @@
                 1255.0,
                 2100.0
             ],
-            "rotation": 197.78656126482213,
-            "scale": 0.880961791831357,
+            "rotation": -4.2687747035573125,
+            "scale": 0.8627799736495388,
             "image_uri": "6761-topping-snax-bagels.png"
         },
         {
@@ -858,8 +858,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 303.08300395256913,
-            "scale": 0.8521080368906455,
+            "rotation": 234.78260869565213,
+            "scale": 0.8347167325428195,
             "image_uri": "6762-topping-snax-bagels.png"
         },
         {
@@ -867,8 +867,8 @@
                 1955.0,
                 700.0
             ],
-            "rotation": -249.01185770750988,
-            "scale": 0.8445981554677207,
+            "rotation": -7.114624505928873,
+            "scale": 0.8663372859025033,
             "image_uri": "6762-topping-snax-bagels.png"
         },
         {
@@ -876,8 +876,8 @@
                 2245.0,
                 1400.0
             ],
-            "rotation": -254.70355731225297,
-            "scale": 0.8193017127799737,
+            "rotation": -32.72727272727275,
+            "scale": 0.8355072463768116,
             "image_uri": "6762-topping-snax-bagels.png"
         },
         {
@@ -885,8 +885,8 @@
                 1955.0,
                 2100.0
             ],
-            "rotation": 243.32015810276687,
-            "scale": 0.8196969696969697,
+            "rotation": 29.881422924901187,
+            "scale": 0.8698945981554677,
             "image_uri": "6763-topping-snax-bagels.png"
         },
         {
@@ -894,8 +894,8 @@
                 2655.0,
                 2100.0
             ],
-            "rotation": 194.94071146245062,
-            "scale": 0.7987483530961792,
+            "rotation": -9.960474308300377,
+            "scale": 0.7983530961791832,
             "image_uri": "6763-topping-snax-bagels.png"
         },
         {
@@ -903,8 +903,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -300.2371541501976,
-            "scale": 0.8240447957839262,
+            "rotation": -7.114624505928873,
+            "scale": 0.8113965744400526,
             "image_uri": "6763-topping-snax-bagels.png"
         },
         {
@@ -912,8 +912,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": -152.25296442687747,
-            "scale": 0.8572463768115942,
+            "rotation": 115.25691699604738,
+            "scale": 0.7900527009222661,
             "image_uri": "6764-topping-snax-bagels.png"
         },
         {
@@ -921,8 +921,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": -263.2411067193676,
-            "scale": 0.8185111989459816,
+            "rotation": -38.41897233201581,
+            "scale": 0.8722661396574439,
             "image_uri": "6764-topping-snax-bagels.png"
         },
         {
@@ -930,8 +930,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 109.56521739130437,
-            "scale": 0.8706851119894597,
+            "rotation": -311.6205533596838,
+            "scale": 0.7999341238471673,
             "image_uri": "6764-topping-snax-bagels.png"
         }
     ],

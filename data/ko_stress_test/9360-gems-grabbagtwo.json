@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 316,
     "name": "9360-gems-grabbagtwo",
-    "random_seed": "8DA92606",
+    "random_seed": "C81E910C",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
+                "name": "greasy",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
-                "variant_id": "0",
+                "unique_id": "0532",
+                "ingredient_id": "053",
+                "variant_id": "2",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0532-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0532-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1010",
-                "ingredient_id": "101",
+                "unique_id": "1070",
+                "ingredient_id": "107",
                 "variant_id": "0",
                 "index": 1,
-                "name": "thick",
+                "name": "glutenfree",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1010-crust-thick.png",
+                    "filename": "1070-crust-glutenfree.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1010-crust-thick.png"
+                    "image_uri": "1070-crust-glutenfree.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2010",
-                "ingredient_id": "201",
+                "unique_id": "2050",
+                "ingredient_id": "205",
                 "variant_id": "0",
                 "index": 1,
-                "name": "pesto",
-                "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2010-sauce-pesto.png",
+                    "filename": "2050-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2010-sauce-pesto.png"
+                    "image_uri": "2050-sauce-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3080",
-                "ingredient_id": "308",
-                "variant_id": "0",
+                "unique_id": "3171",
+                "ingredient_id": "317",
+                "variant_id": "1",
                 "index": 1,
-                "name": "fetabits",
-                "ingredient_rarity": 1,
-                "variant_rarity": 0,
+                "name": "cheesecake",
+                "ingredient_rarity": 3,
+                "variant_rarity": 2,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3080-cheese-fetabits.png",
+                    "filename": "3171-cheese-cheesecake.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8888888888888888,
-                    "image_uri": "3080-cheese-fetabits.png"
+                    "scale": 0.9444444444444444,
+                    "image_uri": "3171-cheese-cheesecake.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": 180.71146245059288,
-                    "scale": 0.6080368906455863,
+                    "rotation": 192.094861660079,
+                    "scale": 0.6119894598155468,
                     "image_uri": "9360-topping-omakase-sanitized-gems-grabbagtwo.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 268.93280632411063,
-                    "scale": 0.6238471673254282,
+                    "rotation": -95.33596837944663,
+                    "scale": 0.5361001317523056,
                     "image_uri": "9360-topping-omakase-sanitized-gems-grabbagtwo.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": -41.26482213438737,
-                    "scale": 0.5530961791831357,
+                    "rotation": 81.10671936758894,
+                    "scale": 0.5819499341238471,
                     "image_uri": "9360-topping-omakase-sanitized-gems-grabbagtwo.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": 123.79446640316206,
-                    "scale": 0.5716732542819499,
+                    "rotation": 132.33201581027674,
+                    "scale": 0.5862977602108037,
                     "image_uri": "9361-topping-omakase-sanitized-gems-poprocks.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": -75.41501976284587,
-                    "scale": 0.630961791831357,
+                    "rotation": 320.1581027667984,
+                    "scale": 0.5487483530961792,
                     "image_uri": "9361-topping-omakase-sanitized-gems-poprocks.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": -1.4229249011857519,
-                    "scale": 0.5673254281949934,
+                    "rotation": -288.8537549407115,
+                    "scale": 0.5736495388669302,
                     "image_uri": "9361-topping-omakase-sanitized-gems-poprocks.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": -27.035573122529627,
-                    "scale": 0.5862977602108037,
+                    "rotation": -192.09486166007903,
+                    "scale": 0.5416337285902503,
                     "image_uri": "9362-topping-omakase-sanitized-gems-poprocksbar.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": -61.18577075098813,
-                    "scale": 0.5945981554677207,
+                    "rotation": 72.56916996047431,
+                    "scale": 0.5503293807641634,
                     "image_uri": "9362-topping-omakase-sanitized-gems-poprocksbar.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -35.57312252964425,
-                    "scale": 0.6111989459815547,
+                    "rotation": 157.9446640316205,
+                    "scale": 0.5653491436100132,
                     "image_uri": "9362-topping-omakase-sanitized-gems-poprocksbar.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 46.95652173913038,
-                    "scale": 0.6052700922266139,
+                    "rotation": 217.707509881423,
+                    "scale": 0.5534914361001317,
                     "image_uri": "9363-topping-omakase-sanitized-gems-poprocksbar.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": 266.0869565217391,
-                    "scale": 0.6191040843214756,
+                    "rotation": -323.00395256916994,
+                    "scale": 0.53965744400527,
                     "image_uri": "9363-topping-omakase-sanitized-gems-poprocksbar.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": 197.78656126482213,
-                    "scale": 0.5728590250329381,
+                    "rotation": -152.25296442687747,
+                    "scale": 0.5756258234519104,
                     "image_uri": "9363-topping-omakase-sanitized-gems-poprocksbar.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": 263.2411067193676,
-                    "scale": 0.6052700922266139,
+                    "rotation": -157.94466403162056,
+                    "scale": 0.5827404479578392,
                     "image_uri": "9364-topping-omakase-sanitized-gems-poprockscube.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": 260.3952569169961,
-                    "scale": 0.5752305665349143,
+                    "rotation": -263.2411067193676,
+                    "scale": 0.5372859025032938,
                     "image_uri": "9364-topping-omakase-sanitized-gems-poprockscube.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": -135.17786561264825,
-                    "scale": 0.6100131752305665,
+                    "rotation": -177.86561264822134,
+                    "scale": 0.5598155467720685,
                     "image_uri": "9364-topping-omakase-sanitized-gems-poprockscube.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": 83.9525691699605,
-                    "scale": 0.5353096179183136,
+                    "rotation": -266.0869565217391,
+                    "scale": 0.630566534914361,
                     "image_uri": "9365-topping-omakase-sanitized-gems-poprockscube.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": 348.61660079051387,
-                    "scale": 0.5633728590250329,
+                    "rotation": 169.32806324110675,
+                    "scale": 0.6206851119894597,
                     "image_uri": "9365-topping-omakase-sanitized-gems-poprockscube.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 163.63636363636363,
-                    "scale": 0.5764163372859025,
+                    "rotation": -169.3280632411067,
+                    "scale": 0.5704874835309618,
                     "image_uri": "9365-topping-omakase-sanitized-gems-poprockscube.png"
                 }
             ],
@@ -947,8 +947,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 149.40711462450594,
-                    "scale": 0.5708827404479578,
+                    "rotation": -303.0830039525692,
+                    "scale": 0.5795783926218708,
                     "image_uri": "9366-topping-omakase-sanitized-gems-oysters.png"
                 },
                 {
@@ -956,8 +956,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 89.6442687747035,
-                    "scale": 0.5459815546772069,
+                    "rotation": 209.16996047430825,
+                    "scale": 0.5791831357048748,
                     "image_uri": "9366-topping-omakase-sanitized-gems-oysters.png"
                 },
                 {
@@ -965,8 +965,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -291.699604743083,
-                    "scale": 0.5716732542819499,
+                    "rotation": -303.0830039525692,
+                    "scale": 0.5689064558629776,
                     "image_uri": "9366-topping-omakase-sanitized-gems-oysters.png"
                 }
             ],
@@ -1035,8 +1035,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 197.78656126482213,
-                    "scale": 0.6104084321475626,
+                    "rotation": -12.806324110671937,
+                    "scale": 0.6262187088274045,
                     "image_uri": "9367-topping-omakase-sanitized-gems-oysters.png"
                 },
                 {
@@ -1044,8 +1044,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -32.72727272727275,
-                    "scale": 0.572068511198946,
+                    "rotation": -243.3201581027668,
+                    "scale": 0.5898550724637681,
                     "image_uri": "9367-topping-omakase-sanitized-gems-oysters.png"
                 },
                 {
@@ -1053,8 +1053,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -166.4822134387352,
-                    "scale": 0.572463768115942,
+                    "rotation": 303.08300395256913,
+                    "scale": 0.555862977602108,
                     "image_uri": "9367-topping-omakase-sanitized-gems-oysters.png"
                 }
             ],
@@ -1068,8 +1068,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": 180.71146245059288,
-            "scale": 0.6080368906455863,
+            "rotation": 192.094861660079,
+            "scale": 0.6119894598155468,
             "image_uri": "9360-topping-omakase-sanitized-gems-grabbagtwo.png"
         },
         {
@@ -1077,8 +1077,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 268.93280632411063,
-            "scale": 0.6238471673254282,
+            "rotation": -95.33596837944663,
+            "scale": 0.5361001317523056,
             "image_uri": "9360-topping-omakase-sanitized-gems-grabbagtwo.png"
         },
         {
@@ -1086,8 +1086,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": -41.26482213438737,
-            "scale": 0.5530961791831357,
+            "rotation": 81.10671936758894,
+            "scale": 0.5819499341238471,
             "image_uri": "9360-topping-omakase-sanitized-gems-grabbagtwo.png"
         },
         {
@@ -1095,8 +1095,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": 123.79446640316206,
-            "scale": 0.5716732542819499,
+            "rotation": 132.33201581027674,
+            "scale": 0.5862977602108037,
             "image_uri": "9361-topping-omakase-sanitized-gems-poprocks.png"
         },
         {
@@ -1104,8 +1104,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": -75.41501976284587,
-            "scale": 0.630961791831357,
+            "rotation": 320.1581027667984,
+            "scale": 0.5487483530961792,
             "image_uri": "9361-topping-omakase-sanitized-gems-poprocks.png"
         },
         {
@@ -1113,8 +1113,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": -1.4229249011857519,
-            "scale": 0.5673254281949934,
+            "rotation": -288.8537549407115,
+            "scale": 0.5736495388669302,
             "image_uri": "9361-topping-omakase-sanitized-gems-poprocks.png"
         },
         {
@@ -1122,8 +1122,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": -27.035573122529627,
-            "scale": 0.5862977602108037,
+            "rotation": -192.09486166007903,
+            "scale": 0.5416337285902503,
             "image_uri": "9362-topping-omakase-sanitized-gems-poprocksbar.png"
         },
         {
@@ -1131,8 +1131,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": -61.18577075098813,
-            "scale": 0.5945981554677207,
+            "rotation": 72.56916996047431,
+            "scale": 0.5503293807641634,
             "image_uri": "9362-topping-omakase-sanitized-gems-poprocksbar.png"
         },
         {
@@ -1140,8 +1140,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": -35.57312252964425,
-            "scale": 0.6111989459815547,
+            "rotation": 157.9446640316205,
+            "scale": 0.5653491436100132,
             "image_uri": "9362-topping-omakase-sanitized-gems-poprocksbar.png"
         },
         {
@@ -1149,8 +1149,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": 46.95652173913038,
-            "scale": 0.6052700922266139,
+            "rotation": 217.707509881423,
+            "scale": 0.5534914361001317,
             "image_uri": "9363-topping-omakase-sanitized-gems-poprocksbar.png"
         },
         {
@@ -1158,8 +1158,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": 266.0869565217391,
-            "scale": 0.6191040843214756,
+            "rotation": -323.00395256916994,
+            "scale": 0.53965744400527,
             "image_uri": "9363-topping-omakase-sanitized-gems-poprocksbar.png"
         },
         {
@@ -1167,8 +1167,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": 197.78656126482213,
-            "scale": 0.5728590250329381,
+            "rotation": -152.25296442687747,
+            "scale": 0.5756258234519104,
             "image_uri": "9363-topping-omakase-sanitized-gems-poprocksbar.png"
         },
         {
@@ -1176,8 +1176,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": 263.2411067193676,
-            "scale": 0.6052700922266139,
+            "rotation": -157.94466403162056,
+            "scale": 0.5827404479578392,
             "image_uri": "9364-topping-omakase-sanitized-gems-poprockscube.png"
         },
         {
@@ -1185,8 +1185,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": 260.3952569169961,
-            "scale": 0.5752305665349143,
+            "rotation": -263.2411067193676,
+            "scale": 0.5372859025032938,
             "image_uri": "9364-topping-omakase-sanitized-gems-poprockscube.png"
         },
         {
@@ -1194,8 +1194,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": -135.17786561264825,
-            "scale": 0.6100131752305665,
+            "rotation": -177.86561264822134,
+            "scale": 0.5598155467720685,
             "image_uri": "9364-topping-omakase-sanitized-gems-poprockscube.png"
         },
         {
@@ -1203,8 +1203,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": 83.9525691699605,
-            "scale": 0.5353096179183136,
+            "rotation": -266.0869565217391,
+            "scale": 0.630566534914361,
             "image_uri": "9365-topping-omakase-sanitized-gems-poprockscube.png"
         },
         {
@@ -1212,8 +1212,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": 348.61660079051387,
-            "scale": 0.5633728590250329,
+            "rotation": 169.32806324110675,
+            "scale": 0.6206851119894597,
             "image_uri": "9365-topping-omakase-sanitized-gems-poprockscube.png"
         },
         {
@@ -1221,8 +1221,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 163.63636363636363,
-            "scale": 0.5764163372859025,
+            "rotation": -169.3280632411067,
+            "scale": 0.5704874835309618,
             "image_uri": "9365-topping-omakase-sanitized-gems-poprockscube.png"
         },
         {
@@ -1230,8 +1230,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": 149.40711462450594,
-            "scale": 0.5708827404479578,
+            "rotation": -303.0830039525692,
+            "scale": 0.5795783926218708,
             "image_uri": "9366-topping-omakase-sanitized-gems-oysters.png"
         },
         {
@@ -1239,8 +1239,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 89.6442687747035,
-            "scale": 0.5459815546772069,
+            "rotation": 209.16996047430825,
+            "scale": 0.5791831357048748,
             "image_uri": "9366-topping-omakase-sanitized-gems-oysters.png"
         },
         {
@@ -1248,8 +1248,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -291.699604743083,
-            "scale": 0.5716732542819499,
+            "rotation": -303.0830039525692,
+            "scale": 0.5689064558629776,
             "image_uri": "9366-topping-omakase-sanitized-gems-oysters.png"
         },
         {
@@ -1257,8 +1257,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": 197.78656126482213,
-            "scale": 0.6104084321475626,
+            "rotation": -12.806324110671937,
+            "scale": 0.6262187088274045,
             "image_uri": "9367-topping-omakase-sanitized-gems-oysters.png"
         },
         {
@@ -1266,8 +1266,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": -32.72727272727275,
-            "scale": 0.572068511198946,
+            "rotation": -243.3201581027668,
+            "scale": 0.5898550724637681,
             "image_uri": "9367-topping-omakase-sanitized-gems-oysters.png"
         },
         {
@@ -1275,8 +1275,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -166.4822134387352,
-            "scale": 0.572463768115942,
+            "rotation": 303.08300395256913,
+            "scale": 0.555862977602108,
             "image_uri": "9367-topping-omakase-sanitized-gems-oysters.png"
         }
     ],

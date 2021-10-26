@@ -1,62 +1,62 @@
 {
-    "token_id": 0,
+    "token_id": 323,
     "name": "9430-notseafoodthree",
-    "random_seed": "5687060E",
+    "random_seed": "1F43FDD7",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0000",
+                "ingredient_id": "000",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
-                "ingredient_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 0,
                 "variant_rarity": 5,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
-                    "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
-                    "height": 0.0,
-                    "moisture": 0.0,
-                    "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
-                    "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
-                    "riboflavin": 0.0,
-                    "thiamin": 0.0,
-                    "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "serving_size": 90.0,
+                    "mass": 994.0,
+                    "calories": 92.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 2.0,
+                    "vitamin_b5": 3.0,
+                    "vitamin_d": 4.0,
+                    "vitamin_b7": 5.0,
+                    "height": 10.0,
+                    "moisture": 11.0,
+                    "potassium": 10.0,
+                    "cholesterol": 15.0,
+                    "vitamin_a": 16.0,
+                    "dietary_fiber": 16.0,
+                    "vitamin_b6": 17.0,
+                    "sugar": 20.0,
+                    "protein": 21.0,
+                    "iron": 25.0,
+                    "complex_carb": 30.0,
+                    "selenium": 31.0,
+                    "vitamin_k": 32.0,
+                    "vitamin_b12": 40.0,
+                    "calories_from_fat": 41.0,
+                    "vitamin_e": 42.0,
+                    "zinc": 50.0,
+                    "saturated_fat": 51.0,
+                    "iodine": 52.0,
+                    "trans_fat": 60.0,
+                    "sodium": 61.0,
+                    "monosaturated_fat": 62.0,
+                    "calcium": 63.0,
+                    "riboflavin": 70.0,
+                    "thiamin": 71.0,
+                    "folate": 72.0,
+                    "added_sugar": 23.0,
+                    "chromium": 22.0,
+                    "manganese": 24.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0000-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0000-box-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0500",
-                "ingredient_id": "050",
-                "variant_id": "0",
+                "unique_id": "0531",
+                "ingredient_id": "053",
+                "variant_id": "1",
                 "index": 1,
-                "name": "redchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0500-paper-redchecker.png",
+                    "filename": "0531-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0500-paper-redchecker.png"
+                    "image_uri": "0531-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1020",
-                "ingredient_id": "102",
+                "unique_id": "1000",
+                "ingredient_id": "100",
                 "variant_id": "0",
                 "index": 1,
-                "name": "moon",
+                "name": "thin",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1020-crust-moon.png",
+                    "filename": "1000-crust-thin.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1020-crust-moon.png"
+                    "image_uri": "1000-crust-thin.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2070",
-                "ingredient_id": "207",
+                "unique_id": "2000",
+                "ingredient_id": "200",
                 "variant_id": "0",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "tomato",
+                "ingredient_rarity": 0,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2070-sauce-prismicfluid.png",
+                    "filename": "2000-sauce-tomato.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,20 +278,20 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2070-sauce-prismicfluid.png"
+                    "scale": 1.0,
+                    "image_uri": "2000-sauce-tomato.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3191",
-                "ingredient_id": "319",
-                "variant_id": "1",
+                "unique_id": "3000",
+                "ingredient_id": "300",
+                "variant_id": "0",
                 "index": 1,
-                "name": "gruyere",
-                "ingredient_rarity": 2,
+                "name": "mozzarella",
+                "ingredient_rarity": 0,
                 "variant_rarity": 5,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3191-cheese-gruyere.png",
+                    "filename": "3000-cheese-mozzarella.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.7777777777777778,
-                    "image_uri": "3191-cheese-gruyere.png"
+                    "scale": 0.9305555555555556,
+                    "image_uri": "3000-cheese-mozzarella.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         611.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": -10.59288537549407,
-                    "scale": 0.7227272727272728,
+                    "rotation": 5.217391304347821,
+                    "scale": 0.7351119894598156,
                     "image_uri": "9430-topping-omakase-kaleprotein-notseafoodthree.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         321.6666666666667,
                         1400.0
                     ],
-                    "rotation": 31.462450592885375,
-                    "scale": 0.7651515151515151,
+                    "rotation": 1.106719367588937,
+                    "scale": 0.7509222661396574,
                     "image_uri": "9430-topping-omakase-kaleprotein-notseafoodthree.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         611.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": 35.573122529644266,
-                    "scale": 0.7419631093544137,
+                    "rotation": -27.66798418972332,
+                    "scale": 0.7567193675889328,
                     "image_uri": "9430-topping-omakase-kaleprotein-notseafoodthree.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         788.3333333333334,
                         466.6666666666667
                     ],
-                    "rotation": -10.27667984189723,
-                    "scale": 0.7585638998682477,
+                    "rotation": -2.3715415019762816,
+                    "scale": 0.7435441370223979,
                     "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1078.3333333333335,
                         933.3333333333334
                     ],
-                    "rotation": 20.711462450592883,
-                    "scale": 0.7264163372859025,
+                    "rotation": -20.395256916996047,
+                    "scale": 0.7293148880105402,
                     "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         788.3333333333334,
                         1400.0
                     ],
-                    "rotation": -32.41106719367589,
-                    "scale": 0.7820158102766799,
+                    "rotation": -37.15415019762846,
+                    "scale": 0.780171277997365,
                     "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -19.130434782608695,
-                    "scale": 0.7572463768115942,
+                    "rotation": -13.122529644268774,
+                    "scale": 0.7272068511198946,
                     "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         788.3333333333334,
                         2333.3333333333335
                     ],
-                    "rotation": 18.181818181818187,
-                    "scale": 0.780961791831357,
+                    "rotation": 39.68379446640316,
+                    "scale": 0.7380105401844532,
                     "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1078.3333333333335,
                         2800.0
                     ],
-                    "rotation": -18.49802371541502,
-                    "scale": 0.7633069828722002,
+                    "rotation": 36.20553359683795,
+                    "scale": 0.7825428194993412,
                     "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1255.0,
                         466.6666666666667
                     ],
-                    "rotation": -17.549407114624508,
-                    "scale": 0.7308959156785244,
+                    "rotation": -16.91699604743083,
+                    "scale": 0.7762187088274045,
                     "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1545.0,
                         933.3333333333334
                     ],
-                    "rotation": 33.99209486166008,
-                    "scale": 0.7519762845849802,
+                    "rotation": -24.1897233201581,
+                    "scale": 0.7554018445322793,
                     "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 4.2687747035573125,
-                    "scale": 0.726943346508564,
+                    "rotation": 19.762845849802375,
+                    "scale": 0.7369565217391304,
                     "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         1545.0,
                         1866.6666666666667
                     ],
-                    "rotation": -20.395256916996047,
-                    "scale": 0.7685770750988142,
+                    "rotation": 30.19762845849803,
+                    "scale": 0.7535573122529644,
                     "image_uri": "9434-topping-omakase-kaleprotein-friedchicken.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         1255.0,
                         2333.3333333333335
                     ],
-                    "rotation": 5.217391304347821,
-                    "scale": 0.7235177865612649,
+                    "rotation": -24.1897233201581,
+                    "scale": 0.777536231884058,
                     "image_uri": "9434-topping-omakase-kaleprotein-friedchicken.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 5.8498023715415,
-                    "scale": 0.7561923583662714,
+                    "rotation": 28.300395256917,
+                    "scale": 0.7335309617918313,
                     "image_uri": "9434-topping-omakase-kaleprotein-friedchicken.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         1721.6666666666667,
                         466.6666666666667
                     ],
-                    "rotation": 21.027667984189726,
-                    "scale": 0.7764822134387351,
+                    "rotation": 35.573122529644266,
+                    "scale": 0.7335309617918313,
                     "image_uri": "9436-topping-omakase-kaleprotein-cicada.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2011.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": 25.454545454545453,
-                    "scale": 0.7627799736495389,
+                    "rotation": 18.498023715415016,
+                    "scale": 0.758300395256917,
                     "image_uri": "9436-topping-omakase-kaleprotein-cicada.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         1721.6666666666667,
                         1400.0
                     ],
-                    "rotation": -0.1581027667984216,
-                    "scale": 0.7580368906455863,
+                    "rotation": 35.573122529644266,
+                    "scale": 0.7799077733860342,
                     "image_uri": "9436-topping-omakase-kaleprotein-cicada.png"
                 }
             ],
@@ -947,8 +947,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": -25.770750988142293,
-                    "scale": 0.7279973649538867,
+                    "rotation": 28.932806324110672,
+                    "scale": 0.7535573122529644,
                     "image_uri": "9437-topping-omakase-kaleprotein-cicada.png"
                 },
                 {
@@ -956,8 +956,8 @@
                         1721.6666666666667,
                         2333.3333333333335
                     ],
-                    "rotation": 13.754940711462453,
-                    "scale": 0.7195652173913043,
+                    "rotation": 35.25691699604744,
+                    "scale": 0.7820158102766799,
                     "image_uri": "9437-topping-omakase-kaleprotein-cicada.png"
                 },
                 {
@@ -965,8 +965,8 @@
                         2188.3333333333335,
                         466.6666666666667
                     ],
-                    "rotation": -17.233201581027664,
-                    "scale": 0.7601449275362319,
+                    "rotation": -24.50592885375494,
+                    "scale": 0.7640974967061923,
                     "image_uri": "9437-topping-omakase-kaleprotein-cicada.png"
                 }
             ],
@@ -1035,8 +1035,8 @@
                         2478.3333333333335,
                         933.3333333333334
                     ],
-                    "rotation": 21.976284584980235,
-                    "scale": 0.7572463768115942,
+                    "rotation": -22.92490118577075,
+                    "scale": 0.722463768115942,
                     "image_uri": "9438-topping-omakase-kaleprotein-roastbeef.png"
                 },
                 {
@@ -1044,8 +1044,8 @@
                         2188.3333333333335,
                         1400.0
                     ],
-                    "rotation": 14.703557312252968,
-                    "scale": 0.7754281949934124,
+                    "rotation": -33.04347826086956,
+                    "scale": 0.7720026350461133,
                     "image_uri": "9438-topping-omakase-kaleprotein-roastbeef.png"
                 },
                 {
@@ -1053,8 +1053,8 @@
                         2478.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": 21.6600790513834,
-                    "scale": 0.7538208168642951,
+                    "rotation": 0.790513833992101,
+                    "scale": 0.7825428194993412,
                     "image_uri": "9438-topping-omakase-kaleprotein-roastbeef.png"
                 }
             ],
@@ -1123,8 +1123,8 @@
                         2188.3333333333335,
                         2333.3333333333335
                     ],
-                    "rotation": 5.217391304347821,
-                    "scale": 0.7596179183135705,
+                    "rotation": 9.011857707509883,
+                    "scale": 0.7577733860342556,
                     "image_uri": "9439-topping-omakase-kaleprotein-beef.png"
                 },
                 {
@@ -1132,8 +1132,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 18.498023715415016,
-                    "scale": 0.7200922266139658,
+                    "rotation": -9.644268774703558,
+                    "scale": 0.7772727272727272,
                     "image_uri": "9439-topping-omakase-kaleprotein-beef.png"
                 },
                 {
@@ -1141,8 +1141,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -6.798418972332016,
-                    "scale": 0.7485507246376811,
+                    "rotation": -4.2687747035573125,
+                    "scale": 0.7456521739130435,
                     "image_uri": "9439-topping-omakase-kaleprotein-beef.png"
                 }
             ],
@@ -1156,8 +1156,8 @@
                 611.6666666666667,
                 933.3333333333334
             ],
-            "rotation": -10.59288537549407,
-            "scale": 0.7227272727272728,
+            "rotation": 5.217391304347821,
+            "scale": 0.7351119894598156,
             "image_uri": "9430-topping-omakase-kaleprotein-notseafoodthree.png"
         },
         {
@@ -1165,8 +1165,8 @@
                 321.6666666666667,
                 1400.0
             ],
-            "rotation": 31.462450592885375,
-            "scale": 0.7651515151515151,
+            "rotation": 1.106719367588937,
+            "scale": 0.7509222661396574,
             "image_uri": "9430-topping-omakase-kaleprotein-notseafoodthree.png"
         },
         {
@@ -1174,8 +1174,8 @@
                 611.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": 35.573122529644266,
-            "scale": 0.7419631093544137,
+            "rotation": -27.66798418972332,
+            "scale": 0.7567193675889328,
             "image_uri": "9430-topping-omakase-kaleprotein-notseafoodthree.png"
         },
         {
@@ -1183,89 +1183,89 @@
                 788.3333333333334,
                 466.6666666666667
             ],
-            "rotation": -10.27667984189723,
-            "scale": 0.7585638998682477,
+            "rotation": -2.3715415019762816,
+            "scale": 0.7435441370223979,
             "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
         },
         {
             "translation": [
                 1078.3333333333335,
                 933.3333333333334
-            ],
-            "rotation": 20.711462450592883,
-            "scale": 0.7264163372859025,
-            "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
-        },
-        {
-            "translation": [
-                788.3333333333334,
-                1400.0
-            ],
-            "rotation": -32.41106719367589,
-            "scale": 0.7820158102766799,
-            "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
-        },
-        {
-            "translation": [
-                1078.3333333333335,
-                1866.6666666666667
-            ],
-            "rotation": -19.130434782608695,
-            "scale": 0.7572463768115942,
-            "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
-        },
-        {
-            "translation": [
-                788.3333333333334,
-                2333.3333333333335
-            ],
-            "rotation": 18.181818181818187,
-            "scale": 0.780961791831357,
-            "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
-        },
-        {
-            "translation": [
-                1078.3333333333335,
-                2800.0
-            ],
-            "rotation": -18.49802371541502,
-            "scale": 0.7633069828722002,
-            "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                466.6666666666667
-            ],
-            "rotation": -17.549407114624508,
-            "scale": 0.7308959156785244,
-            "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                933.3333333333334
-            ],
-            "rotation": 33.99209486166008,
-            "scale": 0.7519762845849802,
-            "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
-            ],
-            "rotation": 4.2687747035573125,
-            "scale": 0.726943346508564,
-            "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                1866.6666666666667
             ],
             "rotation": -20.395256916996047,
-            "scale": 0.7685770750988142,
+            "scale": 0.7293148880105402,
+            "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
+        },
+        {
+            "translation": [
+                788.3333333333334,
+                1400.0
+            ],
+            "rotation": -37.15415019762846,
+            "scale": 0.780171277997365,
+            "image_uri": "9431-topping-omakase-kaleprotein-magicmushroom.png"
+        },
+        {
+            "translation": [
+                1078.3333333333335,
+                1866.6666666666667
+            ],
+            "rotation": -13.122529644268774,
+            "scale": 0.7272068511198946,
+            "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
+        },
+        {
+            "translation": [
+                788.3333333333334,
+                2333.3333333333335
+            ],
+            "rotation": 39.68379446640316,
+            "scale": 0.7380105401844532,
+            "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
+        },
+        {
+            "translation": [
+                1078.3333333333335,
+                2800.0
+            ],
+            "rotation": 36.20553359683795,
+            "scale": 0.7825428194993412,
+            "image_uri": "9432-topping-omakase-kaleprotein-anchovies.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                466.6666666666667
+            ],
+            "rotation": -16.91699604743083,
+            "scale": 0.7762187088274045,
+            "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                933.3333333333334
+            ],
+            "rotation": -24.1897233201581,
+            "scale": 0.7554018445322793,
+            "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                1400.0
+            ],
+            "rotation": 19.762845849802375,
+            "scale": 0.7369565217391304,
+            "image_uri": "9433-topping-omakase-kaleprotein-anchovies.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                1866.6666666666667
+            ],
+            "rotation": 30.19762845849803,
+            "scale": 0.7535573122529644,
             "image_uri": "9434-topping-omakase-kaleprotein-friedchicken.png"
         },
         {
@@ -1273,8 +1273,8 @@
                 1255.0,
                 2333.3333333333335
             ],
-            "rotation": 5.217391304347821,
-            "scale": 0.7235177865612649,
+            "rotation": -24.1897233201581,
+            "scale": 0.777536231884058,
             "image_uri": "9434-topping-omakase-kaleprotein-friedchicken.png"
         },
         {
@@ -1282,8 +1282,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 5.8498023715415,
-            "scale": 0.7561923583662714,
+            "rotation": 28.300395256917,
+            "scale": 0.7335309617918313,
             "image_uri": "9434-topping-omakase-kaleprotein-friedchicken.png"
         },
         {
@@ -1291,8 +1291,8 @@
                 1721.6666666666667,
                 466.6666666666667
             ],
-            "rotation": 21.027667984189726,
-            "scale": 0.7764822134387351,
+            "rotation": 35.573122529644266,
+            "scale": 0.7335309617918313,
             "image_uri": "9436-topping-omakase-kaleprotein-cicada.png"
         },
         {
@@ -1300,8 +1300,8 @@
                 2011.6666666666667,
                 933.3333333333334
             ],
-            "rotation": 25.454545454545453,
-            "scale": 0.7627799736495389,
+            "rotation": 18.498023715415016,
+            "scale": 0.758300395256917,
             "image_uri": "9436-topping-omakase-kaleprotein-cicada.png"
         },
         {
@@ -1309,8 +1309,8 @@
                 1721.6666666666667,
                 1400.0
             ],
-            "rotation": -0.1581027667984216,
-            "scale": 0.7580368906455863,
+            "rotation": 35.573122529644266,
+            "scale": 0.7799077733860342,
             "image_uri": "9436-topping-omakase-kaleprotein-cicada.png"
         },
         {
@@ -1318,8 +1318,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": -25.770750988142293,
-            "scale": 0.7279973649538867,
+            "rotation": 28.932806324110672,
+            "scale": 0.7535573122529644,
             "image_uri": "9437-topping-omakase-kaleprotein-cicada.png"
         },
         {
@@ -1327,8 +1327,8 @@
                 1721.6666666666667,
                 2333.3333333333335
             ],
-            "rotation": 13.754940711462453,
-            "scale": 0.7195652173913043,
+            "rotation": 35.25691699604744,
+            "scale": 0.7820158102766799,
             "image_uri": "9437-topping-omakase-kaleprotein-cicada.png"
         },
         {
@@ -1336,8 +1336,8 @@
                 2188.3333333333335,
                 466.6666666666667
             ],
-            "rotation": -17.233201581027664,
-            "scale": 0.7601449275362319,
+            "rotation": -24.50592885375494,
+            "scale": 0.7640974967061923,
             "image_uri": "9437-topping-omakase-kaleprotein-cicada.png"
         },
         {
@@ -1345,8 +1345,8 @@
                 2478.3333333333335,
                 933.3333333333334
             ],
-            "rotation": 21.976284584980235,
-            "scale": 0.7572463768115942,
+            "rotation": -22.92490118577075,
+            "scale": 0.722463768115942,
             "image_uri": "9438-topping-omakase-kaleprotein-roastbeef.png"
         },
         {
@@ -1354,8 +1354,8 @@
                 2188.3333333333335,
                 1400.0
             ],
-            "rotation": 14.703557312252968,
-            "scale": 0.7754281949934124,
+            "rotation": -33.04347826086956,
+            "scale": 0.7720026350461133,
             "image_uri": "9438-topping-omakase-kaleprotein-roastbeef.png"
         },
         {
@@ -1363,8 +1363,8 @@
                 2478.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": 21.6600790513834,
-            "scale": 0.7538208168642951,
+            "rotation": 0.790513833992101,
+            "scale": 0.7825428194993412,
             "image_uri": "9438-topping-omakase-kaleprotein-roastbeef.png"
         },
         {
@@ -1372,8 +1372,8 @@
                 2188.3333333333335,
                 2333.3333333333335
             ],
-            "rotation": 5.217391304347821,
-            "scale": 0.7596179183135705,
+            "rotation": 9.011857707509883,
+            "scale": 0.7577733860342556,
             "image_uri": "9439-topping-omakase-kaleprotein-beef.png"
         },
         {
@@ -1381,8 +1381,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 18.498023715415016,
-            "scale": 0.7200922266139658,
+            "rotation": -9.644268774703558,
+            "scale": 0.7772727272727272,
             "image_uri": "9439-topping-omakase-kaleprotein-beef.png"
         },
         {
@@ -1390,8 +1390,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -6.798418972332016,
-            "scale": 0.7485507246376811,
+            "rotation": -4.2687747035573125,
+            "scale": 0.7456521739130435,
             "image_uri": "9439-topping-omakase-kaleprotein-beef.png"
         }
     ],

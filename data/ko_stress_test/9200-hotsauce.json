@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 307,
     "name": "9200-hotsauce",
-    "random_seed": "C6E9E1A8",
+    "random_seed": "42AA119E",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
+                "name": "greasy",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0500",
-                "ingredient_id": "050",
-                "variant_id": "0",
+                "unique_id": "0531",
+                "ingredient_id": "053",
+                "variant_id": "1",
                 "index": 1,
-                "name": "redchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0500-paper-redchecker.png",
+                    "filename": "0531-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0500-paper-redchecker.png"
+                    "image_uri": "0531-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1050",
-                "ingredient_id": "105",
+                "unique_id": "1020",
+                "ingredient_id": "102",
                 "variant_id": "0",
                 "index": 1,
-                "name": "whitebread",
+                "name": "moon",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1050-crust-whitebread.png",
+                    "filename": "1020-crust-moon.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1050-crust-whitebread.png"
+                    "image_uri": "1020-crust-moon.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2040",
-                "ingredient_id": "204",
+                "unique_id": "2070",
+                "ingredient_id": "207",
                 "variant_id": "0",
                 "index": 1,
-                "name": "nutella",
+                "name": "prismicfluid",
                 "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2040-sauce-nutella.png",
+                    "filename": "2070-sauce-prismicfluid.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,20 +278,20 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 1.0,
-                    "image_uri": "2040-sauce-nutella.png"
+                    "scale": 0.9444444444444444,
+                    "image_uri": "2070-sauce-prismicfluid.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3193",
-                "ingredient_id": "319",
-                "variant_id": "3",
+                "unique_id": "3020",
+                "ingredient_id": "302",
+                "variant_id": "0",
                 "index": 1,
-                "name": "gruyere",
-                "ingredient_rarity": 2,
+                "name": "ricotta",
+                "ingredient_rarity": 1,
                 "variant_rarity": 5,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3193-cheese-gruyere.png",
+                    "filename": "3020-cheese-ricotta.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.7777777777777778,
-                    "image_uri": "3193-cheese-gruyere.png"
+                    "scale": 1.0,
+                    "image_uri": "3020-cheese-ricotta.png"
                 }
             ],
             "scatter_type": 1

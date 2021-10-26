@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 210,
     "name": "6860-camellia",
-    "random_seed": "A89B045E",
+    "random_seed": "17F2B5B2",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
+                "unique_id": "0530",
+                "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0530-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0530-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2050",
-                "ingredient_id": "205",
+                "unique_id": "2060",
+                "ingredient_id": "206",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "name": "deepspace",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2050-sauce-white.png",
+                    "filename": "2060-sauce-deepspace.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2050-sauce-white.png"
+                    "image_uri": "2060-sauce-deepspace.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3170",
-                "ingredient_id": "317",
-                "variant_id": "0",
+                "unique_id": "3191",
+                "ingredient_id": "319",
+                "variant_id": "1",
                 "index": 1,
-                "name": "cheesecake",
-                "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "name": "gruyere",
+                "ingredient_rarity": 2,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3170-cheese-cheesecake.png",
+                    "filename": "3191-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8333333333333334,
-                    "image_uri": "3170-cheese-cheesecake.png"
+                    "scale": 0.7777777777777778,
+                    "image_uri": "3191-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": -9.960474308300377,
-                    "scale": 0.4850461133069829,
+                    "rotation": -223.39920948616603,
+                    "scale": 0.49031620553359684,
                     "image_uri": "6860-topping-edibleflower-camellia.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 297.391304347826,
-                    "scale": 0.5135046113306984,
+                    "rotation": 354.308300395257,
+                    "scale": 0.4975625823451911,
                     "image_uri": "6860-topping-edibleflower-camellia.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": -55.49407114624506,
-                    "scale": 0.4940052700922266,
+                    "rotation": 348.61660079051387,
+                    "scale": 0.49361001317523057,
                     "image_uri": "6860-topping-edibleflower-camellia.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": -189.24901185770753,
-                    "scale": 0.5100790513833993,
+                    "rotation": -186.40316205533597,
+                    "scale": 0.5142951251646904,
                     "image_uri": "6861-topping-edibleflower-camellia.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": 24.189723320158123,
-                    "scale": 0.4987483530961792,
+                    "rotation": -89.64426877470356,
+                    "scale": 0.48610013175230565,
                     "image_uri": "6861-topping-edibleflower-camellia.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": 183.55731225296438,
-                    "scale": 0.4870223978919631,
+                    "rotation": 331.5415019762846,
+                    "scale": 0.5090250329380764,
                     "image_uri": "6861-topping-edibleflower-camellia.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": -257.5494071146245,
-                    "scale": 0.4975625823451911,
+                    "rotation": -254.70355731225297,
+                    "scale": 0.4979578392621871,
                     "image_uri": "6862-topping-edibleflower-camellia.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": -38.41897233201581,
-                    "scale": 0.5138998682476944,
+                    "rotation": 229.09090909090912,
+                    "scale": 0.48465085638998684,
                     "image_uri": "6862-topping-edibleflower-camellia.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -61.18577075098813,
-                    "scale": 0.49861660079051384,
+                    "rotation": 166.48221343873513,
+                    "scale": 0.5052042160737813,
                     "image_uri": "6862-topping-edibleflower-camellia.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 209.16996047430825,
-                    "scale": 0.5086297760210804,
+                    "rotation": -254.70355731225297,
+                    "scale": 0.48741765480895916,
                     "image_uri": "6863-topping-edibleflower-camellia.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": 334.3873517786561,
-                    "scale": 0.5106060606060606,
+                    "rotation": 146.56126482213443,
+                    "scale": 0.5084980237154151,
                     "image_uri": "6863-topping-edibleflower-camellia.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": 64.03162055335969,
-                    "scale": 0.5045454545454546,
+                    "rotation": -246.16600790513834,
+                    "scale": 0.49558629776021085,
                     "image_uri": "6863-topping-edibleflower-camellia.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": -166.4822134387352,
-                    "scale": 0.488866930171278,
+                    "rotation": 155.098814229249,
+                    "scale": 0.5087615283267457,
                     "image_uri": "6864-topping-edibleflower-camellia.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": 348.61660079051387,
-                    "scale": 0.4857048748353096,
+                    "rotation": 149.40711462450594,
+                    "scale": 0.5129776021080369,
                     "image_uri": "6864-topping-edibleflower-camellia.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": 41.26482213438737,
-                    "scale": 0.5135046113306984,
+                    "rotation": 214.86166007905138,
+                    "scale": 0.48333333333333334,
                     "image_uri": "6864-topping-edibleflower-camellia.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": -92.49011857707507,
-                    "scale": 0.49861660079051384,
+                    "rotation": 155.098814229249,
+                    "scale": 0.5133728590250329,
                     "image_uri": "6865-topping-edibleflower-camellia.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": 75.41501976284582,
-                    "scale": 0.5015151515151516,
+                    "rotation": 226.2450592885375,
+                    "scale": 0.5119235836627142,
                     "image_uri": "6865-topping-edibleflower-camellia.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -266.0869565217391,
-                    "scale": 0.49716732542819503,
+                    "rotation": -138.02371541501975,
+                    "scale": 0.4930830039525692,
                     "image_uri": "6865-topping-edibleflower-camellia.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": -9.960474308300377,
-            "scale": 0.4850461133069829,
+            "rotation": -223.39920948616603,
+            "scale": 0.49031620553359684,
             "image_uri": "6860-topping-edibleflower-camellia.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 297.391304347826,
-            "scale": 0.5135046113306984,
+            "rotation": 354.308300395257,
+            "scale": 0.4975625823451911,
             "image_uri": "6860-topping-edibleflower-camellia.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": -55.49407114624506,
-            "scale": 0.4940052700922266,
+            "rotation": 348.61660079051387,
+            "scale": 0.49361001317523057,
             "image_uri": "6860-topping-edibleflower-camellia.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": -189.24901185770753,
-            "scale": 0.5100790513833993,
+            "rotation": -186.40316205533597,
+            "scale": 0.5142951251646904,
             "image_uri": "6861-topping-edibleflower-camellia.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": 24.189723320158123,
-            "scale": 0.4987483530961792,
+            "rotation": -89.64426877470356,
+            "scale": 0.48610013175230565,
             "image_uri": "6861-topping-edibleflower-camellia.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": 183.55731225296438,
-            "scale": 0.4870223978919631,
+            "rotation": 331.5415019762846,
+            "scale": 0.5090250329380764,
             "image_uri": "6861-topping-edibleflower-camellia.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": -257.5494071146245,
-            "scale": 0.4975625823451911,
+            "rotation": -254.70355731225297,
+            "scale": 0.4979578392621871,
             "image_uri": "6862-topping-edibleflower-camellia.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": -38.41897233201581,
-            "scale": 0.5138998682476944,
+            "rotation": 229.09090909090912,
+            "scale": 0.48465085638998684,
             "image_uri": "6862-topping-edibleflower-camellia.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": -61.18577075098813,
-            "scale": 0.49861660079051384,
+            "rotation": 166.48221343873513,
+            "scale": 0.5052042160737813,
             "image_uri": "6862-topping-edibleflower-camellia.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": 209.16996047430825,
-            "scale": 0.5086297760210804,
+            "rotation": -254.70355731225297,
+            "scale": 0.48741765480895916,
             "image_uri": "6863-topping-edibleflower-camellia.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": 334.3873517786561,
-            "scale": 0.5106060606060606,
+            "rotation": 146.56126482213443,
+            "scale": 0.5084980237154151,
             "image_uri": "6863-topping-edibleflower-camellia.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": 64.03162055335969,
-            "scale": 0.5045454545454546,
+            "rotation": -246.16600790513834,
+            "scale": 0.49558629776021085,
             "image_uri": "6863-topping-edibleflower-camellia.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": -166.4822134387352,
-            "scale": 0.488866930171278,
+            "rotation": 155.098814229249,
+            "scale": 0.5087615283267457,
             "image_uri": "6864-topping-edibleflower-camellia.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": 348.61660079051387,
-            "scale": 0.4857048748353096,
+            "rotation": 149.40711462450594,
+            "scale": 0.5129776021080369,
             "image_uri": "6864-topping-edibleflower-camellia.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": 41.26482213438737,
-            "scale": 0.5135046113306984,
+            "rotation": 214.86166007905138,
+            "scale": 0.48333333333333334,
             "image_uri": "6864-topping-edibleflower-camellia.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": -92.49011857707507,
-            "scale": 0.49861660079051384,
+            "rotation": 155.098814229249,
+            "scale": 0.5133728590250329,
             "image_uri": "6865-topping-edibleflower-camellia.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": 75.41501976284582,
-            "scale": 0.5015151515151516,
+            "rotation": 226.2450592885375,
+            "scale": 0.5119235836627142,
             "image_uri": "6865-topping-edibleflower-camellia.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -266.0869565217391,
-            "scale": 0.49716732542819503,
+            "rotation": -138.02371541501975,
+            "scale": 0.4930830039525692,
             "image_uri": "6865-topping-edibleflower-camellia.png"
         }
     ],

@@ -1,62 +1,62 @@
 {
-    "token_id": 0,
+    "token_id": 191,
     "name": "6660-dotoru",
-    "random_seed": "8032E03C",
+    "random_seed": "B85BB457",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0000",
+                "ingredient_id": "000",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 0,
                 "variant_rarity": 5,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
-                    "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
-                    "height": 0.0,
-                    "moisture": 0.0,
-                    "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
-                    "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
-                    "riboflavin": 0.0,
-                    "thiamin": 0.0,
-                    "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "serving_size": 90.0,
+                    "mass": 994.0,
+                    "calories": 92.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 2.0,
+                    "vitamin_b5": 3.0,
+                    "vitamin_d": 4.0,
+                    "vitamin_b7": 5.0,
+                    "height": 10.0,
+                    "moisture": 11.0,
+                    "potassium": 10.0,
+                    "cholesterol": 15.0,
+                    "vitamin_a": 16.0,
+                    "dietary_fiber": 16.0,
+                    "vitamin_b6": 17.0,
+                    "sugar": 20.0,
+                    "protein": 21.0,
+                    "iron": 25.0,
+                    "complex_carb": 30.0,
+                    "selenium": 31.0,
+                    "vitamin_k": 32.0,
+                    "vitamin_b12": 40.0,
+                    "calories_from_fat": 41.0,
+                    "vitamin_e": 42.0,
+                    "zinc": 50.0,
+                    "saturated_fat": 51.0,
+                    "iodine": 52.0,
+                    "trans_fat": 60.0,
+                    "sodium": 61.0,
+                    "monosaturated_fat": 62.0,
+                    "calcium": 63.0,
+                    "riboflavin": 70.0,
+                    "thiamin": 71.0,
+                    "folate": 72.0,
+                    "added_sugar": 23.0,
+                    "chromium": 22.0,
+                    "manganese": 24.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0000-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0000-box-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0540",
-                "ingredient_id": "054",
+                "unique_id": "0500",
+                "ingredient_id": "050",
                 "variant_id": "0",
                 "index": 1,
-                "name": "blackberry-code",
+                "name": "redchecker",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0540-paper-blackberry-code.png",
+                    "filename": "0500-paper-redchecker.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0540-paper-blackberry-code.png"
+                    "image_uri": "0500-paper-redchecker.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1050",
-                "ingredient_id": "105",
+                "unique_id": "1000",
+                "ingredient_id": "100",
                 "variant_id": "0",
                 "index": 1,
-                "name": "whitebread",
+                "name": "thin",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1050-crust-whitebread.png",
+                    "filename": "1000-crust-thin.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1050-crust-whitebread.png"
+                    "image_uri": "1000-crust-thin.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2072",
-                "ingredient_id": "207",
-                "variant_id": "2",
+                "unique_id": "2000",
+                "ingredient_id": "200",
+                "variant_id": "0",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "tomato",
+                "ingredient_rarity": 0,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2072-sauce-prismicfluid.png",
+                    "filename": "2000-sauce-tomato.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,21 +278,21 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2072-sauce-prismicfluid.png"
+                    "scale": 1.0,
+                    "image_uri": "2000-sauce-tomato.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3120",
-                "ingredient_id": "312",
+                "unique_id": "3190",
+                "ingredient_id": "319",
                 "variant_id": "0",
                 "index": 1,
-                "name": "korbacik",
+                "name": "gruyere",
                 "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3120-cheese-korbacik.png",
+                    "filename": "3190-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.09722222222222222,
-                    "image_uri": "3120-cheese-korbacik.png"
+                    "scale": 0.7777777777777778,
+                    "image_uri": "3190-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": -38.41897233201581,
-                    "scale": 0.30316205533596835,
+                    "rotation": -226.24505928853753,
+                    "scale": 0.34005270092226614,
                     "image_uri": "6660-topping-snax-dotoru.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 106.71936758893281,
-                    "scale": 0.3624505928853755,
+                    "rotation": -95.33596837944663,
+                    "scale": 0.32187088274044795,
                     "image_uri": "6660-topping-snax-dotoru.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": -160.7905138339921,
-                    "scale": 0.30606060606060603,
+                    "rotation": -214.86166007905138,
+                    "scale": 0.3018445322793149,
                     "image_uri": "6660-topping-snax-dotoru.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": -268.9328063241107,
-                    "scale": 0.5241106719367589,
+                    "rotation": -345.7707509881423,
+                    "scale": 0.530171277997365,
                     "image_uri": "6661-topping-snax-dotoru.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": -149.40711462450594,
-                    "scale": 0.49538866930171277,
+                    "rotation": 331.5415019762846,
+                    "scale": 0.47694334650856385,
                     "image_uri": "6661-topping-snax-dotoru.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": -92.49011857707507,
-                    "scale": 0.5038208168642951,
+                    "rotation": 118.102766798419,
+                    "scale": 0.508300395256917,
                     "image_uri": "6661-topping-snax-dotoru.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": 342.92490118577075,
-                    "scale": 0.4714097496706192,
+                    "rotation": 340.07905138339925,
+                    "scale": 0.4827404479578392,
                     "image_uri": "6662-topping-snax-dotoru.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": 229.09090909090912,
-                    "scale": 0.5209486166007905,
+                    "rotation": -24.189723320158066,
+                    "scale": 0.502239789196311,
                     "image_uri": "6662-topping-snax-dotoru.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -83.9525691699605,
-                    "scale": 0.4666666666666666,
+                    "rotation": -143.71541501976284,
+                    "scale": 0.4714097496706192,
                     "image_uri": "6662-topping-snax-dotoru.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 175.01976284584987,
-                    "scale": 0.5061923583662714,
+                    "rotation": 345.77075098814225,
+                    "scale": 0.509090909090909,
                     "image_uri": "6663-topping-snax-dotoru.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": -183.55731225296444,
-                    "scale": 0.48247694334650854,
+                    "rotation": -288.8537549407115,
+                    "scale": 0.4911725955204216,
                     "image_uri": "6663-topping-snax-dotoru.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": -254.70355731225297,
-                    "scale": 0.4840579710144927,
+                    "rotation": 58.339920948616566,
+                    "scale": 0.47404479578392617,
                     "image_uri": "6663-topping-snax-dotoru.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": 183.55731225296438,
-                    "scale": 0.5164690382081686,
+                    "rotation": 251.85770750988138,
+                    "scale": 0.49354413702239786,
                     "image_uri": "6664-topping-snax-dotoru.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": 286.00790513834,
-                    "scale": 0.491699604743083,
+                    "rotation": -300.2371541501976,
+                    "scale": 0.49486166007905136,
                     "image_uri": "6664-topping-snax-dotoru.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": -44.11067193675888,
-                    "scale": 0.5330698287220026,
+                    "rotation": 317.3122529644269,
+                    "scale": 0.4959156785243741,
                     "image_uri": "6664-topping-snax-dotoru.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": 140.8695652173913,
-                    "scale": 0.486429512516469,
+                    "rotation": -223.39920948616603,
+                    "scale": 0.5196310935441371,
                     "image_uri": "6665-topping-snax-dotoru.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": 143.71541501976282,
-                    "scale": 0.5001317523056653,
+                    "rotation": -305.9288537549407,
+                    "scale": 0.4827404479578392,
                     "image_uri": "6665-topping-snax-dotoru.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -143.71541501976284,
-                    "scale": 0.47483530961791826,
+                    "rotation": -260.39525691699606,
+                    "scale": 0.5096179183135705,
                     "image_uri": "6665-topping-snax-dotoru.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": -38.41897233201581,
-            "scale": 0.30316205533596835,
+            "rotation": -226.24505928853753,
+            "scale": 0.34005270092226614,
             "image_uri": "6660-topping-snax-dotoru.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 106.71936758893281,
-            "scale": 0.3624505928853755,
+            "rotation": -95.33596837944663,
+            "scale": 0.32187088274044795,
             "image_uri": "6660-topping-snax-dotoru.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": -160.7905138339921,
-            "scale": 0.30606060606060603,
+            "rotation": -214.86166007905138,
+            "scale": 0.3018445322793149,
             "image_uri": "6660-topping-snax-dotoru.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": -268.9328063241107,
-            "scale": 0.5241106719367589,
+            "rotation": -345.7707509881423,
+            "scale": 0.530171277997365,
             "image_uri": "6661-topping-snax-dotoru.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": -149.40711462450594,
-            "scale": 0.49538866930171277,
+            "rotation": 331.5415019762846,
+            "scale": 0.47694334650856385,
             "image_uri": "6661-topping-snax-dotoru.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": -92.49011857707507,
-            "scale": 0.5038208168642951,
+            "rotation": 118.102766798419,
+            "scale": 0.508300395256917,
             "image_uri": "6661-topping-snax-dotoru.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": 342.92490118577075,
-            "scale": 0.4714097496706192,
+            "rotation": 340.07905138339925,
+            "scale": 0.4827404479578392,
             "image_uri": "6662-topping-snax-dotoru.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": 229.09090909090912,
-            "scale": 0.5209486166007905,
+            "rotation": -24.189723320158066,
+            "scale": 0.502239789196311,
             "image_uri": "6662-topping-snax-dotoru.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": -83.9525691699605,
-            "scale": 0.4666666666666666,
+            "rotation": -143.71541501976284,
+            "scale": 0.4714097496706192,
             "image_uri": "6662-topping-snax-dotoru.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": 175.01976284584987,
-            "scale": 0.5061923583662714,
+            "rotation": 345.77075098814225,
+            "scale": 0.509090909090909,
             "image_uri": "6663-topping-snax-dotoru.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": -183.55731225296444,
-            "scale": 0.48247694334650854,
+            "rotation": -288.8537549407115,
+            "scale": 0.4911725955204216,
             "image_uri": "6663-topping-snax-dotoru.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": -254.70355731225297,
-            "scale": 0.4840579710144927,
+            "rotation": 58.339920948616566,
+            "scale": 0.47404479578392617,
             "image_uri": "6663-topping-snax-dotoru.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": 183.55731225296438,
-            "scale": 0.5164690382081686,
+            "rotation": 251.85770750988138,
+            "scale": 0.49354413702239786,
             "image_uri": "6664-topping-snax-dotoru.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": 286.00790513834,
-            "scale": 0.491699604743083,
+            "rotation": -300.2371541501976,
+            "scale": 0.49486166007905136,
             "image_uri": "6664-topping-snax-dotoru.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": -44.11067193675888,
-            "scale": 0.5330698287220026,
+            "rotation": 317.3122529644269,
+            "scale": 0.4959156785243741,
             "image_uri": "6664-topping-snax-dotoru.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": 140.8695652173913,
-            "scale": 0.486429512516469,
+            "rotation": -223.39920948616603,
+            "scale": 0.5196310935441371,
             "image_uri": "6665-topping-snax-dotoru.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": 143.71541501976282,
-            "scale": 0.5001317523056653,
+            "rotation": -305.9288537549407,
+            "scale": 0.4827404479578392,
             "image_uri": "6665-topping-snax-dotoru.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -143.71541501976284,
-            "scale": 0.47483530961791826,
+            "rotation": -260.39525691699606,
+            "scale": 0.5096179183135705,
             "image_uri": "6665-topping-snax-dotoru.png"
         }
     ],

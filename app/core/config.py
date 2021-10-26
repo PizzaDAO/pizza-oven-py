@@ -81,8 +81,8 @@ class Settings(BaseSettings):
     GOOGLE_SHEETS_TOKEN_PATH = "secrets/sheets.json"
     GOOGLE_SHEETS_CREDENTIALS_PATH = "secrets/credentials.json"
     SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly"
-    PIZZA_TYPES_SHEET = "1wHfP2I1m8_TV5tZt3FchI_zYgzZg9AomU7GOkof7TW8"
-    PIZZA_TYPE_RANGE_NAME = "Jed - Pizza Types!A3:W"
+    PIZZA_TYPES_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
+    PIZZA_TYPE_RANGE_NAME = "recipe-db!A3:Q"
     PIZZA_INGREDIENTS_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
     TOPPINGS_RANGE_NAME = "ingredients-db"
 
@@ -93,6 +93,16 @@ class Settings(BaseSettings):
     DEFAULT_NATRON_EXECUTABLE_PATH = os.environ["NATRON_PATH"]
     DEFAULT_NATRON_PROJECT_PATH = os.environ["NATRON_PROJECT_PATH"]
     DEFAULT_NATRON_FRAME = 9
+
+    DATA_FONT_SIZE = 64
+    WATERMARK_FILE = "pizza_watermark.png"
+
+    INTERMEDIATE_FOLDER_PATH = ".cache/intermediate"
+    OUTPUT_FOLDER_PATH = ".cache/output"
+    lOCAL_RECIPES_PATH = ".cache/local/recipes/"
+    lOCAL_INGREDIENT_DB_MANIFEST_PATH = ".cache/local/"
+    LOCAL_INGREDIENT_DB_MANIFEST_FILENAME = "ingredient_manifest.json"
+    LOCAL_INGREDIENTS_DB_PATH = "ingredients-db"
 
     # Local Storage - Natron testing
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"

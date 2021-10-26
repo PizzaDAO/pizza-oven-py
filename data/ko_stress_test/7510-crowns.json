@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 264,
     "name": "7510-crowns",
-    "random_seed": "5EC9BD69",
+    "random_seed": "3BFF0F3B",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0541",
-                "ingredient_id": "054",
-                "variant_id": "1",
+                "unique_id": "0510",
+                "ingredient_id": "051",
+                "variant_id": "0",
                 "index": 1,
-                "name": "blackberry-code",
+                "name": "greenchecker",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0541-paper-blackberry-code.png",
+                    "filename": "0510-paper-greenchecker.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0541-paper-blackberry-code.png"
+                    "image_uri": "0510-paper-greenchecker.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2073",
-                "ingredient_id": "207",
-                "variant_id": "3",
+                "unique_id": "2010",
+                "ingredient_id": "201",
+                "variant_id": "0",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "pesto",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2073-sauce-prismicfluid.png",
+                    "filename": "2010-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2073-sauce-prismicfluid.png"
+                    "image_uri": "2010-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3170",
-                "ingredient_id": "317",
-                "variant_id": "0",
+                "unique_id": "3191",
+                "ingredient_id": "319",
+                "variant_id": "1",
                 "index": 1,
-                "name": "cheesecake",
-                "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "name": "gruyere",
+                "ingredient_rarity": 2,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3170-cheese-cheesecake.png",
+                    "filename": "3191-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8333333333333334,
-                    "image_uri": "3170-cheese-cheesecake.png"
+                    "scale": 0.7777777777777778,
+                    "image_uri": "3191-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         555.0,
                         700.0
                     ],
-                    "rotation": 217.707509881423,
-                    "scale": 0.13247694334650856,
+                    "rotation": -58.339920948616566,
+                    "scale": 0.8299736495388669,
                     "image_uri": "7510-topping-misc-crowns.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         845.0,
                         1400.0
                     ],
-                    "rotation": -44.11067193675888,
-                    "scale": 0.15223978919631093,
+                    "rotation": 52.64822134387356,
+                    "scale": 0.8283926218708827,
                     "image_uri": "7510-topping-misc-crowns.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         555.0,
                         2100.0
                     ],
-                    "rotation": -286.00790513833994,
-                    "scale": 0.19413702239789196,
+                    "rotation": -27.035573122529627,
+                    "scale": 0.8675230566534914,
                     "image_uri": "7510-topping-misc-crowns.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         1255.0,
                         700.0
                     ],
-                    "rotation": 354.308300395257,
-                    "scale": 0.13998682476943347,
+                    "rotation": 135.17786561264825,
+                    "scale": 0.8078392621870882,
                     "image_uri": "7511-topping-misc-crowns.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1545.0,
                         1400.0
                     ],
-                    "rotation": -38.41897233201581,
-                    "scale": 0.1502635046113307,
+                    "rotation": -95.33596837944663,
+                    "scale": 0.8394598155467721,
                     "image_uri": "7511-topping-misc-crowns.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         1255.0,
                         2100.0
                     ],
-                    "rotation": -331.54150197628456,
-                    "scale": 0.14354413702239788,
+                    "rotation": 157.9446640316205,
+                    "scale": 0.8722661396574439,
                     "image_uri": "7511-topping-misc-crowns.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -240.47430830039525,
-                    "scale": 0.16093544137022397,
+                    "rotation": 303.08300395256913,
+                    "scale": 0.8829380764163373,
                     "image_uri": "7512-topping-misc-crowns.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1955.0,
                         700.0
                     ],
-                    "rotation": -140.86956521739128,
-                    "scale": 0.1471014492753623,
+                    "rotation": 325.8498023715415,
+                    "scale": 0.8829380764163373,
                     "image_uri": "7512-topping-misc-crowns.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2245.0,
                         1400.0
                     ],
-                    "rotation": 4.2687747035573125,
-                    "scale": 0.13405797101449274,
+                    "rotation": -334.3873517786561,
+                    "scale": 0.8169301712779974,
                     "image_uri": "7512-topping-misc-crowns.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1955.0,
                         2100.0
                     ],
-                    "rotation": 112.41106719367588,
-                    "scale": 0.12654808959156785,
+                    "rotation": -260.39525691699606,
+                    "scale": 0.8244400527009222,
                     "image_uri": "7513-topping-misc-crowns.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         2655.0,
                         2100.0
                     ],
-                    "rotation": -163.63636363636365,
-                    "scale": 0.14156785243741765,
+                    "rotation": -203.47826086956522,
+                    "scale": 0.7876811594202898,
                     "image_uri": "7513-topping-misc-crowns.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -1.4229249011857519,
-                    "scale": 0.1245718050065876,
+                    "rotation": -340.0790513833992,
+                    "scale": 0.8279973649538866,
                     "image_uri": "7513-topping-misc-crowns.png"
                 }
             ],
@@ -716,8 +716,8 @@
                 555.0,
                 700.0
             ],
-            "rotation": 217.707509881423,
-            "scale": 0.13247694334650856,
+            "rotation": -58.339920948616566,
+            "scale": 0.8299736495388669,
             "image_uri": "7510-topping-misc-crowns.png"
         },
         {
@@ -725,8 +725,8 @@
                 845.0,
                 1400.0
             ],
-            "rotation": -44.11067193675888,
-            "scale": 0.15223978919631093,
+            "rotation": 52.64822134387356,
+            "scale": 0.8283926218708827,
             "image_uri": "7510-topping-misc-crowns.png"
         },
         {
@@ -734,8 +734,8 @@
                 555.0,
                 2100.0
             ],
-            "rotation": -286.00790513833994,
-            "scale": 0.19413702239789196,
+            "rotation": -27.035573122529627,
+            "scale": 0.8675230566534914,
             "image_uri": "7510-topping-misc-crowns.png"
         },
         {
@@ -743,8 +743,8 @@
                 1255.0,
                 700.0
             ],
-            "rotation": 354.308300395257,
-            "scale": 0.13998682476943347,
+            "rotation": 135.17786561264825,
+            "scale": 0.8078392621870882,
             "image_uri": "7511-topping-misc-crowns.png"
         },
         {
@@ -752,8 +752,8 @@
                 1545.0,
                 1400.0
             ],
-            "rotation": -38.41897233201581,
-            "scale": 0.1502635046113307,
+            "rotation": -95.33596837944663,
+            "scale": 0.8394598155467721,
             "image_uri": "7511-topping-misc-crowns.png"
         },
         {
@@ -761,8 +761,8 @@
                 1255.0,
                 2100.0
             ],
-            "rotation": -331.54150197628456,
-            "scale": 0.14354413702239788,
+            "rotation": 157.9446640316205,
+            "scale": 0.8722661396574439,
             "image_uri": "7511-topping-misc-crowns.png"
         },
         {
@@ -770,8 +770,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": -240.47430830039525,
-            "scale": 0.16093544137022397,
+            "rotation": 303.08300395256913,
+            "scale": 0.8829380764163373,
             "image_uri": "7512-topping-misc-crowns.png"
         },
         {
@@ -779,8 +779,8 @@
                 1955.0,
                 700.0
             ],
-            "rotation": -140.86956521739128,
-            "scale": 0.1471014492753623,
+            "rotation": 325.8498023715415,
+            "scale": 0.8829380764163373,
             "image_uri": "7512-topping-misc-crowns.png"
         },
         {
@@ -788,8 +788,8 @@
                 2245.0,
                 1400.0
             ],
-            "rotation": 4.2687747035573125,
-            "scale": 0.13405797101449274,
+            "rotation": -334.3873517786561,
+            "scale": 0.8169301712779974,
             "image_uri": "7512-topping-misc-crowns.png"
         },
         {
@@ -797,8 +797,8 @@
                 1955.0,
                 2100.0
             ],
-            "rotation": 112.41106719367588,
-            "scale": 0.12654808959156785,
+            "rotation": -260.39525691699606,
+            "scale": 0.8244400527009222,
             "image_uri": "7513-topping-misc-crowns.png"
         },
         {
@@ -806,8 +806,8 @@
                 2655.0,
                 2100.0
             ],
-            "rotation": -163.63636363636365,
-            "scale": 0.14156785243741765,
+            "rotation": -203.47826086956522,
+            "scale": 0.7876811594202898,
             "image_uri": "7513-topping-misc-crowns.png"
         },
         {
@@ -815,8 +815,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -1.4229249011857519,
-            "scale": 0.1245718050065876,
+            "rotation": -340.0790513833992,
+            "scale": 0.8279973649538866,
             "image_uri": "7513-topping-misc-crowns.png"
         }
     ],

@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 304,
     "name": "9170-applesauce",
-    "random_seed": "D54B2203",
+    "random_seed": "2C05066F",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
+                "name": "greasy",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0532",
-                "ingredient_id": "053",
-                "variant_id": "2",
+                "unique_id": "0510",
+                "ingredient_id": "051",
+                "variant_id": "0",
                 "index": 1,
-                "name": "cherry-code",
+                "name": "greenchecker",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0532-paper-cherry-code.png",
+                    "filename": "0510-paper-greenchecker.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0532-paper-cherry-code.png"
+                    "image_uri": "0510-paper-greenchecker.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1010",
-                "ingredient_id": "101",
+                "unique_id": "1070",
+                "ingredient_id": "107",
                 "variant_id": "0",
                 "index": 1,
-                "name": "thick",
+                "name": "glutenfree",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1010-crust-thick.png",
+                    "filename": "1070-crust-glutenfree.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1010-crust-thick.png"
+                    "image_uri": "1070-crust-glutenfree.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2010",
-                "ingredient_id": "201",
+                "unique_id": "2050",
+                "ingredient_id": "205",
                 "variant_id": "0",
                 "index": 1,
-                "name": "pesto",
-                "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2010-sauce-pesto.png",
+                    "filename": "2050-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,19 +279,19 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2010-sauce-pesto.png"
+                    "image_uri": "2050-sauce-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3190",
-                "ingredient_id": "319",
+                "unique_id": "3200",
+                "ingredient_id": "320",
                 "variant_id": "0",
                 "index": 1,
-                "name": "gruyere",
-                "ingredient_rarity": 2,
+                "name": "no-cheese",
+                "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3190-cheese-gruyere.png",
+                    "filename": "3200-cheese-no-cheese.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.7777777777777778,
-                    "image_uri": "3190-cheese-gruyere.png"
+                    "scale": 0.2,
+                    "image_uri": "3200-cheese-no-cheese.png"
                 }
             ],
             "scatter_type": 1

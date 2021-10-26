@@ -1,7 +1,7 @@
 {
-    "token_id": 0,
+    "token_id": 27,
     "name": "4310-froglegs",
-    "random_seed": "C5369FA4",
+    "random_seed": "469D22B4",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -80,7 +80,7 @@
                 "ingredient_id": "053",
                 "variant_id": "1",
                 "index": 1,
-                "name": "cherry-code",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0531-paper-cherry-code.png",
+                    "filename": "0531-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,7 +139,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0531-paper-cherry-code.png"
+                    "image_uri": "0531-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
@@ -221,8 +221,8 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "nutella",
-                "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "ingredient_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -286,13 +286,13 @@
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3120",
-                "ingredient_id": "312",
+                "unique_id": "3170",
+                "ingredient_id": "317",
                 "variant_id": "0",
                 "index": 1,
-                "name": "korbacik",
-                "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "name": "cheesecake",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3120-cheese-korbacik.png",
+                    "filename": "3170-cheese-cheesecake.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.09722222222222222,
-                    "image_uri": "3120-cheese-korbacik.png"
+                    "scale": 0.9444444444444444,
+                    "image_uri": "3170-cheese-cheesecake.png"
                 }
             ],
             "scatter_type": 1
@@ -363,7 +363,7 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": -112.41106719367588,
-                    "scale": 0.4975625823451911,
+                    "rotation": 157.9446640316205,
+                    "scale": 0.486231884057971,
                     "image_uri": "4310-topping-meat-froglegs.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": -325.8498023715415,
-                    "scale": 0.5098155467720685,
+                    "rotation": 243.32015810276687,
+                    "scale": 0.5102108036890646,
                     "image_uri": "4310-topping-meat-froglegs.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": 9.960474308300434,
-                    "scale": 0.49637681159420294,
+                    "rotation": 132.33201581027674,
+                    "scale": 0.5084980237154151,
                     "image_uri": "4310-topping-meat-froglegs.png"
                 }
             ],
@@ -451,7 +451,7 @@
                 "variant_id": "1",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": 64.03162055335969,
-                    "scale": 0.3308959156785244,
+                    "rotation": 345.77075098814225,
+                    "scale": 0.3405138339920949,
                     "image_uri": "4311-topping-meat-froglegs.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": -24.189723320158066,
-                    "scale": 0.34683794466403167,
+                    "rotation": -78.26086956521738,
+                    "scale": 0.3459156785243742,
                     "image_uri": "4311-topping-meat-froglegs.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": -177.86561264822134,
-                    "scale": 0.3181159420289855,
+                    "rotation": -32.72727272727275,
+                    "scale": 0.33880105401844535,
                     "image_uri": "4311-topping-meat-froglegs.png"
                 }
             ],
@@ -539,7 +539,7 @@
                 "variant_id": "2",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": 95.33596837944663,
-                    "scale": 0.3233860342555995,
+                    "rotation": 288.8537549407115,
+                    "scale": 0.3427536231884058,
                     "image_uri": "4312-topping-meat-froglegs.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": -209.16996047430828,
-                    "scale": 0.33392621870882744,
+                    "rotation": -331.54150197628456,
+                    "scale": 0.34301712779973653,
                     "image_uri": "4312-topping-meat-froglegs.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -337.2332015810277,
-                    "scale": 0.33853754940711467,
+                    "rotation": 24.189723320158123,
+                    "scale": 0.3316864295125165,
                     "image_uri": "4312-topping-meat-froglegs.png"
                 }
             ],
@@ -627,7 +627,7 @@
                 "variant_id": "3",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 24.189723320158123,
-                    "scale": 0.48689064558629774,
+                    "rotation": -337.2332015810277,
+                    "scale": 0.4961133069828722,
                     "image_uri": "4313-topping-meat-froglegs.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": 75.41501976284582,
-                    "scale": 0.4982213438735178,
+                    "rotation": -18.49802371541506,
+                    "scale": 0.49163372859025034,
                     "image_uri": "4313-topping-meat-froglegs.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": 81.10671936758894,
-                    "scale": 0.5129776021080369,
+                    "rotation": 283.1620553359684,
+                    "scale": 0.48899868247694334,
                     "image_uri": "4313-topping-meat-froglegs.png"
                 }
             ],
@@ -715,7 +715,7 @@
                 "variant_id": "4",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": 348.61660079051387,
-                    "scale": 0.4980895915678525,
+                    "rotation": -55.49407114624506,
+                    "scale": 0.494532279314888,
                     "image_uri": "4314-topping-meat-froglegs.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": 7.114624505928873,
-                    "scale": 0.49295125164690384,
+                    "rotation": -203.47826086956522,
+                    "scale": 0.494137022397892,
                     "image_uri": "4314-topping-meat-froglegs.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": -345.7707509881423,
-                    "scale": 0.4975625823451911,
+                    "rotation": 274.62450592885375,
+                    "scale": 0.48820816864295125,
                     "image_uri": "4314-topping-meat-froglegs.png"
                 }
             ],
@@ -803,7 +803,7 @@
                 "variant_id": "5",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": 237.62845849802375,
-                    "scale": 0.49861660079051384,
+                    "rotation": -32.72727272727275,
+                    "scale": 0.5152173913043478,
                     "image_uri": "4315-topping-meat-froglegs.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": 163.63636363636363,
-                    "scale": 0.488866930171278,
+                    "rotation": -263.2411067193676,
+                    "scale": 0.5012516469038208,
                     "image_uri": "4315-topping-meat-froglegs.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -340.0790513833992,
-                    "scale": 0.4975625823451911,
+                    "rotation": 251.85770750988138,
+                    "scale": 0.5061264822134388,
                     "image_uri": "4315-topping-meat-froglegs.png"
                 }
             ],
@@ -891,7 +891,7 @@
                 "variant_id": "6",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -947,8 +947,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 52.64822134387356,
-                    "scale": 0.5070487483530962,
+                    "rotation": -271.77865612648225,
+                    "scale": 0.488866930171278,
                     "image_uri": "4316-topping-meat-froglegs.png"
                 },
                 {
@@ -956,8 +956,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 12.806324110671937,
-                    "scale": 0.5036231884057971,
+                    "rotation": 49.802371541502,
+                    "scale": 0.5041501976284586,
                     "image_uri": "4316-topping-meat-froglegs.png"
                 },
                 {
@@ -965,8 +965,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -86.79841897233206,
-                    "scale": 0.4841238471673254,
+                    "rotation": 58.339920948616566,
+                    "scale": 0.48899868247694334,
                     "image_uri": "4316-topping-meat-froglegs.png"
                 }
             ],
@@ -979,7 +979,7 @@
                 "variant_id": "7",
                 "index": 1,
                 "name": "froglegs",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
@@ -1035,8 +1035,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 129.48616600790513,
-                    "scale": 0.48820816864295125,
+                    "rotation": 27.035573122529627,
+                    "scale": 0.5132411067193676,
                     "image_uri": "4317-topping-meat-froglegs.png"
                 },
                 {
@@ -1044,8 +1044,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 32.72727272727269,
-                    "scale": 0.5112648221343874,
+                    "rotation": -49.80237154150194,
+                    "scale": 0.49571805006587616,
                     "image_uri": "4317-topping-meat-froglegs.png"
                 },
                 {
@@ -1053,8 +1053,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -106.71936758893278,
-                    "scale": 0.4966403162055336,
+                    "rotation": -66.87747035573125,
+                    "scale": 0.49440052700922266,
                     "image_uri": "4317-topping-meat-froglegs.png"
                 }
             ],
@@ -1068,8 +1068,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": -112.41106719367588,
-            "scale": 0.4975625823451911,
+            "rotation": 157.9446640316205,
+            "scale": 0.486231884057971,
             "image_uri": "4310-topping-meat-froglegs.png"
         },
         {
@@ -1077,8 +1077,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": -325.8498023715415,
-            "scale": 0.5098155467720685,
+            "rotation": 243.32015810276687,
+            "scale": 0.5102108036890646,
             "image_uri": "4310-topping-meat-froglegs.png"
         },
         {
@@ -1086,8 +1086,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": 9.960474308300434,
-            "scale": 0.49637681159420294,
+            "rotation": 132.33201581027674,
+            "scale": 0.5084980237154151,
             "image_uri": "4310-topping-meat-froglegs.png"
         },
         {
@@ -1095,8 +1095,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": 64.03162055335969,
-            "scale": 0.3308959156785244,
+            "rotation": 345.77075098814225,
+            "scale": 0.3405138339920949,
             "image_uri": "4311-topping-meat-froglegs.png"
         },
         {
@@ -1104,8 +1104,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": -24.189723320158066,
-            "scale": 0.34683794466403167,
+            "rotation": -78.26086956521738,
+            "scale": 0.3459156785243742,
             "image_uri": "4311-topping-meat-froglegs.png"
         },
         {
@@ -1113,8 +1113,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": -177.86561264822134,
-            "scale": 0.3181159420289855,
+            "rotation": -32.72727272727275,
+            "scale": 0.33880105401844535,
             "image_uri": "4311-topping-meat-froglegs.png"
         },
         {
@@ -1122,8 +1122,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": 95.33596837944663,
-            "scale": 0.3233860342555995,
+            "rotation": 288.8537549407115,
+            "scale": 0.3427536231884058,
             "image_uri": "4312-topping-meat-froglegs.png"
         },
         {
@@ -1131,26 +1131,26 @@
                 1535.0,
                 560.0
             ],
-            "rotation": -209.16996047430828,
-            "scale": 0.33392621870882744,
+            "rotation": -331.54150197628456,
+            "scale": 0.34301712779973653,
             "image_uri": "4312-topping-meat-froglegs.png"
         },
         {
             "translation": [
                 1825.0,
                 1120.0
-            ],
-            "rotation": -337.2332015810277,
-            "scale": 0.33853754940711467,
-            "image_uri": "4312-topping-meat-froglegs.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                1680.0
             ],
             "rotation": 24.189723320158123,
-            "scale": 0.48689064558629774,
+            "scale": 0.3316864295125165,
+            "image_uri": "4312-topping-meat-froglegs.png"
+        },
+        {
+            "translation": [
+                1535.0,
+                1680.0
+            ],
+            "rotation": -337.2332015810277,
+            "scale": 0.4961133069828722,
             "image_uri": "4313-topping-meat-froglegs.png"
         },
         {
@@ -1158,8 +1158,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": 75.41501976284582,
-            "scale": 0.4982213438735178,
+            "rotation": -18.49802371541506,
+            "scale": 0.49163372859025034,
             "image_uri": "4313-topping-meat-froglegs.png"
         },
         {
@@ -1167,8 +1167,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": 81.10671936758894,
-            "scale": 0.5129776021080369,
+            "rotation": 283.1620553359684,
+            "scale": 0.48899868247694334,
             "image_uri": "4313-topping-meat-froglegs.png"
         },
         {
@@ -1176,8 +1176,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": 348.61660079051387,
-            "scale": 0.4980895915678525,
+            "rotation": -55.49407114624506,
+            "scale": 0.494532279314888,
             "image_uri": "4314-topping-meat-froglegs.png"
         },
         {
@@ -1185,8 +1185,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": 7.114624505928873,
-            "scale": 0.49295125164690384,
+            "rotation": -203.47826086956522,
+            "scale": 0.494137022397892,
             "image_uri": "4314-topping-meat-froglegs.png"
         },
         {
@@ -1194,8 +1194,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": -345.7707509881423,
-            "scale": 0.4975625823451911,
+            "rotation": 274.62450592885375,
+            "scale": 0.48820816864295125,
             "image_uri": "4314-topping-meat-froglegs.png"
         },
         {
@@ -1203,8 +1203,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": 237.62845849802375,
-            "scale": 0.49861660079051384,
+            "rotation": -32.72727272727275,
+            "scale": 0.5152173913043478,
             "image_uri": "4315-topping-meat-froglegs.png"
         },
         {
@@ -1212,26 +1212,26 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": 163.63636363636363,
+            "rotation": -263.2411067193676,
+            "scale": 0.5012516469038208,
+            "image_uri": "4315-topping-meat-froglegs.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                1400.0
+            ],
+            "rotation": 251.85770750988138,
+            "scale": 0.5061264822134388,
+            "image_uri": "4315-topping-meat-froglegs.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                1400.0
+            ],
+            "rotation": -271.77865612648225,
             "scale": 0.488866930171278,
-            "image_uri": "4315-topping-meat-froglegs.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -340.0790513833992,
-            "scale": 0.4975625823451911,
-            "image_uri": "4315-topping-meat-froglegs.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
-            ],
-            "rotation": 52.64822134387356,
-            "scale": 0.5070487483530962,
             "image_uri": "4316-topping-meat-froglegs.png"
         },
         {
@@ -1239,8 +1239,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 12.806324110671937,
-            "scale": 0.5036231884057971,
+            "rotation": 49.802371541502,
+            "scale": 0.5041501976284586,
             "image_uri": "4316-topping-meat-froglegs.png"
         },
         {
@@ -1248,8 +1248,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -86.79841897233206,
-            "scale": 0.4841238471673254,
+            "rotation": 58.339920948616566,
+            "scale": 0.48899868247694334,
             "image_uri": "4316-topping-meat-froglegs.png"
         },
         {
@@ -1257,8 +1257,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": 129.48616600790513,
-            "scale": 0.48820816864295125,
+            "rotation": 27.035573122529627,
+            "scale": 0.5132411067193676,
             "image_uri": "4317-topping-meat-froglegs.png"
         },
         {
@@ -1266,8 +1266,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 32.72727272727269,
-            "scale": 0.5112648221343874,
+            "rotation": -49.80237154150194,
+            "scale": 0.49571805006587616,
             "image_uri": "4317-topping-meat-froglegs.png"
         },
         {
@@ -1275,8 +1275,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -106.71936758893278,
-            "scale": 0.4966403162055336,
+            "rotation": -66.87747035573125,
+            "scale": 0.49440052700922266,
             "image_uri": "4317-topping-meat-froglegs.png"
         }
     ],
