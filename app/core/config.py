@@ -74,7 +74,7 @@ class Settings(BaseSettings):
     PINATA_API_SECRET = ""
 
     # Google Firebase
-    GOOGLE_APPLICATION_CREDENTIALS = "/secrets/firebase.dev.json"
+    GOOGLE_APPLICATION_CREDENTIALS = "secrets/firebase.dev.json"
 
     # Google Sheets
     # ingredients_db settings
@@ -104,6 +104,7 @@ class Settings(BaseSettings):
     RARITY_WEIGHT_UNCOMMON = 340
     RARITY_WEIGHT_RARE = 100
     RARITY_WEIGHT_GRAIL = 10
+    LASTCHANCE_OCCURENCE_PERCENTAGE = 20
 
     class Config:
         case_sensitive = True
