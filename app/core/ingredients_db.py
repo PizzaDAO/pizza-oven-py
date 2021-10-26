@@ -259,6 +259,8 @@ def map_rarity(rarity_string) -> Rarity:
         return Rarity.uncommon
     if rarity_string == "rare":
         return Rarity.rare
+    if rarity_string == "superrare":
+        return Rarity.superrare
     if rarity_string == "epic":
         return Rarity.epic
     if rarity_string == "grail":

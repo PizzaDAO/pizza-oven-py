@@ -36,6 +36,8 @@ def weight_for_rarity(rarity: Rarity) -> int:
         return int(settings.RARITY_WEIGHT_UNCOMMON)
     if rarity == Rarity.rare:
         return int(settings.RARITY_WEIGHT_RARE)
+    if rarity == Rarity.superrare:
+        return int(settings.RARITY_WEIGHT_SUPERRARE)
     if rarity == Rarity.epic:
         return int(settings.RARITY_WEIGHT_EPIC)
     if rarity == Rarity.grail:

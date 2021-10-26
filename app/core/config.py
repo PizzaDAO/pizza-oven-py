@@ -40,11 +40,12 @@ class OvenToppingParams(Base):
 
     min_topping_layer_count: int = 1
     max_topping_layer_count: int = 4
-    rarity_weight_common: int = 450
-    rarity_weight_uncommon: int = 300
-    rarity_weight_rare: int = 150
-    rarity_weight_epic: int = 90
-    rarity_weight_grail: int = 10
+    rarity_weight_common: int = 2000
+    rarity_weight_uncommon: int = 700
+    rarity_weight_rare: int = 250
+    rarity_weight_superrare: int = 100
+    rarity_weight_epic: int = 40
+    rarity_weight_grail: int = 5
     lastchance_occurance_percentage: int = 20
     scatter_origin_x: int = 0
     scatter_origin_y: int = 0
@@ -160,10 +161,12 @@ class Settings(BaseSettings):
     # Pizza Oven Config
     MIN_TOPPING_LAYER_COUNT: int = 1
     MAX_TOPPING_LAYER_COUNT: int = 4
-    RARITY_WEIGHT_COMMON: int = 550
-    RARITY_WEIGHT_UNCOMMON: int = 340
-    RARITY_WEIGHT_RARE: int = 100
-    RARITY_WEIGHT_GRAIL: int = 10
+    RARITY_WEIGHT_COMMON: int = 2000
+    RARITY_WEIGHT_UNCOMMON: int = 700
+    RARITY_WEIGHT_RARE: int = 250
+    RARITY_WEIGHT_EPIC: int = 100
+    RARITY_WEIGHT_SUPERRARE: int = 40
+    RARITY_WEIGHT_GRAIL: int = 5
     LASTCHANCE_OCCURENCE_PERCENTAGE: int = 20
     # Scatter
     SCATTER_ORIGIN_X: int = 0
