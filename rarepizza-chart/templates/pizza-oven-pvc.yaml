@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   labels:
     app.kubernetes.io/component: pizza-oven-pvc
-  name: chainlink-oven-pvc
+  name: pizza-oven-pvc
 spec:
   accessModes:
     - ReadWriteOnce
