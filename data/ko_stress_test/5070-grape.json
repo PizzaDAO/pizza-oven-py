@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 66,
     "name": "5070-grape",
-    "random_seed": "7D1CE59F",
+    "random_seed": "C673C4DD",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
+                "unique_id": "0530",
+                "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0530-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0530-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2050",
-                "ingredient_id": "205",
+                "unique_id": "2060",
+                "ingredient_id": "206",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "name": "deepspace",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2050-sauce-white.png",
+                    "filename": "2060-sauce-deepspace.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2050-sauce-white.png"
+                    "image_uri": "2060-sauce-deepspace.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3170",
-                "ingredient_id": "317",
-                "variant_id": "0",
+                "unique_id": "3191",
+                "ingredient_id": "319",
+                "variant_id": "1",
                 "index": 1,
-                "name": "cheesecake",
-                "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "name": "gruyere",
+                "ingredient_rarity": 2,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3170-cheese-cheesecake.png",
+                    "filename": "3191-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8333333333333334,
-                    "image_uri": "3170-cheese-cheesecake.png"
+                    "scale": 0.7777777777777778,
+                    "image_uri": "3191-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": 214.86166007905138,
-                    "scale": 0.20984848484848484,
+                    "rotation": 123.79446640316206,
+                    "scale": 0.23425559947299077,
                     "image_uri": "5070-topping-fruit-grape.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 189.2490118577075,
-                    "scale": 0.1990447957839262,
+                    "rotation": -115.25691699604744,
+                    "scale": 0.25349143610013175,
                     "image_uri": "5070-topping-fruit-grape.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": 98.18181818181819,
-                    "scale": 0.19706851119894597,
+                    "rotation": 66.87747035573125,
+                    "scale": 0.2375494071146245,
                     "image_uri": "5070-topping-fruit-grape.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": 357.1541501976285,
-                    "scale": 0.20853096179183134,
+                    "rotation": -243.3201581027668,
+                    "scale": 0.25217391304347825,
                     "image_uri": "5071-topping-fruit-grape.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": 49.802371541502,
-                    "scale": 0.19746376811594202,
+                    "rotation": 223.399209486166,
+                    "scale": 0.23689064558629774,
                     "image_uri": "5071-topping-fruit-grape.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": 160.79051383399212,
-                    "scale": 0.21867588932806326,
+                    "rotation": -78.26086956521738,
+                    "scale": 0.23451910408432144,
                     "image_uri": "5071-topping-fruit-grape.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": 277.47035573122525,
-                    "scale": 0.20879446640316204,
+                    "rotation": 58.339920948616566,
+                    "scale": 0.24176548089591565,
                     "image_uri": "5072-topping-fruit-grape.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": 325.8498023715415,
-                    "scale": 0.21762187088274046,
+                    "rotation": -38.41897233201581,
+                    "scale": 0.25494071146245056,
                     "image_uri": "5072-topping-fruit-grape.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -32.72727272727275,
-                    "scale": 0.21169301712779973,
+                    "rotation": -214.86166007905138,
+                    "scale": 0.2650856389986825,
                     "image_uri": "5072-topping-fruit-grape.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 146.56126482213443,
-                    "scale": 0.2073451910408432,
+                    "rotation": 89.6442687747035,
+                    "scale": 0.24703557312252963,
                     "image_uri": "5073-topping-fruit-grape.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": -340.0790513833992,
-                    "scale": 0.21472332015810278,
+                    "rotation": 120.94861660079056,
+                    "scale": 0.2635046113306983,
                     "image_uri": "5073-topping-fruit-grape.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": -305.9288537549407,
-                    "scale": 0.20444664031620552,
+                    "rotation": 334.3873517786561,
+                    "scale": 0.2606060606060606,
                     "image_uri": "5073-topping-fruit-grape.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": 135.17786561264825,
-                    "scale": 0.2065546772068511,
+                    "rotation": -206.32411067193678,
+                    "scale": 0.26310935441370226,
                     "image_uri": "5074-topping-fruit-grape.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": 251.85770750988138,
-                    "scale": 0.20879446640316204,
+                    "rotation": -288.8537549407115,
+                    "scale": 0.24387351778656124,
                     "image_uri": "5074-topping-fruit-grape.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": 169.32806324110675,
-                    "scale": 0.20932147562582346,
+                    "rotation": 18.498023715415002,
+                    "scale": 0.25968379446640316,
                     "image_uri": "5074-topping-fruit-grape.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": 214.86166007905138,
-                    "scale": 0.21814888010540184,
+                    "rotation": -66.87747035573125,
+                    "scale": 0.266403162055336,
                     "image_uri": "5075-topping-fruit-grape.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": 126.64031620553357,
-                    "scale": 0.2035243741765481,
+                    "rotation": -38.41897233201581,
+                    "scale": 0.26073781291172593,
                     "image_uri": "5075-topping-fruit-grape.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 166.48221343873513,
-                    "scale": 0.22328722002635046,
+                    "rotation": 106.71936758893281,
+                    "scale": 0.26324110671936757,
                     "image_uri": "5075-topping-fruit-grape.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": 214.86166007905138,
-            "scale": 0.20984848484848484,
+            "rotation": 123.79446640316206,
+            "scale": 0.23425559947299077,
             "image_uri": "5070-topping-fruit-grape.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 189.2490118577075,
-            "scale": 0.1990447957839262,
+            "rotation": -115.25691699604744,
+            "scale": 0.25349143610013175,
             "image_uri": "5070-topping-fruit-grape.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": 98.18181818181819,
-            "scale": 0.19706851119894597,
+            "rotation": 66.87747035573125,
+            "scale": 0.2375494071146245,
             "image_uri": "5070-topping-fruit-grape.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": 357.1541501976285,
-            "scale": 0.20853096179183134,
+            "rotation": -243.3201581027668,
+            "scale": 0.25217391304347825,
             "image_uri": "5071-topping-fruit-grape.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": 49.802371541502,
-            "scale": 0.19746376811594202,
+            "rotation": 223.399209486166,
+            "scale": 0.23689064558629774,
             "image_uri": "5071-topping-fruit-grape.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": 160.79051383399212,
-            "scale": 0.21867588932806326,
+            "rotation": -78.26086956521738,
+            "scale": 0.23451910408432144,
             "image_uri": "5071-topping-fruit-grape.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": 277.47035573122525,
-            "scale": 0.20879446640316204,
+            "rotation": 58.339920948616566,
+            "scale": 0.24176548089591565,
             "image_uri": "5072-topping-fruit-grape.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": 325.8498023715415,
-            "scale": 0.21762187088274046,
+            "rotation": -38.41897233201581,
+            "scale": 0.25494071146245056,
             "image_uri": "5072-topping-fruit-grape.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": -32.72727272727275,
-            "scale": 0.21169301712779973,
+            "rotation": -214.86166007905138,
+            "scale": 0.2650856389986825,
             "image_uri": "5072-topping-fruit-grape.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": 146.56126482213443,
-            "scale": 0.2073451910408432,
+            "rotation": 89.6442687747035,
+            "scale": 0.24703557312252963,
             "image_uri": "5073-topping-fruit-grape.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": -340.0790513833992,
-            "scale": 0.21472332015810278,
+            "rotation": 120.94861660079056,
+            "scale": 0.2635046113306983,
             "image_uri": "5073-topping-fruit-grape.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": -305.9288537549407,
-            "scale": 0.20444664031620552,
+            "rotation": 334.3873517786561,
+            "scale": 0.2606060606060606,
             "image_uri": "5073-topping-fruit-grape.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": 135.17786561264825,
-            "scale": 0.2065546772068511,
+            "rotation": -206.32411067193678,
+            "scale": 0.26310935441370226,
             "image_uri": "5074-topping-fruit-grape.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": 251.85770750988138,
-            "scale": 0.20879446640316204,
+            "rotation": -288.8537549407115,
+            "scale": 0.24387351778656124,
             "image_uri": "5074-topping-fruit-grape.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": 169.32806324110675,
-            "scale": 0.20932147562582346,
+            "rotation": 18.498023715415002,
+            "scale": 0.25968379446640316,
             "image_uri": "5074-topping-fruit-grape.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": 214.86166007905138,
-            "scale": 0.21814888010540184,
+            "rotation": -66.87747035573125,
+            "scale": 0.266403162055336,
             "image_uri": "5075-topping-fruit-grape.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": 126.64031620553357,
-            "scale": 0.2035243741765481,
+            "rotation": -38.41897233201581,
+            "scale": 0.26073781291172593,
             "image_uri": "5075-topping-fruit-grape.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 166.48221343873513,
-            "scale": 0.22328722002635046,
+            "rotation": 106.71936758893281,
+            "scale": 0.26324110671936757,
             "image_uri": "5075-topping-fruit-grape.png"
         }
     ],

@@ -1,7 +1,7 @@
 {
-    "token_id": 0,
+    "token_id": 16,
     "name": "4180-buffalochicken",
-    "random_seed": "4A1FE53A",
+    "random_seed": "A66A76B1",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -222,7 +222,7 @@
                 "index": 1,
                 "name": "white",
                 "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -286,12 +286,12 @@
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3194",
-                "ingredient_id": "319",
-                "variant_id": "4",
+                "unique_id": "3200",
+                "ingredient_id": "320",
+                "variant_id": "0",
                 "index": 1,
-                "name": "gruyere",
-                "ingredient_rarity": 2,
+                "name": "no-cheese",
+                "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3194-cheese-gruyere.png",
+                    "filename": "3200-cheese-no-cheese.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.7777777777777778,
-                    "image_uri": "3194-cheese-gruyere.png"
+                    "scale": 0.2,
+                    "image_uri": "3200-cheese-no-cheese.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         788.3333333333334,
                         933.3333333333334
                     ],
-                    "rotation": 297.391304347826,
-                    "scale": 0.6494729907773387,
+                    "rotation": 129.48616600790513,
+                    "scale": 0.7604743083003952,
                     "image_uri": "4180-topping-meat-buffalochicken.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": 118.102766798419,
-                    "scale": 0.6799077733860343,
+                    "rotation": 175.01976284584987,
+                    "scale": 0.7521739130434782,
                     "image_uri": "4180-topping-meat-buffalochicken.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         1721.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": -283.1620553359684,
-                    "scale": 0.6174571805006588,
+                    "rotation": 115.25691699604738,
+                    "scale": 0.7739130434782608,
                     "image_uri": "4180-topping-meat-buffalochicken.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": 189.2490118577075,
-                    "scale": 0.5201581027667984,
+                    "rotation": 166.48221343873513,
+                    "scale": 0.5871541501976284,
                     "image_uri": "4181-topping-meat-buffalochicken.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": 308.77470355731225,
-                    "scale": 0.5154150197628459,
+                    "rotation": -166.4822134387352,
+                    "scale": 0.5874176548089591,
                     "image_uri": "4181-topping-meat-buffalochicken.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         2655.0,
                         933.3333333333334
                     ],
-                    "rotation": -237.62845849802372,
-                    "scale": 0.4827404479578392,
+                    "rotation": -46.95652173913044,
+                    "scale": 0.5937417654808959,
                     "image_uri": "4181-topping-meat-buffalochicken.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -331.54150197628456,
-                    "scale": 0.522266139657444,
+                    "rotation": -220.55335968379447,
+                    "scale": 0.5563241106719367,
                     "image_uri": "4182-topping-meat-buffalochicken.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 115.25691699604738,
-                    "scale": 0.48300395256916995,
+                    "rotation": -138.02371541501975,
+                    "scale": 0.5797760210803689,
                     "image_uri": "4182-topping-meat-buffalochicken.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -38.41897233201581,
-                    "scale": 0.52832674571805,
+                    "rotation": 288.8537549407115,
+                    "scale": 0.5808300395256917,
                     "image_uri": "4182-topping-meat-buffalochicken.png"
                 }
             ],
@@ -628,8 +628,8 @@
                 788.3333333333334,
                 933.3333333333334
             ],
-            "rotation": 297.391304347826,
-            "scale": 0.6494729907773387,
+            "rotation": 129.48616600790513,
+            "scale": 0.7604743083003952,
             "image_uri": "4180-topping-meat-buffalochicken.png"
         },
         {
@@ -637,8 +637,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": 118.102766798419,
-            "scale": 0.6799077733860343,
+            "rotation": 175.01976284584987,
+            "scale": 0.7521739130434782,
             "image_uri": "4180-topping-meat-buffalochicken.png"
         },
         {
@@ -646,8 +646,8 @@
                 1721.6666666666667,
                 933.3333333333334
             ],
-            "rotation": -283.1620553359684,
-            "scale": 0.6174571805006588,
+            "rotation": 115.25691699604738,
+            "scale": 0.7739130434782608,
             "image_uri": "4180-topping-meat-buffalochicken.png"
         },
         {
@@ -655,8 +655,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": 189.2490118577075,
-            "scale": 0.5201581027667984,
+            "rotation": 166.48221343873513,
+            "scale": 0.5871541501976284,
             "image_uri": "4181-topping-meat-buffalochicken.png"
         },
         {
@@ -664,8 +664,8 @@
                 1721.6666666666667,
                 2800.0
             ],
-            "rotation": 308.77470355731225,
-            "scale": 0.5154150197628459,
+            "rotation": -166.4822134387352,
+            "scale": 0.5874176548089591,
             "image_uri": "4181-topping-meat-buffalochicken.png"
         },
         {
@@ -673,8 +673,8 @@
                 2655.0,
                 933.3333333333334
             ],
-            "rotation": -237.62845849802372,
-            "scale": 0.4827404479578392,
+            "rotation": -46.95652173913044,
+            "scale": 0.5937417654808959,
             "image_uri": "4181-topping-meat-buffalochicken.png"
         },
         {
@@ -682,8 +682,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": -331.54150197628456,
-            "scale": 0.522266139657444,
+            "rotation": -220.55335968379447,
+            "scale": 0.5563241106719367,
             "image_uri": "4182-topping-meat-buffalochicken.png"
         },
         {
@@ -691,8 +691,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 115.25691699604738,
-            "scale": 0.48300395256916995,
+            "rotation": -138.02371541501975,
+            "scale": 0.5797760210803689,
             "image_uri": "4182-topping-meat-buffalochicken.png"
         },
         {
@@ -700,8 +700,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -38.41897233201581,
-            "scale": 0.52832674571805,
+            "rotation": 288.8537549407115,
+            "scale": 0.5808300395256917,
             "image_uri": "4182-topping-meat-buffalochicken.png"
         }
     ],

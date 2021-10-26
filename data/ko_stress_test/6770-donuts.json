@@ -1,62 +1,62 @@
 {
-    "token_id": 0,
+    "token_id": 202,
     "name": "6770-donuts",
-    "random_seed": "5473277A",
+    "random_seed": "C73B653C",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0000",
-                "ingredient_id": "000",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 0,
+                "name": "greasy",
+                "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 90.0,
-                    "mass": 994.0,
-                    "calories": 92.0,
-                    "vitamin_c": 1.0,
-                    "magnesium": 2.0,
-                    "vitamin_b5": 3.0,
-                    "vitamin_d": 4.0,
-                    "vitamin_b7": 5.0,
-                    "height": 10.0,
-                    "moisture": 11.0,
-                    "potassium": 10.0,
-                    "cholesterol": 15.0,
-                    "vitamin_a": 16.0,
-                    "dietary_fiber": 16.0,
-                    "vitamin_b6": 17.0,
-                    "sugar": 20.0,
-                    "protein": 21.0,
-                    "iron": 25.0,
-                    "complex_carb": 30.0,
-                    "selenium": 31.0,
-                    "vitamin_k": 32.0,
-                    "vitamin_b12": 40.0,
-                    "calories_from_fat": 41.0,
-                    "vitamin_e": 42.0,
-                    "zinc": 50.0,
-                    "saturated_fat": 51.0,
-                    "iodine": 52.0,
-                    "trans_fat": 60.0,
-                    "sodium": 61.0,
-                    "monosaturated_fat": 62.0,
-                    "calcium": 63.0,
-                    "riboflavin": 70.0,
-                    "thiamin": 71.0,
-                    "folate": 72.0,
-                    "added_sugar": 23.0,
-                    "chromium": 22.0,
-                    "manganese": 24.0
+                    "serving_size": 0.0,
+                    "mass": 0.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 0.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0000-box-white.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0000-box-white.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
+                "unique_id": "0530",
+                "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0530-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0530-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1040",
-                "ingredient_id": "104",
+                "unique_id": "1070",
+                "ingredient_id": "107",
                 "variant_id": "0",
                 "index": 1,
-                "name": "castle",
+                "name": "glutenfree",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1040-crust-castle.png",
+                    "filename": "1070-crust-glutenfree.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1040-crust-castle.png"
+                    "image_uri": "1070-crust-glutenfree.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2071",
+                "unique_id": "2073",
                 "ingredient_id": "207",
-                "variant_id": "1",
+                "variant_id": "3",
                 "index": 1,
                 "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2071-sauce-prismicfluid.png",
+                    "filename": "2073-sauce-prismicfluid.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,7 +279,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2071-sauce-prismicfluid.png"
+                    "image_uri": "2073-sauce-prismicfluid.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": 138.02371541501975,
-                    "scale": 0.7470355731225297,
+                    "rotation": -166.4822134387352,
+                    "scale": 0.7632411067193675,
                     "image_uri": "6770-topping-snax-donuts.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 200.63241106719363,
-                    "scale": 0.7400527009222662,
+                    "rotation": -21.343873517786562,
+                    "scale": 0.7586297760210803,
                     "image_uri": "6770-topping-snax-donuts.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": 177.86561264822137,
-                    "scale": 0.7624505928853754,
+                    "rotation": -115.25691699604744,
+                    "scale": 0.7334650856389987,
                     "image_uri": "6770-topping-snax-donuts.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": 206.32411067193675,
-                    "scale": 0.7353096179183136,
+                    "rotation": -129.48616600790515,
+                    "scale": 0.7635046113306982,
                     "image_uri": "6771-topping-snax-donuts.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": 29.881422924901187,
-                    "scale": 0.7574440052700921,
+                    "rotation": 35.57312252964431,
+                    "scale": 0.7389986824769433,
                     "image_uri": "6771-topping-snax-donuts.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": -69.72332015810275,
-                    "scale": 0.7538866930171277,
+                    "rotation": 231.93675889328063,
+                    "scale": 0.7616600790513833,
                     "image_uri": "6771-topping-snax-donuts.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": -234.7826086956522,
-                    "scale": 0.7625823451910408,
+                    "rotation": 112.41106719367588,
+                    "scale": 0.7425559947299079,
                     "image_uri": "6772-topping-snax-donuts.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": 132.33201581027674,
-                    "scale": 0.7479578392621871,
+                    "rotation": 334.3873517786561,
+                    "scale": 0.7488801054018446,
                     "image_uri": "6772-topping-snax-donuts.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -177.86561264822134,
-                    "scale": 0.7574440052700921,
+                    "rotation": -52.64822134387356,
+                    "scale": 0.7628458498023715,
                     "image_uri": "6772-topping-snax-donuts.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 260.3952569169961,
-                    "scale": 0.7372859025032938,
+                    "rotation": -135.17786561264825,
+                    "scale": 0.7395256916996048,
                     "image_uri": "6773-topping-snax-donuts.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": -229.0909090909091,
-                    "scale": 0.7401844532279315,
+                    "rotation": -38.41897233201581,
+                    "scale": 0.7400527009222662,
                     "image_uri": "6773-topping-snax-donuts.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": 331.5415019762846,
-                    "scale": 0.747167325428195,
+                    "rotation": -58.339920948616566,
+                    "scale": 0.7407114624505929,
                     "image_uri": "6773-topping-snax-donuts.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": -32.72727272727275,
-                    "scale": 0.7351778656126483,
+                    "rotation": -243.3201581027668,
+                    "scale": 0.7395256916996048,
                     "image_uri": "6774-topping-snax-donuts.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": 58.339920948616566,
-                    "scale": 0.7433465085638999,
+                    "rotation": 286.00790513834,
+                    "scale": 0.7421607378129118,
                     "image_uri": "6774-topping-snax-donuts.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": -126.6403162055336,
-                    "scale": 0.7530961791831356,
+                    "rotation": 325.8498023715415,
+                    "scale": 0.7612648221343873,
                     "image_uri": "6774-topping-snax-donuts.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": 7.114624505928873,
-                    "scale": 0.7350461133069829,
+                    "rotation": 132.33201581027674,
+                    "scale": 0.7442687747035573,
                     "image_uri": "6775-topping-snax-donuts.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": 101.02766798418969,
-                    "scale": 0.7425559947299079,
+                    "rotation": -129.48616600790515,
+                    "scale": 0.7544137022397892,
                     "image_uri": "6775-topping-snax-donuts.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 340.07905138339925,
-                    "scale": 0.7654808959156785,
+                    "rotation": 61.18577075098813,
+                    "scale": 0.7592885375494071,
                     "image_uri": "6775-topping-snax-donuts.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": 138.02371541501975,
-            "scale": 0.7470355731225297,
+            "rotation": -166.4822134387352,
+            "scale": 0.7632411067193675,
             "image_uri": "6770-topping-snax-donuts.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 200.63241106719363,
-            "scale": 0.7400527009222662,
+            "rotation": -21.343873517786562,
+            "scale": 0.7586297760210803,
             "image_uri": "6770-topping-snax-donuts.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": 177.86561264822137,
-            "scale": 0.7624505928853754,
+            "rotation": -115.25691699604744,
+            "scale": 0.7334650856389987,
             "image_uri": "6770-topping-snax-donuts.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": 206.32411067193675,
-            "scale": 0.7353096179183136,
+            "rotation": -129.48616600790515,
+            "scale": 0.7635046113306982,
             "image_uri": "6771-topping-snax-donuts.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": 29.881422924901187,
-            "scale": 0.7574440052700921,
+            "rotation": 35.57312252964431,
+            "scale": 0.7389986824769433,
             "image_uri": "6771-topping-snax-donuts.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": -69.72332015810275,
-            "scale": 0.7538866930171277,
+            "rotation": 231.93675889328063,
+            "scale": 0.7616600790513833,
             "image_uri": "6771-topping-snax-donuts.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": -234.7826086956522,
-            "scale": 0.7625823451910408,
+            "rotation": 112.41106719367588,
+            "scale": 0.7425559947299079,
             "image_uri": "6772-topping-snax-donuts.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": 132.33201581027674,
-            "scale": 0.7479578392621871,
+            "rotation": 334.3873517786561,
+            "scale": 0.7488801054018446,
             "image_uri": "6772-topping-snax-donuts.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": -177.86561264822134,
-            "scale": 0.7574440052700921,
+            "rotation": -52.64822134387356,
+            "scale": 0.7628458498023715,
             "image_uri": "6772-topping-snax-donuts.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": 260.3952569169961,
-            "scale": 0.7372859025032938,
+            "rotation": -135.17786561264825,
+            "scale": 0.7395256916996048,
             "image_uri": "6773-topping-snax-donuts.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": -229.0909090909091,
-            "scale": 0.7401844532279315,
+            "rotation": -38.41897233201581,
+            "scale": 0.7400527009222662,
             "image_uri": "6773-topping-snax-donuts.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": 331.5415019762846,
-            "scale": 0.747167325428195,
+            "rotation": -58.339920948616566,
+            "scale": 0.7407114624505929,
             "image_uri": "6773-topping-snax-donuts.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": -32.72727272727275,
-            "scale": 0.7351778656126483,
+            "rotation": -243.3201581027668,
+            "scale": 0.7395256916996048,
             "image_uri": "6774-topping-snax-donuts.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": 58.339920948616566,
-            "scale": 0.7433465085638999,
+            "rotation": 286.00790513834,
+            "scale": 0.7421607378129118,
             "image_uri": "6774-topping-snax-donuts.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": -126.6403162055336,
-            "scale": 0.7530961791831356,
+            "rotation": 325.8498023715415,
+            "scale": 0.7612648221343873,
             "image_uri": "6774-topping-snax-donuts.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": 7.114624505928873,
-            "scale": 0.7350461133069829,
+            "rotation": 132.33201581027674,
+            "scale": 0.7442687747035573,
             "image_uri": "6775-topping-snax-donuts.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": 101.02766798418969,
-            "scale": 0.7425559947299079,
+            "rotation": -129.48616600790515,
+            "scale": 0.7544137022397892,
             "image_uri": "6775-topping-snax-donuts.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 340.07905138339925,
-            "scale": 0.7654808959156785,
+            "rotation": 61.18577075098813,
+            "scale": 0.7592885375494071,
             "image_uri": "6775-topping-snax-donuts.png"
         }
     ],

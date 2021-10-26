@@ -1,62 +1,62 @@
 {
-    "token_id": 0,
+    "token_id": 101,
     "name": "5640-edamame",
-    "random_seed": "A5982FDA",
+    "random_seed": "9AD7BD46",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0000",
+                "ingredient_id": "000",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 0,
                 "variant_rarity": 5,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
-                    "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
-                    "height": 0.0,
-                    "moisture": 0.0,
-                    "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
-                    "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
-                    "riboflavin": 0.0,
-                    "thiamin": 0.0,
-                    "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "serving_size": 90.0,
+                    "mass": 994.0,
+                    "calories": 92.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 2.0,
+                    "vitamin_b5": 3.0,
+                    "vitamin_d": 4.0,
+                    "vitamin_b7": 5.0,
+                    "height": 10.0,
+                    "moisture": 11.0,
+                    "potassium": 10.0,
+                    "cholesterol": 15.0,
+                    "vitamin_a": 16.0,
+                    "dietary_fiber": 16.0,
+                    "vitamin_b6": 17.0,
+                    "sugar": 20.0,
+                    "protein": 21.0,
+                    "iron": 25.0,
+                    "complex_carb": 30.0,
+                    "selenium": 31.0,
+                    "vitamin_k": 32.0,
+                    "vitamin_b12": 40.0,
+                    "calories_from_fat": 41.0,
+                    "vitamin_e": 42.0,
+                    "zinc": 50.0,
+                    "saturated_fat": 51.0,
+                    "iodine": 52.0,
+                    "trans_fat": 60.0,
+                    "sodium": 61.0,
+                    "monosaturated_fat": 62.0,
+                    "calcium": 63.0,
+                    "riboflavin": 70.0,
+                    "thiamin": 71.0,
+                    "folate": 72.0,
+                    "added_sugar": 23.0,
+                    "chromium": 22.0,
+                    "manganese": 24.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0000-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0000-box-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0531",
-                "ingredient_id": "053",
-                "variant_id": "1",
+                "unique_id": "0540",
+                "ingredient_id": "054",
+                "variant_id": "0",
                 "index": 1,
-                "name": "cherry-code",
+                "name": "code-blackberry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0531-paper-cherry-code.png",
+                    "filename": "0540-paper-code-blackberry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0531-paper-cherry-code.png"
+                    "image_uri": "0540-paper-code-blackberry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1050",
-                "ingredient_id": "105",
+                "unique_id": "1000",
+                "ingredient_id": "100",
                 "variant_id": "0",
                 "index": 1,
-                "name": "whitebread",
+                "name": "thin",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1050-crust-whitebread.png",
+                    "filename": "1000-crust-thin.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1050-crust-whitebread.png"
+                    "image_uri": "1000-crust-thin.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2040",
-                "ingredient_id": "204",
-                "variant_id": "0",
+                "unique_id": "2051",
+                "ingredient_id": "205",
+                "variant_id": "1",
                 "index": 1,
-                "name": "nutella",
-                "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 1,
+                "variant_rarity": 2,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2040-sauce-nutella.png",
+                    "filename": "2051-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,21 +278,21 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 1.0,
-                    "image_uri": "2040-sauce-nutella.png"
+                    "scale": 0.2,
+                    "image_uri": "2051-sauce-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3120",
-                "ingredient_id": "312",
+                "unique_id": "3190",
+                "ingredient_id": "319",
                 "variant_id": "0",
                 "index": 1,
-                "name": "korbacik",
+                "name": "gruyere",
                 "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3120-cheese-korbacik.png",
+                    "filename": "3190-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.09722222222222222,
-                    "image_uri": "3120-cheese-korbacik.png"
+                    "scale": 0.7777777777777778,
+                    "image_uri": "3190-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         788.3333333333334,
                         933.3333333333334
                     ],
-                    "rotation": 55.49407114624506,
-                    "scale": 0.2602108036890646,
+                    "rotation": 354.308300395257,
+                    "scale": 0.24492753623188404,
                     "image_uri": "5640-topping-vegetable-edamame.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -229.0909090909091,
-                    "scale": 0.2403162055335968,
+                    "rotation": 155.098814229249,
+                    "scale": 0.23926218708827401,
                     "image_uri": "5640-topping-vegetable-edamame.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         1721.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": 7.114624505928873,
-                    "scale": 0.26600790513833994,
+                    "rotation": -311.6205533596838,
+                    "scale": 0.23715415019762845,
                     "image_uri": "5640-topping-vegetable-edamame.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": 268.93280632411063,
-                    "scale": 0.2343873517786561,
+                    "rotation": -175.01976284584978,
+                    "scale": 0.2426877470355731,
                     "image_uri": "5641-topping-vegetable-edamame.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": 27.035573122529627,
-                    "scale": 0.24413702239789195,
+                    "rotation": 340.07905138339925,
+                    "scale": 0.2636363636363636,
                     "image_uri": "5641-topping-vegetable-edamame.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         2655.0,
                         933.3333333333334
                     ],
-                    "rotation": 186.40316205533588,
-                    "scale": 0.24295125164690382,
+                    "rotation": 35.57312252964431,
+                    "scale": 0.23636363636363633,
                     "image_uri": "5641-topping-vegetable-edamame.png"
                 }
             ],
@@ -540,8 +540,8 @@
                 788.3333333333334,
                 933.3333333333334
             ],
-            "rotation": 55.49407114624506,
-            "scale": 0.2602108036890646,
+            "rotation": 354.308300395257,
+            "scale": 0.24492753623188404,
             "image_uri": "5640-topping-vegetable-edamame.png"
         },
         {
@@ -549,8 +549,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": -229.0909090909091,
-            "scale": 0.2403162055335968,
+            "rotation": 155.098814229249,
+            "scale": 0.23926218708827401,
             "image_uri": "5640-topping-vegetable-edamame.png"
         },
         {
@@ -558,8 +558,8 @@
                 1721.6666666666667,
                 933.3333333333334
             ],
-            "rotation": 7.114624505928873,
-            "scale": 0.26600790513833994,
+            "rotation": -311.6205533596838,
+            "scale": 0.23715415019762845,
             "image_uri": "5640-topping-vegetable-edamame.png"
         },
         {
@@ -567,8 +567,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": 268.93280632411063,
-            "scale": 0.2343873517786561,
+            "rotation": -175.01976284584978,
+            "scale": 0.2426877470355731,
             "image_uri": "5641-topping-vegetable-edamame.png"
         },
         {
@@ -576,8 +576,8 @@
                 1721.6666666666667,
                 2800.0
             ],
-            "rotation": 27.035573122529627,
-            "scale": 0.24413702239789195,
+            "rotation": 340.07905138339925,
+            "scale": 0.2636363636363636,
             "image_uri": "5641-topping-vegetable-edamame.png"
         },
         {
@@ -585,8 +585,8 @@
                 2655.0,
                 933.3333333333334
             ],
-            "rotation": 186.40316205533588,
-            "scale": 0.24295125164690382,
+            "rotation": 35.57312252964431,
+            "scale": 0.23636363636363633,
             "image_uri": "5641-topping-vegetable-edamame.png"
         }
     ],

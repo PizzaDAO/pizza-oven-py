@@ -117213,7 +117213,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -117312,6 +117312,24 @@ ret = y_new
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
 				<Name>startingTime</Name>
 				<Type>Int</Type>
 				<Dimension>1</Dimension>
@@ -117486,7 +117504,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>7</KnobsAge>
+			<KnobsAge>8</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -117511,7 +117529,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -117610,6 +117628,24 @@ ret = y_new
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
 				<Name>startingTime</Name>
 				<Type>Int</Type>
 				<Dimension>1</Dimension>
@@ -117784,7 +117820,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>10</KnobsAge>
+			<KnobsAge>11</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -119411,7 +119447,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>/Users/ashafer/Development/pizza-oven-tmp/output/0001-cut-alpha.png</Value>
+					<Value>[Project]/../.cache/output/####-cut-alpha.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -119632,7 +119668,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>7</KnobsAge>
+			<KnobsAge>11</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -122111,7 +122147,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -122163,7 +122199,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../.cache/output/0001-layer-03.png</Value>
+					<Value>[Project]/../.cache/output/####-layer-03.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -122207,6 +122243,24 @@ ret = y_new
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -122384,7 +122438,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>7</KnobsAge>
+			<KnobsAge>10</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -122839,7 +122893,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sun Oct 24 09:12:51 2021</Value>
+			<Value>Mon Oct 25 22:13:30 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -133503,7 +133557,7 @@ ret = y_new
 		<item>
 			<Name>Read3</Name>
 			<X_position>3.45397573003369325e+03</X_position>
-			<Y_position>3.75449465079655101e+03</Y_position>
+			<Y_position>3.75328674002603111e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -133772,11 +133826,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1641 883</Sizes>
+				<Sizes>1481 797</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>655 655</Sizes>
+					<Sizes>679 678</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -133816,10 +133870,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>0</x>
-			<y>23</y>
-			<w>2560</w>
-			<h>1313</h>
+			<x>-2532</x>
+			<y>-297</y>
+			<w>2314</w>
+			<h>1360</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -133877,15 +133931,15 @@ ret = y_new
 		<count>10</count>
 		<item_version>0</item_version>
 		<item>Read3</item>
+		<item>Read1</item>
+		<item>Bake_default</item>
+		<item>Read6</item>
+		<item>Read2</item>
+		<item>Read2_2</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Erode1</item>
 		<item>Reformat3</item>
-		<item>Read6</item>
 		<item>Merge4</item>
-		<item>ColorCorrect2</item>
-		<item>ColorCorrect1</item>
-		<item>Read5</item>
-		<item>Plasma1</item>
 	</OpenedPanels>
 	<ScriptEditorInput>sy =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]

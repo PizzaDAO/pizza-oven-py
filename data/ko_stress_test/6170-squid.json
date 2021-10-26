@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 147,
     "name": "6170-squid",
-    "random_seed": "E6FAC6F0",
+    "random_seed": "1AE1331E",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0520",
-                "ingredient_id": "052",
-                "variant_id": "0",
+                "unique_id": "0531",
+                "ingredient_id": "053",
+                "variant_id": "1",
                 "index": 1,
-                "name": "doodle",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0520-paper-doodle.png",
+                    "filename": "0531-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0520-paper-doodle.png"
+                    "image_uri": "0531-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1020",
-                "ingredient_id": "102",
+                "unique_id": "1050",
+                "ingredient_id": "105",
                 "variant_id": "0",
                 "index": 1,
-                "name": "moon",
+                "name": "whitebread",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1020-crust-moon.png",
+                    "filename": "1050-crust-whitebread.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1020-crust-moon.png"
+                    "image_uri": "1050-crust-whitebread.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2011",
-                "ingredient_id": "201",
-                "variant_id": "1",
+                "unique_id": "2040",
+                "ingredient_id": "204",
+                "variant_id": "0",
                 "index": 1,
-                "name": "pesto",
-                "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "name": "nutella",
+                "ingredient_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2011-sauce-pesto.png",
+                    "filename": "2040-sauce-nutella.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,8 +278,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2011-sauce-pesto.png"
+                    "scale": 1.0,
+                    "image_uri": "2040-sauce-nutella.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         788.3333333333334,
                         933.3333333333334
                     ],
-                    "rotation": 83.9525691699605,
-                    "scale": 0.9175230566534913,
+                    "rotation": 203.47826086956525,
+                    "scale": 0.8269433465085639,
                     "image_uri": "6170-topping-seafood-squid.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -177.86561264822134,
-                    "scale": 0.8123847167325429,
+                    "rotation": -149.40711462450594,
+                    "scale": 0.987417654808959,
                     "image_uri": "6170-topping-seafood-squid.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         1721.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": -58.339920948616566,
-                    "scale": 0.8376811594202899,
+                    "rotation": 112.41106719367588,
+                    "scale": 0.8546113306982873,
                     "image_uri": "6170-topping-seafood-squid.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": -15.652173913043441,
-                    "scale": 0.813965744400527,
+                    "rotation": 340.07905138339925,
+                    "scale": 0.35065876152832676,
                     "image_uri": "6171-topping-seafood-squid.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": -186.40316205533597,
-                    "scale": 0.8819499341238471,
+                    "rotation": 106.71936758893281,
+                    "scale": 0.43840579710144933,
                     "image_uri": "6171-topping-seafood-squid.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         2655.0,
                         933.3333333333334
                     ],
-                    "rotation": -135.17786561264825,
-                    "scale": 0.8376811594202899,
+                    "rotation": 243.32015810276687,
+                    "scale": 0.42022397891963115,
                     "image_uri": "6171-topping-seafood-squid.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 277.47035573122525,
-                    "scale": 0.7704874835309619,
+                    "rotation": 44.11067193675888,
+                    "scale": 0.5119235836627142,
                     "image_uri": "6172-topping-seafood-squid.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 214.86166007905138,
-                    "scale": 0.8685111989459815,
+                    "rotation": 169.32806324110675,
+                    "scale": 0.33247694334650857,
                     "image_uri": "6172-topping-seafood-squid.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -249.01185770750988,
-                    "scale": 0.8432147562582345,
+                    "rotation": 64.03162055335969,
+                    "scale": 0.4921607378129118,
                     "image_uri": "6172-topping-seafood-squid.png"
                 }
             ],
@@ -628,8 +628,8 @@
                 788.3333333333334,
                 933.3333333333334
             ],
-            "rotation": 83.9525691699605,
-            "scale": 0.9175230566534913,
+            "rotation": 203.47826086956525,
+            "scale": 0.8269433465085639,
             "image_uri": "6170-topping-seafood-squid.png"
         },
         {
@@ -637,8 +637,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": -177.86561264822134,
-            "scale": 0.8123847167325429,
+            "rotation": -149.40711462450594,
+            "scale": 0.987417654808959,
             "image_uri": "6170-topping-seafood-squid.png"
         },
         {
@@ -646,8 +646,8 @@
                 1721.6666666666667,
                 933.3333333333334
             ],
-            "rotation": -58.339920948616566,
-            "scale": 0.8376811594202899,
+            "rotation": 112.41106719367588,
+            "scale": 0.8546113306982873,
             "image_uri": "6170-topping-seafood-squid.png"
         },
         {
@@ -655,8 +655,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": -15.652173913043441,
-            "scale": 0.813965744400527,
+            "rotation": 340.07905138339925,
+            "scale": 0.35065876152832676,
             "image_uri": "6171-topping-seafood-squid.png"
         },
         {
@@ -664,8 +664,8 @@
                 1721.6666666666667,
                 2800.0
             ],
-            "rotation": -186.40316205533597,
-            "scale": 0.8819499341238471,
+            "rotation": 106.71936758893281,
+            "scale": 0.43840579710144933,
             "image_uri": "6171-topping-seafood-squid.png"
         },
         {
@@ -673,8 +673,8 @@
                 2655.0,
                 933.3333333333334
             ],
-            "rotation": -135.17786561264825,
-            "scale": 0.8376811594202899,
+            "rotation": 243.32015810276687,
+            "scale": 0.42022397891963115,
             "image_uri": "6171-topping-seafood-squid.png"
         },
         {
@@ -682,8 +682,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": 277.47035573122525,
-            "scale": 0.7704874835309619,
+            "rotation": 44.11067193675888,
+            "scale": 0.5119235836627142,
             "image_uri": "6172-topping-seafood-squid.png"
         },
         {
@@ -691,8 +691,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 214.86166007905138,
-            "scale": 0.8685111989459815,
+            "rotation": 169.32806324110675,
+            "scale": 0.33247694334650857,
             "image_uri": "6172-topping-seafood-squid.png"
         },
         {
@@ -700,8 +700,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -249.01185770750988,
-            "scale": 0.8432147562582345,
+            "rotation": 64.03162055335969,
+            "scale": 0.4921607378129118,
             "image_uri": "6172-topping-seafood-squid.png"
         }
     ],

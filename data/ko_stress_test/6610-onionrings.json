@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 186,
     "name": "6610-onionrings",
-    "random_seed": "1231E59E",
+    "random_seed": "B65E3883",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
+                "unique_id": "0530",
+                "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0530-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0530-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2050",
-                "ingredient_id": "205",
+                "unique_id": "2060",
+                "ingredient_id": "206",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "name": "deepspace",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2050-sauce-white.png",
+                    "filename": "2060-sauce-deepspace.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,19 +279,19 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2050-sauce-white.png"
+                    "image_uri": "2060-sauce-deepspace.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3050",
-                "ingredient_id": "305",
+                "unique_id": "3080",
+                "ingredient_id": "308",
                 "variant_id": "0",
                 "index": 1,
-                "name": "tvaruzek",
-                "ingredient_rarity": 2,
+                "name": "fetabits",
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3050-cheese-tvaruzek.png",
+                    "filename": "3080-cheese-fetabits.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.8888888888888888,
-                    "image_uri": "3050-cheese-tvaruzek.png"
+                    "image_uri": "3080-cheese-fetabits.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         788.3333333333334,
                         933.3333333333334
                     ],
-                    "rotation": 263.2411067193676,
-                    "scale": 0.5245388669301713,
+                    "rotation": -129.48616600790515,
+                    "scale": 0.5321146245059288,
                     "image_uri": "6610-topping-snax-onionrings.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": 323.0039525691699,
-                    "scale": 0.5281620553359684,
+                    "rotation": 115.25691699604738,
+                    "scale": 0.47579051383399207,
                     "image_uri": "6610-topping-snax-onionrings.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         1721.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": 206.32411067193675,
-                    "scale": 0.508399209486166,
+                    "rotation": -166.4822134387352,
+                    "scale": 0.4925889328063241,
                     "image_uri": "6610-topping-snax-onionrings.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": 78.26086956521743,
-                    "scale": 0.5370553359683794,
+                    "rotation": -223.39920948616603,
+                    "scale": 0.500494071146245,
                     "image_uri": "6611-topping-snax-onionrings.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": 120.94861660079056,
-                    "scale": 0.5337615283267457,
+                    "rotation": -61.18577075098813,
+                    "scale": 0.4948945981554677,
                     "image_uri": "6611-topping-snax-onionrings.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         2655.0,
                         933.3333333333334
                     ],
-                    "rotation": 331.5415019762846,
-                    "scale": 0.5195981554677207,
+                    "rotation": -175.01976284584978,
+                    "scale": 0.5087285902503293,
                     "image_uri": "6611-topping-snax-onionrings.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -325.8498023715415,
-                    "scale": 0.5307971014492754,
+                    "rotation": -186.40316205533597,
+                    "scale": 0.5304677206851119,
                     "image_uri": "6612-topping-snax-onionrings.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -337.2332015810277,
-                    "scale": 0.5268445322793148,
+                    "rotation": -72.56916996047431,
+                    "scale": 0.4932476943346508,
                     "image_uri": "6612-topping-snax-onionrings.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -55.49407114624506,
-                    "scale": 0.5248682476943346,
+                    "rotation": 220.5533596837945,
+                    "scale": 0.4718379446640316,
                     "image_uri": "6612-topping-snax-onionrings.png"
                 }
             ],
@@ -628,8 +628,8 @@
                 788.3333333333334,
                 933.3333333333334
             ],
-            "rotation": 263.2411067193676,
-            "scale": 0.5245388669301713,
+            "rotation": -129.48616600790515,
+            "scale": 0.5321146245059288,
             "image_uri": "6610-topping-snax-onionrings.png"
         },
         {
@@ -637,8 +637,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": 323.0039525691699,
-            "scale": 0.5281620553359684,
+            "rotation": 115.25691699604738,
+            "scale": 0.47579051383399207,
             "image_uri": "6610-topping-snax-onionrings.png"
         },
         {
@@ -646,8 +646,8 @@
                 1721.6666666666667,
                 933.3333333333334
             ],
-            "rotation": 206.32411067193675,
-            "scale": 0.508399209486166,
+            "rotation": -166.4822134387352,
+            "scale": 0.4925889328063241,
             "image_uri": "6610-topping-snax-onionrings.png"
         },
         {
@@ -655,8 +655,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": 78.26086956521743,
-            "scale": 0.5370553359683794,
+            "rotation": -223.39920948616603,
+            "scale": 0.500494071146245,
             "image_uri": "6611-topping-snax-onionrings.png"
         },
         {
@@ -664,8 +664,8 @@
                 1721.6666666666667,
                 2800.0
             ],
-            "rotation": 120.94861660079056,
-            "scale": 0.5337615283267457,
+            "rotation": -61.18577075098813,
+            "scale": 0.4948945981554677,
             "image_uri": "6611-topping-snax-onionrings.png"
         },
         {
@@ -673,8 +673,8 @@
                 2655.0,
                 933.3333333333334
             ],
-            "rotation": 331.5415019762846,
-            "scale": 0.5195981554677207,
+            "rotation": -175.01976284584978,
+            "scale": 0.5087285902503293,
             "image_uri": "6611-topping-snax-onionrings.png"
         },
         {
@@ -682,8 +682,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": -325.8498023715415,
-            "scale": 0.5307971014492754,
+            "rotation": -186.40316205533597,
+            "scale": 0.5304677206851119,
             "image_uri": "6612-topping-snax-onionrings.png"
         },
         {
@@ -691,8 +691,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": -337.2332015810277,
-            "scale": 0.5268445322793148,
+            "rotation": -72.56916996047431,
+            "scale": 0.4932476943346508,
             "image_uri": "6612-topping-snax-onionrings.png"
         },
         {
@@ -700,8 +700,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -55.49407114624506,
-            "scale": 0.5248682476943346,
+            "rotation": 220.5533596837945,
+            "scale": 0.4718379446640316,
             "image_uri": "6612-topping-snax-onionrings.png"
         }
     ],
