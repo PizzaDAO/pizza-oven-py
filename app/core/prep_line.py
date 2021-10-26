@@ -284,31 +284,43 @@ def get_scatter_type(seed, nonce, num_of_instances: int) -> ScatterType:
     if num_of_instances == 1:
         scatter_type = ScatterType.hero
 
-    elif num_of_instances > 1 and num_of_instances <= 5:
-        if scatter_roll < 20:
+    elif (
+        num_of_instances > 1
+        and num_of_instances <= settings.SCATTER_SMALL_COUNT_THRESHOLD
+    ):
+        if scatter_roll < settings.SMALL_TIER_1:
             # 20% random
             scatter_type = ScatterType.random
-        if scatter_roll > 20 and scatter_roll < 60:
+        if (
+            scatter_roll > settings.SMALL_TIER_1
+            and scatter_roll < settings.SMALL_TIER_2
+        ):
             # 40% Spokecluster
             scatter_type = ScatterType.spokecluster
-        if scatter_roll > 60:
+        if scatter_roll > settings.SMALL_TIER_2:
             # 40% Random
             scatter_type = ScatterType.fivespot
 
-    elif num_of_instances > 5:
-        if scatter_roll < 10:
+    elif num_of_instances > settings.SCATTER_SMALL_COUNT_THRESHOLD:
+        if scatter_roll < settings.LARGE_TIER_1:
             # 10% random
             scatter_type = ScatterType.random
 
-        if scatter_roll > 10 and scatter_roll < 40:
+        if (
+            scatter_roll > settings.LARGE_TIER_1
+            and scatter_roll < settings.LARGE_TIER_2
+        ):
             # 30% Grid
             scatter_type = ScatterType.grid
 
-        if scatter_roll > 40 and scatter_roll < 70:
+        if (
+            scatter_roll > settings.LARGE_TIER_2
+            and scatter_roll < settings.LARGE_TIER_3
+        ):
             # 30% random
             scatter_type = ScatterType.spokecluster
 
-        if scatter_roll > 70:
+        if scatter_roll > settings.LARGE_TIER_3:
             # 30% Random
             scatter_type = ScatterType.treering
 

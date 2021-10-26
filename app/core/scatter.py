@@ -3,6 +3,7 @@ from app.models.prep import SCALAR, MadeIngredientPrep
 from typing import Dict, List, Tuple
 
 from ..models.recipe import IngredientScope, ScopedIngredient, ScatterType
+from app.core.config import Settings
 
 from .random_num import (
     Counter,
@@ -22,15 +23,16 @@ __all__ = [
     "Canvas",
     "Scatter",
     "RandomScatter",
-    "RandomScatter2",
 ]
+
+settings = Settings()
 
 
 class Canvas:
     """the size of the natron canvas"""
 
-    origin = (0, 0)
-    center = (3072 / 2, 3072 / 2)
+    origin = (settings.SCATTER_ORIGIN_X, settings.SCATTER_ORIGIN_Y)
+    center = (settings.SCATTER_CENTER_X, settings.SCATTER_CENTER_Y)
     end = (4096, 4096)
     hypotenuse = sqrt(end[0] ^ 2 + end[1] ^ 2)
 
@@ -50,8 +52,8 @@ class Scatter:
         """translate a raw point to a location on the canvas"""
         canvas = Canvas()
         # position based on 1024 topping image size - if pixel dimensions are different, position will be off
-        x = point[0] + (3072 / 2)
-        y = point[1] + (3072 / 2)
+        x = point[0] + settings.SCATTER_CENTER_X
+        y = point[1] + settings.SCATTER_CENTER_Y
 
         return (x, y)
 
@@ -62,7 +64,7 @@ class Scatter:
         canvas = Canvas()
 
         # The circumference to use as a boundary - past this, reign it in
-        inner_circle = 2650
+        inner_circle = settings.PERVENT_OVERFLOW_CONTROL_DIAMETER
         inner_radius = inner_circle / 2
 
         translated_instances = []
@@ -112,8 +114,9 @@ class Hero(Scatter):
         scale = select_value(
             self.random_seed, self.nonce, ingredient.scope.particle_scale
         )
+        random_location = self.randomize((0, 0))
         made = MadeIngredientPrep(
-            translation=(0, 0),
+            translation=random_location,
             rotation=rotation,
             scale=scale,
             image_uri=ingredient.ingredient.image_uris["filename"],
@@ -127,6 +130,20 @@ class Hero(Scatter):
 
         return instances
 
+    def randomize(self, posiion: tuple) -> tuple:
+        randx = select_value(
+            self.random_seed,
+            self.nonce,
+            (-settings.HERO_RANDOM_OFFSET_X, settings.HERO_RANDOM_OFFSET_Y),
+        )
+        randy = select_value(
+            self.random_seed,
+            self.nonce,
+            (-settings.HERO_RANDOM_OFFSET_Y, settings.HERO_RANDOM_OFFSET_Y),
+        )
+
+        return (posiion[0] + randx, posiion[1] + randy)
+
 
 class FiveSpot(Scatter):
     """Creates a pattern of five locations on the pie that can be randomized"""
@@ -136,7 +153,15 @@ class FiveSpot(Scatter):
     ) -> List[MadeIngredientPrep]:
 
         # The base locations we will use
-        locations = [(850, 850), (2222, 850), (2222, 2222), (850, 2222), (1536, 1536)]
+        # defaults [(850, 850), (2222, 850), (2222, 2222), (850, 2222), (1536, 1536)]
+        spot_1 = (settings.FIVE_SPOT_X_1, settings.FIVE_SPOT_Y_1)
+        spot_2 = (settings.FIVE_SPOT_X_2, settings.FIVE_SPOT_Y_2)
+        spot_3 = (settings.FIVE_SPOT_X_3, settings.FIVE_SPOT_Y_3)
+        spot_4 = (settings.FIVE_SPOT_X_4, settings.FIVE_SPOT_Y_4)
+        spot_5 = (settings.FIVE_SPOT_X_5, settings.FIVE_SPOT_Y_5)
+
+        locations = [spot_1, spot_2, spot_3, spot_4, spot_5]
+
         # rarndomize list for variety of placements
         locations = deterministic_shuffle(locations)
 
@@ -172,8 +197,16 @@ class FiveSpot(Scatter):
     # a randmizer that will add jitter to each position
     # when y values move more it looks better
     def randomize(self, posiion: tuple) -> tuple:
-        randx = select_value(self.random_seed, self.nonce, (-5, 5))
-        randy = select_value(self.random_seed, self.nonce, (-5, 5))
+        randx = select_value(
+            self.random_seed,
+            self.nonce,
+            (-settings.FIVE_SPOT_X_RANDOM_OFFSET, settings.FIVE_SPOT_X_RANDOM_OFFSET),
+        )
+        randy = select_value(
+            self.random_seed,
+            self.nonce,
+            (-settings.FIVE_SPOT_Y_RANDOM_OFFSET, settings.FIVE_SPOT_Y_RANDOM_OFFSET),
+        )
 
         return (posiion[0] + randx, posiion[1] + randy)
 
@@ -189,9 +222,9 @@ class SpokeCluster(Scatter):
 
         degree_int = (2 * PI) / len(topping_list)
 
-        inner_circle = 2800
+        inner_circle = settings.SPOKECLUSTER_INNER_CIRCLE
         # max radius is the inner circle minus half the scaled width - this preevents rings on the pie edge
-        max_radius = (inner_circle - 200) / 2
+        max_radius = (inner_circle - settings.SPOKECLUSTER_MAX_RADIUS_OFFSET) / 2
 
         for i in range(0, len(topping_list)):
             ingredient = topping_list[i]
@@ -203,7 +236,7 @@ class SpokeCluster(Scatter):
             )
 
             # radius min should be relative to scale size - bigger instances have bigger min radius
-            min_radius = 300 * scale
+            min_radius = settings.SPOKECLUSTER_MIN_RADIUS * scale
 
             radius = select_value(
                 self.random_seed, self.nonce, (min_radius, max_radius)
@@ -285,8 +318,16 @@ class Grid(Scatter):
     # a randmizer that will add jitter to each position
     # when y values move more it looks better
     def randomize(self, posiion: tuple) -> tuple:
-        randx = select_value(self.random_seed, self.nonce, (-95, 95))
-        randy = select_value(self.random_seed, self.nonce, (-95, 95))
+        randx = select_value(
+            self.random_seed,
+            self.nonce,
+            (-settings.GRID_RANDOM_OFFSET_X, settings.GRID_RANDOM_OFFSET_X),
+        )
+        randy = select_value(
+            self.random_seed,
+            self.nonce,
+            (-settings.GRID_RANDOM_OFFSET_Y, settings.GRID_RANDOM_OFFSET_Y),
+        )
 
         return (posiion[0] + randx, posiion[1] + randy)
 
@@ -294,10 +335,10 @@ class Grid(Scatter):
         positions = list()
         x_values = list()
         y_values = list()
-        origin = (3072 / 2, 3072 / 2)
+        origin = (settings.SCATTER_CENTER_X, settings.SCATTER_CENTER_Y)
 
         # The circumference of the area we can place ingredients - just inside the crust
-        inner_circle = 2800
+        inner_circle = settings.GRID_INNER_CIRCLE
         margin = 3072 - inner_circle
 
         # The number of sections in the grid based on how many instances we will have
@@ -325,9 +366,13 @@ class Grid(Scatter):
                 y = y_values[n]
                 # Adding some shifting to the lines to creaete more a random feel
                 if n % 2 == 0:
-                    unfiltered_positions.append((x - 90, y))
+                    unfiltered_positions.append(
+                        (x - settings.GRID_LINE_SHIFT_OFFSET, y)
+                    )
                 else:
-                    unfiltered_positions.append((x + 90, y))
+                    unfiltered_positions.append(
+                        (x + settings.GRID_LINE_SHIFT_OFFSET, y)
+                    )
 
         # Add some shufflee to the instances so the grid doesn't populate in a predictable manner
         unfiltered_positions = deterministic_shuffle(unfiltered_positions)
@@ -358,13 +403,13 @@ class TreeRing(Scatter):
         instances: List[MadeIngredientPrep] = []
 
         # the circumference of the circle we will place instances - just inside the crust
-        inner_circle = 2800
+        inner_circle = settings.TREERING_INNER_CIRCLE
 
         # maximum scale for this ingredient
         instance_scale = topping_list[0].scope.particle_scale[1]
 
         # choose a random radius for the ring
-        min_radius = 100.0
+        min_radius = settings.TREERING_MIN_RADIUS
         # max radius is the inner circle minus half the scaled width - this preevents rings on the pie edge
         max_radius = (inner_circle - ((instance_scale * 1024) / 2)) / 2
         # make radius with respect to instance scale
@@ -374,7 +419,7 @@ class TreeRing(Scatter):
 
         # if we have a small ingredient, let the ring change in diameter, there should be room
         variance = 1 - instance_scale
-        if variance > 0.5:
+        if variance > settings.TREERING_VARIANCE_THRESHOLD:
             radius_variance = select_value(
                 self.random_seed, self.nonce, (0, variance * max_radius)
             )
@@ -463,32 +508,10 @@ class RandomScatter(Scatter):
         ang = get_random_deterministic_float(seed, nonce, "random-point_ang", position)
 
         random_radius = rad * (
-            3052.0 / 2.0
+            settings.RANDOM_INNER_CIRCLE / 2.0
         )  # 3072 is the pixel width of pies - temp minus 20 to decrease bleed off pie
         random_angle = ang * TWO_PI
         x = random_radius * cos(random_angle)
         y = random_radius * sin(random_angle)
-
-        return (x, y)
-
-    def random_point(
-        self, seed: int, nonce: Counter, position: int
-    ) -> Tuple[SCALAR, SCALAR]:
-        """get a random point on a circle"""
-        theta = TWO_PI * get_random_deterministic_float(
-            seed, nonce, "random-point", position
-        )
-        print(f"theta: {theta}")
-        # TODO: probably calculate max radius based on a rectangle instead of a square
-        radius = select_value(seed, nonce, (Canvas.origin[X], Canvas.center[X]))
-        print(f"radius: {radius}")
-        r = sqrt(
-            get_random_deterministic_float(seed, nonce, "random-point", int(theta))
-        )
-        print(f"r: {r}")
-        x = Canvas.center[X] + r * radius * cos(theta)
-        print(f"x: {x}")
-        y = Canvas.center[Y] + r * radius * sin(theta)
-        print(f"y: {y}")
 
         return (x, y)
