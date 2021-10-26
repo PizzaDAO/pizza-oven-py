@@ -34,7 +34,7 @@ class RarePizzaMetadataResponse(Base):
 
 
 @router.get("/", response_model=RarePizzaMetadataResponse, tags=[METADATA])
-def create_metadata(request: RarePizzaMetadataRequest = Body(...)) -> Any:
+def create_metadata(request: RarePizzaMetadataRequest = Body(...)) -> RarePizzaMetadataResponse:
     """
     create the metadata for the specific pizza
     """
@@ -43,9 +43,7 @@ def create_metadata(request: RarePizzaMetadataRequest = Body(...)) -> Any:
         request.pizza.job_id, request.recipe, request.order, request.pizza
     )
     data = RarePizzaMetadataResponse(ipfs_hash="unknown", metadata=metadata)
-
-    json = jsonable_encoder(data)
-    return JSONResponse(content=json)
+    return data
 
 
 @router.get(
