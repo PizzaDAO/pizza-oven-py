@@ -161,13 +161,17 @@ class Settings(BaseSettings):
     # Pizza Oven Config
     MIN_TOPPING_LAYER_COUNT: int = 1
     MAX_TOPPING_LAYER_COUNT: int = 4
+
+    LASTCHANCE_OCCURENCE_PERCENTAGE: int = 20
+
+    # Rarity
     RARITY_WEIGHT_COMMON: int = 2000
     RARITY_WEIGHT_UNCOMMON: int = 700
     RARITY_WEIGHT_RARE: int = 250
-    RARITY_WEIGHT_EPIC: int = 100
-    RARITY_WEIGHT_SUPERRARE: int = 40
+    RARITY_WEIGHT_SUPERRARE: int = 100
+    RARITY_WEIGHT_EPIC: int = 40
     RARITY_WEIGHT_GRAIL: int = 5
-    LASTCHANCE_OCCURENCE_PERCENTAGE: int = 20
+
     # Scatter
     SCATTER_ORIGIN_X: int = 0
     SCATTER_ORIGIN_Y: int = 0
@@ -214,14 +218,6 @@ class Settings(BaseSettings):
     LARGE_TIER_1: int = 10
     LARGE_TIER_2: int = 40
     LARGE_TIER_3: int = 70
-    MIN_TOPPING_LAYER_COUNT = 1
-    MAX_TOPPING_LAYER_COUNT = 4
-    RARITY_WEIGHT_COMMON = 450
-    RARITY_WEIGHT_UNCOMMON = 300
-    RARITY_WEIGHT_RARE = 150
-    RARITY_WEIGHT_EPIC = 90
-    RARITY_WEIGHT_GRAIL = 10
-    LASTCHANCE_OCCURENCE_PERCENTAGE = 20
 
     class Config:
         case_sensitive = True
