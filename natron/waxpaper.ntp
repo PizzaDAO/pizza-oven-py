@@ -1814,7 +1814,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>8</KnobsCount>
+			<KnobsCount>9</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -1962,8 +1962,26 @@
 				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>A7_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
-				<count>7</count>
+				<count>8</count>
 				<item_version>0</item_version>
 				<item>
 					<first>A</first>
@@ -1988,6 +2006,10 @@
 				<item>
 					<first>A6</first>
 					<second>Switch_0570</second>
+				</item>
+				<item>
+					<first>A7</first>
+					<second>Switch_0540</second>
 				</item>
 				<item>
 					<first>B</first>
@@ -2344,7 +2366,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-2.83799999999999990e+01</Value>
+					<Value>-1.53800000000000008e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2353,7 +2375,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.34500000000000028e+01</Value>
+					<Value>-5.73000000000000043e+00</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2370,7 +2392,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>5.99999999999999978e-01</Value>
+					<Value>-8.39999999999999969e-01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>y = thisNode.translate.get()[1]
@@ -2391,7 +2413,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.43396226414826233e-01</Value>
+					<Value>9.43396226415110450e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>ret=1-((thisNode.scale.get()[dimension])*.06)</Expression>
@@ -2400,7 +2422,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.43396226414826233e-01</Value>
+					<Value>9.43396226415110450e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>ret=1-((thisNode.scale.get()[dimension])*.06)</Expression>
@@ -6957,7 +6979,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.99374146689195153e-01</Value>
+					<Value>8.93682009381474907e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.7535,1)</Expression>
@@ -23568,7 +23590,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0540-paper-blackberry-code.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0540-paper-code-blackberry.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -23606,7 +23628,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>/Users/ashafer/Development/pizza-oven-tmp/ingredients-db/0540-paper-blackberry-code.png</Value>
+					<Value>[Project]/../ingredients-db/0540-paper-code-blackberry.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -23827,7 +23849,7 @@ ret = round((x+y)/25,2)
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>215</KnobsAge>
+			<KnobsAge>217</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -27971,7 +27993,7 @@ ret = round((x+y)/25,2)
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sun Oct 24 13:46:59 2021</Value>
+			<Value>Mon Oct 25 23:52:22 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -29514,11 +29536,11 @@ ret = round((x+y)/25,2)
 		<Window class_id="29" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="30" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1547 833</Sizes>
+				<Sizes>1481 797</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>634 633</Sizes>
+					<Sizes>679 678</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="31" tracking_level="1" version="5" object_id="_2">
@@ -29558,10 +29580,10 @@ ret = round((x+y)/25,2)
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2438</x>
+			<x>-2478</x>
 			<y>-297</y>
-			<w>2416</w>
-			<h>1270</h>
+			<w>2314</w>
+			<h>1360</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="32" tracking_level="0" version="0">
@@ -29618,12 +29640,12 @@ ret = round((x+y)/25,2)
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>i4</item>
 		<item>i7</item>
 		<item>i71</item>
 		<item>Switch_0570</item>
 		<item>i6</item>
 		<item>i5</item>
-		<item>i4</item>
 		<item>i3</item>
 		<item>i2</item>
 		<item>Switch_0560</item>
