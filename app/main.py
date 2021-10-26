@@ -9,6 +9,36 @@ from app.core.config import Settings
 logger = getLogger(__name__)
 
 
+def print_settings(settings: Settings):
+    print(f"API_MODE                                - {settings.API_MODE}")
+    print(f"STORAGE_MODE                            - {settings.STORAGE_MODE}")
+    print(f"ETHEREUM_MODE                           - {settings.ETHEREUM_MODE}")
+    print(f"IPFS_MODE                               - {settings.IPFS_MODE}")
+    print(
+        f"RENDER_TASK_TIMEOUT_IN_MINUTES          - {settings.BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S}"
+    )
+    print(f"API_V1_STR                              - {settings.API_V1_STR}")
+    print(f"PIZZA_TYPES_SHEET                       - {settings.PIZZA_TYPES_SHEET}")
+    print(f"PIZZA_TYPE_RANGE_NAME                   - {settings.PIZZA_TYPE_RANGE_NAME}")
+    print(
+        f"PIZZA_INGREDIENTS_SHEET                 - {settings.PIZZA_INGREDIENTS_SHEET}"
+    )
+    print(
+        f"INTERMEDIATE_FOLDER_PATH                - {settings.INTERMEDIATE_FOLDER_PATH}"
+    )
+    print(f"OUTPUT_FOLDER_PATH                      - {settings.OUTPUT_FOLDER_PATH}")
+    print(f"lOCAL_RECIPES_PATH                      - {settings.lOCAL_RECIPES_PATH}")
+    print(
+        f"lOCAL_INGREDIENT_DB_MANIFEST_PATH       - {settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH}"
+    )
+    print(
+        f"LOCAL_INGREDIENT_DB_MANIFEST_FILENAME   - {settings.LOCAL_INGREDIENT_DB_MANIFEST_FILENAME}"
+    )
+    print(
+        f"LOCAL_INGREDIENTS_DB_PATH               - {settings.LOCAL_INGREDIENTS_DB_PATH}"
+    )
+
+
 def get_app(settings: Optional[Settings] = None) -> FastAPI:
     if not settings:
         settings = Settings()
@@ -18,6 +48,8 @@ def get_app(settings: Optional[Settings] = None) -> FastAPI:
     )
 
     logger.error(f"Starting API in {settings.API_MODE} mode")
+
+    print_settings(settings)
 
     # Set all CORS enabled origins
     if settings.BACKEND_CORS_ORIGINS:

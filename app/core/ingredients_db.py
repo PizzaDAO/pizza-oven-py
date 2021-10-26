@@ -43,7 +43,7 @@ box_paper_dict: Dict[str, ScopedIngredient] = {}
 
 
 def read_ingredients():
-
+    print("read_ingredients")
     values = fetch_sheet_data(
         settings.PIZZA_INGREDIENTS_SHEET, settings.TOPPINGS_RANGE_NAME
     )
@@ -52,7 +52,7 @@ def read_ingredients():
 
 
 def read_recipes(ingredients: Dict[Any, ScopedIngredient]):
-
+    print("read_recipes")
     values = fetch_sheet_data(
         settings.PIZZA_TYPES_SHEET, settings.PIZZA_TYPE_RANGE_NAME
     )
@@ -69,6 +69,8 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
     #
     # Token is manually generated and placed in the Data folder - Not very secure - quick hack
     #
+
+    print(f"fetch_sheet_data {SHEET_NAME} {RANGE_NAME}")
 
     scopes = [settings.SCOPE]
 
@@ -212,7 +214,7 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                     settings.LOCAL_INGREDIENTS_DB_PATH, filename
                 )
                 if not os.path.exists(absolute_filepath):
-                    print("Missing image for ingredient: " + filename)
+                    print(f"Missing image for ingredient: {absolute_filepath}")
 
                 # Get the 3-digit ingredient code
                 next_ingredient_code = sheet_data[row][0][0:3]
@@ -491,13 +493,16 @@ def save_recipe(recipe: Recipe):
 
     # create the directory if it doesnt exist
     if not os.path.exists(settings.lOCAL_RECIPES_PATH):
+        print(f"save_recipe: making directory: {absolute_filepath}")
         os.makedirs(settings.lOCAL_RECIPES_PATH)
 
+    print(f"save_recipe: {absolute_filepath}")
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
 
 
 def save_ingredients(ingredient_dict):
+
     list = []
     for k, v in ingredient_dict.items():
         list.append(json.loads(v.json()))
@@ -509,8 +514,10 @@ def save_ingredients(ingredient_dict):
 
     # create the directory if it doesnt exist
     if not os.path.exists(settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH):
+        print(f"save_ingredients: making directory: {absolute_filepath}")
         os.makedirs(settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH)
 
+    print(f"save_ingredients: {absolute_filepath}")
     with open(absolute_filepath, "w") as outfile:
         json.dump(list, outfile, indent=4)
 
@@ -532,8 +539,11 @@ def get_variants_for_ingredient(ingredient_id: str) -> List:
                 variants.append(scoped)
         f.close()
 
-    except Exception as e:
-        print("Looking for variants of " + ingredient_id + "... But can't find any")
+    except Exception as error:
+        print(
+            f"get_variants_for_ingredient: Error variants of {ingredient_id} at path: {path}"
+        )
+        print(error)
 
     return variants
 
