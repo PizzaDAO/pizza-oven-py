@@ -22,22 +22,28 @@ from app.core.random_num import (
     select_value,
 )
 
-from app.core.config import Settings
+from app.core.repository import get_oven_params
+
+from app.core.config import OvenToppingParams, Settings
 
 settings = Settings()
 
 __all__ = ["select_from_variants"]
 
 # Probabilistic distribution weights
-def weight_for_rarity(rarity: Rarity) -> int:
+def weight_for_rarity(rarity: Rarity, oven_prep: OvenToppingParams) -> int:
     if rarity == Rarity.common:
-        return int(settings.RARITY_WEIGHT_COMMON)
+        return int(oven_prep.rarity_weight_common)
     if rarity == Rarity.uncommon:
-        return int(settings.RARITY_WEIGHT_UNCOMMON)
+        return int(oven_prep.rarity_weight_uncommon)
     if rarity == Rarity.rare:
-        return int(settings.RARITY_WEIGHT_RARE)
+        return int(oven_prep.rarity_weight_rare)
+    if rarity == Rarity.superrare:
+        return int(oven_prep.rarity_weight_superrare)
+    if rarity == Rarity.epic:
+        return int(oven_prep.rarity_weight_epic)
     if rarity == Rarity.grail:
-        return int(settings.RARITY_WEIGHT_GRAIL)
+        return int(oven_prep.rarity_weight_grail)
 
     return 0
 
@@ -81,14 +87,16 @@ def ingredient_with_rarity(
 
 def makeDistribution(options: List[ScopedIngredient]):
     """Create a list of relative weight values"""
+
+    oven_prep = get_oven_params()
     freq = []
     weight_sum = 0
     missing_rarity = False
     for item in options:
-        weight = weight_for_rarity(item.ingredient.variant_rarity)
+        weight = weight_for_rarity(item.ingredient.variant_rarity, oven_prep)
         if weight == 0:
             weight = weight_for_rarity(
-                Rarity.common
+                Rarity.common, oven_prep
             )  # can't be zero - default to common
             missing_rarity = True
         weight_sum += weight
@@ -99,9 +107,9 @@ def makeDistribution(options: List[ScopedIngredient]):
         )
 
     for item in options:
-        weight = weight_for_rarity(item.ingredient.variant_rarity)
+        weight = weight_for_rarity(item.ingredient.variant_rarity, oven_prep)
         if weight == 0:
-            weight = weight_for_rarity(Rarity.common)
+            weight = weight_for_rarity(Rarity.common, oven_prep)
         weight_percent = 100 * (weight / weight_sum)
         freq.append(weight_percent)
 
@@ -110,19 +118,24 @@ def makeDistribution(options: List[ScopedIngredient]):
 
 def sort_by_rarity(option_list: List[ScopedIngredient], sort_type: str):
     """Sort a list by rarity - ascending in rarity - last is most rare"""
+    oven_prep = get_oven_params()
     # getting length of list of tuples
     length = len(option_list)
     for i in range(0, length):
         for j in range(0, length - i - 1):
             if sort_type == "variant":
-                rarity1 = weight_for_rarity(option_list[j].ingredient.variant_rarity)
+                rarity1 = weight_for_rarity(
+                    option_list[j].ingredient.variant_rarity, oven_prep
+                )
                 rarity2 = weight_for_rarity(
-                    option_list[j + 1].ingredient.variant_rarity
+                    option_list[j + 1].ingredient.variant_rarity, oven_prep
                 )
             else:
-                rarity1 = weight_for_rarity(option_list[j].ingredient.ingredient_rarity)
+                rarity1 = weight_for_rarity(
+                    option_list[j].ingredient.ingredient_rarity, oven_prep
+                )
                 rarity2 = weight_for_rarity(
-                    option_list[j + 1].ingredient.ingredient_rarity
+                    option_list[j + 1].ingredient.ingredient_rarity, oven_prep
                 )
             if rarity2 > rarity1:
                 temp = option_list[j]

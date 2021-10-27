@@ -2,6 +2,7 @@ from typing import List
 from enum import Enum
 from pydantic import AnyHttpUrl, BaseSettings
 from pydantic.fields import Field
+from app.models.base import Base
 
 import os
 
@@ -32,6 +33,78 @@ class EthereumNetworkChainId(int, Enum):
     rinkeby = 4
     matic = 137
     maticmum = 80001
+
+
+class OvenToppingParams(Base):
+    """vars from env config"""
+
+    # Pizza Oven Config
+    min_topping_layer_count: int = 1
+    max_topping_layer_count: int = 4
+
+    # Rarity
+    rarity_weight_common: int = 2000
+    rarity_weight_uncommon: int = 700
+    rarity_weight_rare: int = 250
+    rarity_weight_superrare: int = 100
+    rarity_weight_epic: int = 40
+    rarity_weight_grail: int = 5
+
+    lastchance_occurance_percentage: int = 20
+
+    # Scatter
+    scatter_origin_x: int = 0
+    scatter_origin_y: int = 0
+    scatter_center_x: int = 1536
+    scatter_center_y: int = 1536
+
+    # circumference beyond which instances are pulled back to center
+    prevent_overflow_control_diameter: int = 2650
+
+    # Hero
+    hero_random_offset_x: int = 0
+    hero_random_offset_y: int = 0
+
+    # FiveSpot
+    five_spot_x_1: int = 850
+    five_spot_y_1: int = 850
+    five_spot_x_2: int = 2222
+    five_spot_y_2: int = 850
+    five_spot_x_3: int = 2222
+    five_spot_y_3: int = 2222
+    five_spot_x_4: int = 850
+    five_spot_y_4: int = 2222
+    five_spot_x_5: int = 1536
+    five_spot_y_5: int = 1536
+    five_spot_x_random_offset: int = 5
+    five_spot_y_random_offset: int = 5
+
+    # SpokeCluster
+    spokecluster_inner_circle: int = 2800
+    spokecluster_max_radius_offset: int = 200
+    spokecluster_min_radius: int = 300
+
+    # Grid
+    grid_random_offset_x: int = 95
+    grid_random_offset_y: int = 95
+    grid_inner_circle: int = 2800
+    grid_line_shift_offset: int = 90
+
+    # Treering
+    treerinng_inner_circle: int = 2800
+    treering_min_radius: int = 100
+    treering_variance_threshold: float = 0.5
+
+    # random scatter
+    random_inner_circle: int = 3052
+
+    # scatter selection
+    scatter_small_count_threshold: int = 5
+    small_tier_1: int = 20
+    small_tier_2: int = 60
+    large_tier_1: int = 10
+    large_tier_2: int = 40
+    large_tier_3: int = 70
 
 
 # pylint:disable=too-few-public-methods
@@ -106,15 +179,6 @@ class Settings(BaseSettings):
 
     # Local Storage - Natron testing
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
-
-    # Pizza Oven Config
-    MIN_TOPPING_LAYER_COUNT = 1
-    MAX_TOPPING_LAYER_COUNT = 4
-    RARITY_WEIGHT_COMMON = 550
-    RARITY_WEIGHT_UNCOMMON = 340
-    RARITY_WEIGHT_RARE = 100
-    RARITY_WEIGHT_GRAIL = 10
-    LASTCHANCE_OCCURENCE_PERCENTAGE = 20
 
     class Config:
         case_sensitive = True

@@ -52,7 +52,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/1",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/5",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -60,7 +60,7 @@
 								"api",
 								"{{version}}",
 								"recipe",
-								"1"
+								"5"
 							]
 						}
 					},
@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"b3f3ffa9-43a1-48ac-b7ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"requestor\": \"92352557023643128056647953993718484966024936578\",\n        \"token_id\": 1,\n        \"recipe_id\": 4\n    }\n}",
+							"raw": "{\n    \"id\": \"c3f3ffa9-43a1-48ac-b7ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"requestor\": \"92352557023643128056647953993718484966024936578\",\n        \"token_id\": 15,\n        \"recipe_id\": 14\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -129,7 +129,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token_id\": 1,\n    \"random_seed\": \"0xa326a9c13EC95adDB74789a375e2FeF060532bAF\",\n    \"recipe\": {{recipe}}\n}",
+							"raw": "{\n    \"token_id\": 100,\n    \"random_seed\": \"0xa326a9c13bC95adDB74789a315e2FeF060532bAF\",\n    \"recipe\": {{recipe}}\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -169,14 +169,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/tests/ingredient/4000",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/kitchen/ingredient/4000",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
 							"path": [
 								"api",
 								"{{version}}",
-								"tests",
+								"kitchen",
 								"ingredient",
 								"4000"
 							]
@@ -316,6 +316,55 @@
 		{
 			"name": "admin",
 			"item": [
+				{
+					"name": "Get Oven Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/oven_params",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"oven_params"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Oven Params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"min_topping_layer_count\": 1,\n    \"max_topping_layer_count\": 4,\n    \"rarity_weight_common\": 2000,\n    \"rarity_weight_uncommon\": 700,\n    \"rarity_weight_rare\": 250,\n    \"rarity_weight_superrare\": 100,\n    \"rarity_weight_epic\": 40,\n    \"rarity_weight_grail\": 5,\n    \"lastchance_occurance_percentage\": 20,\n    \"scatter_origin_x\": 0,\n    \"scatter_origin_y\": 0,\n    \"scatter_center_x\": 1536,\n    \"scatter_center_y\": 1536,\n    \"prevent_overflow_control_diameter\": 2650,\n    \"hero_random_offset_x\": 0,\n    \"hero_random_offset_y\": 0,\n    \"five_spot_x_1\": 850,\n    \"five_spot_y_1\": 850,\n    \"five_spot_x_2\": 2222,\n    \"five_spot_y_2\": 850,\n    \"five_spot_x_3\": 2222,\n    \"five_spot_y_3\": 2222,\n    \"five_spot_x_4\": 850,\n    \"five_spot_y_4\": 2222,\n    \"five_spot_x_5\": 1536,\n    \"five_spot_y_5\": 1536,\n    \"five_spot_x_random_offset\": 5,\n    \"five_spot_y_random_offset\": 5,\n    \"spokecluster_inner_circle\": 2800,\n    \"spokecluster_max_radius_offset\": 200,\n    \"spokecluster_min_radius\": 300,\n    \"grid_random_offset_x\": 95,\n    \"grid_random_offset_y\": 95,\n    \"grid_inner_circle\": 2800,\n    \"grid_line_shift_offset\": 90,\n    \"treerinng_inner_circle\": 2800,\n    \"treering_min_radius\": 100,\n    \"treering_variance_threshold\": 0.5,\n    \"random_inner_circle\": 3052,\n    \"scatter_small_count_threshold\": 5,\n    \"small_tier_1\": 20,\n    \"small_tier_2\": 60,\n    \"large_tier_1\": 10,\n    \"large_tier_2\": 40,\n    \"large_tier_3\": 70\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/oven_params",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"oven_params"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "Get Render Task",
 					"request": {
@@ -533,24 +582,24 @@
 							}
 						},
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/tests/order?skip&limit",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/test/order?skip&limit",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
 							"path": [
 								"api",
 								"{{version}}",
-								"tests",
+								"test",
 								"order"
 							],
 							"query": [
 								{
 									"key": "skip",
-									"value": 0
+									"value": null
 								},
 								{
 									"key": "limit",
-									"value": 10
+									"value": null
 								}
 							]
 						}

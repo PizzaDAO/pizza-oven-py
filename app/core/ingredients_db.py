@@ -13,7 +13,7 @@ from app.models.recipe import *
 from app.models.recipe import Rarity
 from app.models.auth_tokens import GSheetsToken
 
-from app.core.repository import get_gsheets_token, set_gsheets_token
+from app.core.repository import get_gsheets_token, set_gsheets_token, get_oven_params
 
 settings = Settings()
 
@@ -259,6 +259,8 @@ def map_rarity(rarity_string) -> Rarity:
         return Rarity.uncommon
     if rarity_string == "rare":
         return Rarity.rare
+    if rarity_string == "superrare":
+        return Rarity.superrare
     if rarity_string == "epic":
         return Rarity.epic
     if rarity_string == "grail":
@@ -312,7 +314,7 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """parse ScopedIngredient from a row in the database"""
 
-    category = parse_first_word(row["category"])
+    category = parse_second_word(row["category"])
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
@@ -420,6 +422,13 @@ def parse_first_word(text) -> str:
     return id_string
 
 
+def parse_second_word(text) -> str:
+    words = text.split("-")
+    id_string = words[1]
+
+    return id_string
+
+
 def parse_column(
     recipe_id: int, raw_column, ingredients: Dict[Any, ScopedIngredient]
 ) -> Recipe:
@@ -458,6 +467,8 @@ def parse_column(
 
     pie_type = raw_column[0]
 
+    oven_params = get_oven_params()
+
     recipe = Recipe(
         unique_id=recipe_id,
         name=pie_type,
@@ -472,8 +483,8 @@ def parse_column(
             sauce_count=[1, 1],
             cheese_count=[1, 1],
             topping_count=[
-                settings.MIN_TOPPING_LAYER_COUNT,
-                settings.MAX_TOPPING_LAYER_COUNT,
+                oven_params.min_topping_layer_count,
+                oven_params.max_topping_layer_count,
             ],
             lastchance_count=[0, 1],
             baking_temp_in_celsius=[395, 625],
