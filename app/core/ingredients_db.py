@@ -239,7 +239,10 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 ingredients.update({unique_id: ingredient})
 
                 # Pull out the Box and Paper ingredients for later
-                if unique_id[0] == "0":
+                if (
+                    ingredient.ingredient.classification == Classification.box
+                    or ingredient.ingredient.classification == Classification.paper
+                ):
                     box_paper_dict.update({unique_id: ingredient})
         else:
             print(
@@ -297,7 +300,7 @@ def parse_recipes(
 
     # Now we have a Dict of Columns - pizza type string : raw column data
     pizza_types = list(columns.keys())
-    recipe_id = 10
+    recipe_id = 0
     for header in pizza_types:
         data = columns[header]
         recipe: Recipe = parse_column(recipe_id, data, ingredients)
