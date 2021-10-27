@@ -1,62 +1,62 @@
 {
-    "token_id": 0,
+    "token_id": 50,
     "name": "4900-psychedelictomato",
-    "random_seed": "75DFFA12",
+    "random_seed": "0EF8D0CE",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0000",
+                "ingredient_id": "000",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 0,
                 "variant_rarity": 5,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
-                    "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
-                    "height": 0.0,
-                    "moisture": 0.0,
-                    "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
-                    "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
-                    "riboflavin": 0.0,
-                    "thiamin": 0.0,
-                    "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "serving_size": 90.0,
+                    "mass": 994.0,
+                    "calories": 92.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 2.0,
+                    "vitamin_b5": 3.0,
+                    "vitamin_d": 4.0,
+                    "vitamin_b7": 5.0,
+                    "height": 10.0,
+                    "moisture": 11.0,
+                    "potassium": 10.0,
+                    "cholesterol": 15.0,
+                    "vitamin_a": 16.0,
+                    "dietary_fiber": 16.0,
+                    "vitamin_b6": 17.0,
+                    "sugar": 20.0,
+                    "protein": 21.0,
+                    "iron": 25.0,
+                    "complex_carb": 30.0,
+                    "selenium": 31.0,
+                    "vitamin_k": 32.0,
+                    "vitamin_b12": 40.0,
+                    "calories_from_fat": 41.0,
+                    "vitamin_e": 42.0,
+                    "zinc": 50.0,
+                    "saturated_fat": 51.0,
+                    "iodine": 52.0,
+                    "trans_fat": 60.0,
+                    "sodium": 61.0,
+                    "monosaturated_fat": 62.0,
+                    "calcium": 63.0,
+                    "riboflavin": 70.0,
+                    "thiamin": 71.0,
+                    "folate": 72.0,
+                    "added_sugar": 23.0,
+                    "chromium": 22.0,
+                    "manganese": 24.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0000-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0000-box-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
+                "unique_id": "0530",
+                "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0530-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0530-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1010",
-                "ingredient_id": "101",
+                "unique_id": "1040",
+                "ingredient_id": "104",
                 "variant_id": "0",
                 "index": 1,
-                "name": "thick",
+                "name": "castle",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1010-crust-thick.png",
+                    "filename": "1040-crust-castle.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1010-crust-thick.png"
+                    "image_uri": "1040-crust-castle.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2010",
-                "ingredient_id": "201",
+                "unique_id": "2030",
+                "ingredient_id": "203",
                 "variant_id": "0",
                 "index": 1,
-                "name": "pesto",
-                "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "name": "bbq",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2010-sauce-pesto.png",
+                    "filename": "2030-sauce-bbq.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2010-sauce-pesto.png"
+                    "image_uri": "2030-sauce-bbq.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3190",
+                "unique_id": "3193",
                 "ingredient_id": "319",
-                "variant_id": "0",
+                "variant_id": "3",
                 "index": 1,
                 "name": "gruyere",
                 "ingredient_rarity": 2,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3190-cheese-gruyere.png",
+                    "filename": "3193-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.7777777777777778,
-                    "image_uri": "3190-cheese-gruyere.png"
+                    "image_uri": "3193-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         788.3333333333334,
                         933.3333333333334
                     ],
-                    "rotation": -9.960474308300377,
-                    "scale": 0.6514492753623189,
+                    "rotation": -300.2371541501976,
+                    "scale": 0.5882740447957839,
                     "image_uri": "4900-topping-fruit-psychedelictomato.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1078.3333333333335,
                         1866.6666666666667
                     ],
-                    "rotation": -271.77865612648225,
-                    "scale": 0.7127140974967062,
+                    "rotation": -226.24505928853753,
+                    "scale": 0.5376811594202898,
                     "image_uri": "4900-topping-fruit-psychedelictomato.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         1721.6666666666667,
                         933.3333333333334
                     ],
-                    "rotation": -83.9525691699605,
-                    "scale": 0.6340579710144928,
+                    "rotation": -106.71936758893278,
+                    "scale": 0.5380764163372859,
                     "image_uri": "4900-topping-fruit-psychedelictomato.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         2011.6666666666667,
                         1866.6666666666667
                     ],
-                    "rotation": 180.71146245059288,
-                    "scale": 0.6312911725955205,
+                    "rotation": 297.391304347826,
+                    "scale": 0.6092226613965744,
                     "image_uri": "4901-topping-fruit-psychedelictomato.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": -291.699604743083,
-                    "scale": 0.6546113306982873,
+                    "rotation": 157.9446640316205,
+                    "scale": 0.5851119894598156,
                     "image_uri": "4901-topping-fruit-psychedelictomato.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         2655.0,
                         933.3333333333334
                     ],
-                    "rotation": 286.00790513834,
-                    "scale": 0.644729907773386,
+                    "rotation": 175.01976284584987,
+                    "scale": 0.6084321475625823,
                     "image_uri": "4901-topping-fruit-psychedelictomato.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 18.498023715415002,
-                    "scale": 0.6589591567852437,
+                    "rotation": -83.9525691699605,
+                    "scale": 0.5578392621870882,
                     "image_uri": "4902-topping-fruit-psychedelictomato.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -72.56916996047431,
-                    "scale": 0.6882081686429513,
+                    "rotation": 351.4624505928854,
+                    "scale": 0.6028985507246376,
                     "image_uri": "4902-topping-fruit-psychedelictomato.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 61.18577075098813,
-                    "scale": 0.6265480895915678,
+                    "rotation": -32.72727272727275,
+                    "scale": 0.563768115942029,
                     "image_uri": "4902-topping-fruit-psychedelictomato.png"
                 }
             ],
@@ -628,8 +628,8 @@
                 788.3333333333334,
                 933.3333333333334
             ],
-            "rotation": -9.960474308300377,
-            "scale": 0.6514492753623189,
+            "rotation": -300.2371541501976,
+            "scale": 0.5882740447957839,
             "image_uri": "4900-topping-fruit-psychedelictomato.png"
         },
         {
@@ -637,8 +637,8 @@
                 1078.3333333333335,
                 1866.6666666666667
             ],
-            "rotation": -271.77865612648225,
-            "scale": 0.7127140974967062,
+            "rotation": -226.24505928853753,
+            "scale": 0.5376811594202898,
             "image_uri": "4900-topping-fruit-psychedelictomato.png"
         },
         {
@@ -646,8 +646,8 @@
                 1721.6666666666667,
                 933.3333333333334
             ],
-            "rotation": -83.9525691699605,
-            "scale": 0.6340579710144928,
+            "rotation": -106.71936758893278,
+            "scale": 0.5380764163372859,
             "image_uri": "4900-topping-fruit-psychedelictomato.png"
         },
         {
@@ -655,8 +655,8 @@
                 2011.6666666666667,
                 1866.6666666666667
             ],
-            "rotation": 180.71146245059288,
-            "scale": 0.6312911725955205,
+            "rotation": 297.391304347826,
+            "scale": 0.6092226613965744,
             "image_uri": "4901-topping-fruit-psychedelictomato.png"
         },
         {
@@ -664,8 +664,8 @@
                 1721.6666666666667,
                 2800.0
             ],
-            "rotation": -291.699604743083,
-            "scale": 0.6546113306982873,
+            "rotation": 157.9446640316205,
+            "scale": 0.5851119894598156,
             "image_uri": "4901-topping-fruit-psychedelictomato.png"
         },
         {
@@ -673,8 +673,8 @@
                 2655.0,
                 933.3333333333334
             ],
-            "rotation": 286.00790513834,
-            "scale": 0.644729907773386,
+            "rotation": 175.01976284584987,
+            "scale": 0.6084321475625823,
             "image_uri": "4901-topping-fruit-psychedelictomato.png"
         },
         {
@@ -682,8 +682,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": 18.498023715415002,
-            "scale": 0.6589591567852437,
+            "rotation": -83.9525691699605,
+            "scale": 0.5578392621870882,
             "image_uri": "4902-topping-fruit-psychedelictomato.png"
         },
         {
@@ -691,8 +691,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": -72.56916996047431,
-            "scale": 0.6882081686429513,
+            "rotation": 351.4624505928854,
+            "scale": 0.6028985507246376,
             "image_uri": "4902-topping-fruit-psychedelictomato.png"
         },
         {
@@ -700,8 +700,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 61.18577075098813,
-            "scale": 0.6265480895915678,
+            "rotation": -32.72727272727275,
+            "scale": 0.563768115942029,
             "image_uri": "4902-topping-fruit-psychedelictomato.png"
         }
     ],

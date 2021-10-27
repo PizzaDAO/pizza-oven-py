@@ -122,9 +122,10 @@ class Rarity(IntFlag):
     common = 0
     uncommon = 1
     rare = 2
-    epic = 3
-    grail = 4
-    undefined = 5
+    superrare = 3
+    epic = 4
+    grail = 5
+    undefined = 6
 
 
 class RecipeInstructions(Base):

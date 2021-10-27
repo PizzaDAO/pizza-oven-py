@@ -13,7 +13,7 @@ from app.models.recipe import *
 from app.models.recipe import Rarity
 from app.models.auth_tokens import GSheetsToken
 
-from app.core.repository import get_gsheets_token, set_gsheets_token
+from app.core.repository import get_gsheets_token, set_gsheets_token, get_oven_params
 
 settings = Settings()
 
@@ -43,7 +43,7 @@ box_paper_dict: Dict[str, ScopedIngredient] = {}
 
 
 def read_ingredients():
-
+    print("read_ingredients")
     values = fetch_sheet_data(
         settings.PIZZA_INGREDIENTS_SHEET, settings.TOPPINGS_RANGE_NAME
     )
@@ -52,7 +52,7 @@ def read_ingredients():
 
 
 def read_recipes(ingredients: Dict[Any, ScopedIngredient]):
-
+    print("read_recipes")
     values = fetch_sheet_data(
         settings.PIZZA_TYPES_SHEET, settings.PIZZA_TYPE_RANGE_NAME
     )
@@ -69,6 +69,8 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
     #
     # Token is manually generated and placed in the Data folder - Not very secure - quick hack
     #
+
+    print(f"fetch_sheet_data {SHEET_NAME} {RANGE_NAME}")
 
     scopes = [settings.SCOPE]
 
@@ -180,7 +182,9 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
 # this mapping is done to the Google Sheet - change the sheet - change this code
 def parse_ingredients(sheet_data) -> Optional[Dict]:
     if not sheet_data:
-        print("Error: We have a problem... No data found for Toppings.")
+        print(
+            "parse_ingredients: Error: We have a problem... No data found for Toppings."
+        )
         return None
 
     ingredients = {}
@@ -206,10 +210,11 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
             if sheet_data[row][0] and record_entry["on_disk"] == "Y":
                 # check to see if the png is in ingredients-db folder
                 filename = record_entry["filename_paste"] + ".png"
-                path = "ingredients-db/"
-                absolute_filepath = os.path.join(path, filename)
+                absolute_filepath = os.path.join(
+                    settings.LOCAL_INGREDIENTS_DB_PATH, filename
+                )
                 if not os.path.exists(absolute_filepath):
-                    print("Missing image for ingredient: " + filename)
+                    print(f"Missing image for ingredient: {absolute_filepath}")
 
                 # Get the 3-digit ingredient code
                 next_ingredient_code = sheet_data[row][0][0:3]
@@ -254,6 +259,8 @@ def map_rarity(rarity_string) -> Rarity:
         return Rarity.uncommon
     if rarity_string == "rare":
         return Rarity.rare
+    if rarity_string == "superrare":
+        return Rarity.superrare
     if rarity_string == "epic":
         return Rarity.epic
     if rarity_string == "grail":
@@ -307,7 +314,7 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """parse ScopedIngredient from a row in the database"""
 
-    category = parse_first_word(row["category"])
+    category = parse_second_word(row["category"])
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
@@ -415,6 +422,13 @@ def parse_first_word(text) -> str:
     return id_string
 
 
+def parse_second_word(text) -> str:
+    words = text.split("-")
+    id_string = words[1]
+
+    return id_string
+
+
 def parse_column(
     recipe_id: int, raw_column, ingredients: Dict[Any, ScopedIngredient]
 ) -> Recipe:
@@ -453,6 +467,8 @@ def parse_column(
 
     pie_type = raw_column[0]
 
+    oven_params = get_oven_params()
+
     recipe = Recipe(
         unique_id=recipe_id,
         name=pie_type,
@@ -467,8 +483,8 @@ def parse_column(
             sauce_count=[1, 1],
             cheese_count=[1, 1],
             topping_count=[
-                settings.MIN_TOPPING_LAYER_COUNT,
-                settings.MAX_TOPPING_LAYER_COUNT,
+                oven_params.min_topping_layer_count,
+                oven_params.max_topping_layer_count,
             ],
             lastchance_count=[0, 1],
             baking_temp_in_celsius=[395, 625],
@@ -483,33 +499,36 @@ def save_recipe(recipe: Recipe):
     # Pretty Print JSON
     json_formatted_str = json.loads(recipe.json())
 
-    path = "data/recipes/"
-
     filename = recipe.name + ".json"
-    absolute_filepath = os.path.join(path, filename)
+    absolute_filepath = os.path.join(settings.lOCAL_RECIPES_PATH, filename)
 
     # create the directory if it doesnt exist
-    if not os.path.exists("data/recipes"):
-        os.makedirs(path)
+    if not os.path.exists(settings.lOCAL_RECIPES_PATH):
+        print(f"save_recipe: making directory: {absolute_filepath}")
+        os.makedirs(settings.lOCAL_RECIPES_PATH)
 
+    print(f"save_recipe: {absolute_filepath}")
     with open(absolute_filepath, "w") as outfile:
         json.dump(json_formatted_str, outfile, indent=4)
 
 
 def save_ingredients(ingredient_dict):
+
     list = []
     for k, v in ingredient_dict.items():
         list.append(json.loads(v.json()))
 
-    path = "data/ingredients/"
-
-    filename = "ingredient_db.json"
-    absolute_filepath = os.path.join(path, filename)
+    absolute_filepath = os.path.join(
+        settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH,
+        settings.LOCAL_INGREDIENT_DB_MANIFEST_FILENAME,
+    )
 
     # create the directory if it doesnt exist
-    if not os.path.exists(path):
-        os.makedirs(path)
+    if not os.path.exists(settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH):
+        print(f"save_ingredients: making directory: {absolute_filepath}")
+        os.makedirs(settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH)
 
+    print(f"save_ingredients: {absolute_filepath}")
     with open(absolute_filepath, "w") as outfile:
         json.dump(list, outfile, indent=4)
 
@@ -518,7 +537,10 @@ def get_variants_for_ingredient(ingredient_id: str) -> List:
     # load the ingredients JSON and pull out the variants
 
     variants: List[ScopedIngredient] = []
-    path = "data/ingredients/ingredient_db.json"
+    path = os.path.join(
+        settings.lOCAL_INGREDIENT_DB_MANIFEST_PATH,
+        settings.LOCAL_INGREDIENT_DB_MANIFEST_FILENAME,
+    )
     try:
         f = open(path)
         contents = json.load(f)
@@ -528,8 +550,11 @@ def get_variants_for_ingredient(ingredient_id: str) -> List:
                 variants.append(scoped)
         f.close()
 
-    except Exception as e:
-        print("Looking for variants of " + ingredient_id + "... But can't find any")
+    except Exception as error:
+        print(
+            f"get_variants_for_ingredient: Error variants of {ingredient_id} at path: {path}"
+        )
+        print(error)
 
     return variants
 

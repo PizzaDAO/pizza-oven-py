@@ -6,7 +6,7 @@ from dropbox.exceptions import AuthError
 
 from app.core.config import Settings
 
-__all__ = ["send_image_file"]
+__all__ = ["DropboxSession"]
 
 # Add OAuth2 access token here.
 # You can generate one for yourself in the App Console.

@@ -40,7 +40,7 @@ class KitchenOrderResponse(Base):
 @router.get(
     "/ingredient/{ingredient_id}", response_model=KitchenOrderResponse, tags=[TEST]
 )
-def ingredient(ingredient_id: str) -> Any:
+def test_get_ingredient(ingredient_id: str) -> Any:
     """
     Get a specific recipe from the kitchen (by id)
     """
@@ -54,7 +54,7 @@ def ingredient(ingredient_id: str) -> Any:
 
 
 @router.post("/order", tags=[TEST])
-def kitchen_order(request: Request, skip: int = 0, limit: int = 100) -> Any:
+def test_kitchen_order(request: Request, skip: int = 0, limit: int = 100) -> Any:
     """
     run a set of predefined kitchen orders as a test
     """

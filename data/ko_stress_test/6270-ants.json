@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 156,
     "name": "6270-ants",
-    "random_seed": "7DE37671",
+    "random_seed": "4FEA3467",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0530",
+                "unique_id": "0532",
                 "ingredient_id": "053",
-                "variant_id": "0",
+                "variant_id": "2",
                 "index": 1,
-                "name": "cherry-code",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0530-paper-cherry-code.png",
+                    "filename": "0532-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0530-paper-cherry-code.png"
+                    "image_uri": "0532-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2073",
-                "ingredient_id": "207",
-                "variant_id": "3",
+                "unique_id": "2010",
+                "ingredient_id": "201",
+                "variant_id": "0",
                 "index": 1,
-                "name": "prismicfluid",
-                "ingredient_rarity": 4,
-                "variant_rarity": 5,
+                "name": "pesto",
+                "ingredient_rarity": 1,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2073-sauce-prismicfluid.png",
+                    "filename": "2010-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,20 +279,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2073-sauce-prismicfluid.png"
+                    "image_uri": "2010-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3170",
-                "ingredient_id": "317",
-                "variant_id": "0",
+                "unique_id": "3191",
+                "ingredient_id": "319",
+                "variant_id": "1",
                 "index": 1,
-                "name": "cheesecake",
-                "ingredient_rarity": 3,
-                "variant_rarity": 5,
+                "name": "gruyere",
+                "ingredient_rarity": 2,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3170-cheese-cheesecake.png",
+                    "filename": "3191-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8333333333333334,
-                    "image_uri": "3170-cheese-cheesecake.png"
+                    "scale": 0.7777777777777778,
+                    "image_uri": "3191-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": -78.26086956521738,
-                    "scale": 0.15757575757575756,
+                    "rotation": -212.01581027667984,
+                    "scale": 0.14967061923583663,
                     "image_uri": "6270-topping-bugs-ants.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 300.2371541501976,
-                    "scale": 0.15678524374176547,
+                    "rotation": 317.3122529644269,
+                    "scale": 0.1482213438735178,
                     "image_uri": "6270-topping-bugs-ants.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": -38.41897233201581,
-                    "scale": 0.15810276679841898,
+                    "rotation": -280.3162055335969,
+                    "scale": 0.14308300395256918,
                     "image_uri": "6270-topping-bugs-ants.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": -138.02371541501975,
-                    "scale": 0.15250329380764163,
+                    "rotation": 149.40711462450594,
+                    "scale": 0.1751646903820817,
                     "image_uri": "6271-topping-bugs-ants.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": -268.9328063241107,
-                    "scale": 0.13353096179183135,
+                    "rotation": -118.10276679841897,
+                    "scale": 0.16357048748353098,
                     "image_uri": "6271-topping-bugs-ants.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": 325.8498023715415,
-                    "scale": 0.1253623188405797,
+                    "rotation": 200.63241106719363,
+                    "scale": 0.16488801054018445,
                     "image_uri": "6271-topping-bugs-ants.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": -183.55731225296444,
-                    "scale": 0.16093544137022397,
+                    "rotation": 78.26086956521743,
+                    "scale": 0.17094861660079053,
                     "image_uri": "6272-topping-bugs-ants.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": -15.652173913043441,
-                    "scale": 0.17200263504611332,
+                    "rotation": 183.55731225296438,
+                    "scale": 0.13089591567852438,
                     "image_uri": "6272-topping-bugs-ants.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": -251.85770750988144,
-                    "scale": 0.16409749670619236,
+                    "rotation": -52.64822134387356,
+                    "scale": 0.12325428194993411,
                     "image_uri": "6272-topping-bugs-ants.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": -189.24901185770753,
-                    "scale": 0.1248353096179183,
+                    "rotation": 223.399209486166,
+                    "scale": 0.17990777338603425,
                     "image_uri": "6273-topping-bugs-ants.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": 66.87747035573125,
-                    "scale": 0.1561923583662714,
+                    "rotation": -152.25296442687747,
+                    "scale": 0.13616600790513833,
                     "image_uri": "6273-topping-bugs-ants.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": 237.62845849802375,
-                    "scale": 0.16699604743083005,
+                    "rotation": -257.5494071146245,
+                    "scale": 0.1432806324110672,
                     "image_uri": "6273-topping-bugs-ants.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": -155.098814229249,
-                    "scale": 0.158300395256917,
+                    "rotation": -249.01185770750988,
+                    "scale": 0.12220026350461133,
                     "image_uri": "6274-topping-bugs-ants.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": 32.72727272727269,
-                    "scale": 0.17121212121212123,
+                    "rotation": 194.94071146245062,
+                    "scale": 0.1377470355731225,
                     "image_uri": "6274-topping-bugs-ants.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": -180.71146245059288,
-                    "scale": 0.17727272727272728,
+                    "rotation": -101.02766798418975,
+                    "scale": 0.18227931488801055,
                     "image_uri": "6274-topping-bugs-ants.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": 103.87351778656131,
-                    "scale": 0.12378129117259551,
+                    "rotation": -317.3122529644269,
+                    "scale": 0.1735836627140975,
                     "image_uri": "6275-topping-bugs-ants.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": -86.79841897233206,
-                    "scale": 0.17700922266139657,
+                    "rotation": -357.15415019762844,
+                    "scale": 0.18122529644268776,
                     "image_uri": "6275-topping-bugs-ants.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 345.77075098814225,
-                    "scale": 0.11772068511198945,
+                    "rotation": -35.57312252964425,
+                    "scale": 0.18306982872200267,
                     "image_uri": "6275-topping-bugs-ants.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": -78.26086956521738,
-            "scale": 0.15757575757575756,
+            "rotation": -212.01581027667984,
+            "scale": 0.14967061923583663,
             "image_uri": "6270-topping-bugs-ants.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 300.2371541501976,
-            "scale": 0.15678524374176547,
+            "rotation": 317.3122529644269,
+            "scale": 0.1482213438735178,
             "image_uri": "6270-topping-bugs-ants.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": -38.41897233201581,
-            "scale": 0.15810276679841898,
+            "rotation": -280.3162055335969,
+            "scale": 0.14308300395256918,
             "image_uri": "6270-topping-bugs-ants.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": -138.02371541501975,
-            "scale": 0.15250329380764163,
+            "rotation": 149.40711462450594,
+            "scale": 0.1751646903820817,
             "image_uri": "6271-topping-bugs-ants.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": -268.9328063241107,
-            "scale": 0.13353096179183135,
+            "rotation": -118.10276679841897,
+            "scale": 0.16357048748353098,
             "image_uri": "6271-topping-bugs-ants.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": 325.8498023715415,
-            "scale": 0.1253623188405797,
+            "rotation": 200.63241106719363,
+            "scale": 0.16488801054018445,
             "image_uri": "6271-topping-bugs-ants.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": -183.55731225296444,
-            "scale": 0.16093544137022397,
+            "rotation": 78.26086956521743,
+            "scale": 0.17094861660079053,
             "image_uri": "6272-topping-bugs-ants.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": -15.652173913043441,
-            "scale": 0.17200263504611332,
+            "rotation": 183.55731225296438,
+            "scale": 0.13089591567852438,
             "image_uri": "6272-topping-bugs-ants.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": -251.85770750988144,
-            "scale": 0.16409749670619236,
+            "rotation": -52.64822134387356,
+            "scale": 0.12325428194993411,
             "image_uri": "6272-topping-bugs-ants.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": -189.24901185770753,
-            "scale": 0.1248353096179183,
+            "rotation": 223.399209486166,
+            "scale": 0.17990777338603425,
             "image_uri": "6273-topping-bugs-ants.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": 66.87747035573125,
-            "scale": 0.1561923583662714,
+            "rotation": -152.25296442687747,
+            "scale": 0.13616600790513833,
             "image_uri": "6273-topping-bugs-ants.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": 237.62845849802375,
-            "scale": 0.16699604743083005,
+            "rotation": -257.5494071146245,
+            "scale": 0.1432806324110672,
             "image_uri": "6273-topping-bugs-ants.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": -155.098814229249,
-            "scale": 0.158300395256917,
+            "rotation": -249.01185770750988,
+            "scale": 0.12220026350461133,
             "image_uri": "6274-topping-bugs-ants.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": 32.72727272727269,
-            "scale": 0.17121212121212123,
+            "rotation": 194.94071146245062,
+            "scale": 0.1377470355731225,
             "image_uri": "6274-topping-bugs-ants.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": -180.71146245059288,
-            "scale": 0.17727272727272728,
+            "rotation": -101.02766798418975,
+            "scale": 0.18227931488801055,
             "image_uri": "6274-topping-bugs-ants.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": 103.87351778656131,
-            "scale": 0.12378129117259551,
+            "rotation": -317.3122529644269,
+            "scale": 0.1735836627140975,
             "image_uri": "6275-topping-bugs-ants.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": -86.79841897233206,
-            "scale": 0.17700922266139657,
+            "rotation": -357.15415019762844,
+            "scale": 0.18122529644268776,
             "image_uri": "6275-topping-bugs-ants.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 345.77075098814225,
-            "scale": 0.11772068511198945,
+            "rotation": -35.57312252964425,
+            "scale": 0.18306982872200267,
             "image_uri": "6275-topping-bugs-ants.png"
         }
     ],

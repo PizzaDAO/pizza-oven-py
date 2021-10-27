@@ -332,7 +332,7 @@ for i in xrange(0,count+1):
 
     param = lastNode.getParam(&quot;filename&quot;)
     if param is not None:
-        filename = &quot;&quot;&quot;[Project]/../output/%s-layer-%s.png&quot;&quot;&quot; % (&quot;&quot;&quot;####&quot;&quot;&quot;, layer)
+        filename = &quot;&quot;&quot;[Project]/../.cache/output/%s-layer-%s.png&quot;&quot;&quot; % (&quot;&quot;&quot;####&quot;&quot;&quot;, layer)
         param.setValue(filename)
         del param
 
@@ -370,7 +370,7 @@ if param is not None:
 
 param = writeNode.getParam(&quot;filename&quot;)
 if param is not None:
-    param.setValue(&quot;[Project]/../output/####.png&quot;)
+    param.setValue(&quot;[Project]/../.cache/output/####.png&quot;)
     del param
 
 param = writeNode.getParam(&quot;NatronParamFormatChoice&quot;)

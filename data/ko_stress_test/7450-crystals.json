@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 258,
     "name": "7450-crystals",
-    "random_seed": "CF809D2D",
+    "random_seed": "60DEB749",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
+                "unique_id": "0530",
+                "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0530-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0530-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2050",
-                "ingredient_id": "205",
+                "unique_id": "2060",
+                "ingredient_id": "206",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "name": "deepspace",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2050-sauce-white.png",
+                    "filename": "2060-sauce-deepspace.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,19 +279,19 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2050-sauce-white.png"
+                    "image_uri": "2060-sauce-deepspace.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3050",
-                "ingredient_id": "305",
+                "unique_id": "3080",
+                "ingredient_id": "308",
                 "variant_id": "0",
                 "index": 1,
-                "name": "tvaruzek",
-                "ingredient_rarity": 2,
+                "name": "fetabits",
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3050-cheese-tvaruzek.png",
+                    "filename": "3080-cheese-fetabits.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.8888888888888888,
-                    "image_uri": "3050-cheese-tvaruzek.png"
+                    "image_uri": "3080-cheese-fetabits.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         705.0,
                         1120.0
                     ],
-                    "rotation": -231.93675889328063,
-                    "scale": 0.17338603425559945,
+                    "rotation": 27.035573122529627,
+                    "scale": 0.35167984189723317,
                     "image_uri": "7450-topping-misc-crystals.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         415.0,
                         1680.0
                     ],
-                    "rotation": 234.78260869565213,
-                    "scale": 0.1533596837944664,
+                    "rotation": -109.56521739130434,
+                    "scale": 0.3624835309617918,
                     "image_uri": "7450-topping-misc-crystals.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         705.0,
                         2240.0
                     ],
-                    "rotation": -194.9407114624506,
-                    "scale": 0.18761528326745716,
+                    "rotation": 303.08300395256913,
+                    "scale": 0.40095520421607383,
                     "image_uri": "7450-topping-misc-crystals.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         975.0,
                         560.0
                     ],
-                    "rotation": 314.46640316205537,
-                    "scale": 0.1530961791831357,
+                    "rotation": 52.64822134387356,
+                    "scale": 0.38988801054018446,
                     "image_uri": "7451-topping-misc-crystals.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1265.0,
                         1120.0
                     ],
-                    "rotation": 297.391304347826,
-                    "scale": 0.17760210803689064,
+                    "rotation": -106.71936758893278,
+                    "scale": 0.3798748353096179,
                     "image_uri": "7451-topping-misc-crystals.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         975.0,
                         1680.0
                     ],
-                    "rotation": -311.6205533596838,
-                    "scale": 0.197364953886693,
+                    "rotation": 12.806324110671937,
+                    "scale": 0.40148221343873525,
                     "image_uri": "7451-topping-misc-crystals.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1265.0,
                         2240.0
                     ],
-                    "rotation": 180.71146245059288,
-                    "scale": 0.14782608695652175,
+                    "rotation": -291.699604743083,
+                    "scale": 0.4062252964426878,
                     "image_uri": "7452-topping-misc-crystals.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1535.0,
                         560.0
                     ],
-                    "rotation": 32.72727272727269,
-                    "scale": 0.14413702239789195,
+                    "rotation": -351.4624505928854,
+                    "scale": 0.3661725955204216,
                     "image_uri": "7452-topping-misc-crystals.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         1825.0,
                         1120.0
                     ],
-                    "rotation": 86.798418972332,
-                    "scale": 0.19973649538866928,
+                    "rotation": -331.54150197628456,
+                    "scale": 0.350098814229249,
                     "image_uri": "7452-topping-misc-crystals.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1535.0,
                         1680.0
                     ],
-                    "rotation": 243.32015810276687,
-                    "scale": 0.18524374176548086,
+                    "rotation": -38.41897233201581,
+                    "scale": 0.37355072463768113,
                     "image_uri": "7453-topping-misc-crystals.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         1825.0,
                         2240.0
                     ],
-                    "rotation": 146.56126482213443,
-                    "scale": 0.1689064558629776,
+                    "rotation": -83.9525691699605,
+                    "scale": 0.40148221343873525,
                     "image_uri": "7453-topping-misc-crystals.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         1535.0,
                         2800.0
                     ],
-                    "rotation": -86.79841897233206,
-                    "scale": 0.1552042160737813,
+                    "rotation": 86.798418972332,
+                    "scale": 0.3638010540184453,
                     "image_uri": "7453-topping-misc-crystals.png"
                 }
             ],
@@ -771,8 +771,8 @@
                         2095.0,
                         560.0
                     ],
-                    "rotation": -149.40711462450594,
-                    "scale": 0.1675889328063241,
+                    "rotation": -357.15415019762844,
+                    "scale": 0.3508893280632411,
                     "image_uri": "7454-topping-misc-crystals.png"
                 },
                 {
@@ -780,8 +780,8 @@
                         2385.0,
                         1120.0
                     ],
-                    "rotation": -21.343873517786562,
-                    "scale": 0.14281949934123847,
+                    "rotation": -1.4229249011857519,
+                    "scale": 0.39199604743083005,
                     "image_uri": "7454-topping-misc-crystals.png"
                 },
                 {
@@ -789,8 +789,8 @@
                         2095.0,
                         1680.0
                     ],
-                    "rotation": 274.62450592885375,
-                    "scale": 0.18155467720685112,
+                    "rotation": -203.47826086956522,
+                    "scale": 0.37486824769433463,
                     "image_uri": "7454-topping-misc-crystals.png"
                 }
             ],
@@ -859,8 +859,8 @@
                         2385.0,
                         2240.0
                     ],
-                    "rotation": 152.2529644268775,
-                    "scale": 0.19367588932806323,
+                    "rotation": -75.41501976284587,
+                    "scale": 0.3432476943346508,
                     "image_uri": "7455-topping-misc-crystals.png"
                 },
                 {
@@ -868,8 +868,8 @@
                         2655.0,
                         1680.0
                     ],
-                    "rotation": -231.93675889328063,
-                    "scale": 0.13860342555994729,
+                    "rotation": -129.48616600790515,
+                    "scale": 0.38145586297760214,
                     "image_uri": "7455-topping-misc-crystals.png"
                 },
                 {
@@ -877,8 +877,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": 266.0869565217391,
-                    "scale": 0.17417654808959154,
+                    "rotation": -340.0790513833992,
+                    "scale": 0.3785573122529644,
                     "image_uri": "7455-topping-misc-crystals.png"
                 }
             ],
@@ -892,8 +892,8 @@
                 705.0,
                 1120.0
             ],
-            "rotation": -231.93675889328063,
-            "scale": 0.17338603425559945,
+            "rotation": 27.035573122529627,
+            "scale": 0.35167984189723317,
             "image_uri": "7450-topping-misc-crystals.png"
         },
         {
@@ -901,8 +901,8 @@
                 415.0,
                 1680.0
             ],
-            "rotation": 234.78260869565213,
-            "scale": 0.1533596837944664,
+            "rotation": -109.56521739130434,
+            "scale": 0.3624835309617918,
             "image_uri": "7450-topping-misc-crystals.png"
         },
         {
@@ -910,8 +910,8 @@
                 705.0,
                 2240.0
             ],
-            "rotation": -194.9407114624506,
-            "scale": 0.18761528326745716,
+            "rotation": 303.08300395256913,
+            "scale": 0.40095520421607383,
             "image_uri": "7450-topping-misc-crystals.png"
         },
         {
@@ -919,8 +919,8 @@
                 975.0,
                 560.0
             ],
-            "rotation": 314.46640316205537,
-            "scale": 0.1530961791831357,
+            "rotation": 52.64822134387356,
+            "scale": 0.38988801054018446,
             "image_uri": "7451-topping-misc-crystals.png"
         },
         {
@@ -928,8 +928,8 @@
                 1265.0,
                 1120.0
             ],
-            "rotation": 297.391304347826,
-            "scale": 0.17760210803689064,
+            "rotation": -106.71936758893278,
+            "scale": 0.3798748353096179,
             "image_uri": "7451-topping-misc-crystals.png"
         },
         {
@@ -937,8 +937,8 @@
                 975.0,
                 1680.0
             ],
-            "rotation": -311.6205533596838,
-            "scale": 0.197364953886693,
+            "rotation": 12.806324110671937,
+            "scale": 0.40148221343873525,
             "image_uri": "7451-topping-misc-crystals.png"
         },
         {
@@ -946,8 +946,8 @@
                 1265.0,
                 2240.0
             ],
-            "rotation": 180.71146245059288,
-            "scale": 0.14782608695652175,
+            "rotation": -291.699604743083,
+            "scale": 0.4062252964426878,
             "image_uri": "7452-topping-misc-crystals.png"
         },
         {
@@ -955,8 +955,8 @@
                 1535.0,
                 560.0
             ],
-            "rotation": 32.72727272727269,
-            "scale": 0.14413702239789195,
+            "rotation": -351.4624505928854,
+            "scale": 0.3661725955204216,
             "image_uri": "7452-topping-misc-crystals.png"
         },
         {
@@ -964,8 +964,8 @@
                 1825.0,
                 1120.0
             ],
-            "rotation": 86.798418972332,
-            "scale": 0.19973649538866928,
+            "rotation": -331.54150197628456,
+            "scale": 0.350098814229249,
             "image_uri": "7452-topping-misc-crystals.png"
         },
         {
@@ -973,8 +973,8 @@
                 1535.0,
                 1680.0
             ],
-            "rotation": 243.32015810276687,
-            "scale": 0.18524374176548086,
+            "rotation": -38.41897233201581,
+            "scale": 0.37355072463768113,
             "image_uri": "7453-topping-misc-crystals.png"
         },
         {
@@ -982,8 +982,8 @@
                 1825.0,
                 2240.0
             ],
-            "rotation": 146.56126482213443,
-            "scale": 0.1689064558629776,
+            "rotation": -83.9525691699605,
+            "scale": 0.40148221343873525,
             "image_uri": "7453-topping-misc-crystals.png"
         },
         {
@@ -991,8 +991,8 @@
                 1535.0,
                 2800.0
             ],
-            "rotation": -86.79841897233206,
-            "scale": 0.1552042160737813,
+            "rotation": 86.798418972332,
+            "scale": 0.3638010540184453,
             "image_uri": "7453-topping-misc-crystals.png"
         },
         {
@@ -1000,8 +1000,8 @@
                 2095.0,
                 560.0
             ],
-            "rotation": -149.40711462450594,
-            "scale": 0.1675889328063241,
+            "rotation": -357.15415019762844,
+            "scale": 0.3508893280632411,
             "image_uri": "7454-topping-misc-crystals.png"
         },
         {
@@ -1009,8 +1009,8 @@
                 2385.0,
                 1120.0
             ],
-            "rotation": -21.343873517786562,
-            "scale": 0.14281949934123847,
+            "rotation": -1.4229249011857519,
+            "scale": 0.39199604743083005,
             "image_uri": "7454-topping-misc-crystals.png"
         },
         {
@@ -1018,8 +1018,8 @@
                 2095.0,
                 1680.0
             ],
-            "rotation": 274.62450592885375,
-            "scale": 0.18155467720685112,
+            "rotation": -203.47826086956522,
+            "scale": 0.37486824769433463,
             "image_uri": "7454-topping-misc-crystals.png"
         },
         {
@@ -1027,8 +1027,8 @@
                 2385.0,
                 2240.0
             ],
-            "rotation": 152.2529644268775,
-            "scale": 0.19367588932806323,
+            "rotation": -75.41501976284587,
+            "scale": 0.3432476943346508,
             "image_uri": "7455-topping-misc-crystals.png"
         },
         {
@@ -1036,8 +1036,8 @@
                 2655.0,
                 1680.0
             ],
-            "rotation": -231.93675889328063,
-            "scale": 0.13860342555994729,
+            "rotation": -129.48616600790515,
+            "scale": 0.38145586297760214,
             "image_uri": "7455-topping-misc-crystals.png"
         },
         {
@@ -1045,8 +1045,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": 266.0869565217391,
-            "scale": 0.17417654808959154,
+            "rotation": -340.0790513833992,
+            "scale": 0.3785573122529644,
             "image_uri": "7455-topping-misc-crystals.png"
         }
     ],

@@ -1,7 +1,7 @@
 {
-    "token_id": 0,
+    "token_id": 4,
     "name": "4040-ham",
-    "random_seed": "F2CDD796",
+    "random_seed": "FB4F231C",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -80,7 +80,7 @@
                 "ingredient_id": "053",
                 "variant_id": "2",
                 "index": 1,
-                "name": "cherry-code",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0532-paper-cherry-code.png",
+                    "filename": "0532-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,7 +139,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0532-paper-cherry-code.png"
+                    "image_uri": "0532-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
@@ -222,7 +222,7 @@
                 "index": 1,
                 "name": "white",
                 "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -286,13 +286,13 @@
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3050",
-                "ingredient_id": "305",
-                "variant_id": "0",
+                "unique_id": "3032",
+                "ingredient_id": "303",
+                "variant_id": "2",
                 "index": 1,
-                "name": "tvaruzek",
+                "name": "smokedmozzarella",
                 "ingredient_rarity": 2,
-                "variant_rarity": 0,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3050-cheese-tvaruzek.png",
+                    "filename": "3032-cheese-smokedmozzarella.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8888888888888888,
-                    "image_uri": "3050-cheese-tvaruzek.png"
+                    "scale": 0.6111111111111112,
+                    "image_uri": "3032-cheese-smokedmozzarella.png"
                 }
             ],
             "scatter_type": 1
@@ -364,7 +364,7 @@
                 "index": 1,
                 "name": "ham",
                 "ingredient_rarity": 0,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-meat",
                 "attributes": {},
@@ -419,8 +419,8 @@
                         1255.0,
                         1400.0
                     ],
-                    "rotation": 12.92490118577075,
-                    "scale": 0.5637351778656127,
+                    "rotation": -0.17786561264822254,
+                    "scale": 0.6228590250329381,
                     "image_uri": "4040-topping-meat-ham.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -7.707509881422922,
-                    "scale": 0.5489130434782609,
+                    "rotation": -3.853754940711461,
+                    "scale": 0.6152832674571805,
                     "image_uri": "4040-topping-meat-ham.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -1.0671936758893281,
-                    "scale": 0.5456192358366271,
+                    "rotation": -3.2608695652173907,
+                    "scale": 0.6353754940711462,
                     "image_uri": "4040-topping-meat-ham.png"
                 }
             ],
@@ -452,8 +452,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": 12.92490118577075,
-            "scale": 0.5637351778656127,
+            "rotation": -0.17786561264822254,
+            "scale": 0.6228590250329381,
             "image_uri": "4040-topping-meat-ham.png"
         },
         {
@@ -461,8 +461,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": -7.707509881422922,
-            "scale": 0.5489130434782609,
+            "rotation": -3.853754940711461,
+            "scale": 0.6152832674571805,
             "image_uri": "4040-topping-meat-ham.png"
         },
         {
@@ -470,8 +470,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -1.0671936758893281,
-            "scale": 0.5456192358366271,
+            "rotation": -3.2608695652173907,
+            "scale": 0.6353754940711462,
             "image_uri": "4040-topping-meat-ham.png"
         }
     ],

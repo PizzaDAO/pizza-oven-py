@@ -29,13 +29,14 @@ def setup() -> SetupResponse:
     """
     Gather all the recipes from Google Sheets
     """
+    print("running dining setup")
 
     ingredients = read_ingredients()
+    # save all the ingredients
+    save_ingredients(ingredients)
+
     recipes = read_recipes(ingredients)
     for _, recipe in recipes.items():
         set_recipe(recipe)
-
-    # save all the ingredients to a JSON file so we can access later
-    save_ingredients(ingredients)
 
     return SetupResponse(status=True)

@@ -1,9 +1,10 @@
 import json
 import sys
 import os
-from typing import Optional
+from typing import Optional, List
 from os import listdir
 from os.path import isfile, join
+from collections.abc import MutableMapping
 
 from app.models.order import OrderPizzaResponse
 from app.models.render_task import RenderTask
@@ -14,11 +15,14 @@ from app.models.prep import KitchenOrder
 from app.models.pizza import HotPizza, RarePizzaMetadata
 
 from app.core.ipfs_adapter import IPFSSession, PinataPy
-from app.core.config import IPFSMode, Settings
+from app.core.config import IPFSMode, Settings, OvenToppingParams
 from app.core.storage import *
 
 __all__ = [
+    "get_oven_params",
+    "set_oven_params",
     "get_render_task",
+    "find_render_task",
     "set_render_task",
     "set_gsheets_token",
     "get_gsheets_token",
@@ -41,6 +45,31 @@ __all__ = [
 
 settings = Settings()
 
+
+def get_oven_params() -> OvenToppingParams:
+    try:
+        with get_storage(DataCollection.oven_params) as storage:
+            result = storage.get({"document_id": "oven_params"})
+            return OvenToppingParams(**result)
+    except Exception as error:
+        print(sys.exc_info())
+        print(error)
+        print("returning default")
+        return OvenToppingParams()
+
+
+def set_oven_params(oven_params: OvenToppingParams):
+    try:
+        with get_storage(DataCollection.oven_params) as storage:
+            return storage.set(
+                {"document_id": "oven_params", "auth": oven_params.dict()},
+                "oven_params",
+            )
+    except Exception as error:
+        print(sys.exc_info())
+        raise error
+
+
 # these api's are stored on the file system or in firebase, or in ipfs
 
 
@@ -53,6 +82,20 @@ def get_render_task(job_id: str) -> Optional[RenderTask]:
         print(sys.exc_info())
         print(error)
         return None
+
+
+def find_render_task(filter: MutableMapping) -> List[RenderTask]:
+    try:
+        with get_storage(DataCollection.render_task) as storage:
+            render_tasks: List[RenderTask] = []
+            result = storage.find({"status": filter})
+            for item in result:
+                render_tasks.append(RenderTask(**item))
+            return render_tasks
+    except Exception as error:
+        print(sys.exc_info())
+        print(error)
+        return []
 
 
 def set_render_task(task: RenderTask) -> str:

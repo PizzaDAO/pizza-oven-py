@@ -1,16 +1,16 @@
 {
-    "token_id": 0,
+    "token_id": 114,
     "name": "5770-pickledbeets",
-    "random_seed": "6A4A3ED0",
+    "random_seed": "C74E63BA",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0020",
-                "ingredient_id": "002",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greasy",
+                "name": "cardboard",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 1,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0020-box-greasy.png",
+                    "filename": "0010-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,18 +69,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0020-box-greasy.png"
+                    "image_uri": "0010-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
+                "unique_id": "0530",
+                "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
+                "name": "code-cherry",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 2,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0530-paper-code-cherry.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,18 +139,18 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0530-paper-code-cherry.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1070",
-                "ingredient_id": "107",
+                "unique_id": "1010",
+                "ingredient_id": "101",
                 "variant_id": "0",
                 "index": 1,
-                "name": "glutenfree",
+                "name": "thick",
                 "ingredient_rarity": 5,
                 "variant_rarity": 5,
                 "classification": 3,
@@ -196,7 +196,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "1070-crust-glutenfree.png",
+                    "filename": "1010-crust-thick.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,20 +209,20 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1070-crust-glutenfree.png"
+                    "image_uri": "1010-crust-thick.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2050",
-                "ingredient_id": "205",
+                "unique_id": "2060",
+                "ingredient_id": "206",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "name": "deepspace",
+                "ingredient_rarity": 3,
+                "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2050-sauce-white.png",
+                    "filename": "2060-sauce-deepspace.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,19 +279,19 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2050-sauce-white.png"
+                    "image_uri": "2060-sauce-deepspace.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3050",
-                "ingredient_id": "305",
+                "unique_id": "3080",
+                "ingredient_id": "308",
                 "variant_id": "0",
                 "index": 1,
-                "name": "tvaruzek",
-                "ingredient_rarity": 2,
+                "name": "fetabits",
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
@@ -336,7 +336,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "3050-cheese-tvaruzek.png",
+                    "filename": "3080-cheese-fetabits.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.8888888888888888,
-                    "image_uri": "3050-cheese-tvaruzek.png"
+                    "image_uri": "3080-cheese-fetabits.png"
                 }
             ],
             "scatter_type": 1
@@ -419,8 +419,8 @@
                         555.0,
                         700.0
                     ],
-                    "rotation": -12.806324110671937,
-                    "scale": 1.1739789196310937,
+                    "rotation": 277.47035573122525,
+                    "scale": 1.483201581027668,
                     "image_uri": "5770-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -428,8 +428,8 @@
                         845.0,
                         1400.0
                     ],
-                    "rotation": -29.881422924901187,
-                    "scale": 1.1791172595520423,
+                    "rotation": 283.1620553359684,
+                    "scale": 1.576745718050066,
                     "image_uri": "5770-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -437,8 +437,8 @@
                         555.0,
                         2100.0
                     ],
-                    "rotation": 286.00790513834,
-                    "scale": 1.172266139657444,
+                    "rotation": -246.16600790513834,
+                    "scale": 1.5233860342555994,
                     "image_uri": "5770-topping-vegetable-pickledbeets.png"
                 }
             ],
@@ -507,8 +507,8 @@
                         1255.0,
                         700.0
                     ],
-                    "rotation": 348.61660079051387,
-                    "scale": 1.1777997364953887,
+                    "rotation": 229.09090909090912,
+                    "scale": 1.5589591567852437,
                     "image_uri": "5771-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -516,8 +516,8 @@
                         1545.0,
                         1400.0
                     ],
-                    "rotation": -66.87747035573125,
-                    "scale": 1.1822793148880106,
+                    "rotation": 260.3952569169961,
+                    "scale": 1.4206192358366272,
                     "image_uri": "5771-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -525,8 +525,8 @@
                         1255.0,
                         2100.0
                     ],
-                    "rotation": 266.0869565217391,
-                    "scale": 1.1781949934123848,
+                    "rotation": -138.02371541501975,
+                    "scale": 1.423254281949934,
                     "image_uri": "5771-topping-vegetable-pickledbeets.png"
                 }
             ],
@@ -595,8 +595,8 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": 320.1581027667984,
-                    "scale": 1.1712121212121214,
+                    "rotation": -7.114624505928873,
+                    "scale": 1.5734519104084321,
                     "image_uri": "5772-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -604,8 +604,8 @@
                         1955.0,
                         700.0
                     ],
-                    "rotation": 305.92885375494075,
-                    "scale": 1.1618577075098815,
+                    "rotation": -243.3201581027668,
+                    "scale": 1.4713438735177866,
                     "image_uri": "5772-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -613,8 +613,8 @@
                         2245.0,
                         1400.0
                     ],
-                    "rotation": 268.93280632411063,
-                    "scale": 1.171080368906456,
+                    "rotation": 81.10671936758894,
+                    "scale": 1.5556653491436099,
                     "image_uri": "5772-topping-vegetable-pickledbeets.png"
                 }
             ],
@@ -683,8 +683,8 @@
                         1955.0,
                         2100.0
                     ],
-                    "rotation": 135.17786561264825,
-                    "scale": 1.1830698287220027,
+                    "rotation": 294.5454545454545,
+                    "scale": 1.460144927536232,
                     "image_uri": "5773-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -692,8 +692,8 @@
                         2655.0,
                         2100.0
                     ],
-                    "rotation": 323.0039525691699,
-                    "scale": 1.162779973649539,
+                    "rotation": 103.87351778656131,
+                    "scale": 1.5800395256916995,
                     "image_uri": "5773-topping-vegetable-pickledbeets.png"
                 },
                 {
@@ -701,8 +701,8 @@
                         2655.0,
                         1400.0
                     ],
-                    "rotation": -9.960474308300377,
-                    "scale": 1.1751646903820818,
+                    "rotation": -112.41106719367588,
+                    "scale": 1.5444664031620552,
                     "image_uri": "5773-topping-vegetable-pickledbeets.png"
                 }
             ],
@@ -716,8 +716,8 @@
                 555.0,
                 700.0
             ],
-            "rotation": -12.806324110671937,
-            "scale": 1.1739789196310937,
+            "rotation": 277.47035573122525,
+            "scale": 1.483201581027668,
             "image_uri": "5770-topping-vegetable-pickledbeets.png"
         },
         {
@@ -725,8 +725,8 @@
                 845.0,
                 1400.0
             ],
-            "rotation": -29.881422924901187,
-            "scale": 1.1791172595520423,
+            "rotation": 283.1620553359684,
+            "scale": 1.576745718050066,
             "image_uri": "5770-topping-vegetable-pickledbeets.png"
         },
         {
@@ -734,8 +734,8 @@
                 555.0,
                 2100.0
             ],
-            "rotation": 286.00790513834,
-            "scale": 1.172266139657444,
+            "rotation": -246.16600790513834,
+            "scale": 1.5233860342555994,
             "image_uri": "5770-topping-vegetable-pickledbeets.png"
         },
         {
@@ -743,8 +743,8 @@
                 1255.0,
                 700.0
             ],
-            "rotation": 348.61660079051387,
-            "scale": 1.1777997364953887,
+            "rotation": 229.09090909090912,
+            "scale": 1.5589591567852437,
             "image_uri": "5771-topping-vegetable-pickledbeets.png"
         },
         {
@@ -752,8 +752,8 @@
                 1545.0,
                 1400.0
             ],
-            "rotation": -66.87747035573125,
-            "scale": 1.1822793148880106,
+            "rotation": 260.3952569169961,
+            "scale": 1.4206192358366272,
             "image_uri": "5771-topping-vegetable-pickledbeets.png"
         },
         {
@@ -761,8 +761,8 @@
                 1255.0,
                 2100.0
             ],
-            "rotation": 266.0869565217391,
-            "scale": 1.1781949934123848,
+            "rotation": -138.02371541501975,
+            "scale": 1.423254281949934,
             "image_uri": "5771-topping-vegetable-pickledbeets.png"
         },
         {
@@ -770,8 +770,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": 320.1581027667984,
-            "scale": 1.1712121212121214,
+            "rotation": -7.114624505928873,
+            "scale": 1.5734519104084321,
             "image_uri": "5772-topping-vegetable-pickledbeets.png"
         },
         {
@@ -779,8 +779,8 @@
                 1955.0,
                 700.0
             ],
-            "rotation": 305.92885375494075,
-            "scale": 1.1618577075098815,
+            "rotation": -243.3201581027668,
+            "scale": 1.4713438735177866,
             "image_uri": "5772-topping-vegetable-pickledbeets.png"
         },
         {
@@ -788,8 +788,8 @@
                 2245.0,
                 1400.0
             ],
-            "rotation": 268.93280632411063,
-            "scale": 1.171080368906456,
+            "rotation": 81.10671936758894,
+            "scale": 1.5556653491436099,
             "image_uri": "5772-topping-vegetable-pickledbeets.png"
         },
         {
@@ -797,8 +797,8 @@
                 1955.0,
                 2100.0
             ],
-            "rotation": 135.17786561264825,
-            "scale": 1.1830698287220027,
+            "rotation": 294.5454545454545,
+            "scale": 1.460144927536232,
             "image_uri": "5773-topping-vegetable-pickledbeets.png"
         },
         {
@@ -806,8 +806,8 @@
                 2655.0,
                 2100.0
             ],
-            "rotation": 323.0039525691699,
-            "scale": 1.162779973649539,
+            "rotation": 103.87351778656131,
+            "scale": 1.5800395256916995,
             "image_uri": "5773-topping-vegetable-pickledbeets.png"
         },
         {
@@ -815,8 +815,8 @@
                 2655.0,
                 1400.0
             ],
-            "rotation": -9.960474308300377,
-            "scale": 1.1751646903820818,
+            "rotation": -112.41106719367588,
+            "scale": 1.5444664031620552,
             "image_uri": "5773-topping-vegetable-pickledbeets.png"
         }
     ],
