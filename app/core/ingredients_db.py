@@ -239,7 +239,10 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 ingredients.update({unique_id: ingredient})
 
                 # Pull out the Box and Paper ingredients for later
-                if unique_id[0] == "0":
+                if (
+                    ingredient.ingredient.classification == Classification.box
+                    or ingredient.ingredient.classification == Classification.paper
+                ):
                     box_paper_dict.update({unique_id: ingredient})
         else:
             print(
@@ -361,7 +364,12 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
     # Use if statements to defend against blank cells
 
     if has_value("min_per", row) and has_value("max_per", row):
-        scope.emission_count = (float(row["min_per"]), float(row["max_per"]))
+        max = float(row["max_per"])
+        min = float(row["min_per"])
+        # Make sure these fools didn't enter more than 30 Max!!!
+        if max > 30.0:
+            max = 30.0
+        scope.emission_count = (min, max)
 
     if has_value("rotation", row):
         r_min = float(row["rotation"]) * -1
