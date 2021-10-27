@@ -1,4 +1,6 @@
 from typing import Dict, Tuple, List, Optional
+
+from pydantic.networks import ascii_domain_regex
 from app.models.recipe import (
     Classification,
     Recipe,
@@ -201,24 +203,20 @@ def get_tuple_with_id(
 
 
 def sort_dict(ingredient_dict) -> dict:
+    """a method to sort through ingredients in a recipe layer(Base, Layer, Lastchances)
+    and seperate the ingredients into lists by classification"""
     sorted_dict: Dict[str, List[ScopedIngredient]] = {}
     for scoped in ingredient_dict:
         scoped_ing: ScopedIngredient = ingredient_dict[scoped]
-        category = scoped_ing.ingredient.category
-        # Topping sub-category temporary solution
-        # because topping categories have their type in the name i.e. "meat" - we have to pull jus the first word
-        category = category.split("-")[0]
-        # Split up the base ingredients dict into lists for each category - makes selecting easier
-        #
-        # Parse ingredients - only using unique IDs ending in a 0
-        #
+        classification = classification_as_string(scoped_ing.ingredient.classification)
         id = scoped_ing.ingredient.unique_id
+        # Find toppings not variants - these end in a "0"
         if id[-1] == "0":
-            if category not in sorted_dict.keys():
-                sorted_dict[category] = []
-            sorted_dict[category].append(
+            if classification not in sorted_dict.keys():
+                sorted_dict[classification] = []
+            sorted_dict[classification].append(
                 scoped_ing
-            )  # key=category : val=list of ScopedIngredients
+            )  # key=classification : val=list of ScopedIngredients
 
     return sorted_dict
 

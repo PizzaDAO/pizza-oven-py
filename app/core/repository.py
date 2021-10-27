@@ -50,7 +50,12 @@ def get_oven_params() -> OvenToppingParams:
     try:
         with get_storage(DataCollection.oven_params) as storage:
             result = storage.get({"document_id": "oven_params"})
-            return OvenToppingParams(**result)
+            # If we can't get OvenToppingParams just return default - one might not be stored locally?
+            if not result:
+                print("Returning a default OvenToppingParams object")
+                return OvenToppingParams()
+            else:
+                return OvenToppingParams(**result)
     except Exception as error:
         print(sys.exc_info())
         print(error)
