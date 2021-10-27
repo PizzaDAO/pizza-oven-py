@@ -314,7 +314,7 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """parse ScopedIngredient from a row in the database"""
 
-    category = parse_first_word(row["category"])
+    category = parse_second_word(row["category"])
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
@@ -418,6 +418,13 @@ def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
 def parse_first_word(text) -> str:
     words = text.split("-")
     id_string = words[0]
+
+    return id_string
+
+
+def parse_second_word(text) -> str:
+    words = text.split("-")
+    id_string = words[1]
 
     return id_string
 
