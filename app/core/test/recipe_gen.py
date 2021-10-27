@@ -41,12 +41,20 @@ if __name__ == "__main__":
 
     project_path: str = ""
 
-    output_dir = os.path.join(
+    # PNG
+    pizza_images_dir = os.path.join(
         project_path,
-        "output/recipe_gen/",
+        "output/recipe_gen/pizza_images/",
     )
-    if not os.path.exists(output_dir):
-        os.makedirs("output/recipe_gen/")
+    if not os.path.exists(pizza_images_dir):
+        os.makedirs("output/recipe_gen/pizza_images/")
+    # JSON
+    ko_dir = os.path.join(
+        project_path,
+        "output/recipe_gen/kitchen_orders/",
+    )
+    if not os.path.exists(ko_dir):
+        os.makedirs("output/recipe_gen/kitchen_orders/")
 
     # Load the recipe
     recipe = get_pizza_recipe(args.recipe_id)
@@ -60,12 +68,14 @@ if __name__ == "__main__":
         # Save Image
         pizza_name = kitchen_order.name
         unique_filename = str(i).zfill(4) + "-" + pizza_name + ".png"
-        img.save(os.path.join(output_dir, unique_filename))
+        img.save(
+            os.path.join(pizza_images_dir, unique_filename), format="JPEG", quality=45
+        )
 
         # Save KO JSON
         # save the kitchen order out to the file system
         kitchen_order_file_path = os.path.join(
-            output_dir, f"{str(i).zfill(4)}_{pizza_name}.json"
+            ko_dir, f"{str(i).zfill(4)}_{pizza_name}.json"
         )
         with open(kitchen_order_file_path, "w") as kitchen_order_file:
             kitchen_order_file.write(kitchen_order.json())
