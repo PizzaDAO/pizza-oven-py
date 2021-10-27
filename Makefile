@@ -110,4 +110,4 @@ test-natron-mvp:
 
 test-recipe-gen:
 	@echo ☢️ Run Recipe Generator for testing
-	poetry run python app/core/test/recipe_gen.py -r 5 -c 1
+	poetry run python app/core/test/recipe_gen.py -r $(id) -c $(num)
