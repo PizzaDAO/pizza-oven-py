@@ -13,7 +13,7 @@ from app.models.recipe import *
 from app.models.recipe import Rarity
 from app.models.auth_tokens import GSheetsToken
 
-from app.core.repository import get_gsheets_token, set_gsheets_token
+from app.core.repository import get_gsheets_token, set_gsheets_token, get_oven_params
 
 settings = Settings()
 
@@ -460,6 +460,8 @@ def parse_column(
 
     pie_type = raw_column[0]
 
+    oven_params = get_oven_params()
+
     recipe = Recipe(
         unique_id=recipe_id,
         name=pie_type,
@@ -474,8 +476,8 @@ def parse_column(
             sauce_count=[1, 1],
             cheese_count=[1, 1],
             topping_count=[
-                settings.MIN_TOPPING_LAYER_COUNT,
-                settings.MAX_TOPPING_LAYER_COUNT,
+                oven_params.min_topping_layer_count,
+                oven_params.max_topping_layer_count,
             ],
             lastchance_count=[0, 1],
             baking_temp_in_celsius=[395, 625],
