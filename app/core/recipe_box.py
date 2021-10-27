@@ -10,12 +10,14 @@ from app.core.ingredients_db import save_ingredients
 from app.models.recipe import *
 from app.core.repository import get_recipe
 
-from app.core.config import Settings
+from app.core.config import ApiMode, Settings
 
 settings = Settings()
 
+RANDOM_RECIPE_ID = 0
 
-def get_pizza_recipe(recipe_id: int) -> Recipe:
+
+def get_pizza_recipe(recipe_id: int) -> Optional[Recipe]:
     """load recipes if needed, then return the recipe type requested"""
 
     recipe = get_recipe(recipe_id)
@@ -23,24 +25,8 @@ def get_pizza_recipe(recipe_id: int) -> Recipe:
         print("recipe loaded from cache")
         return recipe
 
-    # Make sure we previously loaded recipes files from /data/recipes
-    (names, recipes) = load_recipes()
-
-    # Default to random pie if no type supplied, or type is not found
-    if recipe_id >= len(recipes):
-        print(f"recipe_id: not found: {recipe_id}")
-        pizza_type = "Random Pies"  # For now, default to a random pie
-    else:
-        pizza_type = names[recipe_id]
-        print(f"recipe_id: {recipe_id} pizza_type: {pizza_type}")
-
-    # convert the json to a Recipes object
-    recipe_json = recipes[pizza_type]
-
-    recipe = Recipe.parse_obj(recipe_json)
-
-    print("recipe loaded from data folder (old method)")
-
+    print("recipe not found, returning the random pie")
+    recipe = get_recipe(RANDOM_RECIPE_ID)
     return recipe
 
 

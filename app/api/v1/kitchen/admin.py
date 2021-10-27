@@ -6,7 +6,7 @@ import sys
 from fastapi import APIRouter, Body, BackgroundTasks, Request
 from google.oauth2.credentials import Credentials
 
-from app.api.v1.dining_room.order import run_render_task
+from app.core.order_task import run_render_task, rerun_render_jobs
 
 from app.core.repository import *
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
@@ -59,6 +59,19 @@ async def get_existing_render_task(job_id: str) -> Optional[RenderTask]:
     """get an existing render task"""
     render_task = get_render_task(job_id)
     return render_task
+
+
+@router.get("/pluck_render_task", tags=[ADMIN])
+def pluck_render_tasks_for_restart() -> Any:
+    """find an existing render task"""
+    render_tasks = pluck_render_tasks()
+    return render_tasks
+
+
+@router.get("/render_task_schedule_all", tags=[ADMIN])
+def render_task_schedule_all() -> Any:
+    """rerun all outstanding jobs"""
+    rerun_render_jobs()
 
 
 @router.post("/render_task", tags=[ADMIN])
