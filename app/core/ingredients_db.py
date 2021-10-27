@@ -314,7 +314,7 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """parse ScopedIngredient from a row in the database"""
 
-    category = parse_second_word(row["category"])
+    category, subcategory = parse_category_words(row["category"])
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
@@ -333,7 +333,7 @@ def parse_ingredient(row) -> ScopedIngredient:
         ingredient_rarity=Rarity.common,
         variant_rarity=variant_rarity,
         classification=classification,
-        category=category,
+        category=subcategory if subcategory is not None else category,
         attributes={},
         nutrition=nutrition,
         image_uris={"filename": image_uri, "output_mask": mask},
@@ -379,7 +379,7 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
             base_categories = ["box", "paper", "crust", "sauce", "cheese"]
             special_categories = ["lastchance"]
             # need to pull out primary category - the first word before the first dash
-            primary_category = parse_first_word(row["category"])
+            primary_category, _ = parse_category_words(row["category"])
             if (
                 primary_category in base_categories
                 or primary_category in special_categories
@@ -415,11 +415,17 @@ def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     return (min_scale, max_scale)
 
 
-def parse_first_word(text) -> str:
+def parse_first_word(text: str) -> str:
     words = text.split("-")
-    id_string = words[0]
+    return words[0]
 
-    return id_string
+
+def parse_category_words(text) -> Tuple[str, Optional[str]]:
+    words = text.split("-")
+    if len(words) == 1:
+        return words[0], None
+
+    return words[0], words[1]
 
 
 def parse_second_word(text) -> str:
