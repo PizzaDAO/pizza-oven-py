@@ -15,10 +15,12 @@ from app.models.prep import KitchenOrder
 from app.models.pizza import HotPizza, RarePizzaMetadata
 
 from app.core.ipfs_adapter import IPFSSession, PinataPy
-from app.core.config import IPFSMode, Settings
+from app.core.config import IPFSMode, Settings, OvenToppingParams
 from app.core.storage import *
 
 __all__ = [
+    "get_oven_params",
+    "set_oven_params",
     "get_render_task",
     "find_render_task",
     "set_render_task",
@@ -42,6 +44,31 @@ __all__ = [
 ]
 
 settings = Settings()
+
+
+def get_oven_params() -> OvenToppingParams:
+    try:
+        with get_storage(DataCollection.oven_params) as storage:
+            result = storage.get({"document_id": "oven_params"})
+            return OvenToppingParams(**result)
+    except Exception as error:
+        print(sys.exc_info())
+        print(error)
+        print("returning default")
+        return OvenToppingParams()
+
+
+def set_oven_params(oven_params: OvenToppingParams):
+    try:
+        with get_storage(DataCollection.oven_params) as storage:
+            return storage.set(
+                {"document_id": "oven_params", "auth": oven_params.dict()},
+                "oven_params",
+            )
+    except Exception as error:
+        print(sys.exc_info())
+        raise error
+
 
 # these api's are stored on the file system or in firebase, or in ipfs
 

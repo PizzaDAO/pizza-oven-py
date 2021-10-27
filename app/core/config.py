@@ -38,22 +38,34 @@ class EthereumNetworkChainId(int, Enum):
 class OvenToppingParams(Base):
     """vars from env config"""
 
+    # Pizza Oven Config
     min_topping_layer_count: int = 1
     max_topping_layer_count: int = 4
+
+    # Rarity
     rarity_weight_common: int = 2000
     rarity_weight_uncommon: int = 700
     rarity_weight_rare: int = 250
     rarity_weight_superrare: int = 100
     rarity_weight_epic: int = 40
     rarity_weight_grail: int = 5
+
     lastchance_occurance_percentage: int = 20
+
+    # Scatter
     scatter_origin_x: int = 0
     scatter_origin_y: int = 0
     scatter_center_x: int = 1536
     scatter_center_y: int = 1536
+
+    # circumference beyond which instances are pulled back to center
     prevent_overflow_control_diameter: int = 2650
+
+    # Hero
     hero_random_offset_x: int = 0
     hero_random_offset_y: int = 0
+
+    # FiveSpot
     five_spot_x_1: int = 850
     five_spot_y_1: int = 850
     five_spot_x_2: int = 2222
@@ -66,17 +78,27 @@ class OvenToppingParams(Base):
     five_spot_y_5: int = 1536
     five_spot_x_random_offset: int = 5
     five_spot_y_random_offset: int = 5
+
+    # SpokeCluster
     spokecluster_inner_circle: int = 2800
     spokecluster_max_radius_offset: int = 200
     spokecluster_min_radius: int = 300
+
+    # Grid
     grid_random_offset_x: int = 95
     grid_random_offset_y: int = 95
     grid_inner_circle: int = 2800
     grid_line_shift_offset: int = 90
+
+    # Treering
     treerinng_inner_circle: int = 2800
     treering_min_radius: int = 100
     treering_variance_threshold: float = 0.5
+
+    # random scatter
     random_inner_circle: int = 3052
+
+    # scatter selection
     scatter_small_count_threshold: int = 5
     small_tier_1: int = 20
     small_tier_2: int = 60
@@ -157,67 +179,6 @@ class Settings(BaseSettings):
 
     # Local Storage - Natron testing
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
-
-    # Pizza Oven Config
-    MIN_TOPPING_LAYER_COUNT: int = 1
-    MAX_TOPPING_LAYER_COUNT: int = 4
-
-    LASTCHANCE_OCCURENCE_PERCENTAGE: int = 20
-
-    # Rarity
-    RARITY_WEIGHT_COMMON: int = 2000
-    RARITY_WEIGHT_UNCOMMON: int = 700
-    RARITY_WEIGHT_RARE: int = 250
-    RARITY_WEIGHT_SUPERRARE: int = 100
-    RARITY_WEIGHT_EPIC: int = 40
-    RARITY_WEIGHT_GRAIL: int = 5
-
-    # Scatter
-    SCATTER_ORIGIN_X: int = 0
-    SCATTER_ORIGIN_Y: int = 0
-    SCATTER_CENTER_X: int = 1536
-    SCATTER_CENTER_Y: int = 1536
-    # circumference beyond which instances are pulled back to center
-    PERVENT_OVERFLOW_CONTROL_DIAMETER: int = 2650
-    # Hero
-    HERO_RANDOM_OFFSET_X: int = 0
-    HERO_RANDOM_OFFSET_Y: int = 0
-    # FiveSpot
-    FIVE_SPOT_X_1: int = 850
-    FIVE_SPOT_Y_1: int = 850
-    FIVE_SPOT_X_2: int = 2222
-    FIVE_SPOT_Y_2: int = 850
-    FIVE_SPOT_X_3: int = 2222
-    FIVE_SPOT_Y_3: int = 2222
-    FIVE_SPOT_X_4: int = 850
-    FIVE_SPOT_Y_4: int = 2222
-    FIVE_SPOT_X_5: int = 1536
-    FIVE_SPOT_Y_5: int = 1536
-    FIVE_SPOT_X_RANDOM_OFFSET: int = 5
-    FIVE_SPOT_Y_RANDOM_OFFSET: int = 5
-    # SpokeCluster
-    SPOKECLUSTER_INNER_CIRCLE: int = 2800
-    SPOKECLUSTER_MAX_RADIUS_OFFSET: int = 200
-    SPOKECLUSTER_MIN_RADIUS: int = 300
-    # Grid
-    GRID_RANDOM_OFFSET_X: int = 95
-    GRID_RANDOM_OFFSET_Y: int = 95
-    GRID_INNER_CIRCLE: int = 2800
-    GRID_LINE_SHIFT_OFFSET: int = 90
-    # TreeRing
-    TREERING_INNER_CIRCLE: int = 2800
-    TREERING_MIN_RADIUS: int = 100
-    TREERING_VARIANCE_THRESHOLD: float = 0.5
-    # RandomScatter
-    RANDOM_INNER_CIRCLE: int = 3052
-
-    # Scatter Selection
-    SCATTER_SMALL_COUNT_THRESHOLD: int = 5
-    SMALL_TIER_1: int = 20
-    SMALL_TIER_2: int = 60
-    LARGE_TIER_1: int = 10
-    LARGE_TIER_2: int = 40
-    LARGE_TIER_3: int = 70
 
     class Config:
         case_sensitive = True

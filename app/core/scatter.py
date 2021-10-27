@@ -3,7 +3,7 @@ from app.models.prep import SCALAR, MadeIngredientPrep
 from typing import Dict, List, Tuple
 
 from ..models.recipe import IngredientScope, ScopedIngredient, ScatterType
-from app.core.config import Settings
+from app.core.config import OvenToppingParams, Settings
 
 from .random_num import (
     Counter,
@@ -31,16 +31,21 @@ settings = Settings()
 class Canvas:
     """the size of the natron canvas"""
 
-    origin = (settings.SCATTER_ORIGIN_X, settings.SCATTER_ORIGIN_Y)
-    center = (settings.SCATTER_CENTER_X, settings.SCATTER_CENTER_Y)
-    end = (4096, 4096)
-    hypotenuse = sqrt(end[0] ^ 2 + end[1] ^ 2)
+    def __init__(self, oven_params: OvenToppingParams) -> None:
+        self.oven_params = oven_params
+        self.origin = (oven_params.scatter_origin_x, oven_params.scatter_origin_y)
+        self.center = (oven_params.scatter_center_x, oven_params.scatter_center_y)
+        self.end = (4096, 4096)
+        self.hypotenuse = sqrt(self.end[0] ^ 2 + self.end[1] ^ 2)
 
 
 class Scatter:
-    def __init__(self, random_seed: int, nonce: Counter) -> None:
+    def __init__(
+        self, random_seed: int, nonce: Counter, oven_params: OvenToppingParams
+    ) -> None:
         self.random_seed = random_seed
         self.nonce = nonce
+        self.oven_params = oven_params
 
     def evaluate(
         self, topping_list: List[ScopedIngredient]
@@ -50,10 +55,10 @@ class Scatter:
 
     def translate_to_canvas(self, point: Tuple[float, float]) -> Tuple[float, float]:
         """translate a raw point to a location on the canvas"""
-        canvas = Canvas()
+        canvas = Canvas(self.oven_params)
         # position based on 1024 topping image size - if pixel dimensions are different, position will be off
-        x = point[0] + settings.SCATTER_CENTER_X
-        y = point[1] + settings.SCATTER_CENTER_Y
+        x = point[0] + self.oven_params.scatter_center_x
+        y = point[1] + self.oven_params.scatter_center_y
 
         return (x, y)
 
@@ -61,10 +66,10 @@ class Scatter:
         self, instances: List[MadeIngredientPrep]
     ) -> List[MadeIngredientPrep]:
         """This will take an instance off the edgee and move it towrds center to prevent overhand"""
-        canvas = Canvas()
+        canvas = Canvas(self.oven_params)
 
         # The circumference to use as a boundary - past this, reign it in
-        inner_circle = settings.PERVENT_OVERFLOW_CONTROL_DIAMETER
+        inner_circle = self.oven_params.prevent_overflow_control_diameter
         inner_radius = inner_circle / 2
 
         translated_instances = []
@@ -134,12 +139,18 @@ class Hero(Scatter):
         randx = select_value(
             self.random_seed,
             self.nonce,
-            (-settings.HERO_RANDOM_OFFSET_X, settings.HERO_RANDOM_OFFSET_Y),
+            (
+                -self.oven_params.hero_random_offset_x,
+                self.oven_params.hero_random_offset_x,
+            ),
         )
         randy = select_value(
             self.random_seed,
             self.nonce,
-            (-settings.HERO_RANDOM_OFFSET_Y, settings.HERO_RANDOM_OFFSET_Y),
+            (
+                -self.oven_params.hero_random_offset_y,
+                self.oven_params.hero_random_offset_y,
+            ),
         )
 
         return (posiion[0] + randx, posiion[1] + randy)
@@ -154,11 +165,11 @@ class FiveSpot(Scatter):
 
         # The base locations we will use
         # defaults [(850, 850), (2222, 850), (2222, 2222), (850, 2222), (1536, 1536)]
-        spot_1 = (settings.FIVE_SPOT_X_1, settings.FIVE_SPOT_Y_1)
-        spot_2 = (settings.FIVE_SPOT_X_2, settings.FIVE_SPOT_Y_2)
-        spot_3 = (settings.FIVE_SPOT_X_3, settings.FIVE_SPOT_Y_3)
-        spot_4 = (settings.FIVE_SPOT_X_4, settings.FIVE_SPOT_Y_4)
-        spot_5 = (settings.FIVE_SPOT_X_5, settings.FIVE_SPOT_Y_5)
+        spot_1 = (self.oven_params.five_spot_x_1, self.oven_params.five_spot_y_1)
+        spot_2 = (self.oven_params.five_spot_x_2, self.oven_params.five_spot_y_2)
+        spot_3 = (self.oven_params.five_spot_x_3, self.oven_params.five_spot_y_3)
+        spot_4 = (self.oven_params.five_spot_x_4, self.oven_params.five_spot_y_4)
+        spot_5 = (self.oven_params.five_spot_x_5, self.oven_params.five_spot_y_5)
 
         locations = [spot_1, spot_2, spot_3, spot_4, spot_5]
 
@@ -200,12 +211,18 @@ class FiveSpot(Scatter):
         randx = select_value(
             self.random_seed,
             self.nonce,
-            (-settings.FIVE_SPOT_X_RANDOM_OFFSET, settings.FIVE_SPOT_X_RANDOM_OFFSET),
+            (
+                -self.oven_params.five_spot_x_random_offset,
+                self.oven_params.five_spot_x_random_offset,
+            ),
         )
         randy = select_value(
             self.random_seed,
             self.nonce,
-            (-settings.FIVE_SPOT_Y_RANDOM_OFFSET, settings.FIVE_SPOT_Y_RANDOM_OFFSET),
+            (
+                -self.oven_params.five_spot_y_random_offset,
+                self.oven_params.five_spot_y_random_offset,
+            ),
         )
 
         return (posiion[0] + randx, posiion[1] + randy)
@@ -222,9 +239,11 @@ class SpokeCluster(Scatter):
 
         degree_int = (2 * PI) / len(topping_list)
 
-        inner_circle = settings.SPOKECLUSTER_INNER_CIRCLE
+        inner_circle = self.oven_params.spokecluster_inner_circle
         # max radius is the inner circle minus half the scaled width - this preevents rings on the pie edge
-        max_radius = (inner_circle - settings.SPOKECLUSTER_MAX_RADIUS_OFFSET) / 2
+        max_radius = (
+            inner_circle - self.oven_params.spokecluster_max_radius_offset
+        ) / 2
 
         for i in range(0, len(topping_list)):
             ingredient = topping_list[i]
@@ -236,7 +255,7 @@ class SpokeCluster(Scatter):
             )
 
             # radius min should be relative to scale size - bigger instances have bigger min radius
-            min_radius = settings.SPOKECLUSTER_MIN_RADIUS * scale
+            min_radius = self.oven_params.spokecluster_min_radius * scale
 
             radius = select_value(
                 self.random_seed, self.nonce, (min_radius, max_radius)
@@ -308,7 +327,7 @@ class Grid(Scatter):
 
     def translate_to_canvas(self, point: Tuple[float, float]) -> Tuple[float, float]:
         """translate a raw point to a location on the canvas"""
-        canvas = Canvas()
+        canvas = Canvas(self.oven_params)
         # Grid is created with (0,0) at top left corner, so override the translation method
         x = point[0]
         y = point[1]
@@ -321,24 +340,30 @@ class Grid(Scatter):
         randx = select_value(
             self.random_seed,
             self.nonce,
-            (-settings.GRID_RANDOM_OFFSET_X, settings.GRID_RANDOM_OFFSET_X),
+            (
+                -self.oven_params.grid_random_offset_x,
+                self.oven_params.grid_random_offset_x,
+            ),
         )
         randy = select_value(
             self.random_seed,
             self.nonce,
-            (-settings.GRID_RANDOM_OFFSET_Y, settings.GRID_RANDOM_OFFSET_Y),
+            (
+                -self.oven_params.grid_random_offset_y,
+                self.oven_params.grid_random_offset_y,
+            ),
         )
 
         return (posiion[0] + randx, posiion[1] + randy)
 
     def build_grid(self, item_count) -> list:
-        positions = list()
-        x_values = list()
-        y_values = list()
-        origin = (settings.SCATTER_CENTER_X, settings.SCATTER_CENTER_Y)
+        positions: List[Tuple] = []
+        x_values = []
+        y_values = []
+        origin = (self.oven_params.scatter_center_x, self.oven_params.scatter_center_y)
 
         # The circumference of the area we can place ingredients - just inside the crust
-        inner_circle = settings.GRID_INNER_CIRCLE
+        inner_circle = self.oven_params.grid_inner_circle
         margin = 3072 - inner_circle
 
         # The number of sections in the grid based on how many instances we will have
@@ -367,11 +392,11 @@ class Grid(Scatter):
                 # Adding some shifting to the lines to creaete more a random feel
                 if n % 2 == 0:
                     unfiltered_positions.append(
-                        (x - settings.GRID_LINE_SHIFT_OFFSET, y)
+                        (x - self.oven_params.grid_line_shift_offset, y)
                     )
                 else:
                     unfiltered_positions.append(
-                        (x + settings.GRID_LINE_SHIFT_OFFSET, y)
+                        (x + self.oven_params.grid_line_shift_offset, y)
                     )
 
         # Add some shufflee to the instances so the grid doesn't populate in a predictable manner
@@ -403,13 +428,13 @@ class TreeRing(Scatter):
         instances: List[MadeIngredientPrep] = []
 
         # the circumference of the circle we will place instances - just inside the crust
-        inner_circle = settings.TREERING_INNER_CIRCLE
+        inner_circle = self.oven_params.treerinng_inner_circle
 
         # maximum scale for this ingredient
         instance_scale = topping_list[0].scope.particle_scale[1]
 
         # choose a random radius for the ring
-        min_radius = settings.TREERING_MIN_RADIUS
+        min_radius = self.oven_params.treering_min_radius
         # max radius is the inner circle minus half the scaled width - this preevents rings on the pie edge
         max_radius = (inner_circle - ((instance_scale * 1024) / 2)) / 2
         # make radius with respect to instance scale
@@ -419,7 +444,7 @@ class TreeRing(Scatter):
 
         # if we have a small ingredient, let the ring change in diameter, there should be room
         variance = 1 - instance_scale
-        if variance > settings.TREERING_VARIANCE_THRESHOLD:
+        if variance > self.oven_params.treering_variance_threshold:
             radius_variance = select_value(
                 self.random_seed, self.nonce, (0, variance * max_radius)
             )
@@ -508,7 +533,7 @@ class RandomScatter(Scatter):
         ang = get_random_deterministic_float(seed, nonce, "random-point_ang", position)
 
         random_radius = rad * (
-            settings.RANDOM_INNER_CIRCLE / 2.0
+            self.oven_params.random_inner_circle / 2.0
         )  # 3072 is the pixel width of pies - temp minus 20 to decrease bleed off pie
         random_angle = ang * TWO_PI
         x = random_radius * cos(random_angle)

@@ -39,6 +39,7 @@ class DataCollection:
     order_responses = "order_responses"
     kitchen_orders = "kitchen_orders"
     metadata = "metadata"
+    oven_params = "oven_params"
 
 
 class IStorage(Protocol):

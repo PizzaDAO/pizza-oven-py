@@ -15,7 +15,7 @@ from app.models.order import OrderPizzaResponse
 
 from ..tags import ADMIN
 
-from app.core.config import Settings
+from app.core.config import Settings, OvenToppingParams
 
 router = APIRouter()
 settings = Settings()
@@ -29,7 +29,7 @@ async def add_gsheets_token(
 
 
 @router.get("/gsheets_token", tags=[ADMIN])
-async def fetch_gsheets_token() -> Any:
+async def fetch_gsheets_token() -> Optional[GSheetsToken]:
     return get_gsheets_token()
 
 
@@ -40,6 +40,18 @@ async def add_chainlink_token(
     """add a chainlink token"""
     set_chainlink_token(data)
     return
+
+
+@router.post("/oven_params", tags=[ADMIN])
+async def add_oven_params(
+    data: OvenToppingParams = Body(...),
+) -> Any:
+    return set_oven_params(data)
+
+
+@router.get("/oven_params", tags=[ADMIN])
+async def fetch_oven_params() -> OvenToppingParams:
+    return get_oven_params()
 
 
 @router.get("/render_task/{job_id}", tags=[ADMIN])
