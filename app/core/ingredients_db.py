@@ -13,7 +13,7 @@ from app.models.recipe import *
 from app.models.recipe import Rarity
 from app.models.auth_tokens import GSheetsToken
 
-from app.core.repository import get_gsheets_token, set_gsheets_token
+from app.core.repository import get_gsheets_token, set_gsheets_token, get_oven_params
 
 settings = Settings()
 
@@ -239,7 +239,10 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 ingredients.update({unique_id: ingredient})
 
                 # Pull out the Box and Paper ingredients for later
-                if unique_id[0] == "0":
+                if (
+                    ingredient.ingredient.classification == Classification.box
+                    or ingredient.ingredient.classification == Classification.paper
+                ):
                     box_paper_dict.update({unique_id: ingredient})
         else:
             print(
@@ -259,6 +262,8 @@ def map_rarity(rarity_string) -> Rarity:
         return Rarity.uncommon
     if rarity_string == "rare":
         return Rarity.rare
+    if rarity_string == "superrare":
+        return Rarity.superrare
     if rarity_string == "epic":
         return Rarity.epic
     if rarity_string == "grail":
@@ -312,7 +317,7 @@ def parse_recipes(
 def parse_ingredient(row) -> ScopedIngredient:
     """parse ScopedIngredient from a row in the database"""
 
-    category = parse_first_word(row["category"])
+    category, subcategory = parse_category_words(row["category"])
     classification = classification_from_string(category)
 
     image_uri = row["filename_paste"] + ".png"
@@ -331,7 +336,7 @@ def parse_ingredient(row) -> ScopedIngredient:
         ingredient_rarity=Rarity.common,
         variant_rarity=variant_rarity,
         classification=classification,
-        category=category,
+        category=subcategory if subcategory is not None else category,
         attributes={},
         nutrition=nutrition,
         image_uris={"filename": image_uri, "output_mask": mask},
@@ -359,7 +364,12 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
     # Use if statements to defend against blank cells
 
     if has_value("min_per", row) and has_value("max_per", row):
-        scope.emission_count = (float(row["min_per"]), float(row["max_per"]))
+        max = float(row["max_per"])
+        min = float(row["min_per"])
+        # Make sure these fools didn't enter more than 30 Max!!!
+        if max > 30.0:
+            max = 30.0
+        scope.emission_count = (min, max)
 
     if has_value("rotation", row):
         r_min = float(row["rotation"]) * -1
@@ -377,7 +387,7 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
             base_categories = ["box", "paper", "crust", "sauce", "cheese"]
             special_categories = ["lastchance"]
             # need to pull out primary category - the first word before the first dash
-            primary_category = parse_first_word(row["category"])
+            primary_category, _ = parse_category_words(row["category"])
             if (
                 primary_category in base_categories
                 or primary_category in special_categories
@@ -413,11 +423,17 @@ def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     return (min_scale, max_scale)
 
 
-def parse_first_word(text) -> str:
+def parse_first_word(text: str) -> str:
     words = text.split("-")
-    id_string = words[0]
+    return words[0]
 
-    return id_string
+
+def parse_category_words(text) -> Tuple[str, Optional[str]]:
+    words = text.split("-")
+    if len(words) == 1:
+        return words[0], None
+
+    return words[0], words[1]
 
 
 def parse_column(
@@ -458,6 +474,8 @@ def parse_column(
 
     pie_type = raw_column[0]
 
+    oven_params = get_oven_params()
+
     recipe = Recipe(
         unique_id=recipe_id,
         name=pie_type,
@@ -472,8 +490,8 @@ def parse_column(
             sauce_count=[1, 1],
             cheese_count=[1, 1],
             topping_count=[
-                settings.MIN_TOPPING_LAYER_COUNT,
-                settings.MAX_TOPPING_LAYER_COUNT,
+                oven_params.min_topping_layer_count,
+                oven_params.max_topping_layer_count,
             ],
             lastchance_count=[0, 1],
             baking_temp_in_celsius=[395, 625],

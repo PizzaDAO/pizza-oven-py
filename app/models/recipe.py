@@ -62,7 +62,7 @@ def classification_as_string(classification: Classification) -> str:
 def classification_from_string(category: str) -> Classification:
     classification = Classification.box
 
-    if "topping" in category:
+    if category == "topping":
         classification = Classification.topping
     if category == "box":
         classification = Classification.box
@@ -74,9 +74,9 @@ def classification_from_string(category: str) -> Classification:
         classification = Classification.sauce
     if category == "cheese":
         classification = Classification.cheese
-
-    if "lastchance" in category:
+    if category == "lastchance":
         classification = Classification.lastchance
+
     return classification
 
 
@@ -122,9 +122,10 @@ class Rarity(IntFlag):
     common = 0
     uncommon = 1
     rare = 2
-    epic = 3
-    grail = 4
-    undefined = 5
+    superrare = 3
+    epic = 4
+    grail = 5
+    undefined = 6
 
 
 class RecipeInstructions(Base):

@@ -39,6 +39,7 @@ class DataCollection:
     order_responses = "order_responses"
     kitchen_orders = "kitchen_orders"
     metadata = "metadata"
+    oven_params = "oven_params"
 
 
 class IStorage(Protocol):
@@ -105,7 +106,11 @@ class LocalStorage(IStorage):
             file
             for file in os.listdir(self._storage)
             if os.path.isfile(os.path.join(self._storage, file))
+            and not file.startswith(".")  # filter out annoying .DS_store files
         ]
+
+        # Sort the filenames in ascending order
+        search_files = sorted(search_files)
 
         for filename in search_files:
             try:

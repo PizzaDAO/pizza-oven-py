@@ -1,4 +1,6 @@
 from typing import Dict, Tuple, List, Optional
+
+from pydantic.networks import ascii_domain_regex
 from app.models.recipe import (
     Classification,
     Recipe,
@@ -29,8 +31,9 @@ from app.core.scatter import FiveSpot, Grid, Hero, RandomScatter, SpokeCluster, 
 from app.core.utils import clamp, to_hex
 from app.core.ingredients_db import get_variants_for_ingredient
 from app.core.rarity import select_from_variants, ingredient_with_rarity
+from app.core.repository import get_oven_params
 
-from app.core.config import Settings
+from app.core.config import OvenToppingParams, Settings
 
 __all__ = ["reduce"]
 
@@ -67,6 +70,8 @@ def reduce(
     print("instructions:")
     print(order_instructions)
 
+    oven_params = get_oven_params()
+
     # BASE INGREDIENTS
     # TODO: respect the ingredient count selected in the assignment above
     # for (key, value) in recipe.base_ingredients.items():
@@ -82,7 +87,7 @@ def reduce(
         "cheese": order_instructions.cheese_count,
     }
     selected_base_ingredients = select_ingredients(
-        random_seed, nonce, base_ingredient_counts, base_ingredients
+        random_seed, nonce, base_ingredient_counts, base_ingredients, oven_params
     )
 
     # LAYER INGREDIENTS
@@ -93,7 +98,7 @@ def reduce(
     # map the ingredient categories to the MadeInstructions counts
     layer_count_dict = {"topping": order_instructions.topping_count}
     reduced_layers = select_ingredients(
-        random_seed, nonce, layer_count_dict, sorted_layer_dict
+        random_seed, nonce, layer_count_dict, sorted_layer_dict, oven_params
     )
 
     # LASTCHANCE INGREDIENTS
@@ -103,11 +108,15 @@ def reduce(
     reduced_lastchances = {}
     chance_for_lastchance = select_value(random_seed, nonce, (0, 100))
     # if the random number is under the defined percentege its a go - lastchance added
-    if chance_for_lastchance < settings.LASTCHANCE_OCCURENCE_PERCENTAGE:
+    if chance_for_lastchance < oven_params.lastchance_occurance_percentage:
         sorted_lastchances_dict = sort_dict(recipe.lastchances)
         lastchance_count_dict = {"lastchance": order_instructions.lastchance_count}
         reduced_lastchances = select_ingredients(
-            random_seed, nonce, lastchance_count_dict, sorted_lastchances_dict
+            random_seed,
+            nonce,
+            lastchance_count_dict,
+            sorted_lastchances_dict,
+            oven_params,
         )
 
     # SHUFFLER - pull out all the instances into  buffer that we can shuffle for depth swap
@@ -131,7 +140,13 @@ def reduce(
     )
 
 
-def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -> dict:
+def select_ingredients(
+    deterministic_seed,
+    nonce,
+    count_dict,
+    ingredient_dict,
+    oven_params: OvenToppingParams,
+) -> dict:
     reduced_dict = {}
     ordered_dict = {}
     # keep track of the chosen ingredient IDs so we don't chose duplicates
@@ -142,17 +157,16 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
             # This is the number of ingredient layers for this particular layer
             made_count = int(count_dict[key])
             for i in range(0, made_count):
-                # select a topping based on rarity
+                # select an ingredient based on rarity
                 values = list(ingredient_dict[key])
-
                 ingredient = ingredient_with_rarity(deterministic_seed, nonce, values)
                 identifier = key + str(i)
-                # Only add a topping once - if its already in the dict, don't add it
+                # Only add an ingredient once - if its already in the dict, don't add it
                 # This prevents a single ingredient being picked multiple times
                 ingredient_id = ingredient.ingredient.unique_id
                 if ingredient_id not in chosen_ids:
                     reduced_dict[identifier] = select_prep(
-                        deterministic_seed, nonce, ingredient
+                        deterministic_seed, nonce, ingredient, oven_params
                     )
                     chosen_ids.append(ingredient_id)
 
@@ -160,7 +174,6 @@ def select_ingredients(deterministic_seed, nonce, count_dict, ingredient_dict) -
                         "We chose %s for the %s"
                         % (reduced_dict[identifier].ingredient.name, key)
                     )
-
             # Re-order the layer dict, sorted by ingredient ID - lower on the bottom
             # rememeber: reduced_dict contains key/value pairs in the form of "topping0":MadeIngredient
             # so we have to pull out the ingredient IDs from value pairs to re-order the layer stack
@@ -188,40 +201,44 @@ def get_tuple_with_id(
 
 
 def sort_dict(ingredient_dict) -> dict:
+    """a method to sort through ingredients in a recipe layer(Base, Layer, Lastchances)
+    and seperate the ingredients into lists by classification"""
     sorted_dict: Dict[str, List[ScopedIngredient]] = {}
     for scoped in ingredient_dict:
         scoped_ing: ScopedIngredient = ingredient_dict[scoped]
-        category = scoped_ing.ingredient.category
-        # Topping sub-category temporary solution
-        # because topping categories have their type in the name i.e. "meat" - we have to pull jus the first word
-        category = category.split("-")[0]
-        # Split up the base ingredients dict into lists for each category - makes selecting easier
-        #
-        # Parse ingredients - only using unique IDs ending in a 0
-        #
+        classification = classification_as_string(scoped_ing.ingredient.classification)
         id = scoped_ing.ingredient.unique_id
+        # Find toppings not variants - these end in a "0"
         if id[-1] == "0":
-            if category not in sorted_dict.keys():
-                sorted_dict[category] = []
-            sorted_dict[category].append(
+            if classification not in sorted_dict.keys():
+                sorted_dict[classification] = []
+            sorted_dict[classification].append(
                 scoped_ing
-            )  # key=category : val=list of ScopedIngredients
+            )  # key=classification : val=list of ScopedIngredients
 
     return sorted_dict
 
 
-def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngredient:
+def select_prep(
+    seed: int, nonce: Counter, scope: ScopedIngredient, oven_params: OvenToppingParams
+) -> MadeIngredient:
     """select the scalar values for the ingredient"""
 
-    # TODO: bitwise determine which scatters are valid
-    # an select the one to use
+    # now create a list of instances made of all the variants for a given ingredient
+    id = scope.ingredient.ingredient_id
+    # A list of ingredients filtered as variants available for a topping - with rarity
+    variant_list = get_variants_for_ingredient(id)
+    # select a random number of instances from the chosen list of variants
+    selected_variants = select_from_variants(seed, nonce, variant_list, scope)
 
     if scope.scope.scatter_types[0] == ScatterType.none:
+        # This a a base layer or lastchance, so there should only be one selected variant
+        ingredient = selected_variants[0]
         scatter_type = ScatterType.none
-        scale = scope.scope.particle_scale[0]
-        rotation = round(select_value(seed, nonce, scope.scope.rotation))
+        scale = ingredient.scope.particle_scale[0]
+        rotation = round(select_value(seed, nonce, ingredient.scope.rotation))
         translation = (0.0, 0.0)
-        if scope.ingredient.classification == Classification.lastchance:
+        if ingredient.ingredient.classification == Classification.lastchance:
             translation = (3072 / 2, 3072 / 2)
 
         instances = [
@@ -229,22 +246,12 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
                 translation=translation,
                 rotation=rotation,
                 scale=scale,
-                image_uri=scope.ingredient.image_uris["filename"],
+                image_uri=ingredient.ingredient.image_uris["filename"],
             )
         ]
 
-    # Temporarily test the scattering - ScatterType not defined in database yet
-    # If we have a topping here - scatter it
-    #
-    # Unless better solution from comment above
-
     if scope.ingredient.classification == Classification.topping:
-        # now create a list of instances made of all the variants for a given ingredient
-        id = scope.ingredient.ingredient_id
-        # A list of ingredients filtered as variants available for a topping - with rarity
-        variant_list = get_variants_for_ingredient(id)
-        # select a random number of instances from the chosen list of variants
-        selected_variants = select_from_variants(seed, nonce, variant_list, scope)
+
         # The number of instances we have to scatter
         num_of_instances = len(selected_variants)
 
@@ -252,21 +259,29 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
         # Make sure we have instances to actually scatter
         if num_of_instances > 0:
             # choose a scatter typee, partially influenced by the instance count
-            scatter_type = get_scatter_type(seed, nonce, num_of_instances)
+            scatter_type = get_scatter_type(seed, nonce, num_of_instances, oven_params)
 
             # populate the scatter type with the selected_variants
             if scatter_type == ScatterType.random:
-                instances = RandomScatter(seed, nonce).evaluate(selected_variants)
+                instances = RandomScatter(seed, nonce, oven_params).evaluate(
+                    selected_variants
+                )
             if scatter_type == ScatterType.grid:
-                instances = Grid(seed, nonce).evaluate(selected_variants)
+                instances = Grid(seed, nonce, oven_params).evaluate(selected_variants)
             if scatter_type == ScatterType.hero:
-                instances = Hero(seed, nonce).evaluate(selected_variants)
+                instances = Hero(seed, nonce, oven_params).evaluate(selected_variants)
             if scatter_type == ScatterType.treering:
-                instances = TreeRing(seed, nonce).evaluate(selected_variants)
+                instances = TreeRing(seed, nonce, oven_params).evaluate(
+                    selected_variants
+                )
             if scatter_type == ScatterType.fivespot:
-                instances = FiveSpot(seed, nonce).evaluate(selected_variants)
+                instances = FiveSpot(seed, nonce, oven_params).evaluate(
+                    selected_variants
+                )
             if scatter_type == ScatterType.spokecluster:
-                instances = SpokeCluster(seed, nonce).evaluate(selected_variants)
+                instances = SpokeCluster(seed, nonce, oven_params).evaluate(
+                    selected_variants
+                )
 
     return MadeIngredient(
         ingredient=scope.ingredient,
@@ -276,7 +291,9 @@ def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngre
     )
 
 
-def get_scatter_type(seed, nonce, num_of_instances: int) -> ScatterType:
+def get_scatter_type(
+    seed, nonce, num_of_instances: int, oven_params: OvenToppingParams
+) -> ScatterType:
     scatter_type = ScatterType.random
 
     scatter_roll = select_value(seed, nonce, (0, 100))
@@ -284,31 +301,43 @@ def get_scatter_type(seed, nonce, num_of_instances: int) -> ScatterType:
     if num_of_instances == 1:
         scatter_type = ScatterType.hero
 
-    elif num_of_instances > 1 and num_of_instances <= 5:
-        if scatter_roll < 20:
+    elif (
+        num_of_instances > 1
+        and num_of_instances <= oven_params.scatter_small_count_threshold
+    ):
+        if scatter_roll < oven_params.small_tier_1:
             # 20% random
             scatter_type = ScatterType.random
-        if scatter_roll > 20 and scatter_roll < 60:
+        if (
+            scatter_roll > oven_params.small_tier_1
+            and scatter_roll < oven_params.small_tier_2
+        ):
             # 40% Spokecluster
             scatter_type = ScatterType.spokecluster
-        if scatter_roll > 60:
+        if scatter_roll > oven_params.small_tier_2:
             # 40% Random
             scatter_type = ScatterType.fivespot
 
-    elif num_of_instances > 5:
-        if scatter_roll < 10:
+    elif num_of_instances > oven_params.scatter_small_count_threshold:
+        if scatter_roll < oven_params.large_tier_1:
             # 10% random
             scatter_type = ScatterType.random
 
-        if scatter_roll > 10 and scatter_roll < 40:
+        if (
+            scatter_roll > oven_params.large_tier_1
+            and scatter_roll < oven_params.large_tier_2
+        ):
             # 30% Grid
             scatter_type = ScatterType.grid
 
-        if scatter_roll > 40 and scatter_roll < 70:
+        if (
+            scatter_roll > oven_params.large_tier_2
+            and scatter_roll < oven_params.large_tier_3
+        ):
             # 30% random
             scatter_type = ScatterType.spokecluster
 
-        if scatter_roll > 70:
+        if scatter_roll > oven_params.large_tier_3:
             # 30% Random
             scatter_type = ScatterType.treering
 
