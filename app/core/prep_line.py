@@ -157,12 +157,11 @@ def select_ingredients(
             # This is the number of ingredient layers for this particular layer
             made_count = int(count_dict[key])
             for i in range(0, made_count):
-                # select a topping based on rarity
+                # select an ingredient based on rarity
                 values = list(ingredient_dict[key])
-
                 ingredient = ingredient_with_rarity(deterministic_seed, nonce, values)
                 identifier = key + str(i)
-                # Only add a topping once - if its already in the dict, don't add it
+                # Only add an ingredient once - if its already in the dict, don't add it
                 # This prevents a single ingredient being picked multiple times
                 ingredient_id = ingredient.ingredient.unique_id
                 if ingredient_id not in chosen_ids:
@@ -175,7 +174,6 @@ def select_ingredients(
                         "We chose %s for the %s"
                         % (reduced_dict[identifier].ingredient.name, key)
                     )
-
             # Re-order the layer dict, sorted by ingredient ID - lower on the bottom
             # rememeber: reduced_dict contains key/value pairs in the form of "topping0":MadeIngredient
             # so we have to pull out the ingredient IDs from value pairs to re-order the layer stack
@@ -226,15 +224,21 @@ def select_prep(
 ) -> MadeIngredient:
     """select the scalar values for the ingredient"""
 
-    # TODO: bitwise determine which scatters are valid
-    # an select the one to use
+    # now create a list of instances made of all the variants for a given ingredient
+    id = scope.ingredient.ingredient_id
+    # A list of ingredients filtered as variants available for a topping - with rarity
+    variant_list = get_variants_for_ingredient(id)
+    # select a random number of instances from the chosen list of variants
+    selected_variants = select_from_variants(seed, nonce, variant_list, scope)
 
     if scope.scope.scatter_types[0] == ScatterType.none:
+        # This a a base layer or lastchance, so there should only be one selected variant
+        ingredient = selected_variants[0]
         scatter_type = ScatterType.none
-        scale = scope.scope.particle_scale[0]
-        rotation = round(select_value(seed, nonce, scope.scope.rotation))
+        scale = ingredient.scope.particle_scale[0]
+        rotation = round(select_value(seed, nonce, ingredient.scope.rotation))
         translation = (0.0, 0.0)
-        if scope.ingredient.classification == Classification.lastchance:
+        if ingredient.ingredient.classification == Classification.lastchance:
             translation = (3072 / 2, 3072 / 2)
 
         instances = [
@@ -242,22 +246,12 @@ def select_prep(
                 translation=translation,
                 rotation=rotation,
                 scale=scale,
-                image_uri=scope.ingredient.image_uris["filename"],
+                image_uri=ingredient.ingredient.image_uris["filename"],
             )
         ]
 
-    # Temporarily test the scattering - ScatterType not defined in database yet
-    # If we have a topping here - scatter it
-    #
-    # Unless better solution from comment above
-
     if scope.ingredient.classification == Classification.topping:
-        # now create a list of instances made of all the variants for a given ingredient
-        id = scope.ingredient.ingredient_id
-        # A list of ingredients filtered as variants available for a topping - with rarity
-        variant_list = get_variants_for_ingredient(id)
-        # select a random number of instances from the chosen list of variants
-        selected_variants = select_from_variants(seed, nonce, variant_list, scope)
+
         # The number of instances we have to scatter
         num_of_instances = len(selected_variants)
 
