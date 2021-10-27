@@ -86,7 +86,7 @@ def to_blockchain_metadata(
         job_id=job_id,
         token_id=order.token_id,
         name=f"Rare Pizza #{order.token_id}",
-        description=f"A delicious {recipe.name[:-5]} pizza. That's amore!",
+        description=f"A delicious {recipe.name} pizza. That's amore!",
         rarity_level=recipe.rarity_level,
         random_seed=order.random_seed,
         image=f"ipfs://{ipfs_hash}",

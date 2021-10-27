@@ -436,13 +436,6 @@ def parse_category_words(text) -> Tuple[str, Optional[str]]:
     return words[0], words[1]
 
 
-def parse_second_word(text) -> str:
-    words = text.split("-")
-    id_string = words[1]
-
-    return id_string
-
-
 def parse_column(
     recipe_id: int, raw_column, ingredients: Dict[Any, ScopedIngredient]
 ) -> Recipe:
