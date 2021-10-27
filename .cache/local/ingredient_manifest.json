@@ -1,13 +1,13 @@
 [
     {
         "ingredient": {
-            "unique_id": "0000",
+            "unique_id": "0001",
             "ingredient_id": "000",
-            "variant_id": "0",
+            "variant_id": "1",
             "index": 1,
             "name": "white",
             "ingredient_rarity": 0,
-            "variant_rarity": 6,
+            "variant_rarity": 1,
             "classification": 1,
             "category": "box",
             "attributes": {},
@@ -51,7 +51,7 @@
                 "manganese": 11.7
             },
             "image_uris": {
-                "filename": "0000-box-white.png",
+                "filename": "0001-box-white.png",
                 "output_mask": "rarepizza-#####-box"
             }
         },
@@ -79,13 +79,13 @@
     },
     {
         "ingredient": {
-            "unique_id": "0010",
-            "ingredient_id": "001",
+            "unique_id": "0000",
+            "ingredient_id": "000",
             "variant_id": "0",
             "index": 1,
             "name": "cardboard",
-            "ingredient_rarity": 6,
-            "variant_rarity": 6,
+            "ingredient_rarity": 0,
+            "variant_rarity": 0,
             "classification": 1,
             "category": "box",
             "attributes": {},
@@ -129,7 +129,7 @@
                 "manganese": 0.0
             },
             "image_uris": {
-                "filename": "0010-box-cardboard.png",
+                "filename": "0000-box-cardboard.png",
                 "output_mask": "rarepizza-#####-box"
             }
         },
@@ -163,7 +163,7 @@
             "index": 1,
             "name": "greasy",
             "ingredient_rarity": 6,
-            "variant_rarity": 6,
+            "variant_rarity": 0,
             "classification": 1,
             "category": "box",
             "attributes": {},
@@ -235,13 +235,247 @@
     },
     {
         "ingredient": {
+            "unique_id": "0030",
+            "ingredient_id": "003",
+            "variant_id": "0",
+            "index": 1,
+            "name": "sorry-out-of-boxes",
+            "ingredient_rarity": 4,
+            "variant_rarity": 4,
+            "classification": 1,
+            "category": "box",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0030-box-sorry-out-of-boxes.png",
+                "output_mask": "rarepizza-#####-box"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0040",
+            "ingredient_id": "004",
+            "variant_id": "0",
+            "index": 1,
+            "name": "oven-fresh",
+            "ingredient_rarity": 4,
+            "variant_rarity": 4,
+            "classification": 1,
+            "category": "box",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0040-box-oven-fresh.png",
+                "output_mask": "rarepizza-#####-box"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0050",
+            "ingredient_id": "005",
+            "variant_id": "0",
+            "index": 1,
+            "name": "bitcoin-royalty",
+            "ingredient_rarity": 5,
+            "variant_rarity": 5,
+            "classification": 1,
+            "category": "box",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0050-box-bitcoin-royalty.png",
+                "output_mask": "rarepizza-#####-box"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
             "unique_id": "0500",
             "ingredient_id": "050",
             "variant_id": "0",
             "index": 1,
             "name": "redchecker",
             "ingredient_rarity": 6,
-            "variant_rarity": 6,
+            "variant_rarity": 0,
             "classification": 2,
             "category": "paper",
             "attributes": {},
@@ -317,9 +551,9 @@
             "ingredient_id": "051",
             "variant_id": "0",
             "index": 1,
-            "name": "greenchecker",
-            "ingredient_rarity": 6,
-            "variant_rarity": 6,
+            "name": "goldfoil",
+            "ingredient_rarity": 5,
+            "variant_rarity": 5,
             "classification": 2,
             "category": "paper",
             "attributes": {},
@@ -363,7 +597,7 @@
                 "manganese": 0.0
             },
             "image_uris": {
-                "filename": "0510-paper-greenchecker.png",
+                "filename": "0510-paper-goldfoil.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -473,7 +707,7 @@
             "ingredient_id": "053",
             "variant_id": "0",
             "index": 1,
-            "name": "code-cherry",
+            "name": "code",
             "ingredient_rarity": 6,
             "variant_rarity": 6,
             "classification": 2,
@@ -519,7 +753,7 @@
                 "manganese": 0.0
             },
             "image_uris": {
-                "filename": "0530-paper-code-cherry.png",
+                "filename": "0530-paper-code.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -551,7 +785,7 @@
             "ingredient_id": "053",
             "variant_id": "1",
             "index": 1,
-            "name": "code-cherry",
+            "name": "code",
             "ingredient_rarity": 6,
             "variant_rarity": 6,
             "classification": 2,
@@ -597,7 +831,7 @@
                 "manganese": 0.0
             },
             "image_uris": {
-                "filename": "0531-paper-code-cherry.png",
+                "filename": "0531-paper-code.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -629,7 +863,7 @@
             "ingredient_id": "053",
             "variant_id": "2",
             "index": 1,
-            "name": "code-cherry",
+            "name": "code",
             "ingredient_rarity": 6,
             "variant_rarity": 6,
             "classification": 2,
@@ -675,7 +909,7 @@
                 "manganese": 0.0
             },
             "image_uris": {
-                "filename": "0532-paper-code-cherry.png",
+                "filename": "0532-paper-code.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -703,13 +937,169 @@
     },
     {
         "ingredient": {
-            "unique_id": "0540",
-            "ingredient_id": "054",
+            "unique_id": "0533",
+            "ingredient_id": "053",
+            "variant_id": "3",
+            "index": 1,
+            "name": "code",
+            "ingredient_rarity": 6,
+            "variant_rarity": 6,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0533-paper-code.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0534",
+            "ingredient_id": "053",
+            "variant_id": "4",
+            "index": 1,
+            "name": "code",
+            "ingredient_rarity": 6,
+            "variant_rarity": 6,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0534-paper-code.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0550",
+            "ingredient_id": "055",
             "variant_id": "0",
             "index": 1,
-            "name": "code-blackberry",
+            "name": "superpony",
             "ingredient_rarity": 6,
-            "variant_rarity": 6,
+            "variant_rarity": 1,
             "classification": 2,
             "category": "paper",
             "attributes": {},
@@ -753,7 +1143,7 @@
                 "manganese": 0.0
             },
             "image_uris": {
-                "filename": "0540-paper-code-blackberry.png",
+                "filename": "0550-paper-superpony.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -781,11 +1171,323 @@
     },
     {
         "ingredient": {
-            "unique_id": "0541",
-            "ingredient_id": "054",
+            "unique_id": "0551",
+            "ingredient_id": "055",
             "variant_id": "1",
             "index": 1,
-            "name": "code-blackberry",
+            "name": "superpony",
+            "ingredient_rarity": 6,
+            "variant_rarity": 1,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0551-paper-superpony.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0552",
+            "ingredient_id": "055",
+            "variant_id": "2",
+            "index": 1,
+            "name": "superpony",
+            "ingredient_rarity": 6,
+            "variant_rarity": 1,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0552-paper-superpony.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0553",
+            "ingredient_id": "055",
+            "variant_id": "3",
+            "index": 1,
+            "name": "superpony",
+            "ingredient_rarity": 6,
+            "variant_rarity": 1,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0553-paper-superpony.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0554",
+            "ingredient_id": "055",
+            "variant_id": "4",
+            "index": 1,
+            "name": "superpony",
+            "ingredient_rarity": 6,
+            "variant_rarity": 1,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0554-paper-superpony.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0560",
+            "ingredient_id": "056",
+            "variant_id": "0",
+            "index": 1,
+            "name": "code-pizza",
             "ingredient_rarity": 6,
             "variant_rarity": 6,
             "classification": 2,
@@ -831,7 +1533,241 @@
                 "manganese": 0.0
             },
             "image_uris": {
-                "filename": "0541-paper-code-blackberry.png",
+                "filename": "0560-paper-code-pizza.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0570",
+            "ingredient_id": "057",
+            "variant_id": "0",
+            "index": 1,
+            "name": "plain",
+            "ingredient_rarity": 6,
+            "variant_rarity": 6,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0570-paper-plain.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0571",
+            "ingredient_id": "057",
+            "variant_id": "1",
+            "index": 1,
+            "name": "plain",
+            "ingredient_rarity": 6,
+            "variant_rarity": 6,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0571-paper-plain.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0580",
+            "ingredient_id": "058",
+            "variant_id": "0",
+            "index": 1,
+            "name": "treehugger",
+            "ingredient_rarity": 6,
+            "variant_rarity": 6,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0580-paper-treehugger.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -1410,7 +2346,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "keto-crustless",
-            "ingredient_rarity": 6,
+            "ingredient_rarity": 4,
             "variant_rarity": 6,
             "classification": 3,
             "category": "crust",
@@ -2424,7 +3360,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "no-sauce",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 4,
             "category": "sauce",
@@ -6847,7 +7783,7 @@
             ],
             "emission_count": [
                 40.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -6925,7 +7861,7 @@
             ],
             "emission_count": [
                 40.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -7003,7 +7939,7 @@
             ],
             "emission_count": [
                 40.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -7081,7 +8017,7 @@
             ],
             "emission_count": [
                 40.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -7159,7 +8095,7 @@
             ],
             "emission_count": [
                 40.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -7237,7 +8173,7 @@
             ],
             "emission_count": [
                 40.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -19249,7 +20185,7 @@
             ],
             "emission_count": [
                 5.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -21277,7 +22213,7 @@
             ],
             "emission_count": [
                 20.0,
-                55.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -21355,7 +22291,7 @@
             ],
             "emission_count": [
                 20.0,
-                55.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -21433,7 +22369,7 @@
             ],
             "emission_count": [
                 20.0,
-                55.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -21511,7 +22447,7 @@
             ],
             "emission_count": [
                 20.0,
-                55.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -21589,7 +22525,7 @@
             ],
             "emission_count": [
                 20.0,
-                55.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -21667,7 +22603,7 @@
             ],
             "emission_count": [
                 20.0,
-                55.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -30637,7 +31573,7 @@
             ],
             "emission_count": [
                 3.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -30715,7 +31651,7 @@
             ],
             "emission_count": [
                 3.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -30793,7 +31729,7 @@
             ],
             "emission_count": [
                 10.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -36097,7 +37033,7 @@
             ],
             "emission_count": [
                 14.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -36175,7 +37111,7 @@
             ],
             "emission_count": [
                 14.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -38600,8 +39536,8 @@
                 0.99
             ],
             "particle_scale": [
-                0.48333333333333334,
-                0.5166666666666667
+                0.39999999999999997,
+                0.43333333333333335
             ],
             "rotation": [
                 -360.0,
@@ -38912,8 +39848,8 @@
                 0.99
             ],
             "particle_scale": [
-                0.48333333333333334,
-                0.5166666666666667
+                0.39999999999999997,
+                0.43333333333333335
             ],
             "rotation": [
                 -360.0,
@@ -38990,8 +39926,8 @@
                 0.99
             ],
             "particle_scale": [
-                0.48333333333333334,
-                0.5166666666666667
+                0.39999999999999997,
+                0.43333333333333335
             ],
             "rotation": [
                 -360.0,
@@ -48421,7 +49357,7 @@
             ],
             "emission_count": [
                 10.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -48499,7 +49435,7 @@
             ],
             "emission_count": [
                 10.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -48577,7 +49513,7 @@
             ],
             "emission_count": [
                 10.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -48655,7 +49591,7 @@
             ],
             "emission_count": [
                 10.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -48733,7 +49669,7 @@
             ],
             "emission_count": [
                 10.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -48811,7 +49747,7 @@
             ],
             "emission_count": [
                 10.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -55129,15 +56065,15 @@
             ],
             "emission_count": [
                 15.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
                 0.99
             ],
             "particle_scale": [
-                0.08333333333333333,
-                0.11666666666666665
+                0.11666666666666665,
+                0.21666666666666667
             ],
             "rotation": [
                 -360.0,
@@ -55207,7 +56143,7 @@
             ],
             "emission_count": [
                 15.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -55285,7 +56221,7 @@
             ],
             "emission_count": [
                 15.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -55363,7 +56299,7 @@
             ],
             "emission_count": [
                 15.0,
-                58.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -55682,8 +56618,8 @@
                 0.99
             ],
             "particle_scale": [
-                0.11666666666666665,
-                0.21666666666666667
+                0.6166666666666667,
+                0.7166666666666667
             ],
             "rotation": [
                 -360.0,
@@ -56533,15 +57469,15 @@
             ],
             "emission_count": [
                 10.0,
-                40.0
+                30.0
             ],
             "emission_density": [
                 0.1,
                 0.99
             ],
             "particle_scale": [
-                0.016666666666666663,
-                0.08333333333333333
+                0.11666666666666665,
+                0.18333333333333335
             ],
             "rotation": [
                 -360.0,
@@ -56611,7 +57547,7 @@
             ],
             "emission_count": [
                 10.0,
-                40.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -56689,7 +57625,7 @@
             ],
             "emission_count": [
                 10.0,
-                40.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -56767,7 +57703,7 @@
             ],
             "emission_count": [
                 10.0,
-                40.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -56845,7 +57781,7 @@
             ],
             "emission_count": [
                 10.0,
-                40.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -88669,7 +89605,7 @@
             ],
             "emission_count": [
                 30.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -89215,7 +90151,7 @@
             ],
             "emission_count": [
                 10.0,
-                60.0
+                30.0
             ],
             "emission_density": [
                 0.1,
@@ -95712,7 +96648,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "clues-grabbagone",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -95790,7 +96726,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "clues-froglegs",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -95868,7 +96804,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "clues-origami",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -95946,7 +96882,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "clues-origami",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -96024,7 +96960,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "clues-origami",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -96102,7 +97038,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "clues-polygon",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -96180,7 +97116,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "clues-polygon",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -96258,7 +97194,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "clues-polygon",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -96336,7 +97272,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "clues-polygon",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -96414,7 +97350,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "clues-grabbagtwo",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -96492,7 +97428,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "clues-night0wl",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -96570,7 +97506,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "clues-night0wl",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -96648,7 +97584,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "clues-night0wl",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -96726,7 +97662,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "clues-jalapeno",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -96804,7 +97740,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "medallion-grabbag",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -96882,7 +97818,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "medallion-subatomicparticles",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -96960,7 +97896,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "medallion-rosepetals",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -97038,7 +97974,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "medallion-rosepetals",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -97116,7 +98052,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "medallion-rainbowspiders",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -97194,7 +98130,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "medallion-rainbowspiders",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -97272,7 +98208,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "medallion-starshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -97350,7 +98286,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "medallion-starshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -97428,7 +98364,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "medallion-jalapenoworm",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -97506,7 +98442,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "medallion-jalapenoworm",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -97584,7 +98520,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "candy-grabbagone",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -97662,7 +98598,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "candy-donuts",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -97740,7 +98676,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "candy-icecream",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -97818,7 +98754,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "candy-icecream",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -97896,7 +98832,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "candy-icecream",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -97974,7 +98910,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "candy-icecream",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -98052,7 +98988,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "candy-marshmellow",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -98130,7 +99066,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "candy-marshmellow",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -98208,7 +99144,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "candy-starcandies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -98286,7 +99222,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "candy-starcandies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -98364,7 +99300,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "candy-gabbagtwo",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -98442,7 +99378,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "candy-gummypizza",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -98520,7 +99456,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "candy-grapefruit",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -98598,7 +99534,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "candy-grapefruit",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -98676,7 +99612,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "candy-starcandies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -98754,7 +99690,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "candy-starcandies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -98832,7 +99768,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "gems-grabbagone",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -98910,7 +99846,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "gems-poprocks",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -98988,7 +99924,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "gems-pearl",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -99066,7 +100002,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "gems-pearl",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -99144,7 +100080,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "gems-starcandies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -99222,7 +100158,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "gems-starcandies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -99300,7 +100236,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "gems-diamonds",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -99378,7 +100314,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "gems-diamonds",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -99456,7 +100392,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "gems-meateorite",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -99534,7 +100470,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "gems-meateorite",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -99612,7 +100548,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "gems-grabbagtwo",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -99690,7 +100626,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "gems-poprocks",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -99768,7 +100704,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "gems-poprocksbar",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -99846,7 +100782,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "gems-poprocksbar",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -99924,7 +100860,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "gems-poprockscube",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -100002,7 +100938,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "gems-poprockscube",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -100080,7 +101016,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "gems-oysters",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -100158,7 +101094,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "gems-oysters",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -100236,7 +101172,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "tradeit-grabbagone",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -100314,7 +101250,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "tradeit-rocks",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -100392,7 +101328,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "tradeit-bean",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -100470,7 +101406,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "tradeit-bean",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -100548,7 +101484,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "tradeit-blackolives",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -100626,7 +101562,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "tradeit-blackolives",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -100704,7 +101640,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "tradeit-rock",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -100782,7 +101718,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "tradeit-rock",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -100860,7 +101796,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "tradeit-blackolives",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -100938,7 +101874,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "tradeit-blackolives",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -101016,7 +101952,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "tradeit-grabbagtwo",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -101094,7 +102030,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "tradeit-pocketlint",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -101172,7 +102108,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "tradeit-eyelashes",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -101250,7 +102186,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "tradeit-eyelashes",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -101328,7 +102264,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "tradeit-ramen",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -101406,7 +102342,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "tradeit-peanutbutter",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -101484,7 +102420,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "tradeit-thingswitheyes",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -101562,7 +102498,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "tradeit-thingswitheyes",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -101640,7 +102576,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "chefshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -101718,7 +102654,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "chefshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -101796,7 +102732,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "chefshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -101874,7 +102810,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "chefshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -101952,7 +102888,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "butterkingshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -102030,7 +102966,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "butterkingshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -102108,7 +103044,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "butterkingshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -102186,7 +103122,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "butterkingshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -102264,7 +103200,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "butterkingshrimp",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -102342,7 +103278,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "seafood",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -102420,7 +103356,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "mermaid",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -102498,7 +103434,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "lobsterclaw",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -102576,7 +103512,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "lobsterclaw",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -102654,7 +103590,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "butterlobster",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -102732,7 +103668,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "poodle",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -102810,7 +103746,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "buttertongue",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -102888,7 +103824,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "buttertongue",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -102966,7 +103902,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "buttertongue",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -103044,7 +103980,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "oysters",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -103122,7 +104058,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "notseafoodone",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -103200,7 +104136,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "jalapeno",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -103278,7 +104214,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "buttercottoncandy",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -103356,7 +104292,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "buttercottoncandy",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -103434,7 +104370,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "sushitoro",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -103512,7 +104448,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "sushianago",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -103590,7 +104526,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "sushisalmon",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -103668,7 +104604,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "sushisalmon",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -103746,7 +104682,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "froglegs",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -103824,7 +104760,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "froglegs",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -103902,7 +104838,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "notseafoodtwo",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -103980,7 +104916,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "finger",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -104058,7 +104994,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "turkeysausage",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -104136,7 +105072,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "turkeysausage",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -104214,7 +105150,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "vegansausage",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -104292,7 +105228,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "spam",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -104370,7 +105306,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "spam",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -104448,7 +105384,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "spam",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -104526,7 +105462,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "unicorn",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -104604,7 +105540,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "unicorn",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -104682,7 +105618,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "notseafoodthree",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -104760,7 +105696,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "magicmushroom",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -104838,7 +105774,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "anchovies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -104916,7 +105852,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "anchovies",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -104994,7 +105930,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "friedchicken",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -105072,7 +106008,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "cicada",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -105150,7 +106086,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "cicada",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 3,
             "classification": 6,
             "category": "omakase",
@@ -105228,7 +106164,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "roastbeef",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -105306,7 +106242,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "beef",
-            "ingredient_rarity": 2,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -105384,7 +106320,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -105462,7 +106398,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -105540,7 +106476,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -105618,7 +106554,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -105696,7 +106632,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -105774,7 +106710,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -105852,7 +106788,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -105930,7 +106866,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -106008,7 +106944,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -106086,7 +107022,7 @@
             "variant_id": "9",
             "index": 1,
             "name": "tribeone",
-            "ingredient_rarity": 3,
+            "ingredient_rarity": 4,
             "variant_rarity": 6,
             "classification": 6,
             "category": "omakase",
@@ -107724,7 +108660,7 @@
             "variant_id": "0",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 0,
             "classification": 6,
             "category": "omakase",
@@ -107802,7 +108738,7 @@
             "variant_id": "1",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -107880,7 +108816,7 @@
             "variant_id": "2",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 1,
             "classification": 6,
             "category": "omakase",
@@ -107958,7 +108894,7 @@
             "variant_id": "3",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -108036,7 +108972,7 @@
             "variant_id": "4",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -108114,7 +109050,7 @@
             "variant_id": "5",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -108192,7 +109128,7 @@
             "variant_id": "6",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 2,
             "classification": 6,
             "category": "omakase",
@@ -108270,7 +109206,7 @@
             "variant_id": "7",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
@@ -108348,7 +109284,7 @@
             "variant_id": "8",
             "index": 1,
             "name": "tribenft",
-            "ingredient_rarity": 1,
+            "ingredient_rarity": 4,
             "variant_rarity": 4,
             "classification": 6,
             "category": "omakase",
