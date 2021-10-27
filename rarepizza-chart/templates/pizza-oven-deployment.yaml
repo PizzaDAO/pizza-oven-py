@@ -102,8 +102,14 @@ spec:
               subPath: credentials.json
               name: credentials
               readOnly: true
+            - mountPath: "/app/.cache"
+              name: pizza-oven-pvc
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            limits:
+              memory: 28Gi
+            requests:
+              cpu: 6500m
+              memory: 22Gi
       volumes:
         - name: firebase
           secret:
@@ -123,6 +129,9 @@ spec:
               - key: credentials.json
                 path: credentials.json
             secretName: pizza-oven-secret
+        - name: pizza-oven-pvc
+          persistentVolumeClaim:
+            claimName: pizza-oven-pvc
       nodeSelector: 
         role: worker
       {{- with .Values.affinity }}
