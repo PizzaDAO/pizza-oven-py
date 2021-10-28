@@ -7,7 +7,7 @@ from starlette.middleware.cors import CORSMiddleware
 from app.api.v1.dining_room.dining_setup import setup
 from app.api.v1.routes import get_routes
 from app.core.config import ApiMode, Settings
-from app.core.order_task import executor_shutdown, rerun_render_jobs
+from app.core.order_task import executor_shutdown, run_render_jobs
 
 logger = getLogger(__name__)
 
@@ -100,7 +100,7 @@ async def startup():
 
     # in production mode, schedule the render jobs
     if settings.RERUN_SHOULD_EXECUTE_ON_STARTUP:
-        rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
 
 
 @app.on_event("shutdown")

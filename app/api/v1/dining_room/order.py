@@ -5,7 +5,7 @@ from app.core.repository import get_render_task, set_render_task, get_order_resp
 
 from app.models.order import *
 from app.core.ethereum_adapter import get_contract_address, EthereumAdapter
-from app.core.order_task import schedule_task, run_render_task
+from app.core.order_task import run_render_jobs
 from app.models.render_task import RenderTask, TaskStatus
 from ..tags import DELIVER
 
@@ -54,10 +54,10 @@ async def orderPizza(
         )
 
     response = OrderPizzaResponse(jobRunID=data.id, pending=True)
-    if len(background_tasks.tasks) <= 2:
-        print("scheduling task on background thread")
-        background_tasks.add_task(run_render_task, data.id)
-        # schedule_task(data.id)
+    # if len(background_tasks.tasks) <= 2:
+    #     print("scheduling task on background thread")
+    #     background_tasks.add_task(run_render_task, data.id)
+    run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
     return response
 
 

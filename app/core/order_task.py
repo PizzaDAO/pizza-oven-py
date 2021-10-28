@@ -1,5 +1,10 @@
 from typing import Any, Optional, Dict
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import (
+    ProcessPoolExecutor,
+    ThreadPoolExecutor,
+    wait,
+    as_completed,
+)
 
 import requests
 import sys
@@ -193,35 +198,35 @@ def run_render_task(
 
     if render_task is None:
         print(f"{job_id} - could not find job.")
-        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-            print("recursively requeueing render tasks")
-            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+        #     print("recursively requeueing render tasks")
+        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return None
 
     # if the job is already complete
     if render_task.status == TaskStatus.complete:
         print(f"{job_id} - job complete")
         completed_job_response = patch_and_complete_job(render_task)
-        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-            print("recursively requeueing render tasks")
-            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+        #     print("recursively requeueing render tasks")
+        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return completed_job_response
 
     # check if the job finished but just didnt get marked complete
     if render_task.metadata_hash is not None:
         print(f"{job_id} - job finished rendering but wasn't complete")
         completed_job_response = patch_and_complete_job(render_task)
-        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-            print("recursively requeueing render tasks")
-            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+        #     print("recursively requeueing render tasks")
+        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return completed_job_response
 
     # if the job is already in progress, skip it
     if not render_task.should_restart(settings.RENDER_TASK_TIMEOUT_IN_MINUTES):
         print(f"{job_id} - job already in progress")
-        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-            print("recursively requeueing render tasks")
-            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+        #     print("recursively requeueing render tasks")
+        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return None
 
     # set the job as started
@@ -313,12 +318,12 @@ def run_render_task(
 
         completed_job_response = patch_and_complete_job(render_task, order_response)
 
-        if (
-            completed_job_response is not None
-            and settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY
-        ):
-            print("recursively requeueing render tasks")
-            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        # if (
+        #     completed_job_response is not None
+        #     and settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY
+        # ):
+        #     print("recursively requeueing render tasks")
+        # rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
 
         return completed_job_response
     else:
@@ -333,6 +338,56 @@ def run_render_task(
 
 
 executor = None
+
+is_processing = False
+
+
+def run_render_jobs(delay_in_s: int = 5):
+    global is_processing
+    if is_processing:
+        print("already processing work")
+        return
+
+    with ProcessPoolExecutor() as executor:
+        is_processing = True
+
+        added_task = 0
+        futures = []
+        tasks = pluck_render_tasks()
+        if len(tasks) == 0:
+            print("no tasks")
+            is_processing = False
+            return
+
+        for task in tasks:
+            # only schedule 3
+            if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
+                print(f"{task.job_id} - scheduling")
+                future = executor.submit(run_render_task, task.job_id)
+                futures.append(future)
+                added_task += 1
+                time.sleep(delay_in_s)
+
+        try:
+            timeout = settings.RENDER_TASK_TIMEOUT_IN_MINUTES * 60
+
+            for future in as_completed(futures, timeout=timeout):
+                if future.exception():
+                    print("task failed")
+                if future.result():
+                    print("tax suceeded")
+
+                # result = future.result(
+                #     timeout=settings.RENDER_TASK_TIMEOUT_IN_MINUTES * 60
+                # )
+        except Exception as error:
+            print(error)
+
+        is_processing = False
+
+        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+            print("recursively restarting jobs")
+            run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
 
 
 def rerun_render_jobs(delay_in_s: int = 5):
