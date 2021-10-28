@@ -53,7 +53,7 @@ def get_oven_params() -> OvenToppingParams:
             result = storage.get({"document_id": "oven_params"})
             # If we can't get OvenToppingParams just return default - one might not be stored locally?
             if not result:
-                #print("Returning a default OvenToppingParams object")
+                # print("Returning a default OvenToppingParams object")
                 return OvenToppingParams()
             else:
                 return OvenToppingParams(**result)
@@ -116,7 +116,7 @@ def pluck_render_tasks() -> List[RenderTask]:
             print(f"{task.job_id} - timed out, should restart")
             render_tasks.append(task)
 
-    print("no tasks to start")
+    print(f"returning {len(render_tasks)} candidates")
     return render_tasks
 
 

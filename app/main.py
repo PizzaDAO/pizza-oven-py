@@ -20,27 +20,30 @@ def print_settings(_settings: Settings):
     print(f"ETHEREUM_MODE                           - {_settings.ETHEREUM_MODE}")
     print(f"IPFS_MODE                               - {_settings.IPFS_MODE}")
     print(
-        f"RENDER_TASK_TIMEOUT_IN_MINUTES          - {_settings.BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S}"
+        f"RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES  - {_settings.BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S}"
     )
     print(
-        f"DINING_SETUP_SHOULD_EXEC_ON_STARTUP          - {_settings.DINING_SETUP_SHOULD_EXEC_ON_STARTUP}"
+        f"DINING_SETUP_SHOULD_EXEC_ON_STARTUP     - {_settings.DINING_SETUP_SHOULD_EXEC_ON_STARTUP}"
     )
     print(
-        f"RERUN_SHOULD_EXECUTE_ON_STARTUP          - {_settings.RERUN_SHOULD_EXECUTE_ON_STARTUP}"
+        f"RERUN_SHOULD_EXECUTE_ON_STARTUP         - {_settings.RERUN_SHOULD_EXECUTE_ON_STARTUP}"
     )
     print(
-        f"RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY          - {_settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY}"
+        f"RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY   - {_settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY}"
     )
     print(
-        f"RERUN_JOB_STAGGERED_START_DELAY_IN_S          - {_settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S}"
+        f"RERUN_JOB_STAGGERED_START_DELAY_IN_S    - {_settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S}"
     )
     print(
-        f"RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS          - {_settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS}"
+        f"RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS     - {_settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS}"
+    )
+    print(
+        f"RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS  - {_settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS}"
     )
     print(f"API_V1_STR                              - {_settings.API_V1_STR}")
     print(f"PIZZA_TYPES_SHEET                       - {_settings.PIZZA_TYPES_SHEET}")
     print(
-        f"PIZZA_TYPE_RANGE_NAME                   - {_settings.PIZZA_TYPE_RANGE_NAME}"
+        f"PIZZA_TYPE_RANGE_NAME                     - {_settings.PIZZA_TYPE_RANGE_NAME}"
     )
     print(
         f"PIZZA_INGREDIENTS_SHEET                 - {_settings.PIZZA_INGREDIENTS_SHEET}"
@@ -96,10 +99,12 @@ app = get_app()
 @app.on_event("startup")
 async def startup():
     if settings.DINING_SETUP_SHOULD_EXEC_ON_STARTUP:
+        print("running dining setup on startup")
         setup()
 
     # in production mode, schedule the render jobs
     if settings.RERUN_SHOULD_EXECUTE_ON_STARTUP:
+        print("running render jobs on startup")
         run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
 
 

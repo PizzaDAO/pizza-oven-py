@@ -222,7 +222,7 @@ def run_render_task(
         return completed_job_response
 
     # if the job is already in progress, skip it
-    if not render_task.should_restart(settings.RENDER_TASK_TIMEOUT_IN_MINUTES):
+    if not render_task.should_restart(settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES):
         print(f"{job_id} - job already in progress")
         # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
         #     print("recursively requeueing render tasks")
@@ -337,16 +337,15 @@ def run_render_task(
     return None
 
 
-executor = None
-
 is_processing = False
 
 
 def run_render_jobs(delay_in_s: int = 5):
     global is_processing
     if is_processing:
-        print("already processing work")
+        print("run_render_jobs: already processing work")
         return
+    print("run_render_jobs: starting render job loop")
 
     with ProcessPoolExecutor() as executor:
         is_processing = True
@@ -355,30 +354,30 @@ def run_render_jobs(delay_in_s: int = 5):
         futures = []
         tasks = pluck_render_tasks()
         if len(tasks) == 0:
-            print("no tasks")
+            print("run_render_jobs: no tasks")
             is_processing = False
             return
 
         for task in tasks:
             # only schedule 3
             if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
-                print(f"{task.job_id} - scheduling")
+                print(f"run_render_jobs: {task.job_id} - scheduling")
                 future = executor.submit(run_render_task, task.job_id)
                 futures.append(future)
                 added_task += 1
                 time.sleep(delay_in_s)
 
         try:
-            timeout = settings.RENDER_TASK_TIMEOUT_IN_MINUTES * 60
+            timeout = settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS * 60
 
             for future in as_completed(futures, timeout=timeout):
                 if future.exception():
-                    print("task failed")
+                    print("run_render_jobs: task failed")
                 if future.result():
-                    print("tax suceeded")
+                    print("run_render_jobs: task suceeded")
 
                 # result = future.result(
-                #     timeout=settings.RENDER_TASK_TIMEOUT_IN_MINUTES * 60
+                #     timeout=settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS * 60
                 # )
         except Exception as error:
             print(error)
@@ -386,7 +385,7 @@ def run_render_jobs(delay_in_s: int = 5):
         is_processing = False
 
         if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-            print("recursively restarting jobs")
+            print("run_render_jobs: recursively restarting jobs")
             run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
 
 
@@ -406,20 +405,23 @@ def rerun_render_jobs(delay_in_s: int = 5):
             time.sleep(delay_in_s)
 
 
+executor2 = None
+
+
 def schedule_task(job_id: str):
-    global executor
-    if executor is None:
+    global executor2
+    if executor2 is None:
         # TODO: determine if we need to limit the worker pool
         # max_workers=3
-        executor = ProcessPoolExecutor()
+        executor2 = ProcessPoolExecutor()
 
-    if executor is not None:
+    if executor2 is not None:
         time.sleep(2)
-        future = executor.submit(run_render_task, job_id)
+        future = executor2.submit(run_render_task, job_id)
 
 
 def executor_shutdown():
-    global executor
-    if executor is not None:
-        executor.shutdown()
-        executor = None
+    global executor2
+    if executor2 is not None:
+        executor2.shutdown()
+        executor2 = None
