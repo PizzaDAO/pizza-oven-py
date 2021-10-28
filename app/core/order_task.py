@@ -287,10 +287,14 @@ executor = None
 
 def rerun_render_jobs():
     render_tasks = pluck_render_tasks()
+    added_task = 0
     for task in render_tasks:
-        print(f"{task.job_id} - scheudling")
-        time.sleep(2)
-        schedule_task(task.job_id)
+        # only schedule 3
+        if added_task < 3:
+            print(f"{task.job_id} - scheudling")
+            time.sleep(2)
+            schedule_task(task.job_id)
+            added_task += 1
 
 
 def schedule_task(job_id: str):
