@@ -6,7 +6,7 @@ import sys
 from fastapi import APIRouter, Body, BackgroundTasks, Request
 from google.oauth2.credentials import Credentials
 
-from app.core.order_task import run_render_task, rerun_render_jobs
+from app.core.order_task import run_render_task, run_render_jobs
 
 from app.core.repository import *
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
@@ -71,7 +71,7 @@ def pluck_render_tasks_for_restart() -> Any:
 @router.get("/render_task_schedule_all", tags=[ADMIN])
 def render_task_schedule_all() -> Any:
     """rerun all outstanding jobs"""
-    rerun_render_jobs()
+    run_render_jobs(15)
 
 
 @router.post("/render_task", tags=[ADMIN])
