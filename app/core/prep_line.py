@@ -234,11 +234,15 @@ def select_prep(
     if scope.scope.scatter_types[0] == ScatterType.none:
         # This a a base layer or lastchance, so there should only be one selected variant
         scatter_type = ScatterType.none
+        rotation = 0
+        scale = 1.0
+        translation = (0.0, 0.0)
+        ingredient = scope
         if len(selected_variants) >= 1:
             ingredient = selected_variants[0]
             scale = ingredient.scope.particle_scale[0]
             rotation = round(select_value(seed, nonce, ingredient.scope.rotation))
-            translation = (0.0, 0.0)
+            
             if ingredient.ingredient.classification == Classification.lastchance:
                 translation = (3072 / 2, 3072 / 2)
 
