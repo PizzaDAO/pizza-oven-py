@@ -95,12 +95,6 @@ def get_render_task(job_id: str) -> Optional[RenderTask]:
 def pluck_render_tasks() -> List[RenderTask]:
     print("plucking render tasks")
     render_tasks: List[RenderTask] = []
-    found_tasks = find_render_task({"status": TaskStatus.error.name})
-    print(f"found {len(found_tasks)} errored tasks")
-    for task in found_tasks:
-        if task.should_restart():
-            print(f"{task.job_id} - errored, should restart")
-            render_tasks.append(task)
 
     found_tasks = find_render_task({"status": TaskStatus.new.name})
     print(f"found {len(found_tasks)} new tasks")
@@ -114,6 +108,13 @@ def pluck_render_tasks() -> List[RenderTask]:
     for task in found_tasks:
         if task.should_restart():
             print(f"{task.job_id} - timed out, should restart")
+            render_tasks.append(task)
+
+    found_tasks = find_render_task({"status": TaskStatus.error.name})
+    print(f"found {len(found_tasks)} errored tasks")
+    for task in found_tasks:
+        if task.should_restart():
+            print(f"{task.job_id} - errored, should restart")
             render_tasks.append(task)
 
     print(f"returning {len(render_tasks)} candidates")
