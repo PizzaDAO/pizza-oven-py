@@ -152,12 +152,20 @@ def patch_and_complete_job(
                 set_render_task(render_task)
                 print(f"{render_task.job_id} - job complete!")
             else:
-                print(f"{render_task.job_id} - chainlink postback failed")
-                render_task.message = (
-                    f"{patch_response.status_code} - {patch_response.text}"
-                )
-                render_task.set_status(TaskStatus.error)
-                set_render_task(render_task)
+                if patch_response.status_code == status.HTTP_405_METHOD_NOT_ALLOWED:
+                    print(
+                        "chainlink refusing the request, probably job is complete. check manually."
+                    )
+                    render_task.message = "chainlink refusing the request, probably job is complete. check manually."
+                    render_task.set_status(TaskStatus.complete)
+                    set_render_task(render_task)
+                else:
+                    print(f"{render_task.job_id} - chainlink postback failed")
+                    render_task.message = (
+                        f"{patch_response.status_code} - {patch_response.text}"
+                    )
+                    render_task.set_status(TaskStatus.error)
+                    set_render_task(render_task)
         except Exception as error:
             print(
                 f"{render_task.job_id} - chainlink postback failed with request error"
@@ -198,35 +206,23 @@ def run_render_task(
 
     if render_task is None:
         print(f"{job_id} - could not find job.")
-        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-        #     print("recursively requeueing render tasks")
-        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return None
 
     # if the job is already complete
     if render_task.status == TaskStatus.complete:
         print(f"{job_id} - job complete")
         completed_job_response = patch_and_complete_job(render_task)
-        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-        #     print("recursively requeueing render tasks")
-        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return completed_job_response
 
     # check if the job finished but just didnt get marked complete
     if render_task.metadata_hash is not None:
         print(f"{job_id} - job finished rendering but wasn't complete")
         completed_job_response = patch_and_complete_job(render_task)
-        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-        #     print("recursively requeueing render tasks")
-        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return completed_job_response
 
     # if the job is already in progress, skip it
     if not render_task.should_restart(settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES):
         print(f"{job_id} - job already in progress")
-        # if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-        #     print("recursively requeueing render tasks")
-        #     rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return None
 
     # set the job as started
