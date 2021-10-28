@@ -331,9 +331,12 @@ def rerun_render_jobs(delay_in_s: int = 5):
         # only schedule 3
         if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
             print(f"{task.job_id} - scheudling")
-            time.sleep(delay_in_s)
+
+            time.sleep(3)
             schedule_task(task.job_id)
             added_task += 1
+
+            time.sleep(delay_in_s)
 
 
 def schedule_task(job_id: str):
