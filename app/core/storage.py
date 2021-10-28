@@ -93,8 +93,12 @@ class LocalStorage(IStorage):
         pass
 
     def find(self, filter: MutableMapping, skip: int = 0, limit: int = 0) -> Any:
-        # TODO: implement a find function
-        pass
+        # TODO: implement a find function if needed
+        # this just returns the first one it finds as a list
+        element = self.get(filter)
+        if element is None:
+            return []
+        return [element]
 
     def get(self, filter: MutableMapping) -> Any:
         """An inefficient search through all files in the directory."""

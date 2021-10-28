@@ -1,12 +1,17 @@
+from concurrent.futures import ProcessPoolExecutor
 from logging import getLogger
 from typing import Optional
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
+from app.api.v1.dining_room.dining_setup import setup
 from app.api.v1.routes import get_routes
-from app.core.config import Settings
+from app.core.config import ApiMode, Settings
+from app.core.order_task import executor_shutdown, rerun_render_jobs
 
 logger = getLogger(__name__)
+
+settings = Settings()
 
 
 def print_settings(settings: Settings):
@@ -71,10 +76,18 @@ def get_app(settings: Optional[Settings] = None) -> FastAPI:
 app = get_app()
 
 
+@app.on_event("startup")
+async def startup():
+    setup()
+    # in production mode, schedule the render jobs
+    if settings.API_MODE == ApiMode.production:
+        rerun_render_jobs()
+
+
 @app.on_event("shutdown")
 def on_shutdown() -> None:
     # Ensure a clean shutdown of any background threads or processes
-    pass
+    executor_shutdown()
 
 
 if __name__ == "__main__":
