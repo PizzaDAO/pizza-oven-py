@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>66</NodesCount>
+		<NodesCount>67</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>w1</Plugin_label>
 			<Plugin_script_name>w1</Plugin_script_name>
@@ -230,7 +230,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>In1</second>
+					<second>Merge1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>1</KnobsAge>
@@ -2208,7 +2208,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.64899999999999984e+01</Value>
+					<Value>-2.07199999999999989e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2217,7 +2217,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-2.68900000000000006e+01</Value>
+					<Value>-3.13799999999999990e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2234,7 +2234,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-4.19999999999999984e-01</Value>
+					<Value>-2.08000000000000007e+00</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>y = thisNode.translate.get()[1]
@@ -3093,7 +3093,7 @@ ret = round((x+y)/25,2)
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>8</KnobsAge>
+			<KnobsAge>20</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -6782,7 +6782,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.99087855563964666e-01</Value>
+					<Value>7.93526547436369523e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.7535,1)</Expression>
@@ -7032,7 +7032,7 @@ ret = round((x+y)/25,2)
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Grade8</second>
+					<second>Grade2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -14395,7 +14395,7 @@ ret = round((x+y)/25,2)
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>1</Plugin_minor_version>
-			<KnobsCount>8</KnobsCount>
+			<KnobsCount>7</KnobsCount>
 			<item>
 				<Name>MasterGamma</Name>
 				<Type>Color</Type>
@@ -14623,23 +14623,6 @@ ret = round((x+y)/25,2)
 				</item>
 				<UserKnob>0</UserKnob>
 			</item>
-			<item>
-				<Name>disableNode</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
 			<Inputs_map>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -14652,7 +14635,7 @@ ret = round((x+y)/25,2)
 					<second>ColorCorrect5</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>97</KnobsAge>
+			<KnobsAge>98</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -23854,6 +23837,208 @@ ret = round((x+y)/25,2)
 			</UserComponents>
 			<CacheID>Read5</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Grade2</Plugin_label>
+			<Plugin_script_name>Grade2</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.GradePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>2</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>8</KnobsCount>
+			<item>
+				<Name>NatronOfxParamProcessR</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronOfxParamProcessG</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronOfxParamProcessB</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronOfxParamProcessA</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>white</Name>
+				<Type>Color</Type>
+				<Dimension>4</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>7.50000000000000000e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>7.50000000000000000e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>7.50000000000000000e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>7.50000000000000000e-01</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>premult</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>Source_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Grade8</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>104</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Grade2</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
 	<item>
@@ -23977,7 +24162,7 @@ ret = round((x+y)/25,2)
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Thu Oct 28 11:04:22 2021</Value>
+			<Value>Thu Oct 28 11:57:44 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -24098,7 +24283,7 @@ ret = round((x+y)/25,2)
 </Project>
 <ProjectGui class_id="25" tracking_level="0" version="12">
 	<NodesGui class_id="26" tracking_level="0" version="0">
-		<count>66</count>
+		<count>67</count>
 		<item_version>6</item_version>
 		<item class_id="27" tracking_level="0" version="6">
 			<Name>w1</Name>
@@ -24382,8 +24567,8 @@ ret = round((x+y)/25,2)
 		</item>
 		<item>
 			<Name>Read1_4</Name>
-			<X_position>7.32458188242611413e+02</X_position>
-			<Y_position>-1.46441528454808099e+03</Y_position>
+			<X_position>6.75891889440089926e+02</X_position>
+			<Y_position>-1.46745137617778187e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -25276,17 +25461,31 @@ ret = round((x+y)/25,2)
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Grade2</Name>
+			<X_position>3.12942024506373855e+02</X_position>
+			<Y_position>-1.41642111541808026e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>4.800030589e-01</r>
+			<g>6.599984765e-01</g>
+			<b>1.000000000e+00</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="28" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
 		<Window class_id="29" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="30" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1358 732</Sizes>
+				<Sizes>1228 661</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>683 682</Sizes>
+					<Sizes>624 623</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="31" tracking_level="1" version="5" object_id="_2">
@@ -25326,10 +25525,10 @@ ret = round((x+y)/25,2)
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2285</x>
-			<y>-297</y>
-			<w>2126</w>
-			<h>1368</h>
+			<x>-2098</x>
+			<y>-171</y>
+			<w>1925</w>
+			<h>1250</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="32" tracking_level="0" version="0">
@@ -25338,9 +25537,9 @@ ret = round((x+y)/25,2)
 		<item class_id="33" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="34" tracking_level="0" version="14">
-				<zoomLeft>-4.54682274292637430e+03</zoomLeft>
-				<zoomBottom>-9.01234125702267193e+02</zoomBottom>
-				<zoomFactor>1.09863281250000916e-01</zoomFactor>
+				<zoomLeft>-2.28969584912923438e+03</zoomLeft>
+				<zoomBottom>5.78750191626983906e+02</zoomBottom>
+				<zoomFactor>1.58184128956928821e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="35" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -25386,6 +25585,8 @@ ret = round((x+y)/25,2)
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>Read1_4</item>
+		<item>Grade2</item>
 		<item>w1</item>
 		<item>Read3</item>
 		<item>input_default</item>
@@ -25393,9 +25594,7 @@ ret = round((x+y)/25,2)
 		<item>Reformat3</item>
 		<item>Read2</item>
 		<item>Read1</item>
-		<item>Read1_4</item>
 		<item>ColorCorrect4</item>
-		<item>Grade4</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]

@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>102</NodesCount>
+		<NodesCount>105</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>w1</Plugin_label>
 			<Plugin_script_name>w1</Plugin_script_name>
@@ -57021,7 +57021,7 @@ There are two forms of dietary iron: heme and nonheme. Heme iron is derived from
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>3.30000000000000016e-01</Value>
+							<Value>4.29999999999999993e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>round(random(.2,.5,frame),2)</Expression>
@@ -57051,7 +57051,7 @@ Complex carbs pack in more nutrients than simple carbs. They&apos;re higher in f
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.71000000000000000e+02</Value>
+							<Value>2.92000000000000000e+02</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>int(random(20,370,frame))</Expression>
@@ -57833,7 +57833,7 @@ Manganese helps form bones and helps metabolize amino acids, cholesterol, and ca
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.03949999999999989e+02</Value>
+							<Value>2.05259999999999991e+02</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>ret=round(thisNode.calories.get()+thisNode.calories_from_fat.get()+thisNode.trans_fat.get()+thisNode.monosaturated_fat.get()+thisNode.saturated_fat.get()+thisNode.sodium.get()+thisNode.cholesterol.get()+thisNode.complex_carb.get()+thisNode.dietary_fiber.get()+thisNode.sugar.get()+thisNode.added_sugars.get()+thisNode.protein.get()+((thisNode.vitamin_a.get()+thisNode.vitamin_b6.get()+thisNode.vitamin_b12.get()+thisNode.vitamin_e.get()+thisNode.vitamin_b7.get()+thisNode.folate.get()+thisNode.calcium.get()+thisNode.iron.get()+thisNode.vitamin_b5.get()+thisNode.potassium.get()+thisNode.riboflavin.get()+thisNode.vitamin_d.get()+thisNode.thiamin.get()+thisNode.magnesium.get()+thisNode.selenium.get()+thisNode.zinc.get())/100),2)+(thisNode.vitamin_c.get()/10)+(thisNode.vitamin_k.get()/10)</Expression>
@@ -58411,7 +58411,7 @@ Manganese helps form bones and helps metabolize amino acids, cholesterol, and ca
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>3.30000000000000016e-01</Value>
+							<Value>4.29999999999999993e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -58446,7 +58446,7 @@ Manganese helps form bones and helps metabolize amino acids, cholesterol, and ca
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>171</Value>
+							<Value>292</Value>
 							<Default>0</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -105459,8 +105459,8 @@ ret = y_new
 			<CacheID>Bake_default_21</CacheID>
 		</item>
 		<item>
-			<Plugin_label>i4</Plugin_label>
-			<Plugin_script_name>i4</Plugin_script_name>
+			<Plugin_label>i1040</Plugin_label>
+			<Plugin_script_name>i1040</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -105887,8 +105887,8 @@ ret = y_new
 			<CacheID>Switch_default_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>i5</Plugin_label>
-			<Plugin_script_name>i5</Plugin_script_name>
+			<Plugin_label>i1050</Plugin_label>
+			<Plugin_script_name>i1050</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -106483,7 +106483,7 @@ ret = y_new
 					<second>TRS_1050</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>15</KnobsAge>
+			<KnobsAge>17</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -106643,8 +106643,8 @@ ret = y_new
 			<CacheID>Backdrop2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>i7</Plugin_label>
-			<Plugin_script_name>i7</Plugin_script_name>
+			<Plugin_label>i1070</Plugin_label>
+			<Plugin_script_name>i1070</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -107248,7 +107248,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>Source</first>
-					<second>i7</second>
+					<second>Dot3</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>586</KnobsAge>
@@ -108133,7 +108133,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge7</second>
+					<second>Merge10</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -112241,8 +112241,8 @@ ret = y_new
 			<CacheID>Dot8</CacheID>
 		</item>
 		<item>
-			<Plugin_label>i2</Plugin_label>
-			<Plugin_script_name>i2</Plugin_script_name>
+			<Plugin_label>i1020</Plugin_label>
+			<Plugin_script_name>i1020</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -113210,7 +113210,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>B</first>
-					<second>i2</second>
+					<second>i1020</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>241</KnobsAge>
@@ -113693,7 +113693,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>Source</first>
-					<second>i5</second>
+					<second>Dot2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>113</KnobsAge>
@@ -114843,7 +114843,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>3.20000000000000000e+01</Value>
+					<Value>2.40000000000000000e+01</Value>
 					<Default>3.00000000000000000e+01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>int(random(20,50,frame))</Expression>
@@ -114860,7 +114860,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>3.30000000000000016e-01</Value>
+					<Value>2.50000000000000000e-01</Value>
 					<Default>1.00000000000000000e+01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(.2,.5,frame),2)</Expression>
@@ -115042,7 +115042,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>B</first>
-					<second>i4</second>
+					<second>Dot1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>241</KnobsAge>
@@ -115540,7 +115540,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>B</first>
-					<second>i4</second>
+					<second>Dot1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -115890,6 +115890,99 @@ ret = y_new
 			</UserComponents>
 			<CacheID>Merge7</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Dot1</Plugin_label>
+			<Plugin_script_name>Dot1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first></first>
+					<second>i1040</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Dot1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Dot2</Plugin_label>
+			<Plugin_script_name>Dot2</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first></first>
+					<second>i1050</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Dot2</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Dot3</Plugin_label>
+			<Plugin_script_name>Dot3</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first></first>
+					<second>i1070</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Dot3</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
 	<item>
@@ -116013,7 +116106,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Thu Oct 28 11:32:51 2021</Value>
+			<Value>Thu Oct 28 11:49:05 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -116144,7 +116237,7 @@ ret = y_new
 </Project>
 <ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
-		<count>102</count>
+		<count>105</count>
 		<item_version>6</item_version>
 		<item class_id="22" tracking_level="0" version="6">
 			<Name>w1</Name>
@@ -124617,7 +124710,7 @@ ret = y_new
 			</item>
 		</item>
 		<item>
-			<Name>i4</Name>
+			<Name>i1040</Name>
 			<X_position>2.18574916090008264e+03</X_position>
 			<Y_position>-3.77637930235002977e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
@@ -124645,9 +124738,9 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>i5</Name>
+			<Name>i1050</Name>
 			<X_position>2.75700785062363229e+03</X_position>
-			<Y_position>-3.77207642141850192e+03</Y_position>
+			<Y_position>-3.78344030303732916e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -124715,7 +124808,7 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>i7</Name>
+			<Name>i1070</Name>
 			<X_position>3.52842737934761499e+03</X_position>
 			<Y_position>-3.82657175075608529e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
@@ -125261,7 +125354,7 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>i2</Name>
+			<Name>i1020</Name>
 			<X_position>1.81287109328115912e+03</X_position>
 			<Y_position>-3.89129153526425307e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
@@ -125638,6 +125731,48 @@ ret = y_new
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Dot1</Name>
+			<X_position>2.24274916090008264e+03</X_position>
+			<Y_position>-3.66837930235002977e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.50000000000000000e+01</Width>
+			<Height>1.50000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Dot2</Name>
+			<X_position>2.81400785062363229e+03</X_position>
+			<Y_position>-3.66407642141850192e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.50000000000000000e+01</Width>
+			<Height>1.50000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Dot3</Name>
+			<X_position>3.58542737934761499e+03</X_position>
+			<Y_position>-3.71857175075608529e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.50000000000000000e+01</Width>
+			<Height>1.50000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="23" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
@@ -125746,17 +125881,18 @@ ret = y_new
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>9</count>
+		<count>10</count>
 		<item_version>0</item_version>
+		<item>Switch_1050</item>
+		<item>Read1</item>
+		<item>i1020</item>
+		<item>i1070</item>
+		<item>i1040</item>
+		<item>i1050</item>
+		<item>Merge6</item>
 		<item>Merge7</item>
 		<item>Bake_default</item>
 		<item>w2</item>
-		<item>Read8</item>
-		<item>Read4</item>
-		<item>input_default</item>
-		<item>Read9</item>
-		<item>Constant1_2</item>
-		<item>ColorCorrect4_2</item>
 	</OpenedPanels>
 	<ScriptEditorInput>unique_id = &quot;1010&quot;
 category = &quot;crust&quot;
