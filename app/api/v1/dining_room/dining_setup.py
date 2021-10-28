@@ -31,12 +31,15 @@ def setup() -> SetupResponse:
     """
     print("running dining setup")
 
-    ingredients = read_ingredients()
-    # save all the ingredients
-    save_ingredients(ingredients)
+    try:
+        ingredients = read_ingredients()
+        # save all the ingredients
+        save_ingredients(ingredients)
 
-    recipes = read_recipes(ingredients)
-    for _, recipe in recipes.items():
-        set_recipe(recipe)
+        recipes = read_recipes(ingredients)
+        for _, recipe in recipes.items():
+            set_recipe(recipe)
 
-    return SetupResponse(status=True)
+        return SetupResponse(status=True)
+    except:
+        return SetupResponse(status=False)
