@@ -1441,7 +1441,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>B</first>
-					<second>Switch_default</second>
+					<second>Shuffle5</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -2264,7 +2264,7 @@
 						<second>InputSource</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>12</KnobsAge>
+				<KnobsAge>14</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -2780,7 +2780,7 @@
 						<second>Premult1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>4</KnobsAge>
+				<KnobsAge>6</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -2863,7 +2863,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../ingredients-db/textures/####-box-grease.png</Value>
+					<Value>[Project]/../ingredients-db/textures/0010-box-grease.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -2884,8 +2884,8 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>10</Value>
-					<Default>10</Default>
+					<Value>1</Value>
+					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -2901,8 +2901,8 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>12</Value>
-					<Default>12</Default>
+					<Value>1</Value>
+					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -2918,8 +2918,8 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>10</Value>
-					<Default>10</Default>
+					<Value>1</Value>
+					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -3084,7 +3084,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>12</KnobsAge>
+			<KnobsAge>19</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -3172,7 +3172,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.11290524659096257e-01</Value>
+					<Value>8.57141045432770587e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.5135,.95)</Expression>
@@ -4551,7 +4551,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.84802096337080046e-01</Value>
+					<Value>9.40346839074045371e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.94,1)</Expression>
@@ -4560,7 +4560,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.46514003705233309e-01</Value>
+					<Value>9.96354591371491516e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.94,1)</Expression>
@@ -10296,12 +10296,8 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>1</count>
+				<count>0</count>
 				<item_version>0</item_version>
-				<item>
-					<first>In</first>
-					<second>Merge3</second>
-				</item>
 			</Inputs_map>
 			<KnobsAge>106068</KnobsAge>
 			<MasterNode></MasterNode>
@@ -15186,7 +15182,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
-					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+					<ChoiceLabel></ChoiceLabel>
 					<UserKnob>0</UserKnob>
 				</item>
 				<Inputs_map>
@@ -15197,7 +15193,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>341</KnobsAge>
+				<KnobsAge>342</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -21448,7 +21444,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>8</KnobsAge>
+				<KnobsAge>9</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -42251,7 +42247,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>10</KnobsAge>
+				<KnobsAge>11</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -56096,7 +56092,7 @@ ret = y_new
 						<second>Mask</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>44</KnobsAge>
+				<KnobsAge>45</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -104862,7 +104858,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>input_default</second>
+					<second>Reformat1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -105329,7 +105325,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>B</first>
-					<second>Bake_default</second>
+					<second>Merge3</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>1</KnobsAge>
@@ -105503,7 +105499,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Wed Oct 27 17:07:33 2021</Value>
+			<Value>Wed Oct 27 17:37:01 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -105642,7 +105638,7 @@ ret = y_new
 		</item>
 		<item>
 			<Name>w1</Name>
-			<X_position>6.05464417457940840e+02</X_position>
+			<X_position>6.03665692334566870e+02</X_position>
 			<Y_position>-2.01057571375166935e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>7.499961853e-01</r>
@@ -105656,8 +105652,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Switch_default</Name>
-			<X_position>6.63865896008795062e+02</X_position>
-			<Y_position>-2.86040067685419126e+03</Y_position>
+			<X_position>5.86377600536549835e+02</X_position>
+			<Y_position>-2.85010444460956387e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -105909,7 +105905,7 @@ ret = y_new
 		<item>
 			<Name>Merge3</Name>
 			<X_position>6.63865896008799155e+02</X_position>
-			<Y_position>-3.10598067539109161e+03</Y_position>
+			<Y_position>-3.06550693012496959e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -106496,8 +106492,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Bake_default</Name>
-			<X_position>6.63865896008800064e+02</X_position>
-			<Y_position>-3.01306576603827580e+03</Y_position>
+			<X_position>9.18087080441077660e+02</X_position>
+			<Y_position>-3.03649229156616502e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -114812,8 +114808,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Merge4</Name>
-			<X_position>6.91176004387420107e+02</X_position>
-			<Y_position>-2.64973051703140118e+03</Y_position>
+			<X_position>6.63865896008799609e+02</X_position>
+			<Y_position>-2.62874413059711515e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -114826,7 +114822,7 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Shuffle5</Name>
-			<X_position>6.63865896008797790e+02</X_position>
+			<X_position>6.63865896008799155e+02</X_position>
 			<Y_position>-2.95277268014859874e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.000000238e-01</r>
@@ -114858,11 +114854,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1628 877</Sizes>
+				<Sizes>1141 615</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>629 629</Sizes>
+					<Sizes>536 536</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -114902,10 +114898,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2541</x>
+			<x>-2340</x>
 			<y>-297</y>
-			<w>2541</w>
-			<h>1261</h>
+			<w>1792</w>
+			<h>1075</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -114914,9 +114910,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer2</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-9.29057331489042554e+03</zoomLeft>
-				<zoomBottom>-1.01541380752271152e+03</zoomBottom>
-				<zoomFactor>7.66291889682011451e-02</zoomFactor>
+				<zoomLeft>-5.82766432377751426e+03</zoomLeft>
+				<zoomBottom>-5.96208632609826282e+02</zoomBottom>
+				<zoomFactor>9.19495059034894924e-02</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -114960,18 +114956,17 @@ ret = y_new
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>10</count>
+		<count>9</count>
 		<item_version>0</item_version>
+		<item>Merge3</item>
+		<item>Read2</item>
 		<item>Bake_default</item>
 		<item>input_default</item>
 		<item>w1</item>
 		<item>Switch_default</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Shuffle5</item>
-		<item>Merge3</item>
 		<item>Merge4</item>
-		<item>Read1</item>
-		<item>TRS_default</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
