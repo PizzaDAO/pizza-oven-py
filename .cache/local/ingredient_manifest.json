@@ -1,84 +1,6 @@
 [
     {
         "ingredient": {
-            "unique_id": "0001",
-            "ingredient_id": "000",
-            "variant_id": "1",
-            "index": 1,
-            "name": "white",
-            "ingredient_rarity": 0,
-            "variant_rarity": 1,
-            "classification": 1,
-            "category": "box",
-            "attributes": {},
-            "nutrition": {
-                "serving_size": 90.0,
-                "mass": 1059.986084,
-                "calories": 92.0,
-                "vitamin_c": 1.0,
-                "magnesium": 2.0,
-                "vitamin_b5": 3.0,
-                "vitamin_d": 4.0,
-                "vitamin_b7": 5.0,
-                "height": 10.0,
-                "moisture": 11.0,
-                "potassium": 10.0,
-                "cholesterol": 15.0,
-                "vitamin_a": 16.0,
-                "dietary_fiber": 16.0,
-                "vitamin_b6": 50.0,
-                "sugar": 20.6,
-                "protein": 56.4,
-                "iron": 66.6,
-                "complex_carb": 15.7,
-                "selenium": 94.3,
-                "vitamin_k": 50.0,
-                "vitamin_b12": 3.7,
-                "calories_from_fat": 82.5,
-                "vitamin_e": 87.5,
-                "zinc": 39.6,
-                "saturated_fat": 11.7,
-                "iodine": 3.7,
-                "trans_fat": 82.5,
-                "sodium": 87.5,
-                "monosaturated_fat": 39.6,
-                "calcium": 11.7,
-                "riboflavin": 3.7,
-                "thiamin": 82.5,
-                "folate": 87.5,
-                "added_sugar": 39.6,
-                "chromium": 11.7,
-                "manganese": 11.7
-            },
-            "image_uris": {
-                "filename": "0001-box-white.png",
-                "output_mask": "rarepizza-#####-box"
-            }
-        },
-        "scope": {
-            "scatter_types": [
-                0
-            ],
-            "emission_count": [
-                1.0,
-                1.0
-            ],
-            "emission_density": [
-                0.1,
-                0.99
-            ],
-            "particle_scale": [
-                1.0,
-                1.0
-            ],
-            "rotation": [
-                -0.0,
-                0.0
-            ]
-        }
-    },
-    {
-        "ingredient": {
             "unique_id": "0000",
             "ingredient_id": "000",
             "variant_id": "0",
@@ -130,6 +52,84 @@
             },
             "image_uris": {
                 "filename": "0000-box-cardboard.png",
+                "output_mask": "rarepizza-#####-box"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0010",
+            "ingredient_id": "001",
+            "variant_id": "0",
+            "index": 1,
+            "name": "white",
+            "ingredient_rarity": 6,
+            "variant_rarity": 1,
+            "classification": 1,
+            "category": "box",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 90.0,
+                "mass": 1045.986084,
+                "calories": 92.0,
+                "vitamin_c": 1.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 10.0,
+                "moisture": 11.0,
+                "potassium": 0.0,
+                "cholesterol": 15.0,
+                "vitamin_a": 16.0,
+                "dietary_fiber": 16.0,
+                "vitamin_b6": 50.0,
+                "sugar": 20.6,
+                "protein": 56.4,
+                "iron": 66.6,
+                "complex_carb": 15.7,
+                "selenium": 94.3,
+                "vitamin_k": 50.0,
+                "vitamin_b12": 3.7,
+                "calories_from_fat": 82.5,
+                "vitamin_e": 87.5,
+                "zinc": 39.6,
+                "saturated_fat": 11.7,
+                "iodine": 3.7,
+                "trans_fat": 82.5,
+                "sodium": 87.5,
+                "monosaturated_fat": 39.6,
+                "calcium": 11.7,
+                "riboflavin": 3.7,
+                "thiamin": 82.5,
+                "folate": 87.5,
+                "added_sugar": 39.6,
+                "chromium": 11.7,
+                "manganese": 11.7
+            },
+            "image_uris": {
+                "filename": "0010-box-white.png",
                 "output_mask": "rarepizza-#####-box"
             }
         },
@@ -520,6 +520,84 @@
             },
             "image_uris": {
                 "filename": "0500-paper-redchecker.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0501",
+            "ingredient_id": "050",
+            "variant_id": "1",
+            "index": 1,
+            "name": "redchecker",
+            "ingredient_rarity": 6,
+            "variant_rarity": 1,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0501-paper-redchecker.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -1066,6 +1144,162 @@
             },
             "image_uris": {
                 "filename": "0534-paper-code.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0535",
+            "ingredient_id": "053",
+            "variant_id": "5",
+            "index": 1,
+            "name": "code",
+            "ingredient_rarity": 6,
+            "variant_rarity": 1,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0535-paper-code.png",
+                "output_mask": "rarepizza-#####-paper"
+            }
+        },
+        "scope": {
+            "scatter_types": [
+                0
+            ],
+            "emission_count": [
+                1.0,
+                1.0
+            ],
+            "emission_density": [
+                0.1,
+                0.99
+            ],
+            "particle_scale": [
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                -0.0,
+                0.0
+            ]
+        }
+    },
+    {
+        "ingredient": {
+            "unique_id": "0540",
+            "ingredient_id": "054",
+            "variant_id": "0",
+            "index": 1,
+            "name": "treehugger",
+            "ingredient_rarity": 5,
+            "variant_rarity": 5,
+            "classification": 2,
+            "category": "paper",
+            "attributes": {},
+            "nutrition": {
+                "serving_size": 0.0,
+                "mass": 0.0,
+                "calories": 0.0,
+                "vitamin_c": 0.0,
+                "magnesium": 0.0,
+                "vitamin_b5": 0.0,
+                "vitamin_d": 0.0,
+                "vitamin_b7": 0.0,
+                "height": 0.0,
+                "moisture": 0.0,
+                "potassium": 0.0,
+                "cholesterol": 0.0,
+                "vitamin_a": 0.0,
+                "dietary_fiber": 0.0,
+                "vitamin_b6": 0.0,
+                "sugar": 0.0,
+                "protein": 0.0,
+                "iron": 0.0,
+                "complex_carb": 0.0,
+                "selenium": 0.0,
+                "vitamin_k": 0.0,
+                "vitamin_b12": 0.0,
+                "calories_from_fat": 0.0,
+                "vitamin_e": 0.0,
+                "zinc": 0.0,
+                "saturated_fat": 0.0,
+                "iodine": 0.0,
+                "trans_fat": 0.0,
+                "sodium": 0.0,
+                "monosaturated_fat": 0.0,
+                "calcium": 0.0,
+                "riboflavin": 0.0,
+                "thiamin": 0.0,
+                "folate": 0.0,
+                "added_sugar": 0.0,
+                "chromium": 0.0,
+                "manganese": 0.0
+            },
+            "image_uris": {
+                "filename": "0540-paper-treehugger.png",
                 "output_mask": "rarepizza-#####-paper"
             }
         },
@@ -1878,8 +2112,8 @@
             "variant_id": "0",
             "index": 1,
             "name": "thick",
-            "ingredient_rarity": 6,
-            "variant_rarity": 6,
+            "ingredient_rarity": 0,
+            "variant_rarity": 0,
             "classification": 3,
             "category": "crust",
             "attributes": {},

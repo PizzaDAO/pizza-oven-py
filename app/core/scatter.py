@@ -539,4 +539,3 @@ class RandomScatter(Scatter):
         x = random_radius * cos(random_angle)
         y = random_radius * sin(random_angle)
 
-        return (x, y)
