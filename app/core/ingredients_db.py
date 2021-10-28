@@ -325,7 +325,12 @@ def parse_ingredient(row) -> ScopedIngredient:
     variant_rarity = map_rarity(row["variant rarity"])
     variant_id = row["unique_id"][3:4]
 
-    nutrition = parse_nutrition(row)
+    try:
+        nutrition = parse_nutrition(row)
+    except Exception as e:
+        r = row["unique_id"]
+        print(f"Parse nutrition error for ingredient:  {r} -- Using default")
+        nutrition = default_nutrition()
 
     ingredient = Ingredient(
         unique_id=row["unique_id"],
@@ -609,44 +614,48 @@ def parse_nutrition(row) -> NutritionMetadata:
             manganese=row["manganese"],
         )
     else:
-        data = NutritionMetadata(
-            serving_size=0,
-            mass=0,
-            calories=0,
-            vitamin_c=0,
-            magnesium=0,
-            vitamin_b5=0,
-            vitamin_d=0,
-            vitamin_b7=0,
-            height=0,
-            moisture=0,
-            potassium=0,
-            cholesterol=0,
-            vitamin_a=0,
-            dietary_fiber=0,
-            vitamin_b6=0,
-            sugar=0,
-            protein=0,
-            iron=0,
-            complex_carb=0,
-            selenium=0,
-            vitamin_k=0,
-            vitamin_b12=0,
-            calories_from_fat=0,
-            vitamin_e=0,
-            zinc=0,
-            saturated_fat=0,
-            iodine=0,
-            trans_fat=0,
-            sodium=0,
-            monosaturated_fat=0,
-            calcium=0,
-            riboflavin=0,
-            thiamin=0,
-            folate=0,
-            added_sugar=0,
-            chromium=0,
-            manganese=0,
-        )
+        return default_nutrition()
 
     return data
+
+
+def default_nutrition() -> NutritionMetadata:
+    return NutritionMetadata(
+        serving_size=0,
+        mass=0,
+        calories=0,
+        vitamin_c=0,
+        magnesium=0,
+        vitamin_b5=0,
+        vitamin_d=0,
+        vitamin_b7=0,
+        height=0,
+        moisture=0,
+        potassium=0,
+        cholesterol=0,
+        vitamin_a=0,
+        dietary_fiber=0,
+        vitamin_b6=0,
+        sugar=0,
+        protein=0,
+        iron=0,
+        complex_carb=0,
+        selenium=0,
+        vitamin_k=0,
+        vitamin_b12=0,
+        calories_from_fat=0,
+        vitamin_e=0,
+        zinc=0,
+        saturated_fat=0,
+        iodine=0,
+        trans_fat=0,
+        sodium=0,
+        monosaturated_fat=0,
+        calcium=0,
+        riboflavin=0,
+        thiamin=0,
+        folate=0,
+        added_sugar=0,
+        chromium=0,
+        manganese=0,
+    )

@@ -53,7 +53,7 @@ def get_oven_params() -> OvenToppingParams:
             result = storage.get({"document_id": "oven_params"})
             # If we can't get OvenToppingParams just return default - one might not be stored locally?
             if not result:
-                print("Returning a default OvenToppingParams object")
+                # print("Returning a default OvenToppingParams object")
                 return OvenToppingParams()
             else:
                 return OvenToppingParams(**result)

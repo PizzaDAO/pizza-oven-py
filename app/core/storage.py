@@ -104,7 +104,7 @@ class LocalStorage(IStorage):
         """An inefficient search through all files in the directory."""
         # query_string = json.dumps(dict(filter))
         query_string = re.sub(r"\{|\}", r"", json.dumps(dict(filter)))
-        print(query_string)
+        # print(query_string)
 
         search_files = [
             file
