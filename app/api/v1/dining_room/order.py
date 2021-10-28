@@ -1,11 +1,11 @@
 from typing import Any
 
-from fastapi import APIRouter, Body, Request
+from fastapi import APIRouter, Body, Request, BackgroundTasks
 from app.core.repository import get_render_task, set_render_task, get_order_response
 
 from app.models.order import *
 from app.core.ethereum_adapter import get_contract_address, EthereumAdapter
-from app.core.order_task import schedule_task
+from app.core.order_task import schedule_task, run_render_task
 from app.models.render_task import RenderTask, TaskStatus
 from ..tags import DELIVER
 
@@ -18,6 +18,7 @@ settings = Settings()
 @router.post("/order", response_model=OrderPizzaResponse, tags=[DELIVER])
 async def orderPizza(
     request: Request,
+    background_tasks: BackgroundTasks,
     data: OrderPizzaRequest = Body(...),
 ) -> OrderPizzaResponse:
     """
@@ -53,7 +54,8 @@ async def orderPizza(
         )
 
     response = OrderPizzaResponse(jobRunID=data.id, pending=True)
-    schedule_task(data.id)
+    background_tasks.add_task(run_render_task, data.id)
+    # schedule_task(data.id)
     return response
 
 
