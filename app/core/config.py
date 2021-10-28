@@ -120,6 +120,13 @@ class Settings(BaseSettings):
     RENDER_TASK_TIMEOUT_IN_MINUTES: int = 15
     BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: int = 120
 
+    DINING_SETUP_SHOULD_EXEC_ON_STARTUP = True
+
+    RERUN_SHOULD_EXECUTE_ON_STARTUP = True
+    RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY = True
+    RERUN_JOB_STAGGERED_START_DELAY_IN_S = 60
+    RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS = 3
+
     API_V1_STR: str = "/api/v1"
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = Field(
         default=["http://localhost", "http://localhost:8080", "https://localhost"]

@@ -23,7 +23,7 @@ from app.models.prep import KitchenOrder
 from app.models.recipe import Recipe
 from app.models.render_task import RenderTask, TaskStatus
 
-from app.core.config import Settings
+from app.core.config import ApiMode, Settings
 
 settings = Settings()
 
@@ -149,7 +149,7 @@ def patch_and_complete_job(
             render_task.message = (
                 f"{patch_response.status_code} - {patch_response.text}"
             )
-            render_task.set_status(TaskStatus.complete)
+            render_task.set_status(TaskStatus.error)
             set_render_task(render_task)
     else:
         # chainlink wasnt specified so just mark the job complete
@@ -181,27 +181,50 @@ def run_render_task(
 
     if render_task is None:
         print(f"{job_id} - could not find job.")
+        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+            print("recursively requeueing render tasks")
+            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return None
 
     # if the job is already complete
     if render_task.status == TaskStatus.complete:
         print(f"{job_id} - job complete")
-        return patch_and_complete_job(render_task)
+        completed_job_response = patch_and_complete_job(render_task)
+        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+            print("recursively requeueing render tasks")
+            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        return completed_job_response
 
     # check if the job finished but just didnt get marked complete
     if render_task.metadata_hash is not None:
         print(f"{job_id} - job finished rendering but wasn't complete")
-        return patch_and_complete_job(render_task)
+        completed_job_response = patch_and_complete_job(render_task)
+        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+            print("recursively requeueing render tasks")
+            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+        return completed_job_response
 
     # if the job is already in progress, skip it
     if not render_task.should_restart(settings.RENDER_TASK_TIMEOUT_IN_MINUTES):
         print(f"{job_id} - job already in progress")
+        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+            print("recursively requeueing render tasks")
+            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
         return None
 
     # set the job as started
     render_task.set_status(TaskStatus.started)
     render_task.message = None
     set_render_task(render_task)
+
+    print("\n --------- PIZZA RENDER JOB STARTED ---------- \n")
+    print("")
+    print(f"    job_id:   {render_task.job_id}")
+    print(f"    started:  {render_task.timestamp}")
+    print(f"    token_id: {render_task.request.data.token_id}")
+    print(f"    recipe:   {render_task.request.data.recipe_id}")
+    print("")
+    print("\n --------------------------------------------- \n")
 
     # transform the data
 
@@ -233,10 +256,15 @@ def run_render_task(
 
     # if we didnt get a verifiable random number
     # then kill the job and allow it to be restart later
+    # but we leave it marked "started" so that it
+    # waits the full time out for another node to pick it up
     if random_number is None:
         render_task.message = "could not get a VRF random number"
-        render_task.set_status(TaskStatus.error)
+        render_task.set_status(TaskStatus.started)
         set_render_task(render_task)
+        # no recursive rerun function call here because this call
+        # because if we get stuck in a loop calling the blockchain
+        # we do not want to minimize transactions that fail
         return None
 
     # cache the random number since we know we have one
@@ -272,7 +300,17 @@ def run_render_task(
         set_render_task(render_task)
 
         completed_job_response = patch_and_complete_job(render_task, order_response)
+
+        if (
+            completed_job_response is not None
+            and settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY
+        ):
+            print("recursively requeueing render tasks")
+            rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+
         return completed_job_response
+    else:
+        print(f"{job_id} - the order response was malformed.")
 
     message = "something went wrong. setting error state and returning none."
     print(f"{job_id} - {message}")
@@ -285,30 +323,36 @@ def run_render_task(
 executor = None
 
 
-def rerun_render_jobs():
+def rerun_render_jobs(delay_in_s: int = 5):
+    """rerun render jobs but staggering the startup"""
     render_tasks = pluck_render_tasks()
     added_task = 0
     for task in render_tasks:
         # only schedule 3
-        if added_task < 3:
+        if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
             print(f"{task.job_id} - scheudling")
-            time.sleep(2)
+
+            time.sleep(3)
             schedule_task(task.job_id)
             added_task += 1
+
+            time.sleep(delay_in_s)
 
 
 def schedule_task(job_id: str):
     global executor
     if executor is None:
-        # TODO: default?
-        executor = ProcessPoolExecutor(max_workers=3)
+        # TODO: determine if we need to limit the worker pool
+        # max_workers=3
+        executor = ProcessPoolExecutor()
 
     if executor is not None:
         time.sleep(2)
-        executor.submit(run_render_task, job_id)
+        future = executor.submit(run_render_task, job_id)
 
 
 def executor_shutdown():
     global executor
     if executor is not None:
         executor.shutdown()
+        executor = None
