@@ -346,6 +346,7 @@ def run_render_jobs(delay_in_s: int = 5):
     with ProcessPoolExecutor() as executor:
         is_processing = True
 
+        debounce = 5
         added_task = 0
         futures = []
         tasks = pluck_render_tasks()
@@ -355,11 +356,21 @@ def run_render_jobs(delay_in_s: int = 5):
             return
 
         for task in tasks:
-            # only schedule 3
+            # only schedule like 3
             if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
+
+                time.sleep(debounce)
+
+                reconfirmed_task = get_render_task(task.job_id)
+                if reconfirmed_task is None or not reconfirmed_task.should_restart():
+                    print("reconfirmed task should not restart, continue")
+                    time.sleep(debounce)
+                    continue
+
                 print(f"run_render_jobs: {task.job_id} - scheduling")
                 future = executor.submit(run_render_task, task.job_id)
                 futures.append(future)
+
                 added_task += 1
                 time.sleep(delay_in_s)
 
@@ -372,9 +383,6 @@ def run_render_jobs(delay_in_s: int = 5):
                 if future.result():
                     print("run_render_jobs: task suceeded")
 
-                # result = future.result(
-                #     timeout=settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS * 60
-                # )
         except Exception as error:
             print(error)
 
@@ -382,42 +390,5 @@ def run_render_jobs(delay_in_s: int = 5):
 
         if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
             print("run_render_jobs: recursively restarting jobs")
+            time.sleep(debounce)
             run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
-
-
-def rerun_render_jobs(delay_in_s: int = 5):
-    """rerun render jobs but staggering the startup"""
-    render_tasks = pluck_render_tasks()
-    added_task = 0
-    for task in render_tasks:
-        # only schedule 3
-        if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
-            print(f"{task.job_id} - scheduling")
-
-            time.sleep(3)
-            schedule_task(task.job_id)
-            added_task += 1
-
-            time.sleep(delay_in_s)
-
-
-executor2 = None
-
-
-def schedule_task(job_id: str):
-    global executor2
-    if executor2 is None:
-        # TODO: determine if we need to limit the worker pool
-        # max_workers=3
-        executor2 = ProcessPoolExecutor()
-
-    if executor2 is not None:
-        time.sleep(2)
-        future = executor2.submit(run_render_task, job_id)
-
-
-def executor_shutdown():
-    global executor2
-    if executor2 is not None:
-        executor2.shutdown()
-        executor2 = None

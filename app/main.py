@@ -7,7 +7,7 @@ from starlette.middleware.cors import CORSMiddleware
 from app.api.v1.dining_room.dining_setup import setup
 from app.api.v1.routes import get_routes
 from app.core.config import ApiMode, Settings
-from app.core.order_task import executor_shutdown, run_render_jobs
+from app.core.order_task import run_render_jobs
 
 logger = getLogger(__name__)
 
@@ -111,7 +111,7 @@ async def startup():
 @app.on_event("shutdown")
 def on_shutdown() -> None:
     # Ensure a clean shutdown of any background threads or processes
-    executor_shutdown()
+    pass
 
 
 if __name__ == "__main__":

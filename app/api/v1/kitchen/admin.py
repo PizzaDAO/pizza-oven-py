@@ -68,10 +68,10 @@ def pluck_render_tasks_for_restart() -> Any:
     return render_tasks
 
 
-@router.get("/render_task_schedule_all", tags=[ADMIN])
+@router.post("/render_task_schedule_all", tags=[ADMIN])
 def render_task_schedule_all() -> Any:
     """rerun all outstanding jobs"""
-    run_render_jobs(15)
+    run_render_jobs(settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS)
 
 
 @router.post("/render_task", tags=[ADMIN])
