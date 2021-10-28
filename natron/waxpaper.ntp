@@ -230,7 +230,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Read2</second>
+					<second>In1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>1</KnobsAge>
@@ -1952,7 +1952,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>/Users/ashafer/Development/pizza-oven-tmp/ingredients-db/0500-paper-redchecker.png</Value>
+					<Value>[Project]/../ingredients-db/0500-paper-redchecker.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -2173,7 +2173,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>218</KnobsAge>
+			<KnobsAge>222</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -2208,7 +2208,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-3.19100000000000001e+01</Value>
+					<Value>1.64899999999999984e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2217,7 +2217,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-1.37899999999999991e+01</Value>
+					<Value>-2.68900000000000006e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2234,7 +2234,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>-1.83000000000000007e+00</Value>
+					<Value>-4.19999999999999984e-01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>y = thisNode.translate.get()[1]
@@ -6782,7 +6782,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.72539873733883664e-01</Value>
+					<Value>7.99087855563964666e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.7535,1)</Expression>
@@ -7210,7 +7210,7 @@ ret = round((x+y)/25,2)
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -7306,6 +7306,24 @@ ret = round((x+y)/25,2)
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -7483,7 +7501,7 @@ ret = round((x+y)/25,2)
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>15</KnobsAge>
+			<KnobsAge>16</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -23959,7 +23977,7 @@ ret = round((x+y)/25,2)
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Thu Oct 28 10:52:27 2021</Value>
+			<Value>Thu Oct 28 11:04:22 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -25368,16 +25386,16 @@ ret = round((x+y)/25,2)
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>w1</item>
+		<item>Read3</item>
+		<item>input_default</item>
+		<item>Natron_Project_Settings_Panel</item>
+		<item>Reformat3</item>
 		<item>Read2</item>
 		<item>Read1</item>
-		<item>Read3</item>
 		<item>Read1_4</item>
-		<item>input_default</item>
 		<item>ColorCorrect4</item>
 		<item>Grade4</item>
-		<item>Read4</item>
-		<item>Read5</item>
-		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
