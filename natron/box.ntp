@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>69</NodesCount>
+		<NodesCount>62</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>input_default</Plugin_label>
 			<Plugin_script_name>input_default</Plugin_script_name>
@@ -328,7 +328,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>152</KnobsAge>
+			<KnobsAge>158</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -660,7 +660,7 @@
 				</item>
 				<item>
 					<first>1</first>
-					<second>Merge3</second>
+					<second>Shuffle5</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>16</KnobsAge>
@@ -855,7 +855,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>TRS_default</second>
+					<second>input_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>302</KnobsAge>
@@ -1396,7 +1396,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
+			<KnobsCount>2</KnobsCount>
 			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
@@ -1436,31 +1436,9 @@
 				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
-			<item>
-				<Name>A_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
 			<Inputs_map>
-				<count>2</count>
+				<count>1</count>
 				<item_version>0</item_version>
-				<item>
-					<first>A</first>
-					<second>Switch_0010</second>
-				</item>
 				<item>
 					<first>B</first>
 					<second>Switch_default</second>
@@ -1482,339 +1460,6 @@
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Merge1</CacheID>
-		</item>
-		<item>
-			<Plugin_label>i1</Plugin_label>
-			<Plugin_script_name>i1</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>16</KnobsCount>
-			<item>
-				<Name>decodingPluginID</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>fr.inria.openfx.ReadPNG</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0001-box-cardboard.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>hideInputs</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filename</Name>
-				<Type>InputFile</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../ingredients-db/####-box-cardboard.png</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>firstFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>lastFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>onMissingFrame</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>4</Value>
-					<Default>3</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>black</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>startingTime</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>timeOffset</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>proxyThreshold</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>customProxyScale</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filePremult</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>unpremult</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>frameRate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2.40000000000000000e+01</Value>
-					<Default>2.40000000000000000e+01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ParamExistingInstance</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioInputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>sRGB</Value>
-					<Default>sRGB</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioOutputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>scene_linear</Value>
-					<Default>scene_linear</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>141</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>input_default_2</CacheID>
 		</item>
 		<item>
 			<Plugin_label>DropShadow2_2</Plugin_label>
@@ -3159,465 +2804,6 @@
 			<CacheID>DropShadow2_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Switch_0010</Plugin_label>
-			<Plugin_script_name>Switch_0010</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>p0_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>p1_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>
-					<first>0</first>
-					<second>Dot2</second>
-				</item>
-				<item>
-					<first>1</first>
-					<second>Merge3_2</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>11</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Switch_default_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Grade1_2</Plugin_label>
-			<Plugin_script_name>Grade1_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.GradePlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>2</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>5</KnobsCount>
-			<item>
-				<Name>whitePoint</Name>
-				<Type>Color</Type>
-				<Dimension>4</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>6.67000000000000037e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>6.67000000000000037e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>6.67000000000000037e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>6.67000000000000037e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>multiply</Name>
-				<Type>Color</Type>
-				<Dimension>4</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.05000000000000004e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.05000000000000004e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.05000000000000004e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.05000000000000004e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>premult</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>Source_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>TRS_0010</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>292</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Grade1_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>TRS_0010</Plugin_label>
-			<Plugin_script_name>TRS_0010</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.TransformPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>4</KnobsCount>
-			<item>
-				<Name>uniform</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>center</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.53600000000000000e+03</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.53600000000000000e+03</Value>
-					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>transformCenterChanged</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Source</first>
-					<second>i1</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>3</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>TRS_default_2</CacheID>
-		</item>
-		<item>
-			<Plugin_label>box_0010</Plugin_label>
-			<Plugin_script_name>box_0010</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.BackDrop</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>2</KnobsCount>
-			<item>
-				<Name>Label</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>1</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>2</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>box_2</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Read2</Plugin_label>
 			<Plugin_script_name>Read2</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
@@ -3986,7 +3172,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.95438705080770858e-01</Value>
+					<Value>7.11290524659096257e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.5135,.95)</Expression>
@@ -4063,7 +3249,7 @@
 					<second>Grade1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>234</KnobsAge>
+			<KnobsAge>238</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -4760,7 +3946,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
+					<Value>3</Value>
 					<Default>0</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>frame%4</Expression>
@@ -5365,7 +4551,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.53196934624574999e-01</Value>
+					<Value>9.84802096337080046e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.94,1)</Expression>
@@ -5374,7 +4560,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.58149060653522566e-01</Value>
+					<Value>9.46514003705233309e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.94,1)</Expression>
@@ -9679,306 +8865,6 @@
 			<CacheID>Transform3</CacheID>
 		</item>
 		<item>
-			<Plugin_label>ColorCorrect3</Plugin_label>
-			<Plugin_script_name>ColorCorrect3</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.ColorCorrectPlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>2</Plugin_major_version>
-			<Plugin_minor_version>1</Plugin_minor_version>
-			<KnobsCount>9</KnobsCount>
-			<item>
-				<Name>NatronOfxParamProcessG</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>MasterGamma</Name>
-				<Type>Color</Type>
-				<Dimension>4</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.14999999999999991e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.14999999999999991e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.14999999999999991e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.14999999999999991e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>MasterGain</Name>
-				<Type>Color</Type>
-				<Dimension>4</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.09000000000000008e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.09000000000000008e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.09000000000000008e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.09000000000000008e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>toneRanges</Name>
-				<Type>Parametric</Type>
-				<Dimension>2</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ParametricCurves>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>
-						<KeyFrameSet>
-							<count>2</count>
-							<item_version>0</item_version>
-							<item>
-								<Time>0.00000000000000000e+00</Time>
-								<Value>1.00000000000000000e+00</Value>
-								<InterpolationMethod>5</InterpolationMethod>
-								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
-								<RightDerivative>0.00000000000000000e+00</RightDerivative>
-							</item>
-							<item>
-								<Time>8.99999999999999967e-02</Time>
-								<Value>0.00000000000000000e+00</Value>
-								<InterpolationMethod>5</InterpolationMethod>
-								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
-								<RightDerivative>0.00000000000000000e+00</RightDerivative>
-							</item>
-						</KeyFrameSet>
-					</item>
-					<item>
-						<KeyFrameSet>
-							<count>2</count>
-							<item_version>0</item_version>
-							<item>
-								<Time>5.00000000000000000e-01</Time>
-								<Value>0.00000000000000000e+00</Value>
-								<InterpolationMethod>5</InterpolationMethod>
-								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
-								<RightDerivative>0.00000000000000000e+00</RightDerivative>
-							</item>
-							<item>
-								<Time>1.00000000000000000e+00</Time>
-								<Value>1.00000000000000000e+00</Value>
-								<InterpolationMethod>5</InterpolationMethod>
-								<LeftDerivative>0.00000000000000000e+00</LeftDerivative>
-								<RightDerivative>0.00000000000000000e+00</RightDerivative>
-							</item>
-						</KeyFrameSet>
-					</item>
-				</ParametricCurves>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>clampWhite</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>premult</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>Source_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>enableMask_Mask</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>
-					<first>Mask</first>
-					<second>Clamp1</second>
-				</item>
-				<item>
-					<first>Source</first>
-					<second>Merge1</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>269</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>4</PagesCount>
-			<name>Controls</name>
-			<name>Ranges</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>ColorCorrect3</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Blur3_2</Plugin_label>
 			<Plugin_script_name>Blur3_2</Plugin_script_name>
 			<Plugin_id>net.sf.cimg.CImgBlur</Plugin_id>
@@ -11008,755 +9894,6 @@
 			<CacheID>Dot1</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Read3</Plugin_label>
-			<Plugin_script_name>Read3</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>15</KnobsCount>
-			<item>
-				<Name>decodingPluginID</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>fr.inria.openfx.ReadPNG</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0001-layer-02.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filename</Name>
-				<Type>InputFile</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../.cache/output/####-layer-02.png</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>firstFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>lastFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>onMissingFrame</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>4</Value>
-					<Default>3</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>black</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>startingTime</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>timeOffset</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>proxyThreshold</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>customProxyScale</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filePremult</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>unpremult</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>frameRate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2.40000000000000000e+01</Value>
-					<Default>2.40000000000000000e+01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ParamExistingInstance</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioInputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>sRGB</Value>
-					<Default>sRGB</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioOutputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>scene_linear</Value>
-					<Default>scene_linear</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>4</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Read3</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Merge4</Plugin_label>
-			<Plugin_script_name>Merge4</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>4</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>B_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A2_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>3</count>
-				<item_version>0</item_version>
-				<item>
-					<first>A</first>
-					<second>Read4</second>
-				</item>
-				<item>
-					<first>A2</first>
-					<second>Read3</second>
-				</item>
-				<item>
-					<first>B</first>
-					<second>Sharpen1</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Merge4</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Read4</Plugin_label>
-			<Plugin_script_name>Read4</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>15</KnobsCount>
-			<item>
-				<Name>decodingPluginID</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>fr.inria.openfx.ReadPNG</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0001-layer-01.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filename</Name>
-				<Type>InputFile</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../.cache/output/0001-layer-01.png</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>firstFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>lastFrame</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>onMissingFrame</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>4</Value>
-					<Default>3</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>black</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>startingTime</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>timeOffset</Name>
-				<Type>Int</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>proxyThreshold</Name>
-				<Type>Double</Type>
-				<Dimension>2</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1.00000000000000000e+00</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>customProxyScale</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>filePremult</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>unpremult</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>frameRate</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2.40000000000000000e+01</Value>
-					<Default>2.40000000000000000e+01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ParamExistingInstance</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioInputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>sRGB</Value>
-					<Default>sRGB</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>ocioOutputSpace</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>scene_linear</Value>
-					<Default>scene_linear</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>2</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Read4</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Clamp1</Plugin_label>
 			<Plugin_script_name>Clamp1</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.Clamp</Plugin_id>
@@ -12005,171 +10142,6 @@
 			<CacheID>Clamp2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Merge3_2</Plugin_label>
-			<Plugin_script_name>Merge3_2</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>7</KnobsCount>
-			<item>
-				<Name>operation</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>16</Value>
-					<Default>28</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>hard-light</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>bbox</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>2</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>a</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>screenAlpha</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>mix</Name>
-				<Type>Double</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>6.46620355524239132e-01</Value>
-					<Default>1.00000000000000000e+00</Default>
-					<HasMaster>0</HasMaster>
-					<Expression>random(0.5135,.95)</Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(hard-light)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>B_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>
-					<first>A</first>
-					<second>Switch1</second>
-				</item>
-				<item>
-					<first>B</first>
-					<second>Grade1_2</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>235</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Merge3_2</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Shuffle4</Plugin_label>
 			<Plugin_script_name>Shuffle4</Plugin_script_name>
 			<Plugin_id>net.sf.openfx.ShufflePlugin</Plugin_id>
@@ -12324,10 +10296,14 @@
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>0</count>
+				<count>1</count>
 				<item_version>0</item_version>
+				<item>
+					<first>In</first>
+					<second>Merge3</second>
+				</item>
 			</Inputs_map>
-			<KnobsAge>106046</KnobsAge>
+			<KnobsAge>106068</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -13491,7 +11467,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -13515,7 +11491,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -13539,7 +11515,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -13563,7 +11539,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -13591,7 +11567,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -14719,7 +12695,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.41060000000000002e+02</Value>
+							<Value>1.41010000000000019e+02</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>ret=round(thisNode.calories.get()+thisNode.calories_from_fat.get()+thisNode.trans_fat.get()+thisNode.monosaturated_fat.get()+thisNode.saturated_fat.get()+thisNode.sodium.get()+thisNode.cholesterol.get()+thisNode.complex_carb.get()+thisNode.dietary_fiber.get()+thisNode.sugar.get()+thisNode.added_sugars.get()+thisNode.protein.get()+((thisNode.vitamin_a.get()+thisNode.vitamin_b6.get()+thisNode.vitamin_b12.get()+thisNode.vitamin_e.get()+thisNode.biotin.get()+thisNode.folate.get()+thisNode.calcium.get()+thisNode.iron.get()+thisNode.pantothenic_acid.get()+thisNode.potassium.get()+thisNode.riboflavin.get()+thisNode.vitamin_d.get()+thisNode.thiamin.get()+thisNode.magnesium.get()+thisNode.selenium.get()+thisNode.zinc.get())/100),2)+(thisNode.vitamin_c.get()/10)+(thisNode.vitamin_k.get()/10)</Expression>
@@ -14883,7 +12859,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_burn_before.get()</Expression>
@@ -14911,7 +12887,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000000e+00</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_melt.get()</Expression>
@@ -14939,7 +12915,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_lumpiness.get()</Expression>
@@ -14967,7 +12943,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_burn_after.get()</Expression>
@@ -15338,7 +13314,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -16093,7 +14069,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_burn_after.get()</Expression>
@@ -16121,7 +14097,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000000e+00</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_melt.get()</Expression>
@@ -17210,7 +15186,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
-					<ChoiceLabel></ChoiceLabel>
+					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 					<UserKnob>0</UserKnob>
 				</item>
 				<Inputs_map>
@@ -17221,7 +15197,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>340</KnobsAge>
+				<KnobsAge>341</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -22055,7 +20031,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_burn_after.get() </Expression>
@@ -22111,7 +20087,7 @@ ret = y_new
 						<second>Premult4</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>16</KnobsAge>
+				<KnobsAge>17</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -23382,7 +21358,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_separation.get()</Expression>
@@ -23438,7 +21414,7 @@ ret = y_new
 						<second>Premult5</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>13</KnobsAge>
+				<KnobsAge>14</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -23472,7 +21448,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>7</KnobsAge>
+				<KnobsAge>8</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -24200,7 +22176,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_lumpiness.get()</Expression>
@@ -24256,7 +22232,7 @@ ret = y_new
 						<second>Premult1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>17</KnobsAge>
+				<KnobsAge>18</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -26395,7 +24371,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_melt.get()</Expression>
@@ -26451,7 +24427,7 @@ ret = y_new
 						<second>Transform2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>12</KnobsAge>
+				<KnobsAge>13</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -30836,7 +28812,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_burn_before.get()</Expression>
@@ -30892,7 +28868,7 @@ ret = y_new
 						<second>Erode3_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>18</KnobsAge>
+				<KnobsAge>19</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -44275,7 +42251,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>9</KnobsAge>
+				<KnobsAge>10</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -45854,7 +43830,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_burn_after.get() </Expression>
@@ -45866,7 +43842,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>16</KnobsAge>
+				<KnobsAge>17</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -58120,7 +56096,7 @@ ret = y_new
 						<second>Mask</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>43</KnobsAge>
+				<KnobsAge>44</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -106647,33 +104623,6 @@ ret = y_new
 			<CacheID>Bake_default_2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>Dot2</Plugin_label>
-			<Plugin_script_name>Dot2</Plugin_script_name>
-			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>0</KnobsCount>
-			<Inputs_map>
-				<count>0</count>
-				<item_version>0</item_version>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>0</PagesCount>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Dot2</CacheID>
-		</item>
-		<item>
 			<Plugin_label>Dot3</Plugin_label>
 			<Plugin_script_name>Dot3</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
@@ -106708,7 +104657,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>5</KnobsCount>
+			<KnobsCount>6</KnobsCount>
 			<item>
 				<Name>white</Name>
 				<Type>Color</Type>
@@ -106798,6 +104747,23 @@ ret = y_new
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
+				<Name>premult</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
 				<Name>userTextArea</Name>
 				<Type>String</Type>
 				<Dimension>1</Dimension>
@@ -106862,7 +104828,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>Source</first>
-					<second>Merge1</second>
+					<second>Merge4</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>1066</KnobsAge>
@@ -106896,7 +104862,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge3</second>
+					<second>input_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -106912,6 +104878,507 @@ ret = y_new
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Viewer2</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Read1</Plugin_label>
+			<Plugin_script_name>Read1</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>14</KnobsCount>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadPNG</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0030-box-sorry-out-of-boxes.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>[Project]/../ingredients-db/0030-box-sorry-out-of-boxes.png</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>unpremult</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>sRGB</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>1</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Read11</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Merge4</Plugin_label>
+			<Plugin_script_name>Merge4</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>3</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>B_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>A_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Merge1</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Read1</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Merge4</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Shuffle5</Plugin_label>
+			<Plugin_script_name>Shuffle5</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.ShufflePlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>3</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>2</KnobsCount>
+			<item>
+				<Name>outputA</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>3</Value>
+					<Default>9</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>A.uk.co.thefoundry.OfxImagePlaneColour.A</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>A</first>
+					<second>Dot2</second>
+				</item>
+				<item>
+					<first>B</first>
+					<second>Bake_default</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>1</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Shuffle5</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Dot2</Plugin_label>
+			<Plugin_script_name>Dot2</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Dot</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>0</KnobsCount>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first></first>
+					<second>input_default</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>0</PagesCount>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Dot2</CacheID>
 		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
@@ -107036,7 +105503,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Wed Oct 27 07:08:05 2021</Value>
+			<Value>Wed Oct 27 17:07:33 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -107152,17 +105619,17 @@ ret = y_new
 			<Name></Name>
 		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>1</Timeline_current_time>
+	<Timeline_current_time>8911</Timeline_current_time>
 	<CreationDate>1613936932294</CreationDate>
 </Project>
 <ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
-		<count>69</count>
+		<count>62</count>
 		<item_version>6</item_version>
 		<item class_id="22" tracking_level="0" version="6">
 			<Name>input_default</Name>
-			<X_position>6.53818741037070367e+02</X_position>
-			<Y_position>-3.35266850917394913e+03</Y_position>
+			<X_position>6.51865896008799837e+02</X_position>
+			<Y_position>-3.35071566414567860e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107175,8 +105642,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>w1</Name>
-			<X_position>5.19008091188057847e+02</X_position>
-			<Y_position>-1.90045335952145501e+03</Y_position>
+			<X_position>6.05464417457940840e+02</X_position>
+			<Y_position>-2.01057571375166935e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>7.499961853e-01</r>
 			<g>7.499961853e-01</g>
@@ -107189,8 +105656,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Switch_default</Name>
-			<X_position>6.65818741037069231e+02</X_position>
-			<Y_position>-2.91403353645739026e+03</Y_position>
+			<X_position>6.63865896008795062e+02</X_position>
+			<Y_position>-2.86040067685419126e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107203,8 +105670,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Grade1</Name>
-			<X_position>6.65818741037070367e+02</X_position>
-			<Y_position>-3.16265046573346854e+03</Y_position>
+			<X_position>6.63865896008799837e+02</X_position>
+			<Y_position>-3.16069762070519801e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -107217,8 +105684,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Reformat1</Name>
-			<X_position>5.20448900900816284e+02</X_position>
-			<Y_position>-2.27606883896922318e+03</Y_position>
+			<X_position>5.18496055872545753e+02</X_position>
+			<Y_position>-2.27411599394095265e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107231,8 +105698,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Sharpen1</Name>
-			<X_position>5.19008091188057733e+02</X_position>
-			<Y_position>-2.08952353229476739e+03</Y_position>
+			<X_position>5.18496055872545185e+02</X_position>
+			<Y_position>-2.08870100949405332e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -107245,8 +105712,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>TRS_default</Name>
-			<X_position>6.65818741037070367e+02</X_position>
-			<Y_position>-3.24567571038808364e+03</Y_position>
+			<X_position>8.79017686994308178e+02</X_position>
+			<Y_position>-3.17051274312238274e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107259,8 +105726,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>box</Name>
-			<X_position>6.03818741037070367e+02</X_position>
-			<Y_position>-3.40123000475673189e+03</Y_position>
+			<X_position>6.01865896008799837e+02</X_position>
+			<Y_position>-3.39927715972846136e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.500038028e-01</r>
 			<g>4.500038028e-01</g>
@@ -107273,8 +105740,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Merge1</Name>
-			<X_position>6.17978465438500507e+02</X_position>
-			<Y_position>-2.85617367730497972e+03</Y_position>
+			<X_position>6.63865896008799837e+02</X_position>
+			<Y_position>-2.72808444519814748e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107286,23 +105753,9 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>i1</Name>
-			<X_position>9.64747851054547937e+02</X_position>
-			<Y_position>-3.35201966867578631e+03</Y_position>
-			<Preview_enabled>1</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.28000000000000000e+02</Width>
-			<Height>7.80000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>DropShadow2_2</Name>
-			<X_position>5.19008091188057733e+02</X_position>
-			<Y_position>-2.19363201809706970e+03</Y_position>
+			<X_position>5.18496055872545185e+02</X_position>
+			<Y_position>-2.19167917306879917e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -107440,65 +105893,9 @@ ret = y_new
 			</item>
 		</item>
 		<item>
-			<Name>Switch_0010</Name>
-			<X_position>9.76747851054547709e+02</X_position>
-			<Y_position>-2.92124521058976825e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Grade1_2</Name>
-			<X_position>9.76747851054547937e+02</X_position>
-			<Y_position>-3.15909933419619892e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>4.800030589e-01</r>
-			<g>6.599984765e-01</g>
-			<b>1.000000000e+00</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>TRS_0010</Name>
-			<X_position>9.76747851054547937e+02</X_position>
-			<Y_position>-3.24646537430713852e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>3.000076413e-01</g>
-			<b>1.000076309e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>box_0010</Name>
-			<X_position>9.14747851054547937e+02</X_position>
-			<Y_position>-3.40201966867578631e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>4.500038028e-01</r>
-			<g>4.500038028e-01</g>
-			<b>4.500038028e-01</b>
-			<Selected>0</Selected>
-			<Width>2.46000000000000000e+02</Width>
-			<Height>5.19000000000000000e+02</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Read2</Name>
-			<X_position>2.58871034694975151e+02</X_position>
-			<Y_position>-3.39515178437266422e+03</Y_position>
+			<X_position>2.56918189666704620e+02</X_position>
+			<Y_position>-3.39319893934439369e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107511,8 +105908,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Merge3</Name>
-			<X_position>6.65818741037069685e+02</X_position>
-			<Y_position>-3.07195276115449542e+03</Y_position>
+			<X_position>6.63865896008799155e+02</X_position>
+			<Y_position>-3.10598067539109161e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107525,8 +105922,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>ColorCorrect2</Name>
-			<X_position>2.70871034694975151e+02</X_position>
-			<Y_position>-3.12482278966190597e+03</Y_position>
+			<X_position>2.68918189666704620e+02</X_position>
+			<Y_position>-3.12286994463363544e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -107539,8 +105936,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Constant1</Name>
-			<X_position>-3.53426331345368908e+02</X_position>
-			<Y_position>-3.02037790290142812e+03</Y_position>
+			<X_position>6.94003307198559014e+01</X_position>
+			<Y_position>-3.12006036982701198e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -107553,8 +105950,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Merge2</Name>
-			<X_position>2.17515397029093492e+02</X_position>
-			<Y_position>-3.02837790290142812e+03</Y_position>
+			<X_position>2.15562552000822961e+02</X_position>
+			<Y_position>-3.02642505787315758e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107567,8 +105964,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Switch1</Name>
-			<X_position>1.51344193837102466e+02</X_position>
-			<Y_position>-2.77083750852655521e+03</Y_position>
+			<X_position>2.15562552000822507e+02</X_position>
+			<Y_position>-2.75789861275505973e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107581,8 +105978,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform1_2</Name>
-			<X_position>2.81493055492663188e+02</X_position>
-			<Y_position>-2.87347214492563580e+03</Y_position>
+			<X_position>2.79540210464392658e+02</X_position>
+			<Y_position>-2.87151929989736527e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107595,8 +105992,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform1_2_2</Name>
-			<X_position>6.88208741566991193e+01</X_position>
-			<Y_position>-2.87701545348739546e+03</Y_position>
+			<X_position>6.68680291284285886e+01</X_position>
+			<Y_position>-2.87506260845912493e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107609,8 +106006,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform1_2_2_2</Name>
-			<X_position>-6.94786215209414877e+01</X_position>
-			<Y_position>-2.86799592116059330e+03</Y_position>
+			<X_position>-7.14314665492120184e+01</X_position>
+			<Y_position>-2.86604307613232277e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107623,8 +106020,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform1</Name>
-			<X_position>2.63547538380044443e+02</X_position>
-			<Y_position>-3.20824452363205728e+03</Y_position>
+			<X_position>2.61594693351773913e+02</X_position>
+			<Y_position>-3.20629167860378675e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107637,8 +106034,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Premult1</Name>
-			<X_position>2.70871034694975151e+02</X_position>
-			<Y_position>-3.24969073184096760e+03</Y_position>
+			<X_position>2.68918189666704620e+02</X_position>
+			<Y_position>-3.24773788681269707e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107651,8 +106048,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read7</Name>
-			<X_position>-1.28165970023885620e+03</X_position>
-			<Y_position>-3.48089483495606601e+03</Y_position>
+			<X_position>-1.28361254526712673e+03</X_position>
+			<Y_position>-3.47894198992779548e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107665,8 +106062,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read7_2</Name>
-			<X_position>-1.14269655785343821e+03</X_position>
-			<Y_position>-3.52188535016896640e+03</Y_position>
+			<X_position>-1.14464940288170874e+03</X_position>
+			<Y_position>-3.51993250514069587e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107679,8 +106076,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Merge35</Name>
-			<X_position>-9.78689080454962209e+02</X_position>
-			<Y_position>-3.30326285329165330e+03</Y_position>
+			<X_position>-9.80641925483232740e+02</X_position>
+			<Y_position>-3.30131000826338277e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107693,8 +106090,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read7_2_2</Name>
-			<X_position>-9.90689080454961299e+02</X_position>
-			<Y_position>-3.51720963350366492e+03</Y_position>
+			<X_position>-9.92641925483231830e+02</X_position>
+			<Y_position>-3.51525678847539439e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107707,8 +106104,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read_s3</Name>
-			<X_position>-8.35581409021287186e+02</X_position>
-			<Y_position>-3.46997448571049244e+03</Y_position>
+			<X_position>-8.37534254049557717e+02</X_position>
+			<Y_position>-3.46802164068222191e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107721,8 +106118,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read_s3_2</Name>
-			<X_position>-6.63111113434941331e+02</X_position>
-			<Y_position>-3.40221829815871388e+03</Y_position>
+			<X_position>-6.65063958463211861e+02</X_position>
+			<Y_position>-3.40026545313044335e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107735,8 +106132,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read_s3_2_2</Name>
-			<X_position>-4.56382727602002888e+02</X_position>
-			<Y_position>-3.24658473012522609e+03</Y_position>
+			<X_position>-4.58335572630273418e+02</X_position>
+			<Y_position>-3.24463188509695556e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107749,8 +106146,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read_s3_2_2_2</Name>
-			<X_position>-4.96773318843016227e+02</X_position>
-			<Y_position>-3.36528627673460824e+03</Y_position>
+			<X_position>-4.98726163871286758e+02</X_position>
+			<Y_position>-3.36333343170633771e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107763,8 +106160,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read_s7</Name>
-			<X_position>-6.71087346548913160e+02</X_position>
-			<Y_position>-3.15240486408279230e+03</Y_position>
+			<X_position>-6.73040191577183691e+02</X_position>
+			<Y_position>-3.15045201905452177e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107777,8 +106174,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>GMIC_Crease1</Name>
-			<X_position>-1.01811817758884627e+03</X_position>
-			<Y_position>-3.11605273978526793e+03</Y_position>
+			<X_position>-1.02007102261711680e+03</X_position>
+			<Y_position>-3.11409989475699740e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -107791,8 +106188,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Blur2</Name>
-			<X_position>-1.10658433115563594e+03</X_position>
-			<Y_position>-2.88825548461419658e+03</Y_position>
+			<X_position>-1.10853717618390647e+03</X_position>
+			<Y_position>-2.88630263958592604e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -107805,8 +106202,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Merge36</Name>
-			<X_position>-1.10658433115563594e+03</X_position>
-			<Y_position>-2.73259334684034911e+03</Y_position>
+			<X_position>-1.10853717618390647e+03</X_position>
+			<Y_position>-2.73064050181207858e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -107819,8 +106216,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Erode1</Name>
-			<X_position>-9.51307101960606360e+02</X_position>
-			<Y_position>-2.89335416291902584e+03</Y_position>
+			<X_position>-9.53259946988876891e+02</X_position>
+			<Y_position>-2.89140131789075531e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -107833,8 +106230,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Blur1</Name>
-			<X_position>-9.51307101960606815e+02</X_position>
-			<Y_position>-2.83735416291902584e+03</Y_position>
+			<X_position>-9.53259946988877346e+02</X_position>
+			<Y_position>-2.83540131789075531e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -107847,8 +106244,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>w2</Name>
-			<X_position>-1.43879495690963768e+03</X_position>
-			<Y_position>-2.46113446187859699e+03</Y_position>
+			<X_position>-1.44074780193790821e+03</X_position>
+			<Y_position>-2.45918161685032646e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>7.499961853e-01</r>
 			<g>7.499961853e-01</g>
@@ -107861,8 +106258,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>ColorCorrect1</Name>
-			<X_position>5.20448900900816170e+02</X_position>
-			<Y_position>-2.40076301779344476e+03</Y_position>
+			<X_position>5.18496055872545639e+02</X_position>
+			<Y_position>-2.39881017276517423e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -107875,8 +106272,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform2</Name>
-			<X_position>-7.80796895794694251e+02</X_position>
-			<Y_position>-2.42285291311957644e+03</Y_position>
+			<X_position>-7.82749740822964782e+02</X_position>
+			<Y_position>-2.42090006809130591e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107889,8 +106286,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Blur3</Name>
-			<X_position>-7.80796895794694251e+02</X_position>
-			<Y_position>-2.36656916627094142e+03</Y_position>
+			<X_position>-7.82749740822964782e+02</X_position>
+			<Y_position>-2.36461632124267089e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -107903,8 +106300,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform3</Name>
-			<X_position>-9.61629090596495530e+02</X_position>
-			<Y_position>-2.34732332990984196e+03</Y_position>
+			<X_position>-9.63581935624766061e+02</X_position>
+			<Y_position>-2.34537048488157143e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107916,23 +106313,9 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>ColorCorrect3</Name>
-			<X_position>4.28726972301297337e+02</X_position>
-			<Y_position>-2.62421298349204517e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>4.800030589e-01</r>
-			<g>6.599984765e-01</g>
-			<b>1.000000000e+00</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>2.60000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Blur3_2</Name>
-			<X_position>-9.61629090596495530e+02</X_position>
-			<Y_position>-2.28138614453513765e+03</Y_position>
+			<X_position>-9.63581935624766061e+02</X_position>
+			<Y_position>-2.27943329950686712e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -107945,8 +106328,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform4</Name>
-			<X_position>-9.78689080454962209e+02</X_position>
-			<Y_position>-3.23126285329165330e+03</Y_position>
+			<X_position>-9.80641925483232740e+02</X_position>
+			<Y_position>-3.22931000826338277e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -107959,8 +106342,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Shuffle1</Name>
-			<X_position>-1.43879495690963722e+03</X_position>
-			<Y_position>-2.76410338278254358e+03</Y_position>
+			<X_position>-1.44074780193790775e+03</X_position>
+			<Y_position>-2.76215053775427305e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.000000238e-01</r>
 			<g>2.399939001e-01</g>
@@ -107973,8 +106356,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Shuffle2</Name>
-			<X_position>-1.43879495690963722e+03</X_position>
-			<Y_position>-2.67168108768962657e+03</Y_position>
+			<X_position>-1.44074780193790775e+03</X_position>
+			<Y_position>-2.66972824266135603e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.000000238e-01</r>
 			<g>2.399939001e-01</g>
@@ -107987,8 +106370,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Shuffle3</Name>
-			<X_position>-1.43879495690963722e+03</X_position>
-			<Y_position>-2.58934554281105829e+03</Y_position>
+			<X_position>-1.44074780193790775e+03</X_position>
+			<Y_position>-2.58739269778278776e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.000000238e-01</r>
 			<g>2.399939001e-01</g>
@@ -108001,8 +106384,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Blur4</Name>
-			<X_position>-1.26796531166452405e+03</X_position>
-			<Y_position>-2.65208333035595388e+03</Y_position>
+			<X_position>-1.26991815669279458e+03</X_position>
+			<Y_position>-2.65013048532768335e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -108015,8 +106398,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform5</Name>
-			<X_position>-9.59974591792171850e+02</X_position>
-			<Y_position>-2.49457338360754875e+03</Y_position>
+			<X_position>-9.61927436820442381e+02</X_position>
+			<Y_position>-2.49262053857927822e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -108029,8 +106412,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Multiply1</Name>
-			<X_position>-9.59974591792171850e+02</X_position>
-			<Y_position>-2.59027480008844350e+03</Y_position>
+			<X_position>-9.61927436820442381e+02</X_position>
+			<Y_position>-2.58832195506017297e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -108043,8 +106426,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Plasma1</Name>
-			<X_position>-5.73193014453007891e+02</X_position>
-			<Y_position>-2.85657875170182479e+03</Y_position>
+			<X_position>-5.75145859481278421e+02</X_position>
+			<Y_position>-2.85462590667355425e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>5.000076294e-01</g>
@@ -108057,8 +106440,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Dot1</Name>
-			<X_position>-9.85118177588846265e+02</X_position>
-			<Y_position>-3.00117905165203592e+03</Y_position>
+			<X_position>-9.87071022617116796e+02</X_position>
+			<Y_position>-2.99922620662376539e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -108070,51 +106453,9 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Read3</Name>
-			<X_position>7.91347039699782727e+02</X_position>
-			<Y_position>-2.15752823648324375e+03</Y_position>
-			<Preview_enabled>1</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.28000000000000000e+02</Width>
-			<Height>7.80000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Merge4</Name>
-			<X_position>6.66183043693949003e+02</X_position>
-			<Y_position>-1.99117102660207183e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>4.30000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Read4</Name>
-			<X_position>9.56119895201134113e+02</X_position>
-			<Y_position>-2.11633502260790647e+03</Y_position>
-			<Preview_enabled>1</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.28000000000000000e+02</Width>
-			<Height>7.80000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Clamp1</Name>
-			<X_position>-7.80796895794694137e+02</X_position>
-			<Y_position>-2.31703767865816735e+03</Y_position>
+			<X_position>-7.82749740822964668e+02</X_position>
+			<Y_position>-2.31508483362989682e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -108127,8 +106468,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Clamp2</Name>
-			<X_position>-9.61629090596495644e+02</X_position>
-			<Y_position>-2.22538614453513765e+03</Y_position>
+			<X_position>-9.63581935624766174e+02</X_position>
+			<Y_position>-2.22343329950686712e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -108140,23 +106481,9 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>Merge3_2</Name>
-			<X_position>9.76747851054547937e+02</X_position>
-			<Y_position>-3.05039473867325614e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>4.30000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Shuffle4</Name>
-			<X_position>-9.61629090596495644e+02</X_position>
-			<Y_position>-2.42285291311957644e+03</Y_position>
+			<X_position>-9.63581935624766174e+02</X_position>
+			<Y_position>-2.42090006809130591e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.000000238e-01</r>
 			<g>2.399939001e-01</g>
@@ -108169,8 +106496,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Bake_default</Name>
-			<X_position>8.92368333356178937e+02</X_position>
-			<Y_position>-2.74782647929797895e+03</Y_position>
+			<X_position>6.63865896008800064e+02</X_position>
+			<Y_position>-3.01306576603827580e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -112299,8 +110626,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Bake_0010</Name>
-			<X_position>1.00851922289771846e+03</X_position>
-			<Y_position>-2.74564229247556159e+03</Y_position>
+			<X_position>1.12592123876099049e+03</X_position>
+			<Y_position>-2.77759707838238864e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -116428,23 +114755,9 @@ ret = y_new
 			</item>
 		</item>
 		<item>
-			<Name>Dot2</Name>
-			<X_position>1.11675684729415980e+03</X_position>
-			<Y_position>-2.98377962479165308e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>6.999923587e-01</r>
-			<g>6.999923587e-01</g>
-			<b>6.999923587e-01</b>
-			<Selected>0</Selected>
-			<Width>1.50000000000000000e+01</Width>
-			<Height>1.50000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
 			<Name>Dot3</Name>
-			<X_position>8.08181198237150966e+02</X_position>
-			<Y_position>-2.96899767475538420e+03</Y_position>
+			<X_position>5.89122982236476673e+02</X_position>
+			<Y_position>-2.90707385552966980e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -116457,8 +114770,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Grade2</Name>
-			<X_position>5.20448900900816625e+02</X_position>
-			<Y_position>-2.49814877697097199e+03</Y_position>
+			<X_position>5.18496055872546094e+02</X_position>
+			<Y_position>-2.49619593194270146e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -116471,8 +114784,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Viewer2</Name>
-			<X_position>8.92368333356179392e+02</X_position>
-			<Y_position>-2.69926627821273269e+03</Y_position>
+			<X_position>1.02944512231740100e+03</X_position>
+			<Y_position>-2.56845669924298181e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -116480,6 +114793,62 @@ ret = y_new
 			<Selected>0</Selected>
 			<Width>1.04000000000000000e+02</Width>
 			<Height>3.00000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Read1</Name>
+			<X_position>4.26993398630917000e+02</X_position>
+			<Y_position>-2.69987527370272073e+03</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Merge4</Name>
+			<X_position>6.91176004387420107e+02</X_position>
+			<Y_position>-2.64973051703140118e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>4.30000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Shuffle5</Name>
+			<X_position>6.63865896008797790e+02</X_position>
+			<Y_position>-2.95277268014859874e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.000000238e-01</r>
+			<g>2.399939001e-01</g>
+			<b>3.900053501e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Dot2</Name>
+			<X_position>5.47531810508788112e+02</X_position>
+			<Y_position>-3.17487970348042290e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.50000000000000000e+01</Width>
+			<Height>1.50000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
@@ -116509,12 +114878,11 @@ ret = y_new
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>4</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
-							<item>Bake_0010</item>
 						</Tabs>
 						<Index>0</Index>
 						<Name>pane3</Name>
@@ -116546,9 +114914,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer2</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-3.99726025531915002e+03</zoomLeft>
-				<zoomBottom>-6.14400000000000546e+01</zoomBottom>
-				<zoomFactor>1.47110376602564097e-01</zoomFactor>
+				<zoomLeft>-9.29057331489042554e+03</zoomLeft>
+				<zoomBottom>-1.01541380752271152e+03</zoomBottom>
+				<zoomFactor>7.66291889682011451e-02</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -116566,7 +114934,7 @@ ret = y_new
 				<Channels>RGB</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
+				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
 				<CompositingOP>0</CompositingOP>
 				<LeftBound>1</LeftBound>
 				<RightBound>10000</RightBound>
@@ -116594,16 +114962,16 @@ ret = y_new
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
-		<item>Bake_0010</item>
-		<item>Merge3</item>
 		<item>Bake_default</item>
-		<item>Natron_Project_Settings_Panel</item>
 		<item>input_default</item>
-		<item>ColorCorrect1</item>
-		<item>Grade2</item>
-		<item>ColorCorrect3</item>
-		<item>Read_s3_2_2</item>
-		<item>Read2</item>
+		<item>w1</item>
+		<item>Switch_default</item>
+		<item>Natron_Project_Settings_Panel</item>
+		<item>Shuffle5</item>
+		<item>Merge3</item>
+		<item>Merge4</item>
+		<item>Read1</item>
+		<item>TRS_default</item>
 	</OpenedPanels>
 	<ScriptEditorInput>y =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
