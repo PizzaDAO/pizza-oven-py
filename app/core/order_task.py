@@ -123,34 +123,46 @@ def patch_and_complete_job(
             print(f"{render_task.job_id} - no chainlink token found for job")
             return None
 
-        # patch back to the node using the response url
-        patch_response = requests.patch(
-            render_task.request.responseURL,
-            data=order_response.json(),
-            headers={"authorization": f"Bearer {chainlink_token.inbound_token}"},
-        )
-        print(patch_response)
+        try:
 
-        # check the status code to make sure it was successful
-        # before we mark the job complete
-        if (
-            patch_response.status_code >= status.HTTP_200_OK
-            and patch_response.status_code < status.HTTP_300_MULTIPLE_CHOICES
-        ):
-            message = "post back to chainlink complete"
-            print(f"{render_task.job_id} - {message}.")
-            # update the job as complete
-            render_task.message = message
-            render_task.set_status(TaskStatus.complete)
-            set_render_task(render_task)
-            print(f"{render_task.job_id} - job complete!")
-        else:
-            print(f"{render_task.job_id} - chainlink postback failed")
-            render_task.message = (
-                f"{patch_response.status_code} - {patch_response.text}"
+            # patch back to the node using the response url
+            patch_response = requests.patch(
+                render_task.request.responseURL,
+                data=order_response.json(),
+                headers={"authorization": f"Bearer {chainlink_token.inbound_token}"},
             )
+            print(patch_response)
+
+            # check the status code to make sure it was successful
+            # before we mark the job complete
+            if (
+                patch_response.status_code >= status.HTTP_200_OK
+                and patch_response.status_code < status.HTTP_300_MULTIPLE_CHOICES
+            ):
+                message = "post back to chainlink complete"
+                print(f"{render_task.job_id} - {message}.")
+                # update the job as complete
+                render_task.message = message
+                render_task.set_status(TaskStatus.complete)
+                set_render_task(render_task)
+                print(f"{render_task.job_id} - job complete!")
+            else:
+                print(f"{render_task.job_id} - chainlink postback failed")
+                render_task.message = (
+                    f"{patch_response.status_code} - {patch_response.text}"
+                )
+                render_task.set_status(TaskStatus.error)
+                set_render_task(render_task)
+        except Exception as error:
+            print(
+                f"{render_task.job_id} - chainlink postback failed with request error"
+            )
+            print(error)
+            print(sys.exc_info())
+            render_task.message = "chainlink postback failed with request error"
             render_task.set_status(TaskStatus.error)
             set_render_task(render_task)
+
     else:
         # chainlink wasnt specified so just mark the job complete
         message = "chainlink responseURL not specified"
@@ -330,7 +342,7 @@ def rerun_render_jobs(delay_in_s: int = 5):
     for task in render_tasks:
         # only schedule 3
         if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
-            print(f"{task.job_id} - scheudling")
+            print(f"{task.job_id} - scheduling")
 
             time.sleep(3)
             schedule_task(task.job_id)
