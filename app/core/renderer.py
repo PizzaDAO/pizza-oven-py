@@ -7,6 +7,7 @@ import os
 import subprocess
 import json
 from app.models.base import Base
+from pathlib import Path
 
 from app.models.recipe import (
     Classification,
@@ -273,6 +274,10 @@ class Renderer:
 
     order: Optional[KitchenOrder] = field(default=None)
 
+    def remove_if_exists(self, path_to_file: str):
+        if Path(path_to_file).is_file():
+            os.remove(path_to_file)
+
     def cache_ingredient(self, ingredient: MadeIngredient) -> str:
         """Cache the ingredient data so that natron can pick it up."""
         # create a .cache directory
@@ -287,6 +292,8 @@ class Renderer:
         file_path = os.path.join(
             cache_dir, f"{padded_token_id}-layer-{layer_string}.json"
         )
+
+        self.remove_if_exists(file_path)
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as ingredient_file:
@@ -309,6 +316,8 @@ class Renderer:
             cache_dir, f"{padded_token_id}-layer-{layer_string}.json"
         )
 
+        self.remove_if_exists(file_path)
+
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
             layer_file.write(layer.json())
@@ -329,6 +338,8 @@ class Renderer:
 
         padded_token_id = str(self.frame).zfill(4)
         file_path = os.path.join(cache_dir, f"{padded_token_id}-manifest.json")
+
+        self.remove_if_exists(file_path)
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
@@ -544,6 +555,10 @@ class Renderer:
 
         data_path = self.cache_layer(layer)
 
+        output_dir = os.path.join(self.project_path, "../", settings.OUTPUT_FOLDER_PATH)
+        file_destination = os.path.join(output_dir, output_filename)
+        self.remove_if_exists(file_destination)
+
         # Using topping renderer as default here - should be layer specific?
         # Possibly requires input from Natron dev
         ToppingRenderer().render(
@@ -565,6 +580,10 @@ class Renderer:
         ingredient.ingredient.index = layer_index
 
         data_path = self.cache_ingredient(ingredient)
+
+        output_dir = os.path.join(self.project_path, "../", settings.OUTPUT_FOLDER_PATH)
+        file_destination = os.path.join(output_dir, output_filename)
+        self.remove_if_exists(file_destination)
 
         if ingredient.ingredient.classification == Classification.box:
             BoxRenderer().render(

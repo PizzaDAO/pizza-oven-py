@@ -39,8 +39,8 @@ class OvenToppingParams(Base):
     """vars from env config"""
 
     # Pizza Oven Config
-    min_topping_layer_count: int = 1
-    max_topping_layer_count: int = 4
+    min_topping_layer_count: int = 3
+    max_topping_layer_count: int = 6
 
     # Rarity
     rarity_weight_common: int = 2000
