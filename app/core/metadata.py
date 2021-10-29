@@ -62,18 +62,20 @@ def to_blockchain_metadata(
             )
         )
         """ Add topping catgory count if not exists, otherwise increment count """
-        if value.ingredient.category not in map(lambda c: c['trait_type'], category_count):
+        if value.ingredient.category not in map(
+            lambda c: c["trait_type"], category_count
+        ):
             category_count.append(
                 dict(
                     display_type="boost_number",
                     trait_type=value.ingredient.category,
-                    value=1
+                    value=1,
                 )
             )
         else:
-            for count, category in map(lambda n, c: (n, c['trait_type']), category_count):
-                if category == value.ingredient.category:
-                    category_count[count]['value'] += 1
+            for item in category_count:
+                if item["trait_type"] == value.ingredient.category:
+                    item["value"] += 1
         attributes.append(
             ERC721OpenSeaMetadataAttribute(
                 trait_type=value.ingredient.category,
