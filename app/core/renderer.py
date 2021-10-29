@@ -555,6 +555,10 @@ class Renderer:
 
         data_path = self.cache_layer(layer)
 
+        output_dir = os.path.join(self.project_path, "../", settings.OUTPUT_FOLDER_PATH)
+        file_destination = os.path.join(output_dir, output_filename)
+        self.remove_if_exists(file_destination)
+
         # Using topping renderer as default here - should be layer specific?
         # Possibly requires input from Natron dev
         ToppingRenderer().render(
@@ -576,6 +580,10 @@ class Renderer:
         ingredient.ingredient.index = layer_index
 
         data_path = self.cache_ingredient(ingredient)
+
+        output_dir = os.path.join(self.project_path, "../", settings.OUTPUT_FOLDER_PATH)
+        file_destination = os.path.join(output_dir, output_filename)
+        self.remove_if_exists(file_destination)
 
         if ingredient.ingredient.classification == Classification.box:
             BoxRenderer().render(
