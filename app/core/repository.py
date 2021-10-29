@@ -53,7 +53,7 @@ def get_oven_params() -> OvenToppingParams:
             result = storage.get({"document_id": "oven_params"})
             # If we can't get OvenToppingParams just return default - one might not be stored locally?
             if not result:
-                #print("Returning a default OvenToppingParams object")
+                # print("Returning a default OvenToppingParams object")
                 return OvenToppingParams()
             else:
                 return OvenToppingParams(**result)
@@ -95,12 +95,6 @@ def get_render_task(job_id: str) -> Optional[RenderTask]:
 def pluck_render_tasks() -> List[RenderTask]:
     print("plucking render tasks")
     render_tasks: List[RenderTask] = []
-    found_tasks = find_render_task({"status": TaskStatus.error.name})
-    print(f"found {len(found_tasks)} errored tasks")
-    for task in found_tasks:
-        if task.should_restart():
-            print(f"{task.job_id} - errored, should restart")
-            render_tasks.append(task)
 
     found_tasks = find_render_task({"status": TaskStatus.new.name})
     print(f"found {len(found_tasks)} new tasks")
@@ -116,7 +110,14 @@ def pluck_render_tasks() -> List[RenderTask]:
             print(f"{task.job_id} - timed out, should restart")
             render_tasks.append(task)
 
-    print("no tasks to start")
+    found_tasks = find_render_task({"status": TaskStatus.error.name})
+    print(f"found {len(found_tasks)} errored tasks")
+    for task in found_tasks:
+        if task.should_restart():
+            print(f"{task.job_id} - errored, should restart")
+            render_tasks.append(task)
+
+    print(f"returning {len(render_tasks)} candidates")
     return render_tasks
 
 

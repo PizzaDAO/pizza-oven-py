@@ -1,5 +1,10 @@
 from typing import Any, Optional, Dict
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import (
+    ProcessPoolExecutor,
+    ThreadPoolExecutor,
+    wait,
+    as_completed,
+)
 
 import requests
 import sys
@@ -23,7 +28,7 @@ from app.models.prep import KitchenOrder
 from app.models.recipe import Recipe
 from app.models.render_task import RenderTask, TaskStatus
 
-from app.core.config import Settings
+from app.core.config import ApiMode, Settings
 
 settings = Settings()
 
@@ -123,34 +128,54 @@ def patch_and_complete_job(
             print(f"{render_task.job_id} - no chainlink token found for job")
             return None
 
-        # patch back to the node using the response url
-        patch_response = requests.patch(
-            render_task.request.responseURL,
-            data=order_response.json(),
-            headers={"authorization": f"Bearer {chainlink_token.inbound_token}"},
-        )
-        print(patch_response)
+        try:
 
-        # check the status code to make sure it was successful
-        # before we mark the job complete
-        if (
-            patch_response.status_code >= status.HTTP_200_OK
-            and patch_response.status_code < status.HTTP_300_MULTIPLE_CHOICES
-        ):
-            message = "post back to chainlink complete"
-            print(f"{render_task.job_id} - {message}.")
-            # update the job as complete
-            render_task.message = message
-            render_task.set_status(TaskStatus.complete)
-            set_render_task(render_task)
-            print(f"{render_task.job_id} - job complete!")
-        else:
-            print(f"{render_task.job_id} - chainlink postback failed")
-            render_task.message = (
-                f"{patch_response.status_code} - {patch_response.text}"
+            # patch back to the node using the response url
+            patch_response = requests.patch(
+                render_task.request.responseURL,
+                data=order_response.json(),
+                headers={"authorization": f"Bearer {chainlink_token.inbound_token}"},
             )
-            render_task.set_status(TaskStatus.complete)
+            print(patch_response)
+
+            # check the status code to make sure it was successful
+            # before we mark the job complete
+            if (
+                patch_response.status_code >= status.HTTP_200_OK
+                and patch_response.status_code < status.HTTP_300_MULTIPLE_CHOICES
+            ):
+                message = "post back to chainlink complete"
+                print(f"{render_task.job_id} - {message}.")
+                # update the job as complete
+                render_task.message = message
+                render_task.set_status(TaskStatus.complete)
+                set_render_task(render_task)
+                print(f"{render_task.job_id} - job complete!")
+            else:
+                if patch_response.status_code == status.HTTP_405_METHOD_NOT_ALLOWED:
+                    print(
+                        "chainlink refusing the request, probably job is complete. check manually."
+                    )
+                    render_task.message = "chainlink refusing the request, probably job is complete. check manually."
+                    render_task.set_status(TaskStatus.complete)
+                    set_render_task(render_task)
+                else:
+                    print(f"{render_task.job_id} - chainlink postback failed")
+                    render_task.message = (
+                        f"{patch_response.status_code} - {patch_response.text}"
+                    )
+                    render_task.set_status(TaskStatus.error)
+                    set_render_task(render_task)
+        except Exception as error:
+            print(
+                f"{render_task.job_id} - chainlink postback failed with request error"
+            )
+            print(error)
+            print(sys.exc_info())
+            render_task.message = "chainlink postback failed with request error"
+            render_task.set_status(TaskStatus.error)
             set_render_task(render_task)
+
     else:
         # chainlink wasnt specified so just mark the job complete
         message = "chainlink responseURL not specified"
@@ -186,15 +211,17 @@ def run_render_task(
     # if the job is already complete
     if render_task.status == TaskStatus.complete:
         print(f"{job_id} - job complete")
-        return patch_and_complete_job(render_task)
+        completed_job_response = patch_and_complete_job(render_task)
+        return completed_job_response
 
     # check if the job finished but just didnt get marked complete
     if render_task.metadata_hash is not None:
         print(f"{job_id} - job finished rendering but wasn't complete")
-        return patch_and_complete_job(render_task)
+        completed_job_response = patch_and_complete_job(render_task)
+        return completed_job_response
 
     # if the job is already in progress, skip it
-    if not render_task.should_restart(settings.RENDER_TASK_TIMEOUT_IN_MINUTES):
+    if not render_task.should_restart(settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES):
         print(f"{job_id} - job already in progress")
         return None
 
@@ -202,6 +229,15 @@ def run_render_task(
     render_task.set_status(TaskStatus.started)
     render_task.message = None
     set_render_task(render_task)
+
+    print("\n --------- PIZZA RENDER JOB STARTED ---------- \n")
+    print("")
+    print(f"    job_id:   {render_task.job_id}")
+    print(f"    started:  {render_task.timestamp}")
+    print(f"    token_id: {render_task.request.data.token_id}")
+    print(f"    recipe:   {render_task.request.data.recipe_id}")
+    print("")
+    print("\n --------------------------------------------- \n")
 
     # transform the data
 
@@ -233,10 +269,15 @@ def run_render_task(
 
     # if we didnt get a verifiable random number
     # then kill the job and allow it to be restart later
+    # but we leave it marked "started" so that it
+    # waits the full time out for another node to pick it up
     if random_number is None:
         render_task.message = "could not get a VRF random number"
-        render_task.set_status(TaskStatus.error)
+        render_task.set_status(TaskStatus.started)
         set_render_task(render_task)
+        # no recursive rerun function call here because this call
+        # because if we get stuck in a loop calling the blockchain
+        # we do not want to minimize transactions that fail
         return None
 
     # cache the random number since we know we have one
@@ -272,7 +313,17 @@ def run_render_task(
         set_render_task(render_task)
 
         completed_job_response = patch_and_complete_job(render_task, order_response)
+
+        # if (
+        #     completed_job_response is not None
+        #     and settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY
+        # ):
+        #     print("recursively requeueing render tasks")
+        # rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+
         return completed_job_response
+    else:
+        print(f"{job_id} - the order response was malformed.")
 
     message = "something went wrong. setting error state and returning none."
     print(f"{job_id} - {message}")
@@ -282,33 +333,64 @@ def run_render_task(
     return None
 
 
-executor = None
+is_processing = False
 
 
-def rerun_render_jobs():
-    render_tasks = pluck_render_tasks()
-    added_task = 0
-    for task in render_tasks:
-        # only schedule 3
-        if added_task < 3:
-            print(f"{task.job_id} - scheudling")
-            time.sleep(2)
-            schedule_task(task.job_id)
-            added_task += 1
+def run_render_jobs(delay_in_s: int = 5):
+    global is_processing
+    if is_processing:
+        print("run_render_jobs: already processing work")
+        return
+    print("run_render_jobs: starting render job loop")
 
+    with ProcessPoolExecutor(
+        max_workers=settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS
+    ) as executor:
+        is_processing = True
 
-def schedule_task(job_id: str):
-    global executor
-    if executor is None:
-        # TODO: default?
-        executor = ProcessPoolExecutor(max_workers=3)
+        debounce = 5
+        added_task = 0
+        futures = []
+        tasks = pluck_render_tasks()
+        if len(tasks) == 0:
+            print("run_render_jobs: no tasks")
+            is_processing = False
+            return
 
-    if executor is not None:
-        time.sleep(2)
-        executor.submit(run_render_task, job_id)
+        for task in tasks:
+            # only schedule like 3
+            if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
 
+                time.sleep(debounce)
 
-def executor_shutdown():
-    global executor
-    if executor is not None:
-        executor.shutdown()
+                reconfirmed_task = get_render_task(task.job_id)
+                if reconfirmed_task is None or not reconfirmed_task.should_restart():
+                    print("reconfirmed task should not restart, continue")
+                    time.sleep(debounce)
+                    continue
+
+                print(f"run_render_jobs: {task.job_id} - scheduling")
+                future = executor.submit(run_render_task, task.job_id)
+                futures.append(future)
+
+                added_task += 1
+                time.sleep(delay_in_s)
+
+        try:
+            timeout = settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS * 60
+
+            for future in as_completed(futures, timeout=timeout):
+                if future.exception():
+                    print("run_render_jobs: task failed")
+                if future.result():
+                    print("run_render_jobs: task suceeded")
+
+        except Exception as error:
+            print(error)
+
+        is_processing = False
+
+        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+            print("run_render_jobs: recursively restarting jobs")
+            time.sleep(debounce)
+            run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
