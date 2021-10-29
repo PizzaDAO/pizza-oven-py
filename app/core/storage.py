@@ -27,7 +27,7 @@ DOCUMENT_VALUE_TYPE = Union[MutableMapping, List[MutableMapping]]
 settings = Settings()
 
 firebase_credentials = credentials.Certificate(settings.GOOGLE_APPLICATION_CREDENTIALS)
-firebase_app = firebase_admin.initialize_app(firebase_credentials)
+main_firebase_app = firebase_admin.initialize_app(firebase_credentials)
 
 
 class DataCollection:
@@ -104,7 +104,7 @@ class LocalStorage(IStorage):
         """An inefficient search through all files in the directory."""
         # query_string = json.dumps(dict(filter))
         query_string = re.sub(r"\{|\}", r"", json.dumps(dict(filter)))
-        #print(query_string)
+        # print(query_string)
 
         search_files = [
             file
@@ -154,16 +154,21 @@ class FirebaseStorage(IStorage):
         self._id = 0
         self._collection = collection
 
+        self.local_firebase_app = firebase_admin.initialize_app(
+            firebase_credentials, name=self._collection
+        )
+
         self._client: Any
         self._database: Any
 
     def __enter__(self) -> Any:
-        self._client = firestore.client(app=firebase_app)
+
+        self._client = firestore.client(self.local_firebase_app)
         self._database = self._client.collection(self._collection)
         return self
 
     def __exit__(self, exc_type: Any, exc_value: Any, exc_traceback: Any) -> None:
-        pass
+        firebase_admin.delete_app(self.local_firebase_app)
 
     def find(self, filter: MutableMapping, skip: int = 0, limit: int = 0) -> Any:
         """
