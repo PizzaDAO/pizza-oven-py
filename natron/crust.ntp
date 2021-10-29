@@ -6928,7 +6928,7 @@ Crust
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>8.16439999999999944e-01</Value>
+					<Value>4.01600000000000013e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>L_default.f_lerp_result.get()</Expression>
@@ -7005,7 +7005,7 @@ Crust
 					<second>input_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>314</KnobsAge>
+			<KnobsAge>411</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -11425,7 +11425,7 @@ Crust
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>198</KnobsAge>
+			<KnobsAge>281</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -11639,7 +11639,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>2.93999999999999986e+01</Value>
+						<Value>5.02000000000000028e+01</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Bake_default.burn_amt.get()</Expression>
@@ -11705,7 +11705,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>7.39999999999999991e-01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
@@ -11714,7 +11714,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+00</Value>
+						<Value>8.00000000000000044e-01</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
@@ -11743,7 +11743,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>8.16439999999999944e-01</Value>
+						<Value>4.01600000000000013e-01</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>import numpy as np
@@ -12274,7 +12274,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>3.60000000000000000e+01</Value>
+					<Value>4.60000000000000000e+01</Value>
 					<Default>3.00000000000000000e+01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>int(random(20,70,frame))</Expression>
@@ -12291,7 +12291,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>3.90000000000000013e-01</Value>
+					<Value>4.89999999999999991e-01</Value>
 					<Default>1.00000000000000000e+01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(.2,.75,frame),2)</Expression>
@@ -12996,7 +12996,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>GMIC_Crease1</second>
+					<second>Merge6</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -13062,7 +13062,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>106445</KnobsAge>
+			<KnobsAge>106605</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -14563,7 +14563,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.93999999999999986e+01</Value>
+							<Value>5.02000000000000028e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -15454,7 +15454,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>3.28599999999999994e+01</Value>
+							<Value>5.40700000000000003e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>ret=round(thisNode.calories.get()+thisNode.calories_from_fat.get()+thisNode.trans_fat.get()+thisNode.monosaturated_fat.get()+thisNode.saturated_fat.get()+thisNode.sodium.get()+thisNode.cholesterol.get()+thisNode.complex_carb.get()+thisNode.dietary_fiber.get()+thisNode.sugar.get()+thisNode.added_sugars.get()+thisNode.protein.get()+((thisNode.vitamin_a.get()+thisNode.vitamin_b6.get()+thisNode.vitamin_b12.get()+thisNode.vitamin_e.get()+thisNode.biotin.get()+thisNode.folate.get()+thisNode.calcium.get()+thisNode.iron.get()+thisNode.pantothenic_acid.get()+thisNode.potassium.get()+thisNode.riboflavin.get()+thisNode.vitamin_d.get()+thisNode.thiamin.get()+thisNode.magnesium.get()+thisNode.selenium.get()+thisNode.zinc.get())/100),2)+(thisNode.vitamin_c.get()/10)+(thisNode.vitamin_k.get()/10)</Expression>
@@ -15560,7 +15560,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.90000000000000000e+01</Value>
+							<Value>5.00000000000000000e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>x=round(thisNode.burn_amt.get())
@@ -15907,7 +15907,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.90000000000000000e+01</Value>
+							<Value>5.00000000000000000e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -29612,7 +29612,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.70600000000000018e-01</Value>
+						<Value>9.49799999999999978e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -29621,7 +29621,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.70600000000000018e-01</Value>
+						<Value>9.49799999999999978e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -29671,7 +29671,7 @@ ret = y_new
 						<second>Shuffle2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>127</KnobsAge>
+				<KnobsAge>147</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -31774,7 +31774,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>533</KnobsAge>
+				<KnobsAge>593</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -32085,7 +32085,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>2.93999999999999986e+01</Value>
+								<Value>5.02000000000000028e+01</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisGroup.burn_amt.get()</Expression>
@@ -32189,7 +32189,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>7.64800000000000035e-01</Value>
+								<Value>5.98400000000000043e-01</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>import numpy as np
@@ -32601,7 +32601,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>371</KnobsAge>
+				<KnobsAge>431</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -32912,7 +32912,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>2.93999999999999986e+01</Value>
+								<Value>5.02000000000000028e+01</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisGroup.burn_amt.get()</Expression>
@@ -33016,7 +33016,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>1.41200000000000020e-01</Value>
+								<Value>9.96000000000000080e-02</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>import numpy as np
@@ -33323,7 +33323,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.70600000000000018e-01</Value>
+						<Value>9.49799999999999978e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -33332,7 +33332,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.70600000000000018e-01</Value>
+						<Value>9.49799999999999978e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -33382,7 +33382,7 @@ ret = y_new
 						<second>Shuffle2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>127</KnobsAge>
+				<KnobsAge>147</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -33494,7 +33494,7 @@ ret = y_new
 						<second>Transform1_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>584</KnobsAge>
+				<KnobsAge>664</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -33543,7 +33543,7 @@ ret = y_new
 						<second>Lerp_burn_2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>450</KnobsAge>
+				<KnobsAge>510</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -33588,7 +33588,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>14</Value>
+							<Value>25</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>(thisGroup.burn_amt.get()/2)+(thisGroup.burn_edges.get()/2)</Expression>
@@ -34008,7 +34008,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.27305999999999990e+01</Value>
+						<Value>2.10297999999999981e+01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_grain_2.f_lerp_result.get()</Expression>
@@ -34076,7 +34076,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>2.94999999999999984e-01</Value>
+						<Value>5.03000000000000003e-01</Value>
 						<Default>5.99999999999999978e-01</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp1_2.f_lerp_result.get()</Expression>
@@ -34216,7 +34216,7 @@ ret = y_new
 						<second>Unpremult2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>1784</KnobsAge>
+				<KnobsAge>1944</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -34261,7 +34261,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>370</KnobsAge>
+				<KnobsAge>430</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -34475,7 +34475,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.93999999999999986e+01</Value>
+							<Value>5.02000000000000028e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisGroup.burn_amt.get()</Expression>
@@ -34579,7 +34579,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.27305999999999990e+01</Value>
+							<Value>2.10297999999999981e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -34722,7 +34722,7 @@ ret = y_new
 						<second>Lerp_grain_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>450</KnobsAge>
+				<KnobsAge>510</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -34936,7 +34936,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.95000000000000000e+01</Value>
+							<Value>5.03000000000000043e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>(thisGroup.burn_amt.get()+thisGroup.burn_edges.get())</Expression>
@@ -35040,7 +35040,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.94999999999999984e-01</Value>
+							<Value>5.03000000000000003e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -37329,7 +37329,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>7.64800000000000035e-01</Value>
+						<Value>5.98400000000000043e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -37338,7 +37338,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>7.64800000000000035e-01</Value>
+						<Value>5.98400000000000043e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -37347,7 +37347,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>7.64800000000000035e-01</Value>
+						<Value>5.98400000000000043e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -37356,7 +37356,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>7.64800000000000035e-01</Value>
+						<Value>5.98400000000000043e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -37445,7 +37445,7 @@ ret = y_new
 						<second>SeGrain1_before</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>1276</KnobsAge>
+				<KnobsAge>1356</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -59045,7 +59045,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Fri Oct 29 12:34:15 2021</Value>
+			<Value>Fri Oct 29 16:16:26 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -59171,7 +59171,7 @@ ret = y_new
 			<Name></Name>
 		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>16</Timeline_current_time>
+	<Timeline_current_time>3484</Timeline_current_time>
 	<CreationDate>1613936932294</CreationDate>
 </Project>
 <ProjectGui class_id="20" tracking_level="0" version="12">
@@ -60216,8 +60216,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>L_default</Name>
-			<X_position>1.30058218227230691e+03</X_position>
-			<Y_position>-2.87019644604451560e+03</Y_position>
+			<X_position>1.31782454818886663e+03</X_position>
+			<Y_position>-2.93054472675247598e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -64350,11 +64350,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1422 766</Sizes>
+				<Sizes>1586 854</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>647 646</Sizes>
+					<Sizes>641 640</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -64394,10 +64394,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2224</x>
-			<y>-297</y>
-			<w>2224</w>
-			<h>1296</h>
+			<x>-2530</x>
+			<y>-243</y>
+			<w>2476</w>
+			<h>1284</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -64406,8 +64406,8 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-2.59879698744862253e+03</zoomLeft>
-				<zoomBottom>-1.11122584888481583e+02</zoomBottom>
+				<zoomLeft>-3.08490750068260877e+03</zoomLeft>
+				<zoomBottom>3.91559877660298866e+02</zoomBottom>
 				<zoomFactor>1.81028794079262922e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
@@ -64454,10 +64454,10 @@ ret = y_new
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
-		<item>GMIC_Crease1</item>
-		<item>Bake_default</item>
-		<item>Merge6</item>
 		<item>L_default</item>
+		<item>Merge6</item>
+		<item>Bake_default</item>
+		<item>GMIC_Crease1</item>
 		<item>TRS_default</item>
 		<item>Crop1</item>
 		<item>ColorCorrect1</item>
