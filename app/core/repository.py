@@ -99,21 +99,21 @@ def pluck_render_tasks() -> List[RenderTask]:
     found_tasks = find_render_task({"status": TaskStatus.new.name})
     print(f"found {len(found_tasks)} new tasks")
     for task in found_tasks:
-        if task.should_restart():
+        if task.should_restart(settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES):
             print(f"{task.job_id} - new, should restgart")
             render_tasks.append(task)
 
     found_tasks = find_render_task({"status": TaskStatus.started.name})
     print(f"found {len(found_tasks)} started tasks")
     for task in found_tasks:
-        if task.should_restart():
+        if task.should_restart(settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES):
             print(f"{task.job_id} - timed out, should restart")
             render_tasks.append(task)
 
     found_tasks = find_render_task({"status": TaskStatus.error.name})
     print(f"found {len(found_tasks)} errored tasks")
     for task in found_tasks:
-        if task.should_restart():
+        if task.should_restart(settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES):
             print(f"{task.job_id} - errored, should restart")
             render_tasks.append(task)
 

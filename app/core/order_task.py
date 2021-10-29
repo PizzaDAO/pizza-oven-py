@@ -210,7 +210,7 @@ def run_render_task(
 
     # if the job is already complete
     if render_task.status == TaskStatus.complete:
-        print(f"{job_id} - job complete")
+        print(f"{job_id} - job complete retrying postback")
         completed_job_response = patch_and_complete_job(render_task)
         return completed_job_response
 
@@ -369,7 +369,9 @@ def run_render_jobs(delay_in_s: int = 5):
 
                 # now double check someone else didnt pick up the job
                 reconfirmed_task = get_render_task(task.job_id)
-                if reconfirmed_task is None or not reconfirmed_task.should_restart():
+                if reconfirmed_task is None or not reconfirmed_task.should_restart(
+                    settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES
+                ):
                     print("reconfirmed task should not restart, continue")
                     time.sleep(debounce)
                     continue
@@ -403,5 +405,5 @@ def run_render_jobs(delay_in_s: int = 5):
     # set up a re-run if we should run recursively
     if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
         print("run_render_jobs: recursively restarting jobs")
-        time.sleep(debounce)
+        time.sleep(settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES)
         run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
