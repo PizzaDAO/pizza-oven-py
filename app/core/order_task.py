@@ -376,7 +376,7 @@ def run_render_jobs(delay_in_s: int = 5):
 
                 # finally run it
                 print(f"run_render_jobs: {task.job_id} - scheduling")
-                future = executor.submit(run_render_task, task.job_id)
+                future = executor.submit(run_render_task, task.job_id, reconfirmed_task)
                 futures.append(future)
 
                 # add it to the count of running tasks
