@@ -20,7 +20,7 @@ def print_settings(_settings: Settings):
     print(f"ETHEREUM_MODE                           - {_settings.ETHEREUM_MODE}")
     print(f"IPFS_MODE                               - {_settings.IPFS_MODE}")
     print(
-        f"RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES  - {_settings.BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S}"
+        f"RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES  - {_settings.RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES}"
     )
     print(
         f"DINING_SETUP_SHOULD_EXEC_ON_STARTUP     - {_settings.DINING_SETUP_SHOULD_EXEC_ON_STARTUP}"

@@ -356,7 +356,7 @@ def run_render_jobs(delay_in_s: int = 5):
         # pick out the candidate tasks
         tasks = pluck_render_tasks()
         if len(tasks) == 0:
-            print("run_render_jobs: no tasks")
+            print("run_render_jobs: no tasks, stop listening")
             is_processing = False
             return
 
