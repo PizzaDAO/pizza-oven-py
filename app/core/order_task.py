@@ -343,7 +343,9 @@ def run_render_jobs(delay_in_s: int = 5):
         return
     print("run_render_jobs: starting render job loop")
 
-    with ProcessPoolExecutor() as executor:
+    with ProcessPoolExecutor(
+        max_workers=settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS
+    ) as executor:
         is_processing = True
 
         debounce = 5
