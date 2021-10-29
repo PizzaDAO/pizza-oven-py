@@ -49190,7 +49190,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Fri Oct 29 15:17:30 2021</Value>
+			<Value>Fri Oct 29 16:32:01 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -53637,8 +53637,8 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2556</x>
-			<y>-286</y>
+			<x>-2393</x>
+			<y>-186</y>
 			<w>2476</w>
 			<h>1284</h>
 		</Window>
@@ -53698,6 +53698,8 @@ ret = y_new
 		<count>10</count>
 		<item_version>0</item_version>
 		<item>input_default</item>
+		<item>Read1</item>
+		<item>Read1_3</item>
 		<item>Premult1</item>
 		<item>MultiplyMask_2</item>
 		<item>ColorCorrect1_4</item>
@@ -53705,8 +53707,6 @@ ret = y_new
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Reformat1</item>
 		<item>w1</item>
-		<item>Bake_default</item>
-		<item>TRS_default</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
