@@ -343,6 +343,7 @@ def run_render_jobs(delay_in_s: int = 5):
         return
     print("run_render_jobs: starting render job loop")
 
+    # open a processing queue
     with ProcessPoolExecutor(
         max_workers=settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS
     ) as executor:
@@ -351,6 +352,8 @@ def run_render_jobs(delay_in_s: int = 5):
         debounce = 5
         added_task = 0
         futures = []
+
+        # pick out the candidate tasks
         tasks = pluck_render_tasks()
         if len(tasks) == 0:
             print("run_render_jobs: no tasks")
@@ -361,24 +364,31 @@ def run_render_jobs(delay_in_s: int = 5):
             # only schedule like 3
             if added_task < settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:
 
+                # debounce for a second
                 time.sleep(debounce)
 
+                # now double check someone else didnt pick up the job
                 reconfirmed_task = get_render_task(task.job_id)
                 if reconfirmed_task is None or not reconfirmed_task.should_restart():
                     print("reconfirmed task should not restart, continue")
                     time.sleep(debounce)
                     continue
 
+                # finally run it
                 print(f"run_render_jobs: {task.job_id} - scheduling")
                 future = executor.submit(run_render_task, task.job_id)
                 futures.append(future)
 
+                # add it to the count of running tasks
                 added_task += 1
+
+                # and wait
                 time.sleep(delay_in_s)
 
         try:
             timeout = settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS * 60
 
+            # process results as they come in
             for future in as_completed(futures, timeout=timeout):
                 if future.exception():
                     print("run_render_jobs: task failed")
@@ -387,10 +397,11 @@ def run_render_jobs(delay_in_s: int = 5):
 
         except Exception as error:
             print(error)
+        finally:
+            is_processing = False
 
-        is_processing = False
-
-        if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
-            print("run_render_jobs: recursively restarting jobs")
-            time.sleep(debounce)
-            run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+    # set up a re-run if we should run recursively
+    if settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY:
+        print("run_render_jobs: recursively restarting jobs")
+        time.sleep(debounce)
+        run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
