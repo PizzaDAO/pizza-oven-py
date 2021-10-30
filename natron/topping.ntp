@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>267</NodesCount>
+		<NodesCount>268</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Merge_all</Plugin_label>
 			<Plugin_script_name>Merge_all</Plugin_script_name>
@@ -28417,7 +28417,7 @@
 					<second>Merge32</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>106290</KnobsAge>
+			<KnobsAge>106460</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -29605,7 +29605,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0</Value>
+							<Value>1</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -29629,7 +29629,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0</Value>
+							<Value>1</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -29918,7 +29918,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000006e-01</Value>
+							<Value>1.19999999999999996e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -29946,7 +29946,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000006e-01</Value>
+							<Value>2.79999999999999982e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -30104,7 +30104,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>5.99999999999999978e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -30132,7 +30132,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>5.99999999999999978e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -30288,7 +30288,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>5.00000000000000000e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -30316,7 +30316,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.39999999999999991e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -30530,7 +30530,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.99999999999999989e-01</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -30583,7 +30583,7 @@ Turn this off until last.</Help>
 					<Label>mask</Label>
 					<Secret>0</Secret>
 					<IsTab>0</IsTab>
-					<IsOpened>1</IsOpened>
+					<IsOpened>0</IsOpened>
 					<NbChildren>7</NbChildren>
 					<Type>Regular</Type>
 					<item>
@@ -30809,7 +30809,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>3.52000000000000002e+00</Value>
+							<Value>6.75000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>ret=round(thisNode.calories.get()+thisNode.calories_from_fat.get()+thisNode.trans_fat.get()+thisNode.monosaturated_fat.get()+thisNode.saturated_fat.get()+thisNode.sodium.get()+thisNode.cholesterol.get()+thisNode.complex_carb.get()+thisNode.dietary_fiber.get()+thisNode.sugar.get()+thisNode.added_sugars.get()+thisNode.protein.get()+((thisNode.vitamin_a.get()+thisNode.vitamin_b6.get()+thisNode.vitamin_b12.get()+thisNode.vitamin_e.get()+thisNode.biotin.get()+thisNode.folate.get()+thisNode.calcium.get()+thisNode.iron.get()+thisNode.pantothenic_acid.get()+thisNode.potassium.get()+thisNode.riboflavin.get()+thisNode.vitamin_d.get()+thisNode.thiamin.get()+thisNode.magnesium.get()+thisNode.selenium.get()+thisNode.zinc.get())/100),2)+(thisNode.vitamin_c.get()/10)+(thisNode.vitamin_k.get()/10)</Expression>
@@ -30915,7 +30915,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>x=round(thisNode.burn_amt.get())
@@ -30973,7 +30973,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0</Value>
+							<Value>1</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_burn_before.get()</Expression>
@@ -31001,7 +31001,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_melt.get()</Expression>
@@ -31262,7 +31262,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -31299,7 +31299,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000002e-02</Value>
+							<Value>2.79999999999999971e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -31520,7 +31520,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000006e-01</Value>
+							<Value>2.79999999999999982e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -31767,7 +31767,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>5.00000000000000000e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -31802,7 +31802,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.39999999999999991e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -32091,7 +32091,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.99999999999999989e-01</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -32211,7 +32211,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_melt.get()</Expression>
@@ -33380,7 +33380,7 @@ Flowers- Dehydrate and  wilt</Help>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+00</Value>
+						<Value>1.02000000000000002e+00</Value>
 						<Default>3.00000011920928955e-01</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.LerpLumpySpec.f_lerp_result.get()</Expression>
@@ -33594,7 +33594,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<second>Dot23</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>55</KnobsAge>
+				<KnobsAge>63</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -35850,7 +35850,7 @@ Flowers- Dehydrate and  wilt</Help>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
+						<Value>1.39999999999999986e-02</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_lumpy_mix.f_lerp_result.get()</Expression>
@@ -35927,7 +35927,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<second>Premult3</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>21</KnobsAge>
+				<KnobsAge>37</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -38201,7 +38201,7 @@ ret = y_new
 						<second>Premult4</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>21</KnobsAge>
+				<KnobsAge>23</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -39528,7 +39528,7 @@ ret = y_new
 						<second>Premult5</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>18</KnobsAge>
+				<KnobsAge>22</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -40346,7 +40346,7 @@ ret = y_new
 						<second>Premult1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>22</KnobsAge>
+				<KnobsAge>26</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -40416,7 +40416,7 @@ ret = y_new
 						<second>Lerp_LspecMix</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>30</KnobsAge>
+				<KnobsAge>42</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -40727,7 +40727,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>0.00000000000000000e+00</Value>
+								<Value>1.39999999999999991e+00</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisGroup.lumpy_mix.get()</Expression>
@@ -40831,7 +40831,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>0.00000000000000000e+00</Value>
+								<Value>1.39999999999999986e-02</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>import numpy as np
@@ -41169,7 +41169,7 @@ ret = y_new
 						<second>Lerp1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>2444</KnobsAge>
+				<KnobsAge>2447</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -41262,7 +41262,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>99</Value>
+								<Value>100</Value>
 								<Default>0</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisNode.i_input_range.get()[1]-thisGroup.burn_edges2.get()</Expression>
@@ -42485,7 +42485,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
+						<Value>1</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_melt.get()</Expression>
@@ -42541,7 +42541,7 @@ ret = y_new
 						<second>Transform2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>17</KnobsAge>
+				<KnobsAge>20</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -43991,7 +43991,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>8.99999999999999911e-01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.burn_edges2.get()*3</Expression>
@@ -44000,7 +44000,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>8.99999999999999911e-01</Value>
+						<Value>0.00000000000000000e+00</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.burn_edges2.get()*3</Expression>
@@ -44124,7 +44124,7 @@ ret = y_new
 						<second>Grade8</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>257</KnobsAge>
+				<KnobsAge>258</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -44932,7 +44932,7 @@ ret = y_new
 						<second>Dot8</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>304</KnobsAge>
+				<KnobsAge>305</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -44967,7 +44967,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99900000000000011e-01</Value>
+						<Value>9.98800000000000021e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -44976,7 +44976,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99900000000000011e-01</Value>
+						<Value>9.98800000000000021e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -45026,7 +45026,7 @@ ret = y_new
 						<second>Shuffle2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>105</KnobsAge>
+				<KnobsAge>107</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -45075,7 +45075,7 @@ ret = y_new
 						<second>Lerp_burn_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>2437</KnobsAge>
+				<KnobsAge>2440</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -46241,7 +46241,7 @@ ret = y_new
 						<second>Lerp_grain</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>2440</KnobsAge>
+				<KnobsAge>2443</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -46455,7 +46455,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.99999999999999989e-01</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>(thisGroup.burn_amt2.get()+thisGroup.burn_edges2.get())</Expression>
@@ -46559,7 +46559,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>3.00000000000000006e-03</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -46926,7 +46926,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
+						<Value>1</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_burn_before.get()</Expression>
@@ -46982,7 +46982,7 @@ ret = y_new
 						<second>Erode3_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>23</KnobsAge>
+				<KnobsAge>26</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -47129,7 +47129,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>477</KnobsAge>
+				<KnobsAge>489</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -47222,7 +47222,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>99</Value>
+								<Value>97</Value>
 								<Default>0</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisNode.i_input_range.get()[1]-thisGroup.burn_edges.get()</Expression>
@@ -47324,7 +47324,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>34</Value>
+								<Value>33</Value>
 								<Default>0</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>import numpy as np
@@ -47440,7 +47440,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>1.00000000000000006e-01</Value>
+								<Value>1.19999999999999996e+00</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisGroup.burn_amt.get()</Expression>
@@ -47544,7 +47544,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>9.99199999999999977e-01</Value>
+								<Value>9.90399999999999947e-01</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>import numpy as np
@@ -47956,7 +47956,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>315</KnobsAge>
+				<KnobsAge>321</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -48267,7 +48267,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>1.00000000000000006e-01</Value>
+								<Value>1.19999999999999996e+00</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisGroup.burn_amt.get()</Expression>
@@ -48371,7 +48371,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>1.99800000000000005e-01</Value>
+								<Value>1.97599999999999998e-01</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>import numpy as np
@@ -48583,7 +48583,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>99</Value>
+						<Value>97</Value>
 						<Default>1</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>100-thisGroup.burn_edges.get()</Expression>
@@ -48592,7 +48592,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>99</Value>
+						<Value>97</Value>
 						<Default>1</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>100-thisGroup.burn_edges.get()</Expression>
@@ -48643,7 +48643,7 @@ ret = y_new
 						<second>SeGrain1_before</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>33</KnobsAge>
+				<KnobsAge>35</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -48678,7 +48678,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99900000000000011e-01</Value>
+						<Value>9.98800000000000021e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -48687,7 +48687,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99900000000000011e-01</Value>
+						<Value>9.98800000000000021e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-(thisGroup.burn_amt.get()*.001)</Expression>
@@ -48737,7 +48737,7 @@ ret = y_new
 						<second>Shuffle2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>105</KnobsAge>
+				<KnobsAge>107</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -48849,7 +48849,7 @@ ret = y_new
 						<second>Transform1_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>511</KnobsAge>
+				<KnobsAge>527</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -48898,7 +48898,7 @@ ret = y_new
 						<second>Lerp_burn_2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>394</KnobsAge>
+				<KnobsAge>406</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -48943,7 +48943,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0</Value>
+							<Value>2</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>(thisGroup.burn_amt.get()/2)+(thisGroup.burn_edges.get()/2)</Expression>
@@ -49363,7 +49363,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.03990000000000005e+00</Value>
+						<Value>1.47879999999999989e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_grain_2.f_lerp_result.get()</Expression>
@@ -49431,7 +49431,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>2.00000000000000004e-03</Value>
+						<Value>4.00000000000000008e-02</Value>
 						<Default>5.99999999999999978e-01</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp1_2.f_lerp_result.get()</Expression>
@@ -49571,7 +49571,7 @@ ret = y_new
 						<second>Unpremult2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>1643</KnobsAge>
+				<KnobsAge>1667</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -49616,7 +49616,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>314</KnobsAge>
+				<KnobsAge>320</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -49830,7 +49830,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000006e-01</Value>
+							<Value>1.19999999999999996e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisGroup.burn_amt.get()</Expression>
@@ -49934,7 +49934,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.03990000000000005e+00</Value>
+							<Value>1.47879999999999989e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -50077,7 +50077,7 @@ ret = y_new
 						<second>Lerp_grain_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>394</KnobsAge>
+				<KnobsAge>406</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -50291,7 +50291,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.00000000000000011e-01</Value>
+							<Value>4.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>(thisGroup.burn_amt.get()+thisGroup.burn_edges.get())</Expression>
@@ -50395,7 +50395,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.00000000000000004e-03</Value>
+							<Value>4.00000000000000008e-02</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -52640,7 +52640,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00299999999999989e+00</Value>
+						<Value>1.08400000000000007e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_Grade1Mult.f_lerp_result.get()</Expression>
@@ -52649,7 +52649,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00299999999999989e+00</Value>
+						<Value>1.08400000000000007e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_Grade1Mult.f_lerp_result.get()</Expression>
@@ -52658,7 +52658,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00299999999999989e+00</Value>
+						<Value>1.08400000000000007e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_Grade1Mult.f_lerp_result.get()</Expression>
@@ -52667,7 +52667,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00299999999999989e+00</Value>
+						<Value>1.08400000000000007e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_Grade1Mult.f_lerp_result.get()</Expression>
@@ -52684,7 +52684,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99199999999999977e-01</Value>
+						<Value>9.90399999999999947e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -52693,7 +52693,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99199999999999977e-01</Value>
+						<Value>9.90399999999999947e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -52702,7 +52702,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99199999999999977e-01</Value>
+						<Value>9.90399999999999947e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -52711,7 +52711,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.99199999999999977e-01</Value>
+						<Value>9.90399999999999947e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Lerp_burn_3.f_lerp_result.get()</Expression>
@@ -52800,7 +52800,7 @@ ret = y_new
 						<second>SeGrain1_before</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>1203</KnobsAge>
+				<KnobsAge>1219</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -53509,7 +53509,7 @@ ret = round(y_new,2)
 						<second>Lerp_erode</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>1628</KnobsAge>
+				<KnobsAge>1631</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -53723,7 +53723,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>2.99999999999999989e-01</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisGroup.burn_edges2.get()</Expression>
@@ -53827,7 +53827,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00899999999999990e+00</Value>
+							<Value>1.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -53970,7 +53970,7 @@ ret = y_new
 						<second>Lerp_lumpiness</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>32</KnobsAge>
+				<KnobsAge>38</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -54184,7 +54184,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>5.00000000000000000e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisGroup.lumpy_height.get()</Expression>
@@ -54288,7 +54288,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000000e+00</Value>
+							<Value>1.02000000000000002e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -55509,7 +55509,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
+						<Value>5.99999999999999978e-01</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.lumpy_big_size.get()</Expression>
@@ -55564,7 +55564,7 @@ ret = y_new
 						<second>Unpremult4</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>49</KnobsAge>
+				<KnobsAge>52</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -56710,7 +56710,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>101</KnobsAge>
+				<KnobsAge>107</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -56924,7 +56924,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000006e-01</Value>
+							<Value>2.79999999999999982e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisGroup.burn_edges.get()</Expression>
@@ -57028,7 +57028,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00299999999999989e+00</Value>
+							<Value>1.08400000000000007e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -59408,7 +59408,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>9.96999999999999997e-01</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>1-thisGroup.burn_edges2.get()/100</Expression>
@@ -59485,7 +59485,7 @@ ret = y_new
 						<second>Grade7</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>542</KnobsAge>
+				<KnobsAge>543</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -59582,7 +59582,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -59591,7 +59591,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -59600,7 +59600,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -59609,7 +59609,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -59834,7 +59834,7 @@ ret = y_new
 						<second>Grade3_2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>5441</KnobsAge>
+				<KnobsAge>5445</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -60139,7 +60139,7 @@ ret = y_new
 						<second>Dot1</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>17</KnobsAge>
+				<KnobsAge>19</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -61942,7 +61942,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>21</KnobsAge>
+				<KnobsAge>23</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -73389,7 +73389,7 @@ ret = y_new
 						<second>Dot10</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>300</KnobsAge>
+				<KnobsAge>301</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -73983,7 +73983,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -73992,7 +73992,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -74001,7 +74001,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -74010,7 +74010,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00899999999999990e+00</Value>
+						<Value>1.00000000000000000e+00</Value>
 						<Default>1.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_whitepoint.f_lerp_result.get()</Expression>
@@ -74208,7 +74208,7 @@ ret = y_new
 						<second>Grade3</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>22371</KnobsAge>
+				<KnobsAge>22375</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -75201,7 +75201,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>14</KnobsCount>
+			<KnobsCount>15</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -75232,7 +75232,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0007-crust-alpha.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0001-crust-alpha.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -75274,8 +75274,8 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7</Value>
-					<Default>7</Default>
+					<Value>1</Value>
+					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -75291,8 +75291,8 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>124</Value>
-					<Default>124</Default>
+					<Value>1</Value>
+					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -75308,8 +75308,8 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7</Value>
-					<Default>7</Default>
+					<Value>0</Value>
+					<Default>1</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -75325,7 +75325,24 @@ ret = y_new
 				<item>
 					<Enabled>0</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>0</Value>
+					<Value>-1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeDomainUserEdited</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
 					<Default>0</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -75474,7 +75491,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>34</KnobsAge>
+			<KnobsAge>45</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -76172,101 +76189,6 @@ ret = y_new
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Read1</CacheID>
-		</item>
-		<item>
-			<Plugin_label>Merge33</Plugin_label>
-			<Plugin_script_name>Merge33</Plugin_script_name>
-			<Plugin_id>net.sf.openfx.MergePlugin</Plugin_id>
-			<PythonModule></PythonModule>
-			<PythonModuleVersion>0</PythonModuleVersion>
-			<Plugin_major_version>1</Plugin_major_version>
-			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>3</KnobsCount>
-			<item>
-				<Name>userTextArea</Name>
-				<Type>String</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(over)&lt;/Natron&gt;&lt;/font&gt;</Value>
-					<Default></Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<StringsAnimation>
-					<count>0</count>
-					<item_version>0</item_version>
-				</StringsAnimation>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>A2_channels</Name>
-				<Type>Choice</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-				<UserKnob>0</UserKnob>
-			</item>
-			<Inputs_map>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>
-					<first>A</first>
-					<second>Reformat2</second>
-				</item>
-				<item>
-					<first>A2</first>
-					<second>Clamp3</second>
-				</item>
-			</Inputs_map>
-			<KnobsAge>0</KnobsAge>
-			<MasterNode></MasterNode>
-			<HasRotoContext>0</HasRotoContext>
-			<HasTrackerContext>0</HasTrackerContext>
-			<MultiInstanceParent></MultiInstanceParent>
-			<UserPagesCount>0</UserPagesCount>
-			<PagesCount>3</PagesCount>
-			<name>Controls</name>
-			<name>Node</name>
-			<name>Info</name>
-			<Children>0</Children>
-			<UserComponents>
-				<count>0</count>
-				<item_version>2</item_version>
-			</UserComponents>
-			<CacheID>Merge33</CacheID>
 		</item>
 		<item>
 			<Plugin_label>Reformat2</Plugin_label>
@@ -79296,7 +79218,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>1</Plugin_minor_version>
-			<KnobsCount>8</KnobsCount>
+			<KnobsCount>9</KnobsCount>
 			<item>
 				<Name>MasterContrast</Name>
 				<Type>Color</Type>
@@ -79350,7 +79272,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.93999999999999995e-01</Value>
+					<Value>7.80000000000000027e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -79359,7 +79281,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.93999999999999995e-01</Value>
+					<Value>7.80000000000000027e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -79368,7 +79290,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.93999999999999995e-01</Value>
+					<Value>7.80000000000000027e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -79377,7 +79299,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.93999999999999995e-01</Value>
+					<Value>7.80000000000000027e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -79568,6 +79490,23 @@ ret = y_new
 				</item>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>disableNode</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -79580,7 +79519,7 @@ ret = y_new
 					<second>ColorCorrect3_2</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>1664</KnobsAge>
+			<KnobsAge>1671</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -79872,7 +79811,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>1</Plugin_minor_version>
-			<KnobsCount>11</KnobsCount>
+			<KnobsCount>12</KnobsCount>
 			<item>
 				<Name>NatronOfxParamProcessR</Name>
 				<Type>Bool</Type>
@@ -79950,7 +79889,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.80000000000000027e-01</Value>
+					<Value>8.45999999999999974e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -79959,7 +79898,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.80000000000000027e-01</Value>
+					<Value>8.45999999999999974e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -79968,7 +79907,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.80000000000000027e-01</Value>
+					<Value>8.45999999999999974e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -79977,7 +79916,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.80000000000000027e-01</Value>
+					<Value>8.45999999999999974e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -80168,6 +80107,23 @@ ret = y_new
 				</item>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>disableNode</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -80180,7 +80136,7 @@ ret = y_new
 					<second>ColorCorrect1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>2120</KnobsAge>
+			<KnobsAge>2125</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -80743,7 +80699,7 @@ ret = y_new
 				</item>
 				<item>
 					<first>B</first>
-					<second>Read1_3</second>
+					<second>Reformat1_3_2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>9</KnobsAge>
@@ -80910,7 +80866,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>ColorCorrect3_2</second>
+					<second>Clamp1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -80926,6 +80882,524 @@ ret = y_new
 				<item_version>2</item_version>
 			</UserComponents>
 			<CacheID>Viewer1</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Read4</Plugin_label>
+			<Plugin_script_name>Read4</Plugin_script_name>
+			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>14</KnobsCount>
+			<item>
+				<Name>decodingPluginID</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>fr.inria.openfx.ReadPNG</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(6280-topping-bugs-ladybug.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filename</Name>
+				<Type>InputFile</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>[Project]/../ingredients-db/6280-topping-bugs-ladybug.png</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>firstFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>lastFrame</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>startingTime</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>timeOffset</Name>
+				<Type>Int</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>proxyThreshold</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>customProxyScale</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>filePremult</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>unpremult</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>frameRate</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>2.40000000000000000e+01</Value>
+					<Default>2.40000000000000000e+01</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ParamExistingInstance</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioInputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>sRGB</Value>
+					<Default>sRGB</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>ocioOutputSpace</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>scene_linear</Value>
+					<Default>scene_linear</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>1</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Read4</CacheID>
+		</item>
+		<item>
+			<Plugin_label>Reformat1_3_2</Plugin_label>
+			<Plugin_script_name>Reformat1_3_2</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.Reformat</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>2</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>9</KnobsCount>
+			<item>
+				<Name>reformatType</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>format</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronParamFormatChoice</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>25</Value>
+					<Default>18</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>4096x4096</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>NatronParamFormatSize</Name>
+				<Type>Int</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4096</Value>
+					<Default>200</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4096</Value>
+					<Default>200</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>boxSize</Name>
+				<Type>Int</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>640</Value>
+					<Default>200</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>480</Value>
+					<Default>200</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>boxFixed</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>boxPar</Name>
+				<Type>Double</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>reformatScale</Name>
+				<Type>Double</Type>
+				<Dimension>2</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1.00000000000000000e+00</Value>
+					<Default>1.00000000000000000e+00</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>reformatScaleUniform</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>1</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>0</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>0</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Read1_3</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>8</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Reformat1_3_2</CacheID>
 		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>6</ProjectKnobsCount>
@@ -81033,7 +81507,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Fri Oct 29 16:34:31 2021</Value>
+			<Value>Sat Oct 30 11:25:02 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -81219,12 +81693,12 @@ ret = y_new
 			<Name></Name>
 		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>7</Timeline_current_time>
+	<Timeline_current_time>0</Timeline_current_time>
 	<CreationDate>1622674277116</CreationDate>
 </Project>
 <ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
-		<count>267</count>
+		<count>268</count>
 		<item_version>6</item_version>
 		<item class_id="22" tracking_level="0" version="6">
 			<Name>Merge_all</Name>
@@ -88327,7 +88801,7 @@ ret = y_new
 		<item>
 			<Name>MultiplyMask_2</Name>
 			<X_position>4.99709577973331398e+03</X_position>
-			<Y_position>1.07956553950880743e+03</Y_position>
+			<Y_position>1.05064063122964262e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -88354,8 +88828,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Dot26_2</Name>
-			<X_position>5.68320665957162510e+03</X_position>
-			<Y_position>1.08979442346800397e+03</Y_position>
+			<X_position>5.60872627776720947e+03</X_position>
+			<Y_position>1.00042333134720400e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -88397,7 +88871,7 @@ ret = y_new
 		<item>
 			<Name>Read1_3</Name>
 			<X_position>5.74715034063787425e+03</X_position>
-			<Y_position>7.91846406328918874e+02</Y_position>
+			<Y_position>7.67820476714591223e+02</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -88411,7 +88885,7 @@ ret = y_new
 		<item>
 			<Name>Shuffle7</Name>
 			<X_position>5.92492400179498236e+03</X_position>
-			<Y_position>1.08379442346800397e+03</Y_position>
+			<Y_position>9.94423331347203884e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.000000238e-01</r>
 			<g>2.399939001e-01</g>
@@ -88424,8 +88898,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Reformat1_3</Name>
-			<X_position>6.01209646570968198e+03</X_position>
-			<Y_position>1.00631012350535730e+03</Y_position>
+			<X_position>6.07336258622621608e+03</X_position>
+			<Y_position>9.92620709669689404e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -88452,8 +88926,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read1</Name>
-			<X_position>6.11546517587879407e+03</X_position>
-			<Y_position>1.05779442346800397e+03</Y_position>
+			<X_position>6.20436111545180665e+03</X_position>
+			<Y_position>9.68423331347203998e+02</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -88461,20 +88935,6 @@ ret = y_new
 			<Selected>0</Selected>
 			<Width>1.28000000000000000e+02</Width>
 			<Height>7.80000000000000000e+01</Height>
-			<HasOverlayColor>0</HasOverlayColor>
-			<Children>0</Children>
-		</item>
-		<item>
-			<Name>Merge33</Name>
-			<X_position>5.07636544353919908e+03</X_position>
-			<Y_position>2.18760210496557056e+03</Y_position>
-			<Preview_enabled>0</Preview_enabled>
-			<r>3.000076413e-01</r>
-			<g>3.700007498e-01</g>
-			<b>7.759975791e-01</b>
-			<Selected>0</Selected>
-			<Width>1.04000000000000000e+02</Width>
-			<Height>4.30000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
@@ -88830,8 +89290,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Erode2_3_2</Name>
-			<X_position>5.43109676812555608e+03</X_position>
-			<Y_position>1.08379442346800397e+03</Y_position>
+			<X_position>5.42533089121453668e+03</X_position>
+			<Y_position>1.05064063122964262e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -88844,8 +89304,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Blur6_2_2</Name>
-			<X_position>5.24023245691352258e+03</X_position>
-			<Y_position>1.08379442346800397e+03</Y_position>
+			<X_position>5.23446658000250318e+03</X_position>
+			<Y_position>1.05064063122964262e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>8.000000119e-01</r>
 			<g>5.000076294e-01</g>
@@ -88859,7 +89319,7 @@ ret = y_new
 		<item>
 			<Name>Max1</Name>
 			<X_position>5.75915034063787425e+03</X_position>
-			<Y_position>1.07579442346800397e+03</Y_position>
+			<Y_position>9.86423331347203998e+02</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -88926,17 +89386,45 @@ ret = y_new
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Read4</Name>
+			<X_position>9.88917681890156746e+03</X_position>
+			<Y_position>-3.83643298612929698e+02</Y_position>
+			<Preview_enabled>1</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>6.999923587e-01</g>
+			<b>6.999923587e-01</b>
+			<Selected>0</Selected>
+			<Width>1.28000000000000000e+02</Width>
+			<Height>7.80000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Reformat1_3_2</Name>
+			<X_position>5.75915034063787425e+03</X_position>
+			<Y_position>8.98530872206890649e+02</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>6.999923587e-01</r>
+			<g>3.000076413e-01</g>
+			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="23" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1586 854</Sizes>
+				<Sizes>1581 851</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>641 640</Sizes>
+					<Sizes>659 658</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -88976,10 +89464,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2476</x>
-			<y>-213</y>
-			<w>2476</w>
-			<h>1284</h>
+			<x>-2535</x>
+			<y>-297</y>
+			<w>2468</w>
+			<h>1320</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -88988,9 +89476,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-4.39825655172413826e+03</zoomLeft>
-				<zoomBottom>-8.19200000000000728e+01</zoomBottom>
-				<zoomFactor>8.85009765625000000e-02</zoomFactor>
+				<zoomLeft>-1.37474284575115871e+03</zoomLeft>
+				<zoomBottom>8.32913126220648564e+02</zoomBottom>
+				<zoomFactor>2.07146890346641271e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>2.56000000000000000e+02</Left>
@@ -89008,7 +89496,7 @@ ret = y_new
 				<Channels>RGB</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
+				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
 				<CompositingOP>0</CompositingOP>
 				<LeftBound>0</LeftBound>
 				<RightBound>7</RightBound>
@@ -89034,18 +89522,9 @@ ret = y_new
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>10</count>
+		<count>1</count>
 		<item_version>0</item_version>
-		<item>Backdrop1</item>
-		<item>ColorCorrect1</item>
-		<item>MultiplyMask_2</item>
-		<item>ColorCorrect1_4</item>
-		<item>Blur6_2_2</item>
-		<item>Erode2_3_2</item>
-		<item>Max1</item>
-		<item>Read1_3</item>
-		<item>Read1</item>
-		<item>Reformat2</item>
+		<item>Bake_default</item>
 	</OpenedPanels>
 	<ScriptEditorInput></ScriptEditorInput>
 	<NumPyPanels>0</NumPyPanels>

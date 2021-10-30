@@ -68,46 +68,145 @@ auto-lint:
 # Deploy
 
 # Tests
+
+test-recipe-gen:
+	@echo ☢️ Run Recipe Generator for testing
+	poetry run python app/core/test/recipe_gen.py -r $(id) -c $(num)
+
 test-natron:
 	@echo ☢️ Test Natron
-	poetry run python app/core/renderer.py -r $(realpath .)/data/sample_recipe.json -f 111
+	poetry run python app/core/renderer.py -r $(realpath .)/ -f 111
 
-test-natron-all:
-	@echo ☢️ Test Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order.json -f 1111
-
-test-natron-box:
-	@echo ☢️ Run Box Paper Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_box_paper.json -f 1
-
-test-natron-paper:
-	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_paper.json -f 1
-
-test-natron-crust:
-	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_crust.json -f 1
-
-test-natron-sauce:
-	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_sauce.json -f 1
-
-test-natron-cheese:
-	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_cheese.json -f 1
-
-test-natron-topping:
-	@echo ☢️ Run Cheese Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_topping.json -f 1
-
-test-natron-extra:
-	@echo ☢️ Test Natron Extra
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_extra.json -f 1
 
 test-natron-mvp:
 	@echo ☢️ Run MVP Natron
 	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 1
 
-test-recipe-gen:
-	@echo ☢️ Run Recipe Generator for testing
-	poetry run python app/core/test/recipe_gen.py -r $(id) -c $(num)
+
+test-natron-mvp:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 1
+
+test-0000:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0000_Random.json -f 0
+
+test-0001:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0003_Random.json -f 1
+	
+test-0001:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0003_Random.json -f 1
+	
+test-0002:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0002_Random.json -f 2
+
+test-0003:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0003_Random.json -f 3
+	
+test-0004:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0004_Random.json -f 4
+
+test-0005:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0005_Random.json -f 5
+
+test-0006:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0006_Random.json -f 6
+
+test-0007:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0007_Random.json -f 7
+
+test-0008:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0008_Random.json -f 8
+	
+test-0009:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0009_Random.json -f 9
+
+test-0010:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0010_Random.json -f 10
+
+test-0011:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0011_Random.json -f 11
+
+test-0012:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0012_Random.json -f 12
+	
+test-0013:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0013_Random.json -f 13
+	
+test-0014:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0014_Random.json -f 14
+
+test-0015:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0015_Random.json -f 15
+
+test-0016:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0016_Random.json -f 16
+
+test-0017:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0017_Random.json -f 17
+	
+test-0018:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0018_Random.json -f 18
+
+test-0019:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0019_Random.json -f 19
+
+test-0020:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0020_Random.json -f 20
+
+test-0021:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0021_Random.json -f 21
+
+test-0022:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0022_Random.json -f 22
+
+test-0023:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0023_Random.json -f 23
+	
+test-0024:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0024_Random.json -f 24
+
+test-0025:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0025_Random.json -f 25
+
+test-0026:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0026_Random.json -f 26
+
+test-0027:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0027_Random.json -f 27
+	
+test-0028:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0028_Random.json -f 28
+
+test-0029:
+	@echo ☢️ Run MVP Natron
+	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0029_Random.json -f 29

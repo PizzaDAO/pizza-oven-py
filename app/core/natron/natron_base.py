@@ -222,12 +222,26 @@ class NatronBase(object):
         if switch_id is None:
             switch_id = self.unique_id
 
-        node = self.natron.getNode("Bake_%s" % switch_id)
+        node_name = "Bake"
+        node = self.natron.getNode(node_name)
         if node is None:
-            node = self.natron.getNode("Bake_default")
+            node_name = "Bake_default"
+            node = self.natron.getNode(node_name)
         if node is None:
-            print("setBake: could not find node: Bake_%s" % switch_id)
+            node_name = "Bake_" + str(switch_id)
+            node = self.natron.getNode(node_name)
+        if node is None:
+            print("setBake: could not find any nodes. trying: Bake_%s" % switch_id)
             return
+        else:
+            print(f"Using bake node: {node_name}")
+
+        # node = self.natron.getNode("Bake_%s" % switch_id)
+        # if node is None:
+        #     node = self.natron.getNode("Bake_default")
+        # if node is None:
+        #     print("setBake: could not find node: Bake_%s" % switch_id)
+        #     return
 
         if self.potassium is not None:
             param = node.getParam("do_weld")
