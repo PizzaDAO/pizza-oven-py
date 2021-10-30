@@ -6,6 +6,7 @@ from app.models.recipe import (
     RecipeInstructions,
     ScatterType,
     ScopedIngredient,
+    rarity_as_string,
 )
 from app.models.prep import (
     KitchenOrder,
@@ -58,10 +59,17 @@ def select_from_variants(
 
     variants = sort_by_rarity(variants, "variant")
 
-    freq = makeDistribution(variants)
+    freq = makeDistribution(variants, "variant")
 
     # select the variants based on scope count
     instance_count = round(select_value(random_seed, nonce, scope.scope.emission_count))
+
+    # Log for Debug
+    # for i in range(0, len(variants)):
+    #     ingredient = variants[i]
+    #     f = freq[i]
+    #     var = rarity_as_string(ingredient.ingredient.variant_rarity)
+    #     print(f"variant rarity: {ingredient.ingredient.unique_id} - {var} -- {f}")
 
     instances = []
     for i in range(instance_count):
@@ -69,6 +77,7 @@ def select_from_variants(
 
         instances.append(variants[index])
 
+        # print(f"selecting variant: {index} in list of {len(variants)} variants")
     return instances
 
 
@@ -78,14 +87,24 @@ def ingredient_with_rarity(
 
     sorted = sort_by_rarity(ingredients, "topping")
 
-    freq = makeDistribution(sorted)
+    freq = makeDistribution(sorted, "topping")
+
+    # Leaving this in place in case more debug is required - It prints out the rarity distribution
+    # for i in range(0, len(sorted)):
+    #     ingredient = sorted[i]
+    #     f = freq[i]
+    #     ing = rarity_as_string(ingredient.ingredient.ingredient_rarity)
+    #     var = rarity_as_string(ingredient.ingredient.variant_rarity)
+    #     print(f"{ingredient.ingredient.unique_id} -- {ing}---{f}    {var}")
 
     index = random_weighted_index(random_seed, nonce, 1, freq)
+
+    # print(f"CHOSE INDEX: {index}  out of {len(sorted)} ingredients")
 
     return sorted[index]
 
 
-def makeDistribution(options: List[ScopedIngredient]):
+def makeDistribution(options: List[ScopedIngredient], filter: str):
     """Create a list of relative weight values"""
 
     oven_prep = get_oven_params()
@@ -93,7 +112,10 @@ def makeDistribution(options: List[ScopedIngredient]):
     weight_sum = 0
     missing_rarity = False
     for item in options:
-        weight = weight_for_rarity(item.ingredient.variant_rarity, oven_prep)
+        if filter == "variant":
+            weight = weight_for_rarity(item.ingredient.variant_rarity, oven_prep)
+        else:
+            weight = weight_for_rarity(item.ingredient.ingredient_rarity, oven_prep)
         if weight == 0:
             weight = weight_for_rarity(
                 Rarity.common, oven_prep
@@ -107,7 +129,10 @@ def makeDistribution(options: List[ScopedIngredient]):
         )
 
     for item in options:
-        weight = weight_for_rarity(item.ingredient.variant_rarity, oven_prep)
+        if filter == "variant":
+            weight = weight_for_rarity(item.ingredient.variant_rarity, oven_prep)
+        else:
+            weight = weight_for_rarity(item.ingredient.ingredient_rarity, oven_prep)
         if weight == 0:
             weight = weight_for_rarity(Rarity.common, oven_prep)
         weight_percent = 100 * (weight / weight_sum)

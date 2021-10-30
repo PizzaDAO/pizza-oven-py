@@ -15,6 +15,7 @@ __all__ = [
     "ScatterType",
     "classification_as_string",
     "classification_from_string",
+    "rarity_as_string",
 ]
 
 # these types will probably change, just abstracting them for now
@@ -126,6 +127,24 @@ class Rarity(IntFlag):
     epic = 4
     grail = 5
     undefined = 6
+
+
+def rarity_as_string(rarity: Rarity) -> str:
+    r = "undefined"
+    if rarity == Rarity.common:
+        r = "common"
+    if rarity == Rarity.uncommon:
+        r = "uncommon"
+    if rarity == Rarity.rare:
+        r = "rare"
+    if rarity == Rarity.superrare:
+        r = "superrare"
+    if rarity == Rarity.epic:
+        r = "epic"
+    if rarity == Rarity.grail:
+        r = "grail"
+
+    return r
 
 
 class RecipeInstructions(Base):

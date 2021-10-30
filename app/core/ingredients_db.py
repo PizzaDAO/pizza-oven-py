@@ -323,6 +323,7 @@ def parse_ingredient(row) -> ScopedIngredient:
     image_uri = row["filename_paste"] + ".png"
     mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
     variant_rarity = map_rarity(row["variant rarity"])
+    ingredient_rarity = map_rarity(row["topping rarity"])
     variant_id = row["unique_id"][3:4]
 
     try:
@@ -338,7 +339,7 @@ def parse_ingredient(row) -> ScopedIngredient:
         variant_id=variant_id,
         index=1,
         name=row["topping"],
-        ingredient_rarity=Rarity.common,
+        ingredient_rarity=ingredient_rarity,
         variant_rarity=variant_rarity,
         classification=classification,
         category=subcategory if subcategory is not None else category,
@@ -420,6 +421,8 @@ def has_value(label: str, row) -> bool:
 
 def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     min_size = inches - variance
+    if(min_size <= 0):
+        min_size = inches
     max_size = inches + variance
     # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
     min_scale = min_size / (18 / (3072 / pixel_size))
