@@ -44,6 +44,10 @@ def publish_order_result(
     pizza_image_hash = set_pizza_image(pizza)
     pizza.assets["IPFS_HASH"] = pizza_image_hash
 
+    # publish the pizza image alpha channel
+    image_alpha_hash = set_image_alpha(pizza)
+    pizza.assets["ALPHA_HASH"] = image_alpha_hash
+
     # publish the pizza blockchain metadata
     metadata = to_blockchain_metadata(render_task.job_id, recipe, kitchen_order, pizza)
     metadata_hash = set_metadata(metadata)
@@ -68,6 +72,7 @@ def publish_order_result(
     print(f"{render_task.job_id} - truncated_metadata_len: {len(truncated_metadata)}")
     print("\n --------- YOUR PIZZA IS COMPLETE ---------- \n")
     print(f"\n    ipfs image: {metadata.image} \n")
+    print(f"\n    ipfs crust_alpha: {image_alpha_hash} \n")
     print("\n ------------------------------------------- \n")
 
     # build the response object

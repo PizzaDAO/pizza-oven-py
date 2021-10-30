@@ -234,7 +234,7 @@ class NatronBase(object):
             print("setBake: could not find any nodes. trying: Bake_%s" % switch_id)
             return
         else:
-            print(f"Using bake node: {node_name}")
+            print("Using bake node: %s" % node_name)
 
         # node = self.natron.getNode("Bake_%s" % switch_id)
         # if node is None:
