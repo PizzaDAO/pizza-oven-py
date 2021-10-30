@@ -54,10 +54,10 @@ async def orderPizza(
         )
 
     response = OrderPizzaResponse(jobRunID=data.id, pending=True)
-    # if len(background_tasks.tasks) <= 2:
-    #     print("scheduling task on background thread")
-    #     background_tasks.add_task(run_render_task, data.id)
-    run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+    background_tasks.add_task(
+        run_render_jobs, settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S
+    )
+    # run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
     return response
 
 
