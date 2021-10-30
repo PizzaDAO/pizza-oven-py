@@ -39,6 +39,7 @@ __all__ = [
     "get_pizza",
     "set_pizza",
     "set_pizza_image",
+    "set_image_alpha",
     "get_metadata_from_ipfs",
     "get_metadata_from_storage",
     "set_metadata",
@@ -311,6 +312,22 @@ def set_pizza(pizza: HotPizza) -> str:
 
 def set_pizza_image(pizza: HotPizza) -> str:
     file_path = pizza.assets["IMAGE_PATH"]
+    if settings.IPFS_MODE == IPFSMode.remote:
+        print("pinning using local node")
+        with IPFSSession(settings.IPFS_NODE_API) as session:
+            return session.pin_resource(file_path)
+    elif settings.IPFS_MODE == IPFSMode.pinata:
+        print("pinning using pinata")
+        return PinataPy(
+            settings.PINATA_API_KEY, settings.PINATA_API_SECRET
+        ).pin_file_to_ipfs(file_path)["IpfsHash"]
+    else:
+        print("pinning not implemented")
+        return ""
+
+
+def set_image_alpha(pizza: HotPizza) -> str:
+    file_path = pizza.assets["ALPHA_PATH"]
     if settings.IPFS_MODE == IPFSMode.remote:
         print("pinning using local node")
         with IPFSSession(settings.IPFS_NODE_API) as session:

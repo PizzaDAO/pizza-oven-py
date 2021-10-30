@@ -528,6 +528,9 @@ class Renderer:
         with open(kitchen_order_file_path, "w") as kitchen_order_file:
             kitchen_order_file.write(order.json())
 
+        # Get the crusta alpha - using name convention here rather than looking for the file
+        image_alpha_file = str(order.token_id) + "-crust-alpha.png"
+
         # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
         # note the IPFS id probably isnt populated in this function but instead by the caller
@@ -539,8 +542,10 @@ class Renderer:
             assets={
                 "BLOB": "the binary representation of the pizza",
                 "IMAGE_PATH": os.path.join(output_dir, output_file),
+                "ALPHA_PATH": os.path.join(output_dir, image_alpha_file),
                 "ORDER_PATH": kitchen_order_file_path,
                 "IPFS_HASH": "filled_in_by_calling_set_metadata",
+                "ALPHA_HASH": "filled_in_by_calling_set_image_alpha",
             },
         )
 
