@@ -30,6 +30,8 @@ class PizzaOrder(Base):
     """the ipfs hash of the metadata"""
     order: str
     """the ipfs hash of the order"""
+    pizza: str
+    """the ipfs hash of the pizza"""
 
 
 class OrderPizzaRequest(Base):
