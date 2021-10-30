@@ -51,6 +51,7 @@ class SimpleRenderer:
                 w = int(image.width * prep.scale)
                 h = int(image.height * prep.scale)
                 newsize = (w, h)
+
                 image = image.resize(newsize, Image.BICUBIC)
                 x = int((base.width - image.width) / 2)
                 y = int((base.height - image.height) / 2)
@@ -82,9 +83,12 @@ class SimpleRenderer:
                         except Exception as e:
                             print("skipping image... can't find " + filename)
 
-                print("pasting: " + filename)
+                
                 # Cale image based on 1024 pixel dimension
                 n = int(1024 * prep.scale)
+                # last minute defense against negative scale values
+                if n <= 0:
+                    n = 125
                 newsize = (n, n)
                 scaled = image.resize(newsize, Image.BICUBIC)
                 # place image in canvas and adjust for new width and height - centered

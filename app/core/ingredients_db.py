@@ -420,6 +420,8 @@ def has_value(label: str, row) -> bool:
 
 def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     min_size = inches - variance
+    if(min_size <= 0):
+        min_size = inches
     max_size = inches + variance
     # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
     min_scale = min_size / (18 / (3072 / pixel_size))
