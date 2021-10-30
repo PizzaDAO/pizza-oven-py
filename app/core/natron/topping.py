@@ -20,6 +20,8 @@ class Topping(NatronBase):
             image_uri = item["image_uri"]
             self._load_image(image_uri, index)
 
+        self._setBake()
+
     # def _load_json_data(self, env_var):
     #     """Override for depth swap JSON"""
 
