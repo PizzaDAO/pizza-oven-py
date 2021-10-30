@@ -63,12 +63,20 @@ def select_from_variants(
     # select the variants based on scope count
     instance_count = round(select_value(random_seed, nonce, scope.scope.emission_count))
 
+    # Log for Debug
+    # for i in range(0, len(variants)):
+    #     ingredient = variants[i]
+    #     f = freq[i]
+    #     var = rarity_as_string(ingredient.ingredient.variant_rarity)
+    #     print(f"variant rarity: {ingredient.ingredient.unique_id} - {var} -- {f}")
+
     instances = []
     for i in range(instance_count):
         index = random_weighted_index(random_seed, nonce, i, freq)
 
         instances.append(variants[index])
 
+        # print(f"selecting variant: {index} in list of {len(variants)} variants")
     return instances
 
 
@@ -81,6 +89,8 @@ def ingredient_with_rarity(
     freq = makeDistribution(sorted)
 
     index = random_weighted_index(random_seed, nonce, 1, freq)
+
+    # print(f"CHOSE INDEX: {index}  out of {len(sorted)} ingredients")
 
     return sorted[index]
 
