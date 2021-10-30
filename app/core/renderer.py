@@ -529,7 +529,8 @@ class Renderer:
             kitchen_order_file.write(order.json())
 
         # Get the crusta alpha - using name convention here rather than looking for the file
-        image_alpha_file = str(order.token_id) + "-crust-alpha.png"
+        formatted_id = str(self.frame).zfill(4)
+        image_alpha_file = formatted_id + "-crust-alpha.png"
 
         # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
