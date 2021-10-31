@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List#, Dict
 from itertools import chain
 
 from app.models.recipe import *
@@ -9,7 +9,7 @@ from app.models.pizza import (
     IngredientMetadata,
     NutritionMetadata,
     ERC721OpenSeaMetadataAttribute,
-    ERC721OpenSeaMetadataBoostAttribute,
+    #ERC721OpenSeaMetadataBoostAttribute,
 )
 
 
@@ -19,10 +19,17 @@ def to_blockchain_metadata(
     """create metadata from the recipe, order, and pizza render to make blockchain metadata"""
     ingredients: List[IngredientMetadata] = []
     attributes: List[ERC721OpenSeaMetadataAttribute] = []
-    boost_attributes: List[ERC721OpenSeaMetadataBoostAttribute] = []
-    category_count: List[Dict] = []
+    #boost_attributes: List[ERC721OpenSeaMetadataBoostAttribute] = []
+    #category_count: List[Dict] = []
 
-    for (_, value) in order.base_ingredients.items():
+    attributes.append(
+        ERC721OpenSeaMetadataAttribute(
+                trait_type="Pizza Recipe",
+                value=recipe.name,
+            )
+    )
+
+    for (key, value) in order.base_ingredients.items():
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
@@ -40,12 +47,12 @@ def to_blockchain_metadata(
         )
         attributes.append(
             ERC721OpenSeaMetadataAttribute(
-                trait_type=value.ingredient.category,
-                value=value.ingredient.name,
+                trait_type=value.ingredient.topping_class,
+                value=value.ingredient.pretty_name,
             )
         )
 
-    for (_, value) in order.layers.items():
+    for (key, value) in order.layers.items():
         ingredients.append(
             IngredientMetadata(
                 name=value.ingredient.name,
@@ -59,30 +66,36 @@ def to_blockchain_metadata(
                         value=value.ingredient.name,
                     )
                 ],
+            )
+        )
+        attributes.append(
+            ERC721OpenSeaMetadataAttribute(
+                trait_type=value.ingredient.topping_class,
+                value=value.ingredient.pretty_name,
             )
         )
         """ Add topping catgory count if not exists, otherwise increment count """
-        if value.ingredient.category not in map(
-            lambda c: c["trait_type"], category_count
-        ):
-            category_count.append(
-                dict(
-                    display_type="boost_number",
-                    trait_type=value.ingredient.category,
-                    value=1,
-                )
-            )
-        else:
-            for item in category_count:
-                if item["trait_type"] == value.ingredient.category:
-                    item["value"] += 1
-        attributes.append(
-            ERC721OpenSeaMetadataAttribute(
-                trait_type=value.ingredient.category,
-                value=value.ingredient.name,
-            )
-        )
-    print(boost_attributes)
+        #if value.ingredient.category not in map(
+        #    lambda c: c["trait_type"], category_count
+        #):
+        #    category_count.append(
+        #        dict(
+        #            display_type="boost_number",
+        #            trait_type=value.ingredient.category,
+        #            value=1,
+        #        )
+        #    )
+        #else:
+        #    for item in category_count:
+        #        if item["trait_type"] == value.ingredient.category:
+        #            item["value"] += 1
+        #attributes.append(
+        #    ERC721OpenSeaMetadataAttribute(
+        #        trait_type=value.ingredient.category,
+        #        value=value.ingredient.name,
+        #    )
+        #)
+    #print(boost_attributes)
     ipfs_hash = pizza.assets["IPFS_HASH"]
     metadata = RarePizzaMetadata(
         job_id=job_id,
@@ -98,7 +111,8 @@ def to_blockchain_metadata(
         baking_temp_in_celsius=order.instructions.baking_temp_in_celsius,
         baking_time_in_minutes=order.instructions.baking_time_in_minutes,
         ingredients=ingredients,
-        attributes=list(chain(attributes, boost_attributes, category_count)),
+        attributes=attributes,
+        #attributes=list(chain(attributes, boost_attributes, category_count)),
     )
     print(metadata.attributes)
     return metadata
