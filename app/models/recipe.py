@@ -225,6 +225,8 @@ class Ingredient(Base):
     variant_rarity: Rarity
     classification: Classification  # - topping
     category: str
+    topping_class: str = ""
+    pretty_name: str = ""
     """
     categories can be used to group elements together
     so that only one of each category will show up on a pizza
