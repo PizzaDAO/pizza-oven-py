@@ -2,6 +2,8 @@ from typing import Dict, Any, Optional, Tuple, List
 import os.path
 import json
 
+from PIL import Image, ImageOps
+
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -404,8 +406,19 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
                 # force no scatter type here fir base and lastchance
                 scope.scatter_types = [ScatterType.none]
             else:
+                # Default to 1024
+                topping_pixel_size = TOPPING_PIXEL_SIZE
+
+                # Check the size of the image, set to the max of width or height
+                if has_value("filename_paste", row):
+                    with Image.open(os.path.join(
+                        settings.LOCAL_INGREDIENTS_DB_PATH, row["filename_paste"]
+                    )) as topping_image:
+                        width, height = topping_image.size
+                        topping_pixel_size = max(width, height)
+
                 scope.particle_scale = get_scale_values(
-                    inches, inch_variance, TOPPING_PIXEL_SIZE
+                    inches, inch_variance, topping_pixel_size
                 )
 
     return scope
