@@ -319,6 +319,8 @@ def parse_ingredient(row) -> ScopedIngredient:
 
     category, subcategory = parse_category_words(row["category"])
     classification = classification_from_string(category)
+    topping_class = row["topping_class"]
+    pretty_name = row["pretty_name"]
 
     image_uri = row["filename_paste"] + ".png"
     mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
@@ -342,6 +344,8 @@ def parse_ingredient(row) -> ScopedIngredient:
         ingredient_rarity=ingredient_rarity,
         variant_rarity=variant_rarity,
         classification=classification,
+        topping_class=topping_class,
+        pretty_name=pretty_name,
         category=subcategory if subcategory is not None else category,
         attributes={},
         nutrition=nutrition,
