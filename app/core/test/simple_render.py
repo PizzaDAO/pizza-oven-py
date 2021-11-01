@@ -41,7 +41,11 @@ class SimpleRenderer:
         base = Image.new(mode="RGB", size=(3072, 3072), color=(125, 125, 125))
         # iterate through each the base ingredients and render
         for (_, ingredient) in order.base_ingredients.items():
-            filename = ingredient.ingredient.image_uris["filename"]
+            instance = ingredient.instances[0]
+            filename = instance.image_uri
+            if not filename:
+                filename = ingredient.ingredient.image_uris["filename"]
+
             file = os.path.join(images_db, filename)
             print("pasting: " + filename)
             try:
@@ -83,7 +87,6 @@ class SimpleRenderer:
                         except Exception as e:
                             print("skipping image... can't find " + filename)
 
-                
                 # Cale image based on 1024 pixel dimension
                 n = int(1024 * prep.scale)
                 # last minute defense against negative scale values

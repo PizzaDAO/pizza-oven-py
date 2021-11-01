@@ -47,8 +47,8 @@ class OvenToppingParams(Base):
     rarity_weight_uncommon: int = 700
     rarity_weight_rare: int = 250
     rarity_weight_superrare: int = 100
-    rarity_weight_epic: int = 40
-    rarity_weight_grail: int = 5
+    rarity_weight_epic: int = 50
+    rarity_weight_grail: int = 25
 
     lastchance_occurance_percentage: int = 20
 
@@ -59,7 +59,7 @@ class OvenToppingParams(Base):
     scatter_center_y: int = 1536
 
     # circumference beyond which instances are pulled back to center
-    prevent_overflow_control_diameter: int = 2650
+    prevent_overflow_control_diameter: int = 2900
 
     # Hero
     hero_random_offset_x: int = 0

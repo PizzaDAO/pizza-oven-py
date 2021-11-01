@@ -171,8 +171,8 @@ def select_ingredients(
                     chosen_ids.append(ingredient_id)
 
                     print(
-                        "We chose %s for the %s"
-                        % (reduced_dict[identifier].ingredient.name, key)
+                        "We chose %s(%s) for the %s"
+                        % (reduced_dict[identifier].ingredient.name, ingredient_id, key)
                     )
             # Re-order the layer dict, sorted by ingredient ID - lower on the bottom
             # rememeber: reduced_dict contains key/value pairs in the form of "topping0":MadeIngredient
@@ -223,7 +223,6 @@ def select_prep(
     seed: int, nonce: Counter, scope: ScopedIngredient, oven_params: OvenToppingParams
 ) -> MadeIngredient:
     """select the scalar values for the ingredient"""
-
     # now create a list of instances made of all the variants for a given ingredient
     id = scope.ingredient.ingredient_id
     # A list of ingredients filtered as variants available for a topping - with rarity
@@ -242,7 +241,7 @@ def select_prep(
             ingredient = selected_variants[0]
             scale = ingredient.scope.particle_scale[0]
             rotation = round(select_value(seed, nonce, ingredient.scope.rotation))
-            
+
             if ingredient.ingredient.classification == Classification.lastchance:
                 translation = (3072 / 2, 3072 / 2)
 

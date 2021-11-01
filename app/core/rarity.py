@@ -95,7 +95,8 @@ def ingredient_with_rarity(
     #     f = freq[i]
     #     ing = rarity_as_string(ingredient.ingredient.ingredient_rarity)
     #     var = rarity_as_string(ingredient.ingredient.variant_rarity)
-    #     print(f"{ingredient.ingredient.unique_id} -- {ing}---{f}    {var}")
+    #     na = ingredient.ingredient.name
+    #     print(f"{ingredient.ingredient.unique_id} -- {na} -- {ing}---{f}    {var}")
 
     index = random_weighted_index(random_seed, nonce, 1, freq)
 
