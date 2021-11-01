@@ -443,7 +443,7 @@ class TreeRing(Scatter):
         # larger instances should have larger radius to accmodate
         scaled_radius = instance_scale * (max_radius - min_radius)
         radius = min_radius + scaled_radius
-        radius = 3372 / 2
+
         # if we have a small ingredient, let the ring change in diameter, there should be room
         variance = 1 - instance_scale
         if variance > self.oven_params.treering_variance_threshold:

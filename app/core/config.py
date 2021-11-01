@@ -47,8 +47,8 @@ class OvenToppingParams(Base):
     rarity_weight_uncommon: int = 700
     rarity_weight_rare: int = 250
     rarity_weight_superrare: int = 100
-    rarity_weight_epic: int = 40
-    rarity_weight_grail: int = 5
+    rarity_weight_epic: int = 50
+    rarity_weight_grail: int = 25
 
     lastchance_occurance_percentage: int = 20
 
