@@ -223,7 +223,6 @@ def select_prep(
     seed: int, nonce: Counter, scope: ScopedIngredient, oven_params: OvenToppingParams
 ) -> MadeIngredient:
     """select the scalar values for the ingredient"""
-    print("SELECT PREP NOW")
     # now create a list of instances made of all the variants for a given ingredient
     id = scope.ingredient.ingredient_id
     # A list of ingredients filtered as variants available for a topping - with rarity
