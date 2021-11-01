@@ -90,8 +90,10 @@ class Scatter:
 
             # if an instance is too far, reign it in
             if edge_distance > inner_radius:
-                fall_off = edge_distance - inner_radius
-                preferred_distance_from_center = inner_radius - fall_off
+                # fall_off = edge_distance - inner_radius
+                preferred_distance_from_center = inner_radius - (
+                    (instance.scale * 1024) / 2
+                )
                 angle = atan2((y2 - y1), (x2 - x1))
                 tx = x1 + (preferred_distance_from_center * cos(angle))
                 ty = y1 + (preferred_distance_from_center * sin(angle))
@@ -441,7 +443,7 @@ class TreeRing(Scatter):
         # larger instances should have larger radius to accmodate
         scaled_radius = instance_scale * (max_radius - min_radius)
         radius = min_radius + scaled_radius
-
+        radius = 3372 / 2
         # if we have a small ingredient, let the ring change in diameter, there should be room
         variance = 1 - instance_scale
         if variance > self.oven_params.treering_variance_threshold:
@@ -539,4 +541,4 @@ class RandomScatter(Scatter):
         x = random_radius * cos(random_angle)
         y = random_radius * sin(random_angle)
 
-        return (x,y)
+        return (x, y)

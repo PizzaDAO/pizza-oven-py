@@ -59,7 +59,7 @@ class OvenToppingParams(Base):
     scatter_center_y: int = 1536
 
     # circumference beyond which instances are pulled back to center
-    prevent_overflow_control_diameter: int = 2650
+    prevent_overflow_control_diameter: int = 2900
 
     # Hero
     hero_random_offset_x: int = 0
