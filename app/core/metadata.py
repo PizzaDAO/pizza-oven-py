@@ -12,6 +12,29 @@ from app.models.pizza import (
     #ERC721OpenSeaMetadataBoostAttribute,
 )
 
+def make_description(recipe, base, layers):
+    desc = f"A delicious {recipe} pizza."
+    desc += f" A {base['crust0'].ingredient.pretty_name} with {base['sauce0'].ingredient.pretty_name}"
+    desc += f" covered with {base['cheese0'].ingredient.pretty_name} and smothered with "
+
+    # handle toppings
+    toppings = layers.items()
+    numToppings = len(toppings)
+    for i, key in enumerate(layers.keys()):
+        desc += layers[key].ingredient.pretty_name
+        if i == numToppings - 2:
+            desc += " and "  
+        elif i == numToppings - 1:
+            desc += ""
+        else:
+            desc += ", "
+
+    # append box and paper
+    desc += f", all carefully packed in a {base['box0'].ingredient.pretty_name}"
+    desc += f" with {base['paper0'].ingredient.pretty_name}! That's amore!"
+
+    # done
+    return desc
 
 def to_blockchain_metadata(
     job_id: str, recipe: Recipe, order: KitchenOrder, pizza: HotPizza
@@ -19,6 +42,7 @@ def to_blockchain_metadata(
     """create metadata from the recipe, order, and pizza render to make blockchain metadata"""
     ingredients: List[IngredientMetadata] = []
     attributes: List[ERC721OpenSeaMetadataAttribute] = []
+    toppings: List[str] =[]
     #boost_attributes: List[ERC721OpenSeaMetadataBoostAttribute] = []
     #category_count: List[Dict] = []
 
@@ -45,12 +69,13 @@ def to_blockchain_metadata(
                 ],
             )
         )
-        attributes.append(
-            ERC721OpenSeaMetadataAttribute(
-                trait_type=value.ingredient.topping_class,
-                value=value.ingredient.pretty_name,
+        if str(value.ingredient.topping_class) is not "variant":
+            attributes.append(
+                ERC721OpenSeaMetadataAttribute(
+                    trait_type=value.ingredient.topping_class,
+                    value=value.ingredient.pretty_name,
+                )
             )
-        )
 
     for (key, value) in order.layers.items():
         ingredients.append(
@@ -96,12 +121,15 @@ def to_blockchain_metadata(
         #    )
         #)
     #print(boost_attributes)
+    print(order.base_ingredients.keys())
+    print(order.layers.keys())
+    desc = make_description(recipe.name, order.base_ingredients, order.layers)
     ipfs_hash = pizza.assets["IPFS_HASH"]
     metadata = RarePizzaMetadata(
         job_id=job_id,
         token_id=order.token_id,
         name=f"Rare Pizza #{order.token_id}",
-        description=f"A delicious {recipe.name} pizza. That's amore!",
+        description=desc,
         rarity_level=recipe.rarity_level,
         random_seed=order.random_seed,
         image=f"ipfs://{ipfs_hash}",
