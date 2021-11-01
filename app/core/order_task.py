@@ -363,7 +363,6 @@ def run_render_jobs(delay_in_s: int = 5):
         if len(tasks) == 0:
             print("run_render_jobs: no tasks, stop listening")
             is_processing = False
-            return
 
         for task in tasks:
             # only schedule like 3
@@ -393,14 +392,15 @@ def run_render_jobs(delay_in_s: int = 5):
                 time.sleep(delay_in_s)
 
         try:
-            timeout = settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS * 60
+            timeout = settings.RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS
 
             # process results as they come in
-            for future in as_completed(futures, timeout=timeout):
-                if future.exception():
-                    print("run_render_jobs: task failed")
-                if future.result():
-                    print("run_render_jobs: task suceeded")
+            if len(futures) > 0:
+                for future in as_completed(futures, timeout=timeout):
+                    if future.exception():
+                        print("run_render_jobs: task failed")
+                    if future.result():
+                        print("run_render_jobs: task suceeded")
 
         except Exception as error:
             print(error)
