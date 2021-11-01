@@ -363,6 +363,7 @@ def run_render_jobs(delay_in_s: int = 5):
         if len(tasks) == 0:
             print("run_render_jobs: no tasks, stop listening")
             is_processing = False
+            return  # TODO: continue listening in the background after job queue is empty
 
         for task in tasks:
             # only schedule like 3
