@@ -14,6 +14,7 @@ from app.models.recipe import Rarity
 from app.models.auth_tokens import GSheetsToken
 
 from app.core.repository import get_gsheets_token, set_gsheets_token, get_oven_params
+from PIL import Image
 
 settings = Settings()
 
@@ -321,8 +322,12 @@ def parse_ingredient(row) -> ScopedIngredient:
     classification = classification_from_string(category)
     topping_class = row["topping_class"]
     pretty_name = row["pretty_name"]
-
     image_uri = row["filename_paste"] + ".png"
+
+    # open it up and check it out - but only toppings
+    if classification == Classification.topping:
+        check_image_scale(image_uri)
+
     mask = "rarepizza-#####-" + category  # Will be overwritten by Renderer
     variant_rarity = map_rarity(row["variant rarity"])
     ingredient_rarity = map_rarity(row["topping rarity"])
@@ -367,6 +372,50 @@ def parse_ingredient(row) -> ScopedIngredient:
     scoped.scope = parse_ranges(row, scoped.scope)
 
     return scoped
+
+
+def check_image_scale(filename):
+    # open it up and size it out
+    file_path = os.path.join(settings.LOCAL_INGREDIENTS_DB_PATH, filename)
+    try:
+        image = Image.open(file_path)
+        if not is_image_sized_right(image.width, image.height):
+            print(f"{filename} -- image not 1024 -- {image.width}x{image.height}")
+            if image.width > image.height:
+                # landscape
+                fixed_width = 1024
+                height_percent = fixed_width / float(image.width)
+                height_size = int((float(image.height) * float(height_percent)))
+                w = fixed_width
+                h = height_size
+            else:
+                # portrait
+                fixed_height = 1024
+                width_percent = fixed_height / float(image.height)
+                width_size = int((float(image.width) * float(width_percent)))
+                w = width_size
+                h = fixed_height
+
+            image = image.resize((w, h), Image.BICUBIC)
+
+            image.save(file_path)
+
+            print(f"...resized to {w}x{h}")
+
+    except Exception as e:
+        print("failed to load image for size check")
+        print(e)
+
+
+def is_image_sized_right(w, h) -> bool:
+    # its a landscape
+    if w > 1020 and w < 1028:
+        return True
+    # its a portrait
+    if h > 1020 and h < 1028:
+        return True
+    # its too big or small
+    return False
 
 
 def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
@@ -425,7 +474,7 @@ def has_value(label: str, row) -> bool:
 
 def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     min_size = inches - variance
-    if(min_size <= 0):
+    if min_size <= 0:
         min_size = inches
     max_size = inches + variance
     # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
