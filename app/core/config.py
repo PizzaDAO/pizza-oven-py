@@ -43,12 +43,20 @@ class OvenToppingParams(Base):
     max_topping_layer_count: int = 6
 
     # Rarity
-    rarity_weight_common: int = 2000
-    rarity_weight_uncommon: int = 700
-    rarity_weight_rare: int = 250
-    rarity_weight_superrare: int = 100
-    rarity_weight_epic: int = 50
-    rarity_weight_grail: int = 25
+    # REAL VALUES COMMENTED OUT HERE
+    # rarity_weight_common: int = 2000
+    # rarity_weight_uncommon: int = 700
+    # rarity_weight_rare: int = 250
+    # rarity_weight_superrare: int = 100
+    # rarity_weight_epic: int = 50
+    # rarity_weight_grail: int = 25
+    # TEST VALUES - INVERTED RARITY
+    rarity_weight_common: int = 25
+    rarity_weight_uncommon: int = 50
+    rarity_weight_rare: int = 100
+    rarity_weight_superrare: int = 250
+    rarity_weight_epic: int = 700
+    rarity_weight_grail: int = 2000
 
     lastchance_occurance_percentage: int = 20
 
