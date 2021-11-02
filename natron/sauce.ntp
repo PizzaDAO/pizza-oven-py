@@ -1247,7 +1247,7 @@ Sauce
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
+					<Value>1.53088000000000011e+03</Value>
 					<Default>5.00000000000000000e-01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1256,7 +1256,7 @@ Sauce
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>5.12000000000000000e+02</Value>
+					<Value>1.53088000000000011e+03</Value>
 					<Default>5.00000000000000000e-01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1310,7 +1310,7 @@ Sauce
 					<second>Bake_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>4</KnobsAge>
+			<KnobsAge>5</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -1726,7 +1726,7 @@ Sauce
 					<second>input_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>109341</KnobsAge>
+			<KnobsAge>109361</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -3283,7 +3283,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.30999999999999996e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -4094,7 +4094,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.40729999999999990e+02</Value>
+							<Value>1.40860000000000014e+02</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>ret=round(thisNode.calories.get()+thisNode.calories_from_fat.get()+thisNode.trans_fat.get()+thisNode.monosaturated_fat.get()+thisNode.saturated_fat.get()+thisNode.sodium.get()+thisNode.cholesterol.get()+thisNode.complex_carb.get()+thisNode.dietary_fiber.get()+thisNode.sugar.get()+thisNode.added_sugars.get()+thisNode.protein.get()+((thisNode.vitamin_a.get()+thisNode.vitamin_b6.get()+thisNode.vitamin_b12.get()+thisNode.vitamin_e.get()+thisNode.biotin.get()+thisNode.folate.get()+thisNode.calcium.get()+thisNode.iron.get()+thisNode.pantothenic_acid.get()+thisNode.potassium.get()+thisNode.riboflavin.get()+thisNode.vitamin_d.get()+thisNode.thiamin.get()+thisNode.magnesium.get()+thisNode.selenium.get()+thisNode.zinc.get())/100),2)+(thisNode.vitamin_c.get()/10)+(thisNode.vitamin_k.get()/10)</Expression>
@@ -4619,7 +4619,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.30000000000000000e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -24042,7 +24042,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
+						<Value>1.31000000000000005e-01</Value>
 						<Default>4.19999999999999984e-01</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_carmel_2.f_lerp_result.get()</Expression>
@@ -24093,7 +24093,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1.00000000000000000e+00</Value>
+						<Value>7.37999999999999989e-01</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.Lerp_carmel.f_lerp_result.get()</Expression>
@@ -24148,7 +24148,7 @@ ret = y_new
 						<second>Unpremult2_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>22046</KnobsAge>
+				<KnobsAge>22078</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -25524,7 +25524,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>3244</KnobsAge>
+				<KnobsAge>3256</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -25738,7 +25738,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.30999999999999996e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisGroup.caramelization.get()</Expression>
@@ -25842,7 +25842,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000000e+00</Value>
+							<Value>7.37999999999999989e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -26017,7 +26017,7 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</Inputs_map>
-				<KnobsAge>3061</KnobsAge>
+				<KnobsAge>3073</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -26231,7 +26231,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.30999999999999996e+01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisGroup.caramelization.get()</Expression>
@@ -26335,7 +26335,7 @@ ret = y_new
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>0.00000000000000000e+00</Value>
+							<Value>1.31000000000000005e-01</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>import numpy as np
@@ -49851,7 +49851,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Grade8</second>
+					<second>TRS_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -52684,7 +52684,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Oct 30 10:45:04 2021</Value>
+			<Value>Sun Oct 31 13:38:25 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -57131,11 +57131,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1556 838</Sizes>
+				<Sizes>1581 851</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>641 640</Sizes>
+					<Sizes>654 653</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -57175,10 +57175,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-5087</x>
-			<y>-196</y>
-			<w>2430</w>
-			<h>1284</h>
+			<x>-5096</x>
+			<y>-287</y>
+			<w>2468</w>
+			<h>1310</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -57187,9 +57187,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-4.97550492573076008e+03</zoomLeft>
-				<zoomBottom>-2.21372984215415499e+02</zoomBottom>
-				<zoomFactor>1.23009314903846215e-01</zoomFactor>
+				<zoomLeft>-2.29310650729617782e+03</zoomLeft>
+				<zoomBottom>3.50446088173122234e+02</zoomBottom>
+				<zoomFactor>2.12521812970143692e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -57233,10 +57233,11 @@ ret = y_new
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>5</count>
+		<count>6</count>
 		<item_version>0</item_version>
-		<item>Read2</item>
+		<item>TRS_default</item>
 		<item>Bake_default</item>
+		<item>Read2</item>
 		<item>Bake_default.Switch2_2</item>
 		<item>Bake_default.Reformat2</item>
 		<item>Natron_Project_Settings_Panel</item>

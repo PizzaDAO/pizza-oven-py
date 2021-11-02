@@ -14,6 +14,7 @@ from app.models.pizza import (
 )
 
 def make_description(recipe, base, layers):
+<<<<<<< HEAD
     
     def crust(base):
         if base.ingredient.unique_id == "":
@@ -31,6 +32,11 @@ def make_description(recipe, base, layers):
     desc = f"A delicious {recipe} pizza."
     desc += f" {crust(base['crust0'])} with {base['sauce0'].ingredient.pretty_name}"
     desc += cheese(base['cheese0'])
+=======
+    desc = f"A delicious {recipe} pizza."
+    desc += f" A {base['crust0'].ingredient.pretty_name} with {base['sauce0'].ingredient.pretty_name}"
+    desc += f" covered with {base['cheese0'].ingredient.pretty_name} and smothered with "
+>>>>>>> main
 
     # handle toppings
     toppings = layers.items()
@@ -38,13 +44,20 @@ def make_description(recipe, base, layers):
     for i, key in enumerate(layers.keys()):
         desc += layers[key].ingredient.pretty_name
         if i == numToppings - 2:
+<<<<<<< HEAD
             desc += ", and "  
         elif i == numToppings - 1:
             desc += "."
+=======
+            desc += " and "  
+        elif i == numToppings - 1:
+            desc += ""
+>>>>>>> main
         else:
             desc += ", "
 
     # append box and paper
+<<<<<<< HEAD
 
     def team():
         return choices([
@@ -66,6 +79,10 @@ def make_description(recipe, base, layers):
     else:    
         desc += f" All carefully packed in a {base['box0'].ingredient.pretty_name}"
         desc += f" with {paper(base['paper0'].ingredient.pretty_name)}! {team()}"
+=======
+    desc += f", all carefully packed in a {base['box0'].ingredient.pretty_name}"
+    desc += f" with {base['paper0'].ingredient.pretty_name}! That's amore!"
+>>>>>>> main
 
     # done
     return desc
