@@ -35,8 +35,6 @@ class Canvas:
         self.oven_params = oven_params
         self.origin = (oven_params.scatter_origin_x, oven_params.scatter_origin_y)
         self.center = (oven_params.scatter_center_x, oven_params.scatter_center_y)
-        self.end = (4096, 4096)
-        self.hypotenuse = sqrt(self.end[0] ^ 2 + self.end[1] ^ 2)
 
 
 class Scatter:
@@ -61,6 +59,27 @@ class Scatter:
         y = point[1] + self.oven_params.scatter_center_y
 
         return (x, y)
+
+    def rotate_scatter(
+        self, instances: List[MadeIngredientPrep], angle
+    ) -> List[MadeIngredientPrep]:
+        for instance in instances:
+            x = instance.translation[0]
+            y = instance.translation[1]
+
+            # translate to the origin
+            x = x - self.oven_params.scatter_center_x
+            y = y - self.oven_params.scatter_center_y
+            # Do the rotation
+            xprime = x * cos(angle) - (y * sin(angle))
+            yprime = (y * cos(angle)) + (x * sin(angle))
+            # translate back to position
+            xx = xprime + self.oven_params.scatter_center_x
+            yy = yprime + self.oven_params.scatter_center_y
+
+            instance.translation = (xx, yy)
+
+        return instances
 
     def prevent_overflow(
         self, instances: List[MadeIngredientPrep]
@@ -203,6 +222,16 @@ class FiveSpot(Scatter):
                     )
                 )
 
+        angle = select_value(
+            self.random_seed,
+            self.nonce,
+            (
+                -self.oven_params.five_spot_random_rotation,
+                self.oven_params.five_spot_random_rotation,
+            ),
+        )
+        instances = self.rotate_scatter(instances, angle)
+
         instances = self.prevent_overflow(instances)
 
         return instances
@@ -322,6 +351,16 @@ class Grid(Scatter):
                         image_uri=ingredient.ingredient.image_uris["filename"],
                     )
                 )
+
+        angle = select_value(
+            self.random_seed,
+            self.nonce,
+            (
+                -self.oven_params.grid_random_rotation,
+                self.oven_params.grid_random_rotation,
+            ),
+        )
+        instances = self.rotate_scatter(instances, angle)
 
         instances = self.prevent_overflow(instances)
 

@@ -78,6 +78,7 @@ class OvenToppingParams(Base):
     five_spot_y_5: int = 1536
     five_spot_x_random_offset: int = 5
     five_spot_y_random_offset: int = 5
+    five_spot_random_rotation: int = 45
 
     # SpokeCluster
     spokecluster_inner_circle: int = 2800
@@ -89,10 +90,11 @@ class OvenToppingParams(Base):
     grid_random_offset_y: int = 95
     grid_inner_circle: int = 2800
     grid_line_shift_offset: int = 90
+    grid_random_rotation: int = 25
 
     # Treering
     treerinng_inner_circle: int = 2800
-    treering_min_radius: int = 100
+    treering_min_radius: int = 150
     treering_variance_threshold: float = 0.5
 
     # random scatter
@@ -103,8 +105,8 @@ class OvenToppingParams(Base):
     small_tier_1: int = 20
     small_tier_2: int = 60
     large_tier_1: int = 10
-    large_tier_2: int = 40
-    large_tier_3: int = 70
+    large_tier_2: int = 45
+    large_tier_3: int = 80
 
 
 # pylint:disable=too-few-public-methods
@@ -163,7 +165,7 @@ class Settings(BaseSettings):
     GOOGLE_SHEETS_CREDENTIALS_PATH = "secrets/credentials.json"
     SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly"
     PIZZA_TYPES_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
-    PIZZA_TYPE_RANGE_NAME = "recipe-db!A3:Q"
+    PIZZA_TYPE_RANGE_NAME = "recipe-db!A1:Q"
     PIZZA_INGREDIENTS_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
     TOPPINGS_RANGE_NAME = "ingredients-db"
 
