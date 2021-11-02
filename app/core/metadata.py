@@ -1,5 +1,6 @@
 from typing import List#, Dict
 from itertools import chain
+from random import choices
 
 from app.models.recipe import *
 from app.models.prep import *
@@ -13,9 +14,22 @@ from app.models.pizza import (
 )
 
 def make_description(recipe, base, layers):
+    def crust(base):
+        if base.ingredient.unique_id == "":
+            return f"An {base.ingredient.pretty_name}"
+        else:
+            return f"A {base.ingredient.pretty_name}"
+    
+    def cheese(cheese):
+        if cheese.ingredient.unique_id == "3200":
+            return f". Topped with "
+        else:
+            return f" and covered with {base['cheese0'].ingredient.pretty_name}. Topped with "
+
+
     desc = f"A delicious {recipe} pizza."
-    desc += f" A {base['crust0'].ingredient.pretty_name} with {base['sauce0'].ingredient.pretty_name}"
-    desc += f" covered with {base['cheese0'].ingredient.pretty_name} and smothered with "
+    desc += f" {crust(base['crust0'])} with {base['sauce0'].ingredient.pretty_name},"
+    desc += cheese(base['cheese0'])
 
     # handle toppings
     toppings = layers.items()
@@ -23,15 +37,34 @@ def make_description(recipe, base, layers):
     for i, key in enumerate(layers.keys()):
         desc += layers[key].ingredient.pretty_name
         if i == numToppings - 2:
-            desc += " and "  
+            desc += ", and "  
         elif i == numToppings - 1:
-            desc += ""
+            desc += "."
         else:
             desc += ", "
 
     # append box and paper
-    desc += f", all carefully packed in a {base['box0'].ingredient.pretty_name}"
-    desc += f" with {base['paper0'].ingredient.pretty_name}! That's amore!"
+
+    def team():
+        return choices([
+            "That's Amore!", 
+            "Molto Bene!"
+            ])[0] 
+
+    def paper(paper):
+        if paper == "Plain":
+            return "Plain Wax Paper"
+        else:
+            return f"{paper} Paper"
+
+    if base['box0'].ingredient.unique_id == "0030":
+        desc += f" Sorry, we ran out of boxes. Placed on {paper(base['paper0'].ingredient.pretty_name)}. {team()}"
+    elif base['box0'].ingredient.unique_id == "0040":
+        desc += f" All carefully packed in an {base['box0'].ingredient.pretty_name} Box"
+        desc += f" with {paper(base['paper0'].ingredient.pretty_name)}! {team()}"
+    else:    
+        desc += f" All carefully packed in a {base['box0'].ingredient.pretty_name} Box"
+        desc += f" with {paper(base['paper0'].ingredient.pretty_name)}! {team()}"
 
     # done
     return desc
