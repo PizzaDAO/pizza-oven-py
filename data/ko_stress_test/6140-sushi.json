@@ -1,24 +1,24 @@
 {
-    "token_id": 144,
+    "token_id": 145,
     "name": "6140-sushi",
-    "random_seed": "6DCB0296",
+    "random_seed": "1644B4EE",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "greasy",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 218.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -28,16 +28,16 @@
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 15.0,
                     "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
+                    "dietary_fiber": 153.0,
                     "vitamin_b6": 0.0,
                     "sugar": 0.0,
                     "protein": 0.0,
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,7 +69,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
@@ -80,15 +80,15 @@
                 "ingredient_id": "051",
                 "variant_id": "0",
                 "index": 1,
-                "name": "greenchecker",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "goldfoil",
+                "ingredient_rarity": 4,
+                "variant_rarity": 4,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0510-paper-goldfoil.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,64 +139,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0510-paper-goldfoil.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1010",
-                "ingredient_id": "101",
+                "unique_id": "1020",
+                "ingredient_id": "102",
                 "variant_id": "0",
                 "index": 1,
-                "name": "thick",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "moon",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 560.5,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
+                    "vitamin_b7": 1.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 2.5,
+                    "iron": 3.7,
+                    "complex_carb": 0.2,
+                    "selenium": 2.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 61.5,
+                    "calories_from_fat": 53.3,
+                    "vitamin_e": 15.3,
+                    "zinc": 81.5,
+                    "saturated_fat": 25.2,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 84.5,
+                    "sodium": 23.4,
+                    "monosaturated_fat": 88.0,
+                    "calcium": 13.6,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 55.5,
+                    "chromium": 26.7,
+                    "manganese": 14.2
                 },
                 "image_uris": {
-                    "filename": "1010-crust-thick.png",
+                    "filename": "1020-crust-moon.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,64 +209,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1010-crust-thick.png"
+                    "image_uri": "1020-crust-moon.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2010",
-                "ingredient_id": "201",
+                "unique_id": "2060",
+                "ingredient_id": "206",
                 "variant_id": "0",
                 "index": 1,
-                "name": "pesto",
-                "ingredient_rarity": 1,
+                "name": "deepspace",
+                "ingredient_rarity": 3,
                 "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 350.0,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 5.6,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 30.0,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 34.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 2.0,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 1.5,
+                    "sodium": 2.0,
+                    "monosaturated_fat": 0.3,
+                    "calcium": 1.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.9,
+                    "chromium": 0.3,
+                    "manganese": 1.3
                 },
                 "image_uris": {
-                    "filename": "2010-sauce-pesto.png",
+                    "filename": "2060-sauce-deepspace.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,65 +278,65 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2010-sauce-pesto.png"
+                    "scale": 1.0,
+                    "image_uri": "2060-sauce-deepspace.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3010",
-                "ingredient_id": "301",
+                "unique_id": "3020",
+                "ingredient_id": "302",
                 "variant_id": "0",
                 "index": 1,
-                "name": "digitalvegan",
+                "name": "ricotta",
                 "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 233.0,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 2.8,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 6.8,
+                    "vitamin_a": 8.3,
+                    "dietary_fiber": 1.5,
+                    "vitamin_b6": 60.0,
+                    "sugar": 3.1,
+                    "protein": 1.6,
+                    "iron": 2.2,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.4,
+                    "chromium": 1.8,
+                    "manganese": 1.8
                 },
                 "image_uris": {
-                    "filename": "3010-cheese-digitalvegan.png",
+                    "filename": "3020-cheese-ricotta.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8888888888888888,
-                    "image_uri": "3010-cheese-digitalvegan.png"
+                    "scale": 1.0,
+                    "image_uri": "3020-cheese-ricotta.png"
                 }
             ],
             "scatter_type": 1
@@ -364,13 +364,13 @@
                 "index": 1,
                 "name": "sushi",
                 "ingredient_rarity": 2,
-                "variant_rarity": 0,
+                "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 141.8,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -383,23 +383,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.8,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.5,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -412,37 +412,28 @@
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        611.6666666666667,
-                        933.3333333333334
+                        705.0,
+                        1120.0
                     ],
-                    "rotation": -3.4387351778656132,
-                    "scale": 0.34110671936758896,
+                    "rotation": -20.51383399209486,
+                    "scale": 0.3018445322793149,
                     "image_uri": "6140-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        321.6666666666667,
-                        1400.0
+                        415.0,
+                        1680.0
                     ],
-                    "rotation": 26.44268774703557,
-                    "scale": 0.36218708827404483,
-                    "image_uri": "6140-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        611.6666666666667,
-                        1866.6666666666667
-                    ],
-                    "rotation": -17.90513833992095,
-                    "scale": 0.34110671936758896,
+                    "rotation": -30.0,
+                    "scale": 0.34822134387351783,
                     "image_uri": "6140-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6141": {
             "ingredient": {
@@ -457,8 +448,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 140.8,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -471,23 +462,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 0.1,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.9,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 2.6,
+                    "calories_from_fat": 2.1,
+                    "vitamin_e": 0.5,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.1,
+                    "calcium": 0.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -500,37 +491,28 @@
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        788.3333333333334,
-                        466.6666666666667
+                        705.0,
+                        2240.0
                     ],
-                    "rotation": 10.553359683794469,
-                    "scale": 0.30764163372859027,
+                    "rotation": -5.098814229249012,
+                    "scale": 0.33715415019762845,
                     "image_uri": "6141-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        1078.3333333333335,
-                        933.3333333333334
+                        975.0,
+                        560.0
                     ],
-                    "rotation": -6.758893280632414,
-                    "scale": 0.35928853754940715,
-                    "image_uri": "6141-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        788.3333333333334,
-                        1400.0
-                    ],
-                    "rotation": -6.521739130434781,
-                    "scale": 0.3005270092226614,
+                    "rotation": 6.521739130434781,
+                    "scale": 0.3492753623188406,
                     "image_uri": "6141-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6142": {
             "ingredient": {
@@ -545,8 +527,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 143.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -559,66 +541,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 1.9,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.0,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.3,
+                    "chromium": 2.0,
+                    "manganese": 1.2
                 },
                 "image_uris": {
                     "filename": "6142-topping-seafood-sushi.png",
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1078.3333333333335,
-                        1866.6666666666667
+                        1265.0,
+                        1120.0
                     ],
-                    "rotation": 17.905138339920953,
-                    "scale": 0.35533596837944664,
+                    "rotation": 3.675889328063242,
+                    "scale": 0.30606060606060603,
                     "image_uri": "6142-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        788.3333333333334,
-                        2333.3333333333335
+                        975.0,
+                        1680.0
                     ],
-                    "rotation": -27.154150197628457,
-                    "scale": 0.32318840579710145,
-                    "image_uri": "6142-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        1078.3333333333335,
-                        2800.0
-                    ],
-                    "rotation": 9.130434782608695,
-                    "scale": 0.35849802371541506,
+                    "rotation": -0.8300395256916993,
+                    "scale": 0.3645586297760211,
                     "image_uri": "6142-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6143": {
             "ingredient": {
@@ -633,8 +606,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 140.4,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -647,66 +620,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 1.1,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.6,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.7,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.2,
+                    "zinc": 1.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.2,
+                    "chromium": 1.7,
+                    "manganese": 0.1
                 },
                 "image_uris": {
                     "filename": "6143-topping-seafood-sushi.png",
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1255.0,
-                        466.6666666666667
+                        1265.0,
+                        2240.0
                     ],
-                    "rotation": -17.193675889328063,
-                    "scale": 0.3382081686429513,
+                    "rotation": 12.213438735177867,
+                    "scale": 0.3208168642951252,
                     "image_uri": "6143-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        1545.0,
-                        933.3333333333334
+                        1535.0,
+                        560.0
                     ],
-                    "rotation": 24.545454545454547,
-                    "scale": 0.3339920948616601,
-                    "image_uri": "6143-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        1255.0,
-                        1400.0
-                    ],
-                    "rotation": -25.0197628458498,
-                    "scale": 0.3542819499341239,
+                    "rotation": -9.130434782608695,
+                    "scale": 0.3463768115942029,
                     "image_uri": "6143-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6144": {
             "ingredient": {
@@ -721,8 +685,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 135.2,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -735,66 +699,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.1,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.6,
+                    "chromium": 1.7,
+                    "manganese": 1.4
                 },
                 "image_uris": {
                     "filename": "6144-topping-seafood-sushi.png",
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1545.0,
-                        1866.6666666666667
+                        1825.0,
+                        1120.0
                     ],
-                    "rotation": 15.296442687747032,
-                    "scale": 0.30790513833992095,
+                    "rotation": -17.66798418972332,
+                    "scale": 0.3271409749670619,
                     "image_uri": "6144-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        1255.0,
-                        2333.3333333333335
+                        1535.0,
+                        1680.0
                     ],
-                    "rotation": -7.944664031620555,
-                    "scale": 0.36060606060606065,
-                    "image_uri": "6144-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        1545.0,
-                        2800.0
-                    ],
-                    "rotation": 23.122529644268774,
-                    "scale": 0.3297760210803689,
+                    "rotation": -20.039525691699602,
+                    "scale": 0.32661396574440055,
                     "image_uri": "6144-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6145": {
             "ingredient": {
@@ -809,8 +764,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 140.3,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -823,66 +778,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.5,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.6,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.8,
+                    "chromium": 1.7,
+                    "manganese": 1.9
                 },
                 "image_uris": {
                     "filename": "6145-topping-seafood-sushi.png",
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1721.6666666666667,
-                        466.6666666666667
+                        1825.0,
+                        2240.0
                     ],
-                    "rotation": 14.11067193675889,
-                    "scale": 0.31343873517786563,
+                    "rotation": -14.11067193675889,
+                    "scale": 0.3347826086956522,
                     "image_uri": "6145-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        2011.6666666666667,
-                        933.3333333333334
+                        1535.0,
+                        2800.0
                     ],
-                    "rotation": 18.379446640316203,
-                    "scale": 0.3640316205533597,
-                    "image_uri": "6145-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        1721.6666666666667,
-                        1400.0
-                    ],
-                    "rotation": 0.5928853754940739,
-                    "scale": 0.3034255599472991,
+                    "rotation": -14.584980237154149,
+                    "scale": 0.36350461133069834,
                     "image_uri": "6145-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6146": {
             "ingredient": {
@@ -897,8 +843,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 142.9,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -911,66 +857,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 68.0,
+                    "sugar": 1.4,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.7,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.6,
+                    "chromium": 1.2,
+                    "manganese": 1.9
                 },
                 "image_uris": {
                     "filename": "6146-topping-seafood-sushi.png",
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2011.6666666666667,
-                        1866.6666666666667
+                        2095.0,
+                        560.0
                     ],
-                    "rotation": 6.758893280632414,
-                    "scale": 0.3147562582345191,
+                    "rotation": 22.411067193675883,
+                    "scale": 0.30026350461133067,
                     "image_uri": "6146-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        1721.6666666666667,
-                        2333.3333333333335
+                        2385.0,
+                        1120.0
                     ],
-                    "rotation": 3.9130434782608674,
-                    "scale": 0.3616600790513834,
-                    "image_uri": "6146-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        2188.3333333333335,
-                        466.6666666666667
-                    ],
-                    "rotation": 26.205533596837945,
-                    "scale": 0.3126482213438735,
+                    "rotation": 29.52569169960475,
+                    "scale": 0.32661396574440055,
                     "image_uri": "6146-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6147": {
             "ingredient": {
@@ -985,8 +922,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 139.7,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -999,66 +936,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 0.5,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.5,
+                    "chromium": 1.2,
+                    "manganese": 0.2
                 },
                 "image_uris": {
                     "filename": "6147-topping-seafood-sushi.png",
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2478.3333333333335,
-                        933.3333333333334
+                        2095.0,
+                        1680.0
                     ],
-                    "rotation": 25.494071146245062,
-                    "scale": 0.35454545454545455,
+                    "rotation": 14.822134387351781,
+                    "scale": 0.30395256916996044,
                     "image_uri": "6147-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        2188.3333333333335,
-                        1400.0
+                        2385.0,
+                        2240.0
                     ],
-                    "rotation": -16.956521739130437,
-                    "scale": 0.36139657444005274,
-                    "image_uri": "6147-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        2478.3333333333335,
-                        1866.6666666666667
-                    ],
-                    "rotation": -5.335968379446641,
-                    "scale": 0.3624505928853755,
+                    "rotation": 5.335968379446641,
+                    "scale": 0.33899868247694337,
                     "image_uri": "6147-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6148": {
             "ingredient": {
@@ -1073,8 +1001,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 140.9,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -1087,23 +1015,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 0.7,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.9,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -1116,37 +1044,28 @@
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2188.3333333333335,
-                        2333.3333333333335
+                        2655.0,
+                        1680.0
                     ],
-                    "rotation": -20.988142292490117,
-                    "scale": 0.31133069828722004,
+                    "rotation": -12.450592885375496,
+                    "scale": 0.3442687747035573,
                     "image_uri": "6148-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        2655.0,
-                        1400.0
+                        1579.0125302778779,
+                        1584.4111195700634
                     ],
-                    "rotation": 26.679841897233203,
-                    "scale": 0.3097496706192358,
-                    "image_uri": "6148-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -2.01581027667984,
-                    "scale": 0.30395256916996044,
+                    "rotation": 22.648221343873523,
+                    "scale": 0.35638998682476947,
                     "image_uri": "6148-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6149": {
             "ingredient": {
@@ -1161,8 +1080,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 141.8,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -1175,23 +1094,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 0.9,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -1204,309 +1123,210 @@
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1255.0,
-                        1400.0
+                        1560.8613347282403,
+                        1515.255299465563
                     ],
-                    "rotation": -0.8300395256916993,
-                    "scale": 0.36218708827404483,
+                    "rotation": -30.0,
+                    "scale": 0.33583662714097495,
                     "image_uri": "6149-topping-seafood-sushi.png"
                 },
                 {
                     "translation": [
-                        1545.0,
-                        2800.0
+                        1200.7105671916884,
+                        1556.8447169038773
                     ],
-                    "rotation": -4.150197628458496,
-                    "scale": 0.3242424242424242,
-                    "image_uri": "6149-topping-seafood-sushi.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -1.7786561264822147,
-                    "scale": 0.3629776021080369,
+                    "rotation": 12.687747035573125,
+                    "scale": 0.3102766798418972,
                     "image_uri": "6149-topping-seafood-sushi.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
     "instances": [
         {
             "translation": [
-                611.6666666666667,
-                933.3333333333334
+                705.0,
+                1120.0
             ],
-            "rotation": -3.4387351778656132,
-            "scale": 0.34110671936758896,
+            "rotation": -20.51383399209486,
+            "scale": 0.3018445322793149,
             "image_uri": "6140-topping-seafood-sushi.png"
         },
         {
             "translation": [
-                321.6666666666667,
-                1400.0
+                415.0,
+                1680.0
             ],
-            "rotation": 26.44268774703557,
-            "scale": 0.36218708827404483,
+            "rotation": -30.0,
+            "scale": 0.34822134387351783,
             "image_uri": "6140-topping-seafood-sushi.png"
         },
         {
             "translation": [
-                611.6666666666667,
-                1866.6666666666667
+                705.0,
+                2240.0
             ],
-            "rotation": -17.90513833992095,
-            "scale": 0.34110671936758896,
-            "image_uri": "6140-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                788.3333333333334,
-                466.6666666666667
-            ],
-            "rotation": 10.553359683794469,
-            "scale": 0.30764163372859027,
+            "rotation": -5.098814229249012,
+            "scale": 0.33715415019762845,
             "image_uri": "6141-topping-seafood-sushi.png"
         },
         {
             "translation": [
-                1078.3333333333335,
-                933.3333333333334
+                975.0,
+                560.0
             ],
-            "rotation": -6.758893280632414,
-            "scale": 0.35928853754940715,
+            "rotation": 6.521739130434781,
+            "scale": 0.3492753623188406,
             "image_uri": "6141-topping-seafood-sushi.png"
         },
         {
             "translation": [
-                788.3333333333334,
-                1400.0
+                1265.0,
+                1120.0
             ],
-            "rotation": -6.521739130434781,
-            "scale": 0.3005270092226614,
-            "image_uri": "6141-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1078.3333333333335,
-                1866.6666666666667
-            ],
-            "rotation": 17.905138339920953,
-            "scale": 0.35533596837944664,
+            "rotation": 3.675889328063242,
+            "scale": 0.30606060606060603,
             "image_uri": "6142-topping-seafood-sushi.png"
         },
         {
             "translation": [
-                788.3333333333334,
-                2333.3333333333335
-            ],
-            "rotation": -27.154150197628457,
-            "scale": 0.32318840579710145,
-            "image_uri": "6142-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1078.3333333333335,
-                2800.0
-            ],
-            "rotation": 9.130434782608695,
-            "scale": 0.35849802371541506,
-            "image_uri": "6142-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                466.6666666666667
-            ],
-            "rotation": -17.193675889328063,
-            "scale": 0.3382081686429513,
-            "image_uri": "6143-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                933.3333333333334
-            ],
-            "rotation": 24.545454545454547,
-            "scale": 0.3339920948616601,
-            "image_uri": "6143-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
-            ],
-            "rotation": -25.0197628458498,
-            "scale": 0.3542819499341239,
-            "image_uri": "6143-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                1866.6666666666667
-            ],
-            "rotation": 15.296442687747032,
-            "scale": 0.30790513833992095,
-            "image_uri": "6144-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                2333.3333333333335
-            ],
-            "rotation": -7.944664031620555,
-            "scale": 0.36060606060606065,
-            "image_uri": "6144-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                2800.0
-            ],
-            "rotation": 23.122529644268774,
-            "scale": 0.3297760210803689,
-            "image_uri": "6144-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1721.6666666666667,
-                466.6666666666667
-            ],
-            "rotation": 14.11067193675889,
-            "scale": 0.31343873517786563,
-            "image_uri": "6145-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2011.6666666666667,
-                933.3333333333334
-            ],
-            "rotation": 18.379446640316203,
-            "scale": 0.3640316205533597,
-            "image_uri": "6145-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1721.6666666666667,
-                1400.0
-            ],
-            "rotation": 0.5928853754940739,
-            "scale": 0.3034255599472991,
-            "image_uri": "6145-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2011.6666666666667,
-                1866.6666666666667
-            ],
-            "rotation": 6.758893280632414,
-            "scale": 0.3147562582345191,
-            "image_uri": "6146-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1721.6666666666667,
-                2333.3333333333335
-            ],
-            "rotation": 3.9130434782608674,
-            "scale": 0.3616600790513834,
-            "image_uri": "6146-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2188.3333333333335,
-                466.6666666666667
-            ],
-            "rotation": 26.205533596837945,
-            "scale": 0.3126482213438735,
-            "image_uri": "6146-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2478.3333333333335,
-                933.3333333333334
-            ],
-            "rotation": 25.494071146245062,
-            "scale": 0.35454545454545455,
-            "image_uri": "6147-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2188.3333333333335,
-                1400.0
-            ],
-            "rotation": -16.956521739130437,
-            "scale": 0.36139657444005274,
-            "image_uri": "6147-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2478.3333333333335,
-                1866.6666666666667
-            ],
-            "rotation": -5.335968379446641,
-            "scale": 0.3624505928853755,
-            "image_uri": "6147-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2188.3333333333335,
-                2333.3333333333335
-            ],
-            "rotation": -20.988142292490117,
-            "scale": 0.31133069828722004,
-            "image_uri": "6148-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": 26.679841897233203,
-            "scale": 0.3097496706192358,
-            "image_uri": "6148-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -2.01581027667984,
-            "scale": 0.30395256916996044,
-            "image_uri": "6148-topping-seafood-sushi.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
+                975.0,
+                1680.0
             ],
             "rotation": -0.8300395256916993,
-            "scale": 0.36218708827404483,
-            "image_uri": "6149-topping-seafood-sushi.png"
+            "scale": 0.3645586297760211,
+            "image_uri": "6142-topping-seafood-sushi.png"
         },
         {
             "translation": [
-                1545.0,
+                1265.0,
+                2240.0
+            ],
+            "rotation": 12.213438735177867,
+            "scale": 0.3208168642951252,
+            "image_uri": "6143-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1535.0,
+                560.0
+            ],
+            "rotation": -9.130434782608695,
+            "scale": 0.3463768115942029,
+            "image_uri": "6143-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1825.0,
+                1120.0
+            ],
+            "rotation": -17.66798418972332,
+            "scale": 0.3271409749670619,
+            "image_uri": "6144-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1535.0,
+                1680.0
+            ],
+            "rotation": -20.039525691699602,
+            "scale": 0.32661396574440055,
+            "image_uri": "6144-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1825.0,
+                2240.0
+            ],
+            "rotation": -14.11067193675889,
+            "scale": 0.3347826086956522,
+            "image_uri": "6145-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1535.0,
                 2800.0
             ],
-            "rotation": -4.150197628458496,
-            "scale": 0.3242424242424242,
-            "image_uri": "6149-topping-seafood-sushi.png"
+            "rotation": -14.584980237154149,
+            "scale": 0.36350461133069834,
+            "image_uri": "6145-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                2095.0,
+                560.0
+            ],
+            "rotation": 22.411067193675883,
+            "scale": 0.30026350461133067,
+            "image_uri": "6146-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                2385.0,
+                1120.0
+            ],
+            "rotation": 29.52569169960475,
+            "scale": 0.32661396574440055,
+            "image_uri": "6146-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                2095.0,
+                1680.0
+            ],
+            "rotation": 14.822134387351781,
+            "scale": 0.30395256916996044,
+            "image_uri": "6147-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                2385.0,
+                2240.0
+            ],
+            "rotation": 5.335968379446641,
+            "scale": 0.33899868247694337,
+            "image_uri": "6147-topping-seafood-sushi.png"
         },
         {
             "translation": [
                 2655.0,
-                1400.0
+                1680.0
             ],
-            "rotation": -1.7786561264822147,
-            "scale": 0.3629776021080369,
+            "rotation": -12.450592885375496,
+            "scale": 0.3442687747035573,
+            "image_uri": "6148-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1579.0125302778779,
+                1584.4111195700634
+            ],
+            "rotation": 22.648221343873523,
+            "scale": 0.35638998682476947,
+            "image_uri": "6148-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1560.8613347282403,
+                1515.255299465563
+            ],
+            "rotation": -30.0,
+            "scale": 0.33583662714097495,
+            "image_uri": "6149-topping-seafood-sushi.png"
+        },
+        {
+            "translation": [
+                1200.7105671916884,
+                1556.8447169038773
+            ],
+            "rotation": 12.687747035573125,
+            "scale": 0.3102766798418972,
             "image_uri": "6149-topping-seafood-sushi.png"
         }
     ],

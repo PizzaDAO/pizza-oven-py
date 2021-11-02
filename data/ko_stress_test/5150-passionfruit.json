@@ -1,62 +1,62 @@
 {
-    "token_id": 74,
+    "token_id": 75,
     "name": "5150-passionfruit",
-    "random_seed": "3D2374FF",
+    "random_seed": "8765156E",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0000",
-                "ingredient_id": "000",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
                 "name": "white",
                 "ingredient_rarity": 0,
-                "variant_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 90.0,
-                    "mass": 994.0,
+                    "serving_size": 0.0,
+                    "mass": 203.0,
                     "calories": 92.0,
-                    "vitamin_c": 1.0,
-                    "magnesium": 2.0,
-                    "vitamin_b5": 3.0,
-                    "vitamin_d": 4.0,
-                    "vitamin_b7": 5.0,
-                    "height": 10.0,
-                    "moisture": 11.0,
-                    "potassium": 10.0,
-                    "cholesterol": 15.0,
-                    "vitamin_a": 16.0,
-                    "dietary_fiber": 16.0,
-                    "vitamin_b6": 17.0,
-                    "sugar": 20.0,
-                    "protein": 21.0,
-                    "iron": 25.0,
-                    "complex_carb": 30.0,
-                    "selenium": 31.0,
-                    "vitamin_k": 32.0,
-                    "vitamin_b12": 40.0,
-                    "calories_from_fat": 41.0,
-                    "vitamin_e": 42.0,
-                    "zinc": 50.0,
-                    "saturated_fat": 51.0,
-                    "iodine": 52.0,
-                    "trans_fat": 60.0,
-                    "sodium": 61.0,
-                    "monosaturated_fat": 62.0,
-                    "calcium": 63.0,
-                    "riboflavin": 70.0,
-                    "thiamin": 71.0,
-                    "folate": 72.0,
-                    "added_sugar": 23.0,
-                    "chromium": 22.0,
-                    "manganese": 24.0
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 153.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0000-box-white.png",
+                    "filename": "0010-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,7 +69,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0000-box-white.png"
+                    "image_uri": "0010-box-white.png"
                 }
             ],
             "scatter_type": 1
@@ -80,15 +80,15 @@
                 "ingredient_id": "053",
                 "variant_id": "0",
                 "index": 1,
-                "name": "code-cherry",
+                "name": "code",
                 "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0530-paper-code-cherry.png",
+                    "filename": "0530-paper-code.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,28 +139,28 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0530-paper-code-cherry.png"
+                    "image_uri": "0530-paper-code.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1040",
-                "ingredient_id": "104",
+                "unique_id": "1050",
+                "ingredient_id": "105",
                 "variant_id": "0",
                 "index": 1,
-                "name": "castle",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "whitebread",
+                "ingredient_rarity": 2,
+                "variant_rarity": 2,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 820.4,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
+                    "vitamin_c": 1.0,
                     "magnesium": 0.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
@@ -171,32 +171,32 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 53.3,
+                    "iron": 15.3,
+                    "complex_carb": 81.5,
+                    "selenium": 25.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 34.3,
+                    "calories_from_fat": 63.7,
+                    "vitamin_e": 79.8,
+                    "zinc": 73.7,
+                    "saturated_fat": 27.5,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 84.6,
+                    "sodium": 44.6,
+                    "monosaturated_fat": 80.5,
+                    "calcium": 55.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 87.5,
+                    "chromium": 39.6,
+                    "manganese": 11.7
                 },
                 "image_uris": {
-                    "filename": "1040-crust-castle.png",
+                    "filename": "1050-crust-whitebread.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,64 +209,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1040-crust-castle.png"
+                    "image_uri": "1050-crust-whitebread.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2030",
-                "ingredient_id": "203",
-                "variant_id": "0",
+                "unique_id": "2053",
+                "ingredient_id": "205",
+                "variant_id": "3",
                 "index": 1,
-                "name": "bbq",
+                "name": "white",
                 "ingredient_rarity": 1,
-                "variant_rarity": 0,
+                "variant_rarity": 3,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 346.9,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 5.6,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 30.0,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 34.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 1.7,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 1.4,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 0.4,
+                    "calcium": 0.1,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.8,
+                    "chromium": 1.4,
+                    "manganese": 2.0
                 },
                 "image_uris": {
-                    "filename": "2030-sauce-bbq.png",
+                    "filename": "2053-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,29 +278,29 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2030-sauce-bbq.png"
+                    "scale": 1.0,
+                    "image_uri": "2053-sauce-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3030",
+                "unique_id": "3031",
                 "ingredient_id": "303",
-                "variant_id": "0",
+                "variant_id": "1",
                 "index": 1,
                 "name": "smokedmozzarella",
-                "ingredient_rarity": 2,
-                "variant_rarity": 0,
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 223.0,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
+                    "vitamin_c": 1.0,
                     "magnesium": 0.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
@@ -308,35 +308,35 @@
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 2.3,
+                    "vitamin_a": 1.1,
+                    "dietary_fiber": 3.3,
+                    "vitamin_b6": 60.0,
+                    "sugar": 4.5,
+                    "protein": 6.3,
+                    "iron": 3.8,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.2,
+                    "chromium": 1.2,
+                    "manganese": 0.7
                 },
                 "image_uris": {
-                    "filename": "3030-cheese-smokedmozzarella.png",
+                    "filename": "3031-cheese-smokedmozzarella.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.8888888888888888,
-                    "image_uri": "3030-cheese-smokedmozzarella.png"
+                    "image_uri": "3031-cheese-smokedmozzarella.png"
                 }
             ],
             "scatter_type": 1
@@ -369,11 +369,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 152.4,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -383,66 +383,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 3.8,
+                    "protein": 3.9,
+                    "iron": 2.7,
+                    "complex_carb": 3.1,
+                    "selenium": 6.1,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 2.0,
+                    "chromium": 1.1,
+                    "manganese": 0.3
                 },
                 "image_uris": {
                     "filename": "5150-topping-fruit-passionfruit.png",
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        705.0,
-                        1120.0
+                        555.0,
+                        700.0
                     ],
-                    "rotation": -192.09486166007903,
-                    "scale": 0.5140316205533597,
+                    "rotation": 345.77075098814225,
+                    "scale": 0.4982213438735178,
                     "image_uri": "5150-topping-fruit-passionfruit.png"
                 },
                 {
                     "translation": [
-                        415.0,
-                        1680.0
+                        845.0,
+                        1400.0
                     ],
-                    "rotation": 112.41106719367588,
-                    "scale": 0.499802371541502,
-                    "image_uri": "5150-topping-fruit-passionfruit.png"
-                },
-                {
-                    "translation": [
-                        705.0,
-                        2240.0
-                    ],
-                    "rotation": -192.09486166007903,
-                    "scale": 0.4863636363636364,
+                    "rotation": 214.86166007905138,
+                    "scale": 0.491897233201581,
                     "image_uri": "5150-topping-fruit-passionfruit.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5151": {
             "ingredient": {
@@ -457,11 +448,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 158.9,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -471,66 +462,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 9.7,
+                    "protein": 3.9,
+                    "iron": 3.5,
+                    "complex_carb": 3.1,
+                    "selenium": 6.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.5,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.2,
+                    "chromium": 1.3,
+                    "manganese": 1.8
                 },
                 "image_uris": {
                     "filename": "5151-topping-fruit-passionfruit.png",
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        975.0,
-                        560.0
+                        555.0,
+                        2100.0
                     ],
-                    "rotation": 126.64031620553357,
-                    "scale": 0.48873517786561266,
+                    "rotation": 337.23320158102763,
+                    "scale": 0.5104743083003953,
                     "image_uri": "5151-topping-fruit-passionfruit.png"
                 },
                 {
                     "translation": [
-                        1265.0,
-                        1120.0
+                        1255.0,
+                        700.0
                     ],
-                    "rotation": 9.960474308300434,
-                    "scale": 0.4990118577075099,
-                    "image_uri": "5151-topping-fruit-passionfruit.png"
-                },
-                {
-                    "translation": [
-                        975.0,
-                        1680.0
-                    ],
-                    "rotation": 149.40711462450594,
-                    "scale": 0.507707509881423,
+                    "rotation": 157.9446640316205,
+                    "scale": 0.4904479578392622,
                     "image_uri": "5151-topping-fruit-passionfruit.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5152": {
             "ingredient": {
@@ -545,11 +527,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 151.9,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -559,66 +541,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 69.0,
+                    "sugar": 2.5,
+                    "protein": 5.6,
+                    "iron": 3.9,
+                    "complex_carb": 3.1,
+                    "selenium": 6.3,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.5,
+                    "chromium": 0.8,
+                    "manganese": 1.2
                 },
                 "image_uris": {
                     "filename": "5152-topping-fruit-passionfruit.png",
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1265.0,
-                        2240.0
+                        1545.0,
+                        1400.0
                     ],
-                    "rotation": 331.5415019762846,
-                    "scale": 0.4909749670619236,
+                    "rotation": -89.64426877470356,
+                    "scale": 0.49940711462450593,
                     "image_uri": "5152-topping-fruit-passionfruit.png"
                 },
                 {
                     "translation": [
-                        1535.0,
-                        560.0
+                        1255.0,
+                        2100.0
                     ],
-                    "rotation": -186.40316205533597,
-                    "scale": 0.4897891963109354,
-                    "image_uri": "5152-topping-fruit-passionfruit.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        1120.0
-                    ],
-                    "rotation": -169.3280632411067,
-                    "scale": 0.49967061923583667,
+                    "rotation": 177.86561264822137,
+                    "scale": 0.48820816864295125,
                     "image_uri": "5152-topping-fruit-passionfruit.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5153": {
             "ingredient": {
@@ -633,11 +606,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 154.3,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -647,66 +620,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.0,
+                    "protein": 8.8,
+                    "iron": 3.9,
+                    "complex_carb": 3.1,
+                    "selenium": 6.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.9,
+                    "chromium": 1.4,
+                    "manganese": 0.2
                 },
                 "image_uris": {
                     "filename": "5153-topping-fruit-passionfruit.png",
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1535.0,
-                        1680.0
-                    ],
-                    "rotation": 234.78260869565213,
-                    "scale": 0.5154808959156786,
-                    "image_uri": "5153-topping-fruit-passionfruit.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        2240.0
-                    ],
-                    "rotation": 351.4624505928854,
-                    "scale": 0.49624505928853757,
-                    "image_uri": "5153-topping-fruit-passionfruit.png"
-                },
-                {
-                    "translation": [
-                        1535.0,
+                        1545.0,
                         2800.0
                     ],
-                    "rotation": 95.33596837944663,
-                    "scale": 0.502437417654809,
+                    "rotation": 194.94071146245062,
+                    "scale": 0.49716732542819503,
+                    "image_uri": "5153-topping-fruit-passionfruit.png"
+                },
+                {
+                    "translation": [
+                        1955.0,
+                        700.0
+                    ],
+                    "rotation": 263.2411067193676,
+                    "scale": 0.49914361001317525,
                     "image_uri": "5153-topping-fruit-passionfruit.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5154": {
             "ingredient": {
@@ -721,11 +685,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 151.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -735,23 +699,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 2.3,
+                    "protein": 9.2,
+                    "iron": 3.4,
+                    "complex_carb": 3.1,
+                    "selenium": 6.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -764,37 +728,28 @@
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2095.0,
-                        560.0
+                        2245.0,
+                        1400.0
                     ],
-                    "rotation": -223.39920948616603,
-                    "scale": 0.510737812911726,
+                    "rotation": 311.62055335968387,
+                    "scale": 0.5070487483530962,
                     "image_uri": "5154-topping-fruit-passionfruit.png"
                 },
                 {
                     "translation": [
-                        2385.0,
-                        1120.0
+                        1955.0,
+                        2100.0
                     ],
-                    "rotation": -314.4664031620553,
-                    "scale": 0.51034255599473,
-                    "image_uri": "5154-topping-fruit-passionfruit.png"
-                },
-                {
-                    "translation": [
-                        2095.0,
-                        1680.0
-                    ],
-                    "rotation": 305.92885375494075,
-                    "scale": 0.49703557312252966,
+                    "rotation": -194.9407114624506,
+                    "scale": 0.5142951251646904,
                     "image_uri": "5154-topping-fruit-passionfruit.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5155": {
             "ingredient": {
@@ -809,11 +764,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 153.6,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -823,23 +778,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 0.4,
+                    "protein": 7.4,
+                    "iron": 3.8,
+                    "complex_carb": 3.1,
+                    "selenium": 6.7,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -852,201 +807,138 @@
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2385.0,
-                        2240.0
+                        2655.0,
+                        2100.0
                     ],
-                    "rotation": -280.3162055335969,
-                    "scale": 0.49716732542819503,
+                    "rotation": -103.87351778656125,
+                    "scale": 0.5042819499341239,
                     "image_uri": "5155-topping-fruit-passionfruit.png"
                 },
                 {
                     "translation": [
-                        2655.0,
-                        1680.0
+                        1461.067345249956,
+                        1660.9630973045869
                     ],
-                    "rotation": 78.26086956521743,
-                    "scale": 0.4876811594202899,
-                    "image_uri": "5155-topping-fruit-passionfruit.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -214.86166007905138,
-                    "scale": 0.5046772068511199,
+                    "rotation": 175.01976284584987,
+                    "scale": 0.5069169960474309,
                     "image_uri": "5155-topping-fruit-passionfruit.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
     "instances": [
         {
             "translation": [
-                705.0,
-                1120.0
+                555.0,
+                700.0
             ],
-            "rotation": -192.09486166007903,
-            "scale": 0.5140316205533597,
+            "rotation": 345.77075098814225,
+            "scale": 0.4982213438735178,
             "image_uri": "5150-topping-fruit-passionfruit.png"
         },
         {
             "translation": [
-                415.0,
-                1680.0
-            ],
-            "rotation": 112.41106719367588,
-            "scale": 0.499802371541502,
-            "image_uri": "5150-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                705.0,
-                2240.0
-            ],
-            "rotation": -192.09486166007903,
-            "scale": 0.4863636363636364,
-            "image_uri": "5150-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                975.0,
-                560.0
-            ],
-            "rotation": 126.64031620553357,
-            "scale": 0.48873517786561266,
-            "image_uri": "5151-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                1120.0
-            ],
-            "rotation": 9.960474308300434,
-            "scale": 0.4990118577075099,
-            "image_uri": "5151-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                975.0,
-                1680.0
-            ],
-            "rotation": 149.40711462450594,
-            "scale": 0.507707509881423,
-            "image_uri": "5151-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                2240.0
-            ],
-            "rotation": 331.5415019762846,
-            "scale": 0.4909749670619236,
-            "image_uri": "5152-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                560.0
-            ],
-            "rotation": -186.40316205533597,
-            "scale": 0.4897891963109354,
-            "image_uri": "5152-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                1120.0
-            ],
-            "rotation": -169.3280632411067,
-            "scale": 0.49967061923583667,
-            "image_uri": "5152-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                1680.0
-            ],
-            "rotation": 234.78260869565213,
-            "scale": 0.5154808959156786,
-            "image_uri": "5153-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                2240.0
-            ],
-            "rotation": 351.4624505928854,
-            "scale": 0.49624505928853757,
-            "image_uri": "5153-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                2800.0
-            ],
-            "rotation": 95.33596837944663,
-            "scale": 0.502437417654809,
-            "image_uri": "5153-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                560.0
-            ],
-            "rotation": -223.39920948616603,
-            "scale": 0.510737812911726,
-            "image_uri": "5154-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                1120.0
-            ],
-            "rotation": -314.4664031620553,
-            "scale": 0.51034255599473,
-            "image_uri": "5154-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                1680.0
-            ],
-            "rotation": 305.92885375494075,
-            "scale": 0.49703557312252966,
-            "image_uri": "5154-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                2240.0
-            ],
-            "rotation": -280.3162055335969,
-            "scale": 0.49716732542819503,
-            "image_uri": "5155-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1680.0
-            ],
-            "rotation": 78.26086956521743,
-            "scale": 0.4876811594202899,
-            "image_uri": "5155-topping-fruit-passionfruit.png"
-        },
-        {
-            "translation": [
-                2655.0,
+                845.0,
                 1400.0
             ],
-            "rotation": -214.86166007905138,
-            "scale": 0.5046772068511199,
+            "rotation": 214.86166007905138,
+            "scale": 0.491897233201581,
+            "image_uri": "5150-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                555.0,
+                2100.0
+            ],
+            "rotation": 337.23320158102763,
+            "scale": 0.5104743083003953,
+            "image_uri": "5151-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                700.0
+            ],
+            "rotation": 157.9446640316205,
+            "scale": 0.4904479578392622,
+            "image_uri": "5151-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                1400.0
+            ],
+            "rotation": -89.64426877470356,
+            "scale": 0.49940711462450593,
+            "image_uri": "5152-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                2100.0
+            ],
+            "rotation": 177.86561264822137,
+            "scale": 0.48820816864295125,
+            "image_uri": "5152-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                2800.0
+            ],
+            "rotation": 194.94071146245062,
+            "scale": 0.49716732542819503,
+            "image_uri": "5153-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                700.0
+            ],
+            "rotation": 263.2411067193676,
+            "scale": 0.49914361001317525,
+            "image_uri": "5153-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                2245.0,
+                1400.0
+            ],
+            "rotation": 311.62055335968387,
+            "scale": 0.5070487483530962,
+            "image_uri": "5154-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                2100.0
+            ],
+            "rotation": -194.9407114624506,
+            "scale": 0.5142951251646904,
+            "image_uri": "5154-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                2100.0
+            ],
+            "rotation": -103.87351778656125,
+            "scale": 0.5042819499341239,
+            "image_uri": "5155-topping-fruit-passionfruit.png"
+        },
+        {
+            "translation": [
+                1461.067345249956,
+                1660.9630973045869
+            ],
+            "rotation": 175.01976284584987,
+            "scale": 0.5069169960474309,
             "image_uri": "5155-topping-fruit-passionfruit.png"
         }
     ],

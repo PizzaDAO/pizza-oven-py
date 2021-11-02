@@ -1,7 +1,7 @@
 {
     "token_id": 239,
     "name": "7250-paintstrokes",
-    "random_seed": "EDDC15C5",
+    "random_seed": "568E6DDB",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -10,53 +10,53 @@
                 "ingredient_id": "000",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
+                "name": "cardboard",
                 "ingredient_rarity": 0,
-                "variant_rarity": 5,
+                "variant_rarity": 2,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 90.0,
-                    "mass": 994.0,
-                    "calories": 92.0,
-                    "vitamin_c": 1.0,
-                    "magnesium": 2.0,
-                    "vitamin_b5": 3.0,
-                    "vitamin_d": 4.0,
-                    "vitamin_b7": 5.0,
-                    "height": 10.0,
-                    "moisture": 11.0,
-                    "potassium": 10.0,
-                    "cholesterol": 15.0,
-                    "vitamin_a": 16.0,
-                    "dietary_fiber": 16.0,
-                    "vitamin_b6": 17.0,
-                    "sugar": 20.0,
-                    "protein": 21.0,
-                    "iron": 25.0,
-                    "complex_carb": 30.0,
-                    "selenium": 31.0,
-                    "vitamin_k": 32.0,
-                    "vitamin_b12": 40.0,
-                    "calories_from_fat": 41.0,
-                    "vitamin_e": 42.0,
-                    "zinc": 50.0,
-                    "saturated_fat": 51.0,
-                    "iodine": 52.0,
-                    "trans_fat": 60.0,
-                    "sodium": 61.0,
-                    "monosaturated_fat": 62.0,
-                    "calcium": 63.0,
-                    "riboflavin": 70.0,
-                    "thiamin": 71.0,
-                    "folate": 72.0,
-                    "added_sugar": 23.0,
-                    "chromium": 22.0,
-                    "manganese": 24.0
+                    "serving_size": 0.0,
+                    "mass": 203.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 153.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0000-box-white.png",
+                    "filename": "0000-box-cardboard.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,26 +69,26 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0000-box-white.png"
+                    "image_uri": "0000-box-cardboard.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0500",
-                "ingredient_id": "050",
-                "variant_id": "0",
+                "unique_id": "0532",
+                "ingredient_id": "053",
+                "variant_id": "2",
                 "index": 1,
-                "name": "redchecker",
+                "name": "code",
                 "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0500-paper-redchecker.png",
+                    "filename": "0532-paper-code.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,7 +139,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0500-paper-redchecker.png"
+                    "image_uri": "0532-paper-code.png"
                 }
             ],
             "scatter_type": 1
@@ -151,14 +151,14 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "thin",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "ingredient_rarity": 0,
+                "variant_rarity": 0,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 748.3,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -171,29 +171,29 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 31.4,
+                    "iron": 37.6,
+                    "complex_carb": 59.9,
+                    "selenium": 89.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 99.1,
+                    "calories_from_fat": 51.7,
+                    "vitamin_e": 17.5,
+                    "zinc": 55.2,
+                    "saturated_fat": 41.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 51.7,
+                    "sodium": 17.5,
+                    "monosaturated_fat": 55.2,
+                    "calcium": 41.0,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 41.6,
+                    "chromium": 46.1,
+                    "manganese": 18.2
                 },
                 "image_uris": {
                     "filename": "1000-crust-thin.png",
@@ -216,48 +216,48 @@
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2000",
-                "ingredient_id": "200",
-                "variant_id": "0",
+                "unique_id": "2011",
+                "ingredient_id": "201",
+                "variant_id": "1",
                 "index": 1,
-                "name": "tomato",
-                "ingredient_rarity": 0,
-                "variant_rarity": 0,
+                "name": "pesto",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 484.3,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 4.1,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 18.6,
+                    "protein": 4.0,
+                    "iron": 6.0,
+                    "complex_carb": 62.0,
+                    "selenium": 13.9,
+                    "vitamin_k": 52.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 6.7,
+                    "zinc": 11.9,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 62.4,
+                    "sodium": 12.0,
+                    "monosaturated_fat": 23.5,
+                    "calcium": 96.0,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2000-sauce-tomato.png",
+                    "filename": "2011-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,7 +279,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "2000-sauce-tomato.png"
+                    "image_uri": "2011-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
@@ -291,49 +291,49 @@
                 "variant_id": "3",
                 "index": 1,
                 "name": "smokedmozzarella",
-                "ingredient_rarity": 2,
+                "ingredient_rarity": 1,
                 "variant_rarity": 2,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 240.6,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
+                    "vitamin_c": 0.3,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 0.6,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 6.7,
+                    "vitamin_a": 6.4,
+                    "dietary_fiber": 1.9,
+                    "vitamin_b6": 60.0,
+                    "sugar": 8.0,
+                    "protein": 9.7,
+                    "iron": 1.3,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.3,
+                    "chromium": 1.6,
+                    "manganese": 0.5
                 },
                 "image_uris": {
                     "filename": "3033-cheese-smokedmozzarella.png",
@@ -369,8 +369,8 @@
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 141.2,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -383,44 +383,44 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.6,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.7,
+                    "chromium": 0.1,
+                    "manganese": 1.5
                 },
                 "image_uris": {
                     "filename": "7250-topping-misc-paintstrokes.png",
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
                         555.0,
                         700.0
                     ],
-                    "rotation": -143.71541501976284,
-                    "scale": 0.4780632411067194,
+                    "rotation": -268.9328063241107,
+                    "scale": 0.5048748353096179,
                     "image_uri": "7250-topping-misc-paintstrokes.png"
                 },
                 {
@@ -428,21 +428,12 @@
                         845.0,
                         1400.0
                     ],
-                    "rotation": 260.3952569169961,
-                    "scale": 0.4543478260869565,
-                    "image_uri": "7250-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        555.0,
-                        2100.0
-                    ],
-                    "rotation": 331.5415019762846,
-                    "scale": 0.5262845849802371,
+                    "rotation": 172.17391304347825,
+                    "scale": 0.5106719367588932,
                     "image_uri": "7250-topping-misc-paintstrokes.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7251": {
             "ingredient": {
@@ -457,8 +448,8 @@
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 137.6,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -471,23 +462,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 1.0,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -500,37 +491,28 @@
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
+                {
+                    "translation": [
+                        555.0,
+                        2100.0
+                    ],
+                    "rotation": -300.2371541501976,
+                    "scale": 0.49776021080368904,
+                    "image_uri": "7251-topping-misc-paintstrokes.png"
+                },
                 {
                     "translation": [
                         1255.0,
                         700.0
                     ],
-                    "rotation": 66.87747035573125,
-                    "scale": 0.4543478260869565,
-                    "image_uri": "7251-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        1545.0,
-                        1400.0
-                    ],
-                    "rotation": -38.41897233201581,
-                    "scale": 0.5179841897233202,
-                    "image_uri": "7251-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        1255.0,
-                        2100.0
-                    ],
-                    "rotation": -132.3320158102767,
-                    "scale": 0.4571146245059289,
+                    "rotation": 98.18181818181819,
+                    "scale": 0.4682476943346508,
                     "image_uri": "7251-topping-misc-paintstrokes.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7252": {
             "ingredient": {
@@ -545,8 +527,8 @@
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 141.9,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -559,23 +541,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 1.7,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -588,37 +570,28 @@
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
                         1545.0,
-                        2800.0
-                    ],
-                    "rotation": -41.26482213438737,
-                    "scale": 0.5175889328063241,
-                    "image_uri": "7252-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        1955.0,
-                        700.0
-                    ],
-                    "rotation": -7.114624505928873,
-                    "scale": 0.4800395256916996,
-                    "image_uri": "7252-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        2245.0,
                         1400.0
                     ],
-                    "rotation": -246.16600790513834,
-                    "scale": 0.49031620553359684,
+                    "rotation": 340.07905138339925,
+                    "scale": 0.5209486166007905,
+                    "image_uri": "7252-topping-misc-paintstrokes.png"
+                },
+                {
+                    "translation": [
+                        1255.0,
+                        2100.0
+                    ],
+                    "rotation": 340.07905138339925,
+                    "scale": 0.5272727272727272,
                     "image_uri": "7252-topping-misc-paintstrokes.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7253": {
             "ingredient": {
@@ -633,8 +606,8 @@
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 143.7,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -647,23 +620,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 69.0,
+                    "sugar": 1.3,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.6,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -676,37 +649,28 @@
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
+                        1545.0,
+                        2800.0
+                    ],
+                    "rotation": -169.3280632411067,
+                    "scale": 1.0164690382081687,
+                    "image_uri": "7253-topping-misc-paintstrokes.png"
+                },
+                {
+                    "translation": [
                         1955.0,
-                        2100.0
+                        700.0
                     ],
-                    "rotation": 140.8695652173913,
-                    "scale": 0.5009881422924901,
-                    "image_uri": "7253-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        2100.0
-                    ],
-                    "rotation": 69.72332015810275,
-                    "scale": 0.5183794466403162,
-                    "image_uri": "7253-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": 86.798418972332,
-                    "scale": 0.5322134387351778,
+                    "rotation": -206.32411067193678,
+                    "scale": 0.9969696969696971,
                     "image_uri": "7253-topping-misc-paintstrokes.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7254": {
             "ingredient": {
@@ -721,8 +685,8 @@
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 140.4,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -735,23 +699,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 0.9,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.1,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -764,37 +728,28 @@
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1255.0,
+                        2245.0,
                         1400.0
                     ],
-                    "rotation": 249.01185770750988,
-                    "scale": 0.46225296442687747,
+                    "rotation": 348.61660079051387,
+                    "scale": 0.4693017127799736,
                     "image_uri": "7254-topping-misc-paintstrokes.png"
                 },
                 {
                     "translation": [
-                        1545.0,
-                        2800.0
+                        1955.0,
+                        2100.0
                     ],
-                    "rotation": -212.01581027667984,
-                    "scale": 0.49664031620553356,
-                    "image_uri": "7254-topping-misc-paintstrokes.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": 61.18577075098813,
-                    "scale": 0.4828063241106719,
+                    "rotation": -337.2332015810277,
+                    "scale": 0.5251646903820817,
                     "image_uri": "7254-topping-misc-paintstrokes.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
@@ -804,8 +759,8 @@
                 555.0,
                 700.0
             ],
-            "rotation": -143.71541501976284,
-            "scale": 0.4780632411067194,
+            "rotation": -268.9328063241107,
+            "scale": 0.5048748353096179,
             "image_uri": "7250-topping-misc-paintstrokes.png"
         },
         {
@@ -813,8 +768,8 @@
                 845.0,
                 1400.0
             ],
-            "rotation": 260.3952569169961,
-            "scale": 0.4543478260869565,
+            "rotation": 172.17391304347825,
+            "scale": 0.5106719367588932,
             "image_uri": "7250-topping-misc-paintstrokes.png"
         },
         {
@@ -822,17 +777,17 @@
                 555.0,
                 2100.0
             ],
-            "rotation": 331.5415019762846,
-            "scale": 0.5262845849802371,
-            "image_uri": "7250-topping-misc-paintstrokes.png"
+            "rotation": -300.2371541501976,
+            "scale": 0.49776021080368904,
+            "image_uri": "7251-topping-misc-paintstrokes.png"
         },
         {
             "translation": [
                 1255.0,
                 700.0
             ],
-            "rotation": 66.87747035573125,
-            "scale": 0.4543478260869565,
+            "rotation": 98.18181818181819,
+            "scale": 0.4682476943346508,
             "image_uri": "7251-topping-misc-paintstrokes.png"
         },
         {
@@ -840,98 +795,53 @@
                 1545.0,
                 1400.0
             ],
-            "rotation": -38.41897233201581,
-            "scale": 0.5179841897233202,
-            "image_uri": "7251-topping-misc-paintstrokes.png"
+            "rotation": 340.07905138339925,
+            "scale": 0.5209486166007905,
+            "image_uri": "7252-topping-misc-paintstrokes.png"
         },
         {
             "translation": [
                 1255.0,
                 2100.0
             ],
-            "rotation": -132.3320158102767,
-            "scale": 0.4571146245059289,
-            "image_uri": "7251-topping-misc-paintstrokes.png"
+            "rotation": 340.07905138339925,
+            "scale": 0.5272727272727272,
+            "image_uri": "7252-topping-misc-paintstrokes.png"
         },
         {
             "translation": [
                 1545.0,
                 2800.0
             ],
-            "rotation": -41.26482213438737,
-            "scale": 0.5175889328063241,
-            "image_uri": "7252-topping-misc-paintstrokes.png"
+            "rotation": -169.3280632411067,
+            "scale": 1.0164690382081687,
+            "image_uri": "7253-topping-misc-paintstrokes.png"
         },
         {
             "translation": [
                 1955.0,
                 700.0
             ],
-            "rotation": -7.114624505928873,
-            "scale": 0.4800395256916996,
-            "image_uri": "7252-topping-misc-paintstrokes.png"
+            "rotation": -206.32411067193678,
+            "scale": 0.9969696969696971,
+            "image_uri": "7253-topping-misc-paintstrokes.png"
         },
         {
             "translation": [
                 2245.0,
                 1400.0
             ],
-            "rotation": -246.16600790513834,
-            "scale": 0.49031620553359684,
-            "image_uri": "7252-topping-misc-paintstrokes.png"
+            "rotation": 348.61660079051387,
+            "scale": 0.4693017127799736,
+            "image_uri": "7254-topping-misc-paintstrokes.png"
         },
         {
             "translation": [
                 1955.0,
                 2100.0
             ],
-            "rotation": 140.8695652173913,
-            "scale": 0.5009881422924901,
-            "image_uri": "7253-topping-misc-paintstrokes.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                2100.0
-            ],
-            "rotation": 69.72332015810275,
-            "scale": 0.5183794466403162,
-            "image_uri": "7253-topping-misc-paintstrokes.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": 86.798418972332,
-            "scale": 0.5322134387351778,
-            "image_uri": "7253-topping-misc-paintstrokes.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
-            ],
-            "rotation": 249.01185770750988,
-            "scale": 0.46225296442687747,
-            "image_uri": "7254-topping-misc-paintstrokes.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                2800.0
-            ],
-            "rotation": -212.01581027667984,
-            "scale": 0.49664031620553356,
-            "image_uri": "7254-topping-misc-paintstrokes.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": 61.18577075098813,
-            "scale": 0.4828063241106719,
+            "rotation": -337.2332015810277,
+            "scale": 0.5251646903820817,
             "image_uri": "7254-topping-misc-paintstrokes.png"
         }
     ],

@@ -1,24 +1,24 @@
 {
-    "token_id": 75,
+    "token_id": 76,
     "name": "5160-orangepeel",
-    "random_seed": "72A700FE",
+    "random_seed": "5CACAC22",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "greasy",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 218.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -28,16 +28,16 @@
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 15.0,
                     "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
+                    "dietary_fiber": 153.0,
                     "vitamin_b6": 0.0,
                     "sugar": 0.0,
                     "protein": 0.0,
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,7 +69,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
@@ -80,15 +80,15 @@
                 "ingredient_id": "053",
                 "variant_id": "1",
                 "index": 1,
-                "name": "code-cherry",
+                "name": "code",
                 "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0531-paper-code-cherry.png",
+                    "filename": "0531-paper-code.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,28 +139,28 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0531-paper-code-cherry.png"
+                    "image_uri": "0531-paper-code.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1050",
-                "ingredient_id": "105",
+                "unique_id": "1060",
+                "ingredient_id": "106",
                 "variant_id": "0",
                 "index": 1,
-                "name": "whitebread",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "playdao",
+                "ingredient_rarity": 3,
+                "variant_rarity": 3,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 813.6,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
+                    "vitamin_c": 1.0,
                     "magnesium": 0.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
@@ -171,32 +171,32 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 88.2,
+                    "iron": 41.4,
+                    "complex_carb": 98.5,
+                    "selenium": 25.7,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 3.7,
+                    "calories_from_fat": 82.5,
+                    "vitamin_e": 87.5,
+                    "zinc": 39.6,
+                    "saturated_fat": 11.7,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 82.5,
+                    "sodium": 78.4,
+                    "monosaturated_fat": 69.4,
+                    "calcium": 3.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 73.5,
+                    "chromium": 85.9,
+                    "manganese": 91.6
                 },
                 "image_uris": {
-                    "filename": "1050-crust-whitebread.png",
+                    "filename": "1060-crust-playdao.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,64 +209,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1050-crust-whitebread.png"
+                    "image_uri": "1060-crust-playdao.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2040",
-                "ingredient_id": "204",
-                "variant_id": "0",
+                "unique_id": "2054",
+                "ingredient_id": "205",
+                "variant_id": "4",
                 "index": 1,
-                "name": "nutella",
-                "ingredient_rarity": 5,
-                "variant_rarity": 0,
+                "name": "white",
+                "ingredient_rarity": 1,
+                "variant_rarity": 4,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 347.7,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 5.6,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 30.0,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 34.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 1.9,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 0.9,
+                    "sodium": 0.6,
+                    "monosaturated_fat": 1.0,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.1,
+                    "chromium": 2.0,
+                    "manganese": 1.3
                 },
                 "image_uris": {
-                    "filename": "2040-sauce-nutella.png",
+                    "filename": "2054-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,64 +279,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "2040-sauce-nutella.png"
+                    "image_uri": "2054-sauce-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3031",
+                "unique_id": "3032",
                 "ingredient_id": "303",
-                "variant_id": "1",
+                "variant_id": "2",
                 "index": 1,
                 "name": "smokedmozzarella",
-                "ingredient_rarity": 2,
+                "ingredient_rarity": 1,
                 "variant_rarity": 1,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 230.4,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 2.8,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 2.9,
+                    "vitamin_a": 2.6,
+                    "dietary_fiber": 1.4,
+                    "vitamin_b6": 60.0,
+                    "sugar": 7.5,
+                    "protein": 6.4,
+                    "iron": 0.1,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.9,
+                    "chromium": 0.8,
+                    "manganese": 2.0
                 },
                 "image_uris": {
-                    "filename": "3031-cheese-smokedmozzarella.png",
+                    "filename": "3032-cheese-smokedmozzarella.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8888888888888888,
-                    "image_uri": "3031-cheese-smokedmozzarella.png"
+                    "scale": 0.6111111111111112,
+                    "image_uri": "3032-cheese-smokedmozzarella.png"
                 }
             ],
             "scatter_type": 1
@@ -369,11 +369,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 149.3,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -383,23 +383,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 3.5,
+                    "protein": 2.9,
+                    "iron": 1.8,
+                    "complex_carb": 3.1,
+                    "selenium": 6.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -412,15 +412,15 @@
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
                         555.0,
                         700.0
                     ],
-                    "rotation": -1.4229249011857519,
-                    "scale": 0.8405138339920949,
+                    "rotation": -257.5494071146245,
+                    "scale": 1.0061264822134388,
                     "image_uri": "5160-topping-fruit-orangepeel.png"
                 },
                 {
@@ -428,21 +428,12 @@
                         845.0,
                         1400.0
                     ],
-                    "rotation": -200.6324110671937,
-                    "scale": 0.8266798418972333,
-                    "image_uri": "5160-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        555.0,
-                        2100.0
-                    ],
-                    "rotation": -320.15810276679844,
-                    "scale": 0.8294466403162056,
+                    "rotation": -254.70355731225297,
+                    "scale": 0.9900527009222662,
                     "image_uri": "5160-topping-fruit-orangepeel.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5161": {
             "ingredient": {
@@ -457,11 +448,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 149.9,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -471,66 +462,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 7.7,
+                    "protein": 0.1,
+                    "iron": 1.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.9,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.5,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.4,
+                    "chromium": 1.6,
+                    "manganese": 1.6
                 },
                 "image_uris": {
                     "filename": "5161-topping-fruit-orangepeel.png",
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
+                {
+                    "translation": [
+                        555.0,
+                        2100.0
+                    ],
+                    "rotation": 189.2490118577075,
+                    "scale": 1.016403162055336,
+                    "image_uri": "5161-topping-fruit-orangepeel.png"
+                },
                 {
                     "translation": [
                         1255.0,
                         700.0
                     ],
-                    "rotation": 163.63636363636363,
-                    "scale": 0.8480237154150198,
-                    "image_uri": "5161-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        1545.0,
-                        1400.0
-                    ],
-                    "rotation": -240.47430830039525,
-                    "scale": 0.8365612648221344,
-                    "image_uri": "5161-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        1255.0,
-                        2100.0
-                    ],
-                    "rotation": -246.16600790513834,
-                    "scale": 0.8492094861660079,
+                    "rotation": -209.16996047430828,
+                    "scale": 0.9835968379446641,
                     "image_uri": "5161-topping-fruit-orangepeel.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5162": {
             "ingredient": {
@@ -545,11 +527,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 156.3,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -559,66 +541,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 68.0,
+                    "sugar": 2.6,
+                    "protein": 2.8,
+                    "iron": 0.1,
+                    "complex_carb": 2.9,
+                    "selenium": 13.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 2.6,
+                    "calories_from_fat": 2.1,
+                    "vitamin_e": 0.5,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.1,
+                    "calcium": 0.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 2.0,
+                    "chromium": 0.4,
+                    "manganese": 0.2
                 },
                 "image_uris": {
                     "filename": "5162-topping-fruit-orangepeel.png",
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
                         1545.0,
-                        2800.0
-                    ],
-                    "rotation": 75.41501976284582,
-                    "scale": 0.8391963109354413,
-                    "image_uri": "5162-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        1955.0,
-                        700.0
-                    ],
-                    "rotation": -249.01185770750988,
-                    "scale": 0.847760210803689,
-                    "image_uri": "5162-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        2245.0,
                         1400.0
                     ],
-                    "rotation": -83.9525691699605,
-                    "scale": 0.8377470355731226,
+                    "rotation": -314.4664031620553,
+                    "scale": 0.9879446640316206,
+                    "image_uri": "5162-topping-fruit-orangepeel.png"
+                },
+                {
+                    "translation": [
+                        1255.0,
+                        2100.0
+                    ],
+                    "rotation": -345.7707509881423,
+                    "scale": 1.0025691699604744,
                     "image_uri": "5162-topping-fruit-orangepeel.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5163": {
             "ingredient": {
@@ -633,11 +606,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 155.4,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -647,66 +620,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 3.8,
+                    "protein": 1.7,
+                    "iron": 2.8,
+                    "complex_carb": 2.9,
+                    "selenium": 13.3,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.0,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.7,
+                    "chromium": 0.6,
+                    "manganese": 1.7
                 },
                 "image_uris": {
                     "filename": "5163-topping-fruit-orangepeel.png",
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
+                        1545.0,
+                        2800.0
+                    ],
+                    "rotation": -7.114624505928873,
+                    "scale": 1.0000658761528327,
+                    "image_uri": "5163-topping-fruit-orangepeel.png"
+                },
+                {
+                    "translation": [
                         1955.0,
-                        2100.0
+                        700.0
                     ],
-                    "rotation": 263.2411067193676,
-                    "scale": 0.8373517786561265,
-                    "image_uri": "5163-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        2100.0
-                    ],
-                    "rotation": -183.55731225296444,
-                    "scale": 0.8490777338603426,
-                    "image_uri": "5163-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -194.9407114624506,
-                    "scale": 0.8178524374176549,
+                    "rotation": -163.63636363636365,
+                    "scale": 1.0117918313570486,
                     "image_uri": "5163-topping-fruit-orangepeel.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5164": {
             "ingredient": {
@@ -721,11 +685,11 @@
                 "category": "topping-fruit",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 160.2,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -735,28 +699,28 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 2.9,
+                    "protein": 8.3,
+                    "iron": 2.1,
+                    "complex_carb": 2.9,
+                    "selenium": 13.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.7,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.2,
+                    "zinc": 1.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
+                    "added_sugar": 1.9,
+                    "chromium": 1.8,
                     "manganese": 0.0
                 },
                 "image_uris": {
@@ -764,37 +728,28 @@
                     "output_mask": "rarepizza-#####-topping-fruit"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1255.0,
+                        2245.0,
                         1400.0
                     ],
-                    "rotation": -180.71146245059288,
-                    "scale": 0.8254940711462452,
+                    "rotation": -24.189723320158066,
+                    "scale": 1.0091567852437417,
                     "image_uri": "5164-topping-fruit-orangepeel.png"
                 },
                 {
                     "translation": [
-                        1545.0,
-                        2800.0
+                        1955.0,
+                        2100.0
                     ],
-                    "rotation": 226.2450592885375,
-                    "scale": 0.8198287220026351,
-                    "image_uri": "5164-topping-fruit-orangepeel.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -268.9328063241107,
-                    "scale": 0.8341897233201582,
+                    "rotation": 163.63636363636363,
+                    "scale": 0.9835968379446641,
                     "image_uri": "5164-topping-fruit-orangepeel.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
@@ -804,8 +759,8 @@
                 555.0,
                 700.0
             ],
-            "rotation": -1.4229249011857519,
-            "scale": 0.8405138339920949,
+            "rotation": -257.5494071146245,
+            "scale": 1.0061264822134388,
             "image_uri": "5160-topping-fruit-orangepeel.png"
         },
         {
@@ -813,8 +768,8 @@
                 845.0,
                 1400.0
             ],
-            "rotation": -200.6324110671937,
-            "scale": 0.8266798418972333,
+            "rotation": -254.70355731225297,
+            "scale": 0.9900527009222662,
             "image_uri": "5160-topping-fruit-orangepeel.png"
         },
         {
@@ -822,17 +777,17 @@
                 555.0,
                 2100.0
             ],
-            "rotation": -320.15810276679844,
-            "scale": 0.8294466403162056,
-            "image_uri": "5160-topping-fruit-orangepeel.png"
+            "rotation": 189.2490118577075,
+            "scale": 1.016403162055336,
+            "image_uri": "5161-topping-fruit-orangepeel.png"
         },
         {
             "translation": [
                 1255.0,
                 700.0
             ],
-            "rotation": 163.63636363636363,
-            "scale": 0.8480237154150198,
+            "rotation": -209.16996047430828,
+            "scale": 0.9835968379446641,
             "image_uri": "5161-topping-fruit-orangepeel.png"
         },
         {
@@ -840,98 +795,53 @@
                 1545.0,
                 1400.0
             ],
-            "rotation": -240.47430830039525,
-            "scale": 0.8365612648221344,
-            "image_uri": "5161-topping-fruit-orangepeel.png"
+            "rotation": -314.4664031620553,
+            "scale": 0.9879446640316206,
+            "image_uri": "5162-topping-fruit-orangepeel.png"
         },
         {
             "translation": [
                 1255.0,
                 2100.0
             ],
-            "rotation": -246.16600790513834,
-            "scale": 0.8492094861660079,
-            "image_uri": "5161-topping-fruit-orangepeel.png"
+            "rotation": -345.7707509881423,
+            "scale": 1.0025691699604744,
+            "image_uri": "5162-topping-fruit-orangepeel.png"
         },
         {
             "translation": [
                 1545.0,
                 2800.0
             ],
-            "rotation": 75.41501976284582,
-            "scale": 0.8391963109354413,
-            "image_uri": "5162-topping-fruit-orangepeel.png"
+            "rotation": -7.114624505928873,
+            "scale": 1.0000658761528327,
+            "image_uri": "5163-topping-fruit-orangepeel.png"
         },
         {
             "translation": [
                 1955.0,
                 700.0
             ],
-            "rotation": -249.01185770750988,
-            "scale": 0.847760210803689,
-            "image_uri": "5162-topping-fruit-orangepeel.png"
+            "rotation": -163.63636363636365,
+            "scale": 1.0117918313570486,
+            "image_uri": "5163-topping-fruit-orangepeel.png"
         },
         {
             "translation": [
                 2245.0,
                 1400.0
             ],
-            "rotation": -83.9525691699605,
-            "scale": 0.8377470355731226,
-            "image_uri": "5162-topping-fruit-orangepeel.png"
+            "rotation": -24.189723320158066,
+            "scale": 1.0091567852437417,
+            "image_uri": "5164-topping-fruit-orangepeel.png"
         },
         {
             "translation": [
                 1955.0,
                 2100.0
             ],
-            "rotation": 263.2411067193676,
-            "scale": 0.8373517786561265,
-            "image_uri": "5163-topping-fruit-orangepeel.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                2100.0
-            ],
-            "rotation": -183.55731225296444,
-            "scale": 0.8490777338603426,
-            "image_uri": "5163-topping-fruit-orangepeel.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -194.9407114624506,
-            "scale": 0.8178524374176549,
-            "image_uri": "5163-topping-fruit-orangepeel.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                1400.0
-            ],
-            "rotation": -180.71146245059288,
-            "scale": 0.8254940711462452,
-            "image_uri": "5164-topping-fruit-orangepeel.png"
-        },
-        {
-            "translation": [
-                1545.0,
-                2800.0
-            ],
-            "rotation": 226.2450592885375,
-            "scale": 0.8198287220026351,
-            "image_uri": "5164-topping-fruit-orangepeel.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -268.9328063241107,
-            "scale": 0.8341897233201582,
+            "rotation": 163.63636363636363,
+            "scale": 0.9835968379446641,
             "image_uri": "5164-topping-fruit-orangepeel.png"
         }
     ],

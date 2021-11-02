@@ -1,24 +1,24 @@
 {
-    "token_id": 192,
+    "token_id": 193,
     "name": "6670-meltingcookies",
-    "random_seed": "EA44F0B3",
+    "random_seed": "02DEFAA1",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "greasy",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 218.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -28,16 +28,16 @@
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 15.0,
                     "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
+                    "dietary_fiber": 153.0,
                     "vitamin_b6": 0.0,
                     "sugar": 0.0,
                     "protein": 0.0,
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,26 +69,26 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
-                "variant_id": "0",
+                "unique_id": "0553",
+                "ingredient_id": "055",
+                "variant_id": "3",
                 "index": 1,
-                "name": "greenchecker",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "superpony",
+                "ingredient_rarity": 2,
+                "variant_rarity": 3,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0553-paper-superpony.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,64 +139,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0553-paper-superpony.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1010",
-                "ingredient_id": "101",
+                "unique_id": "1020",
+                "ingredient_id": "102",
                 "variant_id": "0",
                 "index": 1,
-                "name": "thick",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "moon",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 560.5,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
+                    "vitamin_b7": 1.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 2.5,
+                    "iron": 3.7,
+                    "complex_carb": 0.2,
+                    "selenium": 2.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 61.5,
+                    "calories_from_fat": 53.3,
+                    "vitamin_e": 15.3,
+                    "zinc": 81.5,
+                    "saturated_fat": 25.2,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 84.5,
+                    "sodium": 23.4,
+                    "monosaturated_fat": 88.0,
+                    "calcium": 13.6,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 55.5,
+                    "chromium": 26.7,
+                    "manganese": 14.2
                 },
                 "image_uris": {
-                    "filename": "1010-crust-thick.png",
+                    "filename": "1020-crust-moon.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,64 +209,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1010-crust-thick.png"
+                    "image_uri": "1020-crust-moon.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2010",
-                "ingredient_id": "201",
-                "variant_id": "0",
+                "unique_id": "2051",
+                "ingredient_id": "205",
+                "variant_id": "1",
                 "index": 1,
-                "name": "pesto",
+                "name": "white",
                 "ingredient_rarity": 1,
-                "variant_rarity": 0,
+                "variant_rarity": 3,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 345.7,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 5.6,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 30.0,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 34.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 0.7,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
                     "trans_fat": 0.0,
-                    "sodium": 0.0,
+                    "sodium": 0.1,
                     "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "calcium": 1.9,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 2.0,
+                    "chromium": 1.8,
+                    "manganese": 1.1
                 },
                 "image_uris": {
-                    "filename": "2010-sauce-pesto.png",
+                    "filename": "2051-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,17 +278,17 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2010-sauce-pesto.png"
+                    "scale": 1.0,
+                    "image_uri": "2051-sauce-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3191",
+                "unique_id": "3192",
                 "ingredient_id": "319",
-                "variant_id": "1",
+                "variant_id": "2",
                 "index": 1,
                 "name": "gruyere",
                 "ingredient_rarity": 2,
@@ -297,46 +297,46 @@
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 226.7,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 2.8,
+                    "vitamin_d": 1.0,
+                    "vitamin_b7": 3.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 0.5,
+                    "vitamin_a": 9.0,
+                    "dietary_fiber": 1.3,
+                    "vitamin_b6": 60.0,
+                    "sugar": 0.9,
+                    "protein": 0.5,
+                    "iron": 1.0,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.7,
+                    "chromium": 0.2,
+                    "manganese": 0.9
                 },
                 "image_uris": {
-                    "filename": "3191-cheese-gruyere.png",
+                    "filename": "3192-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.7777777777777778,
-                    "image_uri": "3191-cheese-gruyere.png"
+                    "image_uri": "3192-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -363,14 +363,14 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "meltingcookies",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 3,
                 "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-snax",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 141.8,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -383,23 +383,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 0.5,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -412,37 +412,28 @@
                     "output_mask": "rarepizza-#####-topping-snax"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        705.0,
-                        1120.0
+                        555.0,
+                        700.0
                     ],
-                    "rotation": 27.035573122529627,
-                    "scale": 0.4937747035573123,
+                    "rotation": -357.15415019762844,
+                    "scale": 0.8561594202898551,
                     "image_uri": "6670-topping-snax-meltingcookies.png"
                 },
                 {
                     "translation": [
-                        415.0,
-                        1680.0
+                        845.0,
+                        1400.0
                     ],
-                    "rotation": -186.40316205533597,
-                    "scale": 0.5022727272727273,
-                    "image_uri": "6670-topping-snax-meltingcookies.png"
-                },
-                {
-                    "translation": [
-                        705.0,
-                        2240.0
-                    ],
-                    "rotation": -18.49802371541506,
-                    "scale": 0.4919960474308301,
+                    "rotation": -160.7905138339921,
+                    "scale": 0.8134716732542818,
                     "image_uri": "6670-topping-snax-meltingcookies.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6671": {
             "ingredient": {
@@ -451,14 +442,14 @@
                 "variant_id": "1",
                 "index": 1,
                 "name": "meltingcookies",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 3,
                 "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-snax",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 141.6,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -471,28 +462,28 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.9,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.5,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
+                    "added_sugar": 1.8,
+                    "chromium": 1.1,
                     "manganese": 0.0
                 },
                 "image_uris": {
@@ -500,37 +491,28 @@
                     "output_mask": "rarepizza-#####-topping-snax"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        975.0,
-                        560.0
+                        555.0,
+                        2100.0
                     ],
-                    "rotation": -271.77865612648225,
-                    "scale": 0.4902173913043479,
+                    "rotation": -266.0869565217391,
+                    "scale": 0.8182147562582345,
                     "image_uri": "6671-topping-snax-meltingcookies.png"
                 },
                 {
                     "translation": [
-                        1265.0,
-                        1120.0
+                        1255.0,
+                        700.0
                     ],
-                    "rotation": 163.63636363636363,
-                    "scale": 0.47796442687747037,
-                    "image_uri": "6671-topping-snax-meltingcookies.png"
-                },
-                {
-                    "translation": [
-                        975.0,
-                        1680.0
-                    ],
-                    "rotation": -291.699604743083,
-                    "scale": 0.5093873517786561,
+                    "rotation": -197.78656126482213,
+                    "scale": 0.8332345191040843,
                     "image_uri": "6671-topping-snax-meltingcookies.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6672": {
             "ingredient": {
@@ -539,14 +521,14 @@
                 "variant_id": "2",
                 "index": 1,
                 "name": "meltingcookies",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 3,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-snax",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 137.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -559,66 +541,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.8,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.6,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.9,
+                    "chromium": 1.3,
+                    "manganese": 0.2
                 },
                 "image_uris": {
                     "filename": "6672-topping-snax-meltingcookies.png",
                     "output_mask": "rarepizza-#####-topping-snax"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1265.0,
-                        2240.0
+                        1545.0,
+                        1400.0
                     ],
-                    "rotation": 18.498023715415002,
-                    "scale": 0.516304347826087,
+                    "rotation": -12.806324110671937,
+                    "scale": 0.8257246376811593,
                     "image_uri": "6672-topping-snax-meltingcookies.png"
                 },
                 {
                     "translation": [
-                        1535.0,
-                        560.0
+                        1255.0,
+                        2100.0
                     ],
-                    "rotation": 200.63241106719363,
-                    "scale": 0.4991106719367589,
-                    "image_uri": "6672-topping-snax-meltingcookies.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        1120.0
-                    ],
-                    "rotation": -66.87747035573125,
-                    "scale": 0.5016798418972332,
+                    "rotation": -317.3122529644269,
+                    "scale": 0.8581357048748354,
                     "image_uri": "6672-topping-snax-meltingcookies.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6673": {
             "ingredient": {
@@ -627,14 +600,14 @@
                 "variant_id": "3",
                 "index": 1,
                 "name": "meltingcookies",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 3,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-snax",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 142.9,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -647,66 +620,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 68.0,
                     "sugar": 0.0,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.7,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.7,
+                    "chromium": 2.0,
+                    "manganese": 1.4
                 },
                 "image_uris": {
                     "filename": "6673-topping-snax-meltingcookies.png",
                     "output_mask": "rarepizza-#####-topping-snax"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1535.0,
-                        1680.0
-                    ],
-                    "rotation": 52.64822134387356,
-                    "scale": 0.4836956521739131,
-                    "image_uri": "6673-topping-snax-meltingcookies.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        2240.0
-                    ],
-                    "rotation": 186.40316205533588,
-                    "scale": 0.4789525691699605,
-                    "image_uri": "6673-topping-snax-meltingcookies.png"
-                },
-                {
-                    "translation": [
-                        1535.0,
+                        1545.0,
                         2800.0
                     ],
-                    "rotation": -146.56126482213438,
-                    "scale": 0.5068181818181818,
+                    "rotation": 95.33596837944663,
+                    "scale": 0.8441040843214757,
+                    "image_uri": "6673-topping-snax-meltingcookies.png"
+                },
+                {
+                    "translation": [
+                        1955.0,
+                        700.0
+                    ],
+                    "rotation": 92.49011857707512,
+                    "scale": 0.8284914361001318,
                     "image_uri": "6673-topping-snax-meltingcookies.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6674": {
             "ingredient": {
@@ -715,14 +679,14 @@
                 "variant_id": "4",
                 "index": 1,
                 "name": "meltingcookies",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 3,
                 "variant_rarity": 5,
                 "classification": 6,
                 "category": "topping-snax",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 135.5,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -735,66 +699,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 0.1,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.3,
+                    "chromium": 1.1,
+                    "manganese": 1.7
                 },
                 "image_uris": {
                     "filename": "6674-topping-snax-meltingcookies.png",
                     "output_mask": "rarepizza-#####-topping-snax"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2095.0,
-                        560.0
+                        2245.0,
+                        1400.0
                     ],
-                    "rotation": -83.9525691699605,
-                    "scale": 0.5220355731225297,
+                    "rotation": 314.46640316205537,
+                    "scale": 0.8091238471673253,
                     "image_uri": "6674-topping-snax-meltingcookies.png"
                 },
                 {
                     "translation": [
-                        2385.0,
-                        1120.0
+                        1955.0,
+                        2100.0
                     ],
-                    "rotation": 177.86561264822137,
-                    "scale": 0.4947628458498024,
-                    "image_uri": "6674-topping-snax-meltingcookies.png"
-                },
-                {
-                    "translation": [
-                        2095.0,
-                        1680.0
-                    ],
-                    "rotation": -146.56126482213438,
-                    "scale": 0.4921936758893281,
+                    "rotation": 277.47035573122525,
+                    "scale": 0.8462779973649539,
                     "image_uri": "6674-topping-snax-meltingcookies.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "6675": {
             "ingredient": {
@@ -803,14 +758,14 @@
                 "variant_id": "5",
                 "index": 1,
                 "name": "meltingcookies",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 3,
                 "variant_rarity": 5,
                 "classification": 6,
                 "category": "topping-snax",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 142.5,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -823,230 +778,167 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 0.9,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.9,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.5,
+                    "chromium": 0.8,
+                    "manganese": 0.8
                 },
                 "image_uris": {
                     "filename": "6675-topping-snax-meltingcookies.png",
                     "output_mask": "rarepizza-#####-topping-snax"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2385.0,
-                        2240.0
+                        2655.0,
+                        2100.0
                     ],
-                    "rotation": 4.2687747035573125,
-                    "scale": 0.4973320158102767,
+                    "rotation": 334.3873517786561,
+                    "scale": 0.8247364953886692,
                     "image_uri": "6675-topping-snax-meltingcookies.png"
                 },
                 {
                     "translation": [
-                        2655.0,
-                        1680.0
+                        1466.9303197047955,
+                        2118.798888532794
                     ],
-                    "rotation": -146.56126482213438,
-                    "scale": 0.5200592885375495,
-                    "image_uri": "6675-topping-snax-meltingcookies.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -331.54150197628456,
-                    "scale": 0.5066205533596838,
+                    "rotation": -246.16600790513834,
+                    "scale": 0.8318511198945981,
                     "image_uri": "6675-topping-snax-meltingcookies.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
     "instances": [
         {
             "translation": [
-                705.0,
-                1120.0
+                555.0,
+                700.0
             ],
-            "rotation": 27.035573122529627,
-            "scale": 0.4937747035573123,
+            "rotation": -357.15415019762844,
+            "scale": 0.8561594202898551,
             "image_uri": "6670-topping-snax-meltingcookies.png"
         },
         {
             "translation": [
-                415.0,
-                1680.0
-            ],
-            "rotation": -186.40316205533597,
-            "scale": 0.5022727272727273,
-            "image_uri": "6670-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                705.0,
-                2240.0
-            ],
-            "rotation": -18.49802371541506,
-            "scale": 0.4919960474308301,
-            "image_uri": "6670-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                975.0,
-                560.0
-            ],
-            "rotation": -271.77865612648225,
-            "scale": 0.4902173913043479,
-            "image_uri": "6671-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                1120.0
-            ],
-            "rotation": 163.63636363636363,
-            "scale": 0.47796442687747037,
-            "image_uri": "6671-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                975.0,
-                1680.0
-            ],
-            "rotation": -291.699604743083,
-            "scale": 0.5093873517786561,
-            "image_uri": "6671-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                2240.0
-            ],
-            "rotation": 18.498023715415002,
-            "scale": 0.516304347826087,
-            "image_uri": "6672-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                560.0
-            ],
-            "rotation": 200.63241106719363,
-            "scale": 0.4991106719367589,
-            "image_uri": "6672-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                1120.0
-            ],
-            "rotation": -66.87747035573125,
-            "scale": 0.5016798418972332,
-            "image_uri": "6672-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                1680.0
-            ],
-            "rotation": 52.64822134387356,
-            "scale": 0.4836956521739131,
-            "image_uri": "6673-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                2240.0
-            ],
-            "rotation": 186.40316205533588,
-            "scale": 0.4789525691699605,
-            "image_uri": "6673-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                2800.0
-            ],
-            "rotation": -146.56126482213438,
-            "scale": 0.5068181818181818,
-            "image_uri": "6673-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                560.0
-            ],
-            "rotation": -83.9525691699605,
-            "scale": 0.5220355731225297,
-            "image_uri": "6674-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                1120.0
-            ],
-            "rotation": 177.86561264822137,
-            "scale": 0.4947628458498024,
-            "image_uri": "6674-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                1680.0
-            ],
-            "rotation": -146.56126482213438,
-            "scale": 0.4921936758893281,
-            "image_uri": "6674-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                2240.0
-            ],
-            "rotation": 4.2687747035573125,
-            "scale": 0.4973320158102767,
-            "image_uri": "6675-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1680.0
-            ],
-            "rotation": -146.56126482213438,
-            "scale": 0.5200592885375495,
-            "image_uri": "6675-topping-snax-meltingcookies.png"
-        },
-        {
-            "translation": [
-                2655.0,
+                845.0,
                 1400.0
             ],
-            "rotation": -331.54150197628456,
-            "scale": 0.5066205533596838,
+            "rotation": -160.7905138339921,
+            "scale": 0.8134716732542818,
+            "image_uri": "6670-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                555.0,
+                2100.0
+            ],
+            "rotation": -266.0869565217391,
+            "scale": 0.8182147562582345,
+            "image_uri": "6671-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                700.0
+            ],
+            "rotation": -197.78656126482213,
+            "scale": 0.8332345191040843,
+            "image_uri": "6671-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                1400.0
+            ],
+            "rotation": -12.806324110671937,
+            "scale": 0.8257246376811593,
+            "image_uri": "6672-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                2100.0
+            ],
+            "rotation": -317.3122529644269,
+            "scale": 0.8581357048748354,
+            "image_uri": "6672-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                2800.0
+            ],
+            "rotation": 95.33596837944663,
+            "scale": 0.8441040843214757,
+            "image_uri": "6673-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                700.0
+            ],
+            "rotation": 92.49011857707512,
+            "scale": 0.8284914361001318,
+            "image_uri": "6673-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                2245.0,
+                1400.0
+            ],
+            "rotation": 314.46640316205537,
+            "scale": 0.8091238471673253,
+            "image_uri": "6674-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                2100.0
+            ],
+            "rotation": 277.47035573122525,
+            "scale": 0.8462779973649539,
+            "image_uri": "6674-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                2100.0
+            ],
+            "rotation": 334.3873517786561,
+            "scale": 0.8247364953886692,
+            "image_uri": "6675-topping-snax-meltingcookies.png"
+        },
+        {
+            "translation": [
+                1466.9303197047955,
+                2118.798888532794
+            ],
+            "rotation": -246.16600790513834,
+            "scale": 0.8318511198945981,
             "image_uri": "6675-topping-snax-meltingcookies.png"
         }
     ],

@@ -1,24 +1,24 @@
 {
-    "token_id": 138,
+    "token_id": 139,
     "name": "6080-cthulhu",
-    "random_seed": "598C28F9",
+    "random_seed": "6057CB5A",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0010",
-                "ingredient_id": "001",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "greasy",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 218.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -28,16 +28,16 @@
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 15.0,
                     "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
+                    "dietary_fiber": 153.0,
                     "vitamin_b6": 0.0,
                     "sugar": 0.0,
                     "protein": 0.0,
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,26 +69,26 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0530",
-                "ingredient_id": "053",
-                "variant_id": "0",
+                "unique_id": "0553",
+                "ingredient_id": "055",
+                "variant_id": "3",
                 "index": 1,
-                "name": "code-cherry",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "superpony",
+                "ingredient_rarity": 2,
+                "variant_rarity": 3,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0530-paper-code-cherry.png",
+                    "filename": "0553-paper-superpony.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,28 +139,28 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0530-paper-code-cherry.png"
+                    "image_uri": "0553-paper-superpony.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1010",
-                "ingredient_id": "101",
+                "unique_id": "1050",
+                "ingredient_id": "105",
                 "variant_id": "0",
                 "index": 1,
-                "name": "thick",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "whitebread",
+                "ingredient_rarity": 2,
+                "variant_rarity": 2,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 820.4,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
+                    "vitamin_c": 1.0,
                     "magnesium": 0.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
@@ -171,32 +171,32 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 53.3,
+                    "iron": 15.3,
+                    "complex_carb": 81.5,
+                    "selenium": 25.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 34.3,
+                    "calories_from_fat": 63.7,
+                    "vitamin_e": 79.8,
+                    "zinc": 73.7,
+                    "saturated_fat": 27.5,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 84.6,
+                    "sodium": 44.6,
+                    "monosaturated_fat": 80.5,
+                    "calcium": 55.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 87.5,
+                    "chromium": 39.6,
+                    "manganese": 11.7
                 },
                 "image_uris": {
-                    "filename": "1010-crust-thick.png",
+                    "filename": "1050-crust-whitebread.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,64 +209,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1010-crust-thick.png"
+                    "image_uri": "1050-crust-whitebread.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2060",
-                "ingredient_id": "206",
+                "unique_id": "2030",
+                "ingredient_id": "203",
                 "variant_id": "0",
                 "index": 1,
-                "name": "deepspace",
-                "ingredient_rarity": 3,
+                "name": "bbq",
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 330.5,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 6.1,
+                    "dietary_fiber": 0.2,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 14.0,
+                    "iron": 50.0,
+                    "complex_carb": 40.0,
+                    "selenium": 34.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 1.4,
+                    "sodium": 1.5,
+                    "monosaturated_fat": 0.8,
+                    "calcium": 1.0,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.6,
+                    "chromium": 0.9,
+                    "manganese": 0.1
                 },
                 "image_uris": {
-                    "filename": "2060-sauce-deepspace.png",
+                    "filename": "2030-sauce-bbq.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,17 +278,17 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2060-sauce-deepspace.png"
+                    "scale": 1.0,
+                    "image_uri": "2030-sauce-bbq.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3191",
+                "unique_id": "3192",
                 "ingredient_id": "319",
-                "variant_id": "1",
+                "variant_id": "2",
                 "index": 1,
                 "name": "gruyere",
                 "ingredient_rarity": 2,
@@ -297,46 +297,46 @@
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 226.7,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 2.8,
+                    "vitamin_d": 1.0,
+                    "vitamin_b7": 3.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 0.5,
+                    "vitamin_a": 9.0,
+                    "dietary_fiber": 1.3,
+                    "vitamin_b6": 60.0,
+                    "sugar": 0.9,
+                    "protein": 0.5,
+                    "iron": 1.0,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.7,
+                    "chromium": 0.2,
+                    "manganese": 0.9
                 },
                 "image_uris": {
-                    "filename": "3191-cheese-gruyere.png",
+                    "filename": "3192-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -349,7 +349,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.7777777777777778,
-                    "image_uri": "3191-cheese-gruyere.png"
+                    "image_uri": "3192-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -369,8 +369,8 @@
                 "category": "topping-seafood",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 140.4,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -383,44 +383,44 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 68.0,
+                    "sugar": 0.7,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 5.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.7,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.2,
+                    "zinc": 1.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.5,
+                    "chromium": 0.4,
+                    "manganese": 0.2
                 },
                 "image_uris": {
                     "filename": "6080-topping-seafood-cthulhu.png",
                     "output_mask": "rarepizza-#####-topping-seafood"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
                         1255.0,
                         1400.0
                     ],
-                    "rotation": -138.02371541501975,
-                    "scale": 0.4843214756258234,
+                    "rotation": -166.4822134387352,
+                    "scale": 0.48115942028985503,
                     "image_uri": "6080-topping-seafood-cthulhu.png"
                 },
                 {
@@ -428,21 +428,12 @@
                         1545.0,
                         2800.0
                     ],
-                    "rotation": -268.9328063241107,
-                    "scale": 0.4806324110671936,
-                    "image_uri": "6080-topping-seafood-cthulhu.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -55.49407114624506,
-                    "scale": 0.5220026350461133,
+                    "rotation": 132.33201581027674,
+                    "scale": 0.5217391304347826,
                     "image_uri": "6080-topping-seafood-cthulhu.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
@@ -452,8 +443,8 @@
                 1255.0,
                 1400.0
             ],
-            "rotation": -138.02371541501975,
-            "scale": 0.4843214756258234,
+            "rotation": -166.4822134387352,
+            "scale": 0.48115942028985503,
             "image_uri": "6080-topping-seafood-cthulhu.png"
         },
         {
@@ -461,17 +452,8 @@
                 1545.0,
                 2800.0
             ],
-            "rotation": -268.9328063241107,
-            "scale": 0.4806324110671936,
-            "image_uri": "6080-topping-seafood-cthulhu.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
-            "rotation": -55.49407114624506,
-            "scale": 0.5220026350461133,
+            "rotation": 132.33201581027674,
+            "scale": 0.5217391304347826,
             "image_uri": "6080-topping-seafood-cthulhu.png"
         }
     ],

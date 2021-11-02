@@ -1,7 +1,7 @@
 {
     "token_id": 218,
     "name": "7030-macandcheese",
-    "random_seed": "F9BB82DD",
+    "random_seed": "2BB1DDD2",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -10,85 +10,15 @@
                 "ingredient_id": "000",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
+                "name": "cardboard",
                 "ingredient_rarity": 0,
-                "variant_rarity": 5,
+                "variant_rarity": 2,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 90.0,
-                    "mass": 994.0,
-                    "calories": 92.0,
-                    "vitamin_c": 1.0,
-                    "magnesium": 2.0,
-                    "vitamin_b5": 3.0,
-                    "vitamin_d": 4.0,
-                    "vitamin_b7": 5.0,
-                    "height": 10.0,
-                    "moisture": 11.0,
-                    "potassium": 10.0,
-                    "cholesterol": 15.0,
-                    "vitamin_a": 16.0,
-                    "dietary_fiber": 16.0,
-                    "vitamin_b6": 17.0,
-                    "sugar": 20.0,
-                    "protein": 21.0,
-                    "iron": 25.0,
-                    "complex_carb": 30.0,
-                    "selenium": 31.0,
-                    "vitamin_k": 32.0,
-                    "vitamin_b12": 40.0,
-                    "calories_from_fat": 41.0,
-                    "vitamin_e": 42.0,
-                    "zinc": 50.0,
-                    "saturated_fat": 51.0,
-                    "iodine": 52.0,
-                    "trans_fat": 60.0,
-                    "sodium": 61.0,
-                    "monosaturated_fat": 62.0,
-                    "calcium": 63.0,
-                    "riboflavin": 70.0,
-                    "thiamin": 71.0,
-                    "folate": 72.0,
-                    "added_sugar": 23.0,
-                    "chromium": 22.0,
-                    "manganese": 24.0
-                },
-                "image_uris": {
-                    "filename": "0000-box-white.png",
-                    "output_mask": "rarepizza-#####-box"
-                }
-            },
-            "count": 1.0,
-            "instances": [
-                {
-                    "translation": [
-                        0.0,
-                        0.0
-                    ],
-                    "rotation": 0.0,
-                    "scale": 1.0,
-                    "image_uri": "0000-box-white.png"
-                }
-            ],
-            "scatter_type": 1
-        },
-        "paper": {
-            "ingredient": {
-                "unique_id": "0530",
-                "ingredient_id": "053",
-                "variant_id": "0",
-                "index": 1,
-                "name": "code-cherry",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
-                "classification": 2,
-                "category": "paper",
-                "attributes": {},
-                "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 203.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -100,14 +30,14 @@
                     "potassium": 0.0,
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
+                    "dietary_fiber": 153.0,
                     "vitamin_b6": 0.0,
                     "sugar": 0.0,
                     "protein": 0.0,
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +56,77 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0530-paper-code-cherry.png",
+                    "filename": "0000-box-cardboard.png",
+                    "output_mask": "rarepizza-#####-box"
+                }
+            },
+            "count": 1.0,
+            "instances": [
+                {
+                    "translation": [
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": 0.0,
+                    "scale": 1.0,
+                    "image_uri": "0000-box-cardboard.png"
+                }
+            ],
+            "scatter_type": 1
+        },
+        "paper": {
+            "ingredient": {
+                "unique_id": "0520",
+                "ingredient_id": "052",
+                "variant_id": "0",
+                "index": 1,
+                "name": "doodle",
+                "ingredient_rarity": 1,
+                "variant_rarity": 3,
+                "classification": 2,
+                "category": "paper",
+                "attributes": {},
+                "nutrition": {
+                    "serving_size": 0.0,
+                    "mass": 50.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 0.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
+                },
+                "image_uris": {
+                    "filename": "0520-paper-doodle.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,7 +139,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0530-paper-code-cherry.png"
+                    "image_uri": "0520-paper-doodle.png"
                 }
             ],
             "scatter_type": 1
@@ -157,10 +157,10 @@
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 916.7,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
+                    "vitamin_c": 1.0,
                     "magnesium": 0.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
@@ -171,29 +171,29 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 17.0,
+                    "iron": 89.0,
+                    "complex_carb": 99.6,
+                    "selenium": 78.7,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 75.7,
+                    "calories_from_fat": 60.6,
+                    "vitamin_e": 9.0,
+                    "zinc": 38.1,
+                    "saturated_fat": 80.2,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 69.4,
+                    "sodium": 90.4,
+                    "monosaturated_fat": 84.5,
+                    "calcium": 23.4,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 44.5,
+                    "chromium": 16.8,
+                    "manganese": 69.6
                 },
                 "image_uris": {
                     "filename": "1040-crust-castle.png",
@@ -216,57 +216,57 @@
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2030",
-                "ingredient_id": "203",
+                "unique_id": "2080",
+                "ingredient_id": "208",
                 "variant_id": "0",
                 "index": 1,
-                "name": "bbq",
-                "ingredient_rarity": 1,
-                "variant_rarity": 0,
+                "name": "no-sauce",
+                "ingredient_rarity": 3,
+                "variant_rarity": 5,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 347.6,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 5.6,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 30.0,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 34.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 1.9,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
+                    "trans_fat": 0.1,
+                    "sodium": 0.6,
                     "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "calcium": 2.0,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.6,
+                    "chromium": 0.6,
+                    "manganese": 0.3
                 },
                 "image_uris": {
-                    "filename": "2030-sauce-bbq.png",
+                    "filename": "2080-sauce-no-sauce.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -279,7 +279,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 0.9444444444444444,
-                    "image_uri": "2030-sauce-bbq.png"
+                    "image_uri": "2080-sauce-no-sauce.png"
                 }
             ],
             "scatter_type": 1
@@ -291,49 +291,49 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "smokedmozzarella",
-                "ingredient_rarity": 2,
+                "ingredient_rarity": 1,
                 "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 237.3,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 0.3,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 4.4,
+                    "vitamin_a": 5.6,
+                    "dietary_fiber": 4.9,
+                    "vitamin_b6": 60.0,
+                    "sugar": 9.9,
+                    "protein": 2.2,
+                    "iron": 3.3,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 2.0,
+                    "chromium": 1.8,
+                    "manganese": 1.9
                 },
                 "image_uris": {
                     "filename": "3030-cheese-smokedmozzarella.png",
@@ -363,14 +363,14 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "macandcheese",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 140.7,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -383,66 +383,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.0,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.5,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.1,
+                    "chromium": 1.7,
+                    "manganese": 1.4
                 },
                 "image_uris": {
                     "filename": "7030-topping-misc-macandcheese.png",
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        705.0,
-                        1120.0
+                        555.0,
+                        700.0
                     ],
-                    "rotation": -118.10276679841897,
-                    "scale": 0.6604084321475626,
+                    "rotation": 177.86561264822137,
+                    "scale": 0.75,
                     "image_uri": "7030-topping-misc-macandcheese.png"
                 },
                 {
                     "translation": [
-                        415.0,
-                        1680.0
+                        845.0,
+                        1400.0
                     ],
-                    "rotation": 58.339920948616566,
-                    "scale": 0.667786561264822,
-                    "image_uri": "7030-topping-misc-macandcheese.png"
-                },
-                {
-                    "translation": [
-                        705.0,
-                        2240.0
-                    ],
-                    "rotation": 280.3162055335969,
-                    "scale": 0.6514492753623189,
+                    "rotation": 180.71146245059288,
+                    "scale": 0.75,
                     "image_uri": "7030-topping-misc-macandcheese.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7031": {
             "ingredient": {
@@ -451,14 +442,14 @@
                 "variant_id": "1",
                 "index": 1,
                 "name": "macandcheese",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 137.5,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -471,23 +462,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 0.8,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.6,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -500,37 +491,28 @@
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        975.0,
-                        560.0
+                        555.0,
+                        2100.0
                     ],
-                    "rotation": 55.49407114624506,
-                    "scale": 0.8492094861660079,
+                    "rotation": 308.77470355731225,
+                    "scale": 0.75,
                     "image_uri": "7031-topping-misc-macandcheese.png"
                 },
                 {
                     "translation": [
-                        1265.0,
-                        1120.0
+                        1255.0,
+                        700.0
                     ],
-                    "rotation": -66.87747035573125,
-                    "scale": 0.8484189723320158,
-                    "image_uri": "7031-topping-misc-macandcheese.png"
-                },
-                {
-                    "translation": [
-                        975.0,
-                        1680.0
-                    ],
-                    "rotation": -157.94466403162056,
-                    "scale": 0.8194334650856391,
+                    "rotation": 163.63636363636363,
+                    "scale": 0.75,
                     "image_uri": "7031-topping-misc-macandcheese.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7032": {
             "ingredient": {
@@ -539,14 +521,14 @@
                 "variant_id": "2",
                 "index": 1,
                 "name": "macandcheese",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 142.1,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -559,23 +541,23 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 0.7,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.7,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -588,37 +570,28 @@
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1265.0,
-                        2240.0
+                        1545.0,
+                        1400.0
                     ],
-                    "rotation": 283.1620553359684,
-                    "scale": 0.9839920948616602,
+                    "rotation": 197.78656126482213,
+                    "scale": 0.75,
                     "image_uri": "7032-topping-misc-macandcheese.png"
                 },
                 {
                     "translation": [
-                        1535.0,
-                        560.0
+                        1255.0,
+                        2100.0
                     ],
-                    "rotation": 32.72727272727269,
-                    "scale": 0.9863636363636364,
-                    "image_uri": "7032-topping-misc-macandcheese.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        1120.0
-                    ],
-                    "rotation": -180.71146245059288,
-                    "scale": 0.9957180500658762,
+                    "rotation": 331.5415019762846,
+                    "scale": 0.75,
                     "image_uri": "7032-topping-misc-macandcheese.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7033": {
             "ingredient": {
@@ -627,14 +600,14 @@
                 "variant_id": "3",
                 "index": 1,
                 "name": "macandcheese",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 137.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -647,66 +620,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 1.6,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.7,
+                    "chromium": 1.7,
+                    "manganese": 1.9
                 },
                 "image_uris": {
                     "filename": "7033-topping-misc-macandcheese.png",
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1535.0,
-                        1680.0
-                    ],
-                    "rotation": 217.707509881423,
-                    "scale": 0.680961791831357,
-                    "image_uri": "7033-topping-misc-macandcheese.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        2240.0
-                    ],
-                    "rotation": 189.2490118577075,
-                    "scale": 0.6687088274044796,
-                    "image_uri": "7033-topping-misc-macandcheese.png"
-                },
-                {
-                    "translation": [
-                        1535.0,
+                        1545.0,
                         2800.0
                     ],
-                    "rotation": -206.32411067193678,
-                    "scale": 0.6631752305665349,
+                    "rotation": 49.802371541502,
+                    "scale": 0.75,
+                    "image_uri": "7033-topping-misc-macandcheese.png"
+                },
+                {
+                    "translation": [
+                        1955.0,
+                        700.0
+                    ],
+                    "rotation": 331.5415019762846,
+                    "scale": 0.75,
                     "image_uri": "7033-topping-misc-macandcheese.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7034": {
             "ingredient": {
@@ -715,14 +679,14 @@
                 "variant_id": "4",
                 "index": 1,
                 "name": "macandcheese",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 141.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -735,66 +699,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 0.9,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.9,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.4,
+                    "chromium": 1.9,
+                    "manganese": 1.3
                 },
                 "image_uris": {
                     "filename": "7034-topping-misc-macandcheese.png",
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2095.0,
-                        560.0
+                        2245.0,
+                        1400.0
                     ],
-                    "rotation": -328.69565217391306,
-                    "scale": 0.4907114624505929,
+                    "rotation": 7.114624505928873,
+                    "scale": 0.75,
                     "image_uri": "7034-topping-misc-macandcheese.png"
                 },
                 {
                     "translation": [
-                        2385.0,
-                        1120.0
+                        1955.0,
+                        2100.0
                     ],
-                    "rotation": -351.4624505928854,
-                    "scale": 0.5102108036890646,
-                    "image_uri": "7034-topping-misc-macandcheese.png"
-                },
-                {
-                    "translation": [
-                        2095.0,
-                        1680.0
-                    ],
-                    "rotation": 342.92490118577075,
-                    "scale": 0.4871541501976285,
+                    "rotation": -266.0869565217391,
+                    "scale": 0.75,
                     "image_uri": "7034-topping-misc-macandcheese.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "7035": {
             "ingredient": {
@@ -803,14 +758,14 @@
                 "variant_id": "5",
                 "index": 1,
                 "name": "macandcheese",
-                "ingredient_rarity": 1,
+                "ingredient_rarity": 2,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-misc",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 143.4,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -823,230 +778,167 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
+                    "vitamin_b6": 68.0,
+                    "sugar": 1.1,
                     "protein": 0.0,
                     "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "complex_carb": 3.1,
+                    "selenium": 6.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.6,
+                    "chromium": 1.6,
+                    "manganese": 0.9
                 },
                 "image_uris": {
                     "filename": "7035-topping-misc-macandcheese.png",
                     "output_mask": "rarepizza-#####-topping-misc"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2385.0,
-                        2240.0
+                        2655.0,
+                        2100.0
                     ],
-                    "rotation": -220.55335968379447,
-                    "scale": 0.32022397891963106,
+                    "rotation": -325.8498023715415,
+                    "scale": 0.75,
                     "image_uri": "7035-topping-misc-macandcheese.png"
                 },
                 {
                     "translation": [
-                        2655.0,
-                        1680.0
+                        1558.5153060421187,
+                        1257.636357991607
                     ],
-                    "rotation": 251.85770750988138,
-                    "scale": 0.33102766798418976,
-                    "image_uri": "7035-topping-misc-macandcheese.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": 115.25691699604738,
-                    "scale": 0.336034255599473,
+                    "rotation": -249.01185770750988,
+                    "scale": 0.75,
                     "image_uri": "7035-topping-misc-macandcheese.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
     "instances": [
         {
             "translation": [
-                705.0,
-                1120.0
+                555.0,
+                700.0
             ],
-            "rotation": -118.10276679841897,
-            "scale": 0.6604084321475626,
+            "rotation": 177.86561264822137,
+            "scale": 0.75,
             "image_uri": "7030-topping-misc-macandcheese.png"
         },
         {
             "translation": [
-                415.0,
-                1680.0
-            ],
-            "rotation": 58.339920948616566,
-            "scale": 0.667786561264822,
-            "image_uri": "7030-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                705.0,
-                2240.0
-            ],
-            "rotation": 280.3162055335969,
-            "scale": 0.6514492753623189,
-            "image_uri": "7030-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                975.0,
-                560.0
-            ],
-            "rotation": 55.49407114624506,
-            "scale": 0.8492094861660079,
-            "image_uri": "7031-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                1120.0
-            ],
-            "rotation": -66.87747035573125,
-            "scale": 0.8484189723320158,
-            "image_uri": "7031-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                975.0,
-                1680.0
-            ],
-            "rotation": -157.94466403162056,
-            "scale": 0.8194334650856391,
-            "image_uri": "7031-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                2240.0
-            ],
-            "rotation": 283.1620553359684,
-            "scale": 0.9839920948616602,
-            "image_uri": "7032-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                560.0
-            ],
-            "rotation": 32.72727272727269,
-            "scale": 0.9863636363636364,
-            "image_uri": "7032-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                1120.0
-            ],
-            "rotation": -180.71146245059288,
-            "scale": 0.9957180500658762,
-            "image_uri": "7032-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                1680.0
-            ],
-            "rotation": 217.707509881423,
-            "scale": 0.680961791831357,
-            "image_uri": "7033-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                2240.0
-            ],
-            "rotation": 189.2490118577075,
-            "scale": 0.6687088274044796,
-            "image_uri": "7033-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                2800.0
-            ],
-            "rotation": -206.32411067193678,
-            "scale": 0.6631752305665349,
-            "image_uri": "7033-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                560.0
-            ],
-            "rotation": -328.69565217391306,
-            "scale": 0.4907114624505929,
-            "image_uri": "7034-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                1120.0
-            ],
-            "rotation": -351.4624505928854,
-            "scale": 0.5102108036890646,
-            "image_uri": "7034-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                1680.0
-            ],
-            "rotation": 342.92490118577075,
-            "scale": 0.4871541501976285,
-            "image_uri": "7034-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                2240.0
-            ],
-            "rotation": -220.55335968379447,
-            "scale": 0.32022397891963106,
-            "image_uri": "7035-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1680.0
-            ],
-            "rotation": 251.85770750988138,
-            "scale": 0.33102766798418976,
-            "image_uri": "7035-topping-misc-macandcheese.png"
-        },
-        {
-            "translation": [
-                2655.0,
+                845.0,
                 1400.0
             ],
-            "rotation": 115.25691699604738,
-            "scale": 0.336034255599473,
+            "rotation": 180.71146245059288,
+            "scale": 0.75,
+            "image_uri": "7030-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                555.0,
+                2100.0
+            ],
+            "rotation": 308.77470355731225,
+            "scale": 0.75,
+            "image_uri": "7031-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                700.0
+            ],
+            "rotation": 163.63636363636363,
+            "scale": 0.75,
+            "image_uri": "7031-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                1400.0
+            ],
+            "rotation": 197.78656126482213,
+            "scale": 0.75,
+            "image_uri": "7032-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                2100.0
+            ],
+            "rotation": 331.5415019762846,
+            "scale": 0.75,
+            "image_uri": "7032-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                2800.0
+            ],
+            "rotation": 49.802371541502,
+            "scale": 0.75,
+            "image_uri": "7033-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                700.0
+            ],
+            "rotation": 331.5415019762846,
+            "scale": 0.75,
+            "image_uri": "7033-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                2245.0,
+                1400.0
+            ],
+            "rotation": 7.114624505928873,
+            "scale": 0.75,
+            "image_uri": "7034-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                2100.0
+            ],
+            "rotation": -266.0869565217391,
+            "scale": 0.75,
+            "image_uri": "7034-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                2100.0
+            ],
+            "rotation": -325.8498023715415,
+            "scale": 0.75,
+            "image_uri": "7035-topping-misc-macandcheese.png"
+        },
+        {
+            "translation": [
+                1558.5153060421187,
+                1257.636357991607
+            ],
+            "rotation": -249.01185770750988,
+            "scale": 0.75,
             "image_uri": "7035-topping-misc-macandcheese.png"
         }
     ],

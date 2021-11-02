@@ -1,7 +1,7 @@
 {
     "token_id": 0,
     "name": "4000-pepperoni",
-    "random_seed": "61CFFD6B",
+    "random_seed": "9BDCAEEF",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
@@ -10,16 +10,16 @@
                 "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
-                "name": "cardboard",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "white",
+                "ingredient_rarity": 0,
+                "variant_rarity": 0,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
-                    "calories": 0.0,
+                    "mass": 203.0,
+                    "calories": 92.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
                     "vitamin_b5": 0.0,
@@ -30,14 +30,14 @@
                     "potassium": 0.0,
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
+                    "dietary_fiber": 153.0,
                     "vitamin_b6": 0.0,
                     "sugar": 0.0,
                     "protein": 0.0,
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -56,7 +56,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0010-box-cardboard.png",
+                    "filename": "0010-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,26 +69,26 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0010-box-cardboard.png"
+                    "image_uri": "0010-box-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0510",
-                "ingredient_id": "051",
-                "variant_id": "0",
+                "unique_id": "0501",
+                "ingredient_id": "050",
+                "variant_id": "1",
                 "index": 1,
-                "name": "greenchecker",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "redchecker",
+                "ingredient_rarity": 0,
+                "variant_rarity": 1,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0510-paper-greenchecker.png",
+                    "filename": "0501-paper-redchecker.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,7 +139,7 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0510-paper-greenchecker.png"
+                    "image_uri": "0501-paper-redchecker.png"
                 }
             ],
             "scatter_type": 1
@@ -151,14 +151,14 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "thick",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "ingredient_rarity": 0,
+                "variant_rarity": 0,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 838.7,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -171,29 +171,29 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 67.9,
+                    "iron": 82.2,
+                    "complex_carb": 72.6,
+                    "selenium": 88.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 23.4,
+                    "calories_from_fat": 17.0,
+                    "vitamin_e": 89.0,
+                    "zinc": 99.6,
+                    "saturated_fat": 78.7,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 14.0,
+                    "sodium": 41.6,
+                    "monosaturated_fat": 46.1,
+                    "calcium": 18.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 23.4,
+                    "chromium": 88.0,
+                    "manganese": 13.6
                 },
                 "image_uris": {
                     "filename": "1010-crust-thick.png",
@@ -227,37 +227,37 @@
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 527.0,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 31.0,
+                    "vitamin_a": 4.1,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 3.7,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 30.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
                     "vitamin_e": 0.0,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 62.4,
+                    "sodium": 12.9,
+                    "monosaturated_fat": 23.5,
+                    "calcium": 96.0,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -278,7 +278,7 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
+                    "scale": 1.0,
                     "image_uri": "2010-sauce-pesto.png"
                 }
             ],
@@ -292,42 +292,42 @@
                 "index": 1,
                 "name": "digitalvegan",
                 "ingredient_rarity": 1,
-                "variant_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 229.1,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
+                    "vitamin_c": 0.3,
+                    "magnesium": 0.3,
+                    "vitamin_b5": 0.4,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 5.5,
+                    "vitamin_a": 7.3,
+                    "dietary_fiber": 2.5,
+                    "vitamin_b6": 60.0,
+                    "sugar": 5.9,
+                    "protein": 2.4,
+                    "iron": 3.7,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -369,80 +369,71 @@
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 178.7,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 7.6,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 67.3,
+                    "sugar": 0.3,
+                    "protein": 10.0,
+                    "iron": 2.4,
+                    "complex_carb": 3.2,
+                    "selenium": 2.5,
+                    "vitamin_k": 68.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.6,
+                    "sodium": 2.1,
+                    "monosaturated_fat": 2.1,
+                    "calcium": 0.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.0,
+                    "chromium": 0.2,
+                    "manganese": 0.9
                 },
                 "image_uris": {
                     "filename": "4000-topping-meat-pepperoni.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        705.0,
-                        1120.0
+                        555.0,
+                        700.0
                     ],
-                    "rotation": -135.17786561264825,
-                    "scale": 0.3428524374176548,
+                    "rotation": -78.26086956521738,
+                    "scale": 0.2773056653491436,
                     "image_uri": "4000-topping-meat-pepperoni.png"
                 },
                 {
                     "translation": [
-                        415.0,
-                        1680.0
+                        845.0,
+                        1400.0
                     ],
-                    "rotation": -280.3162055335969,
-                    "scale": 0.3323122529644269,
-                    "image_uri": "4000-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        705.0,
-                        2240.0
-                    ],
-                    "rotation": 311.62055335968387,
-                    "scale": 0.32770092226613967,
+                    "rotation": -92.49011857707507,
+                    "scale": 0.2931159420289855,
                     "image_uri": "4000-topping-meat-pepperoni.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4001": {
             "ingredient": {
@@ -457,80 +448,71 @@
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 254.5,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 4.5,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 9.7,
+                    "protein": 1.9,
+                    "iron": 2.0,
+                    "complex_carb": 79.6,
+                    "selenium": 24.3,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.5,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.0,
+                    "chromium": 0.7,
+                    "manganese": 0.9
                 },
                 "image_uris": {
                     "filename": "4001-topping-meat-pepperoni.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        975.0,
-                        560.0
+                        555.0,
+                        2100.0
                     ],
-                    "rotation": -4.2687747035573125,
-                    "scale": 0.3418642951251647,
+                    "rotation": 15.652173913043441,
+                    "scale": 0.3560276679841897,
                     "image_uri": "4001-topping-meat-pepperoni.png"
                 },
                 {
                     "translation": [
-                        1265.0,
-                        1120.0
+                        1255.0,
+                        700.0
                     ],
-                    "rotation": -209.16996047430828,
-                    "scale": 0.29344532279314883,
-                    "image_uri": "4001-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        975.0,
-                        1680.0
-                    ],
-                    "rotation": 75.41501976284582,
-                    "scale": 0.3379117259552042,
+                    "rotation": -132.3320158102767,
+                    "scale": 0.3323122529644269,
                     "image_uri": "4001-topping-meat-pepperoni.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4002": {
             "ingredient": {
@@ -545,80 +527,71 @@
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 203.1,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 0.2,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.0,
+                    "sugar": 6.7,
+                    "protein": 6.3,
+                    "iron": 1.1,
+                    "complex_carb": 44.7,
+                    "selenium": 11.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 2.6,
+                    "calories_from_fat": 2.1,
+                    "vitamin_e": 0.5,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.1,
+                    "calcium": 0.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.7,
+                    "chromium": 1.5,
+                    "manganese": 1.3
                 },
                 "image_uris": {
                     "filename": "4002-topping-meat-pepperoni.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1265.0,
-                        2240.0
+                        1545.0,
+                        1400.0
                     ],
-                    "rotation": -323.00395256916994,
-                    "scale": 0.28521080368906454,
+                    "rotation": -18.49802371541506,
+                    "scale": 0.27631752305665347,
                     "image_uri": "4002-topping-meat-pepperoni.png"
                 },
                 {
                     "translation": [
-                        1535.0,
-                        560.0
+                        1255.0,
+                        2100.0
                     ],
-                    "rotation": -251.85770750988144,
-                    "scale": 0.35569828722002633,
-                    "image_uri": "4002-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        1120.0
-                    ],
-                    "rotation": -360.0,
-                    "scale": 0.3043148880105402,
+                    "rotation": 115.25691699604738,
+                    "scale": 0.27763504611330697,
                     "image_uri": "4002-topping-meat-pepperoni.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4003": {
             "ingredient": {
@@ -633,80 +606,71 @@
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 311.6,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 8.6,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 68.9,
+                    "sugar": 2.0,
+                    "protein": 6.0,
+                    "iron": 0.7,
+                    "complex_carb": 98.1,
+                    "selenium": 61.3,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.0,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.5,
+                    "chromium": 0.5,
+                    "manganese": 1.8
                 },
                 "image_uris": {
                     "filename": "4003-topping-meat-pepperoni.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1535.0,
-                        1680.0
-                    ],
-                    "rotation": 55.49407114624506,
-                    "scale": 0.2782938076416337,
-                    "image_uri": "4003-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        2240.0
-                    ],
-                    "rotation": -101.02766798418975,
-                    "scale": 0.3444993412384717,
-                    "image_uri": "4003-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        1535.0,
+                        1545.0,
                         2800.0
                     ],
-                    "rotation": 192.094861660079,
-                    "scale": 0.3431818181818182,
+                    "rotation": -9.960474308300377,
+                    "scale": 0.2878458498023715,
+                    "image_uri": "4003-topping-meat-pepperoni.png"
+                },
+                {
+                    "translation": [
+                        1955.0,
+                        700.0
+                    ],
+                    "rotation": -66.87747035573125,
+                    "scale": 0.33889986824769436,
                     "image_uri": "4003-topping-meat-pepperoni.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4004": {
             "ingredient": {
@@ -722,79 +686,70 @@
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 278.1,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 3.9,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 65.4,
+                    "sugar": 0.7,
+                    "protein": 4.8,
+                    "iron": 0.8,
+                    "complex_carb": 54.3,
+                    "selenium": 84.1,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.7,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.2,
+                    "zinc": 1.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.2,
+                    "chromium": 1.0,
+                    "manganese": 0.5
                 },
                 "image_uris": {
                     "filename": "4004-topping-meat-pepperoni.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2095.0,
-                        560.0
+                        2245.0,
+                        1400.0
                     ],
-                    "rotation": -180.71146245059288,
-                    "scale": 0.29608036890645584,
+                    "rotation": -291.699604743083,
+                    "scale": 0.31781949934123843,
                     "image_uri": "4004-topping-meat-pepperoni.png"
                 },
                 {
                     "translation": [
-                        2385.0,
-                        1120.0
+                        1955.0,
+                        2100.0
                     ],
-                    "rotation": -115.25691699604744,
-                    "scale": 0.3033267457180501,
-                    "image_uri": "4004-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        2095.0,
-                        1680.0
-                    ],
-                    "rotation": -52.64822134387356,
-                    "scale": 0.3207839262187088,
+                    "rotation": -155.098814229249,
+                    "scale": 0.27763504611330697,
                     "image_uri": "4004-topping-meat-pepperoni.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4005": {
             "ingredient": {
@@ -810,79 +765,70 @@
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 243.5,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 6.5,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 67.8,
+                    "sugar": 9.9,
+                    "protein": 4.2,
+                    "iron": 1.0,
+                    "complex_carb": 75.6,
+                    "selenium": 16.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.9,
+                    "chromium": 0.6,
+                    "manganese": 1.8
                 },
                 "image_uris": {
                     "filename": "4005-topping-meat-pepperoni.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2385.0,
-                        2240.0
+                        2655.0,
+                        2100.0
                     ],
-                    "rotation": 311.62055335968387,
-                    "scale": 0.2809288537549407,
+                    "rotation": 323.0039525691699,
+                    "scale": 0.3260540184453228,
                     "image_uri": "4005-topping-meat-pepperoni.png"
                 },
                 {
                     "translation": [
-                        2655.0,
-                        1680.0
+                        609.1884345436173,
+                        1783.3132082127568
                     ],
-                    "rotation": -246.16600790513834,
-                    "scale": 0.27664690382081686,
-                    "image_uri": "4005-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -254.70355731225297,
-                    "scale": 0.3309947299077734,
+                    "rotation": 143.71541501976282,
+                    "scale": 0.3365942028985507,
                     "image_uri": "4005-topping-meat-pepperoni.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4006": {
             "ingredient": {
@@ -898,270 +844,198 @@
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 223.6,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
+                    "cholesterol": 0.6,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.0,
+                    "sugar": 6.2,
+                    "protein": 1.1,
+                    "iron": 0.4,
+                    "complex_carb": 39.0,
+                    "selenium": 44.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.4,
+                    "chromium": 0.5,
+                    "manganese": 1.7
                 },
                 "image_uris": {
                     "filename": "4006-topping-meat-pepperoni.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1255.0,
-                        1400.0
+                        1743.6065336305035,
+                        2259.6302185629443
                     ],
-                    "rotation": 320.1581027667984,
-                    "scale": 0.30958498023715414,
+                    "rotation": 194.94071146245062,
+                    "scale": 0.35009881422924904,
                     "image_uri": "4006-topping-meat-pepperoni.png"
                 },
                 {
                     "translation": [
-                        1545.0,
-                        2800.0
+                        1681.1013407094918,
+                        2041.7630559848535
                     ],
-                    "rotation": 246.16600790513837,
-                    "scale": 0.33758234519104086,
-                    "image_uri": "4006-topping-meat-pepperoni.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -200.6324110671937,
-                    "scale": 0.3039855072463768,
+                    "rotation": -64.03162055335969,
+                    "scale": 0.3566864295125165,
                     "image_uri": "4006-topping-meat-pepperoni.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
     "instances": [
         {
             "translation": [
-                705.0,
-                1120.0
+                555.0,
+                700.0
             ],
-            "rotation": -135.17786561264825,
-            "scale": 0.3428524374176548,
+            "rotation": -78.26086956521738,
+            "scale": 0.2773056653491436,
             "image_uri": "4000-topping-meat-pepperoni.png"
         },
         {
             "translation": [
-                415.0,
-                1680.0
-            ],
-            "rotation": -280.3162055335969,
-            "scale": 0.3323122529644269,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                705.0,
-                2240.0
-            ],
-            "rotation": 311.62055335968387,
-            "scale": 0.32770092226613967,
-            "image_uri": "4000-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                975.0,
-                560.0
-            ],
-            "rotation": -4.2687747035573125,
-            "scale": 0.3418642951251647,
-            "image_uri": "4001-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                1120.0
-            ],
-            "rotation": -209.16996047430828,
-            "scale": 0.29344532279314883,
-            "image_uri": "4001-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                975.0,
-                1680.0
-            ],
-            "rotation": 75.41501976284582,
-            "scale": 0.3379117259552042,
-            "image_uri": "4001-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                2240.0
-            ],
-            "rotation": -323.00395256916994,
-            "scale": 0.28521080368906454,
-            "image_uri": "4002-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                560.0
-            ],
-            "rotation": -251.85770750988144,
-            "scale": 0.35569828722002633,
-            "image_uri": "4002-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                1120.0
-            ],
-            "rotation": -360.0,
-            "scale": 0.3043148880105402,
-            "image_uri": "4002-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                1680.0
-            ],
-            "rotation": 55.49407114624506,
-            "scale": 0.2782938076416337,
-            "image_uri": "4003-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                2240.0
-            ],
-            "rotation": -101.02766798418975,
-            "scale": 0.3444993412384717,
-            "image_uri": "4003-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                2800.0
-            ],
-            "rotation": 192.094861660079,
-            "scale": 0.3431818181818182,
-            "image_uri": "4003-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                560.0
-            ],
-            "rotation": -180.71146245059288,
-            "scale": 0.29608036890645584,
-            "image_uri": "4004-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                1120.0
-            ],
-            "rotation": -115.25691699604744,
-            "scale": 0.3033267457180501,
-            "image_uri": "4004-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                1680.0
-            ],
-            "rotation": -52.64822134387356,
-            "scale": 0.3207839262187088,
-            "image_uri": "4004-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                2240.0
-            ],
-            "rotation": 311.62055335968387,
-            "scale": 0.2809288537549407,
-            "image_uri": "4005-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1680.0
-            ],
-            "rotation": -246.16600790513834,
-            "scale": 0.27664690382081686,
-            "image_uri": "4005-topping-meat-pepperoni.png"
-        },
-        {
-            "translation": [
-                2655.0,
+                845.0,
                 1400.0
             ],
-            "rotation": -254.70355731225297,
-            "scale": 0.3309947299077734,
-            "image_uri": "4005-topping-meat-pepperoni.png"
+            "rotation": -92.49011857707507,
+            "scale": 0.2931159420289855,
+            "image_uri": "4000-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                555.0,
+                2100.0
+            ],
+            "rotation": 15.652173913043441,
+            "scale": 0.3560276679841897,
+            "image_uri": "4001-topping-meat-pepperoni.png"
         },
         {
             "translation": [
                 1255.0,
+                700.0
+            ],
+            "rotation": -132.3320158102767,
+            "scale": 0.3323122529644269,
+            "image_uri": "4001-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                1545.0,
                 1400.0
             ],
-            "rotation": 320.1581027667984,
-            "scale": 0.30958498023715414,
-            "image_uri": "4006-topping-meat-pepperoni.png"
+            "rotation": -18.49802371541506,
+            "scale": 0.27631752305665347,
+            "image_uri": "4002-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                2100.0
+            ],
+            "rotation": 115.25691699604738,
+            "scale": 0.27763504611330697,
+            "image_uri": "4002-topping-meat-pepperoni.png"
         },
         {
             "translation": [
                 1545.0,
                 2800.0
             ],
-            "rotation": 246.16600790513837,
-            "scale": 0.33758234519104086,
-            "image_uri": "4006-topping-meat-pepperoni.png"
+            "rotation": -9.960474308300377,
+            "scale": 0.2878458498023715,
+            "image_uri": "4003-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                700.0
+            ],
+            "rotation": -66.87747035573125,
+            "scale": 0.33889986824769436,
+            "image_uri": "4003-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                2245.0,
+                1400.0
+            ],
+            "rotation": -291.699604743083,
+            "scale": 0.31781949934123843,
+            "image_uri": "4004-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                2100.0
+            ],
+            "rotation": -155.098814229249,
+            "scale": 0.27763504611330697,
+            "image_uri": "4004-topping-meat-pepperoni.png"
         },
         {
             "translation": [
                 2655.0,
-                1400.0
+                2100.0
             ],
-            "rotation": -200.6324110671937,
-            "scale": 0.3039855072463768,
+            "rotation": 323.0039525691699,
+            "scale": 0.3260540184453228,
+            "image_uri": "4005-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                609.1884345436173,
+                1783.3132082127568
+            ],
+            "rotation": 143.71541501976282,
+            "scale": 0.3365942028985507,
+            "image_uri": "4005-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                1743.6065336305035,
+                2259.6302185629443
+            ],
+            "rotation": 194.94071146245062,
+            "scale": 0.35009881422924904,
+            "image_uri": "4006-topping-meat-pepperoni.png"
+        },
+        {
+            "translation": [
+                1681.1013407094918,
+                2041.7630559848535
+            ],
+            "rotation": -64.03162055335969,
+            "scale": 0.3566864295125165,
             "image_uri": "4006-topping-meat-pepperoni.png"
         }
     ],

@@ -1,62 +1,62 @@
 {
-    "token_id": 86,
+    "token_id": 87,
     "name": "5280-habanero",
-    "random_seed": "B0EFA1E3",
+    "random_seed": "48DFF567",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0000",
-                "ingredient_id": "000",
+                "unique_id": "0010",
+                "ingredient_id": "001",
                 "variant_id": "0",
                 "index": 1,
                 "name": "white",
                 "ingredient_rarity": 0,
-                "variant_rarity": 5,
+                "variant_rarity": 0,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 90.0,
-                    "mass": 994.0,
+                    "serving_size": 0.0,
+                    "mass": 203.0,
                     "calories": 92.0,
-                    "vitamin_c": 1.0,
-                    "magnesium": 2.0,
-                    "vitamin_b5": 3.0,
-                    "vitamin_d": 4.0,
-                    "vitamin_b7": 5.0,
-                    "height": 10.0,
-                    "moisture": 11.0,
-                    "potassium": 10.0,
-                    "cholesterol": 15.0,
-                    "vitamin_a": 16.0,
-                    "dietary_fiber": 16.0,
-                    "vitamin_b6": 17.0,
-                    "sugar": 20.0,
-                    "protein": 21.0,
-                    "iron": 25.0,
-                    "complex_carb": 30.0,
-                    "selenium": 31.0,
-                    "vitamin_k": 32.0,
-                    "vitamin_b12": 40.0,
-                    "calories_from_fat": 41.0,
-                    "vitamin_e": 42.0,
-                    "zinc": 50.0,
-                    "saturated_fat": 51.0,
-                    "iodine": 52.0,
-                    "trans_fat": 60.0,
-                    "sodium": 61.0,
-                    "monosaturated_fat": 62.0,
-                    "calcium": 63.0,
-                    "riboflavin": 70.0,
-                    "thiamin": 71.0,
-                    "folate": 72.0,
-                    "added_sugar": 23.0,
-                    "chromium": 22.0,
-                    "manganese": 24.0
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
+                    "cholesterol": 0.0,
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 153.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0000-box-white.png",
+                    "filename": "0010-box-white.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,26 +69,26 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0000-box-white.png"
+                    "image_uri": "0010-box-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0541",
-                "ingredient_id": "054",
-                "variant_id": "1",
+                "unique_id": "0560",
+                "ingredient_id": "056",
+                "variant_id": "0",
                 "index": 1,
-                "name": "code-blackberry",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "plain",
+                "ingredient_rarity": 0,
+                "variant_rarity": 0,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0541-paper-code-blackberry.png",
+                    "filename": "0560-paper-plain.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,26 +139,26 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0541-paper-code-blackberry.png"
+                    "image_uri": "0560-paper-plain.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1040",
-                "ingredient_id": "104",
+                "unique_id": "1000",
+                "ingredient_id": "100",
                 "variant_id": "0",
                 "index": 1,
-                "name": "castle",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "thin",
+                "ingredient_rarity": 0,
+                "variant_rarity": 0,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 748.3,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -171,32 +171,32 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 31.4,
+                    "iron": 37.6,
+                    "complex_carb": 59.9,
+                    "selenium": 89.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 99.1,
+                    "calories_from_fat": 51.7,
+                    "vitamin_e": 17.5,
+                    "zinc": 55.2,
+                    "saturated_fat": 41.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 51.7,
+                    "sodium": 17.5,
+                    "monosaturated_fat": 55.2,
+                    "calcium": 41.0,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 41.6,
+                    "chromium": 46.1,
+                    "manganese": 18.2
                 },
                 "image_uris": {
-                    "filename": "1040-crust-castle.png",
+                    "filename": "1000-crust-thin.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,55 +209,55 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1040-crust-castle.png"
+                    "image_uri": "1000-crust-thin.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2030",
-                "ingredient_id": "203",
-                "variant_id": "0",
+                "unique_id": "2012",
+                "ingredient_id": "201",
+                "variant_id": "2",
                 "index": 1,
-                "name": "bbq",
+                "name": "pesto",
                 "ingredient_rarity": 1,
-                "variant_rarity": 0,
+                "variant_rarity": 1,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 508.0,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 4.1,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 3.7,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 30.0,
+                    "vitamin_k": 52.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
                     "vitamin_e": 0.0,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 62.4,
+                    "sodium": 12.9,
+                    "monosaturated_fat": 23.5,
+                    "calcium": 96.0,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
@@ -266,7 +266,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "2030-sauce-bbq.png",
+                    "filename": "2012-sauce-pesto.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,17 +278,17 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2030-sauce-bbq.png"
+                    "scale": 1.0,
+                    "image_uri": "2012-sauce-pesto.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3193",
+                "unique_id": "3194",
                 "ingredient_id": "319",
-                "variant_id": "3",
+                "variant_id": "4",
                 "index": 1,
                 "name": "gruyere",
                 "ingredient_rarity": 2,
@@ -297,46 +297,46 @@
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 244.8,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 2.8,
+                    "vitamin_d": 1.0,
+                    "vitamin_b7": 3.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 2.8,
+                    "vitamin_a": 8.3,
+                    "dietary_fiber": 2.8,
+                    "vitamin_b6": 60.0,
+                    "sugar": 8.3,
+                    "protein": 7.5,
+                    "iron": 1.5,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.8,
+                    "chromium": 1.4,
+                    "manganese": 1.1
                 },
                 "image_uris": {
-                    "filename": "3193-cheese-gruyere.png",
+                    "filename": "3194-cheese-gruyere.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.7777777777777778,
-                    "image_uri": "3193-cheese-gruyere.png"
+                    "scale": 0.8333333333333334,
+                    "image_uri": "3194-cheese-gruyere.png"
                 }
             ],
             "scatter_type": 1
@@ -363,17 +363,17 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "habanero",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-pepper",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 159.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -383,66 +383,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 69.0,
+                    "sugar": 7.9,
+                    "protein": 5.6,
+                    "iron": 2.5,
+                    "complex_carb": 3.1,
+                    "selenium": 6.9,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.7,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.2,
+                    "zinc": 1.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.7,
+                    "chromium": 0.8,
+                    "manganese": 0.1
                 },
                 "image_uris": {
                     "filename": "5280-topping-pepper-habanero.png",
                     "output_mask": "rarepizza-#####-topping-pepper"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        705.0,
-                        1120.0
+                        555.0,
+                        700.0
                     ],
-                    "rotation": 243.32015810276687,
-                    "scale": 0.21337285902503295,
+                    "rotation": 268.93280632411063,
+                    "scale": 0.24499341238471672,
                     "image_uri": "5280-topping-pepper-habanero.png"
                 },
                 {
                     "translation": [
-                        415.0,
-                        1680.0
+                        845.0,
+                        1400.0
                     ],
-                    "rotation": 1.4229249011857519,
-                    "scale": 0.21258234519104086,
-                    "image_uri": "5280-topping-pepper-habanero.png"
-                },
-                {
-                    "translation": [
-                        705.0,
-                        2240.0
-                    ],
-                    "rotation": 7.114624505928873,
-                    "scale": 0.24077733860342557,
+                    "rotation": -75.41501976284587,
+                    "scale": 0.20019762845849803,
                     "image_uri": "5280-topping-pepper-habanero.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5281": {
             "ingredient": {
@@ -451,17 +442,17 @@
                 "variant_id": "1",
                 "index": 1,
                 "name": "habanero",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-pepper",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 152.2,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -471,66 +462,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 0.4,
+                    "protein": 2.3,
+                    "iron": 3.0,
+                    "complex_carb": 2.8,
+                    "selenium": 17.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.7,
+                    "chromium": 0.2,
+                    "manganese": 1.4
                 },
                 "image_uris": {
                     "filename": "5281-topping-pepper-habanero.png",
                     "output_mask": "rarepizza-#####-topping-pepper"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        975.0,
-                        560.0
+                        555.0,
+                        2100.0
                     ],
-                    "rotation": 186.40316205533588,
-                    "scale": 0.22733860342555995,
+                    "rotation": -44.11067193675888,
+                    "scale": 0.19888010540184453,
                     "image_uri": "5281-topping-pepper-habanero.png"
                 },
                 {
                     "translation": [
-                        1265.0,
-                        1120.0
+                        1255.0,
+                        700.0
                     ],
-                    "rotation": -123.79446640316206,
-                    "scale": 0.19466403162055337,
-                    "image_uri": "5281-topping-pepper-habanero.png"
-                },
-                {
-                    "translation": [
-                        975.0,
-                        1680.0
-                    ],
-                    "rotation": 337.23320158102763,
-                    "scale": 0.21653491436100133,
+                    "rotation": 268.93280632411063,
+                    "scale": 0.21126482213438735,
                     "image_uri": "5281-topping-pepper-habanero.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5282": {
             "ingredient": {
@@ -539,17 +521,17 @@
                 "variant_id": "2",
                 "index": 1,
                 "name": "habanero",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-pepper",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 159.4,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -559,66 +541,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 3.3,
+                    "protein": 1.0,
+                    "iron": 3.8,
+                    "complex_carb": 2.8,
+                    "selenium": 17.3,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 2.0,
+                    "chromium": 1.0,
+                    "manganese": 0.3
                 },
                 "image_uris": {
                     "filename": "5282-topping-pepper-habanero.png",
                     "output_mask": "rarepizza-#####-topping-pepper"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1265.0,
-                        2240.0
+                        1545.0,
+                        1400.0
                     ],
-                    "rotation": 4.2687747035573125,
-                    "scale": 0.23050065876152834,
+                    "rotation": -9.960474308300377,
+                    "scale": 0.24104084321475627,
                     "image_uri": "5282-topping-pepper-habanero.png"
                 },
                 {
                     "translation": [
-                        1535.0,
-                        560.0
+                        1255.0,
+                        2100.0
                     ],
-                    "rotation": -266.0869565217391,
-                    "scale": 0.19967061923583665,
-                    "image_uri": "5282-topping-pepper-habanero.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        1120.0
-                    ],
-                    "rotation": -44.11067193675888,
-                    "scale": 0.19387351778656128,
+                    "rotation": 106.71936758893281,
+                    "scale": 0.23787878787878788,
                     "image_uri": "5282-topping-pepper-habanero.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5283": {
             "ingredient": {
@@ -627,17 +600,17 @@
                 "variant_id": "3",
                 "index": 1,
                 "name": "habanero",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-pepper",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 168.6,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -647,66 +620,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 6.3,
+                    "protein": 6.5,
+                    "iron": 3.5,
+                    "complex_carb": 2.8,
+                    "selenium": 17.4,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.9,
+                    "chromium": 0.4,
+                    "manganese": 1.9
                 },
                 "image_uris": {
                     "filename": "5283-topping-pepper-habanero.png",
                     "output_mask": "rarepizza-#####-topping-pepper"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1535.0,
-                        1680.0
-                    ],
-                    "rotation": 9.960474308300434,
-                    "scale": 0.31054018445322795,
-                    "image_uri": "5283-topping-pepper-habanero.png"
-                },
-                {
-                    "translation": [
-                        1825.0,
-                        2240.0
-                    ],
-                    "rotation": -49.80237154150194,
-                    "scale": 0.3442687747035573,
-                    "image_uri": "5283-topping-pepper-habanero.png"
-                },
-                {
-                    "translation": [
-                        1535.0,
+                        1545.0,
                         2800.0
                     ],
-                    "rotation": -297.39130434782606,
-                    "scale": 0.3521739130434783,
+                    "rotation": 172.17391304347825,
+                    "scale": 0.3324110671936759,
+                    "image_uri": "5283-topping-pepper-habanero.png"
+                },
+                {
+                    "translation": [
+                        1955.0,
+                        700.0
+                    ],
+                    "rotation": -286.00790513833994,
+                    "scale": 0.3171277997364954,
                     "image_uri": "5283-topping-pepper-habanero.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5284": {
             "ingredient": {
@@ -715,17 +679,17 @@
                 "variant_id": "4",
                 "index": 1,
                 "name": "habanero",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-pepper",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 172.5,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -735,66 +699,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 66.5,
+                    "sugar": 9.2,
+                    "protein": 7.1,
+                    "iron": 3.3,
+                    "complex_carb": 2.8,
+                    "selenium": 17.5,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.7,
+                    "chromium": 0.8,
+                    "manganese": 1.7
                 },
                 "image_uris": {
                     "filename": "5284-topping-pepper-habanero.png",
                     "output_mask": "rarepizza-#####-topping-pepper"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2095.0,
-                        560.0
+                        2245.0,
+                        1400.0
                     ],
-                    "rotation": -226.24505928853753,
-                    "scale": 0.3179183135704875,
+                    "rotation": -126.6403162055336,
+                    "scale": 0.33899868247694337,
                     "image_uri": "5284-topping-pepper-habanero.png"
                 },
                 {
                     "translation": [
-                        2385.0,
-                        1120.0
+                        1955.0,
+                        2100.0
                     ],
-                    "rotation": 21.34387351778662,
-                    "scale": 0.3313570487483531,
-                    "image_uri": "5284-topping-pepper-habanero.png"
-                },
-                {
-                    "translation": [
-                        2095.0,
-                        1680.0
-                    ],
-                    "rotation": -115.25691699604744,
-                    "scale": 0.3619235836627141,
+                    "rotation": 69.72332015810275,
+                    "scale": 0.366403162055336,
                     "image_uri": "5284-topping-pepper-habanero.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "5285": {
             "ingredient": {
@@ -803,17 +758,17 @@
                 "variant_id": "5",
                 "index": 1,
                 "name": "habanero",
-                "ingredient_rarity": 0,
+                "ingredient_rarity": 2,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-pepper",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 161.2,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -823,230 +778,167 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 65.0,
+                    "sugar": 4.5,
+                    "protein": 7.9,
+                    "iron": 1.9,
+                    "complex_carb": 2.8,
+                    "selenium": 17.6,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.3,
+                    "chromium": 0.9,
+                    "manganese": 0.8
                 },
                 "image_uris": {
                     "filename": "5285-topping-pepper-habanero.png",
                     "output_mask": "rarepizza-#####-topping-pepper"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        2385.0,
-                        2240.0
+                        2655.0,
+                        2100.0
                     ],
-                    "rotation": -308.77470355731225,
-                    "scale": 0.3650856389986825,
+                    "rotation": -18.49802371541506,
+                    "scale": 0.3542819499341239,
                     "image_uri": "5285-topping-pepper-habanero.png"
                 },
                 {
                     "translation": [
-                        2655.0,
-                        1680.0
-                    ],
-                    "rotation": -291.699604743083,
-                    "scale": 0.3590250329380764,
-                    "image_uri": "5285-topping-pepper-habanero.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
+                        1675.4893783426407,
+                        1400.773739015032
                     ],
                     "rotation": -157.94466403162056,
-                    "scale": 0.3345191040843215,
+                    "scale": 0.3455862977602108,
                     "image_uri": "5285-topping-pepper-habanero.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
     "instances": [
         {
             "translation": [
-                705.0,
-                1120.0
+                555.0,
+                700.0
             ],
-            "rotation": 243.32015810276687,
-            "scale": 0.21337285902503295,
+            "rotation": 268.93280632411063,
+            "scale": 0.24499341238471672,
             "image_uri": "5280-topping-pepper-habanero.png"
         },
         {
             "translation": [
-                415.0,
-                1680.0
-            ],
-            "rotation": 1.4229249011857519,
-            "scale": 0.21258234519104086,
-            "image_uri": "5280-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                705.0,
-                2240.0
-            ],
-            "rotation": 7.114624505928873,
-            "scale": 0.24077733860342557,
-            "image_uri": "5280-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                975.0,
-                560.0
-            ],
-            "rotation": 186.40316205533588,
-            "scale": 0.22733860342555995,
-            "image_uri": "5281-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                1120.0
-            ],
-            "rotation": -123.79446640316206,
-            "scale": 0.19466403162055337,
-            "image_uri": "5281-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                975.0,
-                1680.0
-            ],
-            "rotation": 337.23320158102763,
-            "scale": 0.21653491436100133,
-            "image_uri": "5281-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                1265.0,
-                2240.0
-            ],
-            "rotation": 4.2687747035573125,
-            "scale": 0.23050065876152834,
-            "image_uri": "5282-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                560.0
-            ],
-            "rotation": -266.0869565217391,
-            "scale": 0.19967061923583665,
-            "image_uri": "5282-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                1120.0
-            ],
-            "rotation": -44.11067193675888,
-            "scale": 0.19387351778656128,
-            "image_uri": "5282-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                1680.0
-            ],
-            "rotation": 9.960474308300434,
-            "scale": 0.31054018445322795,
-            "image_uri": "5283-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                1825.0,
-                2240.0
-            ],
-            "rotation": -49.80237154150194,
-            "scale": 0.3442687747035573,
-            "image_uri": "5283-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                1535.0,
-                2800.0
-            ],
-            "rotation": -297.39130434782606,
-            "scale": 0.3521739130434783,
-            "image_uri": "5283-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                560.0
-            ],
-            "rotation": -226.24505928853753,
-            "scale": 0.3179183135704875,
-            "image_uri": "5284-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                1120.0
-            ],
-            "rotation": 21.34387351778662,
-            "scale": 0.3313570487483531,
-            "image_uri": "5284-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                2095.0,
-                1680.0
-            ],
-            "rotation": -115.25691699604744,
-            "scale": 0.3619235836627141,
-            "image_uri": "5284-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                2385.0,
-                2240.0
-            ],
-            "rotation": -308.77470355731225,
-            "scale": 0.3650856389986825,
-            "image_uri": "5285-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1680.0
-            ],
-            "rotation": -291.699604743083,
-            "scale": 0.3590250329380764,
-            "image_uri": "5285-topping-pepper-habanero.png"
-        },
-        {
-            "translation": [
-                2655.0,
+                845.0,
                 1400.0
             ],
+            "rotation": -75.41501976284587,
+            "scale": 0.20019762845849803,
+            "image_uri": "5280-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                555.0,
+                2100.0
+            ],
+            "rotation": -44.11067193675888,
+            "scale": 0.19888010540184453,
+            "image_uri": "5281-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                700.0
+            ],
+            "rotation": 268.93280632411063,
+            "scale": 0.21126482213438735,
+            "image_uri": "5281-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                1400.0
+            ],
+            "rotation": -9.960474308300377,
+            "scale": 0.24104084321475627,
+            "image_uri": "5282-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                1255.0,
+                2100.0
+            ],
+            "rotation": 106.71936758893281,
+            "scale": 0.23787878787878788,
+            "image_uri": "5282-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                1545.0,
+                2800.0
+            ],
+            "rotation": 172.17391304347825,
+            "scale": 0.3324110671936759,
+            "image_uri": "5283-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                700.0
+            ],
+            "rotation": -286.00790513833994,
+            "scale": 0.3171277997364954,
+            "image_uri": "5283-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                2245.0,
+                1400.0
+            ],
+            "rotation": -126.6403162055336,
+            "scale": 0.33899868247694337,
+            "image_uri": "5284-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                1955.0,
+                2100.0
+            ],
+            "rotation": 69.72332015810275,
+            "scale": 0.366403162055336,
+            "image_uri": "5284-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                2100.0
+            ],
+            "rotation": -18.49802371541506,
+            "scale": 0.3542819499341239,
+            "image_uri": "5285-topping-pepper-habanero.png"
+        },
+        {
+            "translation": [
+                1675.4893783426407,
+                1400.773739015032
+            ],
             "rotation": -157.94466403162056,
-            "scale": 0.3345191040843215,
+            "scale": 0.3455862977602108,
             "image_uri": "5285-topping-pepper-habanero.png"
         }
     ],

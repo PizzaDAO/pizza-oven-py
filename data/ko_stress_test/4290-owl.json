@@ -1,62 +1,62 @@
 {
-    "token_id": 26,
+    "token_id": 25,
     "name": "4290-owl",
-    "random_seed": "D44E5F56",
+    "random_seed": "A0218A6E",
     "recipe_id": 9999,
     "base_ingredients": {
         "box": {
             "ingredient": {
-                "unique_id": "0000",
-                "ingredient_id": "000",
+                "unique_id": "0020",
+                "ingredient_id": "002",
                 "variant_id": "0",
                 "index": 1,
-                "name": "white",
-                "ingredient_rarity": 0,
-                "variant_rarity": 5,
+                "name": "greasy",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 1,
                 "category": "box",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 90.0,
-                    "mass": 994.0,
-                    "calories": 92.0,
-                    "vitamin_c": 1.0,
-                    "magnesium": 2.0,
-                    "vitamin_b5": 3.0,
-                    "vitamin_d": 4.0,
-                    "vitamin_b7": 5.0,
-                    "height": 10.0,
-                    "moisture": 11.0,
-                    "potassium": 10.0,
+                    "serving_size": 0.0,
+                    "mass": 218.0,
+                    "calories": 0.0,
+                    "vitamin_c": 0.0,
+                    "magnesium": 0.0,
+                    "vitamin_b5": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b7": 0.0,
+                    "height": 0.0,
+                    "moisture": 0.0,
+                    "potassium": 0.0,
                     "cholesterol": 15.0,
-                    "vitamin_a": 16.0,
-                    "dietary_fiber": 16.0,
-                    "vitamin_b6": 17.0,
-                    "sugar": 20.0,
-                    "protein": 21.0,
-                    "iron": 25.0,
-                    "complex_carb": 30.0,
-                    "selenium": 31.0,
-                    "vitamin_k": 32.0,
-                    "vitamin_b12": 40.0,
-                    "calories_from_fat": 41.0,
-                    "vitamin_e": 42.0,
-                    "zinc": 50.0,
-                    "saturated_fat": 51.0,
-                    "iodine": 52.0,
-                    "trans_fat": 60.0,
-                    "sodium": 61.0,
-                    "monosaturated_fat": 62.0,
-                    "calcium": 63.0,
-                    "riboflavin": 70.0,
-                    "thiamin": 71.0,
-                    "folate": 72.0,
-                    "added_sugar": 23.0,
-                    "chromium": 22.0,
-                    "manganese": 24.0
+                    "vitamin_a": 0.0,
+                    "dietary_fiber": 153.0,
+                    "vitamin_b6": 0.0,
+                    "sugar": 0.0,
+                    "protein": 0.0,
+                    "iron": 0.0,
+                    "complex_carb": 0.0,
+                    "selenium": 0.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 0.0,
+                    "calories_from_fat": 0.0,
+                    "vitamin_e": 0.0,
+                    "zinc": 0.0,
+                    "saturated_fat": 0.0,
+                    "iodine": 0.0,
+                    "trans_fat": 0.0,
+                    "sodium": 0.0,
+                    "monosaturated_fat": 0.0,
+                    "calcium": 0.0,
+                    "riboflavin": 0.0,
+                    "thiamin": 0.0,
+                    "folate": 0.0,
+                    "added_sugar": 0.0,
+                    "chromium": 0.0,
+                    "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0000-box-white.png",
+                    "filename": "0020-box-greasy.png",
                     "output_mask": "rarepizza-#####-box"
                 }
             },
@@ -69,26 +69,26 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0000-box-white.png"
+                    "image_uri": "0020-box-greasy.png"
                 }
             ],
             "scatter_type": 1
         },
         "paper": {
             "ingredient": {
-                "unique_id": "0530",
+                "unique_id": "0534",
                 "ingredient_id": "053",
-                "variant_id": "0",
+                "variant_id": "4",
                 "index": 1,
-                "name": "code-cherry",
+                "name": "code",
                 "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "variant_rarity": 1,
                 "classification": 2,
                 "category": "paper",
                 "attributes": {},
                 "nutrition": {
                     "serving_size": 0.0,
-                    "mass": 0.0,
+                    "mass": 50.0,
                     "calories": 0.0,
                     "vitamin_c": 0.0,
                     "magnesium": 0.0,
@@ -107,7 +107,7 @@
                     "iron": 0.0,
                     "complex_carb": 0.0,
                     "selenium": 0.0,
-                    "vitamin_k": 0.0,
+                    "vitamin_k": 50.0,
                     "vitamin_b12": 0.0,
                     "calories_from_fat": 0.0,
                     "vitamin_e": 0.0,
@@ -126,7 +126,7 @@
                     "manganese": 0.0
                 },
                 "image_uris": {
-                    "filename": "0530-paper-code-cherry.png",
+                    "filename": "0534-paper-code.png",
                     "output_mask": "rarepizza-#####-paper"
                 }
             },
@@ -139,64 +139,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "0530-paper-code-cherry.png"
+                    "image_uri": "0534-paper-code.png"
                 }
             ],
             "scatter_type": 1
         },
         "crust": {
             "ingredient": {
-                "unique_id": "1040",
-                "ingredient_id": "104",
+                "unique_id": "1020",
+                "ingredient_id": "102",
                 "variant_id": "0",
                 "index": 1,
-                "name": "castle",
-                "ingredient_rarity": 5,
-                "variant_rarity": 5,
+                "name": "moon",
+                "ingredient_rarity": 1,
+                "variant_rarity": 1,
                 "classification": 3,
                 "category": "crust",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 560.5,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
+                    "vitamin_b7": 1.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
+                    "vitamin_b6": 50.0,
                     "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "protein": 2.5,
+                    "iron": 3.7,
+                    "complex_carb": 0.2,
+                    "selenium": 2.8,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 61.5,
+                    "calories_from_fat": 53.3,
+                    "vitamin_e": 15.3,
+                    "zinc": 81.5,
+                    "saturated_fat": 25.2,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 84.5,
+                    "sodium": 23.4,
+                    "monosaturated_fat": 88.0,
+                    "calcium": 13.6,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 55.5,
+                    "chromium": 26.7,
+                    "manganese": 14.2
                 },
                 "image_uris": {
-                    "filename": "1040-crust-castle.png",
+                    "filename": "1020-crust-moon.png",
                     "output_mask": "rarepizza-#####-crust"
                 }
             },
@@ -209,64 +209,64 @@
                     ],
                     "rotation": 0.0,
                     "scale": 1.0,
-                    "image_uri": "1040-crust-castle.png"
+                    "image_uri": "1020-crust-moon.png"
                 }
             ],
             "scatter_type": 1
         },
         "sauce": {
             "ingredient": {
-                "unique_id": "2030",
-                "ingredient_id": "203",
-                "variant_id": "0",
+                "unique_id": "2054",
+                "ingredient_id": "205",
+                "variant_id": "4",
                 "index": 1,
-                "name": "bbq",
+                "name": "white",
                 "ingredient_rarity": 1,
-                "variant_rarity": 0,
+                "variant_rarity": 4,
                 "classification": 4,
                 "category": "sauce",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 347.7,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
+                    "vitamin_b5": 1.0,
+                    "vitamin_d": 1.0,
                     "vitamin_b7": 0.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
+                    "cholesterol": 10.0,
+                    "vitamin_a": 5.6,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 20.0,
+                    "protein": 30.0,
+                    "iron": 52.2,
+                    "complex_carb": 40.0,
+                    "selenium": 34.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 13.2,
+                    "calories_from_fat": 34.0,
+                    "vitamin_e": 1.9,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 0.9,
+                    "sodium": 0.6,
+                    "monosaturated_fat": 1.0,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.1,
+                    "chromium": 2.0,
+                    "manganese": 1.3
                 },
                 "image_uris": {
-                    "filename": "2030-sauce-bbq.png",
+                    "filename": "2054-sauce-white.png",
                     "output_mask": "rarepizza-#####-sauce"
                 }
             },
@@ -278,65 +278,65 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.9444444444444444,
-                    "image_uri": "2030-sauce-bbq.png"
+                    "scale": 1.0,
+                    "image_uri": "2054-sauce-white.png"
                 }
             ],
             "scatter_type": 1
         },
         "cheese": {
             "ingredient": {
-                "unique_id": "3100",
-                "ingredient_id": "310",
+                "unique_id": "3090",
+                "ingredient_id": "309",
                 "variant_id": "0",
                 "index": 1,
-                "name": "formaggi",
-                "ingredient_rarity": 2,
+                "name": "dogecheese",
+                "ingredient_rarity": 3,
                 "variant_rarity": 0,
                 "classification": 5,
                 "category": "cheese",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 236.4,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
-                    "vitamin_b5": 0.0,
-                    "vitamin_d": 0.0,
-                    "vitamin_b7": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 5.0,
+                    "vitamin_b5": 0.3,
+                    "vitamin_d": 1.0,
+                    "vitamin_b7": 3.0,
                     "height": 0.0,
                     "moisture": 0.0,
                     "potassium": 0.0,
-                    "cholesterol": 0.0,
-                    "vitamin_a": 0.0,
-                    "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "cholesterol": 9.9,
+                    "vitamin_a": 3.0,
+                    "dietary_fiber": 3.2,
+                    "vitamin_b6": 60.0,
+                    "sugar": 3.9,
+                    "protein": 1.7,
+                    "iron": 3.8,
+                    "complex_carb": 3.2,
+                    "selenium": 3.0,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 17.7,
+                    "calories_from_fat": 4.3,
+                    "vitamin_e": 6.9,
+                    "zinc": 5.8,
+                    "saturated_fat": 6.4,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 8.9,
+                    "sodium": 13.0,
+                    "monosaturated_fat": 10.0,
+                    "calcium": 11.5,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
                     "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "chromium": 1.1,
+                    "manganese": 1.5
                 },
                 "image_uris": {
-                    "filename": "3100-cheese-formaggi.png",
+                    "filename": "3090-cheese-dogecheese.png",
                     "output_mask": "rarepizza-#####-cheese"
                 }
             },
@@ -348,8 +348,8 @@
                         0.0
                     ],
                     "rotation": 0.0,
-                    "scale": 0.8888888888888888,
-                    "image_uri": "3100-cheese-formaggi.png"
+                    "scale": 0.7777777777777778,
+                    "image_uri": "3090-cheese-dogecheese.png"
                 }
             ],
             "scatter_type": 1
@@ -363,17 +363,17 @@
                 "variant_id": "0",
                 "index": 1,
                 "name": "owl",
-                "ingredient_rarity": 2,
+                "ingredient_rarity": 5,
                 "variant_rarity": 0,
                 "classification": 6,
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 287.6,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -383,66 +383,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 7.1,
+                    "protein": 1.6,
+                    "iron": 0.1,
+                    "complex_carb": 94.4,
+                    "selenium": 72.9,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
                     "zinc": 0.0,
                     "saturated_fat": 0.0,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.1,
+                    "chromium": 0.4,
+                    "manganese": 0.4
                 },
                 "image_uris": {
                     "filename": "4290-topping-meat-owl.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        555.0,
-                        700.0
+                        788.3333333333334,
+                        933.3333333333334
                     ],
-                    "rotation": -1.4229249011857519,
-                    "scale": 1.0172924901185771,
+                    "rotation": 348.61660079051387,
+                    "scale": 0.8710474308300395,
                     "image_uri": "4290-topping-meat-owl.png"
                 },
                 {
                     "translation": [
-                        845.0,
-                        1400.0
+                        1078.3333333333335,
+                        1866.6666666666667
                     ],
-                    "rotation": -123.79446640316206,
-                    "scale": 0.9626152832674573,
-                    "image_uri": "4290-topping-meat-owl.png"
-                },
-                {
-                    "translation": [
-                        555.0,
-                        2100.0
-                    ],
-                    "rotation": -351.4624505928854,
-                    "scale": 0.9902832674571805,
+                    "rotation": 75.41501976284582,
+                    "scale": 0.8259222661396575,
                     "image_uri": "4290-topping-meat-owl.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4291": {
             "ingredient": {
@@ -451,17 +442,17 @@
                 "variant_id": "1",
                 "index": 1,
                 "name": "owl",
-                "ingredient_rarity": 2,
+                "ingredient_rarity": 5,
                 "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 170.7,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -471,66 +462,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 8.9,
+                    "protein": 1.0,
+                    "iron": 3.3,
+                    "complex_carb": 23.2,
+                    "selenium": 18.2,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.2,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 0.5,
+                    "chromium": 0.2,
+                    "manganese": 0.8
                 },
                 "image_uris": {
                     "filename": "4291-topping-meat-owl.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1255.0,
-                        700.0
+                        1721.6666666666667,
+                        933.3333333333334
                     ],
-                    "rotation": -81.10671936758894,
-                    "scale": 0.9718379446640316,
+                    "rotation": 1.4229249011857519,
+                    "scale": 0.7949604743083004,
                     "image_uri": "4291-topping-meat-owl.png"
                 },
                 {
                     "translation": [
-                        1545.0,
-                        1400.0
+                        2011.6666666666667,
+                        1866.6666666666667
                     ],
-                    "rotation": -146.56126482213438,
-                    "scale": 0.9807312252964427,
-                    "image_uri": "4291-topping-meat-owl.png"
-                },
-                {
-                    "translation": [
-                        1255.0,
-                        2100.0
-                    ],
-                    "rotation": -69.72332015810275,
-                    "scale": 0.9748023715415021,
+                    "rotation": 126.64031620553357,
+                    "scale": 0.822957839262187,
                     "image_uri": "4291-topping-meat-owl.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4292": {
             "ingredient": {
@@ -539,17 +521,17 @@
                 "variant_id": "2",
                 "index": 1,
                 "name": "owl",
-                "ingredient_rarity": 2,
+                "ingredient_rarity": 5,
                 "variant_rarity": 1,
                 "classification": 6,
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 182.6,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -559,66 +541,57 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 8.9,
+                    "protein": 6.4,
+                    "iron": 1.4,
+                    "complex_carb": 4.1,
+                    "selenium": 46.1,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.1,
+                    "sodium": 0.5,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.2,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.4,
+                    "chromium": 0.2,
+                    "manganese": 1.5
                 },
                 "image_uris": {
                     "filename": "4292-topping-meat-owl.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1545.0,
+                        1721.6666666666667,
                         2800.0
                     ],
-                    "rotation": -61.18577075098813,
-                    "scale": 0.9906126482213439,
+                    "rotation": -305.9288537549407,
+                    "scale": 0.8275691699604742,
                     "image_uri": "4292-topping-meat-owl.png"
                 },
                 {
                     "translation": [
-                        1955.0,
-                        700.0
+                        2655.0,
+                        933.3333333333334
                     ],
-                    "rotation": -345.7707509881423,
-                    "scale": 0.9603096179183136,
-                    "image_uri": "4292-topping-meat-owl.png"
-                },
-                {
-                    "translation": [
-                        2245.0,
-                        1400.0
-                    ],
-                    "rotation": -160.7905138339921,
-                    "scale": 0.9883069828722003,
+                    "rotation": 254.70355731225288,
+                    "scale": 0.8661067193675889,
                     "image_uri": "4292-topping-meat-owl.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         },
         "4293": {
             "ingredient": {
@@ -627,17 +600,17 @@
                 "variant_id": "3",
                 "index": 1,
                 "name": "owl",
-                "ingredient_rarity": 2,
+                "ingredient_rarity": 5,
                 "variant_rarity": 2,
                 "classification": 6,
                 "category": "topping-meat",
                 "attributes": {},
                 "nutrition": {
-                    "serving_size": 0.0,
-                    "mass": 0.0,
+                    "serving_size": 1.0,
+                    "mass": 189.6,
                     "calories": 0.0,
-                    "vitamin_c": 0.0,
-                    "magnesium": 0.0,
+                    "vitamin_c": 1.0,
+                    "magnesium": 1.0,
                     "vitamin_b5": 0.0,
                     "vitamin_d": 0.0,
                     "vitamin_b7": 0.0,
@@ -647,176 +620,131 @@
                     "cholesterol": 0.0,
                     "vitamin_a": 0.0,
                     "dietary_fiber": 0.0,
-                    "vitamin_b6": 0.0,
-                    "sugar": 0.0,
-                    "protein": 0.0,
-                    "iron": 0.0,
-                    "complex_carb": 0.0,
-                    "selenium": 0.0,
-                    "vitamin_k": 0.0,
-                    "vitamin_b12": 0.0,
-                    "calories_from_fat": 0.0,
-                    "vitamin_e": 0.0,
-                    "zinc": 0.0,
-                    "saturated_fat": 0.0,
+                    "vitamin_b6": 50.0,
+                    "sugar": 4.0,
+                    "protein": 5.3,
+                    "iron": 0.2,
+                    "complex_carb": 22.4,
+                    "selenium": 41.3,
+                    "vitamin_k": 50.0,
+                    "vitamin_b12": 1.2,
+                    "calories_from_fat": 2.8,
+                    "vitamin_e": 0.3,
+                    "zinc": 2.0,
+                    "saturated_fat": 2.8,
                     "iodine": 0.0,
-                    "trans_fat": 0.0,
-                    "sodium": 0.0,
-                    "monosaturated_fat": 0.0,
-                    "calcium": 0.0,
+                    "trans_fat": 2.8,
+                    "sodium": 0.3,
+                    "monosaturated_fat": 2.8,
+                    "calcium": 0.3,
                     "riboflavin": 0.0,
                     "thiamin": 0.0,
                     "folate": 0.0,
-                    "added_sugar": 0.0,
-                    "chromium": 0.0,
-                    "manganese": 0.0
+                    "added_sugar": 1.8,
+                    "chromium": 0.1,
+                    "manganese": 1.9
                 },
                 "image_uris": {
                     "filename": "4293-topping-meat-owl.png",
                     "output_mask": "rarepizza-#####-topping-meat"
                 }
             },
-            "count": 3.0,
+            "count": 2.0,
             "instances": [
                 {
                     "translation": [
-                        1955.0,
-                        2100.0
+                        2054.1295224348814,
+                        857.1249746675184
                     ],
-                    "rotation": 337.23320158102763,
-                    "scale": 1.0340909090909092,
+                    "rotation": -300.2371541501976,
+                    "scale": 0.8390974967061924,
                     "image_uri": "4293-topping-meat-owl.png"
                 },
                 {
                     "translation": [
-                        2655.0,
-                        2100.0
+                        1857.5547603500686,
+                        1754.1198051937833
                     ],
-                    "rotation": -180.71146245059288,
-                    "scale": 0.9962121212121212,
-                    "image_uri": "4293-topping-meat-owl.png"
-                },
-                {
-                    "translation": [
-                        2655.0,
-                        1400.0
-                    ],
-                    "rotation": -305.9288537549407,
-                    "scale": 0.9935770750988143,
+                    "rotation": 192.094861660079,
+                    "scale": 0.8259222661396575,
                     "image_uri": "4293-topping-meat-owl.png"
                 }
             ],
-            "scatter_type": 512
+            "scatter_type": 1
         }
     },
     "lastchances": {},
     "instances": [
         {
             "translation": [
-                555.0,
-                700.0
+                788.3333333333334,
+                933.3333333333334
             ],
-            "rotation": -1.4229249011857519,
-            "scale": 1.0172924901185771,
+            "rotation": 348.61660079051387,
+            "scale": 0.8710474308300395,
             "image_uri": "4290-topping-meat-owl.png"
         },
         {
             "translation": [
-                845.0,
-                1400.0
+                1078.3333333333335,
+                1866.6666666666667
             ],
-            "rotation": -123.79446640316206,
-            "scale": 0.9626152832674573,
+            "rotation": 75.41501976284582,
+            "scale": 0.8259222661396575,
             "image_uri": "4290-topping-meat-owl.png"
         },
         {
             "translation": [
-                555.0,
-                2100.0
+                1721.6666666666667,
+                933.3333333333334
             ],
-            "rotation": -351.4624505928854,
-            "scale": 0.9902832674571805,
-            "image_uri": "4290-topping-meat-owl.png"
-        },
-        {
-            "translation": [
-                1255.0,
-                700.0
-            ],
-            "rotation": -81.10671936758894,
-            "scale": 0.9718379446640316,
+            "rotation": 1.4229249011857519,
+            "scale": 0.7949604743083004,
             "image_uri": "4291-topping-meat-owl.png"
         },
         {
             "translation": [
-                1545.0,
-                1400.0
+                2011.6666666666667,
+                1866.6666666666667
             ],
-            "rotation": -146.56126482213438,
-            "scale": 0.9807312252964427,
+            "rotation": 126.64031620553357,
+            "scale": 0.822957839262187,
             "image_uri": "4291-topping-meat-owl.png"
         },
         {
             "translation": [
-                1255.0,
-                2100.0
-            ],
-            "rotation": -69.72332015810275,
-            "scale": 0.9748023715415021,
-            "image_uri": "4291-topping-meat-owl.png"
-        },
-        {
-            "translation": [
-                1545.0,
+                1721.6666666666667,
                 2800.0
             ],
-            "rotation": -61.18577075098813,
-            "scale": 0.9906126482213439,
-            "image_uri": "4292-topping-meat-owl.png"
-        },
-        {
-            "translation": [
-                1955.0,
-                700.0
-            ],
-            "rotation": -345.7707509881423,
-            "scale": 0.9603096179183136,
-            "image_uri": "4292-topping-meat-owl.png"
-        },
-        {
-            "translation": [
-                2245.0,
-                1400.0
-            ],
-            "rotation": -160.7905138339921,
-            "scale": 0.9883069828722003,
-            "image_uri": "4292-topping-meat-owl.png"
-        },
-        {
-            "translation": [
-                1955.0,
-                2100.0
-            ],
-            "rotation": 337.23320158102763,
-            "scale": 1.0340909090909092,
-            "image_uri": "4293-topping-meat-owl.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                2100.0
-            ],
-            "rotation": -180.71146245059288,
-            "scale": 0.9962121212121212,
-            "image_uri": "4293-topping-meat-owl.png"
-        },
-        {
-            "translation": [
-                2655.0,
-                1400.0
-            ],
             "rotation": -305.9288537549407,
-            "scale": 0.9935770750988143,
+            "scale": 0.8275691699604742,
+            "image_uri": "4292-topping-meat-owl.png"
+        },
+        {
+            "translation": [
+                2655.0,
+                933.3333333333334
+            ],
+            "rotation": 254.70355731225288,
+            "scale": 0.8661067193675889,
+            "image_uri": "4292-topping-meat-owl.png"
+        },
+        {
+            "translation": [
+                2054.1295224348814,
+                857.1249746675184
+            ],
+            "rotation": -300.2371541501976,
+            "scale": 0.8390974967061924,
+            "image_uri": "4293-topping-meat-owl.png"
+        },
+        {
+            "translation": [
+                1857.5547603500686,
+                1754.1198051937833
+            ],
+            "rotation": 192.094861660079,
+            "scale": 0.8259222661396575,
             "image_uri": "4293-topping-meat-owl.png"
         }
     ],
