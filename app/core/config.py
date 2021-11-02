@@ -163,7 +163,7 @@ class Settings(BaseSettings):
     GOOGLE_SHEETS_CREDENTIALS_PATH = "secrets/credentials.json"
     SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly"
     PIZZA_TYPES_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
-    PIZZA_TYPE_RANGE_NAME = "recipe-db!A2:Q"
+    PIZZA_TYPE_RANGE_NAME = "recipe-db!A1:Q"
     PIZZA_INGREDIENTS_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
     TOPPINGS_RANGE_NAME = "ingredients-db"
 
