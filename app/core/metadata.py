@@ -21,14 +21,14 @@ def make_description(recipe, base, layers):
             return f"A {base.ingredient.pretty_name}"
     
     def cheese(cheese):
-        if base.ingredient.unique_id == "3200":
+        if cheese.ingredient.unique_id == "3200":
             return f". Topped with "
         else:
             return f" covered with {base['cheese0'].ingredient.pretty_name}. Topped with "
 
 
     desc = f"A delicious {recipe} pizza."
-    desc += f" {crust(base['crust0'])} with {base['sauce0'].ingredient.pretty_name}"
+    desc += f" {crust(base['crust0'])} with {base['sauce0'].ingredient.pretty_name},"
     desc += cheese(base['cheese0'])
 
     # handle toppings
