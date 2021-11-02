@@ -379,6 +379,8 @@ def parse_ranges(row, scope: IngredientScope) -> IngredientScope:
         # Make sure these fools didn't enter more than 30 Max!!!
         if max > 30.0:
             max = 30.0
+        if min > 30.0:
+            min = 30.0
         scope.emission_count = (min, max)
 
     if has_value("rotation", row):
@@ -425,7 +427,7 @@ def has_value(label: str, row) -> bool:
 
 def get_scale_values(inches, variance, pixel_size) -> Tuple[float, float]:
     min_size = inches - variance
-    if(min_size <= 0):
+    if min_size <= 0:
         min_size = inches
     max_size = inches + variance
     # toppings are 1024x1024, pies 3072x3072 and 18” so the math is (size/6)*1024
