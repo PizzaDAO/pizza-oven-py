@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "rarepizza.labels" . | nindent 4 }}
 spec:
-  replicas: 10
+  replicas: 2
   selector:
     matchLabels:
       {{- include "rarepizza.selectorLabels" . | nindent 6 }}
