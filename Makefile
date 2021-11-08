@@ -82,19 +82,10 @@ test-natron-mvp:
 	@echo ☢️ Run MVP Natron
 	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 1
 
-
-test-natron-mvp:
-	@echo ☢️ Run MVP Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/sample_kitchen_order_mvp.json -f 1
-
 test-0000:
 	@echo ☢️ Run MVP Natron
 	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0000_Random.json -f 0
 
-test-0001:
-	@echo ☢️ Run MVP Natron
-	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0003_Random.json -f 1
-	
 test-0001:
 	@echo ☢️ Run MVP Natron
 	poetry run python app/core/renderer.py -k $(realpath .)/data/kitchen_orders/0003_Random.json -f 1
