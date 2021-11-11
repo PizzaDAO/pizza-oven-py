@@ -235,8 +235,6 @@ def make_prep(
 def select_prep(seed: int, nonce: Counter, scope: ScopedIngredient) -> MadeIngredient:
     """select the scalar values for the ingredient"""
     translation = (0.0, 0.0)
-    if scope.ingredient.classification == Classification.lastchance:
-        translation = (3072 / 2, 3072 / 2)
     scale = scope.scope.particle_scale[0]
     instances = [
         MadeIngredientPrep(

@@ -242,9 +242,6 @@ def select_prep(
             scale = ingredient.scope.particle_scale[0]
             rotation = round(select_value(seed, nonce, ingredient.scope.rotation))
 
-            if ingredient.ingredient.classification == Classification.lastchance:
-                translation = (3072 / 2, 3072 / 2)
-
         instances = [
             MadeIngredientPrep(
                 translation=translation,
