@@ -20,28 +20,35 @@ def make_description(recipe, base, layers):
         else:
             return f"A {base.ingredient.pretty_name}"
     
+    def sauce(sauce):
+        if sauce.ingredient.pretty_name.lower() != "variant":
+            return f" with {sauce.ingredient.pretty_name}"
+        else:
+            return f""
+
     def cheese(cheese):
         if cheese.ingredient.unique_id == "3200":
             return f". Topped with "
         else:
-            return f" covered with {base['cheese0'].ingredient.pretty_name}. Topped with "
+            return f", covered with {base['cheese0'].ingredient.pretty_name}. Topped with "
 
 
     desc = f"A delicious {recipe} pizza."
-    desc += f" {crust(base['crust0'])} with {base['sauce0'].ingredient.pretty_name},"
+    desc += f" {crust(base['crust0'])}{sauce(base['sauce0'])}"
     desc += cheese(base['cheese0'])
 
     # handle toppings
     toppings = layers.items()
     numToppings = len(toppings)
     for i, key in enumerate(layers.keys()):
-        desc += layers[key].ingredient.pretty_name
-        if i == numToppings - 2:
-            desc += ", and "  
-        elif i == numToppings - 1:
-            desc += "."
-        else:
-            desc += ", "
+        if layers[key].ingredient.pretty_name.lower() != "variant":
+            desc += layers[key].ingredient.pretty_name
+            if i == numToppings - 2:
+                desc += ", and "  
+            elif i == numToppings - 1:
+                desc += "."
+            else:
+                desc += ", "
 
     # append box and paper
 
@@ -102,7 +109,7 @@ def to_blockchain_metadata(
                 ],
             )
         )
-        if str(value.ingredient.topping_class) is not "variant":
+        if str(value.ingredient.topping_class).lower() != "variant":
             attributes.append(
                 ERC721OpenSeaMetadataAttribute(
                     trait_type=value.ingredient.topping_class,
@@ -126,12 +133,13 @@ def to_blockchain_metadata(
                 ],
             )
         )
-        attributes.append(
-            ERC721OpenSeaMetadataAttribute(
-                trait_type=value.ingredient.topping_class,
-                value=value.ingredient.pretty_name,
+        if str(value.ingredient.topping_class).lower() != "variant":
+            attributes.append(
+                ERC721OpenSeaMetadataAttribute(
+                    trait_type=value.ingredient.topping_class,
+                    value=value.ingredient.pretty_name,
+                )
             )
-        )
         """ Add topping catgory count if not exists, otherwise increment count """
         #if value.ingredient.category not in map(
         #    lambda c: c["trait_type"], category_count
