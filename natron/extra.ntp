@@ -47253,7 +47253,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>15</KnobsCount>
+			<KnobsCount>16</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -47349,6 +47349,24 @@ ret = y_new
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -47543,7 +47561,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>39</KnobsAge>
+			<KnobsAge>40</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -48514,7 +48532,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Clamp7</second>
+					<second>w1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -49055,7 +49073,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Wed Nov 10 22:14:00 2021</Value>
+			<Value>Wed Nov 10 22:39:36 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -53440,8 +53458,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Switch_default</Name>
-			<X_position>2.66731106935700018e+03</X_position>
-			<Y_position>5.45843535016197984e+03</Y_position>
+			<X_position>2.78999703407296465e+03</X_position>
+			<Y_position>5.53782038615466263e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -53562,9 +53580,9 @@ ret = y_new
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>Read1_3</item>
 		<item>Switch_default</item>
 		<item>input_default</item>
-		<item>Read1_3</item>
 		<item>Bake_default</item>
 		<item>Read1</item>
 		<item>Premult1</item>
