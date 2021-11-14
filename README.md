@@ -149,7 +149,7 @@ TODO: verify that the job posts back and completes when finished and the result 
 
 If you are jsut testing the api code, you do not need to do this step.
 
-In order for the chainlink node to handle requests that come from the blockchain, another job must be created. Create a new job and drop in the contests of the `./chainlink/job.order.runLog.json` file.
+In order for the chainlink node to handle requests that come from the blockchain, another job must be created. Create a new job and drop in the contests of the `./chainlink/job.order.runLog.rinkeby.json` file.
 
 Configuring the blockchain job requires deploying a chainlink node to rinkeby. refer to the smart contract repository to continue these steps.
 
