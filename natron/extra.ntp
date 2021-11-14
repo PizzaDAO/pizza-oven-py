@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>22</NodesCount>
+		<NodesCount>23</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>Clamp7</Plugin_label>
 			<Plugin_script_name>Clamp7</Plugin_script_name>
@@ -647,7 +647,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>In</first>
-					<second>input_default_2</second>
+					<second>input_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>106698</KnobsAge>
@@ -47253,7 +47253,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>15</KnobsCount>
+			<KnobsCount>16</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -47349,6 +47349,24 @@ ret = y_new
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
 				</item>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>onMissingFrame</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>4</Value>
+					<Default>3</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>black</ChoiceLabel>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -47543,7 +47561,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>39</KnobsAge>
+			<KnobsAge>40</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -48514,7 +48532,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Clamp7</second>
+					<second>w1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -48532,8 +48550,8 @@ ret = y_new
 			<CacheID>Viewer2</CacheID>
 		</item>
 		<item>
-			<Plugin_label>input_default_2</Plugin_label>
-			<Plugin_script_name>input_default_2</Plugin_script_name>
+			<Plugin_label>input_default</Plugin_label>
+			<Plugin_script_name>input_default</Plugin_script_name>
 			<Plugin_id>fr.inria.built-in.Read</Plugin_id>
 			<PythonModule></PythonModule>
 			<PythonModuleVersion>0</PythonModuleVersion>
@@ -48881,6 +48899,57 @@ ret = y_new
 			</UserComponents>
 			<CacheID>input_default_2</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Switch_default</Plugin_label>
+			<Plugin_script_name>Switch_default</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.switchPlugin</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>1</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>1</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>0</count>
+				<item_version>0</item_version>
+			</Inputs_map>
+			<KnobsAge>0</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Switch1</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
 	<item>
@@ -49004,7 +49073,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sat Oct 30 14:00:43 2021</Value>
+			<Value>Wed Nov 10 22:39:36 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -49115,7 +49184,7 @@ ret = y_new
 </Project>
 <ProjectGui class_id="20" tracking_level="0" version="12">
 	<NodesGui class_id="21" tracking_level="0" version="0">
-		<count>22</count>
+		<count>23</count>
 		<item_version>6</item_version>
 		<item class_id="22" tracking_level="0" version="6">
 			<Name>Clamp7</Name>
@@ -53374,7 +53443,7 @@ ret = y_new
 			<Children>0</Children>
 		</item>
 		<item>
-			<Name>input_default_2</Name>
+			<Name>input_default</Name>
 			<X_position>2.76848912548423141e+03</X_position>
 			<Y_position>4.87648908104417296e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
@@ -53387,17 +53456,31 @@ ret = y_new
 			<HasOverlayColor>0</HasOverlayColor>
 			<Children>0</Children>
 		</item>
+		<item>
+			<Name>Switch_default</Name>
+			<X_position>2.78999703407296465e+03</X_position>
+			<Y_position>5.53782038615466263e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
 	</NodesGui>
 	<Gui_Layout class_id="23" tracking_level="0" version="2">
 		<NbWindows>1</NbWindows>
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1581 851</Sizes>
+				<Sizes>1641 883</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>659 658</Sizes>
+					<Sizes>683 682</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -53437,10 +53520,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2535</x>
-			<y>-297</y>
-			<w>2468</w>
-			<h>1320</h>
+			<x>0</x>
+			<y>1</y>
+			<w>2560</w>
+			<h>1368</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -53497,8 +53580,9 @@ ret = y_new
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
-		<item>input_default_2</item>
 		<item>Read1_3</item>
+		<item>Switch_default</item>
+		<item>input_default</item>
 		<item>Bake_default</item>
 		<item>Read1</item>
 		<item>Premult1</item>
@@ -53506,7 +53590,6 @@ ret = y_new
 		<item>ColorCorrect1_4</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Reformat1</item>
-		<item>w1</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
