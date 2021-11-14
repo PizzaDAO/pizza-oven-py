@@ -82,7 +82,7 @@
 				<item_version>0</item_version>
 				<item class_id="7" tracking_level="0" version="0">
 					<first>Source</first>
-					<second>Dot59</second>
+					<second>TRS_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>5</KnobsAge>
@@ -47253,7 +47253,7 @@ ret = y_new
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>16</KnobsCount>
+			<KnobsCount>17</KnobsCount>
 			<item>
 				<Name>decodingPluginID</Name>
 				<Type>String</Type>
@@ -47294,6 +47294,23 @@ ret = y_new
 					<count>0</count>
 					<item_version>0</item_version>
 				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<item>
+				<Name>disableNode</Name>
+				<Type>Bool</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>0</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
 				<UserKnob>0</UserKnob>
 			</item>
 			<item>
@@ -47561,7 +47578,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>40</KnobsAge>
+			<KnobsAge>41</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -48023,7 +48040,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>2</KnobsAge>
+			<KnobsAge>4</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -49073,7 +49090,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Wed Nov 10 22:39:36 2021</Value>
+			<Value>Thu Nov 11 09:22:15 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -53445,7 +53462,7 @@ ret = y_new
 		<item>
 			<Name>input_default</Name>
 			<X_position>2.76848912548423141e+03</X_position>
-			<Y_position>4.87648908104417296e+03</Y_position>
+			<Y_position>4.84437918010588874e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -53458,8 +53475,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Switch_default</Name>
-			<X_position>2.78999703407296465e+03</X_position>
-			<Y_position>5.53782038615466263e+03</Y_position>
+			<X_position>2.57202094070118619e+03</X_position>
+			<Y_position>5.54217990802209806e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -53480,7 +53497,7 @@ ret = y_new
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>683 682</Sizes>
+					<Sizes>696 696</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -53523,7 +53540,7 @@ ret = y_new
 			<x>0</x>
 			<y>1</y>
 			<w>2560</w>
-			<h>1368</h>
+			<h>1395</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -53580,16 +53597,16 @@ ret = y_new
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>input_default</item>
+		<item>w1</item>
 		<item>Read1_3</item>
 		<item>Switch_default</item>
-		<item>input_default</item>
 		<item>Bake_default</item>
 		<item>Read1</item>
 		<item>Premult1</item>
 		<item>MultiplyMask_2</item>
 		<item>ColorCorrect1_4</item>
 		<item>Natron_Project_Settings_Panel</item>
-		<item>Reformat1</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
