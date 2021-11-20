@@ -8,6 +8,8 @@ __all__ = [
     "MadeIngredientPrep",
     "MadeIngredient",
     "KitchenOrder",
+    "KitchenOrderRequest",
+    "KitchenOrderResponse",
 ]
 
 SCALAR = float
@@ -80,3 +82,16 @@ class KitchenOrder(Base):
     instances: List[MadeIngredientPrep]
     """shuffled list of all instances - provides depth in arrangements"""
     instructions: MadeInstructions
+
+
+class KitchenOrderRequest(Base):
+    """an inbound order request"""
+
+    job_id: str
+    order: KitchenOrder
+
+
+class KitchenOrderResponse(Base):
+    """an outbound order response"""
+
+    order: KitchenOrder

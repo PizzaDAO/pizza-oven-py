@@ -7,7 +7,7 @@ from app.models.base import Base
 from app.models.pizza import HotPizza
 from app.core.renderer import Renderer
 
-from .prep import KitchenOrderRequest
+from app.models.prep import KitchenOrderRequest
 from ..tags import BAKE
 
 router = APIRouter()

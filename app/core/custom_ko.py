@@ -1,4 +1,5 @@
 from typing import Dict, Tuple, List
+from app.core.repository import get_oven_params
 from app.models.prep import KitchenOrder
 from app.core.ingredients_db import read_ingredients
 from app.core.scatter import Grid, RandomScatter, Scatter, TreeRing
@@ -32,6 +33,7 @@ from app.core.random_num import (
 )
 from app.core.scatter import Grid, RandomScatter, TreeRing
 from app.core.utils import clamp, to_hex, from_hex
+from app.core.config import Settings
 
 
 def get_kitchen_order(unique_id: str):
@@ -213,16 +215,18 @@ def make_prep(
 
     ingredient_list = [scope] * options[0]
 
+    oven_params = get_oven_params()
+
     scatter_type = ScatterType.random
     if options[1] == RandomScatter:
         scatter_type = ScatterType.random
-        instances = RandomScatter(seed, nonce).evaluate(ingredient_list)
+        instances = RandomScatter(seed, nonce, oven_params).evaluate(ingredient_list)
     if options[1] == Grid:
         scatter_type = ScatterType.grid
-        instances = Grid(seed, nonce).evaluate(ingredient_list)
+        instances = Grid(seed, nonce, oven_params).evaluate(ingredient_list)
     if options[1] == TreeRing:
         scatter_type = ScatterType.treering
-        instances = TreeRing(seed, nonce).evaluate(ingredient_list)
+        instances = TreeRing(seed, nonce, oven_params).evaluate(ingredient_list)
 
     return MadeIngredient(
         ingredient=scope.ingredient,

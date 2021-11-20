@@ -5,7 +5,7 @@ from fastapi.responses import JSONResponse
 
 
 from app.models.base import Base
-from app.models.prep import KitchenOrder
+from app.models.prep import KitchenOrderResponse
 from app.core.prep_line import reduce
 from app.core.utils import from_hex
 
@@ -13,19 +13,6 @@ from ..dining_room.recipe import RecipeRequest
 from ..tags import PREP
 
 router = APIRouter()
-
-
-class KitchenOrderRequest(Base):
-    """an inbound order request"""
-
-    job_id: str
-    order: KitchenOrder
-
-
-class KitchenOrderResponse(Base):
-    """an outbound order response"""
-
-    order: KitchenOrder
 
 
 @router.post("/preparePizza", response_model=KitchenOrderResponse, tags=[PREP])

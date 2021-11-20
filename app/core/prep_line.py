@@ -29,7 +29,7 @@ from app.core.random_num import (
 import json
 from app.core.scatter import FiveSpot, Grid, Hero, RandomScatter, SpokeCluster, TreeRing
 from app.core.utils import clamp, to_hex
-from app.core.ingredients_db import get_variants_for_ingredient
+from app.core.ingredients_db import get_variants_for_ingredient, read_ingredients
 from app.core.rarity import select_from_variants, ingredient_with_rarity
 from app.core.repository import get_oven_params
 
@@ -138,6 +138,26 @@ def reduce(
         instances=[],  # empty array since switched back to single ing layers
         instructions=order_instructions,
     )
+
+
+def revise_kitchen_order(kitchen_order: KitchenOrder) -> KitchenOrder:
+    """A funciton to revise NutritionData for a given kitchen order"""
+
+    ingredients = read_ingredients()
+
+    for k, v in kitchen_order.base_ingredients.items():
+        base: ScopedIngredient = ingredients[v.ingredient.unique_id]
+        v.ingredient.nutrition = base.ingredient.nutrition
+
+    for k, v in kitchen_order.layers.items():
+        layer: ScopedIngredient = ingredients[v.ingredient.unique_id]
+        v.ingredient.nutrition = layer.ingredient.nutrition
+
+    for k, v in kitchen_order.lastchances.items():
+        lastchance: ScopedIngredient = ingredients[v.ingredient.unique_id]
+        v.ingredient.nutrition = lastchance.ingredient.nutrition
+
+    return kitchen_order
 
 
 def select_ingredients(
