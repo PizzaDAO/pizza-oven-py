@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "429da0f4-7185-42bd-b588-8be61db20625",
+		"_postman_id": "f2c9019b-1540-4e14-b33b-f44e175cdb5d",
 		"name": "Pizza Kitchen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -672,7 +672,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = pm.response.json();",
-									"pm.environment.set(\"pizza\", JSON.stringify(jsonData));"
+									"pm.environment.set(\"order\", JSON.stringify(jsonData));"
 								],
 								"type": "text/javascript"
 							}
