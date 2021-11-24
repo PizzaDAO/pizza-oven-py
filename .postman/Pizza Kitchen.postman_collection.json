@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "429da0f4-7185-42bd-b588-8be61db20625",
+		"_postman_id": "f2c9019b-1540-4e14-b33b-f44e175cdb5d",
 		"name": "Pizza Kitchen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -176,8 +176,8 @@
 							"path": [
 								"api",
 								"{{version}}",
-								"kitchen",
 								"tests",
+								"ingredient",
 								"4000"
 							]
 						}
@@ -659,6 +659,47 @@
 								"{{version}}",
 								"diningroom",
 								"test_vrf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revise Kitchen Order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"order\", JSON.stringify(jsonData));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job_id\": \"57438675894578430\",\n    \"order\": {{order}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/revise_kitchen_order",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"revise_kitchen_order"
 							]
 						}
 					},

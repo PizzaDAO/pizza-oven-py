@@ -4,14 +4,19 @@ import requests
 import sys
 
 from fastapi import APIRouter, Body, BackgroundTasks, Request
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 from google.oauth2.credentials import Credentials
 
 from app.core.order_task import run_render_task, run_render_jobs
+
+from app.core.prep_line import revise_kitchen_order
 
 from app.core.repository import *
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.render_task import RenderTask, TaskStatus
 from app.models.order import OrderPizzaResponse
+from app.models.prep import KitchenOrderResponse, KitchenOrderRequest
 
 from ..tags import ADMIN
 
@@ -117,3 +122,13 @@ async def rerun_existing_render_task_async(
     background_tasks.add_task(run_render_task, render_task.job_id, render_task)
 
     return response
+
+
+@router.post("/revise_kitchen_order", response_model=KitchenOrderResponse, tags=[ADMIN])
+def revise_order(request: KitchenOrderRequest = Body(...)) -> Any:
+    """Revise data in a kitchen order for a published pizza pie"""
+
+    data = revise_kitchen_order(request.order)
+
+    json = jsonable_encoder(data)
+    return JSONResponse(content=json)
