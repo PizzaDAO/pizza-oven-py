@@ -71,7 +71,7 @@ def publish_order_result(
     print(f"{render_task.job_id} - truncated_metadata: {truncated_metadata}")
     print(f"{render_task.job_id} - truncated_metadata_len: {len(truncated_metadata)}")
     print("\n --------------- YOUR PIZZA IS COMPLETE ---------------- \n")
-    print(f"\n    ipfs metadata:       ipfs://{metadata.image} \n")
+    print(f"\n    ipfs metadata:       ipfs://{metadata_hash} \n")
     print(f"\n    ipfs image:          ipfs://{metadata.image} \n")
     print(f"\n    ipfs crust_alpha:    ipfs://{image_alpha_hash} \n")
     print(f"\n    tokenURI string:     {from_bytes_big} \n")
@@ -195,6 +195,57 @@ def patch_and_complete_job(
     return order_response
 
 
+def render_and_post(
+    recipe: Recipe, kitchen_order: KitchenOrder, render_task: RenderTask
+) -> Optional[OrderPizzaResponse]:
+    try:
+        # render the pizza
+        pizza = Renderer(
+            frame=render_task.request.data.token_id, job_id=render_task.job_id
+        ).render_pizza(kitchen_order)
+
+    except Exception as error:
+        print(sys.exc_info())
+        print(f"{render_task.job_id} - {error}")
+        render_task.message = str(error)
+        render_task.set_status(TaskStatus.error)
+        set_render_task(render_task)
+        return None
+
+    # cache the data and get a response object
+    order_response = publish_order_result(render_task, recipe, kitchen_order, pizza)
+
+    # update the task with the ipfs hash
+    if order_response is not None:
+        print(
+            f"{render_task.job_id} - updating the task with the ipfs hash of the metadata"
+        )
+
+        render_task.metadata_hash = order_response.data.metadata
+        render_task.message = None
+        set_render_task(render_task)
+
+        completed_job_response = patch_and_complete_job(render_task, order_response)
+
+        # if (
+        #     completed_job_response is not None
+        #     and settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY
+        # ):
+        #     print("recursively requeueing render tasks")
+        # rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
+
+        return completed_job_response
+    else:
+        print(f"{render_task.job_id} - the order response was malformed.")
+
+    message = "something went wrong. setting error state and returning none."
+    print(f"{render_task.job_id} - {message}")
+    render_task.set_status(TaskStatus.error)
+    render_task.message = message
+    set_render_task(render_task)
+    return None
+
+
 def run_render_task(
     job_id: str, render_task: Optional[RenderTask] = None
 ) -> Optional[OrderPizzaResponse]:
@@ -294,50 +345,7 @@ def run_render_task(
     # resolve the kitchen order for natron from the input values
     kitchen_order = reduce(recipe, render_task.request.data.token_id, random_number)
 
-    try:
-        # render the pizza
-        pizza = Renderer(
-            frame=render_task.request.data.token_id, job_id=job_id
-        ).render_pizza(kitchen_order)
-
-    except Exception as error:
-        print(sys.exc_info())
-        print(f"{job_id} - {error}")
-        render_task.message = str(error)
-        render_task.set_status(TaskStatus.error)
-        set_render_task(render_task)
-        return None
-
-    # cache the data and get a response object
-    order_response = publish_order_result(render_task, recipe, kitchen_order, pizza)
-
-    # update the task with the ipfs hash
-    if order_response is not None:
-        print(f"{job_id} - updating the task with the ipfs hash of the metadata")
-
-        render_task.metadata_hash = order_response.data.metadata
-        render_task.message = None
-        set_render_task(render_task)
-
-        completed_job_response = patch_and_complete_job(render_task, order_response)
-
-        # if (
-        #     completed_job_response is not None
-        #     and settings.RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY
-        # ):
-        #     print("recursively requeueing render tasks")
-        # rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
-
-        return completed_job_response
-    else:
-        print(f"{job_id} - the order response was malformed.")
-
-    message = "something went wrong. setting error state and returning none."
-    print(f"{job_id} - {message}")
-    render_task.set_status(TaskStatus.error)
-    render_task.message = message
-    set_render_task(render_task)
-    return None
+    return render_and_post(recipe, kitchen_order, render_task)
 
 
 is_processing = False

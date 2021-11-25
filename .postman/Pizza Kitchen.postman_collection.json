@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f2c9019b-1540-4e14-b33b-f44e175cdb5d",
+		"_postman_id": "ecddbe27-3997-42cf-8e0b-37c5366961e6",
 		"name": "Pizza Kitchen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -169,7 +169,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/kitchen/ingredient/4000",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/tests/ingredient/4000",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -589,7 +589,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"token\": \"ya29.a0ARrdaM-xW1nDsp5Le7Z-v8un9Gzr_FUV7UjZmL1KgHZrp2fpZDve6fLjJrfJQ6csqgTnv66IP6uLL39oV69SfOg5FqXA2yQ2_q16gx-NbZeFxoVlmBO3ifHtmRajhbFAhzQ6p17V_LZv22ELWDXfC_kmYX4r\", \"refresh_token\": \"1//06KzmzX7sKwUmCgYIARAAGAYSNwF-L9Ir_-s12ukP1UFz-oAc40Bv4B6ZjJcrintNztFb5XIbeiphJsRAAS7XOTJyBi22sYetMlM\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"client_id\": \"689734124839-55mnint9qfpgbke5fckgdnuuf9r0cgub.apps.googleusercontent.com\", \"client_secret\": \"pFk-Mbsg8bkFOyzO8a0-d9Ec\", \"scopes\": [\"https://www.googleapis.com/auth/spreadsheets.readonly\"], \"expiry\": \"2021-11-16T21:35:56.234870Z\"}\n",
+							"raw": "{\"token\": \"ya29.a0ARrdaM_g9gh4rJ9u-QU5y6rwHpkD0MUMiTTcyEuLbx9P5sqJzUGVw5ooegVdGoHN0pXVZg4w-02mOd0KSYGovoow0uK6GTwWZ5r9oQVPSteKroJuN2gI_eL_JvTwaN1xAsUmhNgJF_8yA9_gNCXm0MwwxFrf\", \"refresh_token\": \"1//06efZItuS9CrvCgYIARAAGAYSNwF-L9IrlCwFVIXgBKdZeaBvoztJzh4CFxNv9AOQdbOF9yyf0F9FWm-tA0asq7fcrA8NGsmymsw\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"client_id\": \"689734124839-55mnint9qfpgbke5fckgdnuuf9r0cgub.apps.googleusercontent.com\", \"client_secret\": \"pFk-Mbsg8bkFOyzO8a0-d9Ec\", \"scopes\": [\"https://www.googleapis.com/auth/spreadsheets.readonly\"], \"expiry\": \"2021-11-24T20:58:45.901017Z\"}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -756,6 +756,70 @@
 								"{{version}}",
 								"admin",
 								"revise_kitchen_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rerun Kitchen Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\": {{order}},\n    \"task\": {\n    \"job_id\": \"5acb7b9b-9db0-47e2-8556-936e9a082d30\",\n    \"request_token\": \"Bearer 2YDanBv4vRbDtOSd512Co+YQWxiPhYWB\",\n    \"request\": {\n        \"id\": \"5acb7b9b-9db0-47e2-8556-936e9a082d30\",\n        \"data\": {\n            \"bridge\": \"orderpizzav1\",\n            \"address\": \"0xA53f6FaE797d2C4eFF65fdBb6Eba1b84fB336f9D\",\n            \"token_id\": 625,\n            \"recipe_id\": 8,\n            \"requestor\": \"1040165107986207234271048840511493681913926277338\"\n        },\n        \"meta\": null,\n        \"responseURL\": null\n    },\n    \"status\": \"new\",\n    \"timestamp\": \"2021-11-24 20:28:15.253907+00:00\",\n    \"random_number\": \"C844F79D966A424F889805727ACB8988B4316BDF19109E58415680FACBD0E3C4\",\n    \"metadata_hash\": null,\n    \"message\": null\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/kitchen_order/rerun",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"kitchen_order",
+								"rerun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Order Pizza",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/tests/order-pizza?skip=0&limit=2&recipe_id=1",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"tests",
+								"order-pizza"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "recipe_id",
+									"value": "1"
+								}
 							]
 						}
 					},
