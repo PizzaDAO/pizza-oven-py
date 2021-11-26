@@ -27345,12 +27345,8 @@
 			<Plugin_minor_version>0</Plugin_minor_version>
 			<KnobsCount>0</KnobsCount>
 			<Inputs_map>
-				<count>1</count>
+				<count>0</count>
 				<item_version>0</item_version>
-				<item>
-					<first></first>
-					<second>Read4</second>
-				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
 			<MasterNode></MasterNode>
@@ -82709,7 +82705,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Fri Nov 26 11:27:15 2021</Value>
+			<Value>Fri Nov 26 13:34:26 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -90590,7 +90586,7 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read4</Name>
-			<X_position>9.89238294443257291e+03</X_position>
+			<X_position>9.82669117145668133e+03</X_position>
 			<Y_position>-3.83643298612929698e+02</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
@@ -90726,14 +90722,13 @@ ret = y_new
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>4</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
-							<item>Bake_default</item>
 						</Tabs>
-						<Index>3</Index>
+						<Index>0</Index>
 						<Name>pane3</Name>
 						<IsAnchor>0</IsAnchor>
 					</Child>
@@ -90780,7 +90775,7 @@ ret = y_new
 				<ColorSpace>sRGB</ColorSpace>
 				<Layer>Color.RGBA</Layer>
 				<AlphaLayer>Color.A</AlphaLayer>
-				<Channels>A</Channels>
+				<Channels>RGB</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
 				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
@@ -90811,8 +90806,8 @@ ret = y_new
 	<OpenedPanels>
 		<count>6</count>
 		<item_version>0</item_version>
-		<item>Bake_default.Grade6</item>
 		<item>Bake_default</item>
+		<item>Bake_default.Grade6</item>
 		<item>Read4</item>
 		<item>Read1</item>
 		<item>Read1_3</item>
