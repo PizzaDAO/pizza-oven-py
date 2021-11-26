@@ -72,7 +72,7 @@ def publish_order_result(
     print(f"{render_task.job_id} - truncated_metadata_len: {len(truncated_metadata)}")
     print("\n --------------- YOUR PIZZA IS COMPLETE ---------------- \n")
     print(f"\n    ipfs metadata:       ipfs://{metadata_hash} \n")
-    print(f"\n    ipfs image:          ipfs://{metadata.image} \n")
+    print(f"\n    ipfs image:          {metadata.image} \n")
     print(f"\n    ipfs crust_alpha:    ipfs://{image_alpha_hash} \n")
     print(f"\n    tokenURI string:     {from_bytes_big} \n")
     print("\n ------------------------------------------------------- \n")

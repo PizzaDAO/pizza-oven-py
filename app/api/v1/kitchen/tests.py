@@ -102,7 +102,7 @@ def test_order_pizza(
 
     # iterate through each of the kitchen orders
     # and run them
-    for i in range(skip, limit):
+    for i in range(skip, skip + limit):
         try:
             job_id = uuid.uuid1()
             set_render_task(
