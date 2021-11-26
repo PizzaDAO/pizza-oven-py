@@ -175,7 +175,9 @@ def force_ingredient(
         layer: MadeIngredient = v
         if ingredient_type in layer.ingredient.category:
             return selected_layers
-
+    print(
+        f"Missing key ingredient... Reselecting ingredients for a {ingredient_type} pizza"
+    )
     new_layers = select_ingredients(
         deterministic_seed, nonce, count_dict, ingredient_dict, oven_params
     )
