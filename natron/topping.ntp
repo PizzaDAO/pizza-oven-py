@@ -27345,8 +27345,12 @@
 			<Plugin_minor_version>0</Plugin_minor_version>
 			<KnobsCount>0</KnobsCount>
 			<Inputs_map>
-				<count>0</count>
+				<count>1</count>
 				<item_version>0</item_version>
+				<item>
+					<first></first>
+					<second>Read4</second>
+				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
 			<MasterNode></MasterNode>
@@ -28417,7 +28421,7 @@
 					<second>Merge32</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>106460</KnobsAge>
+			<KnobsAge>106684</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -29605,7 +29609,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -29629,7 +29633,7 @@
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -29881,7 +29885,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>5.00000000000000000e+01</Value>
+							<Value>5.32000000000000028e+01</Value>
 							<Default>5.00000000000000000e+01</Default>
 							<HasMaster>0</HasMaster>
 							<Expression></Expression>
@@ -30809,7 +30813,7 @@ Turn this off until last.</Help>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>6.75000000000000000e+00</Value>
+							<Value>6.72999999999999954e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>ret=round(thisNode.calories.get()+thisNode.calories_from_fat.get()+thisNode.trans_fat.get()+thisNode.monosaturated_fat.get()+thisNode.saturated_fat.get()+thisNode.sodium.get()+thisNode.cholesterol.get()+thisNode.complex_carb.get()+thisNode.dietary_fiber.get()+thisNode.sugar.get()+thisNode.added_sugars.get()+thisNode.protein.get()+((thisNode.vitamin_a.get()+thisNode.vitamin_b6.get()+thisNode.vitamin_b12.get()+thisNode.vitamin_e.get()+thisNode.biotin.get()+thisNode.folate.get()+thisNode.calcium.get()+thisNode.iron.get()+thisNode.pantothenic_acid.get()+thisNode.potassium.get()+thisNode.riboflavin.get()+thisNode.vitamin_d.get()+thisNode.thiamin.get()+thisNode.magnesium.get()+thisNode.selenium.get()+thisNode.zinc.get())/100),2)+(thisNode.vitamin_c.get()/10)+(thisNode.vitamin_k.get()/10)</Expression>
@@ -30973,7 +30977,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1</Value>
+							<Value>0</Value>
 							<Default>0</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_burn_before.get()</Expression>
@@ -31001,7 +31005,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000000e+00</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_melt.get()</Expression>
@@ -31205,7 +31209,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>0</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000000e+00</Value>
+							<Value>1.06400000000000006e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>1</HasMaster>
 							<Master>
@@ -32211,7 +32215,7 @@ ret=x+y</Expression>
 						<item>
 							<Enabled>1</Enabled>
 							<HasAnimation>0</HasAnimation>
-							<Value>1.00000000000000000e+00</Value>
+							<Value>0.00000000000000000e+00</Value>
 							<Default>0.00000000000000000e+00</Default>
 							<HasMaster>0</HasMaster>
 							<Expression>thisNode.do_melt.get()</Expression>
@@ -32773,7 +32777,7 @@ Flowers- Dehydrate and  wilt</Help>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
+						<Value>6.40000000000000568e-02</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Labsorption.f_lerp_result.get()</Expression>
@@ -32782,7 +32786,7 @@ Flowers- Dehydrate and  wilt</Help>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
+						<Value>6.40000000000000568e-02</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Labsorption.f_lerp_result.get()</Expression>
@@ -32791,7 +32795,7 @@ Flowers- Dehydrate and  wilt</Help>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
+						<Value>6.40000000000000568e-02</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Labsorption.f_lerp_result.get()</Expression>
@@ -32800,7 +32804,7 @@ Flowers- Dehydrate and  wilt</Help>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0.00000000000000000e+00</Value>
+						<Value>6.40000000000000568e-02</Value>
 						<Default>0.00000000000000000e+00</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>Labsorption.f_lerp_result.get()</Expression>
@@ -32916,7 +32920,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<second>Shuffle4</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>256</KnobsAge>
+				<KnobsAge>428</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -41789,7 +41793,7 @@ ret = y_new
 						<second>Lcoagu_Lthin</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>120</KnobsAge>
+				<KnobsAge>249</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -42100,7 +42104,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>5.00000000000000000e+01</Value>
+								<Value>5.32000000000000028e+01</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>thisGroup.absorption.get()</Expression>
@@ -42204,7 +42208,7 @@ ret = y_new
 							<item>
 								<Enabled>1</Enabled>
 								<HasAnimation>0</HasAnimation>
-								<Value>0.00000000000000000e+00</Value>
+								<Value>6.40000000000000568e-02</Value>
 								<Default>0.00000000000000000e+00</Default>
 								<HasMaster>0</HasMaster>
 								<Expression>import numpy as np
@@ -42485,7 +42489,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_melt.get()</Expression>
@@ -42541,7 +42545,7 @@ ret = y_new
 						<second>Transform2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>20</KnobsAge>
+				<KnobsAge>21</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -46926,7 +46930,7 @@ ret = y_new
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
+						<Value>0</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression>thisGroup.do_burn_before.get()</Expression>
@@ -46982,7 +46986,7 @@ ret = y_new
 						<second>Erode3_2</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>26</KnobsAge>
+				<KnobsAge>27</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -57935,7 +57939,7 @@ ret = y_new
 				<PythonModuleVersion>0</PythonModuleVersion>
 				<Plugin_major_version>2</Plugin_major_version>
 				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>8</KnobsCount>
+				<KnobsCount>9</KnobsCount>
 				<item>
 					<Name>NatronOfxParamProcessA</Name>
 					<Type>Bool</Type>
@@ -58103,6 +58107,23 @@ ret = y_new
 					<UserKnob>0</UserKnob>
 				</item>
 				<item>
+					<Name>mix</Name>
+					<Type>Double</Type>
+					<Dimension>1</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>9.67999999999999972e-01</Value>
+						<Default>1.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression>1.5-thisGroup.absorption.get()/100</Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
 					<Name>userTextArea</Name>
 					<Type>String</Type>
 					<Dimension>1</Dimension>
@@ -58170,7 +58191,7 @@ ret = y_new
 						<second>Unpremult5</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>47</KnobsAge>
+				<KnobsAge>97</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -80900,7 +80921,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge33</second>
+					<second>Bake_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -80956,7 +80977,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(6280-topping-bugs-ladybug.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(6270-topping-bugs-ants.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -80977,7 +80998,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../ingredients-db/6280-topping-bugs-ladybug.png</Value>
+					<Value>[Project]/../ingredients-db/6270-topping-bugs-ants.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -81198,7 +81219,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>1</KnobsAge>
+			<KnobsAge>3</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -82688,7 +82709,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Wed Nov 24 09:40:29 2021</Value>
+			<Value>Fri Nov 26 11:27:15 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -90569,7 +90590,7 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Read4</Name>
-			<X_position>9.88917681890156746e+03</X_position>
+			<X_position>9.89238294443257291e+03</X_position>
 			<Y_position>-3.83643298612929698e+02</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
@@ -90685,11 +90706,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1641 883</Sizes>
+				<Sizes>1141 615</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>676 676</Sizes>
+					<Sizes>516 516</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -90705,13 +90726,14 @@ ret = y_new
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>3</count>
+							<count>4</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
+							<item>Bake_default</item>
 						</Tabs>
-						<Index>0</Index>
+						<Index>3</Index>
 						<Name>pane3</Name>
 						<IsAnchor>0</IsAnchor>
 					</Child>
@@ -90731,8 +90753,8 @@ ret = y_new
 			<MainWindow>1</MainWindow>
 			<x>0</x>
 			<y>1</y>
-			<w>2560</w>
-			<h>1355</h>
+			<w>1792</w>
+			<h>1035</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -90741,9 +90763,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-4.82468706264922184e+03</zoomLeft>
-				<zoomBottom>3.49366953354300222e+02</zoomBottom>
-				<zoomFactor>1.43869282109918978e-01</zoomFactor>
+				<zoomLeft>9.96718907893486858e+02</zoomLeft>
+				<zoomBottom>2.09542995367800313e+03</zoomBottom>
+				<zoomFactor>1.00000000000000000e+00</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>2.56000000000000000e+02</Left>
@@ -90758,7 +90780,7 @@ ret = y_new
 				<ColorSpace>sRGB</ColorSpace>
 				<Layer>Color.RGBA</Layer>
 				<AlphaLayer>Color.A</AlphaLayer>
-				<Channels>RGB</Channels>
+				<Channels>A</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
 				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
@@ -90787,8 +90809,11 @@ ret = y_new
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>3</count>
+		<count>6</count>
 		<item_version>0</item_version>
+		<item>Bake_default.Grade6</item>
+		<item>Bake_default</item>
+		<item>Read4</item>
 		<item>Read1</item>
 		<item>Read1_3</item>
 		<item>Natron_Project_Settings_Panel</item>
