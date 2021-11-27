@@ -106,21 +106,21 @@ def reduce(
     # WARNING - Forcing recipes to conatin certain ingredients. Last minute hack job.
     #
     #
-    category = None
-    if "catch" in recipe.name.lower():
-        category = "seafood"
-    if "meat" in recipe.name.lower():
-        category = "meat"
-    if category is not None:
-        reduced_layers = force_ingredient(
-            category,
-            reduced_layers,
-            random_seed,
-            nonce,
-            layer_count_dict,
-            sorted_layer_dict,
-            oven_params,
-        )
+    # category = None
+    # if "catch" in recipe.name.lower():
+    #     category = "seafood"
+    # if "meat" in recipe.name.lower():
+    #     category = "meat"
+    # if category is not None:
+    #     reduced_layers = force_ingredient(
+    #         category,
+    #         reduced_layers,
+    #         random_seed,
+    #         nonce,
+    #         layer_count_dict,
+    #         sorted_layer_dict,
+    #         oven_params,
+    #     )
 
     # LASTCHANCE INGREDIENTS
     # decide whether or not there will be a lastchance
