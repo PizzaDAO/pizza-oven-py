@@ -199,20 +199,14 @@ def revise_kitchen_order(kitchen_order: KitchenOrder) -> KitchenOrder:
     ingredients = read_ingredients()
 
     for k, v in kitchen_order.base_ingredients.items():
-        print(f"base_ingredients revising: {k}")
-        print(v.ingredient)
         base: ScopedIngredient = ingredients[v.ingredient.unique_id]
         v.ingredient.nutrition = base.ingredient.nutrition
 
     for k, v in kitchen_order.layers.items():
-        print(f"layers revising: {k}")
-        print(v.ingredient)
         layer: ScopedIngredient = ingredients[v.ingredient.unique_id]
         v.ingredient.nutrition = layer.ingredient.nutrition
 
     for k, v in kitchen_order.lastchances.items():
-        print(f"lastchances revising: {k}")
-        print(v.ingredient)
         lastchance: ScopedIngredient = ingredients[v.ingredient.unique_id]
         v.ingredient.nutrition = lastchance.ingredient.nutrition
 

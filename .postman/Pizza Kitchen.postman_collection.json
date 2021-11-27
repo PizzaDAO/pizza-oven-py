@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f2c9019b-1540-4e14-b33b-f44e175cdb5d",
+		"_postman_id": "ecddbe27-3997-42cf-8e0b-37c5366961e6",
 		"name": "Pizza Kitchen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -52,7 +52,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/5",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/recipe/8",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -60,7 +60,7 @@
 								"api",
 								"{{version}}",
 								"recipe",
-								"5"
+								"8"
 							]
 						}
 					},
@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"c3f3ffa9-43a1-48ac-b7ea-765959f86d6c\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"requestor\": \"92352557023643128056647953993718484966024936578\",\n        \"token_id\": 15,\n        \"recipe_id\": 14\n    }\n}",
+							"raw": "{\n    \"id\": \"1913ec89-6923-47de-aaf3-643e48d01fa1\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"requestor\": \"92352557023643128056647953993718484966024936578\",\n        \"token_id\": 1,\n        \"recipe_id\": 1\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -129,7 +129,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token_id\": 100,\n    \"random_seed\": \"0xa326a9c13bC95adDB74789a315e2FeF060532bAF\",\n    \"recipe\": {{recipe}}\n}",
+							"raw": "{\n    \"token_id\": 100,\n    \"random_seed\": \"C844F79D966A424F889805727ACB8988B4316BDF19109E58415680FACBD0E3C4\",\n    \"recipe\": {{recipe}}\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -343,7 +343,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"min_topping_layer_count\": 1,\n    \"max_topping_layer_count\": 4,\n    \"rarity_weight_common\": 2000,\n    \"rarity_weight_uncommon\": 700,\n    \"rarity_weight_rare\": 250,\n    \"rarity_weight_superrare\": 100,\n    \"rarity_weight_epic\": 40,\n    \"rarity_weight_grail\": 5,\n    \"lastchance_occurance_percentage\": 20,\n    \"scatter_origin_x\": 0,\n    \"scatter_origin_y\": 0,\n    \"scatter_center_x\": 1536,\n    \"scatter_center_y\": 1536,\n    \"prevent_overflow_control_diameter\": 2650,\n    \"hero_random_offset_x\": 0,\n    \"hero_random_offset_y\": 0,\n    \"five_spot_x_1\": 850,\n    \"five_spot_y_1\": 850,\n    \"five_spot_x_2\": 2222,\n    \"five_spot_y_2\": 850,\n    \"five_spot_x_3\": 2222,\n    \"five_spot_y_3\": 2222,\n    \"five_spot_x_4\": 850,\n    \"five_spot_y_4\": 2222,\n    \"five_spot_x_5\": 1536,\n    \"five_spot_y_5\": 1536,\n    \"five_spot_x_random_offset\": 5,\n    \"five_spot_y_random_offset\": 5,\n    \"spokecluster_inner_circle\": 2800,\n    \"spokecluster_max_radius_offset\": 200,\n    \"spokecluster_min_radius\": 300,\n    \"grid_random_offset_x\": 95,\n    \"grid_random_offset_y\": 95,\n    \"grid_inner_circle\": 2800,\n    \"grid_line_shift_offset\": 90,\n    \"treerinng_inner_circle\": 2800,\n    \"treering_min_radius\": 100,\n    \"treering_variance_threshold\": 0.5,\n    \"random_inner_circle\": 3052,\n    \"scatter_small_count_threshold\": 5,\n    \"small_tier_1\": 20,\n    \"small_tier_2\": 60,\n    \"large_tier_1\": 10,\n    \"large_tier_2\": 40,\n    \"large_tier_3\": 70\n}",
+							"raw": "{\n    \"min_topping_layer_count\": 3,\n    \"max_topping_layer_count\": 6,\n    \"rarity_weight_common\": 2000,\n    \"rarity_weight_uncommon\": 700,\n    \"rarity_weight_rare\": 250,\n    \"rarity_weight_superrare\": 100,\n    \"rarity_weight_epic\": 50,\n    \"rarity_weight_grail\": 25,\n    \"lastchance_occurance_percentage\": 20,\n    \"scatter_origin_x\": 0,\n    \"scatter_origin_y\": 0,\n    \"scatter_center_x\": 1536,\n    \"scatter_center_y\": 1536,\n    \"prevent_overflow_control_diameter\": 2900,\n    \"hero_random_offset_x\": 0,\n    \"hero_random_offset_y\": 0,\n    \"five_spot_x_1\": 850,\n    \"five_spot_y_1\": 850,\n    \"five_spot_x_2\": 2222,\n    \"five_spot_y_2\": 850,\n    \"five_spot_x_3\": 2222,\n    \"five_spot_y_3\": 2222,\n    \"five_spot_x_4\": 850,\n    \"five_spot_y_4\": 2222,\n    \"five_spot_x_5\": 1536,\n    \"five_spot_y_5\": 1536,\n    \"five_spot_x_random_offset\": 5,\n    \"five_spot_y_random_offset\": 5,\n    \"five_spot_random_rotation\": 45,\n    \"spokecluster_inner_circle\": 2800,\n    \"spokecluster_max_radius_offset\": 200,\n    \"spokecluster_min_radius\": 300,\n    \"grid_random_offset_x\": 95,\n    \"grid_random_offset_y\": 95,\n    \"grid_inner_circle\": 2800,\n    \"grid_line_shift_offset\": 90,\n    \"grid_random_rotation\": 25,\n    \"treerinng_inner_circle\": 2800,\n    \"treering_min_radius\": 150,\n    \"treering_variance_threshold\": 0.5,\n    \"random_inner_circle\": 3052,\n    \"scatter_small_count_threshold\": 5,\n    \"small_tier_1\": 20,\n    \"small_tier_2\": 60,\n    \"large_tier_1\": 10,\n    \"large_tier_2\": 45,\n    \"large_tier_3\": 80\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -366,12 +366,32 @@
 					"response": []
 				},
 				{
+					"name": "Pluck Render Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/pluck_render_task",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"pluck_render_task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Render Task",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/5acb7b9b-9db0-47e2-8556-936e9a082d30",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -380,7 +400,7 @@
 								"{{version}}",
 								"admin",
 								"render_task",
-								"2ec0cbb7-3433-4b80-a7d1-22b4cc7c2851"
+								"5acb7b9b-9db0-47e2-8556-936e9a082d30"
 							]
 						}
 					},
@@ -393,7 +413,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"job_id\": \"50e5b16c-ad6b-458c-819e-2c9fc4307f29\",\n    \"request_token\": \"Bearer HAC0P+F7IyAXqrZyh01GQ9Xku1pcNxKq\",\n    \"request\": {\n        \"id\": \"50e5b16c-ad6b-458c-819e-2c9fc4307f29\",\n        \"data\": {\n            \"bridge\": \"orderpizzav1\",\n            \"address\": \"0x769A0451Ee108A04aEdDf3a3729acA5310E83Da1\",\n            \"token_id\": 549,\n            \"recipe_id\": 1,\n            \"requestor\": \"92352557023643128056647953993718484966024936578\"\n        },\n        \"meta\": null,\n        \"responseURL\": \"http://chainlink-rinkeby:6688/v2/runs/50e5b16c-ad6b-458c-819e-2c9fc4307f29\"\n    },\n    \"status\": \"new\",\n    \"timestamp\": \"2021-10-23T20:05:54.395409+00:00\",\n    \"random_number\": null,\n    \"metadata_hash\": null\n}",
+							"raw": "{\n    \"job_id\": \"ad87713c-610e-4413-bef5-71ed8b452f12\",\n    \"request_token\": \"Bearer HAC0P+F7IyAXqrZyh01GQ9Xku1pcNxKq\",\n    \"request\": {\n        \"id\": \"ad87713c-610e-4413-bef5-71ed8b452f12\",\n        \"data\": {\n            \"bridge\": \"orderpizzav1\",\n            \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n            \"token_id\": 553,\n            \"recipe_id\": 5,\n            \"requestor\": \"92352557023643128056647953993718484966024936578\"\n        },\n        \"meta\": null,\n        \"responseURL\": \"http://chainlink-rinkeby:6688/v2/runs/ad87713c-610e-4413-bef5-71ed8b452f12\"\n    },\n    \"status\": \"error\",\n    \"timestamp\": \"2021-10-27T18:16:04.275863+00:00\",\n    \"random_number\": \"8915203C03A97BF86EF41D17466C9BEC3519D7917C335CBF804129EEDD46778A\",\n    \"metadata_hash\": \"Qmaj9w3XK9eezYbsmMTqAQMy4gacMQN2WD3WJrmggpCW52\",\n    \"message\": null\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -430,7 +450,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/50e5b16c-ad6b-458c-819e-2c9fc4307f29/rerun",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/5acb7b9b-9db0-47e2-8556-936e9a082d30/rerun",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -439,8 +459,44 @@
 								"{{version}}",
 								"admin",
 								"render_task",
-								"50e5b16c-ad6b-458c-819e-2c9fc4307f29",
+								"5acb7b9b-9db0-47e2-8556-936e9a082d30",
 								"rerun"
+							],
+							"query": [
+								{
+									"key": "job_id",
+									"value": "5acb7b9b-9db0-47e2-8556-936e9a082d30",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Run Render Task Schedule All",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task_schedule_all",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"render_task_schedule_all"
 							]
 						}
 					},
@@ -461,7 +517,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/39df1b7d-4221-46c1-a7f5-5afcc95565ee/rerun-async",
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/render_task/ad87713c-610e-4413-bef5-71ed8b452f12/rerun-async",
 							"host": [
 								"{{pizza-kitchen-url}}"
 							],
@@ -470,7 +526,7 @@
 								"{{version}}",
 								"admin",
 								"render_task",
-								"39df1b7d-4221-46c1-a7f5-5afcc95565ee",
+								"ad87713c-610e-4413-bef5-71ed8b452f12",
 								"rerun-async"
 							]
 						}
@@ -533,7 +589,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"token\": \"ya29.a0ARrdaM-foiameKbeGMogd1AR0r0JLpHOEuYFbMpbgDCYyCwV24kEu6J4u3TSVvVQeFslzc9LnfnRaYajx5qPYqq7w2j8KU6KdDRTTqv2TCHk9TLn0_MpvGWjTXC9httkmwDZ_XnHqsMLi3zhFUCl7WBdZdwL\", \"refresh_token\": \"1//06xy2WLvXp-XECgYIARAAGAYSNwF-L9IrFKYSi18UfwHY80QqRkEt4E63WAZpKLda2qihBdbiA8wVX1DaBJJGXBoh8eYG8o7k5YA\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"client_id\": \"689734124839-55mnint9qfpgbke5fckgdnuuf9r0cgub.apps.googleusercontent.com\", \"client_secret\": \"pFk-Mbsg8bkFOyzO8a0-d9Ec\", \"scopes\": [\"https://www.googleapis.com/auth/spreadsheets.readonly\"], \"expiry\": \"2021-10-25T00:45:07.743416Z\"}",
+							"raw": "{\"token\": \"ya29.a0ARrdaM_g9gh4rJ9u-QU5y6rwHpkD0MUMiTTcyEuLbx9P5sqJzUGVw5ooegVdGoHN0pXVZg4w-02mOd0KSYGovoow0uK6GTwWZ5r9oQVPSteKroJuN2gI_eL_JvTwaN1xAsUmhNgJF_8yA9_gNCXm0MwwxFrf\", \"refresh_token\": \"1//06efZItuS9CrvCgYIARAAGAYSNwF-L9IrlCwFVIXgBKdZeaBvoztJzh4CFxNv9AOQdbOF9yyf0F9FWm-tA0asq7fcrA8NGsmymsw\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"client_id\": \"689734124839-55mnint9qfpgbke5fckgdnuuf9r0cgub.apps.googleusercontent.com\", \"client_secret\": \"pFk-Mbsg8bkFOyzO8a0-d9Ec\", \"scopes\": [\"https://www.googleapis.com/auth/spreadsheets.readonly\"], \"expiry\": \"2021-11-24T20:58:45.901017Z\"}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -642,7 +698,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"cd69ad98\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\"\n    },\n    \"responseURL\": \"http://chainlink-rinkeby:6688/v2/runs/cd69ad98-819a-4300-af4f-c732d4403677\"\n}",
+							"raw": "{\n    \"id\": \"a123456789\",\n    \"data\": {\n        \"address\": \"0xC416a5c13EC95adDB74789a775e2FeF0605328AF\",\n        \"requestor\": \"92352557023643128056647953993718484966024936578\",\n        \"token_id\": 17,\n        \"recipe_id\": 16\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -700,6 +756,70 @@
 								"{{version}}",
 								"admin",
 								"revise_kitchen_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rerun Kitchen Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\": {{order}},\n    \"task\": {\n    \"job_id\": \"5acb7b9b-9db0-47e2-8556-936e9a082d30\",\n    \"request_token\": \"Bearer 2YDanBv4vRbDtOSd512Co+YQWxiPhYWB\",\n    \"request\": {\n        \"id\": \"5acb7b9b-9db0-47e2-8556-936e9a082d30\",\n        \"data\": {\n            \"bridge\": \"orderpizzav1\",\n            \"address\": \"0xA53f6FaE797d2C4eFF65fdBb6Eba1b84fB336f9D\",\n            \"token_id\": 625,\n            \"recipe_id\": 8,\n            \"requestor\": \"1040165107986207234271048840511493681913926277338\"\n        },\n        \"meta\": null,\n        \"responseURL\": null\n    },\n    \"status\": \"new\",\n    \"timestamp\": \"2021-11-24 20:28:15.253907+00:00\",\n    \"random_number\": \"C844F79D966A424F889805727ACB8988B4316BDF19109E58415680FACBD0E3C4\",\n    \"metadata_hash\": null,\n    \"message\": null\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/admin/kitchen_order/rerun",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"admin",
+								"kitchen_order",
+								"rerun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Order Pizza",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pizza-kitchen-url}}/api/{{version}}/tests/order-pizza?skip=0&limit=2&recipe_id=1",
+							"host": [
+								"{{pizza-kitchen-url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"tests",
+								"order-pizza"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "recipe_id",
+									"value": "1"
+								}
 							]
 						}
 					},
