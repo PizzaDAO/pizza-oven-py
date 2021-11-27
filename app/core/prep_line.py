@@ -101,6 +101,27 @@ def reduce(
         random_seed, nonce, layer_count_dict, sorted_layer_dict, oven_params
     )
 
+    #
+    #
+    # WARNING - Forcing recipes to conatin certain ingredients. Last minute hack job.
+    #
+    #
+    # category = None
+    # if "catch" in recipe.name.lower():
+    #     category = "seafood"
+    # if "meat" in recipe.name.lower():
+    #     category = "meat"
+    # if category is not None:
+    #     reduced_layers = force_ingredient(
+    #         category,
+    #         reduced_layers,
+    #         random_seed,
+    #         nonce,
+    #         layer_count_dict,
+    #         sorted_layer_dict,
+    #         oven_params,
+    #     )
+
     # LASTCHANCE INGREDIENTS
     # decide whether or not there will be a lastchance
     # some recipes have only a couple, and one will get select often, making a lot of pies with the same lastchance
@@ -137,6 +158,38 @@ def reduce(
         lastchances=reduced_lastchances,
         instances=[],  # empty array since switched back to single ing layers
         instructions=order_instructions,
+    )
+
+
+def force_ingredient(
+    ingredient_type,
+    selected_layers,
+    deterministic_seed,
+    nonce,
+    count_dict,
+    ingredient_dict,
+    oven_params: OvenToppingParams,
+) -> dict:
+    """Go through all the layers and make sure there is one of the required ingredients"""
+    for k, v in selected_layers.items():
+        layer: MadeIngredient = v
+        if ingredient_type in layer.ingredient.category:
+            return selected_layers
+    print(
+        f"Missing key ingredient... Reselecting ingredients for a {ingredient_type} pizza"
+    )
+    new_layers = select_ingredients(
+        deterministic_seed, nonce, count_dict, ingredient_dict, oven_params
+    )
+
+    return force_ingredient(
+        ingredient_type,
+        new_layers,
+        deterministic_seed,
+        nonce,
+        count_dict,
+        ingredient_dict,
+        oven_params,
     )
 
 
