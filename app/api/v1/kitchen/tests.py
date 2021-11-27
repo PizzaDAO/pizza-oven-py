@@ -1,27 +1,33 @@
 import os
 from typing import Any
 import sys
-from fastapi import APIRouter, Body, Request
+import uuid
+from fastapi import APIRouter, Body, Request, BackgroundTasks
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
-from requests.sessions import requote_uri
 
 
 from app.models.base import Base
 from app.models.prep import KitchenOrder
 from app.core.prep_line import reduce
-from app.core.utils import from_hex
-from app.core.repository import get_kitchen_order_from_data_directory
-
+from app.core.utils import from_hex, to_hex
+from app.core.repository import get_kitchen_order_from_data_directory, set_render_task
+from app.models.render_task import RenderTask, TaskStatus
+from app.models.order import OrderPizzaRequest, PizzaOrderData
+from app.core.random_num import get_random
 from ..dining_room.recipe import RecipeRequest
 from ..tags import TEST
+from app.core.order_task import run_render_jobs
 
 from app.core.renderer import Renderer
 import app.core.custom_ko as custom_ko
 
 from app.core.dropbox_adapter import DropboxSession
 
+from app.core.config import Settings
+
 router = APIRouter()
+settings = Settings()
 
 
 class KitchenOrderRequest(Base):
@@ -82,5 +88,49 @@ def test_kitchen_order(request: Request, skip: int = 0, limit: int = 100) -> Any
             print(error)
 
     print("All pizzas in session are complete. nice job!")
+
+    return
+
+
+@router.post("/order-pizza", tags=[TEST])
+def test_order_pizza(
+    background_tasks: BackgroundTasks, recipe_id: int, skip: int = 0, limit: int = 100
+) -> Any:
+    """
+    run a set of predefined kitchen orders as a test
+    """
+
+    # iterate through each of the kitchen orders
+    # and run them
+    for i in range(skip, skip + limit):
+        try:
+            job_id = uuid.uuid1()
+            set_render_task(
+                RenderTask(
+                    job_id=str(job_id),
+                    request_token="",
+                    request=OrderPizzaRequest(
+                        id=str(job_id),
+                        data=PizzaOrderData(
+                            bridge="orderpizzav1",
+                            address="0xTESTING",
+                            token_id=1000 + i,
+                            recipe_id=recipe_id,
+                            requestor="0xTESTING",
+                        ),
+                    ),
+                    status=TaskStatus.new,
+                    random_number=to_hex(get_random()),
+                )
+            )
+
+        except Exception as error:
+            print(sys.exc_info())
+            print(error)
+
+    print("All pizzas in session are complete. nice job!")
+    background_tasks.add_task(
+        run_render_jobs, settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S
+    )
 
     return

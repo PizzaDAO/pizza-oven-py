@@ -1,4 +1,5 @@
 from typing import Any, Optional, Dict
+from pydantic.main import BaseModel
 
 import requests
 import sys
@@ -8,15 +9,16 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from google.oauth2.credentials import Credentials
 
-from app.core.order_task import run_render_task, run_render_jobs
+from app.core.order_task import render_and_post, run_render_task, run_render_jobs
 
 from app.core.prep_line import revise_kitchen_order
 
 from app.core.repository import *
+from app.core.recipe_box import get_pizza_recipe
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.render_task import RenderTask, TaskStatus
 from app.models.order import OrderPizzaResponse
-from app.models.prep import KitchenOrderResponse, KitchenOrderRequest
+from app.models.prep import KitchenOrder, KitchenOrderResponse, KitchenOrderRequest
 
 from ..tags import ADMIN
 
@@ -24,6 +26,11 @@ from app.core.config import Settings, OvenToppingParams
 
 router = APIRouter()
 settings = Settings()
+
+
+class KitchenOrderRerunRequest(BaseModel):
+    order: KitchenOrder
+    task: RenderTask
 
 
 @router.post("/gsheets_token", tags=[ADMIN])
@@ -95,6 +102,17 @@ async def set_existing_render_task(
     return render_task
 
 
+@router.post("/kitchen_order/rerun", tags=[ADMIN])
+async def rerun_kitchen_order(
+    data: KitchenOrderRerunRequest = Body(...),
+) -> Optional[OrderPizzaResponse]:
+    """rerun a specific render task"""
+
+    recipe = get_pizza_recipe(data.task.request.data.recipe_id)
+    kitchen_order = revise_kitchen_order(data.order)
+    return render_and_post(recipe, kitchen_order, data.task)
+
+
 @router.post("/render_task/{job_id}/rerun", tags=[ADMIN])
 async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse]:
     """rerun a specific render task"""
@@ -102,6 +120,8 @@ async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse
     if render_task is None:
         print(f"{job_id} - re run render failed to find job")
         return None
+    render_task.status = TaskStatus.new
+    render_task.metadata_hash = None
     return run_render_task(render_task.job_id, render_task)
 
 
