@@ -205,6 +205,9 @@ def parse_ingredients(sheet_data) -> Optional[Dict]:
                 # Put each attribute in a Key/Value pair for the row
                 record_entry.update({column_headers[index]: sheet_data[row][index]})
 
+            # Assign rarity of the first row
+            current_rarity = map_rarity(record_entry["topping rarity"])
+
             # Use the unique ID for the Key and the row Dictionary for the value
             # Easy to look up ingredients by unique id
             if sheet_data[row][0] and record_entry["on_disk"] == "Y":
