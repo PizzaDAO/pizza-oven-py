@@ -314,7 +314,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>4</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>uniform</Name>
 				<Type>Bool</Type>
@@ -341,7 +341,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.97600000000000000e+03</Value>
+					<Value>1.53600000000000000e+03</Value>
 					<Default>5.00000000000000000e-01</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -350,25 +350,8 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>2.04800000000000000e+03</Value>
+					<Value>1.53600000000000000e+03</Value>
 					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>transformCenterChanged</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -404,7 +387,7 @@
 					<second>Bake_default</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>5</KnobsAge>
+			<KnobsAge>7</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -49090,7 +49073,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Thu Nov 11 09:22:15 2021</Value>
+			<Value>Sat Nov 27 12:27:30 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -53493,11 +53476,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1641 883</Sizes>
+				<Sizes>1141 615</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>696 696</Sizes>
+					<Sizes>516 516</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -53539,8 +53522,8 @@ ret = y_new
 			<MainWindow>1</MainWindow>
 			<x>0</x>
 			<y>1</y>
-			<w>2560</w>
-			<h>1395</h>
+			<w>1792</w>
+			<h>1035</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -53549,9 +53532,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer2</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-6.67145408379246783e+03</zoomLeft>
-				<zoomBottom>-1.50913225058720309e+03</zoomBottom>
-				<zoomFactor>9.42971528627274680e-02</zoomFactor>
+				<zoomLeft>-4.75939137254902016e+03</zoomLeft>
+				<zoomBottom>-8.19200000000000728e+01</zoomBottom>
+				<zoomFactor>8.38059645432692318e-02</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -53569,7 +53552,7 @@ ret = y_new
 				<Channels>RGB</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
-				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
+				<ZoomOrPanSinceFit>0</ZoomOrPanSinceFit>
 				<CompositingOP>0</CompositingOP>
 				<LeftBound>1</LeftBound>
 				<RightBound>10000</RightBound>
@@ -53597,16 +53580,16 @@ ret = y_new
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>TRS_default</item>
+		<item>Bake_default</item>
 		<item>input_default</item>
 		<item>w1</item>
 		<item>Read1_3</item>
 		<item>Switch_default</item>
-		<item>Bake_default</item>
 		<item>Read1</item>
 		<item>Premult1</item>
 		<item>MultiplyMask_2</item>
 		<item>ColorCorrect1_4</item>
-		<item>Natron_Project_Settings_Panel</item>
 	</OpenedPanels>
 	<ScriptEditorInput>#setup scatter nodes in Graph
 #scatter_head = app.getNode(&quot;scatter_head&quot;)
