@@ -90,10 +90,10 @@ class Delivery(NatronBase):
         gradeNode.setColor(0.48, 0.66, 1)
         param = gradeNode.getParam("white")
         if param is not None:
-            param.setValue(1.113, 0)
-            param.setValue(1.113, 1)
-            param.setValue(1.113, 2)
-            param.setValue(1.113, 3)
+            param.setValue(1.0, 0)
+            param.setValue(1.0, 1)
+            param.setValue(1.0, 2)
+            param.setValue(1.0, 3)
         del param
 
         param = gradeNode.getParam("premult")
