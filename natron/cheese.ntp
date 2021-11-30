@@ -227,7 +227,7 @@ Cheese&lt;/font&gt;</Value>
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Switch_default</second>
+					<second>Dot2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>7</KnobsAge>
@@ -846,7 +846,7 @@ Cheese&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(3000-cheese-mozzarella.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(3010-cheese-digitalvegan.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -884,7 +884,7 @@ Cheese&lt;/font&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>/Users/ashafer/Development/pizza-oven-tmp/ingredients-db/3000-cheese-mozzarella.png</Value>
+					<Value>/Users/ashafer/Development/pizza-oven-tmp/ingredients-db/3010-cheese-digitalvegan.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1123,7 +1123,7 @@ Cheese&lt;/font&gt;</Value>
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>91</KnobsAge>
+			<KnobsAge>93</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -1221,7 +1221,7 @@ Cheese&lt;/font&gt;</Value>
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>1</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>4</KnobsCount>
+			<KnobsCount>3</KnobsCount>
 			<item>
 				<Name>uniform</Name>
 				<Type>Bool</Type>
@@ -1259,23 +1259,6 @@ Cheese&lt;/font&gt;</Value>
 					<HasAnimation>0</HasAnimation>
 					<Value>1.53600000000000000e+03</Value>
 					<Default>5.00000000000000000e-01</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
-			<item>
-				<Name>transformCenterChanged</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>1</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>0</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -1550,12 +1533,8 @@ Cheese&lt;/font&gt;</Value>
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>1</count>
+				<count>0</count>
 				<item_version>0</item_version>
-				<item>
-					<first>In</first>
-					<second>TRS_default</second>
-				</item>
 			</Inputs_map>
 			<KnobsAge>102061</KnobsAge>
 			<MasterNode></MasterNode>
@@ -35141,7 +35120,7 @@ ret = y_new
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
-					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+					<ChoiceLabel></ChoiceLabel>
 					<UserKnob>0</UserKnob>
 				</item>
 				<Inputs_map>
@@ -35152,7 +35131,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>3</KnobsAge>
+				<KnobsAge>4</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -35221,12 +35200,8 @@ ret = y_new
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>1</count>
+				<count>0</count>
 				<item_version>0</item_version>
-				<item>
-					<first>In</first>
-					<second>TRS_default</second>
-				</item>
 			</Inputs_map>
 			<KnobsAge>101968</KnobsAge>
 			<MasterNode></MasterNode>
@@ -68639,7 +68614,7 @@ ret = y_new
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
-					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+					<ChoiceLabel></ChoiceLabel>
 					<UserKnob>0</UserKnob>
 				</item>
 				<Inputs_map>
@@ -68650,7 +68625,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>5</KnobsAge>
+				<KnobsAge>6</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -69128,15 +69103,11 @@ ret = y_new
 				<UserKnob>0</UserKnob>
 			</item>
 			<Inputs_map>
-				<count>2</count>
+				<count>1</count>
 				<item_version>0</item_version>
 				<item>
 					<first>In</first>
 					<second>TRS_default</second>
-				</item>
-				<item>
-					<first>Mask</first>
-					<second>Read1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>106295</KnobsAge>
@@ -73209,7 +73180,7 @@ Flowers- Dehydrate and  wilt</Help>
 			<name>ChefNotes</name>
 			<name>Node</name>
 			<name>Settings</name>
-			<Children>227</Children>
+			<Children>228</Children>
 			<item>
 				<Plugin_label>Saturation1</Plugin_label>
 				<Plugin_script_name>Saturation1</Plugin_script_name>
@@ -74033,7 +74004,7 @@ Flowers- Dehydrate and  wilt</Help>
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>373</KnobsAge>
+				<KnobsAge>374</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -80284,7 +80255,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>4</KnobsAge>
+				<KnobsAge>5</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -87462,7 +87433,33 @@ ret = y_new
 				<PythonModuleVersion>0</PythonModuleVersion>
 				<Plugin_major_version>1</Plugin_major_version>
 				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>3</KnobsCount>
+				<KnobsCount>5</KnobsCount>
+				<item>
+					<Name>translate</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.02400000000000091e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.02400000000000091e+01</Value>
+						<Default>0.00000000000000000e+00</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
 				<item>
 					<Name>scale</Name>
 					<Type>Double</Type>
@@ -87507,6 +87504,32 @@ ret = y_new
 					<UserKnob>0</UserKnob>
 				</item>
 				<item>
+					<Name>center</Name>
+					<Type>Double</Type>
+					<Dimension>2</Dimension>
+					<Secret>0</Secret>
+					<MasterIsAlias>0</MasterIsAlias>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.53600000000000000e+03</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<item>
+						<Enabled>1</Enabled>
+						<HasAnimation>0</HasAnimation>
+						<Value>1.53600000000000000e+03</Value>
+						<Default>5.00000000000000000e-01</Default>
+						<HasMaster>0</HasMaster>
+						<Expression></Expression>
+						<ExprHasRet>0</ExprHasRet>
+					</item>
+					<UserKnob>0</UserKnob>
+				</item>
+				<item>
 					<Name>userTextArea</Name>
 					<Type>String</Type>
 					<Dimension>1</Dimension>
@@ -87535,7 +87558,7 @@ ret = y_new
 						<second>Melt</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>36</KnobsAge>
+				<KnobsAge>40</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -101108,7 +101131,7 @@ ret = y_new
 						<second>In</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>6</KnobsAge>
+				<KnobsAge>7</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -110587,7 +110610,7 @@ ret = y_new
 				<PythonModuleVersion>0</PythonModuleVersion>
 				<Plugin_major_version>1</Plugin_major_version>
 				<Plugin_minor_version>0</Plugin_minor_version>
-				<KnobsCount>4</KnobsCount>
+				<KnobsCount>3</KnobsCount>
 				<item>
 					<Name>operation</Name>
 					<Type>Choice</Type>
@@ -110645,31 +110668,9 @@ ret = y_new
 					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
 					<UserKnob>0</UserKnob>
 				</item>
-				<item>
-					<Name>A_channels</Name>
-					<Type>Choice</Type>
-					<Dimension>1</Dimension>
-					<Secret>0</Secret>
-					<MasterIsAlias>0</MasterIsAlias>
-					<item>
-						<Enabled>1</Enabled>
-						<HasAnimation>0</HasAnimation>
-						<Value>1</Value>
-						<Default>1</Default>
-						<HasMaster>0</HasMaster>
-						<Expression></Expression>
-						<ExprHasRet>0</ExprHasRet>
-					</item>
-					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
-					<UserKnob>0</UserKnob>
-				</item>
 				<Inputs_map>
-					<count>2</count>
+					<count>1</count>
 					<item_version>0</item_version>
-					<item>
-						<first>A</first>
-						<second>Merge2</second>
-					</item>
 					<item>
 						<first>B</first>
 						<second>Dot26</second>
@@ -112010,7 +112011,7 @@ ret = y_new
 					<item_version>0</item_version>
 					<item>
 						<first>Source</first>
-						<second>MultiplyMask</second>
+						<second>Merge2</second>
 					</item>
 				</Inputs_map>
 				<KnobsAge>0</KnobsAge>
@@ -114945,7 +114946,7 @@ ret = y_new
 						<Expression></Expression>
 						<ExprHasRet>0</ExprHasRet>
 					</item>
-					<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+					<ChoiceLabel></ChoiceLabel>
 					<UserKnob>0</UserKnob>
 				</item>
 				<Inputs_map>
@@ -114960,7 +114961,7 @@ ret = y_new
 						<second>Mask</second>
 					</item>
 				</Inputs_map>
-				<KnobsAge>40</KnobsAge>
+				<KnobsAge>41</KnobsAge>
 				<MasterNode></MasterNode>
 				<HasRotoContext>0</HasRotoContext>
 				<HasTrackerContext>0</HasTrackerContext>
@@ -116515,6 +116516,37 @@ ret = y_new
 					<item_version>2</item_version>
 				</UserComponents>
 				<CacheID>Bake_default.Reformat2</CacheID>
+			</item>
+			<item>
+				<Plugin_label>Viewer1</Plugin_label>
+				<Plugin_script_name>Viewer1</Plugin_script_name>
+				<Plugin_id>fr.inria.built-in.Viewer</Plugin_id>
+				<PythonModule></PythonModule>
+				<PythonModuleVersion>0</PythonModuleVersion>
+				<Plugin_major_version>1</Plugin_major_version>
+				<Plugin_minor_version>0</Plugin_minor_version>
+				<KnobsCount>0</KnobsCount>
+				<Inputs_map>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>
+						<first>1</first>
+						<second>Dot25</second>
+					</item>
+				</Inputs_map>
+				<KnobsAge>0</KnobsAge>
+				<MasterNode></MasterNode>
+				<HasRotoContext>0</HasRotoContext>
+				<HasTrackerContext>0</HasTrackerContext>
+				<MultiInstanceParent></MultiInstanceParent>
+				<UserPagesCount>0</UserPagesCount>
+				<PagesCount>0</PagesCount>
+				<Children>0</Children>
+				<UserComponents>
+					<count>0</count>
+					<item_version>2</item_version>
+				</UserComponents>
+				<CacheID>Bake_default.Viewer1</CacheID>
 			</item>
 			<UserComponents>
 				<count>0</count>
@@ -122579,7 +122611,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Clamp3</second>
+					<second>Bake_default</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -122719,7 +122751,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Nov 29 22:25:16 2021</Value>
+			<Value>Mon Nov 29 22:59:56 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -122966,8 +122998,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Switch_default</Name>
-			<X_position>2.14724326360956638e+03</X_position>
-			<Y_position>4.15918422750074023e+03</Y_position>
+			<X_position>1.94216421097245620e+03</X_position>
+			<Y_position>4.16911320514726049e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -122981,7 +123013,7 @@ ret = y_new
 		<item>
 			<Name>TRS_default</Name>
 			<X_position>2.14507944895817172e+03</X_position>
-			<Y_position>2.63456889780507436e+03</Y_position>
+			<Y_position>2.63700856826824565e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -128912,7 +128944,7 @@ ret = y_new
 			<Width>1.04000000000000000e+02</Width>
 			<Height>2.60000000000000000e+01</Height>
 			<HasOverlayColor>0</HasOverlayColor>
-			<Children>227</Children>
+			<Children>228</Children>
 			<item>
 				<Name>Bake_default.Saturation1</Name>
 				<X_position>2.06900000000000000e+03</X_position>
@@ -132835,8 +132867,8 @@ ret = y_new
 			</item>
 			<item>
 				<Name>Bake_default.MultiplyMask</Name>
-				<X_position>9.66027951107180343e+02</X_position>
-				<Y_position>8.97849582517039016e+03</Y_position>
+				<X_position>7.93289395951482220e+02</X_position>
+				<Y_position>8.94363455838870323e+03</Y_position>
 				<Preview_enabled>0</Preview_enabled>
 				<r>4.800030589e-01</r>
 				<g>6.599984765e-01</g>
@@ -133040,6 +133072,20 @@ ret = y_new
 				<Selected>0</Selected>
 				<Width>1.04000000000000000e+02</Width>
 				<Height>2.60000000000000000e+01</Height>
+				<HasOverlayColor>0</HasOverlayColor>
+				<Children>0</Children>
+			</item>
+			<item>
+				<Name>Bake_default.Viewer1</Name>
+				<X_position>1.81850000000000000e+03</X_position>
+				<Y_position>7.12800000000000000e+03</Y_position>
+				<Preview_enabled>0</Preview_enabled>
+				<r>6.999923587e-01</r>
+				<g>6.999923587e-01</g>
+				<b>6.999923587e-01</b>
+				<Selected>0</Selected>
+				<Width>1.04000000000000000e+02</Width>
+				<Height>3.00000000000000000e+01</Height>
 				<HasOverlayColor>0</HasOverlayColor>
 				<Children>0</Children>
 			</item>
@@ -133633,24 +133679,26 @@ ret = y_new
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
 						<Tabs class_id="27" tracking_level="0" version="0">
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
 							<item>Viewer1</item>
+							<item>Bake_default_Viewer1</item>
 						</Tabs>
-						<Index>0</Index>
+						<Index>1</Index>
 						<Name>pane1</Name>
 						<IsAnchor>1</IsAnchor>
 					</Child>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>3</count>
+							<count>4</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
+							<item>Bake_default</item>
 						</Tabs>
-						<Index>0</Index>
+						<Index>3</Index>
 						<Name>pane3</Name>
 						<IsAnchor>0</IsAnchor>
 					</Child>
@@ -133680,9 +133728,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-3.53440433268858851e+03</zoomLeft>
+				<zoomLeft>-3.54423069767441848e+03</zoomLeft>
 				<zoomBottom>-6.14400000000000546e+01</zoomBottom>
-				<zoomFactor>1.61821414262820512e-01</zoomFactor>
+				<zoomFactor>1.61508413461538464e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>1.02400000000000000e+03</Left>
@@ -133726,13 +133774,12 @@ ret = y_new
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>5</count>
+		<count>4</count>
 		<item_version>0</item_version>
-		<item>input_default</item>
+		<item>Bake_default.Transform2</item>
 		<item>Bake_default</item>
-		<item>Read2_2</item>
-		<item>Read2</item>
-		<item>Natron_Project_Settings_Panel</item>
+		<item>TRS_default</item>
+		<item>Read1</item>
 	</OpenedPanels>
 	<ScriptEditorInput>sy =[3000,3010,3020,3030,3040,3050, 3060,3070,3080, 3090]
 y = [ 2040]
