@@ -25957,24 +25957,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>10</KnobsCount>
-			<item>
-				<Name>useRoD</Name>
-				<Type>Bool</Type>
-				<Dimension>1</Dimension>
-				<Secret>0</Secret>
-				<MasterIsAlias>0</MasterIsAlias>
-				<item>
-					<Enabled>1</Enabled>
-					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>0</Default>
-					<HasMaster>0</HasMaster>
-					<Expression></Expression>
-					<ExprHasRet>0</ExprHasRet>
-				</item>
-				<UserKnob>0</UserKnob>
-			</item>
+			<KnobsCount>9</KnobsCount>
 			<item>
 				<Name>reformatType</Name>
 				<Type>Choice</Type>
@@ -26169,7 +26152,7 @@
 					<second>Premult2</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>19</KnobsAge>
+			<KnobsAge>20</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -80486,7 +80469,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.60251261200755823e-01</Value>
+					<Value>1.15902818469330660e+00</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -80495,7 +80478,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.01187618169933424e-01</Value>
+					<Value>1.02885501924902201e+00</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -80504,7 +80487,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.37938643479719758e+00</Value>
+					<Value>5.09646276757121042e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -80513,7 +80496,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.05079361144453254e-01</Value>
+					<Value>9.17914510890841528e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -92456,7 +92439,7 @@ ret = y_new
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Transform_0_2</second>
+					<second>Merge33</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -92894,7 +92877,7 @@ ret = y_new
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Fri Dec 3 12:17:06 2021</Value>
+			<Value>Fri Dec 3 13:45:21 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -100944,7 +100927,7 @@ ret = y_new
 		<item>
 			<Name>Transform_0_2</Name>
 			<X_position>4.52454108806552904e+03</X_position>
-			<Y_position>3.35451992360408440e+03</Y_position>
+			<Y_position>3.59480851169222888e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -101014,7 +100997,7 @@ ret = y_new
 		<item>
 			<Name>Transform_2_2</Name>
 			<X_position>4.10617932234216460e+03</X_position>
-			<Y_position>3.41327859557957163e+03</Y_position>
+			<Y_position>3.62080055801933304e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -101084,7 +101067,7 @@ ret = y_new
 		<item>
 			<Name>Transform_1_2</Name>
 			<X_position>4.30535710519456734e+03</X_position>
-			<Y_position>3.37936882773796788e+03</Y_position>
+			<Y_position>3.60509447109349730e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -101238,7 +101221,7 @@ ret = y_new
 		<item>
 			<Name>Transform_3_2</Name>
 			<X_position>3.91642831062208370e+03</X_position>
-			<Y_position>3.41612370690390981e+03</Y_position>
+			<Y_position>3.55447168186375075e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -101308,7 +101291,7 @@ ret = y_new
 		<item>
 			<Name>Transform_4_2</Name>
 			<X_position>3.76159150403365038e+03</X_position>
-			<Y_position>3.48226232575101858e+03</Y_position>
+			<Y_position>3.62425103689401294e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -101391,8 +101374,8 @@ ret = y_new
 		</item>
 		<item>
 			<Name>Transform_5_2</Name>
-			<X_position>3.59215344150285182e+03</X_position>
-			<Y_position>3.53805224126370376e+03</Y_position>
+			<X_position>3.56389773317752042e+03</X_position>
+			<Y_position>3.76554124188415790e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -101518,7 +101501,7 @@ ret = y_new
 		<item>
 			<Name>Transform_6_2</Name>
 			<X_position>3.36269744949772394e+03</X_position>
-			<Y_position>3.60371119051895494e+03</Y_position>
+			<Y_position>3.70201106746410505e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
@@ -101857,11 +101840,11 @@ ret = y_new
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1583 853</Sizes>
+				<Sizes>1141 615</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>657 657</Sizes>
+					<Sizes>519 518</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -101901,10 +101884,10 @@ ret = y_new
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2534</x>
-			<y>-478</y>
-			<w>2472</w>
-			<h>1317</h>
+			<x>-2471</x>
+			<y>-484</y>
+			<w>1792</w>
+			<h>1040</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -101913,9 +101896,9 @@ ret = y_new
 		<item class_id="29" tracking_level="0" version="0">
 			<first>Viewer2</first>
 			<second class_id="30" tracking_level="0" version="14">
-				<zoomLeft>-3.04998442811938685e+03</zoomLeft>
-				<zoomBottom>8.72010249094979599e+02</zoomBottom>
-				<zoomFactor>1.93911453996207683e-01</zoomFactor>
+				<zoomLeft>-7.84879936783334506e+03</zoomLeft>
+				<zoomBottom>5.65803253529268886e+02</zoomBottom>
+				<zoomFactor>9.35368584766472361e-02</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="31" tracking_level="0" version="0">
 					<Left>2.56000000000000000e+02</Left>
@@ -101961,12 +101944,12 @@ ret = y_new
 	<OpenedPanels>
 		<count>8</count>
 		<item_version>0</item_version>
+		<item>Reformat1_2</item>
 		<item>Read3</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Erode1</item>
 		<item>Premult2</item>
 		<item>Reformat1</item>
-		<item>Reformat1_2</item>
 		<item>Read4_2</item>
 		<item>Read4</item>
 	</OpenedPanels>
