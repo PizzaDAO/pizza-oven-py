@@ -60842,7 +60842,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0001-crust-alpha.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0041-crust-alpha.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -60863,7 +60863,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../.cache/output/0001-crust-alpha.png</Value>
+					<Value>[Project]/../.cache/output/####-crust-alpha.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -60901,8 +60901,8 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1</Value>
-					<Default>1</Default>
+					<Value>10000</Value>
+					<Default>41</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -61084,7 +61084,7 @@ ret = y_new
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>3</KnobsAge>
+			<KnobsAge>4</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -64077,7 +64077,7 @@ ret=(x-y)*.4</Expression>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Thu Dec 9 02:53:15 2021</Value>
+			<Value>Thu Dec 9 14:59:24 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -69388,8 +69388,8 @@ ret=(x-y)*.4</Expression>
 		</item>
 		<item>
 			<Name>Read4</Name>
-			<X_position>3.02633801956601019e+02</X_position>
-			<Y_position>-1.58007793626964940e+03</Y_position>
+			<X_position>3.02633801956600109e+02</X_position>
+			<Y_position>-1.57332276677931350e+03</Y_position>
 			<Preview_enabled>1</Preview_enabled>
 			<r>6.999923587e-01</r>
 			<g>6.999923587e-01</g>
@@ -69658,11 +69658,11 @@ ret=(x-y)*.4</Expression>
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1499 808</Sizes>
+				<Sizes>1141 615</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>685 684</Sizes>
+					<Sizes>519 518</Sizes>
 					<Orientation>2</Orientation>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
@@ -69702,10 +69702,10 @@ ret=(x-y)*.4</Expression>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>-2560</x>
-			<y>-484</y>
-			<w>2343</w>
-			<h>1372</h>
+			<x>-2362</x>
+			<y>-481</y>
+			<w>1792</w>
+			<h>1040</h>
 		</Window>
 	</Gui_Layout>
 	<ViewersData class_id="28" tracking_level="0" version="0">
@@ -69762,10 +69762,10 @@ ret=(x-y)*.4</Expression>
 	<OpenedPanels>
 		<count>9</count>
 		<item_version>0</item_version>
+		<item>Read4</item>
 		<item>Erode3</item>
 		<item>Crop2</item>
 		<item>Crop1</item>
-		<item>Read4</item>
 		<item>input_default</item>
 		<item>Natron_Project_Settings_Panel</item>
 		<item>Reformat1_3_2</item>
