@@ -11,7 +11,7 @@
 	<OS>MacOSX</OS>
 	<Bits>64</Bits>
 	<NodesCollection class_id="1" tracking_level="0" version="1">
-		<NodesCount>70</NodesCount>
+		<NodesCount>71</NodesCount>
 		<item class_id="2" tracking_level="0" version="15">
 			<Plugin_label>w1</Plugin_label>
 			<Plugin_script_name>w1</Plugin_script_name>
@@ -230,7 +230,7 @@
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge3</second>
+					<second>w1</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>1</KnobsAge>
@@ -1861,7 +1861,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0500-paper-redchecker.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(0501-paper-redchecker.png)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -1899,7 +1899,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>[Project]/../ingredients-db/0500-paper-redchecker.png</Value>
+					<Value>[Project]/../ingredients-db/0501-paper-redchecker.png</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -2120,7 +2120,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>222</KnobsAge>
+			<KnobsAge>224</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -2155,7 +2155,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.66600000000000001e+01</Value>
+					<Value>2.63200000000000003e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2164,7 +2164,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.38599999999999994e+01</Value>
+					<Value>-2.77500000000000000e+01</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>round(random(-50,50),2)</Expression>
@@ -2181,7 +2181,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.21999999999999997e+00</Value>
+					<Value>-5.99999999999999978e-02</Value>
 					<Default>0.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>y = thisNode.translate.get()[1]
@@ -6746,7 +6746,7 @@ ret = round((x+y)/25,2)
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>9.81587857213569781e-01</Value>
+					<Value>8.86806663625873570e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(0.7535,1)</Expression>
@@ -6996,7 +6996,7 @@ ret = round((x+y)/25,2)
 				<item_version>0</item_version>
 				<item>
 					<first>Source</first>
-					<second>Grade2</second>
+					<second>Premult2</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -24127,6 +24127,61 @@ ret = round((x+y)/25,2)
 			</UserComponents>
 			<CacheID>Transform11</CacheID>
 		</item>
+		<item>
+			<Plugin_label>Premult2</Plugin_label>
+			<Plugin_script_name>Premult2</Plugin_script_name>
+			<Plugin_id>net.sf.openfx.Premult</Plugin_id>
+			<PythonModule></PythonModule>
+			<PythonModuleVersion>0</PythonModuleVersion>
+			<Plugin_major_version>2</Plugin_major_version>
+			<Plugin_minor_version>0</Plugin_minor_version>
+			<KnobsCount>1</KnobsCount>
+			<item>
+				<Name>userTextArea</Name>
+				<Type>String</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;/font&gt;</Value>
+					<Default></Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<StringsAnimation>
+					<count>0</count>
+					<item_version>0</item_version>
+				</StringsAnimation>
+				<UserKnob>0</UserKnob>
+			</item>
+			<Inputs_map>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Grade2</second>
+				</item>
+			</Inputs_map>
+			<KnobsAge>6</KnobsAge>
+			<MasterNode></MasterNode>
+			<HasRotoContext>0</HasRotoContext>
+			<HasTrackerContext>0</HasTrackerContext>
+			<MultiInstanceParent></MultiInstanceParent>
+			<UserPagesCount>0</UserPagesCount>
+			<PagesCount>3</PagesCount>
+			<name>Controls</name>
+			<name>Node</name>
+			<name>Info</name>
+			<Children>0</Children>
+			<UserComponents>
+				<count>0</count>
+				<item_version>2</item_version>
+			</UserComponents>
+			<CacheID>Premult2</CacheID>
+		</item>
 	</NodesCollection>
 	<ProjectKnobsCount>7</ProjectKnobsCount>
 	<item>
@@ -24250,7 +24305,7 @@ ret = round((x+y)/25,2)
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Mon Dec 13 09:44:49 2021</Value>
+			<Value>Mon Dec 13 11:07:41 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -24371,12 +24426,12 @@ ret = round((x+y)/25,2)
 </Project>
 <ProjectGui class_id="25" tracking_level="0" version="12">
 	<NodesGui class_id="26" tracking_level="0" version="0">
-		<count>70</count>
+		<count>71</count>
 		<item_version>6</item_version>
 		<item class_id="27" tracking_level="0" version="6">
 			<Name>w1</Name>
-			<X_position>3.05790457351827627e+02</X_position>
-			<Y_position>-1.03566393857949720e+03</Y_position>
+			<X_position>3.10368538945737328e+02</X_position>
+			<Y_position>-1.03446401062591212e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>7.499961853e-01</r>
 			<g>7.499961853e-01</g>
@@ -24627,8 +24682,8 @@ ret = round((x+y)/25,2)
 		</item>
 		<item>
 			<Name>Merge1</Name>
-			<X_position>7.44458188242611413e+02</X_position>
-			<Y_position>-1.11501873976341699e+03</Y_position>
+			<X_position>6.05582572044631434e+02</X_position>
+			<Y_position>-1.11177178335449184e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>3.000076413e-01</r>
 			<g>3.700007498e-01</g>
@@ -25538,7 +25593,7 @@ ret = round((x+y)/25,2)
 		<item>
 			<Name>Grade2</Name>
 			<X_position>3.14234905390599124e+02</X_position>
-			<Y_position>-1.39664625907843765e+03</Y_position>
+			<Y_position>-1.42960435297784352e+03</Y_position>
 			<Preview_enabled>0</Preview_enabled>
 			<r>4.800030589e-01</r>
 			<g>6.599984765e-01</g>
@@ -25599,6 +25654,20 @@ ret = round((x+y)/25,2)
 			<r>6.999923587e-01</r>
 			<g>3.000076413e-01</g>
 			<b>1.000076309e-01</b>
+			<Selected>0</Selected>
+			<Width>1.04000000000000000e+02</Width>
+			<Height>2.60000000000000000e+01</Height>
+			<HasOverlayColor>0</HasOverlayColor>
+			<Children>0</Children>
+		</item>
+		<item>
+			<Name>Premult2</Name>
+			<X_position>3.14234905390599124e+02</X_position>
+			<Y_position>-1.36224496224296718e+03</Y_position>
+			<Preview_enabled>0</Preview_enabled>
+			<r>3.000076413e-01</r>
+			<g>3.700007498e-01</g>
+			<b>7.759975791e-01</b>
 			<Selected>0</Selected>
 			<Width>1.04000000000000000e+02</Width>
 			<Height>2.60000000000000000e+01</Height>
@@ -25667,9 +25736,9 @@ ret = round((x+y)/25,2)
 		<item class_id="33" tracking_level="0" version="0">
 			<first>Viewer1</first>
 			<second class_id="34" tracking_level="0" version="14">
-				<zoomLeft>-3.25125314981036718e+03</zoomLeft>
-				<zoomBottom>-9.92180024930787567e+01</zoomBottom>
-				<zoomFactor>1.68603745118575343e-01</zoomFactor>
+				<zoomLeft>-2.92718415056504045e+03</zoomLeft>
+				<zoomBottom>2.00566191185056368e+01</zoomBottom>
+				<zoomFactor>2.02312346846893837e-01</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="35" tracking_level="0" version="0">
 					<Left>7.68000000000000000e+02</Left>
@@ -25684,7 +25753,7 @@ ret = round((x+y)/25,2)
 				<ColorSpace>sRGB</ColorSpace>
 				<Layer>Color.RGBA</Layer>
 				<AlphaLayer>Color.A</AlphaLayer>
-				<Channels>A</Channels>
+				<Channels>RGB</Channels>
 				<RenderScaleActivated>0</RenderScaleActivated>
 				<MipMapLevel>0</MipMapLevel>
 				<ZoomOrPanSinceFit>1</ZoomOrPanSinceFit>
@@ -25713,8 +25782,10 @@ ret = round((x+y)/25,2)
 		<item_version>0</item_version>
 	</Histograms>
 	<OpenedPanels>
-		<count>3</count>
+		<count>5</count>
 		<item_version>0</item_version>
+		<item>Premult2</item>
+		<item>input_default</item>
 		<item>DropShadow1_3</item>
 		<item>ColorCorrect3</item>
 		<item>Natron_Project_Settings_Panel</item>
