@@ -80498,7 +80498,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>4.56060140859335661e-01</Value>
+					<Value>1.15578424176201211e+00</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -80507,7 +80507,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1.10352547550573932e+00</Value>
+					<Value>4.21549575682729438e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -80516,7 +80516,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>3.21674803365021911e-01</Value>
+					<Value>9.30199027061462402e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -80525,7 +80525,7 @@ ret = y_new
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>7.62602401245385364e-01</Value>
+					<Value>6.29003747273236491e-01</Value>
 					<Default>1.00000000000000000e+00</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>random(.3,1.5)</Expression>
@@ -94297,7 +94297,7 @@ ret=(x-y)*.4</Expression>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Wed Dec 15 11:53:48 2021</Value>
+			<Value>Wed Dec 15 13:41:03 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -103452,41 +103452,26 @@ ret=(x-y)*.4</Expression>
 		<Window class_id="24" tracking_level="0" version="1">
 			<ChildType>0</ChildType>
 			<Child class_id="25" tracking_level="1" version="1" object_id="_0">
-				<Sizes>1331 748</Sizes>
+				<Sizes>1351 728</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>1</ChildIsSplitter>
 				<Child object_id="_1">
-					<Sizes>575 756</Sizes>
+					<Sizes>666 665</Sizes>
 					<Orientation>2</Orientation>
-					<ChildIsSplitter>1</ChildIsSplitter>
-					<Child object_id="_2">
-						<Sizes>717 611</Sizes>
-						<Orientation>1</Orientation>
-						<ChildIsSplitter>0</ChildIsSplitter>
-						<Child class_id="26" tracking_level="1" version="5" object_id="_3">
-							<Tabs class_id="27" tracking_level="0" version="0">
-								<count>1</count>
-								<item_version>0</item_version>
-								<item>Viewer2</item>
-							</Tabs>
-							<Index>0</Index>
-							<Name>pane1</Name>
-							<IsAnchor>1</IsAnchor>
-						</Child>
-						<ChildIsSplitter>0</ChildIsSplitter>
-						<Child object_id="_4">
-							<Tabs>
-								<count>1</count>
-								<item_version>0</item_version>
-								<item>Viewer1</item>
-							</Tabs>
-							<Index>0</Index>
-							<Name>pane4</Name>
-							<IsAnchor>0</IsAnchor>
-						</Child>
+					<ChildIsSplitter>0</ChildIsSplitter>
+					<Child class_id="26" tracking_level="1" version="5" object_id="_2">
+						<Tabs class_id="27" tracking_level="0" version="0">
+							<count>2</count>
+							<item_version>0</item_version>
+							<item>Viewer2</item>
+							<item>Viewer1</item>
+						</Tabs>
+						<Index>1</Index>
+						<Name>pane1</Name>
+						<IsAnchor>1</IsAnchor>
 					</Child>
 					<ChildIsSplitter>0</ChildIsSplitter>
-					<Child object_id="_5">
+					<Child object_id="_3">
 						<Tabs>
 							<count>3</count>
 							<item_version>0</item_version>
@@ -103500,7 +103485,7 @@ ret=(x-y)*.4</Expression>
 					</Child>
 				</Child>
 				<ChildIsSplitter>0</ChildIsSplitter>
-				<Child object_id="_6">
+				<Child object_id="_4">
 					<Tabs>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -103512,7 +103497,7 @@ ret=(x-y)*.4</Expression>
 				</Child>
 			</Child>
 			<MainWindow>1</MainWindow>
-			<x>1193</x>
+			<x>198</x>
 			<y>23</y>
 			<w>2115</w>
 			<h>1334</h>
