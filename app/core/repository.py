@@ -262,9 +262,20 @@ def get_kitchen_order_from_data_directory(kitchen_order_index: int) -> KitchenOr
 # Everything below here is on IPFS
 
 
-def get_kitchen_order(ipfs_hash: int) -> KitchenOrder:
-    with IPFSSession(settings.IPFS_NODE_API) as session:
-        return KitchenOrder(**json.load(session.get_json(ipfs_hash)))
+def get_kitchen_order(ipfs_hash: str) -> KitchenOrder:
+
+    if settings.IPFS_MODE == IPFSMode.remote:
+        with IPFSSession(settings.IPFS_NODE_API) as session:
+            return KitchenOrder(**json.load(session.get_json(ipfs_hash)))
+    elif settings.IPFS_MODE == IPFSMode.pinata:
+        print("pinning using pinata")
+        response = PinataPy(
+            settings.PINATA_API_KEY, settings.PINATA_API_SECRET
+        ).get_from_gateway(ipfs_hash)
+        return KitchenOrder(**response)
+    else:
+        print("pinning not implemented")
+        return ""
 
 
 def set_kitchen_order(order: KitchenOrder) -> str:

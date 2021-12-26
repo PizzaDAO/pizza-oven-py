@@ -131,6 +131,13 @@ class PinataPy:
         )
         return response.json() if response.ok else self._error(response)  # type: ignore
 
+    def get_from_gateway(self, ipfs_hash: str) -> ResponsePayload:
+        """return the json"""
+        response: requests.Response = requests.get(
+            f"https://gateway.pinata.cloud/ipfs/{ipfs_hash}"
+        )
+        return response.json() if response.ok else self._error(response)
+
     def pin_json_to_ipfs(
         self, json_to_pin: Any, options: Optional[OptionsDict] = None
     ) -> ResponsePayload:
