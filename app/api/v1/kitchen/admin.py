@@ -1,10 +1,11 @@
 from typing import Any, Optional, Dict
+from fastapi.param_functions import Query
 from pydantic.main import BaseModel
 
 import requests
 import sys
 
-from fastapi import APIRouter, Body, BackgroundTasks, Request
+from fastapi import APIRouter, Body, BackgroundTasks, Request, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from google.oauth2.credentials import Credentials
@@ -15,6 +16,7 @@ from app.core.prep_line import revise_kitchen_order
 
 from app.core.repository import *
 from app.core.recipe_box import get_pizza_recipe
+from app.models.base import BaseQueryRequest
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.render_task import RenderTask, TaskStatus
 from app.models.order import OrderPizzaResponse
@@ -115,11 +117,20 @@ def revise_order(data: KitchenOrderRequest = Body(...)) -> Any:
 # RENDER TASKS
 
 
-@router.get("/render_task/{job_id}", tags=[ADMIN])
-async def get_existing_render_task(job_id: str) -> Optional[RenderTask]:
+@router.get("/render_task/job/{job_id}", tags=[ADMIN])
+async def get_existing_render_task(job_id: str = Query(...)) -> Optional[RenderTask]:
     """get an existing render task"""
     render_task = get_render_task(job_id)
     return render_task
+
+
+@router.get("/render_task/find", tags=[ADMIN])
+async def find_existing_render_tasks(
+    data: BaseQueryRequest = Body(...),
+) -> Optional[RenderTask]:
+    """find existing render tasks according to the supplied filter"""
+    render_tasks = find_render_task(data.filter)
+    return render_tasks
 
 
 @router.get("/pluck_render_task", tags=[ADMIN])
