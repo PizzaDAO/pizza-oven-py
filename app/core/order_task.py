@@ -64,11 +64,14 @@ def publish_order_result(
     pizza_hash = set_pizza(pizza)
 
     # convert the metadata into a format chainlink can handle
+    # decode the metadata from base58
     decoded_metadata = base58.b58decode(metadata_hash)
+    # strip off the multi_hash header
     truncated_metadata = decoded_metadata[2 : len(decoded_metadata)]
+    # convert it into a UINT_256
     from_bytes_big = int.from_bytes(truncated_metadata, "big")
 
-    # debug log out some values
+    # debug log out some values to make testing easier
     print(f"{render_task.job_id} - metadata_hash: {metadata_hash}")
     print(f"{render_task.job_id} - metadata_hash_len: {len(metadata_hash)}")
     print(f"{render_task.job_id} - from_bytes_big: {from_bytes_big}")

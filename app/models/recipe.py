@@ -253,11 +253,11 @@ class Recipe(Base):
     to generate a kitchen order"""
 
     unique_id: int  # - 1
+    "the unique id of the recipe"
     name: str
-    """
-    Name of the pizza.  This can be randomly generated & will show up in metadata
-    """
+    "Name of the pizza.  This can be randomly generated & will show up in metadata"
     rarity_level: float  # - 4
+    "the rarity level of the recipe"
     base_ingredients: Dict[INGREDIENT_KEY, ScopedIngredient]
     """collection of base ingredients that coule be used as part of a kitchen order"""
     layers: Dict[INGREDIENT_KEY, ScopedIngredient]
@@ -265,3 +265,4 @@ class Recipe(Base):
     lastchances: Dict[INGREDIENT_KEY, ScopedIngredient]
     """collection of last chance toppers"""
     instructions: RecipeInstructions
+    "the instructions to make the recipe"

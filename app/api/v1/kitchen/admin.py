@@ -79,7 +79,16 @@ async def fetch_oven_params() -> OvenToppingParams:
 async def rerun_kitchen_order(
     data: KitchenOrderRerunRequest = Body(...),
 ) -> Optional[OrderPizzaResponse]:
-    """rerun a specific render task"""
+    """
+    rerun a specific kitchen order.
+
+    Useful for when a published kitchen order needs its data updated,
+    but you do not want to re-roll the ingredients.
+
+    This endpoint will regenerate the pie and post it to ipfs.
+
+    In order to actually update the token, it must be done by the contract admin.
+    """
 
     recipe = get_pizza_recipe(data.task.request.data.recipe_id)
     kitchen_order = revise_kitchen_order(data.order)
@@ -87,12 +96,19 @@ async def rerun_kitchen_order(
 
 
 @router.post("/kitchen_order/revise", response_model=KitchenOrderResponse, tags=[ADMIN])
-def revise_order(request: KitchenOrderRequest = Body(...)) -> Any:
-    """Revise data in a kitchen order for a published pizza pie"""
+def revise_order(data: KitchenOrderRequest = Body(...)) -> Any:
+    """
+    Revise data in a kitchen order for a published pizza pie.
 
-    data = revise_kitchen_order(request.order)
+    Useful for when a published kitchen order needs its data updated,
+    but you do not want to re-roll the ingredients.
 
-    json = jsonable_encoder(data)
+    This is used when regenerating pies to inspect the data that will be used to render.
+    """
+
+    kitchen_order = revise_kitchen_order(data.order)
+
+    json = jsonable_encoder(kitchen_order)
     return JSONResponse(content=json)
 
 
@@ -108,7 +124,7 @@ async def get_existing_render_task(job_id: str) -> Optional[RenderTask]:
 
 @router.get("/pluck_render_task", tags=[ADMIN])
 def pluck_render_tasks_for_restart() -> Any:
-    """find an existing render task"""
+    """find an existing render tasks that are not marked complete."""
     render_tasks = pluck_render_tasks()
     return render_tasks
 
@@ -137,7 +153,11 @@ async def set_existing_render_task(
 
 @router.post("/render_task/{job_id}/rerun", tags=[ADMIN])
 async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse]:
-    """rerun a specific render task"""
+    """
+    rerun a specific render task.
+
+    useful if a job gets stuck and you want to debug it live.
+    """
     render_task = get_render_task(job_id)
     if render_task is None:
         print(f"{job_id} - re run render failed to find job")
@@ -151,7 +171,11 @@ async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse
 async def rerun_existing_render_task_async(
     job_id: str, background_tasks: BackgroundTasks
 ) -> Optional[OrderPizzaResponse]:
-    """rerun a specific render task asynchronously"""
+    """
+    rerun a specific render task asynchronously.
+
+    useful if a job gets stuck and you just want to queue it.
+    """
     render_task = get_render_task(job_id)
     if render_task is None:
         print(f"{job_id} - re run render failed to find job")
