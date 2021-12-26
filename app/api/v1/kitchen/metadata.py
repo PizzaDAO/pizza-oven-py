@@ -34,7 +34,9 @@ class RarePizzaMetadataResponse(Base):
 
 
 @router.get("/", response_model=RarePizzaMetadataResponse, tags=[METADATA])
-def create_metadata(request: RarePizzaMetadataRequest = Body(...)) -> RarePizzaMetadataResponse:
+def create_metadata(
+    request: RarePizzaMetadataRequest = Body(...),
+) -> RarePizzaMetadataResponse:
     """
     create the metadata for the specific pizza
     """
@@ -66,7 +68,7 @@ def get_blockchain_metadata_from_storage(job_id: str) -> Any:
 )
 def get_blockchain_metadata_from_ipfs(ipfs_hash: str) -> Any:
     """
-    get the metadata for the specific pizza from ipfs
+    get the metadata for the specific pizza from IPFS
     """
 
     metadata = get_metadata_from_ipfs(ipfs_hash)

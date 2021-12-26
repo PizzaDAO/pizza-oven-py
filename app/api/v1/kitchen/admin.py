@@ -33,6 +33,9 @@ class KitchenOrderRerunRequest(BaseModel):
     task: RenderTask
 
 
+# TOKEN UPDATES
+
+
 @router.post("/gsheets_token", tags=[ADMIN])
 async def add_gsheets_token(
     data: GSheetsToken = Body(...),
@@ -54,6 +57,9 @@ async def add_chainlink_token(
     return
 
 
+# OVEN PARAMS
+
+
 @router.post("/oven_params", tags=[ADMIN])
 async def add_oven_params(
     data: OvenToppingParams = Body(...),
@@ -64,6 +70,33 @@ async def add_oven_params(
 @router.get("/oven_params", tags=[ADMIN])
 async def fetch_oven_params() -> OvenToppingParams:
     return get_oven_params()
+
+
+# KITCHEN ORDER
+
+
+@router.post("/kitchen_order/rerun", tags=[ADMIN])
+async def rerun_kitchen_order(
+    data: KitchenOrderRerunRequest = Body(...),
+) -> Optional[OrderPizzaResponse]:
+    """rerun a specific render task"""
+
+    recipe = get_pizza_recipe(data.task.request.data.recipe_id)
+    kitchen_order = revise_kitchen_order(data.order)
+    return render_and_post(recipe, kitchen_order, data.task)
+
+
+@router.post("/kitchen_order/revise", response_model=KitchenOrderResponse, tags=[ADMIN])
+def revise_order(request: KitchenOrderRequest = Body(...)) -> Any:
+    """Revise data in a kitchen order for a published pizza pie"""
+
+    data = revise_kitchen_order(request.order)
+
+    json = jsonable_encoder(data)
+    return JSONResponse(content=json)
+
+
+# RENDER TASKS
 
 
 @router.get("/render_task/{job_id}", tags=[ADMIN])
@@ -102,17 +135,6 @@ async def set_existing_render_task(
     return render_task
 
 
-@router.post("/kitchen_order/rerun", tags=[ADMIN])
-async def rerun_kitchen_order(
-    data: KitchenOrderRerunRequest = Body(...),
-) -> Optional[OrderPizzaResponse]:
-    """rerun a specific render task"""
-
-    recipe = get_pizza_recipe(data.task.request.data.recipe_id)
-    kitchen_order = revise_kitchen_order(data.order)
-    return render_and_post(recipe, kitchen_order, data.task)
-
-
 @router.post("/render_task/{job_id}/rerun", tags=[ADMIN])
 async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse]:
     """rerun a specific render task"""
@@ -142,13 +164,3 @@ async def rerun_existing_render_task_async(
     background_tasks.add_task(run_render_task, render_task.job_id, render_task)
 
     return response
-
-
-@router.post("/revise_kitchen_order", response_model=KitchenOrderResponse, tags=[ADMIN])
-def revise_order(request: KitchenOrderRequest = Body(...)) -> Any:
-    """Revise data in a kitchen order for a published pizza pie"""
-
-    data = revise_kitchen_order(request.order)
-
-    json = jsonable_encoder(data)
-    return JSONResponse(content=json)

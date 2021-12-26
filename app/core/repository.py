@@ -94,6 +94,7 @@ def get_render_task(job_id: str) -> Optional[RenderTask]:
 
 
 def pluck_render_tasks() -> List[RenderTask]:
+    """pluck all outstanding render tasks that need to be run or rerun"""
     print("plucking render tasks")
     render_tasks: List[RenderTask] = []
 
