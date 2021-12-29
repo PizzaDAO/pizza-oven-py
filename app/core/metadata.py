@@ -1,5 +1,4 @@
-from typing import List  # , Dict
-from itertools import chain
+from typing import List
 from random import choices
 
 from app.models.recipe import *
@@ -8,9 +7,7 @@ from app.models.pizza import (
     RarePizzaMetadata,
     HotPizza,
     IngredientMetadata,
-    NutritionMetadata,
     ERC721OpenSeaMetadataAttribute,
-    # ERC721OpenSeaMetadataBoostAttribute,
 )
 
 
@@ -86,25 +83,9 @@ def make_description(recipe, base, layers):
     return desc
 
 
-def to_blockchain_metadata(
-    job_id: str, recipe: Recipe, order: KitchenOrder, pizza: HotPizza
-) -> RarePizzaMetadata:
-    """
-    create metadata from the recipe, order, and pizza render to make blockchain metadata
-    """
+def to_ingredient_blockchain_metadata(order: KitchenOrder) -> List[IngredientMetadata]:
+    """make blockchain metadata for all of the ingredients in the order"""
     ingredients: List[IngredientMetadata] = []
-    attributes: List[ERC721OpenSeaMetadataAttribute] = []
-    toppings: List[str] = []
-    # boost_attributes: List[ERC721OpenSeaMetadataBoostAttribute] = []
-    # category_count: List[Dict] = []
-
-    attributes.append(
-        ERC721OpenSeaMetadataAttribute(
-            trait_type="Pizza Recipe",
-            value=recipe.name,
-        )
-    )
-
     for (_, value) in order.base_ingredients.items():
         ingredients.append(
             IngredientMetadata(
@@ -121,13 +102,6 @@ def to_blockchain_metadata(
                 ],
             )
         )
-        if str(value.ingredient.topping_class).lower() != "variant":
-            attributes.append(
-                ERC721OpenSeaMetadataAttribute(
-                    trait_type=value.ingredient.topping_class,
-                    value=value.ingredient.pretty_name,
-                )
-            )
 
     for (_, value) in order.layers.items():
         ingredients.append(
@@ -145,6 +119,24 @@ def to_blockchain_metadata(
                 ],
             )
         )
+    return ingredients
+
+
+def to_blockchain_metadata(
+    job_id: str, recipe: Recipe, order: KitchenOrder, pizza: HotPizza
+) -> RarePizzaMetadata:
+    """
+    create metadata from the recipe, order, and pizza render to make blockchain metadata
+    """
+    attributes: List[ERC721OpenSeaMetadataAttribute] = []
+    attributes.append(
+        ERC721OpenSeaMetadataAttribute(
+            trait_type="Pizza Recipe",
+            value=recipe.name,
+        )
+    )
+
+    for (_, value) in order.base_ingredients.items():
         if str(value.ingredient.topping_class).lower() != "variant":
             attributes.append(
                 ERC721OpenSeaMetadataAttribute(
@@ -152,28 +144,16 @@ def to_blockchain_metadata(
                     value=value.ingredient.pretty_name,
                 )
             )
-        """ Add topping catgory count if not exists, otherwise increment count """
-        # if value.ingredient.category not in map(
-        #    lambda c: c["trait_type"], category_count
-        # ):
-        #    category_count.append(
-        #        dict(
-        #            display_type="boost_number",
-        #            trait_type=value.ingredient.category,
-        #            value=1,
-        #        )
-        #    )
-        # else:
-        #    for item in category_count:
-        #        if item["trait_type"] == value.ingredient.category:
-        #            item["value"] += 1
-        # attributes.append(
-        #    ERC721OpenSeaMetadataAttribute(
-        #        trait_type=value.ingredient.category,
-        #        value=value.ingredient.name,
-        #    )
-        # )
-    # print(boost_attributes)
+
+    for (_, value) in order.layers.items():
+        # only append the standard toppings and not the individual varians
+        if str(value.ingredient.topping_class).lower() != "variant":
+            attributes.append(
+                ERC721OpenSeaMetadataAttribute(
+                    trait_type=value.ingredient.topping_class,
+                    value=value.ingredient.pretty_name,
+                )
+            )
     print(order.base_ingredients.keys())
     print(order.layers.keys())
 
@@ -181,7 +161,7 @@ def to_blockchain_metadata(
     desc = make_description(recipe.name, order.base_ingredients, order.layers)
 
     # make the metadata object
-    ipfs_hash = pizza.assets["IPFS_HASH"]
+    ipfs_hash = pizza.assets["IPFS_HASH"]  # the CID hash of the pizza image
     metadata = RarePizzaMetadata(
         job_id=job_id,
         token_id=order.token_id,
@@ -189,15 +169,19 @@ def to_blockchain_metadata(
         description=desc,
         rarity_level=recipe.rarity_level,
         random_seed=order.random_seed,
+        recipe_id=recipe.unique_id,
         image=f"ipfs://{ipfs_hash}",
         extension_uri=f"https://www.rarepizzas.com/pizzas/{order.token_id}/data",
         external_url=f"https://www.rarepizzas.com/pizzas/{order.token_id}",
         background_color="ffffff",
         baking_temp_in_celsius=order.instructions.baking_temp_in_celsius,
         baking_time_in_minutes=order.instructions.baking_time_in_minutes,
-        ingredients=ingredients,
+        assets={
+            "IPFS_HASH": pizza.assets["IPFS_HASH"],
+            "ALPHA_HASH": pizza.assets["ALPHA_HASH"],
+            "ORDER_HASH": pizza.assets["ORDER_HASH"],
+        },
         attributes=attributes,
-        # attributes=list(chain(attributes, boost_attributes, category_count)),
     )
     print(metadata.attributes)
     return metadata

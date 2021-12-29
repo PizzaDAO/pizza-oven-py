@@ -268,13 +268,12 @@ def get_kitchen_order(ipfs_hash: str) -> KitchenOrder:
         with IPFSSession(settings.IPFS_NODE_API) as session:
             return KitchenOrder(**json.load(session.get_json(ipfs_hash)))
     elif settings.IPFS_MODE == IPFSMode.pinata:
-        print("pinning using pinata")
         response = PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
         ).get_from_gateway(ipfs_hash)
         return KitchenOrder(**response)
     else:
-        print("pinning not implemented")
+        print(" not implemented")
         return ""
 
 
@@ -299,8 +298,17 @@ def set_kitchen_order(order: KitchenOrder) -> str:
 
 
 def get_pizza(ipfs_hash: int) -> HotPizza:
-    with IPFSSession(settings.IPFS_NODE_API) as session:
-        return HotPizza(**json.load(session.get_json(ipfs_hash)))
+    if settings.IPFS_MODE == IPFSMode.remote:
+        with IPFSSession(settings.IPFS_NODE_API) as session:
+            return HotPizza(**json.load(session.get_json(ipfs_hash)))
+    elif settings.IPFS_MODE == IPFSMode.pinata:
+        response = PinataPy(
+            settings.PINATA_API_KEY, settings.PINATA_API_SECRET
+        ).get_from_gateway(ipfs_hash)
+        return HotPizza(**response)
+    else:
+        print(" not implemented")
+        return ""
 
 
 def set_pizza(pizza: HotPizza) -> str:
@@ -355,8 +363,17 @@ def set_image_alpha(pizza: HotPizza) -> str:
 
 
 def get_metadata_from_ipfs(ipfs_hash: str) -> RarePizzaMetadata:
-    with IPFSSession(settings.IPFS_NODE_API) as session:
-        return RarePizzaMetadata(**json.load(session.get_json(ipfs_hash)))
+    if settings.IPFS_MODE == IPFSMode.remote:
+        with IPFSSession(settings.IPFS_NODE_API) as session:
+            return RarePizzaMetadata(**json.load(session.get_json(ipfs_hash)))
+    elif settings.IPFS_MODE == IPFSMode.pinata:
+        response = PinataPy(
+            settings.PINATA_API_KEY, settings.PINATA_API_SECRET
+        ).get_from_gateway(ipfs_hash)
+        return RarePizzaMetadata(**response)
+    else:
+        print(" not implemented")
+        return ""
 
 
 def get_metadata_from_storage(job_id: str) -> Optional[RarePizzaMetadata]:

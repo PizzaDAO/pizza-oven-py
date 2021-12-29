@@ -79,8 +79,8 @@ async def fetch_oven_params() -> OvenToppingParams:
 
 @router.post("/kitchen_order/rerun", tags=[ADMIN])
 async def rerun_kitchen_order(
-    data: KitchenOrderRerunRequest = Body(...),
-) -> Optional[OrderPizzaResponse]:
+    job_id: str = Query(...), rerun_id: int = Query(...)
+) -> Any:
     """
     rerun a specific kitchen order.
 
@@ -91,10 +91,49 @@ async def rerun_kitchen_order(
 
     In order to actually update the token, it must be done by the contract admin.
     """
+    # get the order task, validate it is complete
+    render_task = get_render_task(job_id)
+    if render_task is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="could not find render task"
+        )
 
-    recipe = get_pizza_recipe(data.task.request.data.recipe_id)
-    kitchen_order = revise_kitchen_order(data.order)
-    return render_and_post(recipe, kitchen_order, data.task)
+    recipe = get_pizza_recipe(render_task.request.data.recipe_id)
+    if recipe is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="could not find recipe"
+        )
+
+    # get the order response and validate it is complete
+    order_response = get_order_response(render_task.job_id)
+    if order_response is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="could not find order_response",
+        )
+
+    if order_response.data is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="could not find order_response.data",
+        )
+
+    # get the kitchen order
+    kitchen_order = get_kitchen_order(order_response.data.order)
+
+    # update the kitchen order with any new data taht is necessary
+    regenerated_kitchen_order = revise_kitchen_order(kitchen_order)
+
+    # change state variables of the render task
+    render_task.request.responseURL = None
+    render_task.metadata_hash = None
+    render_task.request_token = ""
+    render_task.status = TaskStatus.started
+    render_task.message = f"rerunning job: {render_task.job_id}"
+    render_task.job_id = f"{render_task.job_id}-{rerun_id}"
+
+    # return some new, very clear data about what needs to go into the blockchain
+    return render_and_post(recipe, regenerated_kitchen_order, render_task)
 
 
 @router.post("/kitchen_order/revise", response_model=KitchenOrderResponse, tags=[ADMIN])

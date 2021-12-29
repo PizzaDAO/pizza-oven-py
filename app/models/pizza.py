@@ -55,7 +55,7 @@ class ERC721OpenSeaExtensions(Base):
 class IngredientMetadata(Base):
     """ingreident metadata"""
 
-    # TODO: conform to the ERC721 standard so that ingredentis could also be their own tokens"""
+    # TODO: conform to the ERC721 standard so that ingredients could also be their own tokens
 
     # TODO: add artist attribution & copyright info
     name: str
@@ -75,12 +75,15 @@ class RarePizzaMetadata(ERC721Metadata, ERC721OpenSeaExtensions):
     """the rarity level of the recipe"""
     random_seed: str
     "the random seed used to create the order"
+    recipe_id: int
+    "the recipe id that was used to create the order"
     extension_uri: str
     "a uri that we can predefine and add content to later"
     baking_temp_in_celsius: int
     "the baking temp in celsius defines burn mechanics on the pizza"
     baking_time_in_minutes: int
-    ingredients: List[IngredientMetadata]
+    "the baking time in minutes defines burn mecahnics on the pizza"
+    assets: Dict[ASSET_KEY, str]
 
 
 class HotPizza(Base):
