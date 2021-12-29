@@ -13,13 +13,16 @@ from google.oauth2.credentials import Credentials
 from app.core.order_task import render_and_post, run_render_task, run_render_jobs
 
 from app.core.prep_line import revise_kitchen_order
+from app.core.random_num import get_random_remote
+from app.core.ethereum_adapter import get_contract_address, EthereumAdapter
 
 from app.core.repository import *
 from app.core.recipe_box import get_pizza_recipe
+from app.core.utils import to_hex
 from app.models.base import BaseQueryRequest
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.render_task import RenderTask, TaskStatus
-from app.models.order import OrderPizzaResponse
+from app.models.order import OrderPizzaResponse, OrderPizzaRequest
 from app.models.prep import KitchenOrder, KitchenOrderResponse, KitchenOrderRequest
 
 from ..tags import ADMIN
@@ -72,6 +75,23 @@ async def add_oven_params(
 @router.get("/oven_params", tags=[ADMIN])
 async def fetch_oven_params() -> OvenToppingParams:
     return get_oven_params()
+
+
+# ETH RANDOM NUMBERS
+
+
+@router.post("/ethereum/random", tags=[ADMIN])
+async def get_random_number(job_id: str = Query(...)) -> Any:
+    random_number = get_random_remote(job_id)
+    return {"base_10": random_number, "base_16": to_hex(random_number)}
+
+
+@router.post("/ethereum/test_vrf", tags=[ADMIN])
+async def testVRF(
+    data: OrderPizzaRequest = Body(...),
+) -> Any:
+    random_num = EthereumAdapter(get_contract_address()).get_random_number(data.id)
+    return random_num
 
 
 # KITCHEN ORDER

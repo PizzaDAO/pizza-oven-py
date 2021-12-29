@@ -79,6 +79,12 @@ class EthereumAdapter:
             nonce = self._client.eth.get_transaction_count(get_account_address())
             print(f"{job_id} - account: {get_account_address()} nonce: {nonce}")
 
+            # set reasonable gas prices for polygon
+            if settings.ETHEREUM_MODE == EthereumMode.testnet:
+                gas_price = self._client.toWei(4, "gwei")
+            else:
+                gas_price = self._client.toWei(31, "gwei")
+
             # build the transaction
             tx = self._contract.functions.getRandomNumber(
                 job_id_bytes
@@ -87,8 +93,12 @@ class EthereumAdapter:
                     "chainId": get_chain_id(),
                     "from": get_account_address(),
                     "nonce": nonce,
+                    "gas": 175000,
+                    "gasPrice": gas_price,
                 }
             )
+            # 'maxFeePerGas': self._client.toWei(250, 'gwei'),
+            # 'maxPriorityFeePerGas': self._client.toWei(2.5, 'gwei'),
 
             print(tx)
 

@@ -4,7 +4,6 @@ from fastapi import APIRouter, Body, Request, BackgroundTasks
 from app.core.repository import get_render_task, set_render_task, get_order_response
 
 from app.models.order import *
-from app.core.ethereum_adapter import get_contract_address, EthereumAdapter
 from app.core.order_task import run_render_jobs
 from app.models.render_task import RenderTask, TaskStatus
 from ..tags import DELIVER
@@ -59,11 +58,3 @@ async def orderPizza(
     )
     # run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
     return response
-
-
-@router.post("/test_vrf", tags=[DELIVER])
-async def testVRF(
-    data: OrderPizzaRequest = Body(...),
-) -> Any:
-    random_num = EthereumAdapter(get_contract_address()).get_random_number(data.id)
-    return random_num

@@ -47,6 +47,6 @@ class OrderPizzaResponse(Base):
     """A response for a pizza order, as the chainlink oracle expects"""
 
     jobRunID: str
-    data: Any = {}
+    data: Optional[PizzaOrder] = None
     error: Optional[str] = None
     pending: bool = False
