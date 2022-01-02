@@ -26,7 +26,7 @@ class PizzaOrder(Base):
     """the address that will own the pizza"""
     artwork: Any
     """the ipfs hash of the artwork metadata in base 10"""
-    artwork_base16: str
+    artwork_base16: Optional[str] = None
     """the ipfs hash of the artwork metadata in base 16"""
     metadata: str
     """the ipfs hash of the metadata"""
