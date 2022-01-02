@@ -74,10 +74,10 @@ def make_description(recipe, base, layers):
         desc += f" Sorry, we ran out of boxes. Placed on {paper(base['paper0'].ingredient.pretty_name)}. {team()}"
     elif base["box0"].ingredient.unique_id == "0040":
         desc += f" All carefully packed in an {base['box0'].ingredient.pretty_name} Box"
-        desc += f" with {paper(base['paper0'].ingredient.pretty_name)}! {team()}"
+        desc += f" with {paper(base['paper0'].ingredient.pretty_name)}. {team()}"
     else:
         desc += f" All carefully packed in a {base['box0'].ingredient.pretty_name} Box"
-        desc += f" with {paper(base['paper0'].ingredient.pretty_name)}! {team()}"
+        desc += f" with {paper(base['paper0'].ingredient.pretty_name)}. {team()}"
 
     # done
     return desc
