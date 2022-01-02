@@ -75,9 +75,8 @@ def publish_order_result(
     print(f"{render_task.job_id} - metadata_hash: {metadata_hash}")
     print(f"{render_task.job_id} - metadata_hash_len: {len(metadata_hash)}")
     print(f"{render_task.job_id} - from_bytes_big: {from_bytes_big}")
-    print(f"{render_task.job_id} - decoded_metadata: {decoded_metadata}")
     print(f"{render_task.job_id} - decoded_metadata: {decoded_metadata.hex()}")
-    print(f"{render_task.job_id} - truncated_metadata: {truncated_metadata}")
+    print(f"{render_task.job_id} - truncated_metadata: {truncated_metadata.hex()}")
     print(f"{render_task.job_id} - truncated_metadata_len: {len(truncated_metadata)}")
     print("\n --------------- YOUR PIZZA IS COMPLETE ---------------- \n")
     print(f"\n    ipfs metadata:       ipfs://{metadata_hash} \n")
@@ -92,6 +91,7 @@ def publish_order_result(
         data=PizzaOrder(
             address=render_task.request.data.requestor,
             artwork=str(from_bytes_big),
+            artwork_base16=truncated_metadata.hex(),
             metadata=metadata_hash,
             order=order_hash,
             pizza=pizza_hash,
