@@ -55,7 +55,7 @@ class ERC721OpenSeaExtensions(Base):
 class IngredientMetadata(Base):
     """ingreident metadata"""
 
-    # TODO: conform to the ERC721 standard so that ingredentis could also be their own tokens"""
+    # TODO: conform to the ERC721 standard so that ingredients could also be their own tokens
 
     # TODO: add artist attribution & copyright info
     name: str
@@ -72,25 +72,33 @@ class RarePizzaMetadata(ERC721Metadata, ERC721OpenSeaExtensions):
     token_id: int
     """the token id of the pizza that was made"""
     rarity_level: int
+    """the rarity level of the recipe"""
     random_seed: str
     "the random seed used to create the order"
+    recipe_id: int
+    "the recipe id that was used to create the order"
     extension_uri: str
-    """a uri that we can predefine and add content to later"""
+    "a uri that we can predefine and add content to later"
     baking_temp_in_celsius: int
+    "the baking temp in celsius defines burn mechanics on the pizza"
     baking_time_in_minutes: int
-    ingredients: List[IngredientMetadata]
+    "the baking time in minutes defines burn mecahnics on the pizza"
+    assets: Dict[ASSET_KEY, str]
 
 
 class HotPizza(Base):
-    """The rendered pizza object that includes all metadata and routes
-    and everything necessary to seed IPFS and the blockchain"""
+    """
+    The rendered pizza object that includes all metadata and routes
+    and everything necessary to seed IPFS and the blockchain
+    """
 
     job_id: str
-    """the order job id, usually the chainlink job id"""
+    "the order job id, usually the chainlink job id"
     token_id: int
-    """the token id of the pizza that was made"""
+    "the token id of the pizza that was made"
     random_seed: str
     "the random seed used to create the order"
     recipe_id: int
     "the recipe id that was used to create the order"
     assets: Dict[ASSET_KEY, str]
+    "a collection of assets associated with the pizza"

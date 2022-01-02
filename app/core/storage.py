@@ -43,6 +43,11 @@ class DataCollection:
 
 
 class IStorage(Protocol):
+    """
+    A storage interface loosely based on S3 that can handle
+    basic crud operations regardless of the backend.
+    """
+
     def __enter__(self) -> Any:
         return self
 
@@ -149,6 +154,8 @@ class LocalStorage(IStorage):
 
 
 class FirebaseStorage(IStorage):
+    """A storage adapter for connecting to firebase"""
+
     def __init__(self, collection: str):
         super().__init__()
         self._id = 0
@@ -162,7 +169,6 @@ class FirebaseStorage(IStorage):
         self._database: Any
 
     def __enter__(self) -> Any:
-
         self._client = firestore.client(self.local_firebase_app)
         self._database = self._client.collection(self._collection)
         return self

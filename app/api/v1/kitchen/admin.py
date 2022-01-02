@@ -1,10 +1,11 @@
 from typing import Any, Optional, Dict
+from fastapi.param_functions import Query
 from pydantic.main import BaseModel
 
 import requests
 import sys
 
-from fastapi import APIRouter, Body, BackgroundTasks, Request
+from fastapi import APIRouter, Body, BackgroundTasks, Request, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from google.oauth2.credentials import Credentials
@@ -12,12 +13,16 @@ from google.oauth2.credentials import Credentials
 from app.core.order_task import render_and_post, run_render_task, run_render_jobs
 
 from app.core.prep_line import revise_kitchen_order
+from app.core.random_num import get_random_remote
+from app.core.ethereum_adapter import get_contract_address, EthereumAdapter
 
 from app.core.repository import *
 from app.core.recipe_box import get_pizza_recipe
+from app.core.utils import to_hex
+from app.models.base import BaseQueryRequest
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.render_task import RenderTask, TaskStatus
-from app.models.order import OrderPizzaResponse
+from app.models.order import OrderPizzaResponse, OrderPizzaRequest
 from app.models.prep import KitchenOrder, KitchenOrderResponse, KitchenOrderRequest
 
 from ..tags import ADMIN
@@ -31,6 +36,9 @@ settings = Settings()
 class KitchenOrderRerunRequest(BaseModel):
     order: KitchenOrder
     task: RenderTask
+
+
+# TOKEN UPDATES
 
 
 @router.post("/gsheets_token", tags=[ADMIN])
@@ -54,6 +62,9 @@ async def add_chainlink_token(
     return
 
 
+# OVEN PARAMS
+
+
 @router.post("/oven_params", tags=[ADMIN])
 async def add_oven_params(
     data: OvenToppingParams = Body(...),
@@ -66,16 +77,124 @@ async def fetch_oven_params() -> OvenToppingParams:
     return get_oven_params()
 
 
-@router.get("/render_task/{job_id}", tags=[ADMIN])
-async def get_existing_render_task(job_id: str) -> Optional[RenderTask]:
+# ETH RANDOM NUMBERS
+
+
+@router.post("/ethereum/random", tags=[ADMIN])
+async def get_random_number(job_id: str = Query(...)) -> Any:
+    random_number = get_random_remote(job_id)
+    return {"base_10": random_number, "base_16": to_hex(random_number)}
+
+
+@router.post("/ethereum/test_vrf", tags=[ADMIN])
+async def testVRF(
+    data: OrderPizzaRequest = Body(...),
+) -> Any:
+    random_num = EthereumAdapter(get_contract_address()).get_random_number(data.id)
+    return random_num
+
+
+# KITCHEN ORDER
+
+
+@router.post("/kitchen_order/rerun", tags=[ADMIN])
+async def rerun_kitchen_order(
+    job_id: str = Query(...), rerun_id: int = Query(...)
+) -> Any:
+    """
+    rerun a specific kitchen order.
+
+    Useful for when a published kitchen order needs its data updated,
+    but you do not want to re-roll the ingredients.
+
+    This endpoint will regenerate the pie and post it to ipfs.
+
+    In order to actually update the token, it must be done by the contract admin.
+    """
+    # get the order task, validate it is complete
+    render_task = get_render_task(job_id)
+    if render_task is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="could not find render task"
+        )
+
+    recipe = get_pizza_recipe(render_task.request.data.recipe_id)
+    if recipe is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="could not find recipe"
+        )
+
+    # get the order response and validate it is complete
+    order_response = get_order_response(render_task.job_id)
+    if order_response is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="could not find order_response",
+        )
+
+    if order_response.data is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="could not find order_response.data",
+        )
+
+    # get the kitchen order
+    kitchen_order = get_kitchen_order(order_response.data.order)
+
+    # update the kitchen order with any new data taht is necessary
+    regenerated_kitchen_order = revise_kitchen_order(kitchen_order)
+
+    # change state variables of the render task
+    render_task.request.responseURL = None
+    render_task.metadata_hash = None
+    render_task.request_token = ""
+    render_task.status = TaskStatus.started
+    render_task.message = f"rerunning job: {render_task.job_id}"
+    render_task.job_id = f"{render_task.job_id}-{rerun_id}"
+
+    # return some new, very clear data about what needs to go into the blockchain
+    return render_and_post(recipe, regenerated_kitchen_order, render_task)
+
+
+@router.post("/kitchen_order/revise", response_model=KitchenOrderResponse, tags=[ADMIN])
+def revise_order(data: KitchenOrderRequest = Body(...)) -> Any:
+    """
+    Revise data in a kitchen order for a published pizza pie.
+
+    Useful for when a published kitchen order needs its data updated,
+    but you do not want to re-roll the ingredients.
+
+    This is used when regenerating pies to inspect the data that will be used to render.
+    """
+
+    kitchen_order = revise_kitchen_order(data.order)
+
+    json = jsonable_encoder(kitchen_order)
+    return JSONResponse(content=json)
+
+
+# RENDER TASKS
+
+
+@router.get("/render_task/job/{job_id}", tags=[ADMIN])
+async def get_existing_render_task(job_id: str = Query(...)) -> Optional[RenderTask]:
     """get an existing render task"""
     render_task = get_render_task(job_id)
     return render_task
 
 
+@router.get("/render_task/find", tags=[ADMIN])
+async def find_existing_render_tasks(
+    data: BaseQueryRequest = Body(...),
+) -> Optional[RenderTask]:
+    """find existing render tasks according to the supplied filter"""
+    render_tasks = find_render_task(data.filter)
+    return render_tasks
+
+
 @router.get("/pluck_render_task", tags=[ADMIN])
 def pluck_render_tasks_for_restart() -> Any:
-    """find an existing render task"""
+    """find an existing render tasks that are not marked complete."""
     render_tasks = pluck_render_tasks()
     return render_tasks
 
@@ -102,20 +221,13 @@ async def set_existing_render_task(
     return render_task
 
 
-@router.post("/kitchen_order/rerun", tags=[ADMIN])
-async def rerun_kitchen_order(
-    data: KitchenOrderRerunRequest = Body(...),
-) -> Optional[OrderPizzaResponse]:
-    """rerun a specific render task"""
-
-    recipe = get_pizza_recipe(data.task.request.data.recipe_id)
-    kitchen_order = revise_kitchen_order(data.order)
-    return render_and_post(recipe, kitchen_order, data.task)
-
-
 @router.post("/render_task/{job_id}/rerun", tags=[ADMIN])
 async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse]:
-    """rerun a specific render task"""
+    """
+    rerun a specific render task.
+
+    useful if a job gets stuck and you want to debug it live.
+    """
     render_task = get_render_task(job_id)
     if render_task is None:
         print(f"{job_id} - re run render failed to find job")
@@ -129,7 +241,11 @@ async def rerun_existing_render_task(job_id: str) -> Optional[OrderPizzaResponse
 async def rerun_existing_render_task_async(
     job_id: str, background_tasks: BackgroundTasks
 ) -> Optional[OrderPizzaResponse]:
-    """rerun a specific render task asynchronously"""
+    """
+    rerun a specific render task asynchronously.
+
+    useful if a job gets stuck and you just want to queue it.
+    """
     render_task = get_render_task(job_id)
     if render_task is None:
         print(f"{job_id} - re run render failed to find job")
@@ -142,13 +258,3 @@ async def rerun_existing_render_task_async(
     background_tasks.add_task(run_render_task, render_task.job_id, render_task)
 
     return response
-
-
-@router.post("/revise_kitchen_order", response_model=KitchenOrderResponse, tags=[ADMIN])
-def revise_order(request: KitchenOrderRequest = Body(...)) -> Any:
-    """Revise data in a kitchen order for a published pizza pie"""
-
-    data = revise_kitchen_order(request.order)
-
-    json = jsonable_encoder(data)
-    return JSONResponse(content=json)

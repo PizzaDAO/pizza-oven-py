@@ -25,7 +25,9 @@ class PizzaOrder(Base):
     address: str
     """the address that will own the pizza"""
     artwork: Any
-    """the ipfs hash of the artwork metadata"""
+    """the ipfs hash of the artwork metadata in base 10"""
+    artwork_base16: str
+    """the ipfs hash of the artwork metadata in base 16"""
     metadata: str
     """the ipfs hash of the metadata"""
     order: str
@@ -47,6 +49,6 @@ class OrderPizzaResponse(Base):
     """A response for a pizza order, as the chainlink oracle expects"""
 
     jobRunID: str
-    data: Any = {}
+    data: Optional[PizzaOrder] = None
     error: Optional[str] = None
     pending: bool = False

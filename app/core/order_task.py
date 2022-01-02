@@ -39,36 +39,44 @@ def publish_order_result(
     kitchen_order: KitchenOrder,
     pizza: HotPizza,
 ) -> Optional[OrderPizzaResponse]:
-    """publish data to ipfs and the datastore"""
+    """
+    publish data to ipfs and the datastore
+    """
+
     # publish the pizza image to IPFS
     pizza_image_hash = set_pizza_image(pizza)
     pizza.assets["IPFS_HASH"] = pizza_image_hash
 
-    # publish the pizza image alpha channel
+    # publish the pizza image alpha channel to IPFS
     image_alpha_hash = set_image_alpha(pizza)
     pizza.assets["ALPHA_HASH"] = image_alpha_hash
 
-    # publish the pizza blockchain metadata
+    # publish the kitchen order to IPFS
+    order_hash = set_kitchen_order(kitchen_order)
+    pizza.assets["ORDER_HASH"] = order_hash
+
+    # publish the pizza NFT blockchain metadata to IPFS
     metadata = to_blockchain_metadata(render_task.job_id, recipe, kitchen_order, pizza)
     metadata_hash = set_metadata(metadata)
     pizza.assets["METADATA_HASH"] = metadata_hash
 
-    # publish the kitchen order, and the pizza object
-    order_hash = set_kitchen_order(kitchen_order)
+    # publish the pizza to ipfs
     pizza_hash = set_pizza(pizza)
 
     # convert the metadata into a format chainlink can handle
+    # decode the metadata from base58
     decoded_metadata = base58.b58decode(metadata_hash)
+    # strip off the multi_hash header
     truncated_metadata = decoded_metadata[2 : len(decoded_metadata)]
+    # convert it into a UINT_256
     from_bytes_big = int.from_bytes(truncated_metadata, "big")
 
-    # debug log out some values
+    # debug log out some values to make testing easier
     print(f"{render_task.job_id} - metadata_hash: {metadata_hash}")
     print(f"{render_task.job_id} - metadata_hash_len: {len(metadata_hash)}")
     print(f"{render_task.job_id} - from_bytes_big: {from_bytes_big}")
-    print(f"{render_task.job_id} - decoded_metadata: {decoded_metadata}")
     print(f"{render_task.job_id} - decoded_metadata: {decoded_metadata.hex()}")
-    print(f"{render_task.job_id} - truncated_metadata: {truncated_metadata}")
+    print(f"{render_task.job_id} - truncated_metadata: {truncated_metadata.hex()}")
     print(f"{render_task.job_id} - truncated_metadata_len: {len(truncated_metadata)}")
     print("\n --------------- YOUR PIZZA IS COMPLETE ---------------- \n")
     print(f"\n    ipfs metadata:       ipfs://{metadata_hash} \n")
@@ -83,6 +91,7 @@ def publish_order_result(
         data=PizzaOrder(
             address=render_task.request.data.requestor,
             artwork=str(from_bytes_big),
+            artwork_base16=truncated_metadata.hex(),
             metadata=metadata_hash,
             order=order_hash,
             pizza=pizza_hash,
@@ -198,6 +207,9 @@ def patch_and_complete_job(
 def render_and_post(
     recipe: Recipe, kitchen_order: KitchenOrder, render_task: RenderTask
 ) -> Optional[OrderPizzaResponse]:
+    """
+    Run the rendering process, publish the result, and post back that it is completed.
+    """
     try:
         # render the pizza
         pizza = Renderer(
@@ -235,8 +247,9 @@ def render_and_post(
         # rerun_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
 
         return completed_job_response
-    else:
-        print(f"{render_task.job_id} - the order response was malformed.")
+
+    # the order response is null, so something went wrong
+    print(f"{render_task.job_id} - the order response was malformed.")
 
     message = "something went wrong. setting error state and returning none."
     print(f"{render_task.job_id} - {message}")
