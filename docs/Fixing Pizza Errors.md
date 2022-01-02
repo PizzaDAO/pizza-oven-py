@@ -9,8 +9,8 @@ If a pizza is completed or errored and needs to be rerun we can capture the main
 3. get the job from the result
 4. re run `dining_setup` while you are connected to the mainnet api
 5. run `Rerun kmitchen order` task in postman wiht the job id that you just got
-6. the job runs synchronously so you can only run one at at a time.
-7. after a while the job will finish and return the order response.
-8. save the order response somewhere to use later when updating the artwork in the contract.
+6. the job runs asynchronously but you should only run one at at a time.
+7. after a while the job will finish.
+8. call `Find render tasks` again and you should see a render task for the job with a `-2` on the end which includes all the info you need for updating the artwork in the contract.
 
 # Running a missing pizza

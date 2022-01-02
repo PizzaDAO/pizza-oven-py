@@ -99,7 +99,9 @@ async def testVRF(
 
 @router.post("/kitchen_order/rerun", tags=[ADMIN])
 async def rerun_kitchen_order(
-    job_id: str = Query(...), rerun_id: int = Query(...)
+    background_tasks: BackgroundTasks,
+    job_id: str = Query(...),
+    rerun_id: int = Query(...),
 ) -> Any:
     """
     rerun a specific kitchen order.
@@ -153,7 +155,10 @@ async def rerun_kitchen_order(
     render_task.job_id = f"{render_task.job_id}-{rerun_id}"
 
     # return some new, very clear data about what needs to go into the blockchain
-    return render_and_post(recipe, regenerated_kitchen_order, render_task)
+    background_tasks.add_task(
+        render_and_post, recipe, regenerated_kitchen_order, render_task
+    )
+    return  # render_and_post(recipe, regenerated_kitchen_order, render_task)
 
 
 @router.post("/kitchen_order/revise", response_model=KitchenOrderResponse, tags=[ADMIN])
