@@ -32,6 +32,8 @@ class RenderTask(Base):
     """the random number in hex returned from chainlink"""
     metadata_hash: Optional[str]
     """the ipfs hash of the metadata when the rendering is complete"""
+    truncated_metadata: Optional[str] = None
+    """the truncated ipfs hash of the metadata decoded from base-58 and re-encoded in base-16"""
     message: Optional[str] = None
 
     def set_status(self, new_status: TaskStatus) -> None:

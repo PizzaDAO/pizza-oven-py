@@ -1,6 +1,14 @@
 from typing import Any
 
-from fastapi import APIRouter, Body, Request, BackgroundTasks
+from fastapi import (
+    APIRouter,
+    Body,
+    Query,
+    Request,
+    BackgroundTasks,
+    HTTPException,
+    status,
+)
 from app.core.repository import get_render_task, set_render_task, get_order_response
 
 from app.models.order import *
@@ -58,3 +66,19 @@ async def orderPizza(
     )
     # run_render_jobs(settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S)
     return response
+
+
+@router.get("/order_response", tags=[DELIVER])
+async def fetch_order_response(job_id: str = Query(...)) -> OrderPizzaResponse:
+    order_response = get_order_response(job_id)
+    if order_response is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="could not find order_response",
+        )
+
+    if order_response.data is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="could not find order_response.data",
+        )

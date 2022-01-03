@@ -234,6 +234,7 @@ def render_and_post(
         )
 
         render_task.metadata_hash = order_response.data.metadata
+        render_task.truncated_metadata = order_response.data.artwork_base16
         render_task.message = None
         set_render_task(render_task)
 
