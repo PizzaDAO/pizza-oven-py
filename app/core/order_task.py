@@ -6,6 +6,8 @@ from concurrent.futures import (
     as_completed,
 )
 
+from random import randrange
+
 import requests
 import sys
 import time
@@ -370,7 +372,13 @@ def run_render_jobs(delay_in_s: int = 5):
     if is_processing:
         print("run_render_jobs: already processing work")
         return
-    print("run_render_jobs: starting render job loop")
+
+    # delay for a random amount of time
+    # this handles the case where there are multiple processes running
+    # and they all contend for the same job on startup
+    quicksleep = randrange(0, delay_in_s)
+    print(f"run_render_jobs: starting render job loop in {quicksleep}")
+    time.sleep(quicksleep)
 
     # open a processing queue
     with ProcessPoolExecutor(
