@@ -4,7 +4,8 @@ data:
   BRIDGE_RESPONSE_URL: http://chainlink-rinkeby:6688
   CHAINLINK_TLS_PORT: "0"
   ETH_CHAIN_ID: "4"
-  GAS_UPDATER_ENABLED: "true"
+  ETH_NONCE_AUTO_SYNC: "true"
+  GAS_ESTIMATOR_MODE: "BlockHistory"
   LOG_LEVEL: debug
   MIN_OUTGOING_CONFIRMATIONS: "2"
   ROOT: /chainlink

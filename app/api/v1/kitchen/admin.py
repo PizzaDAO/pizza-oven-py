@@ -4,6 +4,7 @@ from pydantic.main import BaseModel
 
 import requests
 import sys
+import uuid
 
 from fastapi import APIRouter, Body, BackgroundTasks, Request, HTTPException, status
 from fastapi.encoders import jsonable_encoder
@@ -22,7 +23,12 @@ from app.core.utils import to_hex
 from app.models.base import BaseQueryRequest
 from app.models.auth_tokens import ChainlinkToken, GSheetsToken
 from app.models.render_task import RenderTask, TaskStatus
-from app.models.order import OrderPizzaResponse, OrderPizzaRequest
+from app.models.order import (
+    OrderPizzaResponse,
+    OrderPizzaRequest,
+    OrderPizzaDefaultRequest,
+    PizzaOrderData,
+)
 from app.models.prep import KitchenOrder, KitchenOrderResponse, KitchenOrderRequest
 
 from ..tags import ADMIN
@@ -176,6 +182,45 @@ def revise_order(data: KitchenOrderRequest = Body(...)) -> Any:
 
     json = jsonable_encoder(kitchen_order)
     return JSONResponse(content=json)
+
+
+# ORDER PIZZA
+
+
+@router.post("/order-pizza", tags=[ADMIN])
+def order_pizza_no_job(
+    background_tasks: BackgroundTasks, data: OrderPizzaDefaultRequest = Body(...)
+) -> RenderTask:
+    """
+    order a pizza without providing any job information.
+
+    this is useful for rendering a pizza for a blockchain transaction
+    that was not picked up by chainlink
+    """
+
+    job_id = uuid.uuid1()
+    render_task = RenderTask(
+        job_id=str(job_id),
+        request_token="",
+        request=OrderPizzaRequest(
+            id=str(job_id),
+            data=PizzaOrderData(
+                bridge="orderpizzav1",
+                address=data.data.address,
+                token_id=data.data.token_id,
+                recipe_id=data.data.recipe_id,
+                requestor=data.data.requestor,
+            ),
+        ),
+        status=TaskStatus.new,
+    )
+    set_render_task(render_task)
+
+    background_tasks.add_task(
+        run_render_jobs, settings.RERUN_JOB_STAGGERED_START_DELAY_IN_S
+    )
+
+    return render_task
 
 
 # RENDER TASKS

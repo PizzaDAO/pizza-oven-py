@@ -1,7 +1,13 @@
 from typing import Any, Optional
 from app.models.base import Base
 
-__all__ = ["PizzaOrderData", "PizzaOrder", "OrderPizzaRequest", "OrderPizzaResponse"]
+__all__ = [
+    "PizzaOrderData",
+    "PizzaOrder",
+    "OrderPizzaRequest",
+    "OrderPizzaDefaultRequest",
+    "OrderPizzaResponse",
+]
 
 
 class PizzaOrderData(Base):
@@ -43,6 +49,13 @@ class OrderPizzaRequest(Base):
     data: PizzaOrderData
     meta: Optional[Any]
     responseURL: Optional[str]
+
+
+class OrderPizzaDefaultRequest(Base):
+    """A request to order a pizza, that does not come from a chainlink oracle"""
+
+    data: PizzaOrderData
+    meta: Optional[Any]
 
 
 class OrderPizzaResponse(Base):
