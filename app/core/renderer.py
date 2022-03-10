@@ -25,9 +25,8 @@ from PIL import ImageDraw
 current = os.path.dirname(os.path.realpath(__file__))
 settings = Settings()
 
-
-class BoxRenderer:
-    """Render Boxes"""
+class SliceRenderer:
+    """Render Slices"""
 
     def __init__(self):
         pass
@@ -54,6 +53,12 @@ class BoxRenderer:
             print(f"SliceRenderer exited with error code: {e.returncode}")
             print(e)
  
+class BoxRenderer:
+    """Render Boxes"""
+
+    def __init__(self):
+        pass
+
     def render(self, executable_path, project_path, data_path, frame):
         print(f"BoxRenderer:render {data_path}")
         os.environ["BOX_DATA_PATH"] = data_path
