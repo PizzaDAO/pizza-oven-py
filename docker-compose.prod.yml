@@ -12,6 +12,15 @@ services:
       context: .
       target: prod
       network: host
+    volumes:
+      - "./.cache:/app/.cache"
+      - "./app:/app/app"
+      - "./data:/app/data"
+      - "./fonts:/app/fonts"
+      - "./natron:/app/natron"
+      - "./ingredients-db:/app/ingredients-db"
+      - "./output:/app/output"
+      - "./secrets:/app/secrets"
     ports:
       - 8000:8000
     networks:
@@ -57,7 +66,8 @@ services:
       context: ./chainlink
       target: prod
     entrypoint: /bin/sh -c "chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
-    volumes: # mount the working directory
+    volumes:
+      # mount the working directory
       - "./chainlink/mainnet:/chainlink"
     ports:
       - 6688:6688
@@ -69,7 +79,7 @@ services:
       ETH_URL: $ETHEREUM_MAINNET_SOCKET_SERVER
       DATABASE_URL: postgresql://$CHAINLINK_MAINNET_DB_USERNAME:$CHAINLINK_MAINNET_DB_PASSWORD@$CHAINLINK_MAINNET_DATABASE_SERVER:5432/ChainlinkMainnetDB?sslmode=disable
     env_file:
-      - ./chainlink/.env.prod
+      - ./chainlink/.env
     secrets:
       - keystore
       - password
