@@ -30,25 +30,29 @@ environment:
 	poetry install
 	$(NATRON_PATH)/natron-python -m pip install numpy
 
-# Dev Server
-start:
+# Run locally
+local-start:
 	poetry run uvicorn app.main:app --reload --port $(PORT)
 
 # Docker
 docker-build:
 	@echo 🐳 Building Docker
-	DOCKER_BUILDKIT=1 docker build -t $(IMAGE_NAME) .
+	DOCKER_BUILDKIT=1 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker build -t $(IMAGE_NAME):latest .
 
 docker-run:
 	@echo 🐳 Running Docker
 	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up --build
 
 docker-dev:
-	@echo 🐳 Running Docker in dev mode
+	@echo 🐳 Running Docker in dev mode with services
 	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.dev.yml up --build
 
+docker-local: docker-build
+	@echo 🐳 Running Docker in local mode without services
+	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker-compose -f docker-compose.local.yml up --build
+
 docker-prod:
-	@echo 🐳 Running Docker in prod mode
+	@echo 🐳 Running Docker in prod mode with services
 	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker-compose -f docker-compose.prod.yml up --build
 
 # Linting

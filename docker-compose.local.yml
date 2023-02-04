@@ -1,0 +1,42 @@
+# this will run all the containers locally
+# It mounts the codebase within the container and runs the APIs
+# it simulates the production deployment
+
+version: "3.8"
+services:
+  pizza-oven:
+    image: rarepizzaskitchen.azurecr.io/pizza-kitchen-python:0.0.1
+    build:
+      context: .
+      target: prod
+      network: host
+    volumes:
+      - "./.cache:/app/.cache"
+      - "./app:/app/app"
+      - "./data:/app/data"
+      - "./fonts:/app/fonts"
+      - "./natron:/app/natron"
+      - "./ingredients-db:/app/ingredients-db"
+      - "./output:/app/output"
+      - "./secrets:/app/secrets"
+    ports:
+      - 8000:8000
+    networks:
+      - rare-pizzas
+    env_file: .env.prod
+
+networks:
+  rare-pizzas:
+    driver: bridge
+
+# configure some dev secrets (insecure, don't actually use this in prod since it is insecure)
+secrets:
+  keystore:
+    file: "./secrets/UTC--2021-10-24T04-19-53.131714000Z--211d12a19c58059e0ef794560ddb7c5621e9b39c"
+  password:
+    file: "./secrets/.chainlink.wallet.1.mainnet"
+  api:
+    file: "./secrets/.chainlink.api.mainnet"
+
+volumes:
+  chainlink-db-data:
