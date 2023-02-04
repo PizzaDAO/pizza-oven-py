@@ -23,7 +23,7 @@ services:
       - 8000:8000
     networks:
       - rare-pizzas
-    env_file: .env.prod
+    env_file: .env
 
 networks:
   rare-pizzas:
