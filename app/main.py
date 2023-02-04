@@ -40,6 +40,14 @@ def print_settings(_settings: Settings):
     print(
         f"RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS  - {_settings.RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS}"
     )
+    print(f"ETHEREUM_RINKEBY_HTTP_SERVER            - {_settings.ETHEREUM_RINKEBY_HTTP_SERVER}")
+    print(f"ETHEREUM_MUMBAI_HTTP_SERVER             - {_settings.ETHEREUM_MUMBAI_HTTP_SERVER}")
+    print(f"ETHEREUM_MAINNET_HTTP_SERVER            - {_settings.ETHEREUM_MAINNET_HTTP_SERVER}")
+    print(f"ETHEREUM_POLYGON_HTTP_SERVER            - {_settings.ETHEREUM_POLYGON_HTTP_SERVER}")
+    print(f"ETHEREUM_TESTNET_ACCOUNT_ADDRESS        - {_settings.ETHEREUM_TESTNET_ACCOUNT_ADDRESS}")
+    print(f"ETHEREUM_MAINNET_ACCOUNT_ADDRESS        - {_settings.ETHEREUM_MAINNET_ACCOUNT_ADDRESS}")
+    print(f"ETHEREUM_TESTNET_CONTRACT_ADDRESS        - {_settings.ETHEREUM_TESTNET_CONTRACT_ADDRESS}")
+    print(f"ETHEREUM_MAINNET_CONTRACT_ADDRESS        - {_settings.ETHEREUM_MAINNET_CONTRACT_ADDRESS}")
     print(f"API_V1_STR                              - {_settings.API_V1_STR}")
     print(f"PIZZA_TYPES_SHEET                       - {_settings.PIZZA_TYPES_SHEET}")
     print(

@@ -60,6 +60,8 @@ class PinataPy:
     @staticmethod
     def _error(response: requests.Response) -> ResponsePayload:
         """Construct dict from response if an error has occurred"""
+
+        print(f"PinataPy:_error {response}")
         return {
             "status": response.status_code,
             "reason": response.reason,

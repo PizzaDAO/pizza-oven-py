@@ -11,10 +11,10 @@ This repository makes pizzas. More specifically, it accepts json input, transfor
 Be running Linux or MacOS
 
 - 🐳🐍 [GNU Make](https://www.gnu.org/software/make/manual/make.html) is used to simplify the commands and GitHub Actions. This approach is recommended to simplify the command line experience. This is built in for MacOS and Linux. We arent supporting windoze right meow
-- 🐍 [Python 3.8](https://www.python.org/downloads/) is <ins>**required**</ins> to develop this API. If you uses multiple versions of python, dont. But if you insist, [pyenv](https://github.com/pyenv/pyenv) will make your life easier.
+- 🐍 [Python 3.9](https://www.python.org/downloads/) is <ins>**required**</ins> to develop this API. If you uses multiple versions of python, dont. But if you insist, [pyenv](https://github.com/pyenv/pyenv) will make your life easier.
 - [postman](https://www.postman.com/downloads/) is used for issuing requests during development and testing
 - [Docker](https://docs.docker.com/get-docker/) is used to make environment configuration easier
-- - If you're running Ubuntu, you'll need to install [docker compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
+  - - If you're running Ubuntu, you'll need to install [docker compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
 - [Natron](https://github.com/NatronGitHub/Natron/releases/tag/v2.4.0) is used for rendering. ONLY NEEDED IF you plan to develop locally.
 
 ## 🐳 Running with Docker
@@ -55,7 +55,7 @@ make docker-dev
 
 the `docker-compose.dev.yml` file will spin up all of the infrastructure and will keep running until you exit (CTRL-C to exit.) The dev deployment also includes hot reloading and mounts folders in the proejct so you can see the data.
 
-You will find the API running at http://127.0.0.1:8000
+You will find the API running at <http://127.0.0.1:8000>
 
 ### 📮 Postman
 
@@ -91,10 +91,10 @@ navigate to `http://localhost:6688` and log into the chainlink interface (using 
 First, we need to create a new bridge so the chainlink node can talk to the api. Select `Bridges` from the top menu bar and create a new bridge:
 
 ```
-Name	orderpizzav1
-URL	http://pizza-oven:8000/api/v1/diningroom/order
-Confirmations	0
-Minimum Contract Payment	0
+Name orderpizzav1
+URL http://pizza-oven:8000/api/v1/diningroom/order
+Confirmations 0
+Minimum Contract Payment 0
 ```
 
 **important** make note of the incoming and outgoing access tokens, we'll need them later!
@@ -155,7 +155,7 @@ Configuring the blockchain job requires deploying a chainlink node to rinkeby. r
 
 ### Configuring the API to communicate with chainlink
 
-When you set up the bridge, you received an incoming and outgoing web token. We must configure the API to respond to the chainlink node correctly.
+When you set up the bridge, you received an incoming and outgoing web token. We must configure the API to respond to the chainlink node correctly. These values are placed in sthe storage provider so they can be easily modified without having to redeploy the sotware.
 
 ### 🧪 Testing
 
@@ -199,7 +199,7 @@ For local debugging with Visual Studio Code, just run it from the dropdown in th
 
 If the code fails to run, [make sure your Python interpreter is set](https://code.visualstudio.com/docs/python/environments) to use your poetry environment.
 
-##### All done. Enjoy!
+##### All done. Enjoy
 
 Google Authentication error:
 A google login is required to pull data from a shared sheet. There is currently a token stored in /data to be used for this. It sometimes expires, and the app flow to login again fails. Make sure you have the latest token from the repo. Eventually we will need to fiugre out a better solution here… Suggestions welcome.

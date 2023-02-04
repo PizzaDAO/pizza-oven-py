@@ -128,6 +128,7 @@ def to_blockchain_metadata(
     """
     create metadata from the recipe, order, and pizza render to make blockchain metadata
     """
+    print(f"to_blockchain_metadata: {job_id}")
     attributes: List[ERC721OpenSeaMetadataAttribute] = []
     attributes.append(
         ERC721OpenSeaMetadataAttribute(

@@ -284,16 +284,16 @@ def set_kitchen_order(order: KitchenOrder) -> str:
     )
 
     if settings.IPFS_MODE == IPFSMode.remote:
-        print("pinning using local node")
+        print("set_kitchen_order: pinning using local node")
         with IPFSSession(settings.IPFS_NODE_API) as session:
             return session.pin_json(order.dict())
     elif settings.IPFS_MODE == IPFSMode.pinata:
-        print("pinning using pinata")
+        print("set_kitchen_order: pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
         ).pin_json_to_ipfs(order.dict())["IpfsHash"]
     else:
-        print("pinning not implemented")
+        print("set_kitchen_order: pinning not implemented")
         return ""
 
 
@@ -313,52 +313,52 @@ def get_pizza(ipfs_hash: int) -> HotPizza:
 
 def set_pizza(pizza: HotPizza) -> str:
     json_string = pizza.json()
-    print("set_pizza:")
+    print(f"set_pizza: {pizza.job_id}")
     print(json_string)
 
     if settings.IPFS_MODE == IPFSMode.remote:
-        print("pinning using local node")
+        print("set_pizza: pinning using local node")
         with IPFSSession(settings.IPFS_NODE_API) as session:
             return session.pin_json(pizza.dict())
     elif settings.IPFS_MODE == IPFSMode.pinata:
-        print("pinning using pinata")
+        print("set_pizza: pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
         ).pin_json_to_ipfs(pizza.dict())["IpfsHash"]
     else:
-        print("pinning not implemented")
+        print("set_pizza: pinning not implemented")
         return ""
 
 
 def set_pizza_image(pizza: HotPizza) -> str:
     file_path = pizza.assets["IMAGE_PATH"]
     if settings.IPFS_MODE == IPFSMode.remote:
-        print("pinning using local node")
+        print("set_pizza_image: pinning using local node")
         with IPFSSession(settings.IPFS_NODE_API) as session:
             return session.pin_resource(file_path)
     elif settings.IPFS_MODE == IPFSMode.pinata:
-        print("pinning using pinata")
+        print("set_pizza_image: pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
         ).pin_file_to_ipfs(file_path)["IpfsHash"]
     else:
-        print("pinning not implemented")
+        print("set_pizza_image: pinning not implemented")
         return ""
 
 
 def set_image_alpha(pizza: HotPizza) -> str:
     file_path = pizza.assets["ALPHA_PATH"]
     if settings.IPFS_MODE == IPFSMode.remote:
-        print("pinning using local node")
+        print("set_image_alpha: pinning using local node")
         with IPFSSession(settings.IPFS_NODE_API) as session:
             return session.pin_resource(file_path)
     elif settings.IPFS_MODE == IPFSMode.pinata:
-        print("pinning using pinata")
+        print("set_image_alpha: pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
         ).pin_file_to_ipfs(file_path)["IpfsHash"]
     else:
-        print("pinning not implemented")
+        print("set_image_alpha: pinning not implemented")
         return ""
 
 
@@ -404,14 +404,14 @@ def set_metadata(metadata: RarePizzaMetadata) -> str:
         # continue since ipfs is more important
 
     if settings.IPFS_MODE == IPFSMode.remote:
-        print("pinning using local node")
+        print("set_metadata: pinning using local node")
         with IPFSSession(settings.IPFS_NODE_API) as session:
             return session.pin_json(metadata.dict())
     elif settings.IPFS_MODE == IPFSMode.pinata:
-        print("pinning using pinata")
+        print("set_metadata: pinning using pinata")
         return PinataPy(
             settings.PINATA_API_KEY, settings.PINATA_API_SECRET
         ).pin_json_to_ipfs(metadata.dict())["IpfsHash"]
     else:
-        print("pinning not implemented")
+        print("set_metadata: pinning not implemented")
         return ""

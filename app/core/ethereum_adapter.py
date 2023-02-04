@@ -66,18 +66,20 @@ class EthereumAdapter:
         # Strip the job id and covert it to bytes
         stripped = job_id.replace("-", "")
         job_id_bytes = bytes.fromhex(stripped)
-        print(f"{job_id} - querying VRF for jobId: {stripped}")
+        print(f"get_random_number: {job_id} - querying VRF for jobId: {stripped}")
 
         try:
 
             # try to find the number if it exists already
             existing = self.find_random_number(job_id_bytes)
             if existing != 0:
-                print(f"{job_id} - existing VRF found")
+                print(f"get_random_number: {job_id} - existing VRF found")
                 return existing
 
             nonce = self._client.eth.get_transaction_count(get_account_address())
-            print(f"{job_id} - account: {get_account_address()} nonce: {nonce}")
+            print(
+                f"get_random_number: {job_id} - account: {get_account_address()} nonce: {nonce}"
+            )
 
             # build the transaction
             tx = self._contract.functions.getRandomNumber(
@@ -91,14 +93,14 @@ class EthereumAdapter:
             )
             # 'maxFeePerGas': self._client.toWei(250, 'gwei'),
             # 'maxPriorityFeePerGas': self._client.toWei(2.5, 'gwei'),
-
+            print("get_random_number: transaction:")
             print(tx)
 
             # sign the transaction
             signed_tx = self._client.eth.account.sign_transaction(
                 tx, private_key=get_private_key()
             )
-
+            print("get_random_number: signed transaction:")
             print(signed_tx)
 
             # TODO: cache the Tx? or something else that allows recovery
@@ -106,12 +108,13 @@ class EthereumAdapter:
             # or another error occurs
 
             # braodcast the transaction
+            print("get_random_number: signed transaction:")
             self._client.eth.send_raw_transaction(signed_tx.rawTransaction)
 
             # wait for a response
             random_number = self.wait_for_random_number(job_id_bytes)
             if random_number != 0:
-                print(f"{job_id} - VRF success: {random_number}")
+                print(f"get_random_number: {job_id} - VRF success: {random_number}")
                 return random_number
 
         except Exception as error:

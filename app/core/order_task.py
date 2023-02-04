@@ -45,6 +45,8 @@ def publish_order_result(
     publish data to ipfs and the datastore
     """
 
+    print(f"publish_order_result: {render_task.job_id}")
+
     # publish the pizza image to IPFS
     pizza_image_hash = set_pizza_image(pizza)
     pizza.assets["IPFS_HASH"] = pizza_image_hash
@@ -120,6 +122,8 @@ def patch_and_complete_job(
     render_task: RenderTask, order_response: Optional[OrderPizzaResponse] = None
 ) -> Optional[OrderPizzaResponse]:
     """try to patch back to chainlink or just complete the order"""
+
+    print(f"patch_and_complete_job: {render_task.job_id}")
 
     # check to see if we have an order response
     if order_response is None:
@@ -212,6 +216,9 @@ def render_and_post(
     """
     Run the rendering process, publish the result, and post back that it is completed.
     """
+
+    print(f"render_and_post: {render_task.job_id}")
+
     try:
         # render the pizza
         pizza = Renderer(

@@ -41,7 +41,7 @@ services:
           "-d",
           "ChainlinkMainnetDB",
           "-U",
-          "postgres",
+          "postgres"
         ]
       timeout: 5s
       interval: 10s

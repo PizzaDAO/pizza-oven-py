@@ -33,8 +33,17 @@ class BoxRenderer:
         pass
 
     def render(self, executable_path, project_path, data_path, frame):
-        print(f"BoxRenderer:render {data_path}")
+        print(f"BoxRenderer:render executable_path  - {executable_path}")
+        print(f"BoxRenderer:render project_path     - {project_path}")
+        print(f"BoxRenderer:render data_path        - {data_path}")
+        print(f"BoxRenderer:render frame            - {frame}")
+
         os.environ["BOX_DATA_PATH"] = data_path
+
+        print(
+            f" export BOX_DATA_PATH={data_path} && {executable_path}/NatronRenderer -l {current}/natron/box.py {project_path}/box.ntp {frame}"
+        )
+
         try:
             result = subprocess.run(
                 [
@@ -48,6 +57,7 @@ class BoxRenderer:
                 capture_output=True,
                 text=True,
             )
+            print(f"BoxRenderer:render {data_path}")
             print(f"stderr: {result.stderr}")
             print(f"stdout: {result.stdout}")
         except subprocess.CalledProcessError as e:
@@ -77,6 +87,7 @@ class PaperRenderer:
                 capture_output=True,
                 text=True,
             )
+            print(f"PaperRenderer:render {data_path}")
             print(f"stderr: {result.stderr}")
             print(f"stdout: {result.stdout}")
         except subprocess.CalledProcessError as e:
@@ -108,6 +119,7 @@ class CrustRenderer:
                 # stdout=subprocess.PIPE,
                 # stderr=subprocess.STDOUT,
             )
+            print(f"CrustRenderer:render {data_path}")
             print(f"stderr: {result.stderr}")
             print(f"stdout: {result.stdout}")
         except subprocess.CalledProcessError as e:
@@ -137,6 +149,7 @@ class SauceRenderer:
                 capture_output=True,
                 text=True,
             )
+            print(f"SauceRenderer:render {data_path}")
             print(f"stderr: {result.stderr}")
             print(f"stdout: {result.stdout}")
         except subprocess.CalledProcessError as e:
@@ -166,6 +179,7 @@ class CheeseRenderer:
                 capture_output=True,
                 text=True,
             )
+            print(f"CheeseRenderer:render {data_path}")
             print(f"stderr: {result.stderr}")
             print(f"stdout: {result.stdout}")
         except subprocess.CalledProcessError as e:
@@ -196,6 +210,7 @@ class ToppingRenderer:
                 capture_output=True,
                 text=True,
             )
+            print(f"ToppingRenderer:render {data_path}")
             print(f"stderr: {result.stderr}")
             print(f"stdout: {result.stdout}")
         except subprocess.CalledProcessError as e:
@@ -254,6 +269,7 @@ class DeliveryRenderer:
                 capture_output=True,
                 text=True,
             )
+            print(f"DeliveryRenderer:render {data_path}")
             print(f"stderr: {result.stderr}")
             print(f"stdout: {result.stdout}")
         except subprocess.CalledProcessError as e:
@@ -276,10 +292,14 @@ class Renderer:
 
     def remove_if_exists(self, path_to_file: str):
         if Path(path_to_file).is_file():
+            print(f"remove_if_exists: {path_to_file}")
             os.remove(path_to_file)
 
     def cache_ingredient(self, ingredient: MadeIngredient) -> str:
         """Cache the ingredient data so that natron can pick it up."""
+
+        print(f"cache_ingredient {self.job_id} - {ingredient.ingredient.name}")
+
         # create a .cache directory
         cache_dir = os.path.join(
             self.project_path, "../", settings.INTERMEDIATE_FOLDER_PATH
@@ -297,12 +317,16 @@ class Renderer:
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as ingredient_file:
+            print(f"cache_ingredient: {self.job_id} write file: {file_path}")
             ingredient_file.write(ingredient.json())
 
         return file_path
 
     def cache_layer(self, layer: ShuffledLayer) -> str:
         """Cache the ingredient data so that natron can pick it up."""
+
+        print(f"cache_layer {self.job_id} - {layer}")
+
         # create a .cache directory
         cache_dir = os.path.join(
             self.project_path, "../", settings.INTERMEDIATE_FOLDER_PATH
@@ -320,11 +344,15 @@ class Renderer:
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
+            print(f"cache_layer write file - {file_path}")
             layer_file.write(layer.json())
 
         return file_path
 
     def cache_layer_manifest(self, layers: List[str]) -> str:
+
+        print(f"cache_layer_manifest {self.job_id} - {layers}")
+
         cache_dir = os.path.join(
             self.project_path, "../", settings.INTERMEDIATE_FOLDER_PATH
         )
@@ -343,6 +371,7 @@ class Renderer:
 
         # cache out the ingredient so it can be picked up by natron
         with open(file_path, "w") as layer_file:
+            print(f"cache_layer_manifest write file - {file_path}")
             layer_file.write(DeliveryManifest(frame=self.frame, layers=layers).json())
 
         return file_path
@@ -415,7 +444,7 @@ class Renderer:
     def flatten_image(self, layers: List[str], order: KitchenOrder) -> str:
         """flatten the image layers into a single image and return its filename"""
 
-        print(f"{self.job_id} - flatten_image")
+        print(f"flatten_image - {self.job_id}")
         print(layers)
 
         # cache the layer manifest no natron knows how to read it
@@ -450,7 +479,9 @@ class Renderer:
 
     def render_pizza(self, order: KitchenOrder) -> HotPizza:
         """render the pizza out to the file systme using natron"""
-        print(f"{self.job_id} - render_pizza")
+
+        print(f"render_pizza - {self.job_id}")
+
         rendered_layer_files: List[str] = []
 
         layer_index = 0
@@ -535,7 +566,7 @@ class Renderer:
         # TODO: more things like hook up the return values
         # and pass the rendering back to the caller
         # note the IPFS id probably isnt populated in this function but instead by the caller
-        return HotPizza(
+        hot_pizza = HotPizza(
             job_id=self.job_id,
             token_id=order.token_id,
             random_seed=order.random_seed,
@@ -550,9 +581,15 @@ class Renderer:
             },
         )
 
+        print(f"render_pizza: - {self.job_id} hot_pizza {hot_pizza}")
+
+        return hot_pizza
+
     def render_instances(self, layer_index: int, layer: ShuffledLayer) -> str:
         # Build the output filename and save it allong with the cached Ingredient
-        print("render_shuffled_layer")
+
+        print(f"render_instances {self.job_id} render_shuffled_layer")
+
         frame_string = str(self.frame).zfill(4)
         layer_string = str(layer_index).zfill(2)
         output_filename = f"{frame_string}-layer-{layer_string}.png"
@@ -576,7 +613,10 @@ class Renderer:
     def render_ingredient(self, layer_index: int, ingredient: MadeIngredient) -> str:
         """render the ingredient"""
 
-        print(f"render_ingredient: {ingredient.ingredient.classification.name}")
+        print(
+            f"render_ingredient: {self.job_id} - {ingredient.ingredient.classification.name}"
+        )
+
         # Build the output filename and save it allong with the cached Ingredient
         category = classification_as_string(ingredient.ingredient.classification)
         frame_string = str(self.frame).zfill(4)
