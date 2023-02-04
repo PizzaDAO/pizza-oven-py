@@ -25,7 +25,7 @@ all: environment start
 
 environment:
 	@echo 🔧 Setting Up Environment
-	pip3 install 'poetry==1.1.6'
+	pip3 install 'poetry==1.2.2'
 	poetry config virtualenvs.in-project true 
 	poetry install
 	$(NATRON_PATH)/natron-python -m pip install numpy
@@ -49,7 +49,7 @@ docker-dev:
 
 docker-prod:
 	@echo 🐳 Running Docker in prod mode
-	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.prod.yml up --build
+	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker-compose -f docker-compose.prod.yml up --build
 
 # Linting
 lint:
