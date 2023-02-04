@@ -26,8 +26,11 @@ DOCUMENT_VALUE_TYPE = Union[MutableMapping, List[MutableMapping]]
 
 settings = Settings()
 
-firebase_credentials = credentials.Certificate(settings.GOOGLE_APPLICATION_CREDENTIALS)
-main_firebase_app = firebase_admin.initialize_app(firebase_credentials)
+if settings.STORAGE_MODE == StorageMode.firebase:
+    firebase_credentials = credentials.Certificate(
+        settings.GOOGLE_APPLICATION_CREDENTIALS
+    )
+    main_firebase_app = firebase_admin.initialize_app(firebase_credentials)
 
 
 class DataCollection:
