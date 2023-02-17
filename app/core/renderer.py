@@ -25,7 +25,34 @@ from PIL import ImageDraw
 current = os.path.dirname(os.path.realpath(__file__))
 settings = Settings()
 
+class SliceRenderer:
+    """Render Slices"""
 
+    def __init__(self):
+        pass
+
+    def render(self, executable_path, project_path, data_path, frame):
+        print(f"SliceRenderer:render {data_path}")
+        os.environ["SLICE_DATA_PATH"] = data_path
+        try:
+            result = subprocess.run(
+                [
+                    f"{executable_path}/NatronRenderer",
+                    "-l",
+                    f"{current}/natron/slice.py",
+                    f"{project_path}/slice.ntp",
+                    f"{frame}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            print(f"stderr: {result.stderr}")
+            print(f"stdout: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            print(f"SliceRenderer exited with error code: {e.returncode}")
+            print(e)
+ 
 class BoxRenderer:
     """Render Boxes"""
 

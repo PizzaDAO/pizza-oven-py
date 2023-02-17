@@ -44,18 +44,38 @@ box_paper_dict: Dict[str, ScopedIngredient] = {}
 
 def read_ingredients():
     print("read_ingredients")
-    values = fetch_sheet_data(
-        settings.PIZZA_INGREDIENTS_SHEET, settings.TOPPINGS_RANGE_NAME
-    )
+    if settings.USE_STATIC_DB:
+        print("Using local database...")
+        absolute_filepath = os.path.join(
+            settings.STATIC_INGREDIENTS_DB_PATH,
+            settings.STATIC_INGREDIENTS_DB_FILENAME,
+        )
+        f = open(absolute_filepath)
+        data = json.load(f)
+        values = data["values"]
+    else:   
+        values = fetch_sheet_data(
+            settings.PIZZA_INGREDIENTS_SHEET, settings.TOPPINGS_RANGE_NAME
+        )
 
     return parse_ingredients(values)
 
 
 def read_recipes(ingredients: Dict[Any, ScopedIngredient]):
     print("read_recipes")
-    values = fetch_sheet_data(
-        settings.PIZZA_TYPES_SHEET, settings.PIZZA_TYPE_RANGE_NAME
-    )
+    if settings.USE_STATIC_DB:
+        print("Using local database...")
+        absolute_filepath = os.path.join(
+            settings.STATIC_RECIPES_DB_PATH,
+            settings.STATIC_RECIPES_DB_FILENAME,
+        )
+        f = open(absolute_filepath)
+        data = json.load(f)
+        values = data["values"]
+    else:   
+        values = fetch_sheet_data(
+            settings.PIZZA_TYPES_SHEET, settings.PIZZA_TYPE_RANGE_NAME
+        )
 
     return parse_recipes(values, ingredients)
 
@@ -173,8 +193,24 @@ def fetch_sheet_data(SHEET_NAME, RANGE_NAME):
         .execute()
     )
 
-    values = result.get("values", [])
+    # Save out the google sheets responses for use as a static database stored locally
+    absolute_filepath = ""
+    if RANGE_NAME == settings.TOPPINGS_RANGE_NAME:
+        absolute_filepath = os.path.join(
+            settings.STATIC_INGREDIENTS_DB_PATH,
+            settings.STATIC_INGREDIENTS_DB_FILENAME,
+        )
+    if RANGE_NAME == settings.PIZZA_TYPE_RANGE_NAME:
+        absolute_filepath = os.path.join(
+            settings.STATIC_RECIPES_DB_PATH,
+            settings.STATIC_RECIPES_DB_FILENAME,
+        )
+    
+    with open(absolute_filepath, "w") as outfile:
+        json.dump(result, outfile, indent=4)
 
+    values = result.get("values", [])
+    
     return values
 
 

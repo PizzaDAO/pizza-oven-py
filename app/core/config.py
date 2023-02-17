@@ -187,6 +187,13 @@ class Settings(BaseSettings):
     LOCAL_INGREDIENT_DB_MANIFEST_FILENAME = "ingredient_manifest.json"
     LOCAL_INGREDIENTS_DB_PATH = "ingredients-db"
 
+    STATIC_INGREDIENTS_DB_PATH = "data/static_db"
+    STATIC_INGREDIENTS_DB_FILENAME = "ingredients_db.json"
+    STATIC_RECIPES_DB_PATH = "data/static_db"
+    STATIC_RECIPES_DB_FILENAME = "recipes_db.json"
+
+    USE_STATIC_DB = True
+    
     # Local Storage - Natron testing
     KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
 
