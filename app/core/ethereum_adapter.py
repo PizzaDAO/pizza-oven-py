@@ -8,6 +8,7 @@ import time
 from web3 import Web3
 from web3.contract import Contract
 from web3._utils.filters import LogFilter
+from web3.middleware import geth_poa_middleware
 
 from app.core.config import EthereumMode, EthereumNetworkChainId, Settings
 from app.core.utils import to_hex
@@ -55,17 +56,27 @@ class EthereumAdapter:
     ):
         print(f"connecting to contract: {contract_address}")
         self._client: Web3 = Web3(Web3.HTTPProvider(get_server_uri()))
+        # Inject the geth_poa_middleware to handle POA chains
+        self._client.middleware_onion.inject(geth_poa_middleware, layer=0)
+
         # Address
         self._contract: Contract = self._client.eth.contract(
-            address=Web3.toChecksumAddress(contract_address), abi=self._load_abi()
+            address=Web3.to_checksum_address(contract_address), abi=self._load_abi()
         )
 
     def get_random_number(self, job_id: str) -> Optional[int]:
         """get a random number for the job id"""
 
-        # Strip the job id and covert it to bytes
+        # Strip the job id and convert it to bytes
         stripped = job_id.replace("-", "")
         job_id_bytes = bytes.fromhex(stripped)
+
+        # Ensure job_id_bytes is exactly 32 bytes long
+        if len(job_id_bytes) < 32:
+            job_id_bytes = job_id_bytes.ljust(32, b'\0')  # Pad with zeros if less than 32 bytes
+        elif len(job_id_bytes) > 32:
+            raise ValueError("job_id_bytes is longer than 32 bytes after conversion")
+
         print(f"get_random_number: {job_id} - querying VRF for jobId: {stripped}")
 
         try:
@@ -84,7 +95,7 @@ class EthereumAdapter:
             # build the transaction
             tx = self._contract.functions.getRandomNumber(
                 job_id_bytes
-            ).buildTransaction(
+            ).build_transaction(
                 {
                     "chainId": get_chain_id(),
                     "from": get_account_address(),

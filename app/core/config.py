@@ -1,6 +1,7 @@
 from typing import List
 from enum import Enum
-from pydantic import AnyHttpUrl, BaseSettings
+from pydantic import AnyHttpUrl
+from pydantic_settings import BaseSettings
 from pydantic.fields import Field
 from app.models.base import Base
 
@@ -122,13 +123,13 @@ class Settings(BaseSettings):
     RENDER_TASK_RESTART_TIMEOUT_IN_MINUTES: int = 15
     BLOCKCHAIN_RESPONSE_TIMEOUT_IN_S: int = 120
 
-    DINING_SETUP_SHOULD_EXEC_ON_STARTUP = False
+    DINING_SETUP_SHOULD_EXEC_ON_STARTUP: bool = False
 
-    RERUN_SHOULD_EXECUTE_ON_STARTUP = True
-    RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY = True
-    RERUN_JOB_STAGGERED_START_DELAY_IN_S = 60
-    RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS = 20
-    RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS = 1
+    RERUN_SHOULD_EXECUTE_ON_STARTUP: bool = True
+    RERUN_SHOULD_RENDER_TASKS_RECUSRIVELY: bool = True
+    RERUN_JOB_STAGGERED_START_DELAY_IN_S:int = 60
+    RERUN_JOB_EXECUTION_TIMEOUT_IN_MINS:int = 20
+    RERUN_MAX_CONCURRENT_RESCHEDULED_TASKS:int = 1
 
     API_V1_STR: str = "/api/v1"
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = Field(
@@ -153,42 +154,42 @@ class Settings(BaseSettings):
 
     # IPFS
     IPFS_NODE_API: str = "/dns/ipfs0/tcp/5001/http"
-    PINATA_API_KEY = ""
-    PINATA_API_SECRET = ""
+    PINATA_API_KEY:str = ""
+    PINATA_API_SECRET:str = ""
 
     # Google Firebase
-    GOOGLE_APPLICATION_CREDENTIALS = "secrets/firebase.dev.json"
+    GOOGLE_APPLICATION_CREDENTIALS:str = "secrets/firebase.dev.json"
 
     # Google Sheets
     # ingredients_db settings
-    GOOGLE_SHEETS_TOKEN_PATH = "secrets/sheets.json"
-    GOOGLE_SHEETS_CREDENTIALS_PATH = "secrets/credentials.json"
-    SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly"
-    PIZZA_TYPES_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
-    PIZZA_TYPE_RANGE_NAME = "recipe-db!A1:Q"
-    PIZZA_INGREDIENTS_SHEET = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
-    TOPPINGS_RANGE_NAME = "ingredients-db"
+    GOOGLE_SHEETS_TOKEN_PATH:str = "secrets/sheets.json"
+    GOOGLE_SHEETS_CREDENTIALS_PATH:str = "secrets/credentials.json"
+    SCOPE:str = "https://www.googleapis.com/auth/spreadsheets.readonly"
+    PIZZA_TYPES_SHEET:str = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
+    PIZZA_TYPE_RANGE_NAME:str = "recipe-db!A1:Q"
+    PIZZA_INGREDIENTS_SHEET:str = "1xN149zkgSXPfJhDwQrIzlMzcU9gB--ihdoO_XJXCqf0"
+    TOPPINGS_RANGE_NAME:str = "ingredients-db"
 
     # Dropbox - natron testing
-    DROPBOX_TOKEN = ""
+    DROPBOX_TOKEN:str = ""
 
     # Misc ENV VARS
-    DEFAULT_NATRON_EXECUTABLE_PATH = os.environ["NATRON_PATH"]
-    DEFAULT_NATRON_PROJECT_PATH = os.environ["NATRON_PROJECT_PATH"]
-    DEFAULT_NATRON_FRAME = 9
+    DEFAULT_NATRON_EXECUTABLE_PATH:str = os.environ["NATRON_PATH"]
+    DEFAULT_NATRON_PROJECT_PATH:str = os.environ["NATRON_PROJECT_PATH"]
+    DEFAULT_NATRON_FRAME:int = 9
 
-    DATA_FONT_SIZE = 64
-    WATERMARK_FILE = "pizza_watermark.png"
+    DATA_FONT_SIZE:int = 64
+    WATERMARK_FILE:str = "pizza_watermark.png"
 
-    INTERMEDIATE_FOLDER_PATH = ".cache/intermediate"
-    OUTPUT_FOLDER_PATH = ".cache/output"
-    lOCAL_RECIPES_PATH = ".cache/local/recipes/"
-    lOCAL_INGREDIENT_DB_MANIFEST_PATH = ".cache/local/"
-    LOCAL_INGREDIENT_DB_MANIFEST_FILENAME = "ingredient_manifest.json"
-    LOCAL_INGREDIENTS_DB_PATH = "ingredients-db"
+    INTERMEDIATE_FOLDER_PATH:str = ".cache/intermediate"
+    OUTPUT_FOLDER_PATH:str = ".cache/output"
+    lOCAL_RECIPES_PATH:str = ".cache/local/recipes/"
+    lOCAL_INGREDIENT_DB_MANIFEST_PATH:str = ".cache/local/"
+    LOCAL_INGREDIENT_DB_MANIFEST_FILENAME:str = "ingredient_manifest.json"
+    LOCAL_INGREDIENTS_DB_PATH:str = "ingredients-db"
 
     # Local Storage - Natron testing
-    KO_STRESS_TEST_PATH = "/../data/ko_stress_test/"
+    KO_STRESS_TEST_PATH:str = "/../data/ko_stress_test/"
 
     class Config:
         case_sensitive = True

@@ -1,6 +1,5 @@
 from typing import Dict, Tuple, List, Optional
 
-from pydantic.networks import ascii_domain_regex
 from app.models.recipe import (
     Classification,
     Recipe,

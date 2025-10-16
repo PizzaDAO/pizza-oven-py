@@ -157,6 +157,12 @@ Configuring the blockchain job requires deploying a chainlink node to rinkeby. r
 
 When you set up the bridge, you received an incoming and outgoing web token. We must configure the API to respond to the chainlink node correctly. These values are placed in sthe storage provider so they can be easily modified without having to redeploy the sotware.
 
+note they are also flipped?
+
+need to limit the number of processors to 1 or 2
+
+we need ot manually pin the ipfs files of hte pizzas that were already made (or re run them here locally)
+
 ### 🧪 Testing
 
 #### Just test with postman (the easy way)

@@ -25,9 +25,10 @@ all: environment start
 
 environment:
 	@echo 🔧 Setting Up Environment
-	pip3 install 'poetry==1.2.2'
+	pip3 install uvicorn
+	pip3 install 'poetry==1.7.1'
 	poetry config virtualenvs.in-project true 
-	poetry install
+	poetry install -vvv
 	$(NATRON_PATH)/natron-python -m pip install numpy
 
 # Dev Server
@@ -49,7 +50,7 @@ docker-dev:
 
 docker-prod:
 	@echo 🐳 Running Docker in prod mode
-	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker-compose -f docker-compose.prod.yml up --build
+	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker compose -f docker-compose.prod.yml up --build
 
 # Linting
 lint:

@@ -1,4 +1,4 @@
-from typing import Any, Optional, Dict
+from typing import Any, List, Optional, Dict
 from fastapi.param_functions import Query
 from pydantic.main import BaseModel
 
@@ -6,7 +6,7 @@ import requests
 import sys
 import uuid
 
-from fastapi import APIRouter, Body, BackgroundTasks, Request, HTTPException, status
+from fastapi import APIRouter, Body, BackgroundTasks, Path, Request, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from google.oauth2.credentials import Credentials
@@ -227,16 +227,16 @@ def order_pizza_no_job(
 
 
 @router.get("/render_task/job/{job_id}", tags=[ADMIN])
-async def get_existing_render_task(job_id: str = Query(...)) -> Optional[RenderTask]:
+async def get_existing_render_task(job_id: str = Path(...)) -> Optional[RenderTask]:
     """get an existing render task"""
     render_task = get_render_task(job_id)
     return render_task
 
 
-@router.get("/render_task/find", tags=[ADMIN])
+@router.post("/render_task/find", tags=[ADMIN])
 async def find_existing_render_tasks(
     data: BaseQueryRequest = Body(...),
-) -> Optional[RenderTask]:
+) -> Optional[List[RenderTask]]:
     """find existing render tasks according to the supplied filter"""
     render_tasks = find_render_task(data.filter)
     return render_tasks

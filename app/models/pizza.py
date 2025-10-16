@@ -21,7 +21,7 @@ class ERC721OpenSeaMetadataBoostAttribute(Base):
     """Should be set to 'boost_number' or 'boost_percentage' or 'number'"""
     trait_type: str
     value: int
-    max_value: Optional[int]
+    max_value: Optional[int] = None
     """Sets a ceiling to the scale, otherwise will be infered by max observer in rest of NFT collection."""
 
 

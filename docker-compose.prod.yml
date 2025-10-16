@@ -6,8 +6,8 @@ version: "3.8"
 services:
   pizza-oven:
     image: rarepizzaskitchen.azurecr.io/pizza-kitchen-python:0.0.1
-    depends_on:
-      - chainlink-mainnet
+    # depends_on:
+    #   - chainlink-mainnet
     build:
       context: .
       target: prod
@@ -28,62 +28,62 @@ services:
     env_file: .env.prod
 
   # Add a postgres database
-  postgres-database-mainnet:
-    container_name: pizza-database-mainnet
-    build:
-      context: ./database
-    volumes:
-      - ./database/db-data-mainnet:/var/lib/postgresql/data
-    environment:
-      POSTGRES_DB: ChainlinkMainnetDB
-      POSTGRES_PASSWORD: $CHAINLINK_MAINNET_DB_PASSWORD
-    ports:
-      - 5432:5432
-    networks:
-      - rare-pizzas
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "pg_isready",
-          "-q",
-          "-d",
-          "ChainlinkMainnetDB",
-          "-U",
-          "postgres"
-        ]
-      timeout: 5s
-      interval: 10s
-      retries: 10
+  # postgres-database-mainnet:
+  #   container_name: pizza-database-mainnet
+  #   build:
+  #     context: ./database
+  #   volumes:
+  #     - ./database/db-data-mainnet:/var/lib/postgresql/data
+  #   environment:
+  #     POSTGRES_DB: ChainlinkMainnetDB
+  #     POSTGRES_PASSWORD: $CHAINLINK_MAINNET_DB_PASSWORD
+  #   ports:
+  #     - 5432:5432
+  #   networks:
+  #     - rare-pizzas
+  #   healthcheck:
+  #     test:
+  #       [
+  #         "CMD",
+  #         "pg_isready",
+  #         "-q",
+  #         "-d",
+  #         "ChainlinkMainnetDB",
+  #         "-U",
+  #         "postgres"
+  #       ]
+  #     timeout: 5s
+  #     interval: 10s
+  #     retries: 10
 
-  # Add a mainnet chainlink node
-  chainlink-mainnet:
-    image: rarepizzaskitchen.azurecr.io/chainlink-mainnet:0.10.3
-    depends_on:
-      postgres-database-mainnet:
-        condition: service_healthy
-    build:
-      context: ./chainlink
-      target: prod
-    entrypoint: /bin/sh -c "chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
-    volumes:
-      # mount the working directory
-      - "./chainlink/mainnet:/chainlink"
-    ports:
-      - 6688:6688
-    networks:
-      - rare-pizzas
-    environment:
-      PORT: 6688
-      LINK_CONTRACT_ADDRESS: $CHAINLINK_MAINNET_TOKEN
-      ETH_URL: $ETHEREUM_MAINNET_SOCKET_SERVER
-      DATABASE_URL: postgresql://$CHAINLINK_MAINNET_DB_USERNAME:$CHAINLINK_MAINNET_DB_PASSWORD@$CHAINLINK_MAINNET_DATABASE_SERVER:5432/ChainlinkMainnetDB?sslmode=disable
-    env_file:
-      - ./chainlink/.env
-    secrets:
-      - keystore
-      - password
-      - api
+  # # Add a mainnet chainlink node
+  # chainlink-mainnet:
+  #   image: rarepizzaskitchen.azurecr.io/chainlink-mainnet:0.10.3
+  #   depends_on:
+  #     postgres-database-mainnet:
+  #       condition: service_healthy
+  #   build:
+  #     context: ./chainlink
+  #     target: prod
+  #   entrypoint: /bin/sh -c "chainlink local import /run/secrets/keystore && chainlink node start -d -p /run/secrets/password -a /run/secrets/api"
+  #   volumes:
+  #     # mount the working directory
+  #     - "./chainlink/mainnet:/chainlink"
+  #   ports:
+  #     - 6688:6688
+  #   networks:
+  #     - rare-pizzas
+  #   environment:
+  #     PORT: 6688
+  #     LINK_CONTRACT_ADDRESS: $CHAINLINK_MAINNET_TOKEN
+  #     ETH_URL: $ETHEREUM_MAINNET_SOCKET_SERVER
+  #     DATABASE_URL: postgresql://$CHAINLINK_MAINNET_DB_USERNAME:$CHAINLINK_MAINNET_DB_PASSWORD@$CHAINLINK_MAINNET_DATABASE_SERVER:5432/ChainlinkMainnetDB?sslmode=disable
+  #   env_file:
+  #     - ./chainlink/.env
+  #   secrets:
+  #     - keystore
+  #     - password
+  #     - api
 
 networks:
   rare-pizzas:

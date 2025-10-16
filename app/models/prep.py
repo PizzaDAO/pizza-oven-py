@@ -38,7 +38,7 @@ class MadeIngredientPrep(Base):
     """the rotation of the instance as degrees"""
     scale: SCALAR
     """the scale of the instance as fraction e.g. (-1,1)"""
-    image_uri: Optional[str]
+    image_uri: Optional[str] = None
     """path to ingredient image"""
 
 
@@ -49,7 +49,7 @@ class ShuffledLayer(Base):
     index: SCALAR
     count: SCALAR
     instances: List[MadeIngredientPrep]
-    output_mask: Optional[str]
+    output_mask: Optional[str] = None
 
 
 class MadeIngredient(Base):

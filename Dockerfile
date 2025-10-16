@@ -26,7 +26,6 @@ WORKDIR /
 RUN apt-get update && apt-get upgrade -y \
     && apt-get install --no-install-recommends -y \
     ca-certificates \
-    python3-pip \
     wget \
     xz-utils
 
@@ -36,8 +35,15 @@ RUN wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.0/Natron-
     && mv /Natron-2.4.0-Linux-64-no-installer /natron \
     && rm Natron-2.4.0-Linux-64-no-installer.tar.xz
 
+# Install Python 3.9, pip3, and create symbolic links
+RUN apt-get update && \
+    apt-get install -y python3.9 python3-pip && \
+    python3.9 -m pip install --upgrade pip && \
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1 && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # do the python things
-RUN pip3 install 'poetry==1.1.6'
+RUN pip3 install 'poetry==1.7.1'
 RUN pip3 install --no-cache-dir "uvicorn[standard]" gunicorn
 RUN $NATRON_PATH/natron-python -m pip install numpy
 

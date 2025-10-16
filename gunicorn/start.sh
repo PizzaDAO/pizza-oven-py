@@ -31,4 +31,5 @@ else
 fi
 
 # Start Gunicorn
+echo "Starting gunicorn"
 exec gunicorn -k "$WORKER_CLASS" -c "$GUNICORN_CONF" "$APP_MODULE"

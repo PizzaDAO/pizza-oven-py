@@ -28,9 +28,9 @@ class RenderTask(Base):
     status: TaskStatus = TaskStatus.new
 
     timestamp: datetime = datetime.now(timezone.utc)
-    random_number: Optional[str]
+    random_number: Optional[str] = None
     """the random number in hex returned from chainlink"""
-    metadata_hash: Optional[str]
+    metadata_hash: Optional[str] = None
     """the ipfs hash of the metadata when the rendering is complete"""
     truncated_metadata: Optional[str] = None
     """the truncated ipfs hash of the metadata decoded from base-58 and re-encoded in base-16"""

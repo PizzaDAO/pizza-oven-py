@@ -47,15 +47,15 @@ class OrderPizzaRequest(Base):
 
     id: str
     data: PizzaOrderData
-    meta: Optional[Any]
-    responseURL: Optional[str]
+    meta: Optional[Any] = None
+    responseURL: Optional[str] = None
 
 
 class OrderPizzaDefaultRequest(Base):
     """A request to order a pizza, that does not come from a chainlink oracle"""
 
     data: PizzaOrderData
-    meta: Optional[Any]
+    meta: Optional[Any] = None
 
 
 class OrderPizzaResponse(Base):
